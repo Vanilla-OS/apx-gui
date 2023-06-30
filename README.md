@@ -26,5 +26,5 @@ sudo ninja -C build install
 
 ## Run
 ```bash
-vanilla-apx-ide
+apx-ide
 ```
