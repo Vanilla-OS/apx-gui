@@ -1,0 +1,7 @@
+/meson_build/
+/mesonbuild/
+/debian/.debhelper
+/debian/vanilla-apx-ide
+/debian/vanilla-apx-ide.debhelper.log
+/debian/vanilla-apx-ide.substvars
+/obj-x86_64-linux-gnu/

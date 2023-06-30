@@ -1,0 +1,28 @@
+Source: vanilla-apx-ide
+Section: utils
+Priority: optional
+Maintainer: Mirko Brombin <send@mirko.pm>
+Build-Depends: 
+            build-essential,
+            debhelper,
+            python3,
+            meson,
+            libadwaita-1-dev,
+            gettext,
+            desktop-file-utils,
+            make,
+            libjpeg-dev
+Homepage: https://github.com/vanilla-os/vanilla-apx-ide/
+Vcs-Browser: hhttps://github.com/vanilla-os/vanilla-apx-ide
+Vcs-Git: https://github.com/vanilla-os/vanilla-apx-ide.git
+Rules-Requires-Root: no
+
+Package: vanilla-apx-ide
+Architecture: any
+Depends: python3,
+         python3-gi,
+         libadwaita-1-0,
+         gir1.2-gtk-4.0,
+         gir1.2-adw-1,
+         gir1.2-vte-3.91
+Description: A frontend in GTK 4 and Libadwaita to switch PRIME profiles.

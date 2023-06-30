@@ -1,0 +1,231 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<interface>
+  <requires lib="gtk" version="4.0"/>
+  <template class="ApxIDEWindow" parent="AdwApplicationWindow">
+    <property name="default-width">1100</property>
+    <property name="default-height">800</property>
+    <property name="title">Apx</property>
+    <child>
+      <object class="GtkBox">
+        <property name="orientation">vertical</property>
+        <child>
+          <object class="GtkHeaderBar">
+            <child type="start">
+              <object class="GtkMenuButton" id="btn_new">
+                <property name="menu-model">menu_add</property>
+                <style>
+                  <class name="flat"/>
+                </style>
+                <child>
+                  <object class="GtkBox">
+                    <property name="spacing">5</property>
+                    <child>
+                      <object class="GtkImage">
+                        <property name="icon-name">list-add-symbolic</property>
+                      </object>
+                    </child>
+                    <child>
+                      <object class="GtkImage">
+                        <property name="icon-name">pan-down-symbolic</property>
+                      </object>
+                    </child>
+                  </object>
+                </child>
+              </object>
+            </child>
+          </object>
+        </child>
+        <child>
+          <object class="AdwToastOverlay" id="toasts">
+            <child>
+              <object class="GtkPaned">
+                <property name="hexpand">True</property>
+                <property name="vexpand">True</property>
+                <property name="position">300</property>
+                <property name="position_set">True</property>
+                <child>
+                  <object class="GtkBox">
+                    <property name="orientation">vertical</property>
+                    <child>
+                      <object class="GtkBox">
+                        <property name="margin-top">5</property>
+                        <property name="margin-end">5</property>
+                        <property name="margin-bottom">5</property>
+                        <property name="margin-start">5</property>
+                        <property name="spacing">5</property>
+                        <property name="homogeneous">true</property>
+                        <child>
+                          <object class="GtkButton" id="btn_show_subsystems">
+                            <property name="icon-name">utilities-terminal-symbolic</property>
+                          </object>
+                        </child>
+                        <child>
+                          <object class="GtkButton" id="btn_show_stacks">
+                            <property name="icon-name">vanilla-puzzle-piece-symbolic</property>
+                            <style>
+                              <class name="flat"/>
+                            </style>
+                          </object>
+                        </child>
+                        <child>
+                          <object class="GtkButton" id="btn_show_pkgmanagers">
+                            <property name="icon-name">insert-object-symbolic</property>
+                            <style>
+                              <class name="flat"/>
+                            </style>
+                          </object>
+                        </child>
+                      </object>
+                    </child>
+                    <child>
+                      <object class="GtkScrolledWindow">
+                        <child>
+                          <object class="AdwViewStack" id="stack_main">
+                            <property name="vexpand">true</property>
+                            <child>
+                              <object class="AdwViewStackPage" id="page_subsystems">
+                                <property name="name">subsystems</property>
+                                <property name="icon-name">utilities-terminal-symbolic</property>
+                                <property name="child">
+                                  <object class="GtkListBox">
+                                    <child>
+                                      <object class="AdwActionRow">
+                                        <property name="title" translatable="true">MyAlpine</property>
+                                        <property name="subtitle" translatable="true">Based on the 'alpine' stack.</property>
+                                        <child type="suffix">
+                                          <object class="GtkImage">
+                                            <property name="icon-name">go-next-symbolic</property>
+                                            <style>
+                                              <class name="dim-label"/>
+                                            </style>
+                                          </object>
+                                        </child>
+                                      </object>
+                                    </child>
+                                    <child>
+                                      <object class="AdwActionRow">
+                                        <property name="title" translatable="true">3DModelling</property>
+                                        <property name="subtitle" translatable="true">Based on the 'ubuntu-3d' stack.</property>
+                                        <child type="suffix">
+                                          <object class="GtkImage">
+                                            <property name="icon-name">go-next-symbolic</property>
+                                            <style>
+                                              <class name="dim-label"/>
+                                            </style>
+                                          </object>
+                                        </child>
+                                      </object>
+                                    </child>
+                                  </object>
+                                </property>
+                              </object>
+                            </child>
+                            <child>
+                              <object class="AdwViewStackPage" id="page_stacks">
+                                <property name="name">stacks</property>
+                                <property name="icon-name">vanilla-puzzle-piece-symbolic</property>
+                                <property name="child">
+                                  <object class="GtkListBox">
+                                    <child>
+                                      <object class="AdwActionRow">
+                                        <property name="title" translatable="true">Alpine</property>
+                                        <property name="subtitle" translatable="true">Has 0 additional packages.</property>
+                                        <child type="suffix">
+                                          <object class="GtkImage">
+                                            <property name="icon-name">go-next-symbolic</property>
+                                            <style>
+                                              <class name="dim-label"/>
+                                            </style>
+                                          </object>
+                                        </child>
+                                      </object>
+                                    </child>
+                                  </object>
+                                </property>
+                              </object>
+                            </child>
+                            <child>
+                              <object class="AdwViewStackPage" id="page_pkgmanagers">
+                                <property name="name">pkgmanagers</property>
+                                <property name="icon-name">insert-object-symbolic</property>
+                                <property name="child">
+                                  <object class="GtkListBox">
+                                    <child>
+                                      <object class="AdwActionRow">
+                                        <property name="title" translatable="true">apt</property>
+                                        <child type="suffix">
+                                          <object class="GtkImage">
+                                            <property name="icon-name">go-next-symbolic</property>
+                                            <style>
+                                              <class name="dim-label"/>
+                                            </style>
+                                          </object>
+                                        </child>
+                                      </object>
+                                    </child>
+                                  </object>
+                                </property>
+                              </object>
+                            </child>
+                          </object>
+                        </child>
+                      </object>
+                    </child>
+                  </object>
+                </child>
+                <child>
+                  <object class="GtkBox">
+                    <property name="orientation">vertical</property>
+                    <child>
+                      <object class="AdwTabBar">
+                        <property name="view">tabs_editor</property>
+                      </object>
+                    </child>
+                    <child>
+                      <object class="AdwTabView" id="tabs_editor">
+                        <property name="hexpand">true</property>
+                        <property name="vexpand">true</property>
+                      </object>
+                    </child>
+                  </object>
+                </child>
+              </object>
+            </child>
+          </object>
+        </child>
+      </object>
+    </child>
+  </template>
+  <menu id="menu_add">
+    <section>
+      <item>
+        <attribute name="label" translatable="true">New Sub System</attribute>
+        <attribute name="action">app.new_stack</attribute>
+      </item>
+      <item>
+        <attribute name="label" translatable="true">New Stack</attribute>
+        <attribute name="action">app.new_stack</attribute>
+      </item>
+      <item>
+        <attribute name="label" translatable="true">New Package Manager</attribute>
+        <attribute name="action">app.new_stack</attribute>
+      </item>
+    </section>
+  </menu>
+  <menu id="primary_menu">
+    <section>
+      <item>
+        <attribute name="label" translatable="true">_Preferences</attribute>
+        <attribute name="action">app.preferences</attribute>
+      </item>
+      <item>
+        <attribute name="label" translatable="true">_Keyboard Shortcuts</attribute>
+        <attribute name="action">win.show-help-overlay</attribute>
+      </item>
+      <item>
+        <attribute name="label" translatable="true">_About prime_utility</attribute>
+        <attribute name="action">app.about</attribute>
+      </item>
+    </section>
+  </menu>
+</interface>
