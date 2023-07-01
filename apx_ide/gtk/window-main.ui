@@ -78,6 +78,9 @@
                       </object>
                     </child>
                     <child>
+                      <object class="GtkSeparator"></object>
+                    </child>
+                    <child>
                       <object class="GtkScrolledWindow">
                         <child>
                           <object class="AdwViewStack" id="stack_main">
@@ -85,7 +88,6 @@
                             <child>
                               <object class="AdwViewStackPage" id="page_subsystems">
                                 <property name="name">subsystems</property>
-                                <property name="icon-name">utilities-terminal-symbolic</property>
                                 <property name="child">
                                   <object class="GtkListBox">
                                     <child>
@@ -123,7 +125,6 @@
                             <child>
                               <object class="AdwViewStackPage" id="page_stacks">
                                 <property name="name">stacks</property>
-                                <property name="icon-name">vanilla-puzzle-piece-symbolic</property>
                                 <property name="child">
                                   <object class="GtkListBox">
                                     <child>
@@ -147,7 +148,6 @@
                             <child>
                               <object class="AdwViewStackPage" id="page_pkgmanagers">
                                 <property name="name">pkgmanagers</property>
-                                <property name="icon-name">insert-object-symbolic</property>
                                 <property name="child">
                                   <object class="GtkListBox">
                                     <child>
@@ -174,17 +174,38 @@
                   </object>
                 </child>
                 <child>
-                  <object class="GtkBox">
-                    <property name="orientation">vertical</property>
+                  <object class="AdwViewStack">
                     <child>
-                      <object class="AdwTabBar">
-                        <property name="view">tabs_editor</property>
+                      <object class="AdwViewStackPage" id="page_no_tabs">
+                        <property name="name">no_tabs</property>
+                        <property name="child">
+                          <object class="AdwStatusPage">
+                            <property name="icon-name">org.vanillaos.ApxIDE-symbolic</property>
+                            <property name="title">Start or Open a Subsystem</property>
+                            <property name="description" translatable="true">Start by opening a subsystem, stack or package manager on the left.</property>
+                          </object>
+                        </property>
                       </object>
                     </child>
                     <child>
-                      <object class="AdwTabView" id="tabs_editor">
-                        <property name="hexpand">true</property>
-                        <property name="vexpand">true</property>
+                      <object class="AdwViewStackPage" id="page_editor">
+                        <property name="name">editor</property>
+                        <property name="child">
+                          <object class="GtkBox">
+                            <property name="orientation">vertical</property>
+                            <child>
+                              <object class="AdwTabBar">
+                                <property name="view">tabs_editor</property>
+                              </object>
+                            </child>
+                            <child>
+                              <object class="AdwTabView" id="tabs_editor">
+                                <property name="hexpand">true</property>
+                                <property name="vexpand">true</property>
+                              </object>
+                            </child>
+                          </object>
+                        </property>
                       </object>
                     </child>
                   </object>

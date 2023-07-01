@@ -34,6 +34,8 @@ class ApxIDEWindow(Adw.ApplicationWindow):
     btn_show_subsystems = Gtk.Template.Child()
     btn_show_stacks = Gtk.Template.Child()
     btn_show_pkgmanagers = Gtk.Template.Child()
+    page_no_tabs = Gtk.Template.Child()
+    page_editor = Gtk.Template.Child()
 
     def __init__(self, embedded, **kwargs):
         super().__init__(**kwargs)
