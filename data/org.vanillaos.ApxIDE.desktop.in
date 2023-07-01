@@ -1,6 +1,6 @@
 [Desktop Entry]
 Name=Apx IDE
-Exec=vanilla-apx-ide
+Exec=apx-ide
 Icon=org.vanillaos.ApxIDE
 Terminal=false
 Type=Application
