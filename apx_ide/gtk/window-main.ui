@@ -174,7 +174,7 @@
                   </object>
                 </child>
                 <child>
-                  <object class="AdwViewStack">
+                  <object class="AdwViewStack" id="stack_editor">
                     <child>
                       <object class="AdwViewStackPage" id="page_no_tabs">
                         <property name="name">no_tabs</property>
@@ -196,6 +196,7 @@
                             <child>
                               <object class="AdwTabBar">
                                 <property name="view">tabs_editor</property>
+                                <property name="autohide">false</property>
                               </object>
                             </child>
                             <child>
