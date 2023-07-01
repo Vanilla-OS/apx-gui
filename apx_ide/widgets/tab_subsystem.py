@@ -43,4 +43,4 @@ class TabSubsystem(Adw.PreferencesPage):
         self.row_packages.set_title(f"Packages ({len(subsystem.stack.packages)})")
 
         for package in subsystem.stack.packages:
-            self.row_packages.append(Adw.ActionRow(title=package))
+            self.row_packages.add_row(Adw.ActionRow(title=package))
