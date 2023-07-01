@@ -31,6 +31,7 @@ class ApxIDEWindow(Adw.ApplicationWindow):
     toasts = Gtk.Template.Child()
     tabs_editor = Gtk.Template.Child()
     stack_main = Gtk.Template.Child()
+    stack_editor = Gtk.Template.Child()
     btn_show_subsystems = Gtk.Template.Child()
     btn_show_stacks = Gtk.Template.Child()
     btn_show_pkgmanagers = Gtk.Template.Child()
@@ -40,15 +41,19 @@ class ApxIDEWindow(Adw.ApplicationWindow):
     def __init__(self, embedded, **kwargs):
         super().__init__(**kwargs)
 
+        self.stack_editor.set_visible_child_name('editor')
+        self.stack_main.set_visible_child_name('subsystems')
+
         page = self.tabs_editor.append(TabSubsystem())
         page.set_title('Subsystem')
         page = self.tabs_editor.append(TabSubsystem())
         page.set_title('Subsystem 2')
 
-        self.stack_main.set_visible_child_name('subsystems')
         self.btn_show_subsystems.connect('clicked', self._switch_stack, 'subsystems')
         self.btn_show_stacks.connect('clicked', self._switch_stack, 'stacks')
         self.btn_show_pkgmanagers.connect('clicked', self._switch_stack, 'pkgmanagers')
+        self.tabs_editor.connect('page-detached', self._on_page_detached)
+        self.tabs_editor.connect('page-attached', self._on_page_attached)
 
     def _switch_stack(self, button, name):
         for btn in [
@@ -62,3 +67,11 @@ class ApxIDEWindow(Adw.ApplicationWindow):
 
         button.remove_css_class('flat')
 
+    def _on_page_detached(self, tabs, page, *args):
+        if tabs.get_n_pages() == 0:
+            self.page_no_tabs.set_visible(True)
+            self.page_editor.set_visible(False)
+
+    def _on_page_attached(self, tabs, page, *args):
+        self.page_no_tabs.set_visible(False)
+        self.page_editor.set_visible(True)
