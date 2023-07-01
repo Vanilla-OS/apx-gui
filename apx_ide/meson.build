@@ -25,9 +25,9 @@ configure_file(
   install_dir: get_option('bindir')
 )
 
+subdir('core')
 subdir('widgets')
 subdir('windows')
-subdir('utils')
 
 apx_ide_sources = [
   '__init__.py',

@@ -4,5 +4,6 @@
     <file preprocess="xml-stripblanks">gtk/window-main.ui</file>
     <file preprocess="xml-stripblanks">gtk/help-overlay.ui</file>
     <file preprocess="xml-stripblanks">gtk/tab-subsystem.ui</file>
+    <file preprocess="xml-stripblanks">gtk/entry-subsystem.ui</file>
   </gresource>
 </gresources>

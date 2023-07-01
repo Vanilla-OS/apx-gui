@@ -5,7 +5,7 @@
       <object class="AdwPreferencesGroup">
         <property name="title">Details</property>
         <child>
-          <object class="AdwActionRow">
+          <object class="AdwActionRow" id="row_status">
             <property name="title" translatable="true">Status</property>
             <property name="subtitle" translatable="true">Exited (143) 3 days ago</property>
             <child type="prefix">
@@ -19,7 +19,7 @@
           </object>
         </child>
         <child>
-          <object class="AdwActionRow">
+          <object class="AdwActionRow" id="row_stack">
             <property name="title" translatable="true">Stack</property>
             <property name="subtitle" translatable="true">alpine</property>
             <child type="prefix">
@@ -33,7 +33,7 @@
           </object>
         </child>
         <child>
-          <object class="AdwActionRow">
+          <object class="AdwActionRow" id="row_pkgmanager">
             <property name="title" translatable="true">Package Manager</property>
             <property name="subtitle" translatable="true">apk</property>
             <child type="prefix">
@@ -47,7 +47,7 @@
           </object>
         </child>
         <child>
-          <object class="AdwExpanderRow">
+          <object class="AdwExpanderRow" id="row_packages">
             <property name="title" translatable="true">15 Exported Programs</property>
             <child type="prefix">
               <object class="GtkImage">
@@ -65,7 +65,7 @@
       <object class="AdwPreferencesGroup">
         <property name="title">Actions</property>
         <child>
-          <object class="AdwActionRow">
+          <object class="AdwActionRow" id="row_console">
             <property name="title" translatable="true">Open Console</property>
             <property name="subtitle" translatable="true">Enter a console in this subsystem's environment.</property>
             <child type="suffix">
@@ -84,7 +84,7 @@
       <object class="AdwPreferencesGroup">
         <property name="title">Destructive Actions</property>
         <child>
-          <object class="AdwActionRow">
+          <object class="AdwActionRow" id="row_reset">
             <property name="title" translatable="true">Reset Subsystem</property>
             <child type="suffix">
               <object class="GtkImage">
@@ -97,7 +97,7 @@
           </object>
         </child>
         <child>
-          <object class="AdwActionRow">
+          <object class="AdwActionRow" id="row_delete">
             <property name="title" translatable="true">Delete Subsystem</property>
             <child type="suffix">
               <object class="GtkImage">

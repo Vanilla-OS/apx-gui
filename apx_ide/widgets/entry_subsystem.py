@@ -22,25 +22,14 @@ from gi.repository import Gtk, Gio, GObject, Adw
 from apx_ide.core.apx_entities import Subsystem
 
 
-@Gtk.Template(resource_path='/org/vanillaos/apx-ide/gtk/tab-subsystem.ui')
-class TabSubsystem(Adw.PreferencesPage):
-    __gtype_name__ = 'TabSubsystem'
-    row_status = Gtk.Template.Child()
-    row_stack = Gtk.Template.Child()
-    row_pkgmanager = Gtk.Template.Child()
-    row_packages = Gtk.Template.Child()
-    row_console = Gtk.Template.Child()
-    row_reset = Gtk.Template.Child()
-    row_delete = Gtk.Template.Child()
+@Gtk.Template(resource_path='/org/vanillaos/apx-ide/gtk/entry-subsystem.ui')
+class EntrySubsystem(Adw.ActionRow):
+    __gtype_name__ = 'EntrySubsystem'
 
     def __init__(self, subsystem: Subsystem, **kwargs):
         super().__init__(**kwargs)
+        self.set_title(subsystem.name)
+        self.set_subtitle(f"Based on the {subsystem.stack.name} stack.")
+
+        self.subsystem = subsystem
         self.aid = subsystem.aid
-
-        self.row_status.set_subtitle(subsystem.status)
-        self.row_stack.set_subtitle(subsystem.stack.name)
-        self.row_pkgmanager.set_subtitle(subsystem.stack.pkg_manager)
-        self.row_packages.set_title(f"Packages ({len(subsystem.stack.packages)})")
-
-        for package in subsystem.stack.packages:
-            self.row_packages.append(Adw.ActionRow(title=package))
