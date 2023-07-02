@@ -99,3 +99,7 @@ class Editor(Adw.Bin):
         page.set_icon(icon)
         
         self.open(pkgmanager.aid)
+
+    def close(self, aid: UUID) -> None:
+        if self.is_open(aid):
+            self.tabs_editor.close_page(self.__registry__["tabs"][aid])

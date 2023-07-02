@@ -19,9 +19,9 @@
 
 from gi.repository import Gtk, Gio, GLib, GObject, Adw, GtkSource
 from uuid import UUID
-import json
 
 from apx_ide.core.apx_entities import Stack
+from apx_ide.core.run_async import RunAsync
 
 
 @Gtk.Template(resource_path='/org/vanillaos/apx-ide/gtk/tab-stack.ui')
@@ -89,9 +89,16 @@ class TabStack(Gtk.Box):
         return self.__aid
 
     def __on_delete_clicked(self, button: Gtk.Button) -> None:
+        def on_callback(result, *args) -> None:
+            status: bool = result[0]
+            if status:
+                self.__window.toast(f"{self.__stack.name} stack deleted")
+                self.__window.remove_stack(self.__aid)
+
         def on_response(dialog: Adw.MessageDialog, response: str) -> None:
             if response == "ok":
-                print("Delete clicked")
+                self.__window.toast(f"Deleting {self.__stack.name} stack...")
+                RunAsync(self.__stack.remove, on_callback, force=True)
             dialog.destroy()
 
         dialog: Adw.MessageDialog = Adw.MessageDialog.new(

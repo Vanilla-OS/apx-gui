@@ -41,13 +41,30 @@ class ApxIDEWindow(Adw.ApplicationWindow):
         self.__build_ui()
 
     def __build_ui(self):
-        editor: Editor = Editor(self)
-        self.paned_main.set_end_child(editor)
+        self.editor: Editor = Editor(self)
+        self.paned_main.set_end_child(self.editor)
 
-        sidebar: Sidebar = Sidebar(
+        self.sidebar: Sidebar = Sidebar(
+            self,
             self.__apx.subsystems_list(), 
             self.__apx.stacks_list(), 
-            self.__apx.pkgmanagers_list(),
-            editor
+            self.__apx.pkgmanagers_list()
         )
-        self.paned_main.set_start_child(sidebar)
+        self.paned_main.set_start_child(self.sidebar)
+
+    def toast(self, message: str, timeout: int=2):
+        toast: Adw.Toast = Adw.Toast.new(message)
+        toast.props.timeout = timeout
+        self.toasts.add_toast(toast)
+
+    def remove_subsystem(self, aid: str):
+        self.editor.close(aid)
+        self.sidebar.remove_subsystem(aid)
+
+    def remove_stack(self, aid: str):
+        self.editor.close(aid)
+        self.sidebar.remove_stack(aid)
+
+    def remove_pkgmanager(self, aid: str):
+        self.editor.close(aid)
+        self.sidebar.remove_pkgmanager(aid)

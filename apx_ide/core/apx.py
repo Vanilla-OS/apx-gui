@@ -21,7 +21,6 @@ import subprocess
 import shlex
 import json
 
-from apx_ide.core.apx_exceptions import ApxCommandError, ApxCreationError, ApxUpdateError, ApxDeletionError
 from apx_ide.core.apx_entities import ApxEntityBase, Subsystem, Stack, PkgManager
 
 
@@ -31,7 +30,9 @@ class Apx(ApxEntityBase):
 
     def subsystems_list(self):
         command = "apx2 subsystems list --json"
-        output = self._run_command(command)
+        status, output = self._run_command(command)
+        if not status:
+            return []
         subsystems_data = json.loads(output)
         subsystems = []
 
@@ -56,7 +57,10 @@ class Apx(ApxEntityBase):
 
     def stacks_list(self):
         command = "apx2 stacks list --json"
-        output = self._run_command(command)
+        status, output = self._run_command(command)
+        if not status:
+            return []
+
         stacks_data = json.loads(output)
         stacks = []
 
@@ -74,7 +78,10 @@ class Apx(ApxEntityBase):
 
     def pkgmanagers_list(self):
         command = "apx2 pkgmanagers list --json"
-        output = self._run_command(command)
+        status, output = self._run_command(command)
+        if not status:
+            return []
+            
         pkgmanagers_data = json.loads(output)
         pkgmanagers = []
         for data in pkgmanagers_data:

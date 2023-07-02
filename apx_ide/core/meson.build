@@ -6,7 +6,6 @@ sources = [
   'run_async.py',
   'apx.py',
   'apx_entities.py',
-  'apx_exceptions.py',
 ]
 
 install_data(sources, install_dir: coredir)

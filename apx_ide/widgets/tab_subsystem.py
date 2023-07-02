@@ -21,6 +21,7 @@ from gi.repository import Gtk, Gio, GLib, GObject, Adw
 from uuid import UUID
 
 from apx_ide.core.apx_entities import Subsystem
+from apx_ide.core.run_async import RunAsync
 
 
 @Gtk.Template(resource_path='/org/vanillaos/apx-ide/gtk/tab-subsystem.ui')
@@ -89,9 +90,16 @@ class TabSubsystem(Adw.PreferencesPage):
         dialog.present()
 
     def __on_delete_clicked(self, button: Gtk.Button) -> None:
+        def on_callback(result, *args) -> None:
+            status: bool = result[0]
+            if status:
+                self.__window.toast(f"{self.__subsystem.name} subsystem deleted")
+                self.__window.remove_subsystem(self.__aid)
+
         def on_response(dialog: Adw.MessageDialog, response: str) -> None:
             if response == "ok":
-                print("Delete clicked")
+                self.__window.toast(f"Deleting {self.__subsystem.name} subsystem...")
+                RunAsync(self.__subsystem.remove, on_callback, force=True)
             dialog.destroy()
 
         dialog: Adw.MessageDialog = Adw.MessageDialog.new(

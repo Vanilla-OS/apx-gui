@@ -17,6 +17,7 @@
 #
 # SPDX-License-Identifier: GPL-3.0-or-later
 
+import os
 import subprocess
 import shlex
 import json
@@ -24,27 +25,27 @@ import uuid
 from uuid import UUID
 from typing import Optional
 
-from apx_ide.core.apx_exceptions import ApxCommandError, ApxCreationError, ApxUpdateError, ApxDeletionError
-
 
 class ApxEntityBase:
     def __init__(self):
         self.aid: UUID = uuid.uuid4()
 
-    def _run_command(self, command: str) -> str:
+    def _run_command(self, command: str) -> [bool, str]:
         try:
+            if "APX_DEBUG" in os.environ:
+                print(f"Running command: {command}")
+
             process: subprocess.Popen = subprocess.Popen(
                 shlex.split(command), stdout=subprocess.PIPE, stderr=subprocess.PIPE
             )
             output: bytes
             error: bytes
             output, error = process.communicate()
-            if process.returncode != 0:
-                error_message: str = error.decode('utf-8').strip()
-                raise ApxCommandError(f"Command execution failed: {error_message}")
-            return output.decode('utf-8').strip()
-        except subprocess.CalledProcessError as e:
-            raise ApxCommandError(f"Command execution failed: {e}")
+            if error:
+                return False, error.decode("utf-8")
+            return True, output.decode("utf-8")
+        except Exception as e:
+            return False, str(e)
     
     def to_dict(self) -> dict:
         return self.__dict__
@@ -64,28 +65,22 @@ class Stack(ApxEntityBase):
         self.pkg_manager: str = pkg_manager
         self.built_in: str = built_in
 
-    def create(self, base: str, packages: str, pkg_manager: str) -> None:
+    def create(self, base: str, packages: str, pkg_manager: str) -> [bool, str]:
         command: str = (
             f"apx2 stacks new --name {self.name} --base {base} --packages {packages} --pkg-manager {pkg_manager}"
         )
-        output: str = self._run_command(command)
-        if not output:
-            raise ApxCreationError(f"Failed to create Stack {self.name}")
+        return self._run_command(command)
 
-    def update(self, base: str, packages: str, pkg_manager: str) -> None:
+    def update(self, base: str, packages: str, pkg_manager: str) -> [bool, str]:
         command: str = (
             f"apx2 stacks update --name {self.name} --base {base} --packages {packages} --pkg-manager {pkg_manager}"
         )
-        output: str = self._run_command(command)
-        if not output:
-            raise ApxUpdateError(f"Failed to update Stack {self.name}")
+        return self._run_command(command)
 
-    def remove(self, force: bool = False) -> None:
+    def remove(self, force: bool = False) -> [bool, str]:
         force_flag: str = "--force" if force else ""
         command: str = f"apx2 stacks rm {force_flag} --name {self.name}"
-        output: str = self._run_command(command)
-        if not output:
-            raise ApxDeletionError(f"Failed to remove Stack {self.name}")
+        return self._run_command(command)
 
 
 class Subsystem(ApxEntityBase):
@@ -97,24 +92,18 @@ class Subsystem(ApxEntityBase):
         self.status: str = status
         self.exported_programs: Optional[dict] = exported_programs
 
-    def create(self, stack: str) -> None:
+    def create(self, stack: str) -> [bool, str]:
         command: str = f"apx2 subsystems new --name {self.name} --stack {stack}"
-        output: str = self._run_command(command)
-        if not output:
-            raise ApxCreationError(f"Failed to create Subsystem {self.name}")
+        return self._run_command(command)
 
-    def update(self, stack: str) -> None:
-        command: str = f"apx2 subsystems update --name {self.internal_name} --stack {stack}"
-        output: str = self._run_command(command)
-        if not output:
-            raise ApxUpdateError(f"Failed to update Subsystem {self.internal_name}")
+    def update(self, stack: str) -> [bool, str]:
+        command: str = f"apx2 subsystems update --name {self.name} --stack {stack}"
+        return self._run_command(command)
 
-    def remove(self, force: bool = False) -> None:
+    def remove(self, force: bool = False) -> [bool, str]:
         force_flag: str = "--force" if force else ""
-        command: str = f"apx2 subsystems rm {force_flag} --name {self.internal_name}"
-        output: str = self._run_command(command)
-        if not output:
-            raise ApxDeletionError(f"Failed to remove Subsystem {self.internal_name}")
+        command: str = f"apx2 subsystems rm {force_flag} --name {self.name}"
+        return self._run_command(command)
 
 
 class PkgManager(ApxEntityBase):
@@ -174,8 +163,7 @@ class PkgManager(ApxEntityBase):
         if not output:
             raise ApxCreationError(f"Failed to create PkgManager {name}")
 
-    def remove(self) -> None:
-        command: str = f"apx2 pkgmanagers rm --name {self.name}"
-        output: str = self._run_command(command)
-        if not output:
-            raise ApxDeletionError(f"Failed to remove PkgManager {self.name}")
+    def remove(self, force: bool = False) -> [bool, str]:
+        force_flag: str = "--force" if force else ""
+        command: str = f"apx2 pkgmanagers rm {force_flag} --name {self.name}"
+        return self._run_command(command)
