@@ -7,7 +7,9 @@
     <file preprocess="xml-stripblanks">gtk/sidebar.ui</file>
     <file preprocess="xml-stripblanks">gtk/tab-subsystem.ui</file>
     <file preprocess="xml-stripblanks">gtk/tab-stack.ui</file>
+    <file preprocess="xml-stripblanks">gtk/tab-pkgmanager.ui</file>
     <file preprocess="xml-stripblanks">gtk/entry-subsystem.ui</file>
     <file preprocess="xml-stripblanks">gtk/entry-stack.ui</file>
+    <file preprocess="xml-stripblanks">gtk/entry-pkgmanager.ui</file>
   </gresource>
 </gresources>

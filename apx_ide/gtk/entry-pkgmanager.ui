@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <interface>
-  <template class="EntryStack" parent="AdwActionRow">
+  <template class="EntryPkgManager" parent="AdwActionRow">
     <child type="suffix">
         <object class="GtkImage">
             <property name="icon-name">go-next-symbolic</property>

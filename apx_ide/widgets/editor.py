@@ -22,7 +22,8 @@ from uuid import UUID
 
 from apx_ide.widgets.tab_subsystem import TabSubsystem
 from apx_ide.widgets.tab_stack import TabStack
-from apx_ide.core.apx_entities import Subsystem, Stack
+from apx_ide.widgets.tab_pkgmanager import TabPkgManager
+from apx_ide.core.apx_entities import Subsystem, Stack, PkgManager
 
 
 @Gtk.Template(resource_path='/org/vanillaos/apx-ide/gtk/editor.ui')
@@ -88,3 +89,12 @@ class Editor(Adw.Bin):
         page.set_icon(icon)
         
         self.open(stack.aid)
+
+    def new_pkgmanager_tab(self, pkgmanager: PkgManager) -> None:
+        page: Adw.TabPage = self.tabs_editor.append(TabPkgManager(pkgmanager))
+        icon: Gio.Icon = Gio.ThemedIcon.new_with_default_fallbacks('insert-object-symbolic')
+
+        page.set_title(pkgmanager.name)
+        page.set_icon(icon)
+        
+        self.open(pkgmanager.aid)

@@ -5,8 +5,10 @@ sources = [
   '__init__.py',
   'tab_subsystem.py',
   'tab_stack.py',
+  'tab_pkgmanager.py',
   'entry_subsystem.py',
   'entry_stack.py',
+  'entry_pkgmanager.py',
   'editor.py',
   'sidebar.py',
 ]

@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<interface>
+  <template class="TabPkgManager" parent="AdwPreferencesPage">
+    <child>
+      <object class="AdwPreferencesGroup">
+        <property name="title">Details</property>
+        <child>
+          <object class="AdwActionRow" id="row_sudo">
+            <property name="title" translatable="true">Need Sudo</property>
+            <child type="prefix">
+              <object class="GtkImage">
+                <property name="icon-name">dialog-password-symbolic</property>
+              </object>
+            </child>
+            <child type="suffix">
+              <object class="GtkSwitch" id="sw_sudo">
+                <property name="valign">center</property>
+              </object>
+            </child>
+          </object>
+        </child>
+        <child>
+          <object class="AdwActionRow" id="row_builtin">
+            <property name="title" translatable="true">Built-In</property>
+            <child type="prefix">
+              <object class="GtkImage">
+                <property name="icon-name">emblem-default-symbolic</property>
+              </object>
+            </child>
+          </object>
+        </child>
+      </object>
+    </child>
+    <child>
+      <object class="AdwPreferencesGroup">
+        <property name="title">Commands</property>
+        <child>
+          <object class="AdwEntryRow" id="row_autoremove">
+            <property name="title" translatable="true">Autoremove</property>
+          </object>
+        </child>
+        <child>
+          <object class="AdwEntryRow" id="row_clean">
+            <property name="title" translatable="true">Clean</property>
+          </object>
+        </child>
+        <child>
+          <object class="AdwEntryRow" id="row_install">
+            <property name="title" translatable="true">Install</property>
+          </object>
+        </child>
+        <child>
+          <object class="AdwEntryRow" id="row_list">
+            <property name="title" translatable="true">List</property>
+          </object>
+        </child>
+        <child>
+          <object class="AdwEntryRow" id="row_purge">
+            <property name="title" translatable="true">Purge</property>
+          </object>
+        </child>
+        <child>
+          <object class="AdwEntryRow" id="row_remove">
+            <property name="title" translatable="true">Remove</property>
+          </object>
+        </child>
+        <child>
+          <object class="AdwEntryRow" id="row_search">
+            <property name="title" translatable="true">Search</property>
+          </object>
+        </child>
+        <child>
+          <object class="AdwEntryRow" id="row_show">
+            <property name="title" translatable="true">Show</property>
+          </object>
+        </child>
+        <child>
+          <object class="AdwEntryRow" id="row_update">
+            <property name="title" translatable="true">Update</property>
+          </object>
+        </child>
+        <child>
+          <object class="AdwEntryRow" id="row_upgrade">
+            <property name="title" translatable="true">Upgrade</property>
+          </object>
+        </child>
+      </object>
+    </child>
+    <child>
+      <object class="AdwPreferencesGroup">
+        <property name="title">Destructive Actions</property>
+        <child>
+          <object class="AdwActionRow" id="row_delete">
+            <property name="title" translatable="true">Delete Package Manager</property>
+            <property name="activatable-widget">btn_delete</property>
+            <child type="suffix">
+              <object class="GtkButton" id="btn_delete">
+                <property name="icon-name">user-trash-symbolic</property>
+                <property name="valign">center</property>
+                <style>
+                  <class name="flat"/>
+                </style>
+              </object>
+            </child>
+          </object>
+        </child>
+      </object>
+    </child>
+  </template>
+</interface>

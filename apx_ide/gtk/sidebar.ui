@@ -61,21 +61,7 @@
               <object class="AdwViewStackPage" id="page_pkgmanagers">
                 <property name="name">pkgmanagers</property>
                 <property name="child">
-                  <object class="GtkListBox">
-                    <child>
-                      <object class="AdwActionRow">
-                        <property name="title" translatable="true">apt</property>
-                        <child type="suffix">
-                          <object class="GtkImage">
-                            <property name="icon-name">go-next-symbolic</property>
-                            <style>
-                              <class name="dim-label"/>
-                            </style>
-                          </object>
-                        </child>
-                      </object>
-                    </child>
-                  </object>
+                  <object class="GtkListBox" id="list_pkgmanagers"></object>
                 </property>
               </object>
             </child>
