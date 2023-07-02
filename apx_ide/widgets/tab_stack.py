@@ -33,8 +33,9 @@ class TabStack(Adw.PreferencesPage):
     row_builtin: Adw.ActionRow = Gtk.Template.Child()
     btn_delete: Adw.ActionRow = Gtk.Template.Child()
 
-    def __init__(self, stack: Stack, **kwargs):
+    def __init__(self, window: Adw.ApplicationWindow, stack: Stack, **kwargs):
         super().__init__(**kwargs)
+        self.__window: Adw.ApplicationWindow = window
         self.__aid: UUID = stack.aid
         self.__stack: Stack = stack
         self.__build_ui()
@@ -63,7 +64,7 @@ class TabStack(Adw.PreferencesPage):
         self.row_packages.set_title(f"{len(self.__stack.packages)} Packages")
         self.row_builtin.set_subtitle("Yes" if self.__stack.built_in else "No")
 
-        self.btn_delete.connect('clicked', self.__on_btn_delete_clicked)
+        self.btn_delete.connect('clicked', self.__on_delete_clicked)
 
         for pkg in self.__stack.packages:
             row: Adw.ActionRow = Adw.ActionRow()
@@ -74,5 +75,19 @@ class TabStack(Adw.PreferencesPage):
     def aid(self) -> UUID:
         return self.__aid
 
-    def __on_btn_delete_clicked(self, button: Gtk.Button) -> None:
-        print("Delete Stack")
+    def __on_delete_clicked(self, button: Gtk.Button) -> None:
+        def on_response(dialog: Adw.MessageDialog, response: str) -> None:
+            if response == "ok":
+                print("Delete clicked")
+            dialog.destroy()
+
+        dialog: Adw.MessageDialog = Adw.MessageDialog.new(
+            self.__window,
+            f"Are you sure you want to delete the {self.__stack.name} stack?",
+            "This action will delete the stack and all its data. This action cannot be undone.",
+        )
+        dialog.add_response("cancel", "Cancel")
+        dialog.add_response("ok", "Delete")
+        dialog.set_response_appearance("ok", Adw.ResponseAppearance.DESTRUCTIVE)
+        dialog.connect("response", on_response)
+        dialog.present()

@@ -42,8 +42,9 @@ class TabPkgManager(Adw.PreferencesPage):
     btn_delete: Gtk.Button = Gtk.Template.Child()
     sw_sudo: Gtk.Switch = Gtk.Template.Child()
 
-    def __init__(self, stack: PkgManager, **kwargs):
+    def __init__(self, window: Adw.ApplicationWindow, stack: PkgManager, **kwargs):
         super().__init__(**kwargs)
+        self.__window: Adw.ApplicationWindow = window
         self.__aid: UUID = stack.aid
         self.__pkgmanager: PkgManager = stack
         self.__build_ui()
@@ -62,11 +63,25 @@ class TabPkgManager(Adw.PreferencesPage):
         self.row_update.set_text(self.__pkgmanager.cmd_update)
         self.row_upgrade.set_text(self.__pkgmanager.cmd_upgrade)
 
-        self.btn_delete.connect('clicked', self.__on_btn_delete_clicked)
+        self.btn_delete.connect('clicked', self.__on_delete_clicked)
 
     @property
     def aid(self) -> UUID:
         return self.__aid
 
-    def __on_btn_delete_clicked(self, button: Gtk.Button) -> None:
-        print("Delete PkgManager")
+    def __on_delete_clicked(self, button: Gtk.Button) -> None:
+        def on_response(dialog: Adw.MessageDialog, response: str) -> None:
+            if response == "ok":
+                print("Delete clicked")
+            dialog.destroy()
+
+        dialog: Adw.MessageDialog = Adw.MessageDialog.new(
+            self.__window,
+            f"Are you sure you want to delete the {self.__pkgmanager.name} package manager?",
+            "This action will delete the package manager and all its data. This action cannot be undone.",
+        )
+        dialog.add_response("cancel", "Cancel")
+        dialog.add_response("ok", "Delete")
+        dialog.set_response_appearance("ok", Adw.ResponseAppearance.DESTRUCTIVE)
+        dialog.connect("response", on_response)
+        dialog.present()

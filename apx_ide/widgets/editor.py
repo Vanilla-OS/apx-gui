@@ -39,8 +39,9 @@ class Editor(Adw.Bin):
     page_no_tabs: Adw.ViewStackPage = Gtk.Template.Child()
     page_editor: Adw.ViewStackPage = Gtk.Template.Child()
 
-    def __init__(self, **kwargs):
+    def __init__(self, window: Adw.ApplicationWindow, **kwargs):
         super().__init__(**kwargs)
+        self.__window: Adw.ApplicationWindow = window
         self.__build_ui()
 
     def __build_ui(self) -> None:
@@ -73,7 +74,7 @@ class Editor(Adw.Bin):
         return aid in self.__registry__["open"]
 
     def new_subsystem_tab(self, subsystem: Subsystem) -> None:
-        page: Adw.TabPage = self.tabs_editor.append(TabSubsystem(subsystem))
+        page: Adw.TabPage = self.tabs_editor.append(TabSubsystem(self.__window, subsystem))
         icon: Gio.Icon = Gio.ThemedIcon.new_with_default_fallbacks('utilities-terminal-symbolic')
 
         page.set_title(subsystem.name)
@@ -82,7 +83,7 @@ class Editor(Adw.Bin):
         self.open(subsystem.aid)
 
     def new_stack_tab(self, stack: Stack) -> None:
-        page: Adw.TabPage = self.tabs_editor.append(TabStack(stack))
+        page: Adw.TabPage = self.tabs_editor.append(TabStack(self.__window, stack))
         icon: Gio.Icon = Gio.ThemedIcon.new_with_default_fallbacks('vanilla-puzzle-piece-symbolic')
 
         page.set_title(stack.name)
@@ -91,7 +92,7 @@ class Editor(Adw.Bin):
         self.open(stack.aid)
 
     def new_pkgmanager_tab(self, pkgmanager: PkgManager) -> None:
-        page: Adw.TabPage = self.tabs_editor.append(TabPkgManager(pkgmanager))
+        page: Adw.TabPage = self.tabs_editor.append(TabPkgManager(self.__window, pkgmanager))
         icon: Gio.Icon = Gio.ThemedIcon.new_with_default_fallbacks('insert-object-symbolic')
 
         page.set_title(pkgmanager.name)

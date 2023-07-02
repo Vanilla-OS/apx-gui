@@ -41,7 +41,7 @@ class ApxIDEWindow(Adw.ApplicationWindow):
         self.__build_ui()
 
     def __build_ui(self):
-        editor: Editor = Editor()
+        editor: Editor = Editor(self)
         self.paned_main.set_end_child(editor)
 
         sidebar: Sidebar = Sidebar(

@@ -38,8 +38,9 @@ class TabSubsystem(Adw.PreferencesPage):
     btn_reset: Gtk.Button = Gtk.Template.Child()
     btn_delete: Gtk.Button = Gtk.Template.Child()
 
-    def __init__(self, subsystem: Subsystem, **kwargs):
+    def __init__(self, window: Adw.ApplicationWindow, subsystem: Subsystem, **kwargs):
         super().__init__(**kwargs)
+        self.__window: Adw.ApplicationWindow = window
         self.__aid: UUID = subsystem.aid
         self.__subsystem: Subsystem = subsystem
         self.__build_ui()
@@ -55,7 +56,7 @@ class TabSubsystem(Adw.PreferencesPage):
         self.btn_delete.connect('clicked', self.__on_delete_clicked)
         
         for name, program in self.__subsystem.exported_programs.items():
-            row = Adw.ActionRow(title=name, subtitle=program.get('Exec', ''))
+            row: Adw.ActionRow = Adw.ActionRow(title=name, subtitle=program.get('Exec', ''))
             row.set_icon_name(program.get('Icon', 'application-x-executable-symbolic'))
             self.row_programs.add_row(row)
 
@@ -71,7 +72,35 @@ class TabSubsystem(Adw.PreferencesPage):
         GLib.spawn_command_line_async(f"kgx -e apx2 {self.__subsystem.name} enter")
 
     def __on_reset_clicked(self, button: Gtk.Button) -> None:
-        print("Reset clicked")
+        def on_response(dialog: Adw.MessageDialog, response: str) -> None:
+            if response == "ok":
+                print("Reset clicked")
+            dialog.destroy()
+
+        dialog: Adw.MessageDialog = Adw.MessageDialog.new(
+            self.__window,
+            f"Are you sure you want to reset the {self.__subsystem.name} subsystem?",
+            "This action will reset the subsystem to its initial state. All the changes will be lost.",
+        )
+        dialog.add_response("cancel", "Cancel")
+        dialog.add_response("ok", "Reset")
+        dialog.set_response_appearance("ok", Adw.ResponseAppearance.DESTRUCTIVE)
+        dialog.connect("response", on_response)
+        dialog.present()
 
     def __on_delete_clicked(self, button: Gtk.Button) -> None:
-        print("Delete clicked")
+        def on_response(dialog: Adw.MessageDialog, response: str) -> None:
+            if response == "ok":
+                print("Delete clicked")
+            dialog.destroy()
+
+        dialog: Adw.MessageDialog = Adw.MessageDialog.new(
+            self.__window,
+            f"Are you sure you want to delete the {self.__subsystem.name} subsystem?",
+            "This action will delete the subsystem and all its data. This action cannot be undone.",
+        )
+        dialog.add_response("cancel", "Cancel")
+        dialog.add_response("ok", "Delete")
+        dialog.set_response_appearance("ok", Adw.ResponseAppearance.DESTRUCTIVE)
+        dialog.connect("response", on_response)
+        dialog.present()
