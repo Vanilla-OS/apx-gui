@@ -53,9 +53,11 @@ class TabSubsystem(Adw.PreferencesPage):
         self.btn_console.connect('clicked', self.__on_console_clicked)
         self.btn_reset.connect('clicked', self.__on_reset_clicked)
         self.btn_delete.connect('clicked', self.__on_delete_clicked)
-
-        for program in self.__subsystem.exported_programs:
-            self.row_programs.add_row(Adw.ActionRow(title=program))
+        
+        for name, program in self.__subsystem.exported_programs.items():
+            row = Adw.ActionRow(title=name, subtitle=program.get('Exec', ''))
+            row.set_icon_name(program.get('Icon', 'application-x-executable-symbolic'))
+            self.row_programs.add_row(row)
 
     @property
     def aid(self) -> UUID:
