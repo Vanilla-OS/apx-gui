@@ -19,7 +19,7 @@
 
 import os
 import subprocess
-from gi.repository import Gtk, GLib, Gdk, Adw
+from gi.repository import Gtk, GLib, Gdk, Gio, Adw
 
 from apx_ide.core.run_async import RunAsync
 from apx_ide.core.apx import Apx
@@ -33,6 +33,7 @@ class ApxIDEWindow(Adw.ApplicationWindow):
 
     toasts: Adw.ToastOverlay = Gtk.Template.Child()
     paned_main: Gtk.Paned = Gtk.Template.Child()
+    menu_add: Gio.MenuModel = Gtk.Template.Child()
 
     def __init__(self, embedded: bool, **kwargs):
         super().__init__(**kwargs)
