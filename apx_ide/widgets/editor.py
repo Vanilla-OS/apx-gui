@@ -1,4 +1,4 @@
-# tab-subsystem.py
+# tab-editor.py
 #
 # Copyright 2023 Mirko Brombin
 #
@@ -18,6 +18,7 @@
 # SPDX-License-Identifier: GPL-3.0-or-later
 
 from gi.repository import Gtk, Gio, GObject, Adw
+from uuid import UUID
 
 from apx_ide.widgets.tab_subsystem import TabSubsystem
 from apx_ide.core.apx_entities import Subsystem
@@ -25,33 +26,33 @@ from apx_ide.core.apx_entities import Subsystem
 
 @Gtk.Template(resource_path='/org/vanillaos/apx-ide/gtk/editor.ui')
 class Editor(Adw.Bin):
-    __gtype_name__ = 'Editor'
-    __registry__ = {
+    __gtype_name__: str = 'Editor'
+    __registry__: dict = {
         "open": [],
         "tabs": {},
     }
 
-    tabs_editor = Gtk.Template.Child()
-    stack_editor = Gtk.Template.Child()
-    page_no_tabs = Gtk.Template.Child()
-    page_editor = Gtk.Template.Child()
+    tabs_editor: Adw.TabView = Gtk.Template.Child()
+    stack_editor: Adw.ViewStack = Gtk.Template.Child()
+    page_no_tabs: Adw.ViewStackPage = Gtk.Template.Child()
+    page_editor: Adw.ViewStackPage = Gtk.Template.Child()
 
     def __init__(self, **kwargs):
         super().__init__(**kwargs)
         self.__build_ui()
 
-    def __build_ui(self):
+    def __build_ui(self) -> None:
         self.tabs_editor.connect('page-detached', self.__on_page_detached)
         self.tabs_editor.connect('page-attached', self.__on_page_attached)
 
-    def __on_page_detached(self, tabs, page, *args):
+    def __on_page_detached(self, tabs: Adw.TabView, page: Adw.TabPage, *args) -> None:
         self.__registry__["open"].remove(page.get_child().aid)
         self.__registry__["tabs"].pop(page.get_child().aid)
 
         if tabs.get_n_pages() == 0:
             self.stack_editor.set_visible_child_name('no_tabs')
 
-    def __on_page_attached(self, tabs, page, *args):
+    def __on_page_attached(self, tabs: Adw.TabView, page: Adw.TabPage, *args) -> None:
         self.page_no_tabs.set_visible(False)
         self.page_editor.set_visible(True)
         self.__registry__["open"].append(page.get_child().aid)
@@ -59,17 +60,17 @@ class Editor(Adw.Bin):
 
         if tabs.get_n_pages() > 0:
             self.stack_editor.set_visible_child_name('editor')
-        
-    def open(self, aid):
+
+    def open(self, aid: UUID) -> bool:
         if aid in self.__registry__["open"]:
             self.tabs_editor.set_selected_page(self.__registry__["tabs"][aid])
             return True
         return False
 
-    def is_open(self, aid):
+    def is_open(self, aid: UUID) -> bool:
         return aid in self.__registry__["open"]
-    
-    def new_subsystem_tab(self, subsystem: Subsystem):
-        page = self.tabs_editor.append(TabSubsystem(subsystem))
+
+    def new_subsystem_tab(self, subsystem: Subsystem) -> None:
+        page: Adw.TabPage = self.tabs_editor.append(TabSubsystem(subsystem))
         page.set_title(subsystem.name)
         self.open(subsystem.aid)

@@ -1,4 +1,4 @@
-# tab-subsystem.py
+# entry_subsystem.py
 #
 # Copyright 2023 Mirko Brombin
 #
@@ -24,12 +24,12 @@ from apx_ide.core.apx_entities import Subsystem
 
 @Gtk.Template(resource_path='/org/vanillaos/apx-ide/gtk/entry-subsystem.ui')
 class EntrySubsystem(Adw.ActionRow):
-    __gtype_name__ = 'EntrySubsystem'
+    __gtype_name__: str = 'EntrySubsystem'
 
     def __init__(self, subsystem: Subsystem, **kwargs):
         super().__init__(**kwargs)
         self.set_title(subsystem.name)
         self.set_subtitle(f"Based on the {subsystem.stack.name} stack.")
 
-        self.subsystem = subsystem
-        self.aid = subsystem.aid
+        self.subsystem: Subsystem = subsystem
+        self.aid: UUID = subsystem.aid

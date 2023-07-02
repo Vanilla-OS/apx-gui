@@ -1,4 +1,4 @@
-# tab-subsystem.py
+# tab_subsystem.py
 #
 # Copyright 2023 Mirko Brombin
 #
@@ -18,25 +18,27 @@
 # SPDX-License-Identifier: GPL-3.0-or-later
 
 from gi.repository import Gtk, Gio, GLib, GObject, Adw
+from uuid import UUID
 
 from apx_ide.core.apx_entities import Subsystem
 
 
 @Gtk.Template(resource_path='/org/vanillaos/apx-ide/gtk/tab-subsystem.ui')
 class TabSubsystem(Adw.PreferencesPage):
-    __gtype_name__ = 'TabSubsystem'
-    row_status = Gtk.Template.Child()
-    row_stack = Gtk.Template.Child()
-    row_pkgmanager = Gtk.Template.Child()
-    row_packages = Gtk.Template.Child()
-    row_console = Gtk.Template.Child()
-    row_reset = Gtk.Template.Child()
-    row_delete = Gtk.Template.Child()
+    __gtype_name__: str = 'TabSubsystem'
+
+    row_status: Adw.ActionRow = Gtk.Template.Child()
+    row_stack: Adw.ActionRow = Gtk.Template.Child()
+    row_pkgmanager: Adw.ActionRow = Gtk.Template.Child()
+    row_packages: Adw.ExpanderRow = Gtk.Template.Child()
+    row_console: Adw.ActionRow = Gtk.Template.Child()
+    row_reset: Adw.ActionRow = Gtk.Template.Child()
+    row_delete: Adw.ActionRow = Gtk.Template.Child()
 
     def __init__(self, subsystem: Subsystem, **kwargs):
         super().__init__(**kwargs)
-        self.__aid = subsystem.aid
-        self.__subsystem = subsystem
+        self.__aid: UUID = subsystem.aid
+        self.__subsystem: Subsystem = subsystem
         self.__build_ui()
 
     def __build_ui(self):
@@ -49,9 +51,9 @@ class TabSubsystem(Adw.PreferencesPage):
             self.row_packages.add_row(Adw.ActionRow(title=package))
 
     @property
-    def aid(self):
+    def aid(self) -> UUID:
         return self.__aid
 
     @property
-    def subsystem(self):
+    def subsystem(self) -> Subsystem:
         return self.__subsystem

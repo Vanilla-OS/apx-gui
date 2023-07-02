@@ -29,20 +29,20 @@ from apx_ide.widgets.sidebar import Sidebar
 
 @Gtk.Template(resource_path='/org/vanillaos/apx-ide/gtk/window-main.ui')
 class ApxIDEWindow(Adw.ApplicationWindow):
-    __gtype_name__ = 'ApxIDEWindow'
+    __gtype_name__: str = 'ApxIDEWindow'
 
-    toasts = Gtk.Template.Child()
-    paned_main = Gtk.Template.Child()
+    toasts: Adw.ToastOverlay = Gtk.Template.Child()
+    paned_main: Gtk.Paned = Gtk.Template.Child()
 
-    def __init__(self, embedded, **kwargs):
+    def __init__(self, embedded: bool, **kwargs):
         super().__init__(**kwargs)
 
-        self.__apx = Apx()
+        self.__apx: Apx = Apx()
         self.__build_ui()
 
     def __build_ui(self):
-        editor = Editor()
+        editor: Editor = Editor()
         self.paned_main.set_end_child(editor)
 
-        sidebar = Sidebar(self.__apx.subsystems_list(), editor)
+        sidebar: Sidebar = Sidebar(self.__apx.subsystems_list(), editor)
         self.paned_main.set_start_child(sidebar)

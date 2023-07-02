@@ -36,11 +36,11 @@ logging.basicConfig(level=logging.INFO)
 class ApxIDEApplication(Adw.Application):
     """The main application singleton class."""
 
-    __embedded = False
+    __embedded: bool = False
 
     def __init__(self):
         super().__init__(application_id='org.vanillaos.ApxIDE',
-            flags=Gio.ApplicationFlags.HANDLES_COMMAND_LINE)
+                         flags=Gio.ApplicationFlags.HANDLES_COMMAND_LINE)
         self.create_action('quit', self.quit, ['<primary>q'])
 
         self.__register_arguments()
@@ -48,9 +48,9 @@ class ApxIDEApplication(Adw.Application):
     def __register_arguments(self):
         """Register command line arguments."""
         self.add_main_option("embedded", ord("e"), GLib.OptionFlags.NONE,
-            GLib.OptionArg.NONE, "Embedded mode", None)
+                             GLib.OptionArg.NONE, "Embedded mode", None)
 
-    def do_command_line(self, command):
+    def do_command_line(self, command: Gio.ApplicationCommandLine) -> int:
         """Handle command line arguments.
 
         We only have one command line option, --embedded, which
@@ -74,10 +74,10 @@ class ApxIDEApplication(Adw.Application):
         win = self.props.active_window
         if not win:
             win = ApxIDEWindow(application=self,
-                embedded=self.__embedded)
+                               embedded=self.__embedded)
         win.present()
 
-    def create_action(self, name, callback, shortcuts=None):
+    def create_action(self, name: str, callback: callable, shortcuts: list[str] = None):
         """Add an application action.
 
         Args:
@@ -93,7 +93,7 @@ class ApxIDEApplication(Adw.Application):
             self.set_accels_for_action(f"app.{name}", shortcuts)
 
 
-def main(version):
+def main(version: str):
     """The application's entry point."""
     app = ApxIDEApplication()
     return app.run(sys.argv)

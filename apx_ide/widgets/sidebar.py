@@ -1,4 +1,4 @@
-# tab-subsystem.py
+# sidebar.py
 #
 # Copyright 2023 Mirko Brombin
 #
@@ -26,18 +26,18 @@ from apx_ide.core.apx_entities import Subsystem
 
 @Gtk.Template(resource_path='/org/vanillaos/apx-ide/gtk/sidebar.ui')
 class Sidebar(Gtk.Box):
-    __gtype_name__ = 'Sidebar'
+    __gtype_name__: str = 'Sidebar'
 
-    list_subsystems = Gtk.Template.Child()
-    stack_sidebar = Gtk.Template.Child()
-    btn_show_subsystems = Gtk.Template.Child()
-    btn_show_stacks = Gtk.Template.Child()
-    btn_show_pkgmanagers = Gtk.Template.Child()
+    list_subsystems: Gtk.ListBox = Gtk.Template.Child()
+    stack_sidebar: Adw.ViewStack = Gtk.Template.Child()
+    btn_show_subsystems: Gtk.Button = Gtk.Template.Child()
+    btn_show_stacks: Gtk.Button = Gtk.Template.Child()
+    btn_show_pkgmanagers: Gtk.Button = Gtk.Template.Child()
 
     def __init__(self, subsystems: list[Subsystem], editor: Editor, **kwargs):
         super().__init__(**kwargs)
-        self.__subsystems = subsystems
-        self.__editor = editor
+        self.__subsystems: list[Subsystem] = subsystems
+        self.__editor: Editor = editor
         self.__build_ui()
 
     def __build_ui(self):
@@ -50,7 +50,7 @@ class Sidebar(Gtk.Box):
             entry = EntrySubsystem(subsystem)
             self.list_subsystems.append(entry)
             
-    def __switch_stack(self, button, name):
+    def __switch_stack(self, button: Gtk.Button, name: str):
         for btn in [
             self.btn_show_subsystems, 
             self.btn_show_stacks, 
@@ -62,9 +62,9 @@ class Sidebar(Gtk.Box):
 
         button.remove_css_class('flat')
 
-    def __on_subsystem_selected(self, listbox, row):
-        if self.__editor.is_open(row.aid):
-            self.__editor.open(row.aid)
+    def __on_subsystem_selected(self, listbox: Gtk.ListBox, row: Gtk.ListBoxRow):
+        if self.__editor.is_open(row.subsystem.aid):
+            self.__editor.open(row.subsystem.aid)
             return
 
         self.__editor.new_subsystem_tab(row.subsystem)
