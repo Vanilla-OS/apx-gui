@@ -25,7 +25,7 @@ from apx_ide.core.apx_entities import PkgManager
 
 
 @Gtk.Template(resource_path='/org/vanillaos/apx-ide/gtk/tab-pkgmanager.ui')
-class TabPkgManager(Adw.PreferencesPage):
+class TabPkgManager(Gtk.Box):
     __gtype_name__: str = 'TabPkgManager'
     row_sudo: Adw.ActionRow = Gtk.Template.Child()
     row_builtin: Adw.ActionRow = Gtk.Template.Child()
@@ -41,6 +41,8 @@ class TabPkgManager(Adw.PreferencesPage):
     row_upgrade: Adw.EntryRow = Gtk.Template.Child()
     btn_delete: Gtk.Button = Gtk.Template.Child()
     sw_sudo: Gtk.Switch = Gtk.Template.Child()
+    infobar: Gtk.InfoBar = Gtk.Template.Child()
+    group_actions: Adw.PreferencesGroup = Gtk.Template.Child()
 
     def __init__(self, window: Adw.ApplicationWindow, stack: PkgManager, **kwargs):
         super().__init__(**kwargs)
@@ -62,6 +64,23 @@ class TabPkgManager(Adw.PreferencesPage):
         self.row_show.set_text(self.__pkgmanager.cmd_show)
         self.row_update.set_text(self.__pkgmanager.cmd_update)
         self.row_upgrade.set_text(self.__pkgmanager.cmd_upgrade)
+
+        if self.__pkgmanager.built_in:
+            self.infobar.set_revealed(True)
+            self.group_actions.set_visible(False)
+            for row in [
+                self.row_autoremove,
+                self.row_install,
+                self.row_clean,
+                self.row_list,
+                self.row_purge,
+                self.row_remove,
+                self.row_search,
+                self.row_show,
+                self.row_update,
+                self.row_upgrade,
+            ]:
+                row.set_sensitive(False)
 
         self.btn_delete.connect('clicked', self.__on_delete_clicked)
 

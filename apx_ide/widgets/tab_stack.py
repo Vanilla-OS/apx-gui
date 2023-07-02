@@ -25,13 +25,15 @@ from apx_ide.core.apx_entities import Stack
 
 
 @Gtk.Template(resource_path='/org/vanillaos/apx-ide/gtk/tab-stack.ui')
-class TabStack(Adw.PreferencesPage):
+class TabStack(Gtk.Box):
     __gtype_name__: str = 'TabStack'
     row_base: Adw.EntryRow = Gtk.Template.Child()
     row_pkgmanager: Adw.EntryRow = Gtk.Template.Child()
     row_packages: Adw.ExpanderRow = Gtk.Template.Child()
     row_builtin: Adw.ActionRow = Gtk.Template.Child()
     btn_delete: Adw.ActionRow = Gtk.Template.Child()
+    infobar: Gtk.InfoBar = Gtk.Template.Child()
+    group_actions: Adw.PreferencesGroup = Gtk.Template.Child()
 
     def __init__(self, window: Adw.ApplicationWindow, stack: Stack, **kwargs):
         super().__init__(**kwargs)
@@ -64,12 +66,23 @@ class TabStack(Adw.PreferencesPage):
         self.row_packages.set_title(f"{len(self.__stack.packages)} Packages")
         self.row_builtin.set_subtitle("Yes" if self.__stack.built_in else "No")
 
+        if self.__stack.built_in:
+            self.infobar.set_revealed(True)
+            self.group_actions.set_visible(False)
+            for row in [
+                self.row_base,
+                self.row_pkgmanager,
+            ]:
+                row.set_sensitive(False)
+
         self.btn_delete.connect('clicked', self.__on_delete_clicked)
 
         for pkg in self.__stack.packages:
             row: Adw.ActionRow = Adw.ActionRow()
             row.set_title(pkg)
             self.row_packages.add_row(row)
+            if self.__stack.built_in:
+                row.set_sensitive(False)
 
     @property
     def aid(self) -> UUID:
