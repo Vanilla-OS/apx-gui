@@ -2,6 +2,8 @@
     <img src="data/icons/hicolor/scalable/apps/org.vanillaos.ApxIDE.svg" height="64">
     <h1>Apx IDE</h1>
     <p>A frontend in GTK 4 and Libadwaita for Apx</p>
+    <br />
+    <img src="data/screenshot.png">
 </div>
 
 ## Build
