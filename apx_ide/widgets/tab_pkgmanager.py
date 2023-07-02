@@ -1,4 +1,4 @@
-# tab_stack.py
+# tab_pkgmanager.py
 #
 # Copyright 2023 Mirko Brombin
 #
