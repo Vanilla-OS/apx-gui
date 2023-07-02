@@ -6,6 +6,8 @@
     <file preprocess="xml-stripblanks">gtk/editor.ui</file>
     <file preprocess="xml-stripblanks">gtk/sidebar.ui</file>
     <file preprocess="xml-stripblanks">gtk/tab-subsystem.ui</file>
+    <file preprocess="xml-stripblanks">gtk/tab-stack.ui</file>
     <file preprocess="xml-stripblanks">gtk/entry-subsystem.ui</file>
+    <file preprocess="xml-stripblanks">gtk/entry-stack.ui</file>
   </gresource>
 </gresources>

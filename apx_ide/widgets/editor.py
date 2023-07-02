@@ -21,7 +21,8 @@ from gi.repository import Gtk, Gio, GObject, Adw
 from uuid import UUID
 
 from apx_ide.widgets.tab_subsystem import TabSubsystem
-from apx_ide.core.apx_entities import Subsystem
+from apx_ide.widgets.tab_stack import TabStack
+from apx_ide.core.apx_entities import Subsystem, Stack
 
 
 @Gtk.Template(resource_path='/org/vanillaos/apx-ide/gtk/editor.ui')
@@ -72,5 +73,18 @@ class Editor(Adw.Bin):
 
     def new_subsystem_tab(self, subsystem: Subsystem) -> None:
         page: Adw.TabPage = self.tabs_editor.append(TabSubsystem(subsystem))
+        icon: Gio.Icon = Gio.ThemedIcon.new_with_default_fallbacks('utilities-terminal-symbolic')
+
         page.set_title(subsystem.name)
+        page.set_icon(icon)
+
         self.open(subsystem.aid)
+
+    def new_stack_tab(self, stack: Stack) -> None:
+        page: Adw.TabPage = self.tabs_editor.append(TabStack(stack))
+        icon: Gio.Icon = Gio.ThemedIcon.new_with_default_fallbacks('vanilla-puzzle-piece-symbolic')
+
+        page.set_title(stack.name)
+        page.set_icon(icon)
+        
+        self.open(stack.aid)

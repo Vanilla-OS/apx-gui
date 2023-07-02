@@ -4,7 +4,9 @@ widgetsdir = join_paths(pkgdatadir, 'apx_ide/widgets')
 sources = [
   '__init__.py',
   'tab_subsystem.py',
+  'tab_stack.py',
   'entry_subsystem.py',
+  'entry_stack.py',
   'editor.py',
   'sidebar.py',
 ]

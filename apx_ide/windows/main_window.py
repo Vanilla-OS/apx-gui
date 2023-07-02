@@ -44,5 +44,9 @@ class ApxIDEWindow(Adw.ApplicationWindow):
         editor: Editor = Editor()
         self.paned_main.set_end_child(editor)
 
-        sidebar: Sidebar = Sidebar(self.__apx.subsystems_list(), editor)
+        sidebar: Sidebar = Sidebar(
+            self.__apx.subsystems_list(), 
+            self.__apx.stacks_list(), 
+            editor
+        )
         self.paned_main.set_start_child(sidebar)

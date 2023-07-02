@@ -3,10 +3,7 @@
   <template class="EntrySubsystem" parent="AdwActionRow">
     <child type="suffix">
         <object class="GtkImage">
-        <property name="icon-name">go-next-symbolic</property>
-        <style>
-            <class name="dim-label"/>
-        </style>
+          <property name="icon-name">go-next-symbolic</property>
         </object>
     </child>
   </template>

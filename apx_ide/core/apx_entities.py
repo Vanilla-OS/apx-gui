@@ -45,6 +45,14 @@ class ApxEntityBase:
             return output.decode('utf-8').strip()
         except subprocess.CalledProcessError as e:
             raise ApxCommandError(f"Command execution failed: {e}")
+    
+    def to_dict(self) -> dict:
+        return self.__dict__
+
+    def to_json(self) -> str:
+        obj = self.to_dict().copy()
+        obj.pop("aid", None)
+        return json.dumps(obj, indent=4)
 
 
 class Stack(ApxEntityBase):
