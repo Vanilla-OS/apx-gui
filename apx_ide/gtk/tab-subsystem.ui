@@ -7,7 +7,6 @@
         <child>
           <object class="AdwActionRow" id="row_status">
             <property name="title" translatable="true">Status</property>
-            <property name="subtitle" translatable="true">Exited (143) 3 days ago</property>
             <child type="prefix">
               <object class="GtkImage">
                 <property name="icon-name">org.gnome.SystemMonitor-symbolic</property>
@@ -18,7 +17,6 @@
         <child>
           <object class="AdwActionRow" id="row_stack">
             <property name="title" translatable="true">Stack</property>
-            <property name="subtitle" translatable="true">alpine</property>
             <child type="prefix">
               <object class="GtkImage">
                 <property name="icon-name">vanilla-puzzle-piece-symbolic</property>
@@ -29,7 +27,6 @@
         <child>
           <object class="AdwActionRow" id="row_pkgmanager">
             <property name="title" translatable="true">Package Manager</property>
-            <property name="subtitle" translatable="true">apk</property>
             <child type="prefix">
               <object class="GtkImage">
                 <property name="icon-name">insert-object-symbolic-symbolic</property>
@@ -39,7 +36,7 @@
         </child>
         <child>
           <object class="AdwExpanderRow" id="row_packages">
-            <property name="title" translatable="true">15 Exported Programs</property>
+            <property name="title" translatable="true">0 Exported Programs</property>
             <child type="prefix">
               <object class="GtkImage">
                 <property name="icon-name">preferences-desktop-apps-symbolic</property>

@@ -1,23 +1,70 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <interface>
-  <template class="TabStack" parent="GtkPaned">
-    <property name="hexpand">True</property>
-    <property name="vexpand">True</property>
-    <property name="position">500</property>
-    <property name="position_set">True</property>
-    <property name="orientation">vertical</property>
+  <template class="TabStack" parent="AdwPreferencesPage">
     <child>
-      <object class="GtkLabel">
-        <property name="label">Code</property>
-        <property name="hexpand">True</property>
-        <property name="vexpand">True</property>
+      <object class="AdwPreferencesGroup">
+        <property name="title">Details</property>
+        <child>
+          <object class="AdwActionRow" id="row_base">
+            <property name="title" translatable="true">Base</property>
+            <child type="prefix">
+              <object class="GtkImage">
+                <property name="icon-name">drive-harddisk-symbolic</property>
+              </object>
+            </child>
+          </object>
+        </child>
+        <child>
+          <object class="AdwActionRow" id="row_pkgmanager">
+            <property name="title" translatable="true">Package Manager</property>
+            <property name="subtitle" translatable="true">apk</property>
+            <child type="prefix">
+              <object class="GtkImage">
+                <property name="icon-name">insert-object-symbolic-symbolic</property>
+              </object>
+            </child>
+          </object>
+        </child>
+        <child>
+          <object class="AdwActionRow" id="row_builtin">
+            <property name="title" translatable="true">Built-In</property>
+            <child type="prefix">
+              <object class="GtkImage">
+                <property name="icon-name">emblem-default-symbolic</property>
+              </object>
+            </child>
+          </object>
+        </child>
+        <child>
+          <object class="AdwExpanderRow" id="row_packages">
+            <property name="title" translatable="true">0 Packages</property>
+            <child type="prefix">
+              <object class="GtkImage">
+                <property name="icon-name">preferences-desktop-apps-symbolic</property>
+              </object>
+            </child>
+          </object>
+        </child>
       </object>
     </child>
     <child>
-      <object class="GtkLabel">
-        <property name="label">Lint</property>
-        <property name="hexpand">True</property>
-        <property name="vexpand">True</property>
+      <object class="AdwPreferencesGroup">
+        <property name="title">Destructive Actions</property>
+        <child>
+          <object class="AdwActionRow" id="row_delete">
+            <property name="title" translatable="true">Delete Stack</property>
+            <property name="activatable-widget">btn_delete</property>
+            <child type="suffix">
+              <object class="GtkButton" id="btn_delete">
+                <property name="icon-name">user-trash-symbolic</property>
+                <property name="valign">center</property>
+                <style>
+                  <class name="flat"/>
+                </style>
+              </object>
+            </child>
+          </object>
+        </child>
       </object>
     </child>
   </template>
