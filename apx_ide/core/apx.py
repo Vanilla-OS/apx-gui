@@ -41,13 +41,14 @@ class Apx(ApxEntityBase):
                 data["Stack"]["Base"],
                 data["Stack"]["Packages"],
                 data["Stack"]["PkgManager"],
-                data["Stack"]["BuiltIn"]
+                data["Stack"]["BuiltIn"],
             )
             subsystem = Subsystem(
                 data["InternalName"],
                 data["Name"], 
                 stack, 
-                data["Status"]
+                data["Status"],
+                data["ExportedPrograms"],
             )
             subsystems.append(subsystem)
 

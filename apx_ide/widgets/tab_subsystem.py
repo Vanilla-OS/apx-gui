@@ -30,7 +30,7 @@ class TabSubsystem(Adw.PreferencesPage):
     row_status: Adw.ActionRow = Gtk.Template.Child()
     row_stack: Adw.ActionRow = Gtk.Template.Child()
     row_pkgmanager: Adw.ActionRow = Gtk.Template.Child()
-    row_packages: Adw.ExpanderRow = Gtk.Template.Child()
+    row_programs: Adw.ExpanderRow = Gtk.Template.Child()
     row_console: Adw.ActionRow = Gtk.Template.Child()
     row_reset: Adw.ActionRow = Gtk.Template.Child()
     row_delete: Adw.ActionRow = Gtk.Template.Child()
@@ -48,14 +48,14 @@ class TabSubsystem(Adw.PreferencesPage):
         self.row_status.set_subtitle(self.__subsystem.status)
         self.row_stack.set_subtitle(self.__subsystem.stack.name)
         self.row_pkgmanager.set_subtitle(self.__subsystem.stack.pkg_manager)
-        self.row_packages.set_title(f"Packages ({len(self.__subsystem.stack.packages)})")
+        self.row_programs.set_title(f"({len(self.__subsystem.exported_programs)}) Exported Programs")
 
         self.btn_console.connect('clicked', self.__on_console_clicked)
         self.btn_reset.connect('clicked', self.__on_reset_clicked)
         self.btn_delete.connect('clicked', self.__on_delete_clicked)
 
-        for package in self.__subsystem.stack.packages:
-            self.row_packages.add_row(Adw.ActionRow(title=package))
+        for program in self.__subsystem.exported_programs:
+            self.row_programs.add_row(Adw.ActionRow(title=program))
 
     @property
     def aid(self) -> UUID:

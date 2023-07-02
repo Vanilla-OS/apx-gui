@@ -35,8 +35,7 @@
           </object>
         </child>
         <child>
-          <object class="AdwExpanderRow" id="row_packages">
-            <property name="title" translatable="true">0 Exported Programs</property>
+          <object class="AdwExpanderRow" id="row_programs">
             <child type="prefix">
               <object class="GtkImage">
                 <property name="icon-name">preferences-desktop-apps-symbolic</property>

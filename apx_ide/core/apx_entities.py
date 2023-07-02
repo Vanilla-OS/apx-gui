@@ -89,12 +89,13 @@ class Stack(ApxEntityBase):
 
 
 class Subsystem(ApxEntityBase):
-    def __init__(self, internal_name: str, name: str, stack: Stack, status: str):
+    def __init__(self, internal_name: str, name: str, stack: Stack, status: str, exported_programs: Optional[dict] = None):
         super().__init__()
         self.internal_name: str = internal_name
         self.name: str = name
         self.stack: Stack = stack
         self.status: str = status
+        self.exported_programs: Optional[dict] = exported_programs
 
     def create(self, stack: str) -> None:
         command: str = f"apx2 subsystems new --name {self.name} --stack {stack}"
