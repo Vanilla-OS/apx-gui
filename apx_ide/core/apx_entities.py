@@ -105,6 +105,11 @@ class Subsystem(ApxEntityBase):
         command: str = f"apx2 subsystems rm {force_flag} --name {self.name}"
         return self._run_command(command)
 
+    def reset(self, force: bool = False) -> [bool, str]:
+        force_flag: str = "--force" if force else ""
+        command: str = f"apx2 subsystems reset {force_flag} --name {self.name}"
+        return self._run_command(command)
+
 
 class PkgManager(ApxEntityBase):
     def __init__(

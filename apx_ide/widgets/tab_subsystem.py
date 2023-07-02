@@ -73,9 +73,15 @@ class TabSubsystem(Adw.PreferencesPage):
         GLib.spawn_command_line_async(f"kgx -e apx2 {self.__subsystem.name} enter")
 
     def __on_reset_clicked(self, button: Gtk.Button) -> None:
+        def on_callback(result, *args) -> None:
+            status: bool = result[0]
+            if status:
+                self.__window.toast(f"{self.__subsystem.name} subsystem reset")
+
         def on_response(dialog: Adw.MessageDialog, response: str) -> None:
             if response == "ok":
-                print("Reset clicked")
+                self.__window.toast(f"Resetting {self.__subsystem.name} subsystem...")
+                RunAsync(self.__subsystem.reset, on_callback, force=True)
             dialog.destroy()
 
         dialog: Adw.MessageDialog = Adw.MessageDialog.new(
