@@ -27,8 +27,8 @@ from apx_ide.core.apx_entities import Stack
 @Gtk.Template(resource_path='/org/vanillaos/apx-ide/gtk/tab-stack.ui')
 class TabStack(Adw.PreferencesPage):
     __gtype_name__: str = 'TabStack'
-    row_base: Adw.ActionRow = Gtk.Template.Child()
-    row_pkgmanager: Adw.ActionRow = Gtk.Template.Child()
+    row_base: Adw.EntryRow = Gtk.Template.Child()
+    row_pkgmanager: Adw.EntryRow = Gtk.Template.Child()
     row_packages: Adw.ExpanderRow = Gtk.Template.Child()
     row_builtin: Adw.ActionRow = Gtk.Template.Child()
     btn_delete: Adw.ActionRow = Gtk.Template.Child()
@@ -59,8 +59,8 @@ class TabStack(Adw.PreferencesPage):
 
         # scrolled.set_child(source_view)
         # self.set_start_child(scrolled)
-        self.row_base.set_subtitle(self.__stack.base)
-        self.row_pkgmanager.set_subtitle(self.__stack.pkg_manager)
+        self.row_base.set_text(self.__stack.base)
+        self.row_pkgmanager.set_text(self.__stack.pkg_manager)
         self.row_packages.set_title(f"{len(self.__stack.packages)} Packages")
         self.row_builtin.set_subtitle("Yes" if self.__stack.built_in else "No")
 

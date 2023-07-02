@@ -5,7 +5,7 @@
       <object class="AdwPreferencesGroup">
         <property name="title">Details</property>
         <child>
-          <object class="AdwActionRow" id="row_base">
+          <object class="AdwEntryRow" id="row_base">
             <property name="title" translatable="true">Base</property>
             <child type="prefix">
               <object class="GtkImage">
@@ -15,9 +15,8 @@
           </object>
         </child>
         <child>
-          <object class="AdwActionRow" id="row_pkgmanager">
+          <object class="AdwEntryRow" id="row_pkgmanager">
             <property name="title" translatable="true">Package Manager</property>
-            <property name="subtitle" translatable="true">apk</property>
             <child type="prefix">
               <object class="GtkImage">
                 <property name="icon-name">insert-object-symbolic-symbolic</property>

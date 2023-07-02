@@ -56,7 +56,7 @@ class TabSubsystem(Adw.PreferencesPage):
         self.btn_delete.connect('clicked', self.__on_delete_clicked)
         
         for name, program in self.__subsystem.exported_programs.items():
-            row: Adw.ActionRow = Adw.ActionRow(title=name, subtitle=program.get('Exec', ''))
+            row: Adw.ActionRow = Adw.ActionRow(title=name, subtitle=program.get('GenericName', ''))
             row.set_icon_name(program.get('Icon', 'application-x-executable-symbolic'))
             self.row_programs.add_row(row)
 
