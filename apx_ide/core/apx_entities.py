@@ -48,11 +48,11 @@ class ApxEntityBase:
 
 
 class Subsystem(ApxEntityBase):
-    def __init__(self, internal_name: str, name: str, stack: str, status: str):
+    def __init__(self, internal_name: str, name: str, stack: Stack, status: str):
         super().__init__()
         self.internal_name: str = internal_name
         self.name: str = name
-        self.stack: str = stack
+        self.stack: Stack = stack
         self.status: str = status
 
     def create(self, stack: str) -> None:
