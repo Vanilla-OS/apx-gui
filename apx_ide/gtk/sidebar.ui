@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<interface>
+  <template class="Sidebar" parent="GtkBox">
+    <property name="orientation">vertical</property>
+    <child>
+      <object class="GtkBox">
+        <property name="margin-top">5</property>
+        <property name="margin-end">5</property>
+        <property name="margin-bottom">5</property>
+        <property name="margin-start">5</property>
+        <property name="spacing">5</property>
+        <property name="homogeneous">true</property>
+        <child>
+          <object class="GtkButton" id="btn_show_subsystems">
+            <property name="icon-name">utilities-terminal-symbolic</property>
+          </object>
+        </child>
+        <child>
+          <object class="GtkButton" id="btn_show_stacks">
+            <property name="icon-name">vanilla-puzzle-piece-symbolic</property>
+            <style>
+              <class name="flat"/>
+            </style>
+          </object>
+        </child>
+        <child>
+          <object class="GtkButton" id="btn_show_pkgmanagers">
+            <property name="icon-name">insert-object-symbolic</property>
+            <style>
+              <class name="flat"/>
+            </style>
+          </object>
+        </child>
+      </object>
+    </child>
+    <child>
+      <object class="GtkSeparator"></object>
+    </child>
+    <child>
+      <object class="GtkScrolledWindow">
+        <child>
+          <object class="AdwViewStack" id="stack_sidebar">
+            <property name="vexpand">true</property>
+            <child>
+              <object class="AdwViewStackPage" id="page_subsystems">
+                <property name="name">subsystems</property>
+                <property name="child">
+                  <object class="GtkListBox" id="list_subsystems"></object>
+                </property>
+              </object>
+            </child>
+            <child>
+              <object class="AdwViewStackPage" id="page_stacks">
+                <property name="name">stacks</property>
+                <property name="child">
+                  <object class="GtkListBox">
+                    <property name="activate-on-single-click">true</property>
+                    <child>
+                      <object class="AdwActionRow">
+                        <property name="title" translatable="true">Alpine</property>
+                        <property name="subtitle" translatable="true">Has 0 additional packages.</property>
+                        <child type="suffix">
+                          <object class="GtkImage">
+                            <property name="icon-name">go-next-symbolic</property>
+                            <style>
+                              <class name="dim-label"/>
+                            </style>
+                          </object>
+                        </child>
+                      </object>
+                    </child>
+                  </object>
+                </property>
+              </object>
+            </child>
+            <child>
+              <object class="AdwViewStackPage" id="page_pkgmanagers">
+                <property name="name">pkgmanagers</property>
+                <property name="child">
+                  <object class="GtkListBox">
+                    <child>
+                      <object class="AdwActionRow">
+                        <property name="title" translatable="true">apt</property>
+                        <child type="suffix">
+                          <object class="GtkImage">
+                            <property name="icon-name">go-next-symbolic</property>
+                            <style>
+                              <class name="dim-label"/>
+                            </style>
+                          </object>
+                        </child>
+                      </object>
+                    </child>
+                  </object>
+                </property>
+              </object>
+            </child>
+          </object>
+        </child>
+      </object>
+    </child>
+  </template>
+</interface>

@@ -17,7 +17,7 @@
 #
 # SPDX-License-Identifier: GPL-3.0-or-later
 
-from gi.repository import Gtk, Gio, GObject, Adw
+from gi.repository import Gtk, Gio, GLib, GObject, Adw
 
 from apx_ide.core.apx_entities import Subsystem
 
@@ -35,12 +35,23 @@ class TabSubsystem(Adw.PreferencesPage):
 
     def __init__(self, subsystem: Subsystem, **kwargs):
         super().__init__(**kwargs)
-        self.aid = subsystem.aid
+        self.__aid = subsystem.aid
+        self.__subsystem = subsystem
+        self.__build_ui()
 
-        self.row_status.set_subtitle(subsystem.status)
-        self.row_stack.set_subtitle(subsystem.stack.name)
-        self.row_pkgmanager.set_subtitle(subsystem.stack.pkg_manager)
-        self.row_packages.set_title(f"Packages ({len(subsystem.stack.packages)})")
+    def __build_ui(self):
+        self.row_status.set_subtitle(self.__subsystem.status)
+        self.row_stack.set_subtitle(self.__subsystem.stack.name)
+        self.row_pkgmanager.set_subtitle(self.__subsystem.stack.pkg_manager)
+        self.row_packages.set_title(f"Packages ({len(self.__subsystem.stack.packages)})")
 
-        for package in subsystem.stack.packages:
+        for package in self.__subsystem.stack.packages:
             self.row_packages.add_row(Adw.ActionRow(title=package))
+
+    @property
+    def aid(self):
+        return self.__aid
+
+    @property
+    def subsystem(self):
+        return self.__subsystem

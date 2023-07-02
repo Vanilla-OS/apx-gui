@@ -5,6 +5,8 @@ sources = [
   '__init__.py',
   'tab_subsystem.py',
   'entry_subsystem.py',
+  'editor.py',
+  'sidebar.py',
 ]
 
 install_data(sources, install_dir: widgetsdir)

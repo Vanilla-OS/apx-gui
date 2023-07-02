@@ -23,77 +23,26 @@ from gi.repository import Gtk, GLib, Gdk, Adw
 
 from apx_ide.core.run_async import RunAsync
 from apx_ide.core.apx import Apx
-from apx_ide.widgets.entry_subsystem import EntrySubsystem
-from apx_ide.widgets.tab_subsystem import TabSubsystem
+from apx_ide.widgets.editor import Editor
+from apx_ide.widgets.sidebar import Sidebar
 
 
 @Gtk.Template(resource_path='/org/vanillaos/apx-ide/gtk/window-main.ui')
 class ApxIDEWindow(Adw.ApplicationWindow):
     __gtype_name__ = 'ApxIDEWindow'
-    __registry = {
-        "open": [],
-    }
 
     toasts = Gtk.Template.Child()
-    tabs_editor = Gtk.Template.Child()
-    stack_main = Gtk.Template.Child()
-    stack_editor = Gtk.Template.Child()
-    btn_show_subsystems = Gtk.Template.Child()
-    btn_show_stacks = Gtk.Template.Child()
-    btn_show_pkgmanagers = Gtk.Template.Child()
-    list_subsystems = Gtk.Template.Child()
-    page_no_tabs = Gtk.Template.Child()
-    page_editor = Gtk.Template.Child()
+    paned_main = Gtk.Template.Child()
 
     def __init__(self, embedded, **kwargs):
         super().__init__(**kwargs)
 
-        apx = Apx()
+        self.__apx = Apx()
+        self.__build_ui()
 
-        self.stack_editor.set_visible_child_name('no_tabs')
-        self.stack_main.set_visible_child_name('subsystems')
+    def __build_ui(self):
+        editor = Editor()
+        self.paned_main.set_end_child(editor)
 
-        # TODO: this code is not finished, it should run async and should not 
-        #       be in this file in the first place
-        for subsystem in apx.subsystems_list():
-            entry = EntrySubsystem(subsystem)
-            self.list_subsystems.append(entry)
-
-        self.btn_show_subsystems.connect('clicked', self._switch_stack, 'subsystems')
-        self.btn_show_stacks.connect('clicked', self._switch_stack, 'stacks')
-        self.btn_show_pkgmanagers.connect('clicked', self._switch_stack, 'pkgmanagers')
-        self.tabs_editor.connect('page-detached', self._on_page_detached)
-        self.tabs_editor.connect('page-attached', self._on_page_attached)
-        self.list_subsystems.connect('row-selected', self._on_subsystem_selected)
-
-    def _switch_stack(self, button, name):
-        for btn in [
-            self.btn_show_subsystems, 
-            self.btn_show_stacks, 
-            self.btn_show_pkgmanagers
-        ]:
-            if btn != button:
-                btn.add_css_class('flat')
-        self.stack_main.set_visible_child_name(name)
-
-        button.remove_css_class('flat')
-
-    def _on_page_detached(self, tabs, page, *args):
-        self.__registry["open"].remove(page.get_child().aid)
-
-        if tabs.get_n_pages() == 0:
-            self.stack_editor.set_visible_child_name('no_tabs')
-
-    def _on_page_attached(self, tabs, page, *args):
-        self.page_no_tabs.set_visible(False)
-        self.page_editor.set_visible(True)
-        self.__registry["open"].append(page.get_child().aid)
-
-        if tabs.get_n_pages() > 0:
-            self.stack_editor.set_visible_child_name('editor')
-
-    def _on_subsystem_selected(self, listbox, row):
-        if row.aid in self.__registry["open"]: return
-
-        page = self.tabs_editor.append(TabSubsystem(row.subsystem))
-        page.set_title(row.subsystem.name)
+        sidebar = Sidebar(self.__apx.subsystems_list(), editor)
+        self.paned_main.set_start_child(sidebar)
