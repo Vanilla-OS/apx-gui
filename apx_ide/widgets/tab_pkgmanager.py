@@ -17,7 +17,7 @@
 #
 # SPDX-License-Identifier: GPL-3.0-or-later
 
-from gi.repository import Gtk, Gio, GLib, GObject, Adw, GtkSource
+from gi.repository import Gtk, Gio, GLib, GObject, Adw
 from uuid import UUID
 
 from apx_ide.core.apx_entities import PkgManager
@@ -44,11 +44,12 @@ class TabPkgManager(Gtk.Box):
     infobar: Gtk.InfoBar = Gtk.Template.Child()
     group_actions: Adw.PreferencesGroup = Gtk.Template.Child()
 
-    def __init__(self, window: Adw.ApplicationWindow, stack: PkgManager, **kwargs):
+    def __init__(self, window: Adw.ApplicationWindow, stack: PkgManager, creating: bool=False, **kwargs):
         super().__init__(**kwargs)
         self.__window: Adw.ApplicationWindow = window
         self.__aid: UUID = stack.aid
         self.__pkgmanager: PkgManager = stack
+        self.__creating: bool = creating
         self.__build_ui()
 
     def __build_ui(self):
@@ -65,9 +66,12 @@ class TabPkgManager(Gtk.Box):
         self.row_update.set_text(self.__pkgmanager.cmd_update)
         self.row_upgrade.set_text(self.__pkgmanager.cmd_upgrade)
 
-        if self.__pkgmanager.built_in:
-            self.infobar.set_revealed(True)
+        if self.__pkgmanager.built_in or not self.__creating:
+            if self.__pkgmanager.built_in:
+                self.infobar.set_revealed(True)
+
             self.group_actions.set_visible(False)
+
             for row in [
                 self.row_autoremove,
                 self.row_install,
@@ -79,6 +83,7 @@ class TabPkgManager(Gtk.Box):
                 self.row_show,
                 self.row_update,
                 self.row_upgrade,
+                self.row_sudo,
             ]:
                 row.set_sensitive(False)
 

@@ -28,6 +28,7 @@ configure_file(
 subdir('core')
 subdir('widgets')
 subdir('windows')
+subdir('utils')
 
 apx_ide_sources = [
   '__init__.py',

@@ -17,16 +17,18 @@
 #
 # SPDX-License-Identifier: GPL-3.0-or-later
 
-from gi.repository import Gtk, Gio, GLib, GObject, Adw, GtkSource
+from gi.repository import Gtk, Gio, GLib, GObject, Adw
 from uuid import UUID
 
 from apx_ide.core.apx_entities import Stack
 from apx_ide.core.run_async import RunAsync
+from apx_ide.utils.gtk import GtkUtils
 
 
 @Gtk.Template(resource_path='/org/vanillaos/apx-ide/gtk/tab-stack.ui')
 class TabStack(Gtk.Box):
     __gtype_name__: str = 'TabStack'
+
     row_base: Adw.EntryRow = Gtk.Template.Child()
     row_pkgmanager: Adw.EntryRow = Gtk.Template.Child()
     row_packages: Adw.ExpanderRow = Gtk.Template.Child()
@@ -43,24 +45,6 @@ class TabStack(Gtk.Box):
         self.__build_ui()
 
     def __build_ui(self):
-        # scrolled: Gtk.ScrolledWindow = Gtk.ScrolledWindow(vexpand=True, hexpand=True)
-        # source_view: GtkSource.View = GtkSource.View(
-        #     buffer=GtkSource.Buffer(
-        #         highlight_syntax=True,
-        #         highlight_matching_brackets=True,
-        #         language=GtkSource.LanguageManager.get_default().get_language("json")
-        #     ),
-        #     show_line_numbers=True,
-        #     show_line_marks=True,
-        #     tab_width=4,
-        #     monospace=True
-        # )
-        # print(self.__stack.to_json())
-        # source_buffer: GtkSource.Buffer = source_view.get_buffer()
-        # source_buffer.set_text(self.__stack.to_json(), -1)
-
-        # scrolled.set_child(source_view)
-        # self.set_start_child(scrolled)
         self.row_base.set_text(self.__stack.base)
         self.row_pkgmanager.set_text(self.__stack.pkg_manager)
         self.row_packages.set_title(f"{len(self.__stack.packages)} Packages")
@@ -76,6 +60,10 @@ class TabStack(Gtk.Box):
                 row.set_sensitive(False)
 
         self.btn_delete.connect('clicked', self.__on_delete_clicked)
+        self.row_base.connect('changed', self.__on_entry_changed)
+        self.row_pkgmanager.connect('changed', self.__on_entry_changed)
+        self.row_base.connect('apply', self.__on_base_apply)
+        self.row_pkgmanager.connect('apply', self.__on_pkgmanager_apply)
 
         for pkg in self.__stack.packages:
             row: Adw.ActionRow = Adw.ActionRow()
@@ -89,7 +77,7 @@ class TabStack(Gtk.Box):
         return self.__aid
 
     def __on_delete_clicked(self, button: Gtk.Button) -> None:
-        def on_callback(result, *args) -> None:
+        def on_callback(result, *args) -> None: 
             status: bool = result[0]
             if status:
                 self.__window.toast(f"{self.__stack.name} stack deleted")
@@ -111,3 +99,39 @@ class TabStack(Gtk.Box):
         dialog.set_response_appearance("ok", Adw.ResponseAppearance.DESTRUCTIVE)
         dialog.connect("response", on_response)
         dialog.present()
+
+    def __on_entry_changed(self, row: Adw.EntryRow) -> None:
+        GtkUtils.validate_entry(row)
+
+    def __on_base_apply(self, row: Adw.EntryRow) -> None:
+        def on_callback(result, *args):
+            status: bool = result[0]
+            if status:
+                self.__stack.base = row.get_text()
+                self.__window.toast(f"{self.__stack.name} stack updated")
+            else:
+                self.__window.toast(f"Error updating {self.__stack.name} stack")
+
+        RunAsync(self.__update, on_callback, base=row.get_text())
+
+    def __on_pkgmanager_apply(self, row: Adw.EntryRow) -> None:
+        def on_callback(result, *args):
+            status: bool = result[0]
+            if status:
+                self.__stack.pkg_manager = row.get_text()
+                self.__window.toast(f"{self.__stack.name} stack updated")
+            else:
+                self.__window.toast(f"Error updating {self.__stack.name} stack")
+
+        RunAsync(self.__update, on_callback, pkg_manager=row.get_text())
+    
+    def __update(self, base: str = None, packages: list = None, pkg_manager: str = None) -> bool:
+        if base is None:
+            base = self.__stack.base
+        if packages is None:
+            packages = " ".join(self.__stack.packages)
+        if pkg_manager is None:
+            pkg_manager = self.__stack.pkg_manager
+
+        return self.__stack.update(base, packages, pkg_manager)
+

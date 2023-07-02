@@ -55,51 +55,61 @@
             <child>
               <object class="AdwEntryRow" id="row_autoremove">
                 <property name="title" translatable="true">Autoremove</property>
+                <property name="show-apply-button">True</property>
               </object>
             </child>
             <child>
               <object class="AdwEntryRow" id="row_clean">
                 <property name="title" translatable="true">Clean</property>
+                <property name="show-apply-button">True</property>
               </object>
             </child>
             <child>
               <object class="AdwEntryRow" id="row_install">
                 <property name="title" translatable="true">Install</property>
+                <property name="show-apply-button">True</property>
               </object>
             </child>
             <child>
               <object class="AdwEntryRow" id="row_list">
                 <property name="title" translatable="true">List</property>
+                <property name="show-apply-button">True</property>
               </object>
             </child>
             <child>
               <object class="AdwEntryRow" id="row_purge">
                 <property name="title" translatable="true">Purge</property>
+                <property name="show-apply-button">True</property>
               </object>
             </child>
             <child>
               <object class="AdwEntryRow" id="row_remove">
                 <property name="title" translatable="true">Remove</property>
+                <property name="show-apply-button">True</property>
               </object>
             </child>
             <child>
               <object class="AdwEntryRow" id="row_search">
                 <property name="title" translatable="true">Search</property>
+                <property name="show-apply-button">True</property>
               </object>
             </child>
             <child>
               <object class="AdwEntryRow" id="row_show">
                 <property name="title" translatable="true">Show</property>
+                <property name="show-apply-button">True</property>
               </object>
             </child>
             <child>
               <object class="AdwEntryRow" id="row_update">
                 <property name="title" translatable="true">Update</property>
+                <property name="show-apply-button">True</property>
               </object>
             </child>
             <child>
               <object class="AdwEntryRow" id="row_upgrade">
                 <property name="title" translatable="true">Upgrade</property>
+                <property name="show-apply-button">True</property>
               </object>
             </child>
           </object>

@@ -25,6 +25,7 @@
             <child>
               <object class="AdwEntryRow" id="row_base">
                 <property name="title" translatable="true">Base</property>
+                <property name="show-apply-button">True</property>
                 <child type="prefix">
                   <object class="GtkImage">
                     <property name="icon-name">drive-harddisk-symbolic</property>
@@ -35,6 +36,7 @@
             <child>
               <object class="AdwEntryRow" id="row_pkgmanager">
                 <property name="title" translatable="true">Package Manager</property>
+                <property name="show-apply-button">True</property>
                 <child type="prefix">
                   <object class="GtkImage">
                     <property name="icon-name">insert-object-symbolic-symbolic</property>

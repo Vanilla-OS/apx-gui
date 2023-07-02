@@ -73,7 +73,7 @@ class Stack(ApxEntityBase):
 
     def update(self, base: str, packages: str, pkg_manager: str) -> [bool, str]:
         command: str = (
-            f"apx2 stacks update --name {self.name} --base {base} --packages {packages} --pkg-manager {pkg_manager}"
+            f"apx2 stacks update --name {self.name} --base {base} --packages {packages} --pkg-manager {pkg_manager} -y"
         )
         return self._run_command(command)
 
@@ -97,7 +97,7 @@ class Subsystem(ApxEntityBase):
         return self._run_command(command)
 
     def update(self, stack: str) -> [bool, str]:
-        command: str = f"apx2 subsystems update --name {self.name} --stack {stack}"
+        command: str = f"apx2 subsystems update --name {self.name} --stack {stack} -y"
         return self._run_command(command)
 
     def remove(self, force: bool = False) -> [bool, str]:
