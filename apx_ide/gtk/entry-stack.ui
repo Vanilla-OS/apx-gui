@@ -2,7 +2,6 @@
 <interface>
   <template class="EntryStack" parent="AdwActionRow">
     <property name="title" translatable="true">Alpine</property>
-    <property name="subtitle" translatable="true">Has 0 additional packages.</property>
     <child type="suffix">
         <object class="GtkImage">
             <property name="icon-name">go-next-symbolic</property>
