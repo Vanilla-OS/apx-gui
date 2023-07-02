@@ -38,7 +38,7 @@ class Apx(ApxEntityBase):
 
         for data in subsystems_data:
             stack = Stack(
-                data["Name"], 
+                data["Stack"]["Name"],
                 data["Stack"]["Base"],
                 data["Stack"]["Packages"],
                 data["Stack"]["PkgManager"],
