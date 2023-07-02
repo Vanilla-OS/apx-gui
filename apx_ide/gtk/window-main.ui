@@ -60,7 +60,7 @@
     <section>
       <item>
         <attribute name="label" translatable="true">New Sub System</attribute>
-        <attribute name="action">app.new_stack</attribute>
+        <attribute name="action">app.new_subsystem</attribute>
       </item>
       <item>
         <attribute name="label" translatable="true">New Stack</attribute>
@@ -68,7 +68,7 @@
       </item>
       <item>
         <attribute name="label" translatable="true">New Package Manager</attribute>
-        <attribute name="action">app.new_stack</attribute>
+        <attribute name="action">app.new_pkgmanager</attribute>
       </item>
     </section>
   </menu>

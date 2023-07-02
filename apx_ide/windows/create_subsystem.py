@@ -20,10 +20,10 @@
 from gi.repository import Gtk, GObject, Gio, Gdk, GLib, Adw, Vte, Pango
 
 
-@Gtk.Template(resource_path='/org/vanillaos/drivers_utility/gtk/create-subsystem.ui')
+@Gtk.Template(resource_path='/org/vanillaos/apx-ide/gtk/create-subsystem.ui')
 class CreateSubsystemWindow(Adw.Window):
     __gtype_name__ = 'CreateSubsystemWindow'
 
-    def __init__(self, window: Adw.ApplicationWIndow, **kwargs):
+    def __init__(self, window: Adw.ApplicationWindow, **kwargs):
         super().__init__(**kwargs)
         self.set_transient_for(window)

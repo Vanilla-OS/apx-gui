@@ -3,7 +3,7 @@
   <requires lib="gtk" version="4.0"/>
   <requires lib="libadwaita" version="1.0"/>
     <template class="CreateSubsystemWindow" parent="AdwWindow">
-        <property name="title" translatable="yes">"New Subsystem"</property>
+        <property name="title" translatable="yes">New Subsystem</property>
         <property name="default-width">540</property>
         <property name="modal">True</property>
         <property name="deletable">False</property>

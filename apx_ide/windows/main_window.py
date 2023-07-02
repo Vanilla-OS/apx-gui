@@ -25,6 +25,7 @@ from apx_ide.core.run_async import RunAsync
 from apx_ide.core.apx import Apx
 from apx_ide.widgets.editor import Editor
 from apx_ide.widgets.sidebar import Sidebar
+from apx_ide.windows.create_subsystem import CreateSubsystemWindow
 
 
 @Gtk.Template(resource_path='/org/vanillaos/apx-ide/gtk/window-main.ui')
@@ -33,7 +34,6 @@ class ApxIDEWindow(Adw.ApplicationWindow):
 
     toasts: Adw.ToastOverlay = Gtk.Template.Child()
     paned_main: Gtk.Paned = Gtk.Template.Child()
-    menu_add: Gio.MenuModel = Gtk.Template.Child()
 
     def __init__(self, embedded: bool, **kwargs):
         super().__init__(**kwargs)
@@ -69,3 +69,7 @@ class ApxIDEWindow(Adw.ApplicationWindow):
     def remove_pkgmanager(self, aid: str):
         self.editor.close(aid)
         self.sidebar.remove_pkgmanager(aid)
+
+    def new_subsystem(self):
+        window: CreateSubsystemWindow = CreateSubsystemWindow(self)
+        window.show()

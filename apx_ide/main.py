@@ -41,7 +41,12 @@ class ApxIDEApplication(Adw.Application):
     def __init__(self):
         super().__init__(application_id='org.vanillaos.ApxIDE',
                          flags=Gio.ApplicationFlags.HANDLES_COMMAND_LINE)
+        
+        self.__window: ApxIDEWindow = None
+
         self.create_action('quit', self.quit, ['<primary>q'])
+        self.create_action('new_subsystem', self.on_new_subsystem_action)
+        # self.create_action('about', self.on_about_action)
 
         self.__register_arguments()
 
@@ -75,7 +80,12 @@ class ApxIDEApplication(Adw.Application):
         if not win:
             win = ApxIDEWindow(application=self,
                                embedded=self.__embedded)
+
+        self.__window = win
         win.present()
+
+    def on_new_subsystem_action(self, *args):
+        self.__window.new_subsystem()
 
     def create_action(self, name: str, callback: callable, shortcuts: list[str] = None):
         """Add an application action.
