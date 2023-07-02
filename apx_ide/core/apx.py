@@ -76,21 +76,20 @@ class Apx(ApxEntityBase):
         output = self._run_command(command)
         pkgmanagers_data = json.loads(output)
         pkgmanagers = []
-
         for data in pkgmanagers_data:
             pkgmanager = PkgManager(
                 data["Name"], 
                 data["NeedSudo"], 
-                data["AutoRemove"], 
-                data["Clean"],
-                ata["Install"], 
-                data["List"], 
-                data["Purge"], 
-                data["Remove"], 
-                data["Search"],
-                data["Show"], 
-                data["Update"], 
-                data["Upgrade"], 
+                data["CmdAutoRemove"], 
+                data["CmdClean"],
+                data["CmdInstall"],
+                data["CmdList"],
+                data["CmdPurge"],
+                data["CmdRemove"],
+                data["CmdSearch"],
+                data["CmdShow"],
+                data["CmdUpdate"],
+                data["CmdUpgrade"],
                 data["BuiltIn"]
             ) 
             pkgmanagers.append(pkgmanager)
