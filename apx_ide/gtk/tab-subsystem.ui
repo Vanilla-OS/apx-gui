@@ -11,9 +11,6 @@
             <child type="prefix">
               <object class="GtkImage">
                 <property name="icon-name">org.gnome.SystemMonitor-symbolic</property>
-                <style>
-                  <class name="dim-label"/>
-                </style>
               </object>
             </child>
           </object>
@@ -25,9 +22,6 @@
             <child type="prefix">
               <object class="GtkImage">
                 <property name="icon-name">vanilla-puzzle-piece-symbolic</property>
-                <style>
-                  <class name="dim-label"/>
-                </style>
               </object>
             </child>
           </object>
@@ -39,9 +33,6 @@
             <child type="prefix">
               <object class="GtkImage">
                 <property name="icon-name">insert-object-symbolic-symbolic</property>
-                <style>
-                  <class name="dim-label"/>
-                </style>
               </object>
             </child>
           </object>
@@ -52,9 +43,6 @@
             <child type="prefix">
               <object class="GtkImage">
                 <property name="icon-name">preferences-desktop-apps-symbolic</property>
-                <style>
-                  <class name="dim-label"/>
-                </style>
               </object>
             </child>
           </object>
@@ -68,11 +56,13 @@
           <object class="AdwActionRow" id="row_console">
             <property name="title" translatable="true">Open Console</property>
             <property name="subtitle" translatable="true">Enter a console in this subsystem's environment.</property>
+            <property name="activatable-widget">btn_console</property>
             <child type="suffix">
-              <object class="GtkImage">
+              <object class="GtkButton" id="btn_console">
                 <property name="icon-name">utilities-terminal-symbolic</property>
+                <property name="valign">center</property>
                 <style>
-                  <class name="dim-label"/>
+                  <class name="flat"/>
                 </style>
               </object>
             </child>
@@ -86,11 +76,13 @@
         <child>
           <object class="AdwActionRow" id="row_reset">
             <property name="title" translatable="true">Reset Subsystem</property>
+            <property name="activatable-widget">btn_reset</property>
             <child type="suffix">
-              <object class="GtkImage">
+              <object class="GtkButton" id="btn_reset">
                 <property name="icon-name">view-refresh-symbolic</property>
+                <property name="valign">center</property>
                 <style>
-                  <class name="dim-label"/>
+                  <class name="flat"/>
                 </style>
               </object>
             </child>
@@ -99,11 +91,13 @@
         <child>
           <object class="AdwActionRow" id="row_delete">
             <property name="title" translatable="true">Delete Subsystem</property>
+            <property name="activatable-widget">btn_delete</property>
             <child type="suffix">
-              <object class="GtkImage">
+              <object class="GtkButton" id="btn_delete">
                 <property name="icon-name">user-trash-symbolic</property>
+                <property name="valign">center</property>
                 <style>
-                  <class name="dim-label"/>
+                  <class name="flat"/>
                 </style>
               </object>
             </child>

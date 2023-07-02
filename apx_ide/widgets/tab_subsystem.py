@@ -34,6 +34,9 @@ class TabSubsystem(Adw.PreferencesPage):
     row_console: Adw.ActionRow = Gtk.Template.Child()
     row_reset: Adw.ActionRow = Gtk.Template.Child()
     row_delete: Adw.ActionRow = Gtk.Template.Child()
+    btn_console: Gtk.Button = Gtk.Template.Child()
+    btn_reset: Gtk.Button = Gtk.Template.Child()
+    btn_delete: Gtk.Button = Gtk.Template.Child()
 
     def __init__(self, subsystem: Subsystem, **kwargs):
         super().__init__(**kwargs)
@@ -47,6 +50,10 @@ class TabSubsystem(Adw.PreferencesPage):
         self.row_pkgmanager.set_subtitle(self.__subsystem.stack.pkg_manager)
         self.row_packages.set_title(f"Packages ({len(self.__subsystem.stack.packages)})")
 
+        self.btn_console.connect('clicked', self.__on_console_clicked)
+        self.btn_reset.connect('clicked', self.__on_reset_clicked)
+        self.btn_delete.connect('clicked', self.__on_delete_clicked)
+
         for package in self.__subsystem.stack.packages:
             self.row_packages.add_row(Adw.ActionRow(title=package))
 
@@ -57,3 +64,12 @@ class TabSubsystem(Adw.PreferencesPage):
     @property
     def subsystem(self) -> Subsystem:
         return self.__subsystem
+
+    def __on_console_clicked(self, button: Gtk.Button) -> None:
+        GLib.spawn_command_line_async(f"kgx -e apx2 {self.__subsystem.name} enter")
+
+    def __on_reset_clicked(self, button: Gtk.Button) -> None:
+        print("Reset clicked")
+
+    def __on_delete_clicked(self, button: Gtk.Button) -> None:
+        print("Delete clicked")

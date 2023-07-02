@@ -47,34 +47,6 @@ class ApxEntityBase:
             raise ApxCommandError(f"Command execution failed: {e}")
 
 
-class Subsystem(ApxEntityBase):
-    def __init__(self, internal_name: str, name: str, stack: Stack, status: str):
-        super().__init__()
-        self.internal_name: str = internal_name
-        self.name: str = name
-        self.stack: Stack = stack
-        self.status: str = status
-
-    def create(self, stack: str) -> None:
-        command: str = f"apx2 subsystems new --name {self.name} --stack {stack}"
-        output: str = self._run_command(command)
-        if not output:
-            raise ApxCreationError(f"Failed to create Subsystem {self.name}")
-
-    def update(self, stack: str) -> None:
-        command: str = f"apx2 subsystems update --name {self.internal_name} --stack {stack}"
-        output: str = self._run_command(command)
-        if not output:
-            raise ApxUpdateError(f"Failed to update Subsystem {self.internal_name}")
-
-    def remove(self, force: bool = False) -> None:
-        force_flag: str = "--force" if force else ""
-        command: str = f"apx2 subsystems rm {force_flag} --name {self.internal_name}"
-        output: str = self._run_command(command)
-        if not output:
-            raise ApxDeletionError(f"Failed to remove Subsystem {self.internal_name}")
-
-
 class Stack(ApxEntityBase):
     def __init__(self, name: str, base: str, packages: str, pkg_manager: str, built_in: str):
         super().__init__()
@@ -106,6 +78,34 @@ class Stack(ApxEntityBase):
         output: str = self._run_command(command)
         if not output:
             raise ApxDeletionError(f"Failed to remove Stack {self.name}")
+
+
+class Subsystem(ApxEntityBase):
+    def __init__(self, internal_name: str, name: str, stack: Stack, status: str):
+        super().__init__()
+        self.internal_name: str = internal_name
+        self.name: str = name
+        self.stack: Stack = stack
+        self.status: str = status
+
+    def create(self, stack: str) -> None:
+        command: str = f"apx2 subsystems new --name {self.name} --stack {stack}"
+        output: str = self._run_command(command)
+        if not output:
+            raise ApxCreationError(f"Failed to create Subsystem {self.name}")
+
+    def update(self, stack: str) -> None:
+        command: str = f"apx2 subsystems update --name {self.internal_name} --stack {stack}"
+        output: str = self._run_command(command)
+        if not output:
+            raise ApxUpdateError(f"Failed to update Subsystem {self.internal_name}")
+
+    def remove(self, force: bool = False) -> None:
+        force_flag: str = "--force" if force else ""
+        command: str = f"apx2 subsystems rm {force_flag} --name {self.internal_name}"
+        output: str = self._run_command(command)
+        if not output:
+            raise ApxDeletionError(f"Failed to remove Subsystem {self.internal_name}")
 
 
 class PkgManager(ApxEntityBase):
