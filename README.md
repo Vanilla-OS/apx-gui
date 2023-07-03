@@ -13,7 +13,7 @@
 - libadwaita-1-dev
 - gettext
 - desktop-file-utils
-- apx
+- apx (2.0+)
 
 ### Build
 ```bash
