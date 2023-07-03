@@ -7,7 +7,9 @@
 </div>
 
 ## Build
+
 ### Dependencies
+
 - build-essential
 - meson
 - libadwaita-1-dev
@@ -16,17 +18,20 @@
 - apx (2.0+)
 
 ### Build
+
 ```bash
 meson build
 ninja -C build
 ```
 
 ### Install
+
 ```bash
 sudo ninja -C build install
 ```
 
 ## Run
+
 ```bash
 apx-ide
 ```
