@@ -8,28 +8,114 @@
         <property name="modal">True</property>
         <property name="deletable">False</property>
         <child>
-            <object class="GtkBox">
-                <property name="orientation">vertical</property>
+            <object class="AdwViewStack" id="stack_main">
                 <child>
-                    <object class="AdwHeaderBar">
-                        <child type="start">
-                            <object class="GtkButton" id="btn_cancel">
-                                <property name="label" translatable="yes">Cancel</property>
-                            </object>   
-                        </child>    
-                        <child type="end">
-                            <object class="GtkButton" id="btn_create">
-                                <property name="label" translatable="yes">Create</property>
-                                <property name="sensitive">False</property>
-                                <style>
-                                    <class name="suggested-action"/>
-                                </style>
+                    <object class="AdwViewStackPage" id="page_form">
+                        <property name="name">no_tabs</property>
+                        <property name="child">
+                            <object class="GtkBox">
+                                <property name="orientation">vertical</property>
+                                <child>
+                                    <object class="AdwHeaderBar">
+                                        <child type="start">
+                                            <object class="GtkButton" id="btn_cancel">
+                                                <property name="label" translatable="yes">Cancel</property>
+                                            </object>   
+                                        </child>    
+                                        <child type="end">
+                                            <object class="GtkButton" id="btn_create">
+                                                <property name="label" translatable="yes">Create</property>
+                                                <property name="sensitive">False</property>
+                                                <style>
+                                                    <class name="suggested-action"/>
+                                                </style>
+                                            </object>
+                                        </child>
+                                    </object>
+                                </child>
+                                <child>
+                                    <object class="AdwPreferencesPage">
+                                        <child>
+                                            <object class="AdwPreferencesGroup">
+                                                <property name="title">Details</property>
+                                                <child>
+                                                    <object class="AdwEntryRow" id="row_name">
+                                                        <property name="title" translatable="true">Name</property>
+                                                    </object>
+                                                </child>
+                                                <child>
+                                                    <object class="AdwComboRow" id="row_stack">
+                                                        <property name="title" translatable="true">Stack</property>
+                                                        <property name="model">
+                                                            <object class="GtkStringList" id="str_stack"></object>
+                                                        </property>
+                                                    </object>
+                                                </child>
+                                            </object>
+                                        </child>
+                                    </object>
+                                </child>
                             </object>
-                        </child>
+                        </property>
                     </object>
                 </child>
                 <child>
-                    <object class="AdwPreferencesPage">
+                    <object class="AdwViewStackPage" id="page_creating">
+                        <property name="name">creating</property>
+                        <property name="child">
+                            <object class="GtkBox">
+                                <property name="orientation">vertical</property>
+                                <child>
+                                    <object class="AdwHeaderBar">
+                                        <style>
+                                            <class name="flat"/>
+                                        </style>
+                                    </object>
+                                </child>
+                                <child>
+                                    <object class="AdwStatusPage" id="status_creating">
+                                        <property name="title">Creating Subsystem…</property>
+                                        <property name="description" translatable="true">Please wait while the subsystem is being created.</property>
+                                        <property name="valign">center</property>
+                                    </object>
+                                </child>
+                            </object>
+                        </property>
+                    </object>
+                </child>
+                <child>
+                    <object class="AdwViewStackPage" id="page_error">
+                        <property name="name">error</property>
+                        <property name="child">
+                            <object class="GtkBox">
+                                <property name="orientation">vertical</property>
+                                <child>
+                                    <object class="AdwHeaderBar">
+                                        <style>
+                                            <class name="flat"/>
+                                        </style>
+                                    </object>
+                                </child>
+                                <child>
+                                    <object class="AdwStatusPage" id="status_error">
+                                        <property name="icon-name">dialog-error-symbolic</property>
+                                        <property name="title">An Error Occurred</property>
+                                        <property name="description" translatable="true">An error occurred while creating the subsystem.</property>
+                                        <property name="valign">center</property>
+                                        <child>
+                                            <object class="GtkButton" id="btn_close">
+                                                <property name="label" translatable="yes">Close</property>
+                                                <property name="halign">center</property>
+                                                <style>
+                                                    <class name="suggested-action"/>
+                                                    <class name="pill"/>
+                                                </style>
+                                            </object>
+                                        </child>
+                                    </object>
+                                </child>
+                            </object>
+                        </property>
                     </object>
                 </child>
             </object>

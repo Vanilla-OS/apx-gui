@@ -123,3 +123,18 @@ class Sidebar(Gtk.Box):
     def remove_pkgmanager(self, aid: str):
         self.list_pkgmanagers.remove(self.__registry__[aid])
         self.__registry__.pop(aid)
+    
+    def new_subsystem(self, subsystem: Subsystem):
+        entry = EntrySubsystem(subsystem)
+        self.list_subsystems.append(entry)
+        self.__registry__[subsystem.aid] = entry
+
+    def new_stack(self, stack: Stack):
+        entry = EntryStack(stack)
+        self.list_stacks.append(entry)
+        self.__registry__[stack.aid] = entry
+
+    def new_pkgmanager(self, pkgmanager: PkgManager):
+        entry = EntryPkgManager(pkgmanager)
+        self.list_pkgmanagers.append(entry)
+        self.__registry__[pkgmanager.aid] = entry

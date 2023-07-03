@@ -92,9 +92,26 @@ class Subsystem(ApxEntityBase):
         self.status: str = status
         self.exported_programs: Optional[dict] = exported_programs
 
-    def create(self, stack: str) -> [bool, str]:
-        command: str = f"apx2 subsystems new --name {self.name} --stack {stack}"
-        return self._run_command(command)
+    def create(self) -> [bool, "Subsystem"]:
+        command: str = f"apx2 subsystems new --name {self.name} --stack {self.stack.name}"
+        res: [bool, str] = self._run_command(command)
+        if not res[0]:
+            return re[0], self
+
+        command: str = f"apx2 subsystems list --json"
+        res: [bool, str] = self._run_command(command)
+        if not res[0]:
+            return res[0], self
+
+        subsystems: list[dict] = json.loads(res[1])
+        for subsystem in subsystems:
+            if subsystem["Name"] == self.name:
+                self.internal_name = subsystem["InternalName"]
+                self.status = subsystem["Status"]
+                self.exported_programs = subsystem["ExportedPrograms"]
+                return True, self
+
+        return False, self
 
     def update(self, stack: str) -> [bool, str]:
         command: str = f"apx2 subsystems update --name {self.name} --stack {stack} -y"

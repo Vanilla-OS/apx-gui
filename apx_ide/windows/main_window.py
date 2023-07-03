@@ -23,6 +23,7 @@ from gi.repository import Gtk, GLib, Gdk, Gio, Adw
 
 from apx_ide.core.run_async import RunAsync
 from apx_ide.core.apx import Apx
+from apx_ide.core.apx_entities import Subsystem, Stack, PkgManager
 from apx_ide.widgets.editor import Editor
 from apx_ide.widgets.sidebar import Sidebar
 from apx_ide.windows.create_subsystem import CreateSubsystemWindow
@@ -39,6 +40,10 @@ class ApxIDEWindow(Adw.ApplicationWindow):
         super().__init__(**kwargs)
 
         self.__apx: Apx = Apx()
+        self.__subsystems: list[Subsystem] = self.__apx.subsystems_list()
+        self.__stacks: list[Stack] = self.__apx.stacks_list()
+        self.__pkgmanagers: list[PkgManager] = self.__apx.pkgmanagers_list()
+
         self.__build_ui()
 
     def __build_ui(self):
@@ -47,9 +52,9 @@ class ApxIDEWindow(Adw.ApplicationWindow):
 
         self.sidebar: Sidebar = Sidebar(
             self,
-            self.__apx.subsystems_list(), 
-            self.__apx.stacks_list(), 
-            self.__apx.pkgmanagers_list()
+            self.__subsystems,
+            self.__stacks,
+            self.__pkgmanagers  
         )
         self.paned_main.set_start_child(self.sidebar)
 
@@ -57,6 +62,10 @@ class ApxIDEWindow(Adw.ApplicationWindow):
         toast: Adw.Toast = Adw.Toast.new(message)
         toast.props.timeout = timeout
         self.toasts.add_toast(toast)
+    
+    def append_subsystem(self, subsystem: Subsystem):
+        self.__subsystems.append(subsystem)
+        self.sidebar.new_subsystem(subsystem)
 
     def remove_subsystem(self, aid: str):
         self.editor.close(aid)
@@ -71,5 +80,9 @@ class ApxIDEWindow(Adw.ApplicationWindow):
         self.sidebar.remove_pkgmanager(aid)
 
     def new_subsystem(self):
-        window: CreateSubsystemWindow = CreateSubsystemWindow(self)
+        window: CreateSubsystemWindow = CreateSubsystemWindow(
+            self, 
+            self.__subsystems,
+            self.__stacks 
+        )
         window.show()
