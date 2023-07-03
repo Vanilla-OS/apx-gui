@@ -6,6 +6,7 @@
         <property name="title" translatable="yes">New Stack</property>
         <property name="default-width">540</property>
         <property name="modal">True</property>
+        <property name="resizable">False</property>
         <property name="deletable">False</property>
         <child>
             <object class="AdwViewStack" id="stack_main">
