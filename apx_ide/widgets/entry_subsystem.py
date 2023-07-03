@@ -26,7 +26,7 @@ from apx_ide.core.apx_entities import Subsystem
 class EntrySubsystem(Adw.ActionRow):
     __gtype_name__: str = 'EntrySubsystem'
 
-    def __init__(self, subsystem: Subsystem, **kwargs):
+    def __init__(self, subsystem: Subsystem, **kwargs) -> None:
         super().__init__(**kwargs)
         self.set_title(subsystem.name)
         self.set_subtitle(f"Based on the {subsystem.stack.name} stack.")

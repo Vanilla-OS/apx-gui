@@ -39,14 +39,14 @@ class TabSubsystem(Adw.PreferencesPage):
     btn_reset: Gtk.Button = Gtk.Template.Child()
     btn_delete: Gtk.Button = Gtk.Template.Child()
 
-    def __init__(self, window: Adw.ApplicationWindow, subsystem: Subsystem, **kwargs):
+    def __init__(self, window: Adw.ApplicationWindow, subsystem: Subsystem, **kwargs) -> None:
         super().__init__(**kwargs)
         self.__window: Adw.ApplicationWindow = window
         self.__aid: UUID = subsystem.aid
         self.__subsystem: Subsystem = subsystem
         self.__build_ui()
 
-    def __build_ui(self):
+    def __build_ui(self) -> None:
         self.row_status.set_subtitle(self.__subsystem.status)
         self.row_stack.set_subtitle(self.__subsystem.stack.name)
         self.row_pkgmanager.set_subtitle(self.__subsystem.stack.pkg_manager)

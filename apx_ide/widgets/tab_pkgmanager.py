@@ -44,14 +44,14 @@ class TabPkgManager(Gtk.Box):
     infobar: Gtk.InfoBar = Gtk.Template.Child()
     group_actions: Adw.PreferencesGroup = Gtk.Template.Child()
 
-    def __init__(self, window: Adw.ApplicationWindow, stack: PkgManager, **kwargs):
+    def __init__(self, window: Adw.ApplicationWindow, stack: PkgManager, **kwargs) -> None:
         super().__init__(**kwargs)
         self.__window: Adw.ApplicationWindow = window
         self.__aid: UUID = stack.aid
         self.__pkgmanager: PkgManager = stack
         self.__build_ui()
 
-    def __build_ui(self):
+    def __build_ui(self) -> None:
         self.sw_sudo.set_active(self.__pkgmanager.need_sudo)
         self.row_builtin.set_subtitle("Yes" if self.__pkgmanager.built_in else "No")
         self.row_autoremove.set_text(self.__pkgmanager.cmd_auto_remove)

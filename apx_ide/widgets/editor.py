@@ -39,7 +39,7 @@ class Editor(Adw.Bin):
     page_no_tabs: Adw.ViewStackPage = Gtk.Template.Child()
     page_editor: Adw.ViewStackPage = Gtk.Template.Child()
 
-    def __init__(self, window: Adw.ApplicationWindow, **kwargs):
+    def __init__(self, window: Adw.ApplicationWindow, **kwargs) -> None:
         super().__init__(**kwargs)
         self.__window: Adw.ApplicationWindow = window
         self.__build_ui()

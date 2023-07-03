@@ -35,7 +35,13 @@ class CreateSubsystemWindow(Adw.Window):
     str_stack: Gtk.StringList = Gtk.Template.Child() 
     stack_main: Adw.ViewStack = Gtk.Template.Child()
 
-    def __init__(self, window: Adw.ApplicationWindow, subsystems: list[Subsystem], stacks: list[Stack], **kwargs) -> None:
+    def __init__(
+        self, 
+        window: Adw.ApplicationWindow, 
+        subsystems: list[Subsystem], 
+        stacks: list[Stack], 
+        **kwargs
+    ) -> None:
         super().__init__(**kwargs)
         self.__window: Adw.ApplicationWindow = window
         self.__subsystems: list[Subsystem] = subsystems

@@ -36,7 +36,7 @@ class ApxIDEWindow(Adw.ApplicationWindow):
     toasts: Adw.ToastOverlay = Gtk.Template.Child()
     paned_main: Gtk.Paned = Gtk.Template.Child()
 
-    def __init__(self, embedded: bool, **kwargs):
+    def __init__(self, embedded: bool, **kwargs) -> None:
         super().__init__(**kwargs)
 
         self.__apx: Apx = Apx()
@@ -46,7 +46,7 @@ class ApxIDEWindow(Adw.ApplicationWindow):
 
         self.__build_ui()
 
-    def __build_ui(self):
+    def __build_ui(self) -> None:
         self.editor: Editor = Editor(self)
         self.paned_main.set_end_child(self.editor)
 
@@ -58,28 +58,29 @@ class ApxIDEWindow(Adw.ApplicationWindow):
         )
         self.paned_main.set_start_child(self.sidebar)
 
-    def toast(self, message: str, timeout: int=2):
+    def toast(self, message: str, timeout: int=2) -> Adw.Toast:
         toast: Adw.Toast = Adw.Toast.new(message)
         toast.props.timeout = timeout
         self.toasts.add_toast(toast)
+        return toast
     
-    def append_subsystem(self, subsystem: Subsystem):
+    def append_subsystem(self, subsystem: Subsystem) -> None:
         self.__subsystems.append(subsystem)
         self.sidebar.new_subsystem(subsystem)
 
-    def remove_subsystem(self, aid: str):
+    def remove_subsystem(self, aid: str) -> None:
         self.editor.close(aid)
         self.sidebar.remove_subsystem(aid)
 
-    def remove_stack(self, aid: str):
+    def remove_stack(self, aid: str) -> None:
         self.editor.close(aid)
         self.sidebar.remove_stack(aid)
 
-    def remove_pkgmanager(self, aid: str):
+    def remove_pkgmanager(self, aid: str) -> None:
         self.editor.close(aid)
         self.sidebar.remove_pkgmanager(aid)
 
-    def new_subsystem(self):
+    def new_subsystem(self) -> None:
         window: CreateSubsystemWindow = CreateSubsystemWindow(
             self, 
             self.__subsystems,

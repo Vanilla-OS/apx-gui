@@ -39,7 +39,14 @@ class Sidebar(Gtk.Box):
     btn_show_stacks: Gtk.Button = Gtk.Template.Child()
     btn_show_pkgmanagers: Gtk.Button = Gtk.Template.Child()
 
-    def __init__(self, window: Adw.ApplicationWindow, subsystems: list[Subsystem], stacks: list[Stack], pkgmanagers: list[PkgManager], **kwargs):
+    def __init__(
+        self, 
+        window: Adw.ApplicationWindow, 
+        subsystems: list[Subsystem], 
+        stacks: list[Stack], 
+        pkgmanagers: list[PkgManager], 
+        **kwargs
+    ) -> None:
         super().__init__(**kwargs)
         self.__window: Adw.ApplicationWindow = window
         self.__subsystems: list[Subsystem] = subsystems
@@ -47,7 +54,7 @@ class Sidebar(Gtk.Box):
         self.__pkgmanagers: list[PkgManager] = pkgmanagers
         self.__build_ui()
 
-    def __build_ui(self):
+    def __build_ui(self) -> None:
         self.btn_show_subsystems.connect('clicked', self.__switch_stack, 'subsystems')
         self.btn_show_stacks.connect('clicked', self.__switch_stack, 'stacks')
         self.btn_show_pkgmanagers.connect('clicked', self.__switch_stack, 'pkgmanagers')
@@ -70,7 +77,7 @@ class Sidebar(Gtk.Box):
             self.list_pkgmanagers.append(entry)
             self.__registry__[pkgmanager.aid] = entry
 
-    def __switch_stack(self, button: Gtk.Button, name: str):
+    def __switch_stack(self, button: Gtk.Button, name: str) -> None:
         for btn in [
             self.btn_show_subsystems, 
             self.btn_show_stacks, 
@@ -82,7 +89,7 @@ class Sidebar(Gtk.Box):
 
         button.remove_css_class('flat')
 
-    def __on_subsystem_selected(self, listbox: Gtk.ListBox, row: Gtk.ListBoxRow):
+    def __on_subsystem_selected(self, listbox: Gtk.ListBox, row: Gtk.ListBoxRow) -> None:
         if row is None:
             return
 
@@ -92,7 +99,7 @@ class Sidebar(Gtk.Box):
 
         self.__window.editor.new_subsystem_tab(row.subsystem)
 
-    def __on_stack_selected(self, listbox: Gtk.ListBox, row: Gtk.ListBoxRow):
+    def __on_stack_selected(self, listbox: Gtk.ListBox, row: Gtk.ListBoxRow) -> None:
         if row is None:
             return
             
@@ -102,7 +109,7 @@ class Sidebar(Gtk.Box):
 
         self.__window.editor.new_stack_tab(row.stack)
 
-    def __on_pkgmanager_selected(self, listbox: Gtk.ListBox, row: Gtk.ListBoxRow):
+    def __on_pkgmanager_selected(self, listbox: Gtk.ListBox, row: Gtk.ListBoxRow) -> None:
         if row is None:
             return
             
@@ -112,29 +119,29 @@ class Sidebar(Gtk.Box):
 
         self.__window.editor.new_pkgmanager_tab(row.pkgmanager)
 
-    def remove_subsystem(self, aid: str):
+    def remove_subsystem(self, aid: str) -> None:
         self.list_subsystems.remove(self.__registry__[aid])
         self.__registry__.pop(aid)
             
-    def remove_stack(self, aid: str):
+    def remove_stack(self, aid: str) -> None:
         self.list_stacks.remove(self.__registry__[aid])
         self.__registry__.pop(aid)
 
-    def remove_pkgmanager(self, aid: str):
+    def remove_pkgmanager(self, aid: str) -> None:
         self.list_pkgmanagers.remove(self.__registry__[aid])
         self.__registry__.pop(aid)
     
-    def new_subsystem(self, subsystem: Subsystem):
+    def new_subsystem(self, subsystem: Subsystem) -> None:
         entry = EntrySubsystem(subsystem)
         self.list_subsystems.append(entry)
         self.__registry__[subsystem.aid] = entry
 
-    def new_stack(self, stack: Stack):
+    def new_stack(self, stack: Stack) -> None:
         entry = EntryStack(stack)
         self.list_stacks.append(entry)
         self.__registry__[stack.aid] = entry
 
-    def new_pkgmanager(self, pkgmanager: PkgManager):
+    def new_pkgmanager(self, pkgmanager: PkgManager) -> None:
         entry = EntryPkgManager(pkgmanager)
         self.list_pkgmanagers.append(entry)
         self.__registry__[pkgmanager.aid] = entry

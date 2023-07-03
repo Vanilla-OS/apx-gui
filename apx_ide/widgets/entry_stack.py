@@ -26,7 +26,7 @@ from apx_ide.core.apx_entities import Stack
 class EntryStack(Adw.ActionRow):
     __gtype_name__: str = 'EntryStack'
 
-    def __init__(self, stack: Stack, **kwargs):
+    def __init__(self, stack: Stack, **kwargs) -> None:
         super().__init__(**kwargs)
         self.set_title(stack.name)
 

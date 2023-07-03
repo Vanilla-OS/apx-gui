@@ -37,14 +37,14 @@ class TabStack(Gtk.Box):
     infobar: Gtk.InfoBar = Gtk.Template.Child()
     group_actions: Adw.PreferencesGroup = Gtk.Template.Child()
 
-    def __init__(self, window: Adw.ApplicationWindow, stack: Stack, **kwargs):
+    def __init__(self, window: Adw.ApplicationWindow, stack: Stack, **kwargs) -> None:
         super().__init__(**kwargs)
         self.__window: Adw.ApplicationWindow = window
         self.__aid: UUID = stack.aid
         self.__stack: Stack = stack
         self.__build_ui()
 
-    def __build_ui(self):
+    def __build_ui(self) -> None:
         self.row_base.set_text(self.__stack.base)
         self.row_pkgmanager.set_text(self.__stack.pkg_manager)
         self.row_packages.set_title(f"{len(self.__stack.packages)} Packages")

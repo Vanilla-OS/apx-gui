@@ -25,10 +25,8 @@ from apx_ide.core.apx_entities import ApxEntityBase, Subsystem, Stack, PkgManage
 
 
 class Apx(ApxEntityBase):
-    def __init__(self):
-        pass
 
-    def subsystems_list(self):
+    def subsystems_list(self) -> list[Subsystem]:
         command = "apx2 subsystems list --json"
         status, output = self._run_command(command)
         if not status:
@@ -55,7 +53,7 @@ class Apx(ApxEntityBase):
 
         return subsystems
 
-    def stacks_list(self):
+    def stacks_list(self) -> list[Stack]:
         command = "apx2 stacks list --json"
         status, output = self._run_command(command)
         if not status:
@@ -76,7 +74,7 @@ class Apx(ApxEntityBase):
 
         return stacks
 
-    def pkgmanagers_list(self):
+    def pkgmanagers_list(self) -> list[PkgManager]:
         command = "apx2 pkgmanagers list --json"
         status, output = self._run_command(command)
         if not status:

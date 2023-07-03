@@ -26,7 +26,7 @@ from apx_ide.core.apx_entities import PkgManager
 class EntryPkgManager(Adw.ActionRow):
     __gtype_name__: str = 'EntryPkgManager'
 
-    def __init__(self, pkgmanager: PkgManager, **kwargs):
+    def __init__(self, pkgmanager: PkgManager, **kwargs) -> None:
         super().__init__(**kwargs)
         self.set_title(pkgmanager.name)
 
