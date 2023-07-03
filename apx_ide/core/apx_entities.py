@@ -76,7 +76,7 @@ class Stack(ApxEntityBase):
         packages: str = " ".join(self.packages) if isinstance(self.packages, list) else self.packages
         command: str = (
             f"apx2 stacks new --name {self.name} --base {self.base} --packages {packages} "
-            f"--pkg-manager {self.pkg_manager}"
+            f"--pkg-manager {self.pkg_manager} -y"
         )
         res: [bool, str] = self._run_command(command)
         if not res[0]:

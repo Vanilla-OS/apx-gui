@@ -27,6 +27,7 @@ from apx_ide.core.apx_entities import Subsystem, Stack, PkgManager
 from apx_ide.widgets.editor import Editor
 from apx_ide.widgets.sidebar import Sidebar
 from apx_ide.windows.create_subsystem import CreateSubsystemWindow
+from apx_ide.windows.create_stack import CreateStackWindow
 
 
 @Gtk.Template(resource_path='/org/vanillaos/apx-ide/gtk/window-main.ui')
@@ -68,6 +69,14 @@ class ApxIDEWindow(Adw.ApplicationWindow):
         self.__subsystems.append(subsystem)
         self.sidebar.new_subsystem(subsystem)
 
+    def append_stack(self, stack: Stack) -> None:
+        self.__stacks.append(stack)
+        self.sidebar.new_stack(stack)
+
+    def append_pkgmanager(self, pkgmanager: PkgManager) -> None:
+        self.__pkgmanagers.append(pkgmanager)
+        self.sidebar.new_pkgmanager(pkgmanager)
+
     def remove_subsystem(self, aid: str) -> None:
         self.editor.close(aid)
         self.sidebar.remove_subsystem(aid)
@@ -87,3 +96,14 @@ class ApxIDEWindow(Adw.ApplicationWindow):
             self.__stacks 
         )
         window.show()
+
+    def new_stack(self) -> None:
+        window: CreateStackWindow = CreateStackWindow(
+            self, 
+            self.__stacks,
+            self.__pkgmanagers
+        )
+        window.show()
+
+    def new_pkgmanager(self) -> None:
+        pass

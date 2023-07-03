@@ -46,6 +46,8 @@ class ApxIDEApplication(Adw.Application):
 
         self.create_action('quit', self.quit, ['<primary>q'])
         self.create_action('new_subsystem', self.on_new_subsystem_action)
+        self.create_action('new_stack', self.on_new_stack_action)
+        self.create_action('new_pkgmanager', self.on_new_pkgmanager_action) 
         # self.create_action('about', self.on_about_action)
 
         self.__register_arguments()
@@ -86,6 +88,12 @@ class ApxIDEApplication(Adw.Application):
 
     def on_new_subsystem_action(self, *args):
         self.__window.new_subsystem()
+
+    def on_new_stack_action(self, *args):
+        self.__window.new_stack()
+    
+    def on_new_pkgmanager_action(self, *args):
+        self.__window.new_pkgmanager()
 
     def create_action(self, name: str, callback: callable, shortcuts: list[str] = None):
         """Add an application action.

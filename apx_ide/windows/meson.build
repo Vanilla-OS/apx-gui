@@ -5,6 +5,7 @@ sources = [
   '__init__.py',
   'main_window.py',
   'create_subsystem.py',
+  'create_stack.py',
 ]
 
 install_data(sources, install_dir: windowsdir)
