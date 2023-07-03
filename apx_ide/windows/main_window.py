@@ -28,6 +28,7 @@ from apx_ide.widgets.editor import Editor
 from apx_ide.widgets.sidebar import Sidebar
 from apx_ide.windows.create_subsystem import CreateSubsystemWindow
 from apx_ide.windows.create_stack import CreateStackWindow
+from apx_ide.windows.create_pkgmanager import CreatePkgManagerWindow
 
 
 @Gtk.Template(resource_path='/org/vanillaos/apx-ide/gtk/window-main.ui')
@@ -106,4 +107,8 @@ class ApxIDEWindow(Adw.ApplicationWindow):
         window.show()
 
     def new_pkgmanager(self) -> None:
-        pass
+        window: CreatePkgManagerWindow = CreatePkgManagerWindow(
+            self, 
+            self.__pkgmanagers
+        )
+        window.show()
