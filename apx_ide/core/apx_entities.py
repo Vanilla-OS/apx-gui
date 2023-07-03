@@ -197,7 +197,7 @@ class PkgManager(ApxEntityBase):
     def create(self) -> [bool, "PkgManager"]:
         command: str = (
             f"apx2 pkgmanagers new --name {self.name} --need-sudo {self.need_sudo} "
-            f"--autoremove {self.cmd_auto_remove} --cmd-clean {self.cmd_clean} "
+            f"--autoremove {self.cmd_auto_remove} --clean {self.cmd_clean} "
             f"--install {self.cmd_install} --list {self.cmd_list} "
             f"--purge {self.cmd_purge} --remove {self.cmd_remove} "
             f"--search {self.cmd_search} --show {self.cmd_show} "

@@ -13,5 +13,6 @@
     <file preprocess="xml-stripblanks">gtk/entry-pkgmanager.ui</file>
     <file preprocess="xml-stripblanks">gtk/create-subsystem.ui</file>
     <file preprocess="xml-stripblanks">gtk/create-stack.ui</file>
+    <file preprocess="xml-stripblanks">gtk/create-pkgmanager.ui</file>  
   </gresource>
 </gresources>

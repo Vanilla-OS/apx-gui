@@ -6,6 +6,7 @@ sources = [
   'main_window.py',
   'create_subsystem.py',
   'create_stack.py',
+  'create_pkgmanager.py',
 ]
 
 install_data(sources, install_dir: windowsdir)
