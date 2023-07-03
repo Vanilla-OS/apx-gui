@@ -20,6 +20,7 @@
 from gi.repository import Gtk, Gio, GObject, Adw
 
 from apx_ide.core.apx_entities import Subsystem
+import gettext as _
 
 
 @Gtk.Template(resource_path='/org/vanillaos/apx-ide/gtk/entry-subsystem.ui')
@@ -29,7 +30,7 @@ class EntrySubsystem(Adw.ActionRow):
     def __init__(self, subsystem: Subsystem, **kwargs) -> None:
         super().__init__(**kwargs)
         self.set_title(subsystem.name)
-        self.set_subtitle(f"Based on the {subsystem.stack.name} stack.")
+        self.set_subtitle(_(f"Based on the {subsystem.stack.name} stack."))
 
         self.subsystem: Subsystem = subsystem
         self.aid: UUID = subsystem.aid

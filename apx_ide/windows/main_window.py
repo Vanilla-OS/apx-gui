@@ -21,6 +21,7 @@ import os
 import subprocess
 from gi.repository import Gtk, GLib, Gdk, Gio, Adw
 
+import gettext as _
 from apx_ide.core.run_async import RunAsync
 from apx_ide.core.apx import Apx
 from apx_ide.core.apx_entities import Subsystem, Stack, PkgManager

@@ -41,17 +41,17 @@
                                                 <property name="title">Details</property>
                                                 <child>
                                                     <object class="AdwEntryRow" id="row_name">
-                                                        <property name="title" translatable="true">Name</property>
+                                                        <property name="title" translatable="yes">Name</property>
                                                     </object>
                                                 </child>
                                                 <child>
                                                     <object class="AdwEntryRow" id="row_base">
-                                                        <property name="title" translatable="true">Base</property>
+                                                        <property name="title" translatable="yes">Base</property>
                                                     </object>
                                                 </child>
                                                 <child>
                                                     <object class="AdwComboRow" id="row_pkgmanager">
-                                                        <property name="title" translatable="true">Package Manager</property>
+                                                        <property name="title" translatable="yes">Package Manager</property>
                                                         <property name="model">
                                                             <object class="GtkStringList" id="str_pkgmanager"></object>
                                                         </property>
@@ -89,7 +89,7 @@
                                                 </property>
                                                 <child>
                                                     <object class="AdwEntryRow" id="row_package">
-                                                        <property name="title" translatable="true">New Package</property>
+                                                        <property name="title" translatable="yes">New Package</property>
                                                     </object>
                                                 </child>
                                             </object>
@@ -116,7 +116,7 @@
                                 <child>
                                     <object class="AdwStatusPage" id="status_creating">
                                         <property name="title">Creating Stack…</property>
-                                        <property name="description" translatable="true">Please wait while the stack is being created.</property>
+                                        <property name="description" translatable="yes">Please wait while the stack is being created.</property>
                                         <property name="valign">center</property>
                                     </object>
                                 </child>
@@ -141,7 +141,7 @@
                                     <object class="AdwStatusPage" id="status_error">
                                         <property name="icon-name">dialog-error-symbolic</property>
                                         <property name="title">An Error Occurred</property>
-                                        <property name="description" translatable="true">An error occurred while creating the subsystem.</property>
+                                        <property name="description" translatable="yes">An error occurred while creating the subsystem.</property>
                                         <property name="valign">center</property>
                                         <child>
                                             <object class="GtkButton" id="btn_close">

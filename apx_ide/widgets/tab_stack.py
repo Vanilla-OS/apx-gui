@@ -19,6 +19,7 @@
 
 from gi.repository import Gtk, Gio, GLib, GObject, Adw
 from uuid import UUID
+import gettext as _
 
 from apx_ide.core.apx_entities import Stack
 from apx_ide.core.run_async import RunAsync
@@ -91,8 +92,8 @@ class TabStack(Gtk.Box):
 
         dialog: Adw.MessageDialog = Adw.MessageDialog.new(
             self.__window,
-            f"Are you sure you want to delete the {self.__stack.name} stack?",
-            "This action will delete the stack and all its data. This action cannot be undone.",
+            _(f"Are you sure you want to delete the {self.__stack.name} stack?"),
+            _("This action will delete the stack and all its data. This action cannot be undone."),
         )
         dialog.add_response("cancel", "Cancel")
         dialog.add_response("ok", "Delete")
@@ -108,9 +109,9 @@ class TabStack(Gtk.Box):
             status: bool = result[0]
             if status:
                 self.__stack.base = row.get_text()
-                self.__window.toast(f"{self.__stack.name} stack updated")
+                self.__window.toast(_(f"{self.__stack.name} stack updated"))
             else:
-                self.__window.toast(f"Error updating {self.__stack.name} stack")
+                self.__window.toast(_(f"Error updating {self.__stack.name} stack"))
 
         RunAsync(self.__update, on_callback, base=row.get_text())
 

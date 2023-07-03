@@ -48,7 +48,7 @@ class ApxIDEApplication(Adw.Application):
         self.create_action('new_subsystem', self.on_new_subsystem_action)
         self.create_action('new_stack', self.on_new_stack_action)
         self.create_action('new_pkgmanager', self.on_new_pkgmanager_action) 
-        # self.create_action('about', self.on_about_action)
+        self.create_action('about', self.on_about_action, ['<primary>a'])
 
         self.__register_arguments()
 
@@ -86,6 +86,21 @@ class ApxIDEApplication(Adw.Application):
         self.__window = win
         win.present()
 
+    def on_about_action(self, *args):
+        """Callback for the app.about action."""
+        about = Adw.AboutWindow(transient_for=self.props.active_window,
+                                application_name='Apx IDE',
+                                application_icon='org.vanillaos.ApxIDE',
+                                developer_name='Mirko Brombin',
+                                website='https://github.com/Vanilla-OS/apx-gui',
+                                issue_url='https://github.com/Vanilla-OS/apx-gui/issues',
+                                version='1.0.2',
+                                developers=['Mirko Brombin https://github.com/mirkobrombin/'],
+                                translator_credits= _("translator_credits"),
+                                copyright='© 2023 Mirko Brombin and Contributors',
+                                license_type=('gpl-3-0-only'))
+        about.present()
+
     def on_new_subsystem_action(self, *args):
         self.__window.new_subsystem()
 
@@ -109,7 +124,6 @@ class ApxIDEApplication(Adw.Application):
         self.add_action(action)
         if shortcuts:
             self.set_accels_for_action(f"app.{name}", shortcuts)
-
 
 def main(version: str):
     """The application's entry point."""

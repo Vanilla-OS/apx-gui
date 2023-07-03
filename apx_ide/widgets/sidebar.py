@@ -18,6 +18,7 @@
 # SPDX-License-Identifier: GPL-3.0-or-later
 
 from gi.repository import Gtk, Gio, GObject, Adw
+import gettext as _
 
 from apx_ide.widgets.entry_subsystem import EntrySubsystem
 from apx_ide.widgets.entry_stack import EntryStack
