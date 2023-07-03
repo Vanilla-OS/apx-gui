@@ -27,7 +27,7 @@ from typing import Optional
 
 
 class ApxEntityBase:
-    def __init__(self):
+    def __init__(self) -> None:
         self.aid: UUID = uuid.uuid4()
 
     def _run_command(self, command: str) -> [bool, str]:
@@ -57,7 +57,14 @@ class ApxEntityBase:
 
 
 class Stack(ApxEntityBase):
-    def __init__(self, name: str, base: str, packages: str, pkg_manager: str, built_in: str):
+    def __init__(
+        self, 
+        name: str, 
+        base: str, 
+        packages: str, 
+        pkg_manager: str, 
+        built_in: str
+    ) -> None:
         super().__init__()
         self.name: str = name
         self.base: str = base
@@ -65,11 +72,31 @@ class Stack(ApxEntityBase):
         self.pkg_manager: str = pkg_manager
         self.built_in: str = built_in
 
-    def create(self, base: str, packages: str, pkg_manager: str) -> [bool, str]:
+    def create(self) -> [bool, "Stack"]:
+        packages: str = " ".join(self.packages) if isinstance(self.packages, list) else self.packages
         command: str = (
-            f"apx2 stacks new --name {self.name} --base {base} --packages {packages} --pkg-manager {pkg_manager}"
+            f"apx2 stacks new --name {self.name} --base {self.base} --packages {packages} "
+            f"--pkg-manager {self.pkg_manager}"
         )
-        return self._run_command(command)
+        res: [bool, str] = self._run_command(command)
+        if not res[0]:
+            return res[0], self
+
+        command: str = f"apx2 stacks list --json"
+        res: [bool, str] = self._run_command(command)
+        if not res[0]:
+            return res[0], self
+
+        stacks: list[dict] = json.loads(res[1])
+        for stack in stacks:
+            if stack["Name"] == self.name:
+                self.base = stack["Base"]
+                self.packages = stack["Packages"]
+                self.pkg_manager = stack["PkgManager"]
+                self.built_in = stack["BuiltIn"]
+                return True, self
+
+        return False, self
 
     def update(self, base: str, packages: str, pkg_manager: str) -> [bool, str]:
         command: str = (
@@ -84,7 +111,14 @@ class Stack(ApxEntityBase):
 
 
 class Subsystem(ApxEntityBase):
-    def __init__(self, internal_name: str, name: str, stack: Stack, status: str, exported_programs: Optional[dict] = None):
+    def __init__(
+        self, 
+        internal_name: str, 
+        name: str, 
+        stack: Stack, 
+        status: str, 
+        exported_programs: Optional[dict] = None
+    ) -> None:
         super().__init__()
         self.internal_name: str = internal_name
         self.name: str = name
@@ -144,7 +178,7 @@ class PkgManager(ApxEntityBase):
         cmd_update: str,
         cmd_upgrade: str,
         built_in: str,
-    ):
+    ) -> None:
         super().__init__()
         self.name: str = name
         self.need_sudo: bool = need_sudo
@@ -160,30 +194,42 @@ class PkgManager(ApxEntityBase):
         self.cmd_upgrade: str = cmd_upgrade
         self.built_in: str = built_in
 
-    def create(
-        self,
-        name: str,
-        need_sudo: bool,
-        cmd_auto_remove: str,
-        cmd_clean: str,
-        cmd_install: str,
-        cmd_list: str,
-        cmd_purge: str,
-        cmd_remove: str,
-        cmd_search: str,
-        cmd_show: str,
-        cmd_update: str,
-        cmd_upgrade: str,
-    ) -> None:
+    def create(self) -> [bool, "PkgManager"]:
         command: str = (
-            f"apx2 pkgmanagers new --name {name} --need-sudo {need_sudo} --autoremove {cmd_auto_remove} "
-            f"--clean {cmd_clean} --install {cmd_install} --list {cmd_list} --purge {cmd_purge} "
-            f"--remove {cmd_remove} --search {cmd_search} --show {cmd_show} --update {cmd_update} "
-            f"--upgrade {cmd_upgrade}"
+            f"apx2 pkgmanagers new --name {self.name} --need-sudo {self.need_sudo} "
+            f"--autoremove {self.cmd_auto_remove} --cmd-clean {self.cmd_clean} "
+            f"--install {self.cmd_install} --list {self.cmd_list} "
+            f"--purge {self.cmd_purge} --remove {self.cmd_remove} "
+            f"--search {self.cmd_search} --show {self.cmd_show} "
+            f"--update {self.cmd_update} --upgrade {self.cmd_upgrade}"
         )
-        output: str = self._run_command(command)
-        if not output:
-            raise ApxCreationError(f"Failed to create PkgManager {name}")
+        res: [bool, str] = self._run_command(command)
+        if not res[0]:
+            return res[0], self
+
+        command: str = f"apx2 pkgmanagers list --json"
+        res: [bool, str] = self._run_command(command)
+        if not res[0]:
+            return res[0], self
+
+        pkgmanagers: list[dict] = json.loads(res[1])
+        for pkgmanager in pkgmanagers:
+            if pkgmanager["Name"] == self.name:
+                self.need_sudo = pkgmanager["NeedSudo"]
+                self.cmd_auto_remove = pkgmanager["CmdAutoRemove"]
+                self.cmd_clean = pkgmanager["CmdClean"]
+                self.cmd_install = pkgmanager["CmdInstall"]
+                self.cmd_list = pkgmanager["CmdList"]
+                self.cmd_purge = pkgmanager["CmdPurge"]
+                self.cmd_remove = pkgmanager["CmdRemove"]
+                self.cmd_search = pkgmanager["CmdSearch"]
+                self.cmd_show = pkgmanager["CmdShow"]
+                self.cmd_update = pkgmanager["CmdUpdate"]
+                self.cmd_upgrade = pkgmanager["CmdUpgrade"]
+                self.built_in = pkgmanager["BuiltIn"]
+                return True, self
+
+        return False, self
 
     def remove(self, force: bool = False) -> [bool, str]:
         force_flag: str = "--force" if force else ""
