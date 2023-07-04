@@ -21,10 +21,10 @@
       <object class="AdwPreferencesPage">
         <child>
           <object class="AdwPreferencesGroup">
-            <property name="title">Details</property>
+            <property name="title" translatable="yes">Details</property>
             <child>
               <object class="AdwActionRow" id="row_sudo">
-                <property name="title" translatable="true">Need Sudo</property>
+                <property name="title" translatable="yes">Need Sudo</property>
                 <child type="prefix">
                   <object class="GtkImage">
                     <property name="icon-name">dialog-password-symbolic</property>
@@ -39,7 +39,7 @@
             </child>
             <child>
               <object class="AdwActionRow" id="row_builtin">
-                <property name="title" translatable="true">Built-In</property>
+                <property name="title" translatable="yes">Built-In</property>
                 <child type="prefix">
                   <object class="GtkImage">
                     <property name="icon-name">emblem-default-symbolic</property>
@@ -54,61 +54,61 @@
             <property name="title">Commands</property>
             <child>
               <object class="AdwEntryRow" id="row_autoremove">
-                <property name="title" translatable="true">Autoremove</property>
+                <property name="title" translatable="yes">Autoremove</property>
                 <property name="show-apply-button">True</property>
               </object>
             </child>
             <child>
               <object class="AdwEntryRow" id="row_clean">
-                <property name="title" translatable="true">Clean</property>
+                <property name="title" translatable="yes">Clean</property>
                 <property name="show-apply-button">True</property>
               </object>
             </child>
             <child>
               <object class="AdwEntryRow" id="row_install">
-                <property name="title" translatable="true">Install</property>
+                <property name="title" translatable="yes">Install</property>
                 <property name="show-apply-button">True</property>
               </object>
             </child>
             <child>
               <object class="AdwEntryRow" id="row_list">
-                <property name="title" translatable="true">List</property>
+                <property name="title" translatable="yes">List</property>
                 <property name="show-apply-button">True</property>
               </object>
             </child>
             <child>
               <object class="AdwEntryRow" id="row_purge">
-                <property name="title" translatable="true">Purge</property>
+                <property name="title" translatable="yes">Purge</property>
                 <property name="show-apply-button">True</property>
               </object>
             </child>
             <child>
               <object class="AdwEntryRow" id="row_remove">
-                <property name="title" translatable="true">Remove</property>
+                <property name="title" translatable="yes">Remove</property>
                 <property name="show-apply-button">True</property>
               </object>
             </child>
             <child>
               <object class="AdwEntryRow" id="row_search">
-                <property name="title" translatable="true">Search</property>
+                <property name="title" translatable="yes">Search</property>
                 <property name="show-apply-button">True</property>
               </object>
             </child>
             <child>
               <object class="AdwEntryRow" id="row_show">
-                <property name="title" translatable="true">Show</property>
+                <property name="title" translatable="yes">Show</property>
                 <property name="show-apply-button">True</property>
               </object>
             </child>
             <child>
               <object class="AdwEntryRow" id="row_update">
-                <property name="title" translatable="true">Update</property>
+                <property name="title" translatable="yes">Update</property>
                 <property name="show-apply-button">True</property>
               </object>
             </child>
             <child>
               <object class="AdwEntryRow" id="row_upgrade">
-                <property name="title" translatable="true">Upgrade</property>
+                <property name="title" translatable="yes">Upgrade</property>
                 <property name="show-apply-button">True</property>
               </object>
             </child>
@@ -116,10 +116,10 @@
         </child>
         <child>
           <object class="AdwPreferencesGroup" id="group_actions">
-            <property name="title">Destructive Actions</property>
+            <property name="title" translatable="yes">Destructive Actions</property>
             <child>
               <object class="AdwActionRow" id="row_delete">
-                <property name="title" translatable="true">Delete Package Manager</property>
+                <property name="title" translatable="yes">Delete Package Manager</property>
                 <property name="activatable-widget">btn_delete</property>
                 <child type="suffix">
                   <object class="GtkButton" id="btn_delete">

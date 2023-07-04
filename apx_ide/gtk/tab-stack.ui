@@ -21,10 +21,10 @@
       <object class="AdwPreferencesPage">
         <child>
           <object class="AdwPreferencesGroup">
-            <property name="title">Details</property>
+            <property name="title" translatable="yes">Details</property>
             <child>
               <object class="AdwEntryRow" id="row_base">
-                <property name="title" translatable="true">Base</property>
+                <property name="title" translatable="yes">Base</property>
                 <property name="show-apply-button">True</property>
                 <child type="prefix">
                   <object class="GtkImage">
@@ -35,7 +35,7 @@
             </child>
             <child>
               <object class="AdwEntryRow" id="row_pkgmanager">
-                <property name="title" translatable="true">Package Manager</property>
+                <property name="title" translatable="yes">Package Manager</property>
                 <property name="show-apply-button">True</property>
                 <child type="prefix">
                   <object class="GtkImage">
@@ -46,7 +46,7 @@
             </child>
             <child>
               <object class="AdwActionRow" id="row_builtin">
-                <property name="title" translatable="true">Built-In</property>
+                <property name="title" translatable="yes">Built-In</property>
                 <child type="prefix">
                   <object class="GtkImage">
                     <property name="icon-name">emblem-default-symbolic</property>
@@ -56,7 +56,7 @@
             </child>
             <child>
               <object class="AdwExpanderRow" id="row_packages">
-                <property name="title" translatable="true">0 Packages</property>
+                <property name="title" translatable="yes">Packages</property>
                 <child type="prefix">
                   <object class="GtkImage">
                     <property name="icon-name">preferences-desktop-apps-symbolic</property>
@@ -68,10 +68,10 @@
         </child>
         <child>
           <object class="AdwPreferencesGroup" id="group_actions">
-            <property name="title">Destructive Actions</property>
+            <property name="title" translatable="yes">Destructive Actions</property>
             <child>
               <object class="AdwActionRow" id="row_delete">
-                <property name="title" translatable="true">Delete Stack</property>
+                <property name="title" translatable="yes">Delete Stack</property>
                 <property name="activatable-widget">btn_delete</property>
                 <child type="suffix">
                   <object class="GtkButton" id="btn_delete">

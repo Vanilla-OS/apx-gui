@@ -6,7 +6,7 @@
         <property name="title">Details</property>
         <child>
           <object class="AdwActionRow" id="row_status">
-            <property name="title" translatable="true">Status</property>
+            <property name="title" translatable="yes">Status</property>
             <child type="prefix">
               <object class="GtkImage">
                 <property name="icon-name">org.gnome.SystemMonitor-symbolic</property>
@@ -16,7 +16,7 @@
         </child>
         <child>
           <object class="AdwActionRow" id="row_stack">
-            <property name="title" translatable="true">Stack</property>
+            <property name="title" translatable="yes">Stack</property>
             <child type="prefix">
               <object class="GtkImage">
                 <property name="icon-name">vanilla-puzzle-piece-symbolic</property>
@@ -26,7 +26,7 @@
         </child>
         <child>
           <object class="AdwActionRow" id="row_pkgmanager">
-            <property name="title" translatable="true">Package Manager</property>
+            <property name="title" translatable="yes">Package Manager</property>
             <child type="prefix">
               <object class="GtkImage">
                 <property name="icon-name">insert-object-symbolic-symbolic</property>
@@ -50,8 +50,8 @@
         <property name="title">Actions</property>
         <child>
           <object class="AdwActionRow" id="row_console">
-            <property name="title" translatable="true">Open Console</property>
-            <property name="subtitle" translatable="true">Enter a console in this subsystem's environment.</property>
+            <property name="title" translatable="yes">Open Console</property>
+            <property name="subtitle" translatable="yes">Enter a console in this subsystem's environment.</property>
             <property name="activatable-widget">btn_console</property>
             <child type="suffix">
               <object class="GtkButton" id="btn_console">
@@ -71,7 +71,7 @@
         <property name="title">Destructive Actions</property>
         <child>
           <object class="AdwActionRow" id="row_reset">
-            <property name="title" translatable="true">Reset Subsystem</property>
+            <property name="title" translatable="yes">Reset Subsystem</property>
             <property name="activatable-widget">btn_reset</property>
             <child type="suffix">
               <object class="GtkButton" id="btn_reset">
@@ -86,7 +86,7 @@
         </child>
         <child>
           <object class="AdwActionRow" id="row_delete">
-            <property name="title" translatable="true">Delete Subsystem</property>
+            <property name="title" translatable="yes">Delete Subsystem</property>
             <property name="activatable-widget">btn_delete</property>
             <child type="suffix">
               <object class="GtkButton" id="btn_delete">

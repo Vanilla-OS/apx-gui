@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: apx_ide\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-02-19 10:20+0100\n"
+"POT-Creation-Date: 2023-07-04 15:08+0530\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -23,6 +23,152 @@ msgstr ""
 
 #: data/org.vanillaos.ApxIDE.appdata.xml.in:7
 msgid "No description"
+msgstr ""
+
+#: apx_ide/gtk/create-pkgmanager.ui:6 apx_ide/gtk/window-main.ui:70
+msgid "New Package Manager"
+msgstr ""
+
+#: apx_ide/gtk/create-pkgmanager.ui:23 apx_ide/gtk/create-stack.ui:23
+#: apx_ide/gtk/create-subsystem.ui:23
+msgid "Cancel"
+msgstr ""
+
+#: apx_ide/gtk/create-pkgmanager.ui:28 apx_ide/gtk/create-stack.ui:28
+#: apx_ide/gtk/create-subsystem.ui:28
+msgid "Create"
+msgstr ""
+
+#: apx_ide/gtk/create-pkgmanager.ui:41 apx_ide/gtk/tab-pkgmanager.ui:24
+#: apx_ide/gtk/tab-stack.ui:24
+msgid "Details"
+msgstr ""
+
+#: apx_ide/gtk/create-pkgmanager.ui:44 apx_ide/gtk/create-stack.ui:44
+#: apx_ide/gtk/create-subsystem.ui:44
+msgid "Name"
+msgstr ""
+
+#: apx_ide/gtk/create-pkgmanager.ui:49 apx_ide/gtk/tab-pkgmanager.ui:27
+msgid "Need Sudo"
+msgstr ""
+
+#: apx_ide/gtk/create-pkgmanager.ui:73 apx_ide/gtk/tab-pkgmanager.ui:57
+msgid "Autoremove"
+msgstr ""
+
+#: apx_ide/gtk/create-pkgmanager.ui:78 apx_ide/gtk/tab-pkgmanager.ui:63
+msgid "Clean"
+msgstr ""
+
+#: apx_ide/gtk/create-pkgmanager.ui:83 apx_ide/gtk/tab-pkgmanager.ui:69
+msgid "Install"
+msgstr ""
+
+#: apx_ide/gtk/create-pkgmanager.ui:88 apx_ide/gtk/tab-pkgmanager.ui:75
+msgid "List"
+msgstr ""
+
+#: apx_ide/gtk/create-pkgmanager.ui:93 apx_ide/gtk/tab-pkgmanager.ui:81
+msgid "Purge"
+msgstr ""
+
+#: apx_ide/gtk/create-pkgmanager.ui:98 apx_ide/gtk/tab-pkgmanager.ui:87
+msgid "Remove"
+msgstr ""
+
+#: apx_ide/gtk/create-pkgmanager.ui:103 apx_ide/gtk/tab-pkgmanager.ui:93
+msgid "Search"
+msgstr ""
+
+#: apx_ide/gtk/create-pkgmanager.ui:108 apx_ide/gtk/tab-pkgmanager.ui:99
+msgid "Show"
+msgstr ""
+
+#: apx_ide/gtk/create-pkgmanager.ui:113 apx_ide/gtk/tab-pkgmanager.ui:105
+msgid "Update"
+msgstr ""
+
+#: apx_ide/gtk/create-pkgmanager.ui:118 apx_ide/gtk/tab-pkgmanager.ui:111
+msgid "Upgrade"
+msgstr ""
+
+#: apx_ide/gtk/create-pkgmanager.ui:144
+msgid "Creating Package Manager…"
+msgstr ""
+
+#: apx_ide/gtk/create-pkgmanager.ui:145
+msgid "Please wait while the package manager is being created."
+msgstr ""
+
+#: apx_ide/gtk/create-pkgmanager.ui:169
+msgid "An Error Occurred"
+msgstr ""
+
+#: apx_ide/gtk/create-pkgmanager.ui:170
+msgid "An error occurred while creating the package manager."
+msgstr ""
+
+#: apx_ide/gtk/create-pkgmanager.ui:174 apx_ide/gtk/create-stack.ui:148
+#: apx_ide/gtk/create-subsystem.ui:108
+msgid "Close"
+msgstr ""
+
+#: apx_ide/gtk/create-stack.ui:6 apx_ide/gtk/window-main.ui:66
+msgid "New Stack"
+msgstr ""
+
+#: apx_ide/gtk/create-stack.ui:49 apx_ide/gtk/tab-stack.ui:27
+msgid "Base"
+msgstr ""
+
+#: apx_ide/gtk/create-stack.ui:54 apx_ide/gtk/tab-stack.ui:38
+#: apx_ide/gtk/tab-subsystem.ui:29
+msgid "Package Manager"
+msgstr ""
+
+#: apx_ide/gtk/create-stack.ui:80
+msgid "Add Package"
+msgstr ""
+
+#: apx_ide/gtk/create-stack.ui:92
+msgid "New Package"
+msgstr ""
+
+#: apx_ide/gtk/create-stack.ui:119
+msgid "Please wait while the stack is being created."
+msgstr ""
+
+#: apx_ide/gtk/create-stack.ui:144
+msgid "An error occurred while creating the stack."
+msgstr ""
+
+#: apx_ide/gtk/create-subsystem.ui:6
+msgid "New Subsystem"
+msgstr ""
+
+#: apx_ide/gtk/create-subsystem.ui:49 apx_ide/gtk/tab-subsystem.ui:19
+msgid "Stack"
+msgstr ""
+
+#: apx_ide/gtk/create-subsystem.ui:78
+msgid "Creating Subsystem…"
+msgstr ""
+
+#: apx_ide/gtk/create-subsystem.ui:79
+msgid "Please wait while the subsystem is being created."
+msgstr ""
+
+#: apx_ide/gtk/create-subsystem.ui:104
+msgid "An error occurred while creating the subsystem."
+msgstr ""
+
+#: apx_ide/gtk/editor.ui:12
+msgid "Start or Open a Subsystem"
+msgstr ""
+
+#: apx_ide/gtk/editor.ui:13
+msgid "Start by opening a subsystem, stack or package manager on the left."
 msgstr ""
 
 #: apx_ide/gtk/help-overlay.ui:11
@@ -40,160 +186,88 @@ msgctxt "shortcut window"
 msgid "Quit"
 msgstr ""
 
-#: apx_ide/gtk/profile.ui:17
-#: apx_ide/gtk/window-switch.ui:60
-msgid "Restart Now"
+#: apx_ide/gtk/tab-pkgmanager.ui:13
+msgid "This package manager is built-in and cannot be edited or deleted."
 msgstr ""
 
-#: apx_ide/gtk/window-main.ui:16
-msgid "Cancel"
+#: apx_ide/gtk/tab-pkgmanager.ui:42 apx_ide/gtk/tab-stack.ui:49
+msgid "Built-In"
 msgstr ""
 
-#: apx_ide/gtk/window-main.ui:30
-msgid "Transactions are locked. Please try again later or restart your device."
+#: apx_ide/gtk/tab-pkgmanager.ui:119 apx_ide/gtk/tab-stack.ui:71
+msgid "Destructive Actions"
 msgstr ""
 
-#: apx_ide/gtk/window-main.ui:47
-msgid "Not Supported"
+#: apx_ide/gtk/tab-pkgmanager.ui:122
+msgid "Delete Package Manager"
 msgstr ""
 
-#: apx_ide/gtk/window-main.ui:48
-msgid "Your device does not support PRIME switching."
+#: apx_ide/gtk/tab-stack.ui:13
+msgid "This stack is built-in and cannot be edited or deleted."
 msgstr ""
 
-#: apx_ide/gtk/window-main.ui:55
-msgid "Active Profile"
+#: apx_ide/gtk/tab-stack.ui:59
+msgid "Packages"
 msgstr ""
 
-#: apx_ide/gtk/window-main.ui:56
-msgid "Select the PRIME profile to use."
+#: apx_ide/gtk/tab-stack.ui:74
+msgid "Delete Stack"
 msgstr ""
 
-#: apx_ide/gtk/window-main.ui:71
-msgid "_Preferences"
+#: apx_ide/gtk/tab-subsystem.ui:9
+msgid "Status"
 msgstr ""
 
-#: apx_ide/gtk/window-main.ui:75
+#: apx_ide/gtk/tab-subsystem.ui:53
+msgid "Open Console"
+msgstr ""
+
+#: apx_ide/gtk/tab-subsystem.ui:54
+msgid "Enter a console in this subsystem's environment."
+msgstr ""
+
+#: apx_ide/gtk/tab-subsystem.ui:74
+msgid "Reset Subsystem"
+msgstr ""
+
+#: apx_ide/gtk/tab-subsystem.ui:89
+msgid "Delete Subsystem"
+msgstr ""
+
+#: apx_ide/gtk/window-main.ui:62
+msgid "New Sub System"
+msgstr ""
+
+#: apx_ide/gtk/window-main.ui:78
 msgid "_Keyboard Shortcuts"
 msgstr ""
 
-#: apx_ide/gtk/window-main.ui:79
-msgid "_About apx_ide"
+#: apx_ide/gtk/window-main.ui:82
+msgid "_Quit"
 msgstr ""
 
-#: apx_ide/gtk/window-switch.ui:6
-#: apx_ide/gtk/window-switch.ui:22
-msgid "Switching PRIME Profile…"
+#: apx_ide/gtk/window-main.ui:86
+msgid "_About Apx IDE"
 msgstr ""
 
-#: apx_ide/gtk/window-switch.ui:23
-msgid "This may take a while."
+#: apx_ide/windows/create_pkgmanager.py:91
+#, python-brace-format
+msgid "Package manager {pkgmanager.name} created successfully"
 msgstr ""
 
-#: apx_ide/gtk/window-switch.ui:52
-msgid "Profile Switched"
+#: apx_ide/windows/create_subsystem.py:75
+#, python-brace-format
+msgid "Subsystem {subsystem.name} created successfully"
 msgstr ""
 
-#: apx_ide/gtk/window-switch.ui:53
-msgid "Restart your device to apply the changes."
+#: apx_ide/main.py:99
+msgid "translator_credits"
 msgstr ""
 
-#: apx_ide/utils/wrapper.py:42
-msgid "PRIME module disabled"
+#: apx_ide/main.py:103
+msgid "Contributors"
 msgstr ""
 
-#: apx_ide/utils/wrapper.py:46
-msgid "prime-select not found"
-msgstr ""
-
-#: apx_ide/utils/wrapper.py:50
-msgid "prime-select not supported for this device"
-msgstr ""
-
-#: apx_ide/utils/wrapper.py:56
-msgid "prime-select is not supported for this setup"
-msgstr ""
-
-#: apx_ide/utils/wrapper.py:66
-msgid "Discrete GPU"
-msgstr ""
-
-#: apx_ide/utils/wrapper.py:67
-msgid "Use the discrete GPU for all applications."
-msgstr ""
-
-#: apx_ide/utils/wrapper.py:71
-msgid "Integrated GPU"
-msgstr ""
-
-#: apx_ide/utils/wrapper.py:72
-msgid "Use the integrated GPU for all applications."
-msgstr ""
-
-#: apx_ide/utils/wrapper.py:76
-msgid "On-demand"
-msgstr ""
-
-#: apx_ide/utils/wrapper.py:77
-msgid ""
-"Use the integrated GPU for all applications, and the discrete GPU on demand."
-msgstr ""
-
-#: apx_ide/utils/wrapper.py:105
-msgid "Invalid profile name"
-msgstr ""
-
-#: apx_ide/utils/wrapper.py:128
-#: apx_ide/utils/wrapper.py:131
-#: apx_ide/utils/wrapper.py:134
-msgid "integrated"
-msgstr ""
-
-#: apx_ide/utils/wrapper.py:129
-#: apx_ide/utils/wrapper.py:132
-#: apx_ide/utils/wrapper.py:135
-msgid "discrete"
-msgstr ""
-
-#: apx_ide/widgets/profile.py:52
-msgid ""
-"It is not possible to switch the PRIME profile now. Please restart your "
-"device and try again."
-msgstr ""
-
-#: apx_ide/windows/main_window.py:95
-msgid "Do you want to switch to the '{}' profile?"
-msgstr ""
-
-#: apx_ide/windows/main_window.py:96
-msgid "This will require a restart to apply the changes."
-msgstr ""
-
-#: apx_ide/windows/main_window.py:98
-msgid "_Cancel"
-msgstr ""
-
-#: apx_ide/windows/main_window.py:99
-msgid "Switch to '{}'"
-msgstr ""
-
-#: apx_ide/windows/main_window.py:106
-msgid "Profile switched to {}!"
-msgstr ""
-
-#: apx_ide/windows/main_window.py:111
-msgid "Profile switch failed!"
-msgstr ""
-
-#: apx_ide/windows/switch_window.py:38
-msgid "Switching to '{}'…"
-msgstr ""
-
-#: apx_ide/windows/switch_window.py:110
-#: apx_ide/windows/switch_window.py:111
-msgid "Switch Failed"
-msgstr ""
-
-#: apx_ide/windows/switch_window.py:112
-msgid "Something went wrong. Please try again later."
+#: apx_ide/main.py:109
+msgid "Tools"
 msgstr ""

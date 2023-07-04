@@ -22,6 +22,7 @@ from gi.repository import Gtk, GObject, Gio, Gdk, GLib, Adw, Vte, Pango
 from apx_ide.core.apx_entities import PkgManager, Stack
 from apx_ide.utils.gtk import GtkUtils
 from apx_ide.core.run_async import RunAsync
+import gettext as _
 
 
 @Gtk.Template(resource_path='/org/vanillaos/apx-ide/gtk/create-stack.ui')
@@ -113,11 +114,10 @@ class CreateStackWindow(Adw.Window):
         self.__check_validity()
 
     def __on_base_changed(self, entry: Adw.EntryRow) -> None:
-        self.__valid_base = GtkUtils.validate_entry(entry)
         self.__check_validity()
 
     def __check_validity(self) -> None:
-        self.btn_create.set_sensitive(self.__valid_name and self.__valid_base)
+        self.btn_create.set_sensitive(self.__valid_name)
 
     def __on_package_changed(self, entry: Adw.EntryRow) -> None:
         self.btn_add_package.set_sensitive(GtkUtils.validate_entry(entry))
