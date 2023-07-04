@@ -99,6 +99,12 @@ class ApxIDEApplication(Adw.Application):
                                 translator_credits= _("translator_credits"),
                                 copyright='© 2023 Mirko Brombin and Contributors',
                                 license_type=('gpl-3-0-only'))
+        about.add_credit_section(
+            _("Contributors"),
+            [
+                "K.B.Dharun Krishna https://github.com/kbdharun",
+            ]
+        )
         about.present()
 
     def on_new_subsystem_action(self, *args):
