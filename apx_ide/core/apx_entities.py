@@ -75,7 +75,7 @@ class Stack(ApxEntityBase):
     def create(self) -> [bool, "Stack"]:
         packages: str = " ".join(self.packages) if isinstance(self.packages, list) else self.packages
         command: str = (
-            f"apx2 stacks new --name {self.name} --base {self.base} --packages {packages} "
+            f"apx2 stacks new --name {self.name} --base {self.base} --packages \"{packages}\" "
             f"--pkg-manager {self.pkg_manager} -y"
         )
         res: [bool, str] = self._run_command(command)
@@ -100,7 +100,7 @@ class Stack(ApxEntityBase):
 
     def update(self, base: str, packages: str, pkg_manager: str) -> [bool, str]:
         command: str = (
-            f"apx2 stacks update --name {self.name} --base {base} --packages {packages} --pkg-manager {pkg_manager} -y"
+            f"apx2 stacks update --name {self.name} --base {base} --packages \"{packages}\" --pkg-manager {pkg_manager} -y"
         )
         return self._run_command(command)
 
