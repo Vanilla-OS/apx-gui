@@ -72,7 +72,7 @@ class CreateSubsystemWindow(Adw.Window):
             if status:
                 self.__window.append_subsystem(subsystem)
                 self.close()
-                self.__window.toast(f"Subsystem {subsystem.name} created successfully")
+                self.__window.toast(_(f"Subsystem {subsystem.name} created successfully"))
                 return
 
             self.stack_main.set_visible_child_name("error")
