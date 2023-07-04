@@ -2,13 +2,14 @@
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the apx_ide package.
 # Alberto Mimbrero Sánchez <mimbrero.alberto@gmail.com>, 2023.
+# Íñigo Aréjula Aísa <arejula27@gmail.com>, 2023.
 msgid ""
 msgstr ""
 "Project-Id-Version: apx_ide\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2023-07-04 15:08+0530\n"
-"PO-Revision-Date: 2023-07-04 13:11+0000\n"
-"Last-Translator: Alberto Mimbrero Sánchez <mimbrero.alberto@gmail.com>\n"
+"PO-Revision-Date: 2023-07-04 16:34+0000\n"
+"Last-Translator: Íñigo Aréjula Aísa <arejula27@gmail.com>\n"
 "Language-Team: Spanish <https://hosted.weblate.org/projects/vanilla-os/"
 "apx-gui/es/>\n"
 "Language: es\n"
@@ -60,11 +61,11 @@ msgstr ""
 
 #: apx_ide/gtk/create-pkgmanager.ui:78 apx_ide/gtk/tab-pkgmanager.ui:63
 msgid "Clean"
-msgstr ""
+msgstr "Limpiar"
 
 #: apx_ide/gtk/create-pkgmanager.ui:83 apx_ide/gtk/tab-pkgmanager.ui:69
 msgid "Install"
-msgstr ""
+msgstr "Instalar"
 
 #: apx_ide/gtk/create-pkgmanager.ui:88 apx_ide/gtk/tab-pkgmanager.ui:75
 msgid "List"
@@ -76,23 +77,23 @@ msgstr ""
 
 #: apx_ide/gtk/create-pkgmanager.ui:98 apx_ide/gtk/tab-pkgmanager.ui:87
 msgid "Remove"
-msgstr ""
+msgstr "Eliminar"
 
 #: apx_ide/gtk/create-pkgmanager.ui:103 apx_ide/gtk/tab-pkgmanager.ui:93
 msgid "Search"
-msgstr ""
+msgstr "Buscar"
 
 #: apx_ide/gtk/create-pkgmanager.ui:108 apx_ide/gtk/tab-pkgmanager.ui:99
 msgid "Show"
-msgstr ""
+msgstr "Mostrar"
 
 #: apx_ide/gtk/create-pkgmanager.ui:113 apx_ide/gtk/tab-pkgmanager.ui:105
 msgid "Update"
-msgstr ""
+msgstr "Actualizar"
 
 #: apx_ide/gtk/create-pkgmanager.ui:118 apx_ide/gtk/tab-pkgmanager.ui:111
 msgid "Upgrade"
-msgstr ""
+msgstr "Actualizar"
 
 #: apx_ide/gtk/create-pkgmanager.ui:144
 msgid "Creating Package Manager…"
@@ -117,24 +118,24 @@ msgstr "Cerrar"
 
 #: apx_ide/gtk/create-stack.ui:6 apx_ide/gtk/window-main.ui:66
 msgid "New Stack"
-msgstr ""
+msgstr "Nueva pila"
 
 #: apx_ide/gtk/create-stack.ui:49 apx_ide/gtk/tab-stack.ui:27
 msgid "Base"
-msgstr ""
+msgstr "Base"
 
 #: apx_ide/gtk/create-stack.ui:54 apx_ide/gtk/tab-stack.ui:38
 #: apx_ide/gtk/tab-subsystem.ui:29
 msgid "Package Manager"
-msgstr ""
+msgstr "Gestor de paquetes"
 
 #: apx_ide/gtk/create-stack.ui:80
 msgid "Add Package"
-msgstr ""
+msgstr "Añadir paquete"
 
 #: apx_ide/gtk/create-stack.ui:92
 msgid "New Package"
-msgstr ""
+msgstr "Paquete nuevo"
 
 #: apx_ide/gtk/create-stack.ui:119
 msgid "Please wait while the stack is being created."
@@ -142,11 +143,11 @@ msgstr ""
 
 #: apx_ide/gtk/create-stack.ui:144
 msgid "An error occurred while creating the stack."
-msgstr ""
+msgstr "Un error a ocurrido mientas se crea la colección de paquetes"
 
 #: apx_ide/gtk/create-subsystem.ui:6
 msgid "New Subsystem"
-msgstr ""
+msgstr "Nuevo subsistema"
 
 #: apx_ide/gtk/create-subsystem.ui:49 apx_ide/gtk/tab-subsystem.ui:19
 msgid "Stack"
@@ -162,11 +163,11 @@ msgstr ""
 
 #: apx_ide/gtk/create-subsystem.ui:104
 msgid "An error occurred while creating the subsystem."
-msgstr ""
+msgstr "Se ha producido un error al crear el subsistema."
 
 #: apx_ide/gtk/editor.ui:12
 msgid "Start or Open a Subsystem"
-msgstr ""
+msgstr "Iniciar o abrir un subsistema"
 
 #: apx_ide/gtk/editor.ui:13
 msgid "Start by opening a subsystem, stack or package manager on the left."
@@ -175,17 +176,17 @@ msgstr ""
 #: apx_ide/gtk/help-overlay.ui:11
 msgctxt "shortcut window"
 msgid "General"
-msgstr ""
+msgstr "General"
 
 #: apx_ide/gtk/help-overlay.ui:14
 msgctxt "shortcut window"
 msgid "Show Shortcuts"
-msgstr ""
+msgstr "Mostrar accesos directos"
 
 #: apx_ide/gtk/help-overlay.ui:20
 msgctxt "shortcut window"
 msgid "Quit"
-msgstr ""
+msgstr "Salir"
 
 #: apx_ide/gtk/tab-pkgmanager.ui:13
 msgid "This package manager is built-in and cannot be edited or deleted."
@@ -197,11 +198,11 @@ msgstr ""
 
 #: apx_ide/gtk/tab-pkgmanager.ui:119 apx_ide/gtk/tab-stack.ui:71
 msgid "Destructive Actions"
-msgstr ""
+msgstr "Acciones destructivas"
 
 #: apx_ide/gtk/tab-pkgmanager.ui:122
 msgid "Delete Package Manager"
-msgstr ""
+msgstr "Eliminar el Gestor de paquetes"
 
 #: apx_ide/gtk/tab-stack.ui:13
 msgid "This stack is built-in and cannot be edited or deleted."
@@ -209,7 +210,7 @@ msgstr ""
 
 #: apx_ide/gtk/tab-stack.ui:59
 msgid "Packages"
-msgstr ""
+msgstr "Paquetes"
 
 #: apx_ide/gtk/tab-stack.ui:74
 msgid "Delete Stack"
@@ -217,7 +218,7 @@ msgstr ""
 
 #: apx_ide/gtk/tab-subsystem.ui:9
 msgid "Status"
-msgstr ""
+msgstr "Estado"
 
 #: apx_ide/gtk/tab-subsystem.ui:53
 msgid "Open Console"
@@ -237,11 +238,11 @@ msgstr ""
 
 #: apx_ide/gtk/window-main.ui:62
 msgid "New Sub System"
-msgstr ""
+msgstr "Nuevo subsistema"
 
 #: apx_ide/gtk/window-main.ui:78
 msgid "_Keyboard Shortcuts"
-msgstr ""
+msgstr "_Atajos de teclado"
 
 #: apx_ide/gtk/window-main.ui:82
 msgid "_Quit"
@@ -254,12 +255,12 @@ msgstr ""
 #: apx_ide/windows/create_pkgmanager.py:91
 #, python-brace-format
 msgid "Package manager {pkgmanager.name} created successfully"
-msgstr ""
+msgstr "Gestor de paquetes {pkgmanager.name} creado con éxito"
 
 #: apx_ide/windows/create_subsystem.py:75
 #, python-brace-format
 msgid "Subsystem {subsystem.name} created successfully"
-msgstr ""
+msgstr "Subsistema {subsystem.name} creado con éxito"
 
 #: apx_ide/main.py:99
 msgid "translator_credits"
@@ -267,8 +268,8 @@ msgstr ""
 
 #: apx_ide/main.py:103
 msgid "Contributors"
-msgstr ""
+msgstr "Colaboradores"
 
 #: apx_ide/main.py:109
 msgid "Tools"
-msgstr ""
+msgstr "Herramientas"
