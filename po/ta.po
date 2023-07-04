@@ -1,0 +1,265 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the apx_ide package.
+# "K.B.Dharun Krishna" <kbdharunkrishna@gmail.com>, 2023.
+msgid ""
+msgstr ""
+"Project-Id-Version: apx_ide\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-07-04 22:08+0530\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: Automatically generated\n"
+"Language-Team: none\n"
+"Language: ta\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: data/org.vanillaos.ApxIDE.desktop.in:3
+msgid "Apx IDE"
+msgstr ""
+
+#: data/org.vanillaos.ApxIDE.appdata.xml.in:7
+msgid "No description"
+msgstr ""
+
+#: apx_ide/gtk/create-pkgmanager.ui:6 apx_ide/gtk/window-main.ui:70
+msgid "New Package Manager"
+msgstr ""
+
+#: apx_ide/gtk/create-pkgmanager.ui:23 apx_ide/gtk/create-stack.ui:23
+#: apx_ide/gtk/create-subsystem.ui:23
+msgid "Cancel"
+msgstr ""
+
+#: apx_ide/gtk/create-pkgmanager.ui:28 apx_ide/gtk/create-stack.ui:28
+#: apx_ide/gtk/create-subsystem.ui:28
+msgid "Create"
+msgstr ""
+
+#: apx_ide/gtk/create-pkgmanager.ui:41 apx_ide/gtk/tab-pkgmanager.ui:24
+#: apx_ide/gtk/tab-stack.ui:24
+msgid "Details"
+msgstr ""
+
+#: apx_ide/gtk/create-pkgmanager.ui:44 apx_ide/gtk/create-stack.ui:44
+#: apx_ide/gtk/create-subsystem.ui:44
+msgid "Name"
+msgstr ""
+
+#: apx_ide/gtk/create-pkgmanager.ui:49 apx_ide/gtk/tab-pkgmanager.ui:27
+msgid "Need Sudo"
+msgstr ""
+
+#: apx_ide/gtk/create-pkgmanager.ui:70
+msgid "Commands"
+msgstr ""
+
+#: apx_ide/gtk/create-pkgmanager.ui:73 apx_ide/gtk/tab-pkgmanager.ui:57
+msgid "Autoremove"
+msgstr ""
+
+#: apx_ide/gtk/create-pkgmanager.ui:78 apx_ide/gtk/tab-pkgmanager.ui:63
+msgid "Clean"
+msgstr ""
+
+#: apx_ide/gtk/create-pkgmanager.ui:83 apx_ide/gtk/tab-pkgmanager.ui:69
+msgid "Install"
+msgstr ""
+
+#: apx_ide/gtk/create-pkgmanager.ui:88 apx_ide/gtk/tab-pkgmanager.ui:75
+msgid "List"
+msgstr ""
+
+#: apx_ide/gtk/create-pkgmanager.ui:93 apx_ide/gtk/tab-pkgmanager.ui:81
+msgid "Purge"
+msgstr ""
+
+#: apx_ide/gtk/create-pkgmanager.ui:98 apx_ide/gtk/tab-pkgmanager.ui:87
+msgid "Remove"
+msgstr ""
+
+#: apx_ide/gtk/create-pkgmanager.ui:103 apx_ide/gtk/tab-pkgmanager.ui:93
+msgid "Search"
+msgstr ""
+
+#: apx_ide/gtk/create-pkgmanager.ui:108 apx_ide/gtk/tab-pkgmanager.ui:99
+msgid "Show"
+msgstr ""
+
+#: apx_ide/gtk/create-pkgmanager.ui:113 apx_ide/gtk/tab-pkgmanager.ui:105
+msgid "Update"
+msgstr ""
+
+#: apx_ide/gtk/create-pkgmanager.ui:118 apx_ide/gtk/tab-pkgmanager.ui:111
+msgid "Upgrade"
+msgstr ""
+
+#: apx_ide/gtk/create-pkgmanager.ui:144
+msgid "Creating Package Manager…"
+msgstr ""
+
+#: apx_ide/gtk/create-pkgmanager.ui:145
+msgid "Please wait while the package manager is being created."
+msgstr ""
+
+#: apx_ide/gtk/create-pkgmanager.ui:169
+msgid "An Error Occurred"
+msgstr ""
+
+#: apx_ide/gtk/create-pkgmanager.ui:170
+msgid "An error occurred while creating the package manager."
+msgstr ""
+
+#: apx_ide/gtk/create-pkgmanager.ui:174 apx_ide/gtk/create-stack.ui:148
+#: apx_ide/gtk/create-subsystem.ui:108
+msgid "Close"
+msgstr ""
+
+#: apx_ide/gtk/create-stack.ui:6 apx_ide/gtk/window-main.ui:66
+msgid "New Stack"
+msgstr ""
+
+#: apx_ide/gtk/create-stack.ui:49 apx_ide/gtk/tab-stack.ui:27
+msgid "Base"
+msgstr ""
+
+#: apx_ide/gtk/create-stack.ui:54 apx_ide/gtk/tab-stack.ui:38
+#: apx_ide/gtk/tab-subsystem.ui:29
+msgid "Package Manager"
+msgstr ""
+
+#: apx_ide/gtk/create-stack.ui:80
+msgid "Add Package"
+msgstr ""
+
+#: apx_ide/gtk/create-stack.ui:92
+msgid "New Package"
+msgstr ""
+
+#: apx_ide/gtk/create-stack.ui:119
+msgid "Please wait while the stack is being created."
+msgstr ""
+
+#: apx_ide/gtk/create-stack.ui:144
+msgid "An error occurred while creating the stack."
+msgstr ""
+
+#: apx_ide/gtk/create-subsystem.ui:6
+msgid "New Subsystem"
+msgstr ""
+
+#: apx_ide/gtk/create-subsystem.ui:49 apx_ide/gtk/tab-subsystem.ui:19
+msgid "Stack"
+msgstr ""
+
+#: apx_ide/gtk/create-subsystem.ui:78
+msgid "Creating Subsystem…"
+msgstr ""
+
+#: apx_ide/gtk/create-subsystem.ui:79
+msgid "Please wait while the subsystem is being created."
+msgstr ""
+
+#: apx_ide/gtk/create-subsystem.ui:104
+msgid "An error occurred while creating the subsystem."
+msgstr ""
+
+#: apx_ide/gtk/editor.ui:12
+msgid "Start or Open a Subsystem"
+msgstr ""
+
+#: apx_ide/gtk/editor.ui:13
+msgid "Start by opening a subsystem, stack or package manager on the left."
+msgstr ""
+
+#: apx_ide/gtk/help-overlay.ui:11
+msgctxt "shortcut window"
+msgid "General"
+msgstr ""
+
+#: apx_ide/gtk/help-overlay.ui:14
+msgctxt "shortcut window"
+msgid "Show Shortcuts"
+msgstr ""
+
+#: apx_ide/gtk/help-overlay.ui:20
+msgctxt "shortcut window"
+msgid "Quit"
+msgstr ""
+
+#: apx_ide/gtk/tab-pkgmanager.ui:13
+msgid "This package manager is built-in and cannot be edited or deleted."
+msgstr ""
+
+#: apx_ide/gtk/tab-pkgmanager.ui:42 apx_ide/gtk/tab-stack.ui:49
+msgid "Built-In"
+msgstr ""
+
+#: apx_ide/gtk/tab-pkgmanager.ui:119 apx_ide/gtk/tab-stack.ui:71
+msgid "Destructive Actions"
+msgstr ""
+
+#: apx_ide/gtk/tab-pkgmanager.ui:122
+msgid "Delete Package Manager"
+msgstr ""
+
+#: apx_ide/gtk/tab-stack.ui:13
+msgid "This stack is built-in and cannot be edited or deleted."
+msgstr ""
+
+#: apx_ide/gtk/tab-stack.ui:59
+msgid "Packages"
+msgstr ""
+
+#: apx_ide/gtk/tab-stack.ui:74
+msgid "Delete Stack"
+msgstr ""
+
+#: apx_ide/gtk/tab-subsystem.ui:9
+msgid "Status"
+msgstr ""
+
+#: apx_ide/gtk/tab-subsystem.ui:53
+msgid "Open Console"
+msgstr ""
+
+#: apx_ide/gtk/tab-subsystem.ui:54
+msgid "Enter a console in this subsystem's environment."
+msgstr ""
+
+#: apx_ide/gtk/tab-subsystem.ui:74
+msgid "Reset Subsystem"
+msgstr ""
+
+#: apx_ide/gtk/tab-subsystem.ui:89
+msgid "Delete Subsystem"
+msgstr ""
+
+#: apx_ide/gtk/window-main.ui:62
+msgid "New Sub System"
+msgstr ""
+
+#: apx_ide/gtk/window-main.ui:78
+msgid "_Keyboard Shortcuts"
+msgstr ""
+
+#: apx_ide/gtk/window-main.ui:82
+msgid "_Quit"
+msgstr ""
+
+#: apx_ide/gtk/window-main.ui:86
+msgid "_About Apx IDE"
+msgstr ""
+
+#: apx_ide/main.py:99
+msgid "translator_credits"
+msgstr ""
+
+#: apx_ide/main.py:103
+msgid "Contributors"
+msgstr ""
+
+#: apx_ide/main.py:109
+msgid "Tools"
+msgstr ""

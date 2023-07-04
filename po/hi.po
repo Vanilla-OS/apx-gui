@@ -1,0 +1,276 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the apx_ide package.
+# Pulkit Krishna <contact@virtualhub.eu.org>, 2023.
+msgid ""
+msgstr ""
+"Project-Id-Version: apx_ide\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-07-04 22:08+0530\n"
+"PO-Revision-Date: 2023-07-04 16:34+0000\n"
+"Last-Translator: Pulkit Krishna <contact@virtualhub.eu.org>\n"
+"Language-Team: Hindi <https://hosted.weblate.org/projects/vanilla-os/apx-gui/"
+"hi/>\n"
+"Language: hi\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n > 1;\n"
+"X-Generator: Weblate 5.0-dev\n"
+
+#: data/org.vanillaos.ApxIDE.desktop.in:3
+msgid "Apx IDE"
+msgstr "एपीएक्स आईडीई"
+
+#: data/org.vanillaos.ApxIDE.appdata.xml.in:7
+msgid "No description"
+msgstr "कोई विवरण नहीं"
+
+#: apx_ide/gtk/create-pkgmanager.ui:6 apx_ide/gtk/window-main.ui:70
+msgid "New Package Manager"
+msgstr "नया पैकेज मैनेजर"
+
+#: apx_ide/gtk/create-pkgmanager.ui:23 apx_ide/gtk/create-stack.ui:23
+#: apx_ide/gtk/create-subsystem.ui:23
+msgid "Cancel"
+msgstr "रद्द करें"
+
+#: apx_ide/gtk/create-pkgmanager.ui:28 apx_ide/gtk/create-stack.ui:28
+#: apx_ide/gtk/create-subsystem.ui:28
+msgid "Create"
+msgstr "बनाएं"
+
+#: apx_ide/gtk/create-pkgmanager.ui:41 apx_ide/gtk/tab-pkgmanager.ui:24
+#: apx_ide/gtk/tab-stack.ui:24
+msgid "Details"
+msgstr "विवरण"
+
+#: apx_ide/gtk/create-pkgmanager.ui:44 apx_ide/gtk/create-stack.ui:44
+#: apx_ide/gtk/create-subsystem.ui:44
+msgid "Name"
+msgstr "नाम"
+
+#: apx_ide/gtk/create-pkgmanager.ui:49 apx_ide/gtk/tab-pkgmanager.ui:27
+msgid "Need Sudo"
+msgstr "सूडो की जरूरत है"
+
+#: apx_ide/gtk/create-pkgmanager.ui:70
+msgid "Commands"
+msgstr ""
+
+#: apx_ide/gtk/create-pkgmanager.ui:73 apx_ide/gtk/tab-pkgmanager.ui:57
+msgid "Autoremove"
+msgstr "स्वतःनिकालें"
+
+#: apx_ide/gtk/create-pkgmanager.ui:78 apx_ide/gtk/tab-pkgmanager.ui:63
+msgid "Clean"
+msgstr "साफ़ करें"
+
+#: apx_ide/gtk/create-pkgmanager.ui:83 apx_ide/gtk/tab-pkgmanager.ui:69
+msgid "Install"
+msgstr "स्थापित करो"
+
+#: apx_ide/gtk/create-pkgmanager.ui:88 apx_ide/gtk/tab-pkgmanager.ui:75
+msgid "List"
+msgstr "सूची"
+
+#: apx_ide/gtk/create-pkgmanager.ui:93 apx_ide/gtk/tab-pkgmanager.ui:81
+msgid "Purge"
+msgstr "शुद्ध करो"
+
+#: apx_ide/gtk/create-pkgmanager.ui:98 apx_ide/gtk/tab-pkgmanager.ui:87
+msgid "Remove"
+msgstr "हटा दो"
+
+#: apx_ide/gtk/create-pkgmanager.ui:103 apx_ide/gtk/tab-pkgmanager.ui:93
+msgid "Search"
+msgstr "खोज करें"
+
+#: apx_ide/gtk/create-pkgmanager.ui:108 apx_ide/gtk/tab-pkgmanager.ui:99
+msgid "Show"
+msgstr "दिखाएँ"
+
+#: apx_ide/gtk/create-pkgmanager.ui:113 apx_ide/gtk/tab-pkgmanager.ui:105
+msgid "Update"
+msgstr "अपडेट"
+
+#: apx_ide/gtk/create-pkgmanager.ui:118 apx_ide/gtk/tab-pkgmanager.ui:111
+msgid "Upgrade"
+msgstr "अपग्रेड"
+
+#: apx_ide/gtk/create-pkgmanager.ui:144
+msgid "Creating Package Manager…"
+msgstr "पैकेज मैनेजर बनाया जा रहा है…"
+
+#: apx_ide/gtk/create-pkgmanager.ui:145
+msgid "Please wait while the package manager is being created."
+msgstr "कृपया पैकेज मैनेजर बनाए जाने तक प्रतीक्षा करें।"
+
+#: apx_ide/gtk/create-pkgmanager.ui:169
+msgid "An Error Occurred"
+msgstr "एक त्रुटि पाई गई"
+
+#: apx_ide/gtk/create-pkgmanager.ui:170
+msgid "An error occurred while creating the package manager."
+msgstr "पैकेज प्रबंधक बनाते समय एक त्रुटि उत्पन्न हुई।"
+
+#: apx_ide/gtk/create-pkgmanager.ui:174 apx_ide/gtk/create-stack.ui:148
+#: apx_ide/gtk/create-subsystem.ui:108
+msgid "Close"
+msgstr "बंद करें"
+
+#: apx_ide/gtk/create-stack.ui:6 apx_ide/gtk/window-main.ui:66
+msgid "New Stack"
+msgstr "नया संग्रह"
+
+#: apx_ide/gtk/create-stack.ui:49 apx_ide/gtk/tab-stack.ui:27
+msgid "Base"
+msgstr "आधार"
+
+#: apx_ide/gtk/create-stack.ui:54 apx_ide/gtk/tab-stack.ui:38
+#: apx_ide/gtk/tab-subsystem.ui:29
+msgid "Package Manager"
+msgstr "पैकेज प्रबंधक"
+
+#: apx_ide/gtk/create-stack.ui:80
+msgid "Add Package"
+msgstr "पैकेज जोड़ें"
+
+#: apx_ide/gtk/create-stack.ui:92
+msgid "New Package"
+msgstr "नया पैकेज"
+
+#: apx_ide/gtk/create-stack.ui:119
+msgid "Please wait while the stack is being created."
+msgstr "कृपया संग्रह बनने तक प्रतीक्षा करें।"
+
+#: apx_ide/gtk/create-stack.ui:144
+msgid "An error occurred while creating the stack."
+msgstr "संग्रह बनाते समय एक त्रुटि उत्पन्न हुई।"
+
+#: apx_ide/gtk/create-subsystem.ui:6
+msgid "New Subsystem"
+msgstr "नया सबसिस्टम"
+
+#: apx_ide/gtk/create-subsystem.ui:49 apx_ide/gtk/tab-subsystem.ui:19
+msgid "Stack"
+msgstr "संग्रह"
+
+#: apx_ide/gtk/create-subsystem.ui:78
+msgid "Creating Subsystem…"
+msgstr "सबसिस्टम बनाया जा रहा है…"
+
+#: apx_ide/gtk/create-subsystem.ui:79
+msgid "Please wait while the subsystem is being created."
+msgstr "कृपया सबसिस्टम बनने तक प्रतीक्षा करें।"
+
+#: apx_ide/gtk/create-subsystem.ui:104
+msgid "An error occurred while creating the subsystem."
+msgstr "सबसिस्टम बनाते समय एक त्रुटि उत्पन्न हुई।"
+
+#: apx_ide/gtk/editor.ui:12
+msgid "Start or Open a Subsystem"
+msgstr "सबसिस्टम प्रारंभ करें या खोलें"
+
+#: apx_ide/gtk/editor.ui:13
+msgid "Start by opening a subsystem, stack or package manager on the left."
+msgstr "बाईं ओर एक सबसिस्टम, स्टैक या पैकेज मैनेजर खोलकर शुरुआत करें।"
+
+#: apx_ide/gtk/help-overlay.ui:11
+msgctxt "shortcut window"
+msgid "General"
+msgstr "सामान्य"
+
+#: apx_ide/gtk/help-overlay.ui:14
+msgctxt "shortcut window"
+msgid "Show Shortcuts"
+msgstr "शॉर्टकट दिखाएं"
+
+#: apx_ide/gtk/help-overlay.ui:20
+msgctxt "shortcut window"
+msgid "Quit"
+msgstr "छोड़ दें"
+
+#: apx_ide/gtk/tab-pkgmanager.ui:13
+msgid "This package manager is built-in and cannot be edited or deleted."
+msgstr "यह पैकेज मैनेजर अंतर्निहित है और इसे संपादित या हटाया नहीं जा सकता है।"
+
+#: apx_ide/gtk/tab-pkgmanager.ui:42 apx_ide/gtk/tab-stack.ui:49
+msgid "Built-In"
+msgstr "निर्मित में"
+
+#: apx_ide/gtk/tab-pkgmanager.ui:119 apx_ide/gtk/tab-stack.ui:71
+msgid "Destructive Actions"
+msgstr "विनाशकारी क्रियाएं"
+
+#: apx_ide/gtk/tab-pkgmanager.ui:122
+msgid "Delete Package Manager"
+msgstr "पैकेज प्रबंधक हटाएँ"
+
+#: apx_ide/gtk/tab-stack.ui:13
+msgid "This stack is built-in and cannot be edited or deleted."
+msgstr "यह स्टैक बिल्ट-इन है और इसे संपादित या हटाया नहीं जा सकता है।"
+
+#: apx_ide/gtk/tab-stack.ui:59
+msgid "Packages"
+msgstr "पैकेज"
+
+#: apx_ide/gtk/tab-stack.ui:74
+msgid "Delete Stack"
+msgstr "संग्रह हटाएं"
+
+#: apx_ide/gtk/tab-subsystem.ui:9
+msgid "Status"
+msgstr "दर्जा"
+
+#: apx_ide/gtk/tab-subsystem.ui:53
+msgid "Open Console"
+msgstr "कंसोल खोलें"
+
+#: apx_ide/gtk/tab-subsystem.ui:54
+msgid "Enter a console in this subsystem's environment."
+msgstr "इस सबसिस्टम के वातावरण में एक कंसोल दर्ज करें।"
+
+#: apx_ide/gtk/tab-subsystem.ui:74
+msgid "Reset Subsystem"
+msgstr "सबसिस्टम रीसेट करें"
+
+#: apx_ide/gtk/tab-subsystem.ui:89
+msgid "Delete Subsystem"
+msgstr "सबसिस्टम हटाएँ"
+
+#: apx_ide/gtk/window-main.ui:62
+msgid "New Sub System"
+msgstr "नई उप प्रणाली"
+
+#: apx_ide/gtk/window-main.ui:78
+msgid "_Keyboard Shortcuts"
+msgstr "_कुंजीपटल अल्प मार्ग"
+
+#: apx_ide/gtk/window-main.ui:82
+msgid "_Quit"
+msgstr "_छोड़ना"
+
+#: apx_ide/gtk/window-main.ui:86
+msgid "_About Apx IDE"
+msgstr "_एपीएक्स आईडीई के बारे में"
+
+#: apx_ide/main.py:99
+msgid "translator_credits"
+msgstr "Pulkit Krishna <pulkitkrishna00@gmail.com>"
+
+#: apx_ide/main.py:103
+msgid "Contributors"
+msgstr "योगदानकर्ताओं"
+
+#: apx_ide/main.py:109
+msgid "Tools"
+msgstr "औजार"
+
+#, python-brace-format
+#~ msgid "Package manager {pkgmanager.name} created successfully"
+#~ msgstr "पैकेज प्रबंधक {pkgmanager.name} सफलतापूर्वक बनाया गया"
+
+#, python-brace-format
+#~ msgid "Subsystem {subsystem.name} created successfully"
+#~ msgstr "सबसिस्टम {subsystem.name} सफलतापूर्वक बनाया गया"
