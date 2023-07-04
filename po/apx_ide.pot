@@ -1,7 +1,6 @@
-# SOME DESCRIPTIVE TITLE.
-# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# Apx IDE Translation File
+# Copyright (C) 2023 Mirko Brombin and Apx IDE Contributors
 # This file is distributed under the same license as the apx_ide package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 #
 #, fuzzy
 msgid ""
