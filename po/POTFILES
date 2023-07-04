@@ -2,6 +2,7 @@ data/org.vanillaos.ApxIDE.desktop.in
 data/org.vanillaos.ApxIDE.appdata.xml.in
 data/org.vanillaos.ApxIDE.gschema.xml
 
+apx_ide/gtk/create-pkgmanager.ui
 apx_ide/gtk/create-stack.ui
 apx_ide/gtk/create-subsystem.ui
 apx_ide/gtk/editor.ui
@@ -26,6 +27,7 @@ apx_ide/widgets/tab_pkgmanager.py
 apx_ide/widgets/tab_stack.py
 apx_ide/widgets/tab_subsystem.py
 
+apx_ide/windows/create_pkgmanager.py
 apx_ide/windows/create_stack.py
 apx_ide/windows/create_subsystem.py
 apx_ide/windows/main_window.py
