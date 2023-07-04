@@ -3,8 +3,14 @@
     <h1>Apx IDE</h1>
     <p>A frontend in GTK 4 and Libadwaita for Apx.</p>
     <br />
-    <img src="data/screenshot.png">
+
+[![Translation Status][weblate-image]][weblate-url]
+
+<img src="data/screenshot.png">
 </div>
+
+[weblate-url]: <https://hosted.weblate.org/engage/vanilla-os/>
+[weblate-image]: <https://hosted.weblate.org/widgets/vanilla-os/-/apx-gui/svg-badge.svg>
 
 ### Dependencies
 

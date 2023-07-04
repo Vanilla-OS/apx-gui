@@ -95,7 +95,7 @@ class ApxIDEApplication(Adw.Application):
                                 website='https://github.com/Vanilla-OS/apx-gui',
                                 issue_url='https://github.com/Vanilla-OS/apx-gui/issues',
                                 version='1.0.2',
-                                developers=['Mirko Brombin https://github.com/mirkobrombin/'],
+                                developers=['Mirko Brombin https://github.com/mirkobrombin'],
                                 translator_credits= _("translator_credits"),
                                 copyright='© 2023 Mirko Brombin and Contributors',
                                 license_type=('gpl-3-0-only'))
@@ -108,7 +108,7 @@ class ApxIDEApplication(Adw.Application):
         about.add_acknowledgement_section(
             _("Tools"),
             [
-                "apx https://github.com/Vanilla-OS/apx",
+                "Apx https://github.com/Vanilla-OS/apx",
             ]
         )
         about.present()
