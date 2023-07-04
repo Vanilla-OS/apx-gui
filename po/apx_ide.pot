@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: apx_ide\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-07-03 23:41+0530\n"
+"POT-Creation-Date: 2023-07-04 11:30+0530\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -62,8 +62,8 @@ msgstr ""
 msgid "Please wait while the stack is being created."
 msgstr ""
 
-#: apx_ide/gtk/create-stack.ui:144 apx_ide/gtk/create-subsystem.ui:104
-msgid "An error occurred while creating the subsystem."
+#: apx_ide/gtk/create-stack.ui:144
+msgid "An error occurred while creating the stack."
 msgstr ""
 
 #: apx_ide/gtk/create-stack.ui:148 apx_ide/gtk/create-subsystem.ui:108
@@ -80,6 +80,10 @@ msgstr ""
 
 #: apx_ide/gtk/create-subsystem.ui:79
 msgid "Please wait while the subsystem is being created."
+msgstr ""
+
+#: apx_ide/gtk/create-subsystem.ui:104
+msgid "An error occurred while creating the subsystem."
 msgstr ""
 
 #: apx_ide/gtk/editor.ui:13

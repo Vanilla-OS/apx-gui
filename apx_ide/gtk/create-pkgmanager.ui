@@ -41,12 +41,12 @@
                                                 <property name="title">Details</property>
                                                 <child>
                                                     <object class="AdwEntryRow" id="row_name">
-                                                        <property name="title" translatable="true">Name</property>
+                                                        <property name="title" translatable="yes">Name</property>
                                                     </object>
                                                 </child>
                                                 <child>
                                                     <object class="AdwActionRow" id="row_sudo">
-                                                        <property name="title" translatable="true">Need Sudo</property>
+                                                        <property name="title" translatable="yes">Need Sudo</property>
                                                         <child type="prefix">
                                                         <object class="GtkImage">
                                                             <property name="icon-name">dialog-password-symbolic</property>
@@ -70,52 +70,52 @@
                                                 <property name="title">Commands</property>
                                                 <child> 
                                                     <object class="AdwEntryRow" id="row_autoremove">
-                                                        <property name="title" translatable="true">Autoremove</property>
+                                                        <property name="title" translatable="yes">Autoremove</property>
                                                     </object>
                                                 </child>
                                                 <child>
                                                     <object class="AdwEntryRow" id="row_clean">
-                                                        <property name="title" translatable="true">Clean</property>
+                                                        <property name="title" translatable="yes">Clean</property>
                                                     </object>
                                                 </child>
                                                 <child>
                                                     <object class="AdwEntryRow" id="row_install">
-                                                        <property name="title" translatable="true">Install</property>
+                                                        <property name="title" translatable="yes">Install</property>
                                                     </object>
                                                 </child>
                                                 <child>
                                                     <object class="AdwEntryRow" id="row_list">
-                                                        <property name="title" translatable="true">List</property>
+                                                        <property name="title" translatable="yes">List</property>
                                                     </object>
                                                 </child>
                                                 <child>
                                                     <object class="AdwEntryRow" id="row_purge">
-                                                        <property name="title" translatable="true">Purge</property>
+                                                        <property name="title" translatable="yes">Purge</property>
                                                     </object>
                                                 </child>
                                                 <child>
                                                     <object class="AdwEntryRow" id="row_remove">
-                                                        <property name="title" translatable="true">Remove</property>
+                                                        <property name="title" translatable="yes">Remove</property>
                                                     </object>
                                                 </child>
                                                 <child>
                                                     <object class="AdwEntryRow" id="row_search">
-                                                        <property name="title" translatable="true">Search</property>
+                                                        <property name="title" translatable="yes">Search</property>
                                                     </object>
                                                 </child>
                                                 <child>
                                                     <object class="AdwEntryRow" id="row_show">
-                                                        <property name="title" translatable="true">Show</property>
+                                                        <property name="title" translatable="yes">Show</property>
                                                     </object>
                                                 </child>
                                                 <child>
                                                     <object class="AdwEntryRow" id="row_update">
-                                                        <property name="title" translatable="true">Update</property>
+                                                        <property name="title" translatable="yes">Update</property>
                                                     </object>
                                                 </child>
                                                 <child>
                                                     <object class="AdwEntryRow" id="row_upgrade">
-                                                        <property name="title" translatable="true">Upgrade</property>
+                                                        <property name="title" translatable="yes">Upgrade</property>
                                                     </object>
                                                 </child>
                                             </object>
@@ -142,7 +142,7 @@
                                 <child>
                                     <object class="AdwStatusPage" id="status_creating">
                                         <property name="title">Creating Package Manager…</property>
-                                        <property name="description" translatable="true">Please wait while the package manager is being created.</property>
+                                        <property name="description" translatable="yes">Please wait while the package manager is being created.</property>
                                         <property name="valign">center</property>
                                     </object>
                                 </child>
@@ -167,7 +167,7 @@
                                     <object class="AdwStatusPage" id="status_error">
                                         <property name="icon-name">dialog-error-symbolic</property>
                                         <property name="title">An Error Occurred</property>
-                                        <property name="description" translatable="true">An error occurred while creating the package manager.</property>
+                                        <property name="description" translatable="yes">An error occurred while creating the package manager.</property>
                                         <property name="valign">center</property>
                                         <child>
                                             <object class="GtkButton" id="btn_close">

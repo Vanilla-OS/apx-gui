@@ -19,6 +19,7 @@
 
 from gi.repository import Gtk, GObject, Gio, Gdk, GLib, Adw, Vte, Pango
 from typing import Iterable
+import gettext as _
 
 from apx_ide.core.apx_entities import PkgManager, Stack
 from apx_ide.utils.gtk import GtkUtils
@@ -87,7 +88,7 @@ class CreatePkgManagerWindow(Adw.Window):
             if status:
                 self.__window.append_pkgmanager(pkgmanager)
                 self.close()
-                self.__window.toast(f"Package manager {pkgmanager.name} created successfully")
+                self.__window.toast(_(f"Package manager {pkgmanager.name} created successfully"))
                 return
 
             self.stack_main.set_visible_child_name("error")
