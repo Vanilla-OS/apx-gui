@@ -22,7 +22,6 @@ from gi.repository import Gtk, GObject, Gio, Gdk, GLib, Adw, Vte, Pango
 from apx_ide.core.apx_entities import PkgManager, Stack
 from apx_ide.utils.gtk import GtkUtils
 from apx_ide.core.run_async import RunAsync
-import gettext as _
 
 
 @Gtk.Template(resource_path='/org/vanillaos/apx-ide/gtk/create-stack.ui')

@@ -22,7 +22,6 @@ from gi.repository import Gtk, GObject, Gio, Gdk, GLib, Adw, Vte, Pango
 from apx_ide.core.apx_entities import Subsystem, Stack
 from apx_ide.utils.gtk import GtkUtils
 from apx_ide.core.run_async import RunAsync
-import gettext as _
 
 
 @Gtk.Template(resource_path='/org/vanillaos/apx-ide/gtk/create-subsystem.ui')
@@ -72,7 +71,7 @@ class CreateSubsystemWindow(Adw.Window):
             if status:
                 self.__window.append_subsystem(subsystem)
                 self.close()
-                self.__window.toast(_(f"Subsystem {subsystem.name} created successfully"))
+                self.__window.toast(f"Subsystem {subsystem.name} created successfully")
                 return
 
             self.stack_main.set_visible_child_name("error")
