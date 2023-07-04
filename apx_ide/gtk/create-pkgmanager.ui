@@ -67,7 +67,7 @@
                                     <object class="AdwPreferencesPage">
                                         <child>
                                             <object class="AdwPreferencesGroup">
-                                                <property name="title">Commands</property>
+                                                <property name="title" translatable="yes">Commands</property>
                                                 <child> 
                                                     <object class="AdwEntryRow" id="row_autoremove">
                                                         <property name="title" translatable="yes">Autoremove</property>
