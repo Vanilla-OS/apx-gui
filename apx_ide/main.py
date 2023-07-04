@@ -105,6 +105,12 @@ class ApxIDEApplication(Adw.Application):
                 "K.B.Dharun Krishna https://github.com/kbdharun",
             ]
         )
+        about.add_acknowledgement_section(
+            _("Tools"),
+            [
+                "apx https://github.com/Vanilla-OS/apx",
+            ]
+        )
         about.present()
 
     def on_new_subsystem_action(self, *args):

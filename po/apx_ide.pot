@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: apx_ide\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-07-04 14:53+0530\n"
+"POT-Creation-Date: 2023-07-04 15:08+0530\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -266,4 +266,8 @@ msgstr ""
 
 #: apx_ide/main.py:103
 msgid "Contributors"
+msgstr ""
+
+#: apx_ide/main.py:109
+msgid "Tools"
 msgstr ""
