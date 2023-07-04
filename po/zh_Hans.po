@@ -1,0 +1,274 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the apx_ide package.
+# lakejason0 <sunliyuan200402@outlook.com>, 2023.
+msgid ""
+msgstr ""
+"Project-Id-Version: apx_ide\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-07-04 15:08+0530\n"
+"PO-Revision-Date: 2023-07-04 16:34+0000\n"
+"Last-Translator: lakejason0 <sunliyuan200402@outlook.com>\n"
+"Language-Team: Chinese (Simplified) <https://hosted.weblate.org/projects/"
+"vanilla-os/apx-gui/zh_Hans/>\n"
+"Language: zh_Hans\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Generator: Weblate 5.0-dev\n"
+
+#: data/org.vanillaos.ApxIDE.desktop.in:3
+msgid "Apx IDE"
+msgstr "Apx 集成开发环境"
+
+#: data/org.vanillaos.ApxIDE.appdata.xml.in:7
+msgid "No description"
+msgstr "没有说明"
+
+#: apx_ide/gtk/create-pkgmanager.ui:6 apx_ide/gtk/window-main.ui:70
+msgid "New Package Manager"
+msgstr "新建软件包管理器"
+
+#: apx_ide/gtk/create-pkgmanager.ui:23 apx_ide/gtk/create-stack.ui:23
+#: apx_ide/gtk/create-subsystem.ui:23
+msgid "Cancel"
+msgstr "取消"
+
+#: apx_ide/gtk/create-pkgmanager.ui:28 apx_ide/gtk/create-stack.ui:28
+#: apx_ide/gtk/create-subsystem.ui:28
+msgid "Create"
+msgstr "创建"
+
+#: apx_ide/gtk/create-pkgmanager.ui:41 apx_ide/gtk/tab-pkgmanager.ui:24
+#: apx_ide/gtk/tab-stack.ui:24
+msgid "Details"
+msgstr "详细信息"
+
+#: apx_ide/gtk/create-pkgmanager.ui:44 apx_ide/gtk/create-stack.ui:44
+#: apx_ide/gtk/create-subsystem.ui:44
+msgid "Name"
+msgstr "名称"
+
+#: apx_ide/gtk/create-pkgmanager.ui:49 apx_ide/gtk/tab-pkgmanager.ui:27
+msgid "Need Sudo"
+msgstr "需要 sudo"
+
+#: apx_ide/gtk/create-pkgmanager.ui:73 apx_ide/gtk/tab-pkgmanager.ui:57
+msgid "Autoremove"
+msgstr "自动移除"
+
+#: apx_ide/gtk/create-pkgmanager.ui:78 apx_ide/gtk/tab-pkgmanager.ui:63
+msgid "Clean"
+msgstr "清理"
+
+#: apx_ide/gtk/create-pkgmanager.ui:83 apx_ide/gtk/tab-pkgmanager.ui:69
+msgid "Install"
+msgstr "安装"
+
+#: apx_ide/gtk/create-pkgmanager.ui:88 apx_ide/gtk/tab-pkgmanager.ui:75
+msgid "List"
+msgstr "列表"
+
+#: apx_ide/gtk/create-pkgmanager.ui:93 apx_ide/gtk/tab-pkgmanager.ui:81
+msgid "Purge"
+msgstr "清除（Purge）"
+
+#: apx_ide/gtk/create-pkgmanager.ui:98 apx_ide/gtk/tab-pkgmanager.ui:87
+msgid "Remove"
+msgstr "移除"
+
+#: apx_ide/gtk/create-pkgmanager.ui:103 apx_ide/gtk/tab-pkgmanager.ui:93
+msgid "Search"
+msgstr "搜索"
+
+#: apx_ide/gtk/create-pkgmanager.ui:108 apx_ide/gtk/tab-pkgmanager.ui:99
+msgid "Show"
+msgstr "显示"
+
+#: apx_ide/gtk/create-pkgmanager.ui:113 apx_ide/gtk/tab-pkgmanager.ui:105
+msgid "Update"
+msgstr "更新"
+
+#: apx_ide/gtk/create-pkgmanager.ui:118 apx_ide/gtk/tab-pkgmanager.ui:111
+msgid "Upgrade"
+msgstr "升级"
+
+#: apx_ide/gtk/create-pkgmanager.ui:144
+msgid "Creating Package Manager…"
+msgstr "正在创建软件包管理器…"
+
+#: apx_ide/gtk/create-pkgmanager.ui:145
+msgid "Please wait while the package manager is being created."
+msgstr "正在创建软件包管理器，请稍候。"
+
+#: apx_ide/gtk/create-pkgmanager.ui:169
+msgid "An Error Occurred"
+msgstr "发生错误"
+
+#: apx_ide/gtk/create-pkgmanager.ui:170
+msgid "An error occurred while creating the package manager."
+msgstr "创建软件包管理器时出错。"
+
+#: apx_ide/gtk/create-pkgmanager.ui:174 apx_ide/gtk/create-stack.ui:148
+#: apx_ide/gtk/create-subsystem.ui:108
+msgid "Close"
+msgstr "关闭"
+
+#: apx_ide/gtk/create-stack.ui:6 apx_ide/gtk/window-main.ui:66
+msgid "New Stack"
+msgstr "新建包捆"
+
+#: apx_ide/gtk/create-stack.ui:49 apx_ide/gtk/tab-stack.ui:27
+msgid "Base"
+msgstr "基础映像"
+
+#: apx_ide/gtk/create-stack.ui:54 apx_ide/gtk/tab-stack.ui:38
+#: apx_ide/gtk/tab-subsystem.ui:29
+msgid "Package Manager"
+msgstr "软件包管理器"
+
+#: apx_ide/gtk/create-stack.ui:80
+msgid "Add Package"
+msgstr "添加软件包"
+
+#: apx_ide/gtk/create-stack.ui:92
+msgid "New Package"
+msgstr "新建软件包"
+
+#: apx_ide/gtk/create-stack.ui:119
+msgid "Please wait while the stack is being created."
+msgstr "正在创建包捆，请稍候。"
+
+#: apx_ide/gtk/create-stack.ui:144
+msgid "An error occurred while creating the stack."
+msgstr "创建包捆时发生错误。"
+
+#: apx_ide/gtk/create-subsystem.ui:6
+msgid "New Subsystem"
+msgstr "新建子系统"
+
+#: apx_ide/gtk/create-subsystem.ui:49 apx_ide/gtk/tab-subsystem.ui:19
+msgid "Stack"
+msgstr "包捆"
+
+#: apx_ide/gtk/create-subsystem.ui:78
+msgid "Creating Subsystem…"
+msgstr "正在创建子系统…"
+
+#: apx_ide/gtk/create-subsystem.ui:79
+msgid "Please wait while the subsystem is being created."
+msgstr "正在创建子系统，请稍候。"
+
+#: apx_ide/gtk/create-subsystem.ui:104
+msgid "An error occurred while creating the subsystem."
+msgstr "创建子系统时发生错误。"
+
+#: apx_ide/gtk/editor.ui:12
+msgid "Start or Open a Subsystem"
+msgstr "启动或打开子系统"
+
+#: apx_ide/gtk/editor.ui:13
+msgid "Start by opening a subsystem, stack or package manager on the left."
+msgstr "要开始，请打开左侧的子系统、包捆或软件包管理器。"
+
+#: apx_ide/gtk/help-overlay.ui:11
+msgctxt "shortcut window"
+msgid "General"
+msgstr "通用"
+
+#: apx_ide/gtk/help-overlay.ui:14
+msgctxt "shortcut window"
+msgid "Show Shortcuts"
+msgstr "显示快捷键"
+
+#: apx_ide/gtk/help-overlay.ui:20
+msgctxt "shortcut window"
+msgid "Quit"
+msgstr "退出"
+
+#: apx_ide/gtk/tab-pkgmanager.ui:13
+msgid "This package manager is built-in and cannot be edited or deleted."
+msgstr "此软件包管理器是内置的，无法编辑或删除。"
+
+#: apx_ide/gtk/tab-pkgmanager.ui:42 apx_ide/gtk/tab-stack.ui:49
+msgid "Built-In"
+msgstr "内置"
+
+#: apx_ide/gtk/tab-pkgmanager.ui:119 apx_ide/gtk/tab-stack.ui:71
+msgid "Destructive Actions"
+msgstr "破坏性操作"
+
+#: apx_ide/gtk/tab-pkgmanager.ui:122
+msgid "Delete Package Manager"
+msgstr "删除软件包管理器"
+
+#: apx_ide/gtk/tab-stack.ui:13
+msgid "This stack is built-in and cannot be edited or deleted."
+msgstr "此包捆是内置的，无法编辑或删除。"
+
+#: apx_ide/gtk/tab-stack.ui:59
+msgid "Packages"
+msgstr "软件包"
+
+#: apx_ide/gtk/tab-stack.ui:74
+msgid "Delete Stack"
+msgstr "删除包捆"
+
+#: apx_ide/gtk/tab-subsystem.ui:9
+msgid "Status"
+msgstr "状态"
+
+#: apx_ide/gtk/tab-subsystem.ui:53
+msgid "Open Console"
+msgstr "打开控制台"
+
+#: apx_ide/gtk/tab-subsystem.ui:54
+msgid "Enter a console in this subsystem's environment."
+msgstr "进入该子系统环境的控制台。"
+
+#: apx_ide/gtk/tab-subsystem.ui:74
+msgid "Reset Subsystem"
+msgstr "重置子系统"
+
+#: apx_ide/gtk/tab-subsystem.ui:89
+msgid "Delete Subsystem"
+msgstr "删除子系统"
+
+#: apx_ide/gtk/window-main.ui:62
+msgid "New Sub System"
+msgstr "新建子系统"
+
+#: apx_ide/gtk/window-main.ui:78
+msgid "_Keyboard Shortcuts"
+msgstr "键盘快捷键(_K)"
+
+#: apx_ide/gtk/window-main.ui:82
+msgid "_Quit"
+msgstr "退出(_Q)"
+
+#: apx_ide/gtk/window-main.ui:86
+msgid "_About Apx IDE"
+msgstr "关于 Apx 集成开发环境(_A)"
+
+#: apx_ide/windows/create_pkgmanager.py:91
+#, python-brace-format
+msgid "Package manager {pkgmanager.name} created successfully"
+msgstr "已成功创建软件包管理器 {pkgmanager.name}"
+
+#: apx_ide/windows/create_subsystem.py:75
+#, python-brace-format
+msgid "Subsystem {subsystem.name} created successfully"
+msgstr "已成功创建子系统 {subsystem.name}"
+
+#: apx_ide/main.py:99
+msgid "translator_credits"
+msgstr "lakejason0 <lakesarchive@outlook.com>"
+
+#: apx_ide/main.py:103
+msgid "Contributors"
+msgstr "贡献者"
+
+#: apx_ide/main.py:109
+msgid "Tools"
+msgstr "工具"
