@@ -1,1 +1,1 @@
-i18n.gettext('apx_ide', preset: 'glib')
+i18n.gettext('apx_gui', preset: 'glib')

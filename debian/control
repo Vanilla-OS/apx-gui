@@ -1,4 +1,4 @@
-Source: vanilla-apx-ide
+Source: vanilla-apx-gui
 Section: utils
 Priority: optional
 Maintainer: Mirko Brombin <send@mirko.pm>
@@ -12,12 +12,12 @@ Build-Depends:
             desktop-file-utils,
             make,
             libjpeg-dev
-Homepage: https://github.com/vanilla-os/apx-gui/
+Homepage: https://github.com/vanilla-os/apx-gui
 Vcs-Browser: hhttps://github.com/vanilla-os/apx-gui
 Vcs-Git: https://github.com/vanilla-os/apx-gui.git
 Rules-Requires-Root: no
 
-Package: vanilla-apx-ide
+Package: vanilla-apx-gui
 Architecture: any
 Depends: python3,
          python3-gi,

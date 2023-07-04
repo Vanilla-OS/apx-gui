@@ -1,4 +1,4 @@
-project('apx_ide',
+project('apx_gui',
           version: '0.1.0',
     meson_version: '>= 0.59.0',
   default_options: [ 'warning_level=2', 'werror=false', ],
@@ -9,7 +9,7 @@ gnome = import('gnome')
 
 
 subdir('data')
-subdir('apx_ide')
+subdir('apx_gui')
 subdir('po')
 
 gnome.post_install(

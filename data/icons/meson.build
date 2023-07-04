@@ -1,4 +1,4 @@
-application_id = 'org.vanillaos.ApxIDE'
+application_id = 'org.vanillaos.ApxGUI'
 
 scalable_dir = join_paths('hicolor', 'scalable', 'apps')
 install_data(

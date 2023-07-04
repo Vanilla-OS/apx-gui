@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<interface>
+  <template class="Editor" parent="AdwBin">
+    <child>
+        <object class="AdwViewStack" id="stack_editor">
+        <child>
+            <object class="AdwViewStackPage" id="page_no_tabs">
+            <property name="name">no_tabs</property>
+            <property name="child">
+                <object class="AdwStatusPage">
+                <property name="icon-name">org.vanillaos.ApxGUI</property>
+                <property name="title" translatable="yes">Start or Open a Subsystem</property>
+                <property name="description" translatable="yes">Start by opening a subsystem, stack or package manager on the left.</property>
+                </object>
+            </property>
+            </object>
+        </child>
+        <child>
+            <object class="AdwViewStackPage" id="page_editor">
+            <property name="name">editor</property>
+            <property name="child">
+                <object class="GtkBox">
+                <property name="orientation">vertical</property>
+                <child>
+                    <object class="AdwTabBar">
+                    <property name="view">tabs_editor</property>
+                    <property name="autohide">false</property>
+                    </object>
+                </child>
+                <child>
+                    <object class="AdwTabView" id="tabs_editor">
+                    <property name="hexpand">true</property>
+                    <property name="vexpand">true</property>
+                    </object>
+                </child>
+                </object>
+            </property>
+            </object>
+        </child>
+        </object>
+    </child>
+  </template>
+</interface>

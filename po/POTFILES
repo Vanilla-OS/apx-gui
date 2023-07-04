@@ -1,21 +1,21 @@
-data/org.vanillaos.ApxIDE.desktop.in
-data/org.vanillaos.ApxIDE.appdata.xml.in
-data/org.vanillaos.ApxIDE.gschema.xml
+data/org.vanillaos.ApxGUI.desktop.in
+data/org.vanillaos.ApxGUI.appdata.xml.in
+data/org.vanillaos.ApxGUI.gschema.xml
 
-apx_ide/gtk/create-pkgmanager.ui
-apx_ide/gtk/create-stack.ui
-apx_ide/gtk/create-subsystem.ui
-apx_ide/gtk/editor.ui
-apx_ide/gtk/entry-pkgmanager.ui
-apx_ide/gtk/entry-stack.ui
-apx_ide/gtk/entry-subsystem.ui
-apx_ide/gtk/help-overlay.ui
-apx_ide/gtk/sidebar.ui
-apx_ide/gtk/tab-pkgmanager.ui
-apx_ide/gtk/tab-stack.ui
-apx_ide/gtk/tab-subsystem.ui
-apx_ide/gtk/window-main.ui
+apx_gui/gtk/create-pkgmanager.ui
+apx_gui/gtk/create-stack.ui
+apx_gui/gtk/create-subsystem.ui
+apx_gui/gtk/editor.ui
+apx_gui/gtk/entry-pkgmanager.ui
+apx_gui/gtk/entry-stack.ui
+apx_gui/gtk/entry-subsystem.ui
+apx_gui/gtk/help-overlay.ui
+apx_gui/gtk/sidebar.ui
+apx_gui/gtk/tab-pkgmanager.ui
+apx_gui/gtk/tab-stack.ui
+apx_gui/gtk/tab-subsystem.ui
+apx_gui/gtk/window-main.ui
 
-apx_ide/utils/gtk.py
+apx_gui/utils/gtk.py
 
-apx_ide/main.py
+apx_gui/main.py

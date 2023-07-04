@@ -1,6 +1,6 @@
 desktop_file = i18n.merge_file(
-        input: 'org.vanillaos.ApxIDE.desktop.in',
-       output: 'org.vanillaos.ApxIDE.desktop',
+        input: 'org.vanillaos.ApxGUI.desktop.in',
+       output: 'org.vanillaos.ApxGUI.desktop',
          type: 'desktop',
        po_dir: '../po',
       install: true,
@@ -13,8 +13,8 @@ if desktop_utils.found()
 endif
 
 appstream_file = i18n.merge_file(
-        input: 'org.vanillaos.ApxIDE.appdata.xml.in',
-       output: 'org.vanillaos.ApxIDE.appdata.xml',
+        input: 'org.vanillaos.ApxGUI.appdata.xml.in',
+       output: 'org.vanillaos.ApxGUI.appdata.xml',
        po_dir: '../po',
       install: true,
   install_dir: join_paths(get_option('datadir'), 'appdata')
@@ -25,7 +25,7 @@ if appstream_util.found()
   test('Validate appstream file', appstream_util, args: ['validate', appstream_file])
 endif
 
-install_data('org.vanillaos.ApxIDE.gschema.xml',
+install_data('org.vanillaos.ApxGUI.gschema.xml',
   install_dir: join_paths(get_option('datadir'), 'glib-2.0/schemas')
 )
 

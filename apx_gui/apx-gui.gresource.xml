@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<gresources>
+  <gresource prefix="/org/vanillaos/apx-gui">
+    <file preprocess="xml-stripblanks">gtk/window-main.ui</file>
+    <file preprocess="xml-stripblanks">gtk/help-overlay.ui</file>
+    <file preprocess="xml-stripblanks">gtk/editor.ui</file>
+    <file preprocess="xml-stripblanks">gtk/sidebar.ui</file>
+    <file preprocess="xml-stripblanks">gtk/tab-subsystem.ui</file>
+    <file preprocess="xml-stripblanks">gtk/tab-stack.ui</file>
+    <file preprocess="xml-stripblanks">gtk/tab-pkgmanager.ui</file>
+    <file preprocess="xml-stripblanks">gtk/entry-subsystem.ui</file>
+    <file preprocess="xml-stripblanks">gtk/entry-stack.ui</file>
+    <file preprocess="xml-stripblanks">gtk/entry-pkgmanager.ui</file>
+    <file preprocess="xml-stripblanks">gtk/create-subsystem.ui</file>
+    <file preprocess="xml-stripblanks">gtk/create-stack.ui</file>
+    <file preprocess="xml-stripblanks">gtk/create-pkgmanager.ui</file>  
+  </gresource>
+</gresources>

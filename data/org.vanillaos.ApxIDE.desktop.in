@@ -1,9 +1,0 @@
-[Desktop Entry]
-Name=Apx IDE
-Exec=apx-ide
-Icon=org.vanillaos.ApxIDE
-Terminal=false
-Type=Application
-Categories=GTK;
-StartupNotify=true
-NoDisplay=false
