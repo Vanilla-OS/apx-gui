@@ -7,11 +7,11 @@ msgid ""
 msgstr ""
 "Project-Id-Version: apx_ide\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-07-04 15:08+0530\n"
+"POT-Creation-Date: 2023-07-04 22:08+0530\n"
 "PO-Revision-Date: 2023-07-04 16:34+0000\n"
 "Last-Translator: Íñigo Aréjula Aísa <arejula27@gmail.com>\n"
-"Language-Team: Spanish <https://hosted.weblate.org/projects/vanilla-os/"
-"apx-gui/es/>\n"
+"Language-Team: Spanish <https://hosted.weblate.org/projects/vanilla-os/apx-"
+"gui/es/>\n"
 "Language: es\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -54,6 +54,10 @@ msgstr "Nombre"
 #: apx_ide/gtk/create-pkgmanager.ui:49 apx_ide/gtk/tab-pkgmanager.ui:27
 msgid "Need Sudo"
 msgstr "Necesita sudo"
+
+#: apx_ide/gtk/create-pkgmanager.ui:70
+msgid "Commands"
+msgstr ""
 
 #: apx_ide/gtk/create-pkgmanager.ui:73 apx_ide/gtk/tab-pkgmanager.ui:57
 msgid "Autoremove"
@@ -252,16 +256,6 @@ msgstr ""
 msgid "_About Apx IDE"
 msgstr ""
 
-#: apx_ide/windows/create_pkgmanager.py:91
-#, python-brace-format
-msgid "Package manager {pkgmanager.name} created successfully"
-msgstr "Gestor de paquetes {pkgmanager.name} creado con éxito"
-
-#: apx_ide/windows/create_subsystem.py:75
-#, python-brace-format
-msgid "Subsystem {subsystem.name} created successfully"
-msgstr "Subsistema {subsystem.name} creado con éxito"
-
 #: apx_ide/main.py:99
 msgid "translator_credits"
 msgstr ""
@@ -273,3 +267,11 @@ msgstr "Colaboradores"
 #: apx_ide/main.py:109
 msgid "Tools"
 msgstr "Herramientas"
+
+#, python-brace-format
+#~ msgid "Package manager {pkgmanager.name} created successfully"
+#~ msgstr "Gestor de paquetes {pkgmanager.name} creado con éxito"
+
+#, python-brace-format
+#~ msgid "Subsystem {subsystem.name} created successfully"
+#~ msgstr "Subsistema {subsystem.name} creado con éxito"

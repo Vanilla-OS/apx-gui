@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: apx_ide\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-07-04 15:08+0530\n"
+"POT-Creation-Date: 2023-07-04 22:08+0530\n"
 "PO-Revision-Date: 2023-07-04 16:34+0000\n"
 "Last-Translator: lakejason0 <sunliyuan200402@outlook.com>\n"
 "Language-Team: Chinese (Simplified) <https://hosted.weblate.org/projects/"
@@ -53,6 +53,10 @@ msgstr "名称"
 #: apx_ide/gtk/create-pkgmanager.ui:49 apx_ide/gtk/tab-pkgmanager.ui:27
 msgid "Need Sudo"
 msgstr "需要 sudo"
+
+#: apx_ide/gtk/create-pkgmanager.ui:70
+msgid "Commands"
+msgstr ""
 
 #: apx_ide/gtk/create-pkgmanager.ui:73 apx_ide/gtk/tab-pkgmanager.ui:57
 msgid "Autoremove"
@@ -251,16 +255,6 @@ msgstr "退出(_Q)"
 msgid "_About Apx IDE"
 msgstr "关于 Apx 集成开发环境(_A)"
 
-#: apx_ide/windows/create_pkgmanager.py:91
-#, python-brace-format
-msgid "Package manager {pkgmanager.name} created successfully"
-msgstr "已成功创建软件包管理器 {pkgmanager.name}"
-
-#: apx_ide/windows/create_subsystem.py:75
-#, python-brace-format
-msgid "Subsystem {subsystem.name} created successfully"
-msgstr "已成功创建子系统 {subsystem.name}"
-
 #: apx_ide/main.py:99
 msgid "translator_credits"
 msgstr "lakejason0 <lakesarchive@outlook.com>"
@@ -272,3 +266,11 @@ msgstr "贡献者"
 #: apx_ide/main.py:109
 msgid "Tools"
 msgstr "工具"
+
+#, python-brace-format
+#~ msgid "Package manager {pkgmanager.name} created successfully"
+#~ msgstr "已成功创建软件包管理器 {pkgmanager.name}"
+
+#, python-brace-format
+#~ msgid "Subsystem {subsystem.name} created successfully"
+#~ msgstr "已成功创建子系统 {subsystem.name}"

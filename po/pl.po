@@ -273,3 +273,7 @@ msgstr "Współtwórcy"
 #: apx_ide/main.py:109
 msgid "Tools"
 msgstr "Narzędzia"
+
+#: apx_ide/gtk/create-pkgmanager.ui:70
+msgid "Commands"
+msgstr ""

@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: apx_ide\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-07-04 15:08+0530\n"
+"POT-Creation-Date: 2023-07-04 22:08+0530\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: Automatically generated\n"
 "Language-Team: none\n"
@@ -49,6 +49,10 @@ msgstr ""
 
 #: apx_ide/gtk/create-pkgmanager.ui:49 apx_ide/gtk/tab-pkgmanager.ui:27
 msgid "Need Sudo"
+msgstr ""
+
+#: apx_ide/gtk/create-pkgmanager.ui:70
+msgid "Commands"
 msgstr ""
 
 #: apx_ide/gtk/create-pkgmanager.ui:73 apx_ide/gtk/tab-pkgmanager.ui:57
@@ -246,16 +250,6 @@ msgstr ""
 
 #: apx_ide/gtk/window-main.ui:86
 msgid "_About Apx IDE"
-msgstr ""
-
-#: apx_ide/windows/create_pkgmanager.py:91
-#, python-brace-format
-msgid "Package manager {pkgmanager.name} created successfully"
-msgstr ""
-
-#: apx_ide/windows/create_subsystem.py:75
-#, python-brace-format
-msgid "Subsystem {subsystem.name} created successfully"
 msgstr ""
 
 #: apx_ide/main.py:99
