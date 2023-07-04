@@ -17,7 +17,7 @@
 #
 # SPDX-License-Identifier: GPL-3.0-only
 
-from gi.repository import Gtk, GObject, Gio, Gdk, GLib, Adw, Vte, Pango
+from gi.repository import Gtk, GObject, Gio, Gdk, GLib, Adw
 
 from apx_gui.core.apx_entities import PkgManager, Stack
 from apx_gui.utils.gtk import GtkUtils

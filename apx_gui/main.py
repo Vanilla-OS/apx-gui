@@ -52,7 +52,7 @@ class ApxGUIApplication(Adw.Application):
 
         self.__register_arguments()
 
-    def __register_arguments(self):
+    def __register_arguments(self) -> None:
         """Register command line arguments."""
         self.add_main_option("embedded", ord("e"), GLib.OptionFlags.NONE,
                              GLib.OptionArg.NONE, "Embedded mode", None)
@@ -64,7 +64,7 @@ class ApxGUIApplication(Adw.Application):
         indicates that the application is embedded in another
         application.
         """
-        commands = command.get_options_dict()
+        commands: GLib.VariantDict = command.get_options_dict()
 
         if commands.contains("embedded"):
             self.__embedded = True
@@ -72,33 +72,37 @@ class ApxGUIApplication(Adw.Application):
         self.do_activate()
         return 0
 
-    def do_activate(self):
+    def do_activate(self) -> None:
         """Called when the application is activated.
 
         We raise the application's main window, creating it if
         necessary.
         """
-        win = self.props.active_window
+        win: ApxIDEWindow = self.props.active_window
         if not win:
-            win = ApxGUIWindow(application=self,
-                               embedded=self.__embedded)
+            win = ApxGUIWindow(
+                application=self,
+                embedded=self.__embedded
+            )
 
         self.__window = win
         win.present()
 
-    def on_about_action(self, *args):
+    def on_about_action(self, *args) -> None:
         """Callback for the app.about action."""
-        about = Adw.AboutWindow(transient_for=self.props.active_window,
-                                application_name='Apx GUI',
-                                application_icon='org.vanillaos.ApxGUI',
-                                developer_name='Mirko Brombin',
-                                website='https://github.com/Vanilla-OS/apx-gui',
-                                issue_url='https://github.com/Vanilla-OS/apx-gui/issues',
-                                version='1.0.2',
-                                developers=['Mirko Brombin https://github.com/mirkobrombin'],
-                                translator_credits= _("translator_credits"),
-                                copyright='© 2023 Mirko Brombin and Contributors',
-                                license_type=('gpl-3-0-only'))
+        about: Adw.AboutWindow = Adw.AboutWindow(
+            transient_for=self.props.active_window,
+            application_name='Apx GUI',
+            application_icon='org.vanillaos.ApxGUI',
+            developer_name='Mirko Brombin',
+            website='https://github.com/Vanilla-OS/apx-gui',
+            issue_url='https://github.com/Vanilla-OS/apx-gui/issues',
+            version='1.0.2',
+            developers=['Mirko Brombin https://github.com/mirkobrombin'],
+            translator_credits= _("translator_credits"),
+            copyright='© 2023 Mirko Brombin and Contributors',
+            license_type=('gpl-3-0-only')
+        )
         about.add_credit_section(
             _("Contributors"),
             [
@@ -113,16 +117,16 @@ class ApxGUIApplication(Adw.Application):
         )
         about.present()
 
-    def on_new_subsystem_action(self, *args):
+    def on_new_subsystem_action(self, *args) -> None:
         self.__window.new_subsystem()
 
-    def on_new_stack_action(self, *args):
+    def on_new_stack_action(self, *args) -> None:
         self.__window.new_stack()
     
-    def on_new_pkgmanager_action(self, *args):
+    def on_new_pkgmanager_action(self, *args) -> None:
         self.__window.new_pkgmanager()
 
-    def create_action(self, name: str, callback: callable, shortcuts: list[str] = None):
+    def create_action(self, name: str, callback: callable, shortcuts: list[str] = None) -> None:
         """Add an application action.
 
         Args:
@@ -131,17 +135,17 @@ class ApxGUIApplication(Adw.Application):
               activated
             shortcuts: an optional list of accelerators
         """
-        action = Gio.SimpleAction.new(name, None)
+        action: Gio.SimpleAction = Gio.SimpleAction.new(name, None)
         action.connect("activate", callback)
         self.add_action(action)
         if shortcuts:
             self.set_accels_for_action(f"app.{name}", shortcuts)
 
-    def close(self, *args):
+    def close(self, *args) -> None:
         """Close the application."""
         self.quit()
 
-def main(version: str):
+def main(version: str) -> int:
     """The application's entry point."""
-    app = ApxGUIApplication()
+    app: ApxGUIApplication = ApxGUIApplication()
     return app.run(sys.argv)

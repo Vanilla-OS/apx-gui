@@ -24,5 +24,4 @@ Depends: python3,
          libadwaita-1-0,
          gir1.2-gtk-4.0,
          gir1.2-adw-1,
-         gir1.2-vte-3.91
 Description: A frontend in GTK 4 and Libadwaita for Apx.
