@@ -75,7 +75,7 @@
                                 </child>
                                 <child>
                                     <object class="AdwStatusPage" id="status_creating">
-                                        <property name="title">Creating Subsystem…</property>
+                                        <property name="title" translatable="yes">Creating Subsystem…</property>
                                         <property name="description" translatable="yes">Please wait while the subsystem is being created.</property>
                                         <property name="valign">center</property>
                                     </object>

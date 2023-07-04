@@ -21,7 +21,7 @@
       <object class="AdwPreferencesPage">
         <child>
           <object class="AdwPreferencesGroup">
-            <property name="title">Details</property>
+            <property name="title" translatable="yes">Details</property>
             <child>
               <object class="AdwActionRow" id="row_sudo">
                 <property name="title" translatable="yes">Need Sudo</property>
@@ -116,7 +116,7 @@
         </child>
         <child>
           <object class="AdwPreferencesGroup" id="group_actions">
-            <property name="title">Destructive Actions</property>
+            <property name="title" translatable="yes">Destructive Actions</property>
             <child>
               <object class="AdwActionRow" id="row_delete">
                 <property name="title" translatable="yes">Delete Package Manager</property>

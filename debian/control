@@ -12,9 +12,9 @@ Build-Depends:
             desktop-file-utils,
             make,
             libjpeg-dev
-Homepage: https://github.com/vanilla-os/vanilla-apx-ide/
-Vcs-Browser: hhttps://github.com/vanilla-os/vanilla-apx-ide
-Vcs-Git: https://github.com/vanilla-os/vanilla-apx-ide.git
+Homepage: https://github.com/vanilla-os/apx-gui/
+Vcs-Browser: hhttps://github.com/vanilla-os/apx-gui
+Vcs-Git: https://github.com/vanilla-os/apx-gui.git
 Rules-Requires-Root: no
 
 Package: vanilla-apx-ide
@@ -25,4 +25,4 @@ Depends: python3,
          gir1.2-gtk-4.0,
          gir1.2-adw-1,
          gir1.2-vte-3.91
-Description: A frontend in GTK 4 and Libadwaita for Apx
+Description: A frontend in GTK 4 and Libadwaita for Apx.

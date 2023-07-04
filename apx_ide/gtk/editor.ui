@@ -9,7 +9,7 @@
             <property name="child">
                 <object class="AdwStatusPage">
                 <property name="icon-name">org.vanillaos.ApxIDE</property>
-                <property name="title">Start or Open a Subsystem</property>
+                <property name="title" translatable="yes">Start or Open a Subsystem</property>
                 <property name="description" translatable="yes">Start by opening a subsystem, stack or package manager on the left.</property>
                 </object>
             </property>

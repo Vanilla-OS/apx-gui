@@ -21,7 +21,7 @@
       <object class="AdwPreferencesPage">
         <child>
           <object class="AdwPreferencesGroup">
-            <property name="title">Details</property>
+            <property name="title" translatable="yes">Details</property>
             <child>
               <object class="AdwEntryRow" id="row_base">
                 <property name="title" translatable="yes">Base</property>
@@ -56,7 +56,7 @@
             </child>
             <child>
               <object class="AdwExpanderRow" id="row_packages">
-                <property name="title" translatable="yes">0 Packages</property>
+                <property name="title" translatable="yes">Packages</property>
                 <child type="prefix">
                   <object class="GtkImage">
                     <property name="icon-name">preferences-desktop-apps-symbolic</property>
@@ -68,7 +68,7 @@
         </child>
         <child>
           <object class="AdwPreferencesGroup" id="group_actions">
-            <property name="title">Destructive Actions</property>
+            <property name="title" translatable="yes">Destructive Actions</property>
             <child>
               <object class="AdwActionRow" id="row_delete">
                 <property name="title" translatable="yes">Delete Stack</property>

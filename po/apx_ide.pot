@@ -8,13 +8,13 @@ msgid ""
 msgstr ""
 "Project-Id-Version: apx_ide\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-07-04 12:06+0530\n"
+"POT-Creation-Date: 2023-07-04 12:33+0530\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "Language: \n"
 "MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=CHARSET\n"
+"Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
 #: data/org.vanillaos.ApxIDE.desktop.in:3
@@ -78,12 +78,20 @@ msgstr ""
 msgid "Stack"
 msgstr ""
 
+#: apx_ide/gtk/create-subsystem.ui:78
+msgid "Creating Subsystem…"
+msgstr ""
+
 #: apx_ide/gtk/create-subsystem.ui:79
 msgid "Please wait while the subsystem is being created."
 msgstr ""
 
 #: apx_ide/gtk/create-subsystem.ui:104
 msgid "An error occurred while creating the subsystem."
+msgstr ""
+
+#: apx_ide/gtk/editor.ui:12
+msgid "Start or Open a Subsystem"
 msgstr ""
 
 #: apx_ide/gtk/editor.ui:13
@@ -107,6 +115,10 @@ msgstr ""
 
 #: apx_ide/gtk/tab-pkgmanager.ui:13
 msgid "This package manager is built-in and cannot be edited or deleted."
+msgstr ""
+
+#: apx_ide/gtk/tab-pkgmanager.ui:24 apx_ide/gtk/tab-stack.ui:24
+msgid "Details"
 msgstr ""
 
 #: apx_ide/gtk/tab-pkgmanager.ui:27
@@ -157,6 +169,10 @@ msgstr ""
 msgid "Upgrade"
 msgstr ""
 
+#: apx_ide/gtk/tab-pkgmanager.ui:119 apx_ide/gtk/tab-stack.ui:71
+msgid "Destructive Actions"
+msgstr ""
+
 #: apx_ide/gtk/tab-pkgmanager.ui:122
 msgid "Delete Package Manager"
 msgstr ""
@@ -166,7 +182,7 @@ msgid "This stack is built-in and cannot be edited or deleted."
 msgstr ""
 
 #: apx_ide/gtk/tab-stack.ui:59
-msgid "0 Packages"
+msgid "Packages"
 msgstr ""
 
 #: apx_ide/gtk/tab-stack.ui:74
