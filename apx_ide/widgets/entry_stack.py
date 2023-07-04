@@ -20,7 +20,6 @@
 from gi.repository import Gtk, Gio, GObject, Adw
 
 from apx_ide.core.apx_entities import Stack
-import gettext as _
 
 
 @Gtk.Template(resource_path='/org/vanillaos/apx-ide/gtk/entry-stack.ui')

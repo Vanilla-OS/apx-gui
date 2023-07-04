@@ -44,10 +44,10 @@ class ApxIDEApplication(Adw.Application):
         
         self.__window: ApxIDEWindow = None
 
-        self.create_action('quit', self.quit, ['<primary>q'])
-        self.create_action('new_subsystem', self.on_new_subsystem_action)
-        self.create_action('new_stack', self.on_new_stack_action)
-        self.create_action('new_pkgmanager', self.on_new_pkgmanager_action) 
+        self.create_action('quit', self.close, ['<primary>q'])
+        self.create_action('new_subsystem', self.on_new_subsystem_action, ['<primary>n'])
+        self.create_action('new_stack', self.on_new_stack_action, ['<primary>s'])
+        self.create_action('new_pkgmanager', self.on_new_pkgmanager_action, ['<primary>p']) 
         self.create_action('about', self.on_about_action, ['<primary>a'])
 
         self.__register_arguments()
@@ -130,6 +130,10 @@ class ApxIDEApplication(Adw.Application):
         self.add_action(action)
         if shortcuts:
             self.set_accels_for_action(f"app.{name}", shortcuts)
+
+    def close(self, *args):
+        """Close the application."""
+        self.quit()
 
 def main(version: str):
     """The application's entry point."""

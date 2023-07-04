@@ -114,11 +114,10 @@ class CreateStackWindow(Adw.Window):
         self.__check_validity()
 
     def __on_base_changed(self, entry: Adw.EntryRow) -> None:
-        self.__valid_base = GtkUtils.validate_entry(entry)
         self.__check_validity()
 
     def __check_validity(self) -> None:
-        self.btn_create.set_sensitive(self.__valid_name and self.__valid_base)
+        self.btn_create.set_sensitive(self.__valid_name)
 
     def __on_package_changed(self, entry: Adw.EntryRow) -> None:
         self.btn_add_package.set_sensitive(GtkUtils.validate_entry(entry))

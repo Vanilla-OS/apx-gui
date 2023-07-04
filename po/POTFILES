@@ -18,15 +18,6 @@ apx_ide/gtk/window-main.ui
 
 apx_ide/utils/gtk.py
 
-apx_ide/widgets/editor.py
-apx_ide/widgets/entry_pkgmanager.py
-apx_ide/widgets/entry_stack.py
-apx_ide/widgets/entry_subsystem.py
-apx_ide/widgets/sidebar.py
-apx_ide/widgets/tab_pkgmanager.py
-apx_ide/widgets/tab_stack.py
-apx_ide/widgets/tab_subsystem.py
-
 apx_ide/windows/create_pkgmanager.py
 apx_ide/windows/create_stack.py
 apx_ide/windows/create_subsystem.py

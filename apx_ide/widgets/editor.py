@@ -19,7 +19,6 @@
 
 from gi.repository import Gtk, Gio, GObject, Adw
 from uuid import UUID
-import gettext as _
 
 from apx_ide.widgets.tab_subsystem import TabSubsystem
 from apx_ide.widgets.tab_stack import TabStack

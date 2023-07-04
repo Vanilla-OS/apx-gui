@@ -1,13 +1,14 @@
-# Apx IDE Translation File
-# Copyright (C) 2023 Mirko Brombin and Apx IDE Contributors
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the apx_ide package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 #
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: apx_ide\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-07-04 12:57+0530\n"
+"POT-Creation-Date: 2023-07-04 14:53+0530\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -247,81 +248,6 @@ msgstr ""
 
 #: apx_ide/gtk/window-main.ui:86
 msgid "_About Apx IDE"
-msgstr ""
-
-#: apx_ide/widgets/tab_pkgmanager.py:98
-#, python-brace-format
-msgid "{self.__pkgmanager.name} package manager deleted"
-msgstr ""
-
-#: apx_ide/widgets/tab_pkgmanager.py:103
-#, python-brace-format
-msgid "Deleting {self.__pkgmanager.name} package manager..."
-msgstr ""
-
-#: apx_ide/widgets/tab_pkgmanager.py:109
-#, python-brace-format
-msgid ""
-"Are you sure you want to delete the {self.__pkgmanager.name} package manager?"
-msgstr ""
-
-#: apx_ide/widgets/tab_pkgmanager.py:110
-msgid ""
-"This action will delete the package manager and all its data. This action "
-"cannot be undone."
-msgstr ""
-
-#: apx_ide/widgets/tab_stack.py:95
-#, python-brace-format
-msgid "Are you sure you want to delete the {self.__stack.name} stack?"
-msgstr ""
-
-#: apx_ide/widgets/tab_stack.py:96
-msgid ""
-"This action will delete the stack and all its data. This action cannot be "
-"undone."
-msgstr ""
-
-#: apx_ide/widgets/tab_stack.py:112
-#, python-brace-format
-msgid "{self.__stack.name} stack updated"
-msgstr ""
-
-#: apx_ide/widgets/tab_stack.py:114
-#, python-brace-format
-msgid "Error updating {self.__stack.name} stack"
-msgstr ""
-
-#: apx_ide/widgets/tab_subsystem.py:90
-#, python-brace-format
-msgid "Are you sure you want to reset the {self.__subsystem.name} subsystem?"
-msgstr ""
-
-#: apx_ide/widgets/tab_subsystem.py:91
-msgid ""
-"This action will reset the subsystem to its initial state. All the changes "
-"will be lost."
-msgstr ""
-
-#: apx_ide/widgets/tab_subsystem.py:103
-#, python-brace-format
-msgid "{self.__subsystem.name} subsystem deleted"
-msgstr ""
-
-#: apx_ide/widgets/tab_subsystem.py:108
-#, python-brace-format
-msgid "Deleting {self.__subsystem.name} subsystem..."
-msgstr ""
-
-#: apx_ide/widgets/tab_subsystem.py:114
-#, python-brace-format
-msgid "Are you sure you want to delete the {self.__subsystem.name} subsystem?"
-msgstr ""
-
-#: apx_ide/widgets/tab_subsystem.py:115
-msgid ""
-"This action will delete the subsystem and all its data. This action cannot "
-"be undone."
 msgstr ""
 
 #: apx_ide/windows/create_pkgmanager.py:91

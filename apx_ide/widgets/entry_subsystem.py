@@ -19,7 +19,6 @@
 
 from gi.repository import Gtk, Gio, GObject, Adw
 
-import gettext
 from apx_ide.core.apx_entities import Subsystem
 
 
