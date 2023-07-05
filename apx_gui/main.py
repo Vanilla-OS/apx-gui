@@ -78,7 +78,7 @@ class ApxGUIApplication(Adw.Application):
         We raise the application's main window, creating it if
         necessary.
         """
-        win: ApxIDEWindow = self.props.active_window
+        win: ApxGUIWindow = self.props.active_window
         if not win:
             win = ApxGUIWindow(
                 application=self,
