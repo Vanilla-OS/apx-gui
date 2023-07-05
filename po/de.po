@@ -7,17 +7,20 @@ msgstr ""
 "Project-Id-Version: apx_gui\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2023-07-05 20:14+0530\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: Automatically generated\n"
-"Language-Team: none\n"
+"PO-Revision-Date: 2023-07-05 18:34+0000\n"
+"Last-Translator: Ettore Atalan <atalanttore@googlemail.com>\n"
+"Language-Team: German <https://hosted.weblate.org/projects/vanilla-os/"
+"apx-gui/de/>\n"
 "Language: de\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 5.0-dev\n"
 
 #: data/org.vanillaos.ApxGUI.desktop.in:3
 msgid "Apx"
-msgstr ""
+msgstr "Apx"
 
 #: data/org.vanillaos.ApxGUI.appdata.xml.in:7
 msgid "A frontend in GTK 4 and Libadwaita for Apx."
@@ -25,158 +28,160 @@ msgstr ""
 
 #: apx_gui/gtk/create-pkgmanager.ui:6 apx_gui/gtk/window-main.ui:70
 msgid "New Package Manager"
-msgstr ""
+msgstr "Neuer Paketmanager"
 
 #: apx_gui/gtk/create-pkgmanager.ui:23 apx_gui/gtk/create-stack.ui:23
 #: apx_gui/gtk/create-subsystem.ui:23
 msgid "Cancel"
-msgstr ""
+msgstr "Abbrechen"
 
 #: apx_gui/gtk/create-pkgmanager.ui:28 apx_gui/gtk/create-stack.ui:28
 #: apx_gui/gtk/create-subsystem.ui:28
 msgid "Create"
-msgstr ""
+msgstr "Erstellen"
 
 #: apx_gui/gtk/create-pkgmanager.ui:41 apx_gui/gtk/tab-pkgmanager.ui:24
 #: apx_gui/gtk/tab-stack.ui:24
 msgid "Details"
-msgstr ""
+msgstr "Details"
 
 #: apx_gui/gtk/create-pkgmanager.ui:44 apx_gui/gtk/create-stack.ui:44
 #: apx_gui/gtk/create-subsystem.ui:44
 msgid "Name"
-msgstr ""
+msgstr "Name"
 
 #: apx_gui/gtk/create-pkgmanager.ui:49 apx_gui/gtk/tab-pkgmanager.ui:27
 msgid "Need Sudo"
-msgstr ""
+msgstr "Sudo benötigt"
 
 #: apx_gui/gtk/create-pkgmanager.ui:70
 msgid "Commands"
-msgstr ""
+msgstr "Befehle"
 
 #: apx_gui/gtk/create-pkgmanager.ui:73 apx_gui/gtk/tab-pkgmanager.ui:57
 msgid "Autoremove"
-msgstr ""
+msgstr "Automatisch entfernen"
 
 #: apx_gui/gtk/create-pkgmanager.ui:78 apx_gui/gtk/tab-pkgmanager.ui:63
 msgid "Clean"
-msgstr ""
+msgstr "Reinigen"
 
 #: apx_gui/gtk/create-pkgmanager.ui:83 apx_gui/gtk/tab-pkgmanager.ui:69
 msgid "Install"
-msgstr ""
+msgstr "Installieren"
 
 #: apx_gui/gtk/create-pkgmanager.ui:88 apx_gui/gtk/tab-pkgmanager.ui:75
 msgid "List"
-msgstr ""
+msgstr "Auflisten"
 
 #: apx_gui/gtk/create-pkgmanager.ui:93 apx_gui/gtk/tab-pkgmanager.ui:81
 msgid "Purge"
-msgstr ""
+msgstr "Bereinigen"
 
 #: apx_gui/gtk/create-pkgmanager.ui:98 apx_gui/gtk/tab-pkgmanager.ui:87
 msgid "Remove"
-msgstr ""
+msgstr "Entfernen"
 
 #: apx_gui/gtk/create-pkgmanager.ui:103 apx_gui/gtk/tab-pkgmanager.ui:93
 msgid "Search"
-msgstr ""
+msgstr "Suchen"
 
 #: apx_gui/gtk/create-pkgmanager.ui:108 apx_gui/gtk/tab-pkgmanager.ui:99
 msgid "Show"
-msgstr ""
+msgstr "Anzeigen"
 
 #: apx_gui/gtk/create-pkgmanager.ui:113 apx_gui/gtk/tab-pkgmanager.ui:105
 msgid "Update"
-msgstr ""
+msgstr "Aktualisieren"
 
 #: apx_gui/gtk/create-pkgmanager.ui:118 apx_gui/gtk/tab-pkgmanager.ui:111
 msgid "Upgrade"
-msgstr ""
+msgstr "Hochstufen"
 
 #: apx_gui/gtk/create-pkgmanager.ui:144
 msgid "Creating Package Manager…"
-msgstr ""
+msgstr "Paketmanager wird erstellt…"
 
 #: apx_gui/gtk/create-pkgmanager.ui:145
 msgid "Please wait while the package manager is being created."
-msgstr ""
+msgstr "Bitte warten, während der Paketmanager erstellt wird."
 
 #: apx_gui/gtk/create-pkgmanager.ui:169
 msgid "An Error Occurred"
-msgstr ""
+msgstr "Ein Fehler ist aufgetreten"
 
 #: apx_gui/gtk/create-pkgmanager.ui:170
 msgid "An error occurred while creating the package manager."
-msgstr ""
+msgstr "Beim Erstellen des Paketmanagers ist ein Fehler aufgetreten."
 
 #: apx_gui/gtk/create-pkgmanager.ui:174 apx_gui/gtk/create-stack.ui:148
 #: apx_gui/gtk/create-subsystem.ui:108
 msgid "Close"
-msgstr ""
+msgstr "Schließen"
 
 #: apx_gui/gtk/create-stack.ui:6 apx_gui/gtk/window-main.ui:66
 msgid "New Stack"
-msgstr ""
+msgstr "Neuer Stapel"
 
 #: apx_gui/gtk/create-stack.ui:49 apx_gui/gtk/tab-stack.ui:27
 msgid "Base"
-msgstr ""
+msgstr "Basis"
 
 #: apx_gui/gtk/create-stack.ui:54 apx_gui/gtk/tab-stack.ui:38
 #: apx_gui/gtk/tab-subsystem.ui:29
 msgid "Package Manager"
-msgstr ""
+msgstr "Paketmanager"
 
 #: apx_gui/gtk/create-stack.ui:80
 msgid "Add Package"
-msgstr ""
+msgstr "Paket hinzufügen"
 
 #: apx_gui/gtk/create-stack.ui:92
 msgid "New Package"
-msgstr ""
+msgstr "Neues Paket"
 
 #: apx_gui/gtk/create-stack.ui:119
 msgid "Please wait while the stack is being created."
-msgstr ""
+msgstr "Bitte warten, während der Stapel erstellt wird."
 
 #: apx_gui/gtk/create-stack.ui:144
 msgid "An error occurred while creating the stack."
-msgstr ""
+msgstr "Beim Erstellen des Stapels ist ein Fehler aufgetreten."
 
 #: apx_gui/gtk/create-subsystem.ui:6
 msgid "New Subsystem"
-msgstr ""
+msgstr "Neues Subsystem"
 
 #: apx_gui/gtk/create-subsystem.ui:49 apx_gui/gtk/tab-subsystem.ui:19
 msgid "Stack"
-msgstr ""
+msgstr "Stapel"
 
 #: apx_gui/gtk/create-subsystem.ui:78
 msgid "Creating Subsystem…"
-msgstr ""
+msgstr "Subsystem wird erstellt…"
 
 #: apx_gui/gtk/create-subsystem.ui:79
 msgid "Please wait while the subsystem is being created."
-msgstr ""
+msgstr "Bitte warten, während das Subsystem erstellt wird."
 
 #: apx_gui/gtk/create-subsystem.ui:104
 msgid "An error occurred while creating the subsystem."
-msgstr ""
+msgstr "Beim Erstellen des Subsystems ist ein Fehler aufgetreten."
 
 #: apx_gui/gtk/editor.ui:12
 msgid "Start or Open a Subsystem"
-msgstr ""
+msgstr "Subsystem starten oder öffnen"
 
 #: apx_gui/gtk/editor.ui:13
 msgid "Start by opening a subsystem, stack or package manager on the left."
 msgstr ""
+"Mit dem Öffnen eines Subsystems, Stapels oder Paketmanagers auf der linken "
+"Seite beginnen."
 
 #: apx_gui/gtk/help-overlay.ui:11
 msgctxt "shortcut window"
 msgid "General"
-msgstr ""
+msgstr "Allgemein"
 
 #: apx_gui/gtk/help-overlay.ui:14
 msgctxt "shortcut window"
@@ -186,43 +191,46 @@ msgstr ""
 #: apx_gui/gtk/help-overlay.ui:20
 msgctxt "shortcut window"
 msgid "Quit"
-msgstr ""
+msgstr "Beenden"
 
 #: apx_gui/gtk/tab-pkgmanager.ui:13
 msgid "This package manager is built-in and cannot be edited or deleted."
 msgstr ""
+"Dieser Paketmanager ist eingebaut und kann nicht bearbeitet oder gelöscht "
+"werden."
 
 #: apx_gui/gtk/tab-pkgmanager.ui:42 apx_gui/gtk/tab-stack.ui:49
 msgid "Built-In"
-msgstr ""
+msgstr "Eingebaut"
 
 #: apx_gui/gtk/tab-pkgmanager.ui:119 apx_gui/gtk/tab-stack.ui:71
 msgid "Destructive Actions"
-msgstr ""
+msgstr "Destruktive Aktionen"
 
 #: apx_gui/gtk/tab-pkgmanager.ui:122
 msgid "Delete Package Manager"
-msgstr ""
+msgstr "Paketmanager löschen"
 
 #: apx_gui/gtk/tab-stack.ui:13
 msgid "This stack is built-in and cannot be edited or deleted."
 msgstr ""
+"Dieser Stapel ist eingebaut und kann nicht bearbeitet oder gelöscht werden."
 
 #: apx_gui/gtk/tab-stack.ui:59
 msgid "Packages"
-msgstr ""
+msgstr "Pakete"
 
 #: apx_gui/gtk/tab-stack.ui:74
 msgid "Delete Stack"
-msgstr ""
+msgstr "Stapel löschen"
 
 #: apx_gui/gtk/tab-subsystem.ui:9
 msgid "Status"
-msgstr ""
+msgstr "Status"
 
 #: apx_gui/gtk/tab-subsystem.ui:53
 msgid "Open Console"
-msgstr ""
+msgstr "Konsole öffnen"
 
 #: apx_gui/gtk/tab-subsystem.ui:54
 msgid "Enter a console in this subsystem's environment."
@@ -230,27 +238,27 @@ msgstr ""
 
 #: apx_gui/gtk/tab-subsystem.ui:74
 msgid "Reset Subsystem"
-msgstr ""
+msgstr "Subsystem zurücksetzen"
 
 #: apx_gui/gtk/tab-subsystem.ui:89
 msgid "Delete Subsystem"
-msgstr ""
+msgstr "Subsystem löschen"
 
 #: apx_gui/gtk/window-main.ui:62
 msgid "New Sub System"
-msgstr ""
+msgstr "Neues Subsystem"
 
 #: apx_gui/gtk/window-main.ui:78
 msgid "_Keyboard Shortcuts"
-msgstr ""
+msgstr "_Tastenkombinationen"
 
 #: apx_gui/gtk/window-main.ui:82
 msgid "_Quit"
-msgstr ""
+msgstr "_Beenden"
 
 #: apx_gui/gtk/window-main.ui:86
 msgid "_About Apx GUI"
-msgstr ""
+msgstr "_Über Apx GUI"
 
 #: apx_gui/main.py:102
 msgid "translator_credits"
@@ -258,8 +266,8 @@ msgstr ""
 
 #: apx_gui/main.py:107
 msgid "Contributors"
-msgstr ""
+msgstr "Mitwirkende"
 
 #: apx_gui/main.py:113
 msgid "Tools"
-msgstr ""
+msgstr "Werkzeuge"
