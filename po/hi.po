@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: apx_gui\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2023-07-05 20:14+0530\n"
-"PO-Revision-Date: 2023-07-04 17:59+0000\n"
+"PO-Revision-Date: 2023-07-05 18:32+0000\n"
 "Last-Translator: \"K.B.Dharun Krishna\" <kbdharunkrishna@gmail.com>\n"
 "Language-Team: Hindi <https://hosted.weblate.org/projects/vanilla-os/apx-gui/"
 "hi/>\n"
@@ -20,10 +20,8 @@ msgstr ""
 "X-Generator: Weblate 5.0-dev\n"
 
 #: data/org.vanillaos.ApxGUI.desktop.in:3
-#, fuzzy
-#| msgid "Apx GUI"
 msgid "Apx"
-msgstr "Apx GUI"
+msgstr "Apx"
 
 #: data/org.vanillaos.ApxGUI.appdata.xml.in:7
 msgid "A frontend in GTK 4 and Libadwaita for Apx."
