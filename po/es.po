@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: apx_gui\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-07-04 23:28+0530\n"
+"POT-Creation-Date: 2023-07-05 20:14+0530\n"
 "PO-Revision-Date: 2023-07-04 16:34+0000\n"
 "Last-Translator: Íñigo Aréjula Aísa <arejula27@gmail.com>\n"
 "Language-Team: Spanish <https://hosted.weblate.org/projects/vanilla-os/apx-"
@@ -21,7 +21,7 @@ msgstr ""
 
 #: data/org.vanillaos.ApxGUI.desktop.in:3
 #, fuzzy
-msgid "Apx GUI"
+msgid "Apx"
 msgstr "Apx GUI"
 
 #: data/org.vanillaos.ApxGUI.appdata.xml.in:7
@@ -257,15 +257,15 @@ msgstr ""
 msgid "_About Apx GUI"
 msgstr ""
 
-#: apx_gui/main.py:99
+#: apx_gui/main.py:102
 msgid "translator_credits"
 msgstr ""
 
-#: apx_gui/main.py:103
+#: apx_gui/main.py:107
 msgid "Contributors"
 msgstr "Colaboradores"
 
-#: apx_gui/main.py:109
+#: apx_gui/main.py:113
 msgid "Tools"
 msgstr "Herramientas"
 

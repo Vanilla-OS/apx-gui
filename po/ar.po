@@ -6,11 +6,11 @@ msgid ""
 msgstr ""
 "Project-Id-Version: apx_gui\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-07-04 23:28+0530\n"
+"POT-Creation-Date: 2023-07-05 20:14+0530\n"
 "PO-Revision-Date: 2023-07-05 03:37+0000\n"
 "Last-Translator: Moumn Almunawy <moumnalmunawy2006@gmail.com>\n"
-"Language-Team: Arabic <https://hosted.weblate.org/projects/vanilla-os/"
-"apx-gui/ar/>\n"
+"Language-Team: Arabic <https://hosted.weblate.org/projects/vanilla-os/apx-"
+"gui/ar/>\n"
 "Language: ar\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -20,7 +20,9 @@ msgstr ""
 "X-Generator: Weblate 5.0-dev\n"
 
 #: data/org.vanillaos.ApxGUI.desktop.in:3
-msgid "Apx GUI"
+#, fuzzy
+#| msgid "Apx GUI"
+msgid "Apx"
 msgstr "Apx GUI"
 
 #: data/org.vanillaos.ApxGUI.appdata.xml.in:7
@@ -256,15 +258,15 @@ msgstr "خروج (_Q)"
 msgid "_About Apx GUI"
 msgstr "حول Apx GUI (_A)"
 
-#: apx_gui/main.py:99
+#: apx_gui/main.py:102
 msgid "translator_credits"
 msgstr "مؤمن المناوي moumnalmunawy2006@gmail.com"
 
-#: apx_gui/main.py:103
+#: apx_gui/main.py:107
 msgid "Contributors"
 msgstr "المساهمون"
 
-#: apx_gui/main.py:109
+#: apx_gui/main.py:113
 msgid "Tools"
 msgstr "الأدوات"
 

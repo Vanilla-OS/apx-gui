@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: apx_gui\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-07-04 23:28+0530\n"
+"POT-Creation-Date: 2023-07-05 20:14+0530\n"
 "PO-Revision-Date: 2023-07-05 03:37+0000\n"
 "Last-Translator: lakejason0 <sunliyuan200402@outlook.com>\n"
 "Language-Team: Chinese (Simplified) <https://hosted.weblate.org/projects/"
@@ -19,7 +19,9 @@ msgstr ""
 "X-Generator: Weblate 5.0-dev\n"
 
 #: data/org.vanillaos.ApxGUI.desktop.in:3
-msgid "Apx GUI"
+#, fuzzy
+#| msgid "Apx GUI"
+msgid "Apx"
 msgstr "Apx GUI"
 
 #: data/org.vanillaos.ApxGUI.appdata.xml.in:7
@@ -255,15 +257,15 @@ msgstr "退出(_Q)"
 msgid "_About Apx GUI"
 msgstr "关于 Apx GUI (_A)"
 
-#: apx_gui/main.py:99
+#: apx_gui/main.py:102
 msgid "translator_credits"
 msgstr "lakejason0 <lakesarchive@outlook.com>"
 
-#: apx_gui/main.py:103
+#: apx_gui/main.py:107
 msgid "Contributors"
 msgstr "贡献者"
 
-#: apx_gui/main.py:109
+#: apx_gui/main.py:113
 msgid "Tools"
 msgstr "工具"
 
