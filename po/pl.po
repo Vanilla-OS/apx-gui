@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: apx_gui\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-07-04 22:49+0530\n"
+"POT-Creation-Date: 2023-07-04 23:28+0530\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: Automatically generated\n"
 "Language-Team: none\n"
@@ -21,8 +21,8 @@ msgid "Apx GUI"
 msgstr "Apx GUI"
 
 #: data/org.vanillaos.ApxGUI.appdata.xml.in:7
-msgid "No description"
-msgstr "Brak opisu"
+msgid "A frontend in GTK 4 and Libadwaita for Apx."
+msgstr ""
 
 #: apx_gui/gtk/create-pkgmanager.ui:6 apx_gui/gtk/window-main.ui:70
 msgid "New Package Manager"
@@ -269,3 +269,6 @@ msgstr "Współtwórcy"
 #: apx_gui/main.py:109
 msgid "Tools"
 msgstr "Narzędzia"
+
+#~ msgid "No description"
+#~ msgstr "Brak opisu"
