@@ -2,15 +2,16 @@
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the apx_gui package.
 # Moumn Almunawy <moumnalmunawy2006@gmail.com>, 2023.
+# "K.B.Dharun Krishna" <kbdharunkrishna@gmail.com>, 2023.
 msgid ""
 msgstr ""
 "Project-Id-Version: apx_gui\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2023-07-05 20:14+0530\n"
-"PO-Revision-Date: 2023-07-05 03:37+0000\n"
-"Last-Translator: Moumn Almunawy <moumnalmunawy2006@gmail.com>\n"
-"Language-Team: Arabic <https://hosted.weblate.org/projects/vanilla-os/apx-"
-"gui/ar/>\n"
+"PO-Revision-Date: 2023-07-05 18:32+0000\n"
+"Last-Translator: \"K.B.Dharun Krishna\" <kbdharunkrishna@gmail.com>\n"
+"Language-Team: Arabic <https://hosted.weblate.org/projects/vanilla-os/"
+"apx-gui/ar/>\n"
 "Language: ar\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -20,10 +21,8 @@ msgstr ""
 "X-Generator: Weblate 5.0-dev\n"
 
 #: data/org.vanillaos.ApxGUI.desktop.in:3
-#, fuzzy
-#| msgid "Apx GUI"
 msgid "Apx"
-msgstr "Apx GUI"
+msgstr "Apx"
 
 #: data/org.vanillaos.ApxGUI.appdata.xml.in:7
 msgid "A frontend in GTK 4 and Libadwaita for Apx."
