@@ -1,5 +1,5 @@
 [Desktop Entry]
-Name=Apx GUI
+Name=Apx
 Exec=apx-gui
 Icon=org.vanillaos.ApxGUI
 Terminal=false

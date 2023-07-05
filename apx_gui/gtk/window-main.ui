@@ -4,7 +4,7 @@
   <template class="ApxGUIWindow" parent="AdwApplicationWindow">
     <property name="default-width">1100</property>
     <property name="default-height">800</property>
-    <property name="title">Apx GUI</property>
+    <property name="title">Apx</property>
     <child>
       <object class="GtkBox">
         <property name="orientation">vertical</property>
