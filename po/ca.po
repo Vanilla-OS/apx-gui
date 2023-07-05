@@ -7,10 +7,10 @@ msgstr ""
 "Project-Id-Version: apx_gui\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2023-07-04 23:28+0530\n"
-"PO-Revision-Date: 2023-07-04 16:34+0000\n"
+"PO-Revision-Date: 2023-07-05 03:37+0000\n"
 "Last-Translator: jolupa <jolupameister@gmail.com>\n"
-"Language-Team: Catalan <https://hosted.weblate.org/projects/vanilla-os/apx-"
-"gui/ca/>\n"
+"Language-Team: Catalan <https://hosted.weblate.org/projects/vanilla-os/"
+"apx-gui/ca/>\n"
 "Language: ca\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -19,13 +19,12 @@ msgstr ""
 "X-Generator: Weblate 5.0-dev\n"
 
 #: data/org.vanillaos.ApxGUI.desktop.in:3
-#, fuzzy
 msgid "Apx GUI"
-msgstr "Apx GUI"
+msgstr "GUI d'APX"
 
 #: data/org.vanillaos.ApxGUI.appdata.xml.in:7
 msgid "A frontend in GTK 4 and Libadwaita for Apx."
-msgstr ""
+msgstr "Una interfície a GTK 4 i Libadwaita per a Apx."
 
 #: apx_gui/gtk/create-pkgmanager.ui:6 apx_gui/gtk/window-main.ui:70
 msgid "New Package Manager"
@@ -57,7 +56,7 @@ msgstr "Fes servir Sudo"
 
 #: apx_gui/gtk/create-pkgmanager.ui:70
 msgid "Commands"
-msgstr ""
+msgstr "Ordres"
 
 #: apx_gui/gtk/create-pkgmanager.ui:73 apx_gui/gtk/tab-pkgmanager.ui:57
 msgid "Autoremove"
@@ -109,16 +108,16 @@ msgstr "Si us plau espera mentres es crea el gestor de paquets."
 
 #: apx_gui/gtk/create-pkgmanager.ui:169
 msgid "An Error Occurred"
-msgstr ""
+msgstr "Hi ha hagut un error"
 
 #: apx_gui/gtk/create-pkgmanager.ui:170
 msgid "An error occurred while creating the package manager."
-msgstr ""
+msgstr "S'ha produït un error en crear el gestor de paquets."
 
 #: apx_gui/gtk/create-pkgmanager.ui:174 apx_gui/gtk/create-stack.ui:148
 #: apx_gui/gtk/create-subsystem.ui:108
 msgid "Close"
-msgstr ""
+msgstr "Tancar"
 
 #: apx_gui/gtk/create-stack.ui:6 apx_gui/gtk/window-main.ui:66
 msgid "New Stack"
