@@ -2,13 +2,14 @@
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the apx_gui package.
 # lakejason0 <sunliyuan200402@outlook.com>, 2023.
+# "K.B.Dharun Krishna" <kbdharunkrishna@gmail.com>, 2023.
 msgid ""
 msgstr ""
 "Project-Id-Version: apx_gui\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-07-04 22:49+0530\n"
-"PO-Revision-Date: 2023-07-04 16:34+0000\n"
-"Last-Translator: lakejason0 <sunliyuan200402@outlook.com>\n"
+"POT-Creation-Date: 2023-07-05 20:14+0530\n"
+"PO-Revision-Date: 2023-07-05 18:32+0000\n"
+"Last-Translator: \"K.B.Dharun Krishna\" <kbdharunkrishna@gmail.com>\n"
 "Language-Team: Chinese (Simplified) <https://hosted.weblate.org/projects/"
 "vanilla-os/apx-gui/zh_Hans/>\n"
 "Language: zh_Hans\n"
@@ -19,13 +20,12 @@ msgstr ""
 "X-Generator: Weblate 5.0-dev\n"
 
 #: data/org.vanillaos.ApxGUI.desktop.in:3
-#, fuzzy
-msgid "Apx GUI"
-msgstr "Apx 集成开发环境"
+msgid "Apx"
+msgstr "Apx"
 
 #: data/org.vanillaos.ApxGUI.appdata.xml.in:7
-msgid "No description"
-msgstr "没有说明"
+msgid "A frontend in GTK 4 and Libadwaita for Apx."
+msgstr "Apx 的 GTK 4 及 libadwaita 前端。"
 
 #: apx_gui/gtk/create-pkgmanager.ui:6 apx_gui/gtk/window-main.ui:70
 msgid "New Package Manager"
@@ -57,7 +57,7 @@ msgstr "需要 sudo"
 
 #: apx_gui/gtk/create-pkgmanager.ui:70
 msgid "Commands"
-msgstr ""
+msgstr "命令"
 
 #: apx_gui/gtk/create-pkgmanager.ui:73 apx_gui/gtk/tab-pkgmanager.ui:57
 msgid "Autoremove"
@@ -253,21 +253,23 @@ msgid "_Quit"
 msgstr "退出(_Q)"
 
 #: apx_gui/gtk/window-main.ui:86
-#, fuzzy
 msgid "_About Apx GUI"
-msgstr "关于 Apx 集成开发环境(_A)"
+msgstr "关于 Apx GUI (_A)"
 
-#: apx_gui/main.py:99
+#: apx_gui/main.py:102
 msgid "translator_credits"
 msgstr "lakejason0 <lakesarchive@outlook.com>"
 
-#: apx_gui/main.py:103
+#: apx_gui/main.py:107
 msgid "Contributors"
 msgstr "贡献者"
 
-#: apx_gui/main.py:109
+#: apx_gui/main.py:113
 msgid "Tools"
 msgstr "工具"
+
+#~ msgid "No description"
+#~ msgstr "没有说明"
 
 #, python-brace-format
 #~ msgid "Package manager {pkgmanager.name} created successfully"

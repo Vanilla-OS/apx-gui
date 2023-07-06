@@ -1,23 +1,22 @@
 # SOME DESCRIPTIVE TITLE.
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the apx_gui package.
-# Moumn Almunawy <moumnalmunawy2006@gmail.com>, 2023.
-# "K.B.Dharun Krishna" <kbdharunkrishna@gmail.com>, 2023.
+# Fernando Lopes <118869201+plasmus777@users.noreply.github.com>, 2023.
 msgid ""
 msgstr ""
 "Project-Id-Version: apx_gui\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2023-07-05 20:14+0530\n"
-"PO-Revision-Date: 2023-07-05 18:32+0000\n"
-"Last-Translator: \"K.B.Dharun Krishna\" <kbdharunkrishna@gmail.com>\n"
-"Language-Team: Arabic <https://hosted.weblate.org/projects/vanilla-os/"
-"apx-gui/ar/>\n"
-"Language: ar\n"
+"PO-Revision-Date: 2023-07-05 18:34+0000\n"
+"Last-Translator: Fernando Lopes <118869201+plasmus777@users.noreply.github."
+"com>\n"
+"Language-Team: Portuguese (Brazil) <https://hosted.weblate.org/projects/"
+"vanilla-os/apx-gui/pt_BR/>\n"
+"Language: pt_BR\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=6; plural=n==0 ? 0 : n==1 ? 1 : n==2 ? 2 : n%100>=3 "
-"&& n%100<=10 ? 3 : n%100>=11 ? 4 : 5;\n"
+"Plural-Forms: nplurals=2; plural=n > 1;\n"
 "X-Generator: Weblate 5.0-dev\n"
 
 #: data/org.vanillaos.ApxGUI.desktop.in:3
@@ -26,256 +25,247 @@ msgstr "Apx"
 
 #: data/org.vanillaos.ApxGUI.appdata.xml.in:7
 msgid "A frontend in GTK 4 and Libadwaita for Apx."
-msgstr "واجهة رسومية لـ Apx مبنية باستخدام GTK4 و Libadwaita."
+msgstr "Um frontend em GTK 4 e Libadwaita para o Apx."
 
 #: apx_gui/gtk/create-pkgmanager.ui:6 apx_gui/gtk/window-main.ui:70
 msgid "New Package Manager"
-msgstr "مدير حزم جديد"
+msgstr "Novo Gerenciador de Pacotes"
 
 #: apx_gui/gtk/create-pkgmanager.ui:23 apx_gui/gtk/create-stack.ui:23
 #: apx_gui/gtk/create-subsystem.ui:23
 msgid "Cancel"
-msgstr "إلغاء"
+msgstr "Cancelar"
 
 #: apx_gui/gtk/create-pkgmanager.ui:28 apx_gui/gtk/create-stack.ui:28
 #: apx_gui/gtk/create-subsystem.ui:28
 msgid "Create"
-msgstr "أنشِئ"
+msgstr "Criar"
 
 #: apx_gui/gtk/create-pkgmanager.ui:41 apx_gui/gtk/tab-pkgmanager.ui:24
 #: apx_gui/gtk/tab-stack.ui:24
 msgid "Details"
-msgstr "التفاصيل"
+msgstr "Detalhes"
 
 #: apx_gui/gtk/create-pkgmanager.ui:44 apx_gui/gtk/create-stack.ui:44
 #: apx_gui/gtk/create-subsystem.ui:44
 msgid "Name"
-msgstr "الاسم"
+msgstr "Nome"
 
 #: apx_gui/gtk/create-pkgmanager.ui:49 apx_gui/gtk/tab-pkgmanager.ui:27
 msgid "Need Sudo"
-msgstr "تحتاج sudo"
+msgstr "Requer Privilégios de Administrador"
 
 #: apx_gui/gtk/create-pkgmanager.ui:70
 msgid "Commands"
-msgstr "الأوامر"
+msgstr "Comandos"
 
 #: apx_gui/gtk/create-pkgmanager.ui:73 apx_gui/gtk/tab-pkgmanager.ui:57
 msgid "Autoremove"
-msgstr "الإزالة تلقائيا"
+msgstr "Autoremover"
 
 #: apx_gui/gtk/create-pkgmanager.ui:78 apx_gui/gtk/tab-pkgmanager.ui:63
 msgid "Clean"
-msgstr "التنظيف"
+msgstr "Limpar"
 
 #: apx_gui/gtk/create-pkgmanager.ui:83 apx_gui/gtk/tab-pkgmanager.ui:69
 msgid "Install"
-msgstr "التثبيت"
+msgstr "Instalar"
 
 #: apx_gui/gtk/create-pkgmanager.ui:88 apx_gui/gtk/tab-pkgmanager.ui:75
 msgid "List"
-msgstr "عرض الحزم"
+msgstr "Listar"
 
 #: apx_gui/gtk/create-pkgmanager.ui:93 apx_gui/gtk/tab-pkgmanager.ui:81
 msgid "Purge"
-msgstr "التطهير (purge)"
+msgstr "Purgar"
 
 #: apx_gui/gtk/create-pkgmanager.ui:98 apx_gui/gtk/tab-pkgmanager.ui:87
 msgid "Remove"
-msgstr "الإزالة"
+msgstr "Remover"
 
 #: apx_gui/gtk/create-pkgmanager.ui:103 apx_gui/gtk/tab-pkgmanager.ui:93
 msgid "Search"
-msgstr "البحث"
+msgstr "Pesquisar"
 
 #: apx_gui/gtk/create-pkgmanager.ui:108 apx_gui/gtk/tab-pkgmanager.ui:99
 msgid "Show"
-msgstr "إظهار تفاصيل حزمة"
+msgstr "Exibir"
 
 #: apx_gui/gtk/create-pkgmanager.ui:113 apx_gui/gtk/tab-pkgmanager.ui:105
 msgid "Update"
-msgstr "التحديث"
+msgstr "Atualizar (Banco de Dados)"
 
 #: apx_gui/gtk/create-pkgmanager.ui:118 apx_gui/gtk/tab-pkgmanager.ui:111
 msgid "Upgrade"
-msgstr "التطوير"
+msgstr "Atualizar (Pacotes)"
 
 #: apx_gui/gtk/create-pkgmanager.ui:144
 msgid "Creating Package Manager…"
-msgstr "يتم إنشاء مدير الحزم…"
+msgstr "Criando Gerenciador de Pacotes…"
 
 #: apx_gui/gtk/create-pkgmanager.ui:145
 msgid "Please wait while the package manager is being created."
-msgstr "يرجى الانتظار ريثما يتم إنشاء مدير الحزم."
+msgstr "Por favor aguarde enquanto o gerenciador de pacotes é criado."
 
 #: apx_gui/gtk/create-pkgmanager.ui:169
 msgid "An Error Occurred"
-msgstr "حدث خطأ"
+msgstr "Um Erro Ocorreu"
 
 #: apx_gui/gtk/create-pkgmanager.ui:170
 msgid "An error occurred while creating the package manager."
-msgstr "حدث خطأ أثناء إنشاء مدير الحزم."
+msgstr "Um erro ocorreu ao criar o gerenciador de pacotes."
 
 #: apx_gui/gtk/create-pkgmanager.ui:174 apx_gui/gtk/create-stack.ui:148
 #: apx_gui/gtk/create-subsystem.ui:108
 msgid "Close"
-msgstr "إغلاق"
+msgstr "Fechar"
 
 #: apx_gui/gtk/create-stack.ui:6 apx_gui/gtk/window-main.ui:66
 msgid "New Stack"
-msgstr "تشكيلة جديدة"
+msgstr "Nova Pilha"
 
 #: apx_gui/gtk/create-stack.ui:49 apx_gui/gtk/tab-stack.ui:27
 msgid "Base"
-msgstr "النظام الأساس"
+msgstr "Base"
 
 #: apx_gui/gtk/create-stack.ui:54 apx_gui/gtk/tab-stack.ui:38
 #: apx_gui/gtk/tab-subsystem.ui:29
 msgid "Package Manager"
-msgstr "مدير الحزم"
+msgstr "Gerenciador de Pacotes"
 
 #: apx_gui/gtk/create-stack.ui:80
 msgid "Add Package"
-msgstr "إضافة حزمة"
+msgstr "Adicionar Pacote"
 
 #: apx_gui/gtk/create-stack.ui:92
 msgid "New Package"
-msgstr "حزمة جديدة"
+msgstr "Novo Pacote"
 
 #: apx_gui/gtk/create-stack.ui:119
 msgid "Please wait while the stack is being created."
-msgstr "يرجى الانتظار ريثما يتم إنشاء تشكيلة جديدة."
+msgstr "Por favor aguarde enquanto a pilha é criada."
 
 #: apx_gui/gtk/create-stack.ui:144
 msgid "An error occurred while creating the stack."
-msgstr "حدث خطأ أثناء إنشاء التشكيلة."
+msgstr "Um erro ocorreu ao criar a pilha."
 
 #: apx_gui/gtk/create-subsystem.ui:6
 msgid "New Subsystem"
-msgstr "نظام فرعي جديد"
+msgstr "Novo Subsistema"
 
 #: apx_gui/gtk/create-subsystem.ui:49 apx_gui/gtk/tab-subsystem.ui:19
 msgid "Stack"
-msgstr "تشكيلة"
+msgstr "Pilha"
 
 #: apx_gui/gtk/create-subsystem.ui:78
 msgid "Creating Subsystem…"
-msgstr "يتم إنشاء نظام فرعي…"
+msgstr "Criando Subsistema…"
 
 #: apx_gui/gtk/create-subsystem.ui:79
 msgid "Please wait while the subsystem is being created."
-msgstr "يرجى الانتظار ريثما يتم إنشاء نظام فرعي."
+msgstr "Por favor aguarde enquanto o subsistema é criado."
 
 #: apx_gui/gtk/create-subsystem.ui:104
 msgid "An error occurred while creating the subsystem."
-msgstr "حدث خطأ أثناء إنشاء النظام الفرعي."
+msgstr "Um erro ocorreu ao criar o subsistema."
 
 #: apx_gui/gtk/editor.ui:12
 msgid "Start or Open a Subsystem"
-msgstr "بِدء أو فتح نظام فرعي"
+msgstr "Iniciar ou Abrir um Subsistema"
 
 #: apx_gui/gtk/editor.ui:13
 msgid "Start by opening a subsystem, stack or package manager on the left."
-msgstr "ابدأ بفتح نظام فرعي، تشكيلة أو مدير حزم على اليسار."
+msgstr ""
+"Comece abrindo um subsistema, pilha ou gerenciador de pacotes à esquerda."
 
 #: apx_gui/gtk/help-overlay.ui:11
 msgctxt "shortcut window"
 msgid "General"
-msgstr "عام"
+msgstr "Geral"
 
 #: apx_gui/gtk/help-overlay.ui:14
 msgctxt "shortcut window"
 msgid "Show Shortcuts"
-msgstr "عرض الاختصارات"
+msgstr "Exibir Atalhos"
 
 #: apx_gui/gtk/help-overlay.ui:20
 msgctxt "shortcut window"
 msgid "Quit"
-msgstr "خروج"
+msgstr "Sair"
 
 #: apx_gui/gtk/tab-pkgmanager.ui:13
 msgid "This package manager is built-in and cannot be edited or deleted."
-msgstr "مدير الحزم هذا مدمج في النظام و لا يمكن تعديله أو حذفه."
+msgstr ""
+"Este gerenciador de pacotes é embutido e não pode ser editado ou removido."
 
 #: apx_gui/gtk/tab-pkgmanager.ui:42 apx_gui/gtk/tab-stack.ui:49
 msgid "Built-In"
-msgstr "مدمج"
+msgstr "Embutido"
 
 #: apx_gui/gtk/tab-pkgmanager.ui:119 apx_gui/gtk/tab-stack.ui:71
 msgid "Destructive Actions"
-msgstr "خيارات تدميرية"
+msgstr "Ações Destrutivas"
 
 #: apx_gui/gtk/tab-pkgmanager.ui:122
 msgid "Delete Package Manager"
-msgstr "حذف مدير الحزم"
+msgstr "Apagar Gerenciador de Pacotes"
 
 #: apx_gui/gtk/tab-stack.ui:13
 msgid "This stack is built-in and cannot be edited or deleted."
-msgstr "هذه التشكيلة مدمجة في النظام و لا يمكن تعديلها أو حذفها."
+msgstr "Esta pilha é embutida e não pode ser editada ou removida."
 
 #: apx_gui/gtk/tab-stack.ui:59
 msgid "Packages"
-msgstr "الحزم"
+msgstr "Pacotes"
 
 #: apx_gui/gtk/tab-stack.ui:74
 msgid "Delete Stack"
-msgstr "حذف التشكيلة"
+msgstr "Apagar Pilha"
 
 #: apx_gui/gtk/tab-subsystem.ui:9
 msgid "Status"
-msgstr "الحالة"
+msgstr "Status"
 
 #: apx_gui/gtk/tab-subsystem.ui:53
 msgid "Open Console"
-msgstr "فتح الطرفية"
+msgstr "Abrir Console"
 
 #: apx_gui/gtk/tab-subsystem.ui:54
 msgid "Enter a console in this subsystem's environment."
-msgstr "دخول الطرفية في بيئة هذا النظام الفرعي."
+msgstr "Insira um console no ambiente desse subsistema."
 
 #: apx_gui/gtk/tab-subsystem.ui:74
 msgid "Reset Subsystem"
-msgstr "إعادة إنشاء النظام الفرعي"
+msgstr "Reiniciar Subsistema"
 
 #: apx_gui/gtk/tab-subsystem.ui:89
 msgid "Delete Subsystem"
-msgstr "حذف النظام الفرعي"
+msgstr "Apagar Subsistema"
 
 #: apx_gui/gtk/window-main.ui:62
 msgid "New Sub System"
-msgstr "نظام فرعي جديد"
+msgstr "Novo Subsistema"
 
 #: apx_gui/gtk/window-main.ui:78
 msgid "_Keyboard Shortcuts"
-msgstr "اختصارات لوحة المفاتيح (_K)"
+msgstr "_Teclas de Atalho"
 
 #: apx_gui/gtk/window-main.ui:82
 msgid "_Quit"
-msgstr "خروج (_Q)"
+msgstr "_Sair"
 
 #: apx_gui/gtk/window-main.ui:86
 msgid "_About Apx GUI"
-msgstr "حول Apx GUI (_A)"
+msgstr "_Sobre a GUI do Apx"
 
 #: apx_gui/main.py:102
 msgid "translator_credits"
-msgstr "مؤمن المناوي moumnalmunawy2006@gmail.com"
+msgstr "Fernando Lopes https://github.com/plasmus777"
 
 #: apx_gui/main.py:107
 msgid "Contributors"
-msgstr "المساهمون"
+msgstr "Colaboradores"
 
 #: apx_gui/main.py:113
 msgid "Tools"
-msgstr "الأدوات"
-
-#~ msgid "No description"
-#~ msgstr "لا يوجد وصف"
-
-#, python-brace-format
-#~ msgid "Package manager {pkgmanager.name} created successfully"
-#~ msgstr "تم إنشاء مدير الحزم {pkgmanager.name} بنجاح"
-
-#, python-brace-format
-#~ msgid "Subsystem {subsystem.name} created successfully"
-#~ msgstr "تم إنشاء النظام الفرعي {subsystem.name} بنجاح"
+msgstr "Ferramentas"
