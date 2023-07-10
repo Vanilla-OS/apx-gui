@@ -8,17 +8,38 @@
         <property name="max-height">10</property>
         <child>
           <object class="GtkShortcutsGroup">
-            <property name="title" translatable="yes" context="shortcut window">General</property>
+            <property name="title" context="shortcut window" translatable="yes">General</property>
             <child>
               <object class="GtkShortcutsShortcut">
-                <property name="title" translatable="yes" context="shortcut window">Show Shortcuts</property>
+                <property name="title" context="shortcut window" translatable="yes">Show Shortcuts</property>
                 <property name="action-name">win.show-help-overlay</property>
               </object>
             </child>
             <child>
               <object class="GtkShortcutsShortcut">
-                <property name="title" translatable="yes" context="shortcut window">Quit</property>
+                <property name="title" context="shortcut window" translatable="yes">Quit</property>
                 <property name="action-name">app.quit</property>
+              </object>
+            </child>
+          </object>
+          <object class="GtkShortcutsGroup">
+            <property name="title" context="shortcut window" translatable="yes">Create</property>
+            <child>
+              <object class="GtkShortcutsShortcut">
+                <property name="title" context="shortcut window" translatable="yes">New Subsystem</property>
+                <property name="action-name">app.new_subsystem</property>
+              </object>
+            </child>
+            <child>
+              <object class="GtkShortcutsShortcut">
+                <property name="title" context="shortcut window" translatable="yes">New Stack</property>
+                <property name="action-name">app.new_stack</property>
+              </object>
+            </child>
+            <child>
+              <object class="GtkShortcutsShortcut">
+                <property name="title" context="shortcut window" translatable="yes">New Package Manager</property>
+                <property name="action-name">app.new_pkgmanager</property>
               </object>
             </child>
           </object>

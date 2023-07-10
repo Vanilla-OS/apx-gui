@@ -59,7 +59,7 @@
   <menu id="menu_add">
     <section>
       <item>
-        <attribute name="label" translatable="yes">New Sub System</attribute>
+        <attribute name="label" translatable="yes">New Subsystem</attribute>
         <attribute name="action">app.new_subsystem</attribute>
       </item>
       <item>
@@ -77,10 +77,6 @@
       <item>
         <attribute name="label" translatable="yes">_Keyboard Shortcuts</attribute>
         <attribute name="action">win.show-help-overlay</attribute>
-      </item>
-      <item>
-        <attribute name="label" translatable="yes">_Quit</attribute>
-        <attribute name="action">app.quit</attribute>
       </item>
       <item>
         <attribute name="label" translatable="yes">_About Apx GUI</attribute>

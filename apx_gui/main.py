@@ -47,8 +47,8 @@ class ApxGUIApplication(Adw.Application):
         self.create_action('quit', self.close, ['<primary>q'])
         self.create_action('new_subsystem', self.on_new_subsystem_action, ['<primary>n'])
         self.create_action('new_stack', self.on_new_stack_action, ['<primary>s'])
-        self.create_action('new_pkgmanager', self.on_new_pkgmanager_action, ['<primary>p']) 
-        self.create_action('about', self.on_about_action, ['<primary>a'])
+        self.create_action('new_pkgmanager', self.on_new_pkgmanager_action, ['<primary>p'])
+        self.create_action('about', self.on_about_action)
 
         self.__register_arguments()
 
