@@ -38,7 +38,7 @@ class ApxGUIWindow(Adw.ApplicationWindow):
     toasts: Adw.ToastOverlay = Gtk.Template.Child()
     paned_main: Gtk.Paned = Gtk.Template.Child()
 
-    def __init__(self, embedded: bool, **kwargs) -> None:
+    def __init__(self, **kwargs) -> None:
         super().__init__(**kwargs)
 
         self.__apx: Apx = Apx()

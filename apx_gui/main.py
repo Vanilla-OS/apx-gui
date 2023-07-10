@@ -24,7 +24,6 @@ from gettext import gettext as _
 
 gi.require_version('Gtk', '4.0')
 gi.require_version('Adw', '1')
-gi.require_version('GtkSource', '5')
 
 from gi.repository import Gtk, GLib, Gio, Adw
 from apx_gui.windows.main_window import ApxGUIWindow
@@ -36,41 +35,17 @@ logging.basicConfig(level=logging.INFO)
 class ApxGUIApplication(Adw.Application):
     """The main application singleton class."""
 
-    __embedded: bool = False
-
     def __init__(self):
         super().__init__(application_id='org.vanillaos.ApxGUI',
-                         flags=Gio.ApplicationFlags.HANDLES_COMMAND_LINE)
+                         flags=Gio.ApplicationFlags.DEFAULT_FLAGS)
         
         self.__window: ApxGUIWindow = None
 
-        self.create_action('quit', self.close, ['<primary>q'])
+        self.create_action('quit', lambda *_: self.quit(), ['<primary>q'])
         self.create_action('new_subsystem', self.on_new_subsystem_action, ['<primary>n'])
         self.create_action('new_stack', self.on_new_stack_action, ['<primary>s'])
         self.create_action('new_pkgmanager', self.on_new_pkgmanager_action, ['<primary>p'])
         self.create_action('about', self.on_about_action)
-
-        self.__register_arguments()
-
-    def __register_arguments(self) -> None:
-        """Register command line arguments."""
-        self.add_main_option("embedded", ord("e"), GLib.OptionFlags.NONE,
-                             GLib.OptionArg.NONE, "Embedded mode", None)
-
-    def do_command_line(self, command: Gio.ApplicationCommandLine) -> int:
-        """Handle command line arguments.
-
-        We only have one command line option, --embedded, which
-        indicates that the application is embedded in another
-        application.
-        """
-        commands: GLib.VariantDict = command.get_options_dict()
-
-        if commands.contains("embedded"):
-            self.__embedded = True
-
-        self.do_activate()
-        return 0
 
     def do_activate(self) -> None:
         """Called when the application is activated.
@@ -80,10 +55,7 @@ class ApxGUIApplication(Adw.Application):
         """
         win: ApxGUIWindow = self.props.active_window
         if not win:
-            win = ApxGUIWindow(
-                application=self,
-                embedded=self.__embedded
-            )
+            win = ApxGUIWindow(application=self)
 
         self.__window = win
         win.present()
