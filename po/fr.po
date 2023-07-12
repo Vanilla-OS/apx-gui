@@ -3,13 +3,14 @@
 # This file is distributed under the same license as the apx_gui package.
 # Sami <mappygpsfree@gmail.com>, 2023.
 # Thual LABART--BARNAGAUD <tlabartbarnagaud@protonmail.com>, 2023.
+# tachyglossues <tachyglossues@gmail.com>, 2023.
 msgid ""
 msgstr ""
 "Project-Id-Version: apx_gui\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2023-07-05 20:14+0530\n"
-"PO-Revision-Date: 2023-07-05 18:34+0000\n"
-"Last-Translator: Thual LABART--BARNAGAUD <tlabartbarnagaud@protonmail.com>\n"
+"PO-Revision-Date: 2023-07-08 14:34+0000\n"
+"Last-Translator: tachyglossues <tachyglossues@gmail.com>\n"
 "Language-Team: French <https://hosted.weblate.org/projects/vanilla-os/"
 "apx-gui/fr/>\n"
 "Language: fr\n"
@@ -76,7 +77,6 @@ msgid "List"
 msgstr "Lister"
 
 #: apx_gui/gtk/create-pkgmanager.ui:93 apx_gui/gtk/tab-pkgmanager.ui:81
-#, fuzzy
 msgid "Purge"
 msgstr "Effacer"
 
@@ -203,7 +203,6 @@ msgstr ""
 "ni supprimé."
 
 #: apx_gui/gtk/tab-pkgmanager.ui:42 apx_gui/gtk/tab-stack.ui:49
-#, fuzzy
 msgid "Built-In"
 msgstr "Intégré au système"
 
