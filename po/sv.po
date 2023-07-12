@@ -1,0 +1,290 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the apx_gui package.
+# Luna Jernberg <droidbittin@gmail.com>, 2023.
+msgid ""
+msgstr ""
+"Project-Id-Version: apx_gui\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-07-05 20:14+0530\n"
+"PO-Revision-Date: 2023-07-08 14:34+0000\n"
+"Last-Translator: Luna Jernberg <droidbittin@gmail.com>\n"
+"Language-Team: Swedish <https://hosted.weblate.org/projects/vanilla-os/apx-"
+"gui/sv/>\n"
+"Language: sv\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 5.0-dev\n"
+
+#: data/org.vanillaos.ApxGUI.desktop.in:3
+msgid "Apx"
+msgstr "Apx"
+
+#: data/org.vanillaos.ApxGUI.appdata.xml.in:7
+msgid "A frontend in GTK 4 and Libadwaita for Apx."
+msgstr "Ett gränssnitt i GTK 4 och Libadwaita för Apx."
+
+#: apx_gui/gtk/create-pkgmanager.ui:6 apx_gui/gtk/window-main.ui:70
+msgid "New Package Manager"
+msgstr "Ny pakethanterare"
+
+#: apx_gui/gtk/create-pkgmanager.ui:23 apx_gui/gtk/create-stack.ui:23
+#: apx_gui/gtk/create-subsystem.ui:23
+msgid "Cancel"
+msgstr "Avbryt"
+
+#: apx_gui/gtk/create-pkgmanager.ui:28 apx_gui/gtk/create-stack.ui:28
+#: apx_gui/gtk/create-subsystem.ui:28
+msgid "Create"
+msgstr "Skapa"
+
+#: apx_gui/gtk/create-pkgmanager.ui:41 apx_gui/gtk/tab-pkgmanager.ui:24
+#: apx_gui/gtk/tab-stack.ui:24
+msgid "Details"
+msgstr "Detaljer"
+
+#: apx_gui/gtk/create-pkgmanager.ui:44 apx_gui/gtk/create-stack.ui:44
+#: apx_gui/gtk/create-subsystem.ui:44
+msgid "Name"
+msgstr "Namn"
+
+#: apx_gui/gtk/create-pkgmanager.ui:49 apx_gui/gtk/tab-pkgmanager.ui:27
+msgid "Need Sudo"
+msgstr "Behöver Sudo"
+
+#: apx_gui/gtk/create-pkgmanager.ui:70
+msgid "Commands"
+msgstr "Kommandon"
+
+#: apx_gui/gtk/create-pkgmanager.ui:73 apx_gui/gtk/tab-pkgmanager.ui:57
+msgid "Autoremove"
+msgstr "Ta bort automatiskt"
+
+#: apx_gui/gtk/create-pkgmanager.ui:78 apx_gui/gtk/tab-pkgmanager.ui:63
+msgid "Clean"
+msgstr "Rensa"
+
+#: apx_gui/gtk/create-pkgmanager.ui:83 apx_gui/gtk/tab-pkgmanager.ui:69
+msgid "Install"
+msgstr "Installera"
+
+#: apx_gui/gtk/create-pkgmanager.ui:88 apx_gui/gtk/tab-pkgmanager.ui:75
+msgid "List"
+msgstr "Lista"
+
+#: apx_gui/gtk/create-pkgmanager.ui:93 apx_gui/gtk/tab-pkgmanager.ui:81
+msgid "Purge"
+msgstr "Rensa ut"
+
+#: apx_gui/gtk/create-pkgmanager.ui:98 apx_gui/gtk/tab-pkgmanager.ui:87
+msgid "Remove"
+msgstr "Ta bort"
+
+#: apx_gui/gtk/create-pkgmanager.ui:103 apx_gui/gtk/tab-pkgmanager.ui:93
+msgid "Search"
+msgstr "Sök"
+
+#: apx_gui/gtk/create-pkgmanager.ui:108 apx_gui/gtk/tab-pkgmanager.ui:99
+msgid "Show"
+msgstr "Visa"
+
+#: apx_gui/gtk/create-pkgmanager.ui:113 apx_gui/gtk/tab-pkgmanager.ui:105
+msgid "Update"
+msgstr "Uppdatera"
+
+#: apx_gui/gtk/create-pkgmanager.ui:118 apx_gui/gtk/tab-pkgmanager.ui:111
+msgid "Upgrade"
+msgstr "Uppgradera"
+
+#: apx_gui/gtk/create-pkgmanager.ui:144
+msgid "Creating Package Manager…"
+msgstr "Skapar pakethanterare…"
+
+#: apx_gui/gtk/create-pkgmanager.ui:145
+msgid "Please wait while the package manager is being created."
+msgstr "Vänta medan pakethanteraren skapas."
+
+#: apx_gui/gtk/create-pkgmanager.ui:169
+msgid "An Error Occurred"
+msgstr "Ett fel uppstod"
+
+#: apx_gui/gtk/create-pkgmanager.ui:170
+msgid "An error occurred while creating the package manager."
+msgstr "Ett fel uppstod när pakethanteraren skapades."
+
+#: apx_gui/gtk/create-pkgmanager.ui:174 apx_gui/gtk/create-stack.ui:148
+#: apx_gui/gtk/create-subsystem.ui:108
+msgid "Close"
+msgstr "Stäng"
+
+#: apx_gui/gtk/create-stack.ui:6 apx_gui/gtk/window-main.ui:66
+msgid "New Stack"
+msgstr "Ny stack"
+
+#: apx_gui/gtk/create-stack.ui:49 apx_gui/gtk/tab-stack.ui:27
+msgid "Base"
+msgstr "Bas"
+
+#: apx_gui/gtk/create-stack.ui:54 apx_gui/gtk/tab-stack.ui:38
+#: apx_gui/gtk/tab-subsystem.ui:29
+msgid "Package Manager"
+msgstr "Pakethanterare"
+
+#: apx_gui/gtk/create-stack.ui:80
+msgid "Add Package"
+msgstr "Lägg till paket"
+
+#: apx_gui/gtk/create-stack.ui:92
+msgid "New Package"
+msgstr "Nytt paket"
+
+#: apx_gui/gtk/create-stack.ui:119
+msgid "Please wait while the stack is being created."
+msgstr "Vänta medan stacken skapas."
+
+#: apx_gui/gtk/create-stack.ui:144
+msgid "An error occurred while creating the stack."
+msgstr "Ett fel uppstod när stacken skapades."
+
+#: apx_gui/gtk/create-subsystem.ui:6 apx_gui/gtk/window-main.ui:62
+msgid "New Subsystem"
+msgstr "Nytt undersystem"
+
+#: apx_gui/gtk/create-subsystem.ui:49 apx_gui/gtk/tab-subsystem.ui:19
+msgid "Stack"
+msgstr "Stack"
+
+#: apx_gui/gtk/create-subsystem.ui:78
+msgid "Creating Subsystem…"
+msgstr "Skapar undersystem…"
+
+#: apx_gui/gtk/create-subsystem.ui:79
+msgid "Please wait while the subsystem is being created."
+msgstr "Vänta medan undersystemet skapas."
+
+#: apx_gui/gtk/create-subsystem.ui:104
+msgid "An error occurred while creating the subsystem."
+msgstr "Ett fel uppstod när undersystemet skapades."
+
+#: apx_gui/gtk/editor.ui:12
+msgid "Start or Open a Subsystem"
+msgstr "Starta eller öppna ett undersystem"
+
+#: apx_gui/gtk/editor.ui:13
+msgid "Start by opening a subsystem, stack or package manager on the left."
+msgstr ""
+"Börja genom att öppna ett undersystem, stack eller pakethanterare till "
+"vänster."
+
+#: apx_gui/gtk/help-overlay.ui:11
+msgctxt "shortcut window"
+msgid "General"
+msgstr "Allmänt"
+
+#: apx_gui/gtk/help-overlay.ui:14
+msgctxt "shortcut window"
+msgid "Show Shortcuts"
+msgstr "Visa genvägar"
+
+#: apx_gui/gtk/help-overlay.ui:20
+msgctxt "shortcut window"
+msgid "Quit"
+msgstr "Avsluta"
+
+#: apx_gui/gtk/tab-pkgmanager.ui:13
+msgid "This package manager is built-in and cannot be edited or deleted."
+msgstr "Denna pakethanterare är inbyggd och kan inte redigeras eller raderas."
+
+#: apx_gui/gtk/tab-pkgmanager.ui:42 apx_gui/gtk/tab-stack.ui:49
+msgid "Built-In"
+msgstr "Inbyggd"
+
+#: apx_gui/gtk/tab-pkgmanager.ui:119 apx_gui/gtk/tab-stack.ui:71
+msgid "Destructive Actions"
+msgstr "Destruktiva åtgärder"
+
+#: apx_gui/gtk/tab-pkgmanager.ui:122
+msgid "Delete Package Manager"
+msgstr "Ta bort pakethanterare"
+
+#: apx_gui/gtk/tab-stack.ui:13
+msgid "This stack is built-in and cannot be edited or deleted."
+msgstr "Denna stack är inbyggd och kan inte redigeras eller raderas."
+
+#: apx_gui/gtk/tab-stack.ui:59
+msgid "Packages"
+msgstr "Paket"
+
+#: apx_gui/gtk/tab-stack.ui:74
+msgid "Delete Stack"
+msgstr "Ta bort stack"
+
+#: apx_gui/gtk/tab-subsystem.ui:9
+msgid "Status"
+msgstr "Status"
+
+#: apx_gui/gtk/tab-subsystem.ui:53
+msgid "Open Console"
+msgstr "Öppna konsol"
+
+#: apx_gui/gtk/tab-subsystem.ui:54
+msgid "Enter a console in this subsystem's environment."
+msgstr "Gå in i en konsol i detta undersystems miljö."
+
+#: apx_gui/gtk/tab-subsystem.ui:74
+msgid "Reset Subsystem"
+msgstr "Återställ undersystem"
+
+#: apx_gui/gtk/tab-subsystem.ui:89
+msgid "Delete Subsystem"
+msgstr "Ta bort undersystem"
+
+#: apx_gui/gtk/window-main.ui:62
+msgid "New Sub System"
+msgstr "Nytt undersystem"
+
+#: apx_gui/gtk/window-main.ui:78
+msgid "_Keyboard Shortcuts"
+msgstr "_Tangentbordsgenvägar"
+
+#: apx_gui/gtk/window-main.ui:82
+msgid "_Quit"
+msgstr "_Avsluta"
+
+#: apx_gui/gtk/window-main.ui:86 apx_gui/gtk/window-main.ui:82
+msgid "_About Apx GUI"
+msgstr "_Om Apx GUI"
+
+#: apx_gui/main.py:102
+msgid "translator_credits"
+msgstr "Luna Jernberg <lunajernberg@gnome.org>"
+
+#: apx_gui/main.py:107
+msgid "Contributors"
+msgstr "Bidragsgivare"
+
+#: apx_gui/main.py:113
+msgid "Tools"
+msgstr "Verktyg"
+
+#: apx_gui/gtk/help-overlay.ui:26
+msgctxt "shortcut window"
+msgid "Create"
+msgstr "Skapa"
+
+#: apx_gui/gtk/help-overlay.ui:29
+msgctxt "shortcut window"
+msgid "New Subsystem"
+msgstr "Nytt undersystem"
+
+#: apx_gui/gtk/help-overlay.ui:35
+msgctxt "shortcut window"
+msgid "New Stack"
+msgstr "Ny stack"
+
+#: apx_gui/gtk/help-overlay.ui:41
+msgctxt "shortcut window"
+msgid "New Package Manager"
+msgstr "Ny pakethanterare"
