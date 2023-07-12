@@ -10,10 +10,10 @@ msgstr ""
 "Project-Id-Version: apx_gui\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2023-07-10 18:39+0530\n"
-"PO-Revision-Date: 2023-07-10 13:16+0000\n"
-"Last-Translator: Matt C <matei.gurzu@gmail.com>\n"
-"Language-Team: Romanian <https://hosted.weblate.org/projects/vanilla-os/apx-"
-"gui/ro/>\n"
+"PO-Revision-Date: 2023-07-12 17:10+0000\n"
+"Last-Translator: \"K.B.Dharun Krishna\" <kbdharunkrishna@gmail.com>\n"
+"Language-Team: Romanian <https://hosted.weblate.org/projects/vanilla-os/"
+"apx-gui/ro/>\n"
 "Language: ro\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -276,22 +276,15 @@ msgstr "Ștergerea subsistemului"
 
 #: apx_gui/gtk/window-main.ui:78
 msgid "_Keyboard Shortcuts"
-msgstr "_Comenzi rapide de la tastatură"
+msgstr "Comenzi rapide de la tastatură (_K)"
 
 #: apx_gui/gtk/window-main.ui:82
 msgid "_About Apx GUI"
-msgstr "Despre Apx GUI"
+msgstr "Despre Apx GUI (_A)"
 
 #: apx_gui/main.py:102
 msgid "translator_credits"
-msgstr ""
-"Bogdan Mințoi <mintoi [dot ] bogdan [at] gmail [dot] com>, 2014\n"
-"Adrian Gabor <raziel_theripper [at] yahoo [dot] com>, 2015\n"
-"Daniel Șerbănescu <daniel [at] serbanescu [dot] dk>, 2016-2021\n"
-"Florentina Mușat <florentina [dot] musat [dot] 28 [at] gmail [dot] com>, "
-"2020-2021\n"
-"Matt <github.com/mattcc23>, 2023\n"
-"Gabriel Cozma <https://gabs.eu.org>, 2023"
+msgstr "Gabriel Cozma https://gabs.eu.org"
 
 #: apx_gui/main.py:107
 msgid "Contributors"

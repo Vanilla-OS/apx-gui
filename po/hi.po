@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: apx_gui\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2023-07-10 18:39+0530\n"
-"PO-Revision-Date: 2023-07-05 18:32+0000\n"
+"PO-Revision-Date: 2023-07-12 17:10+0000\n"
 "Last-Translator: \"K.B.Dharun Krishna\" <kbdharunkrishna@gmail.com>\n"
 "Language-Team: Hindi <https://hosted.weblate.org/projects/vanilla-os/apx-gui/"
 "hi/>\n"
@@ -270,12 +270,11 @@ msgstr "सबसिस्टम हटाएँ"
 
 #: apx_gui/gtk/window-main.ui:78
 msgid "_Keyboard Shortcuts"
-msgstr "_कुंजीपटल अल्प मार्ग"
+msgstr "कुंजीपटल अल्प मार्ग (_K)"
 
 #: apx_gui/gtk/window-main.ui:82
-#, fuzzy
 msgid "_About Apx GUI"
-msgstr "_एपीएक्स आईडीई के बारे में"
+msgstr "एपीएक्स आईडीई के बारे में (_A)"
 
 #: apx_gui/main.py:102
 msgid "translator_credits"

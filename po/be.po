@@ -2,13 +2,14 @@
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the apx_gui package.
 # Maksim <maxklezovich@gmail.com>, 2023.
+# "K.B.Dharun Krishna" <kbdharunkrishna@gmail.com>, 2023.
 msgid ""
 msgstr ""
 "Project-Id-Version: apx_gui\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2023-07-10 18:39+0530\n"
-"PO-Revision-Date: 2023-07-12 16:52+0000\n"
-"Last-Translator: Maksim <maxklezovich@gmail.com>\n"
+"PO-Revision-Date: 2023-07-12 17:10+0000\n"
+"Last-Translator: \"K.B.Dharun Krishna\" <kbdharunkrishna@gmail.com>\n"
 "Language-Team: Belarusian <https://hosted.weblate.org/projects/vanilla-os/"
 "apx-gui/be/>\n"
 "Language: be\n"
@@ -263,15 +264,15 @@ msgstr "Выдаліць падсістэму"
 
 #: apx_gui/gtk/window-main.ui:78
 msgid "_Keyboard Shortcuts"
-msgstr "_Спалучэнні клавіш"
+msgstr "Спалучэнні клавіш (_K)"
 
 #: apx_gui/gtk/window-main.ui:82
 msgid "_About Apx GUI"
-msgstr "_Пра графічны інтэрфейс Apx"
+msgstr "Пра графічны інтэрфейс Apx (_A)"
 
 #: apx_gui/main.py:102
 msgid "translator_credits"
-msgstr "Launchpad translators"
+msgstr "Maksim Kliazovich https://github.com/Kliazovich"
 
 #: apx_gui/main.py:107
 msgid "Contributors"

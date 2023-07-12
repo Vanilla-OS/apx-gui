@@ -4,15 +4,16 @@
 # Sami <mappygpsfree@gmail.com>, 2023.
 # Thual LABART--BARNAGAUD <tlabartbarnagaud@protonmail.com>, 2023.
 # tachyglossues <tachyglossues@gmail.com>, 2023.
+# "K.B.Dharun Krishna" <kbdharunkrishna@gmail.com>, 2023.
 msgid ""
 msgstr ""
 "Project-Id-Version: apx_gui\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2023-07-10 18:39+0530\n"
-"PO-Revision-Date: 2023-07-08 14:34+0000\n"
-"Last-Translator: tachyglossues <tachyglossues@gmail.com>\n"
-"Language-Team: French <https://hosted.weblate.org/projects/vanilla-os/apx-"
-"gui/fr/>\n"
+"PO-Revision-Date: 2023-07-12 17:10+0000\n"
+"Last-Translator: \"K.B.Dharun Krishna\" <kbdharunkrishna@gmail.com>\n"
+"Language-Team: French <https://hosted.weblate.org/projects/vanilla-os/"
+"apx-gui/fr/>\n"
 "Language: fr\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -277,7 +278,7 @@ msgstr "Supprimer le sous-système"
 
 #: apx_gui/gtk/window-main.ui:78
 msgid "_Keyboard Shortcuts"
-msgstr "_Raccourcis clavier"
+msgstr "Raccourcis clavier (_K)"
 
 #: apx_gui/gtk/window-main.ui:82
 msgid "_About Apx GUI"
@@ -285,11 +286,7 @@ msgstr "_A propos de l'interface graphique d'Apx"
 
 #: apx_gui/main.py:102
 msgid "translator_credits"
-msgstr ""
-"Alain Lojewski <allomervan@gmail.com> ; Guillaume Bernard "
-"<associations@guillaume-bernard.fr> ; Adrien Plazas <kekun.plazas@laposte."
-"net> ; Julien Humbert <julroy67@gmail.com> ; Charles Monzat <charles."
-"monzat@free.fr> ; Thual Labart--Barnagaud <tlabartbarnagaud@protonmail.com>"
+msgstr "Thual Labart--Barnagaud <tlabartbarnagaud@protonmail.com>"
 
 #: apx_gui/main.py:107
 msgid "Contributors"

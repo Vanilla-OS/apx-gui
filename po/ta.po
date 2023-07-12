@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: apx_gui\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2023-07-10 18:39+0530\n"
-"PO-Revision-Date: 2023-07-05 18:32+0000\n"
+"PO-Revision-Date: 2023-07-12 17:10+0000\n"
 "Last-Translator: \"K.B.Dharun Krishna\" <kbdharunkrishna@gmail.com>\n"
 "Language-Team: Tamil <https://hosted.weblate.org/projects/vanilla-os/apx-gui/"
 "ta/>\n"
@@ -24,257 +24,259 @@ msgstr "Apx"
 
 #: data/org.vanillaos.ApxGUI.appdata.xml.in:7
 msgid "A frontend in GTK 4 and Libadwaita for Apx."
-msgstr ""
+msgstr "Apx க்கான GTK 4 மற்றும் Libadwaita இல் ஒரு முன்பக்கம்."
 
 #: apx_gui/gtk/create-pkgmanager.ui:6 apx_gui/gtk/window-main.ui:70
 msgid "New Package Manager"
-msgstr ""
+msgstr "புதிய தொகுப்பு மேலாளர்"
 
 #: apx_gui/gtk/create-pkgmanager.ui:23 apx_gui/gtk/create-stack.ui:23
 #: apx_gui/gtk/create-subsystem.ui:23
 msgid "Cancel"
-msgstr ""
+msgstr "ரத்துசெய்"
 
 #: apx_gui/gtk/create-pkgmanager.ui:28 apx_gui/gtk/create-stack.ui:28
 #: apx_gui/gtk/create-subsystem.ui:28
 msgid "Create"
-msgstr ""
+msgstr "உருவாக்கு"
 
 #: apx_gui/gtk/create-pkgmanager.ui:41 apx_gui/gtk/tab-pkgmanager.ui:24
 #: apx_gui/gtk/tab-stack.ui:24
 msgid "Details"
-msgstr ""
+msgstr "விவரங்கள்"
 
 #: apx_gui/gtk/create-pkgmanager.ui:44 apx_gui/gtk/create-stack.ui:44
 #: apx_gui/gtk/create-subsystem.ui:44
 msgid "Name"
-msgstr ""
+msgstr "பெயர்"
 
 #: apx_gui/gtk/create-pkgmanager.ui:49 apx_gui/gtk/tab-pkgmanager.ui:27
 msgid "Need Sudo"
-msgstr ""
+msgstr "Sudo வேண்டும்"
 
 #: apx_gui/gtk/create-pkgmanager.ui:70
 msgid "Commands"
-msgstr ""
+msgstr "கட்டளைகள்"
 
 #: apx_gui/gtk/create-pkgmanager.ui:73 apx_gui/gtk/tab-pkgmanager.ui:57
 msgid "Autoremove"
-msgstr ""
+msgstr "தானாக அகற்று"
 
 #: apx_gui/gtk/create-pkgmanager.ui:78 apx_gui/gtk/tab-pkgmanager.ui:63
 msgid "Clean"
-msgstr ""
+msgstr "சுத்தம்"
 
 #: apx_gui/gtk/create-pkgmanager.ui:83 apx_gui/gtk/tab-pkgmanager.ui:69
 msgid "Install"
-msgstr ""
+msgstr "நிறுவு"
 
 #: apx_gui/gtk/create-pkgmanager.ui:88 apx_gui/gtk/tab-pkgmanager.ui:75
 msgid "List"
-msgstr ""
+msgstr "பட்டியலிடு"
 
 #: apx_gui/gtk/create-pkgmanager.ui:93 apx_gui/gtk/tab-pkgmanager.ui:81
 msgid "Purge"
-msgstr ""
+msgstr "களையெடுப்பு"
 
 #: apx_gui/gtk/create-pkgmanager.ui:98 apx_gui/gtk/tab-pkgmanager.ui:87
 msgid "Remove"
-msgstr ""
+msgstr "அகற்று"
 
 #: apx_gui/gtk/create-pkgmanager.ui:103 apx_gui/gtk/tab-pkgmanager.ui:93
 msgid "Search"
-msgstr ""
+msgstr "தேடு"
 
 #: apx_gui/gtk/create-pkgmanager.ui:108 apx_gui/gtk/tab-pkgmanager.ui:99
 msgid "Show"
-msgstr ""
+msgstr "காட்டு"
 
 #: apx_gui/gtk/create-pkgmanager.ui:113 apx_gui/gtk/tab-pkgmanager.ui:105
 msgid "Update"
-msgstr ""
+msgstr "புதுப்பிக்கவும்"
 
 #: apx_gui/gtk/create-pkgmanager.ui:118 apx_gui/gtk/tab-pkgmanager.ui:111
 msgid "Upgrade"
-msgstr ""
+msgstr "மேம்படுத்து"
 
 #: apx_gui/gtk/create-pkgmanager.ui:144
 msgid "Creating Package Manager…"
-msgstr ""
+msgstr "தொகுப்பு நிர்வாகியை உருவாக்குகிறது…"
 
 #: apx_gui/gtk/create-pkgmanager.ui:145
 msgid "Please wait while the package manager is being created."
-msgstr ""
+msgstr "தொகுப்பு மேலாளர் உருவாக்கப்படும் வரை காத்திருக்கவும்."
 
 #: apx_gui/gtk/create-pkgmanager.ui:169
 msgid "An Error Occurred"
-msgstr ""
+msgstr "ஒரு பிழை ஏற்பட்டது"
 
 #: apx_gui/gtk/create-pkgmanager.ui:170
 msgid "An error occurred while creating the package manager."
-msgstr ""
+msgstr "தொகுப்பு நிர்வாகியை உருவாக்கும் போது பிழை ஏற்பட்டது."
 
 #: apx_gui/gtk/create-pkgmanager.ui:174 apx_gui/gtk/create-stack.ui:148
 #: apx_gui/gtk/create-subsystem.ui:108
 msgid "Close"
-msgstr ""
+msgstr "மூடு"
 
 #: apx_gui/gtk/create-stack.ui:6 apx_gui/gtk/window-main.ui:66
 msgid "New Stack"
-msgstr ""
+msgstr "புதிய அடுக்கு"
 
 #: apx_gui/gtk/create-stack.ui:49 apx_gui/gtk/tab-stack.ui:27
 msgid "Base"
-msgstr ""
+msgstr "அடித்தளம்"
 
 #: apx_gui/gtk/create-stack.ui:54 apx_gui/gtk/tab-stack.ui:38
 #: apx_gui/gtk/tab-subsystem.ui:29
 msgid "Package Manager"
-msgstr ""
+msgstr "தொகுப்பு மேலாளர்"
 
 #: apx_gui/gtk/create-stack.ui:80
 msgid "Add Package"
-msgstr ""
+msgstr "தொகுப்பைச் சேர்க்கவும்"
 
 #: apx_gui/gtk/create-stack.ui:92
 msgid "New Package"
-msgstr ""
+msgstr "புதிய தொகுப்பு"
 
 #: apx_gui/gtk/create-stack.ui:119
 msgid "Please wait while the stack is being created."
-msgstr ""
+msgstr "அடுக்கு உருவாக்கப்படும் வரை காத்திருக்கவும்."
 
 #: apx_gui/gtk/create-stack.ui:144
 msgid "An error occurred while creating the stack."
-msgstr ""
+msgstr "அடுக்கை உருவாக்கும் போது பிழை ஏற்பட்டது."
 
 #: apx_gui/gtk/create-subsystem.ui:6 apx_gui/gtk/window-main.ui:62
 msgid "New Subsystem"
-msgstr ""
+msgstr "புதிய துணை அமைப்பு"
 
 #: apx_gui/gtk/create-subsystem.ui:49 apx_gui/gtk/tab-subsystem.ui:19
 msgid "Stack"
-msgstr ""
+msgstr "அடுக்கு"
 
 #: apx_gui/gtk/create-subsystem.ui:78
 msgid "Creating Subsystem…"
-msgstr ""
+msgstr "துணை அமைப்பை உருவாக்குகிறது…"
 
 #: apx_gui/gtk/create-subsystem.ui:79
 msgid "Please wait while the subsystem is being created."
-msgstr ""
+msgstr "துணை அமைப்பு உருவாக்கப்படும் வரை காத்திருக்கவும்."
 
 #: apx_gui/gtk/create-subsystem.ui:104
 msgid "An error occurred while creating the subsystem."
-msgstr ""
+msgstr "துணை அமைப்பை உருவாக்கும் போது பிழை ஏற்பட்டது."
 
 #: apx_gui/gtk/editor.ui:12
 msgid "Start or Open a Subsystem"
-msgstr ""
+msgstr "ஒரு துணை அமைப்பைத் தொடங்கவும் அல்லது திறக்கவும்"
 
 #: apx_gui/gtk/editor.ui:13
 msgid "Start by opening a subsystem, stack or package manager on the left."
 msgstr ""
+"இடதுபுறத்தில் துணை அமைப்பு, அடுக்கு அல்லது தொகுப்பு மேலாளரைத் திறப்பதன் மூலம்"
+" தொடங்கவும்."
 
 #: apx_gui/gtk/help-overlay.ui:11
 msgctxt "shortcut window"
 msgid "General"
-msgstr ""
+msgstr "பொது"
 
 #: apx_gui/gtk/help-overlay.ui:14
 msgctxt "shortcut window"
 msgid "Show Shortcuts"
-msgstr ""
+msgstr "குறுக்குவழிகளைக் காட்டு"
 
 #: apx_gui/gtk/help-overlay.ui:20
 msgctxt "shortcut window"
 msgid "Quit"
-msgstr ""
+msgstr "வெளியேறு"
 
 #: apx_gui/gtk/help-overlay.ui:26
 msgctxt "shortcut window"
 msgid "Create"
-msgstr ""
+msgstr "உருவாக்கு"
 
 #: apx_gui/gtk/help-overlay.ui:29
 msgctxt "shortcut window"
 msgid "New Subsystem"
-msgstr ""
+msgstr "புதிய துணை அமைப்பு"
 
 #: apx_gui/gtk/help-overlay.ui:35
 msgctxt "shortcut window"
 msgid "New Stack"
-msgstr ""
+msgstr "புதிய அடுக்கு"
 
 #: apx_gui/gtk/help-overlay.ui:41
 msgctxt "shortcut window"
 msgid "New Package Manager"
-msgstr ""
+msgstr "புதிய தொகுப்பு மேலாளர்"
 
 #: apx_gui/gtk/tab-pkgmanager.ui:13
 msgid "This package manager is built-in and cannot be edited or deleted."
-msgstr ""
+msgstr "இந்த தொகுப்பு மேலாளர் உள்ளமைக்கப்பட்டதால் திருத்தவோ நீக்கவோ முடியாது."
 
 #: apx_gui/gtk/tab-pkgmanager.ui:42 apx_gui/gtk/tab-stack.ui:49
 msgid "Built-In"
-msgstr ""
+msgstr "உள்ளமைக்கப்பட்டது"
 
 #: apx_gui/gtk/tab-pkgmanager.ui:119 apx_gui/gtk/tab-stack.ui:71
 msgid "Destructive Actions"
-msgstr ""
+msgstr "அழிவுச் செயல்கள்"
 
 #: apx_gui/gtk/tab-pkgmanager.ui:122
 msgid "Delete Package Manager"
-msgstr ""
+msgstr "தொகுப்பு நிர்வாகியை நீக்கு"
 
 #: apx_gui/gtk/tab-stack.ui:13
 msgid "This stack is built-in and cannot be edited or deleted."
-msgstr ""
+msgstr "இந்த அடுக்கு உள்ளமைக்கப்பட்டதால் திருத்தவோ நீக்கவோ முடியாது."
 
 #: apx_gui/gtk/tab-stack.ui:59
 msgid "Packages"
-msgstr ""
+msgstr "தொகுப்புகள்"
 
 #: apx_gui/gtk/tab-stack.ui:74
 msgid "Delete Stack"
-msgstr ""
+msgstr "அடுக்கை நீக்கு"
 
 #: apx_gui/gtk/tab-subsystem.ui:9
 msgid "Status"
-msgstr ""
+msgstr "நிலை"
 
 #: apx_gui/gtk/tab-subsystem.ui:53
 msgid "Open Console"
-msgstr ""
+msgstr "கன்சோலைத் திற"
 
 #: apx_gui/gtk/tab-subsystem.ui:54
 msgid "Enter a console in this subsystem's environment."
-msgstr ""
+msgstr "இந்த துணை அமைப்பின் சூழலில் கன்சோலை உள்ளிடவும்."
 
 #: apx_gui/gtk/tab-subsystem.ui:74
 msgid "Reset Subsystem"
-msgstr ""
+msgstr "துணை அமைப்பை மீட்டமைக்கவும்"
 
 #: apx_gui/gtk/tab-subsystem.ui:89
 msgid "Delete Subsystem"
-msgstr ""
+msgstr "துணை அமைப்பை நீக்கு"
 
 #: apx_gui/gtk/window-main.ui:78
 msgid "_Keyboard Shortcuts"
-msgstr ""
+msgstr "விசைப்பலகை குறுக்குவழிகள் (_K)"
 
 #: apx_gui/gtk/window-main.ui:82
 msgid "_About Apx GUI"
-msgstr ""
+msgstr "Apx GUI பற்றி (_A)"
 
 #: apx_gui/main.py:102
 msgid "translator_credits"
-msgstr ""
+msgstr "K.B.Dharun Krishna <kbdharunkrishna@gmail.com>"
 
 #: apx_gui/main.py:107
 msgid "Contributors"
-msgstr ""
+msgstr "பங்களிப்பாளர்கள்"
 
 #: apx_gui/main.py:113
 msgid "Tools"
-msgstr ""
+msgstr "கருவிகள்"

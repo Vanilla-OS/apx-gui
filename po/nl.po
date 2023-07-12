@@ -2,13 +2,14 @@
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the apx_gui package.
 # Philip Goto <philip.goto@gmail.com>, 2023.
+# "K.B.Dharun Krishna" <kbdharunkrishna@gmail.com>, 2023.
 msgid ""
 msgstr ""
 "Project-Id-Version: apx_gui\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2023-07-10 18:39+0530\n"
-"PO-Revision-Date: 2023-07-08 14:34+0000\n"
-"Last-Translator: Philip Goto <philip.goto@gmail.com>\n"
+"PO-Revision-Date: 2023-07-12 17:10+0000\n"
+"Last-Translator: \"K.B.Dharun Krishna\" <kbdharunkrishna@gmail.com>\n"
 "Language-Team: Dutch <https://hosted.weblate.org/projects/vanilla-os/apx-gui/"
 "nl/>\n"
 "Language: nl\n"
@@ -272,15 +273,15 @@ msgstr "Subsysteem verwijderen"
 
 #: apx_gui/gtk/window-main.ui:78
 msgid "_Keyboard Shortcuts"
-msgstr "_Sneltoetsen"
+msgstr "Sneltoetsen (_K)"
 
 #: apx_gui/gtk/window-main.ui:82
 msgid "_About Apx GUI"
-msgstr "_Over Apx GUI"
+msgstr "Over Apx GUI (_A)"
 
 #: apx_gui/main.py:102
 msgid "translator_credits"
-msgstr "Philip Goto https://philipgoto.nl/"
+msgstr "Philip Goto https://philipgoto.nl"
 
 #: apx_gui/main.py:107
 msgid "Contributors"
