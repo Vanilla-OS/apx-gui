@@ -2,17 +2,16 @@
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the apx_gui package.
 # lakejason0 <sunliyuan200402@outlook.com>, 2023.
-# "K.B.Dharun Krishna" <kbdharunkrishna@gmail.com>, 2023.
 msgid ""
 msgstr ""
 "Project-Id-Version: apx_gui\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2023-07-05 20:14+0530\n"
-"PO-Revision-Date: 2023-07-05 18:32+0000\n"
-"Last-Translator: \"K.B.Dharun Krishna\" <kbdharunkrishna@gmail.com>\n"
-"Language-Team: Chinese (Simplified) <https://hosted.weblate.org/projects/"
-"vanilla-os/apx-gui/zh_Hans/>\n"
-"Language: zh_Hans\n"
+"PO-Revision-Date: 2023-07-08 14:34+0000\n"
+"Last-Translator: lakejason0 <sunliyuan200402@outlook.com>\n"
+"Language-Team: Chinese (Traditional) <https://hosted.weblate.org/projects/"
+"vanilla-os/apx-gui/zh_Hant/>\n"
+"Language: zh_Hant\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -29,7 +28,7 @@ msgstr "Apx 的 GTK 4 及 libadwaita 前端。"
 
 #: apx_gui/gtk/create-pkgmanager.ui:6 apx_gui/gtk/window-main.ui:70
 msgid "New Package Manager"
-msgstr "新建软件包管理器"
+msgstr "新增軟體包管理器"
 
 #: apx_gui/gtk/create-pkgmanager.ui:23 apx_gui/gtk/create-stack.ui:23
 #: apx_gui/gtk/create-subsystem.ui:23
@@ -39,17 +38,17 @@ msgstr "取消"
 #: apx_gui/gtk/create-pkgmanager.ui:28 apx_gui/gtk/create-stack.ui:28
 #: apx_gui/gtk/create-subsystem.ui:28
 msgid "Create"
-msgstr "创建"
+msgstr "建立"
 
 #: apx_gui/gtk/create-pkgmanager.ui:41 apx_gui/gtk/tab-pkgmanager.ui:24
 #: apx_gui/gtk/tab-stack.ui:24
 msgid "Details"
-msgstr "详细信息"
+msgstr "詳細資訊"
 
 #: apx_gui/gtk/create-pkgmanager.ui:44 apx_gui/gtk/create-stack.ui:44
 #: apx_gui/gtk/create-subsystem.ui:44
 msgid "Name"
-msgstr "名称"
+msgstr "名稱"
 
 #: apx_gui/gtk/create-pkgmanager.ui:49 apx_gui/gtk/tab-pkgmanager.ui:27
 msgid "Need Sudo"
@@ -61,7 +60,7 @@ msgstr "命令"
 
 #: apx_gui/gtk/create-pkgmanager.ui:73 apx_gui/gtk/tab-pkgmanager.ui:57
 msgid "Autoremove"
-msgstr "自动移除"
+msgstr "自動移除"
 
 #: apx_gui/gtk/create-pkgmanager.ui:78 apx_gui/gtk/tab-pkgmanager.ui:63
 msgid "Clean"
@@ -69,11 +68,11 @@ msgstr "清理"
 
 #: apx_gui/gtk/create-pkgmanager.ui:83 apx_gui/gtk/tab-pkgmanager.ui:69
 msgid "Install"
-msgstr "安装"
+msgstr "安裝"
 
 #: apx_gui/gtk/create-pkgmanager.ui:88 apx_gui/gtk/tab-pkgmanager.ui:75
 msgid "List"
-msgstr "列表"
+msgstr "列出"
 
 #: apx_gui/gtk/create-pkgmanager.ui:93 apx_gui/gtk/tab-pkgmanager.ui:81
 msgid "Purge"
@@ -85,11 +84,11 @@ msgstr "移除"
 
 #: apx_gui/gtk/create-pkgmanager.ui:103 apx_gui/gtk/tab-pkgmanager.ui:93
 msgid "Search"
-msgstr "搜索"
+msgstr "搜尋"
 
 #: apx_gui/gtk/create-pkgmanager.ui:108 apx_gui/gtk/tab-pkgmanager.ui:99
 msgid "Show"
-msgstr "显示"
+msgstr "顯示"
 
 #: apx_gui/gtk/create-pkgmanager.ui:113 apx_gui/gtk/tab-pkgmanager.ui:105
 msgid "Update"
@@ -97,61 +96,61 @@ msgstr "更新"
 
 #: apx_gui/gtk/create-pkgmanager.ui:118 apx_gui/gtk/tab-pkgmanager.ui:111
 msgid "Upgrade"
-msgstr "升级"
+msgstr "升級"
 
 #: apx_gui/gtk/create-pkgmanager.ui:144
 msgid "Creating Package Manager…"
-msgstr "正在创建软件包管理器…"
+msgstr "正在建立軟體包管理器…"
 
 #: apx_gui/gtk/create-pkgmanager.ui:145
 msgid "Please wait while the package manager is being created."
-msgstr "正在创建软件包管理器，请稍候。"
+msgstr "正在建立軟體包管理器，請稍候。"
 
 #: apx_gui/gtk/create-pkgmanager.ui:169
 msgid "An Error Occurred"
-msgstr "发生错误"
+msgstr "發生錯誤"
 
 #: apx_gui/gtk/create-pkgmanager.ui:170
 msgid "An error occurred while creating the package manager."
-msgstr "创建软件包管理器时出错。"
+msgstr "建立軟體包管理器時出錯。"
 
 #: apx_gui/gtk/create-pkgmanager.ui:174 apx_gui/gtk/create-stack.ui:148
 #: apx_gui/gtk/create-subsystem.ui:108
 msgid "Close"
-msgstr "关闭"
+msgstr "關閉"
 
 #: apx_gui/gtk/create-stack.ui:6 apx_gui/gtk/window-main.ui:66
 msgid "New Stack"
-msgstr "新建包捆"
+msgstr "新增包捆"
 
 #: apx_gui/gtk/create-stack.ui:49 apx_gui/gtk/tab-stack.ui:27
 msgid "Base"
-msgstr "基础映像"
+msgstr "基礎映像"
 
 #: apx_gui/gtk/create-stack.ui:54 apx_gui/gtk/tab-stack.ui:38
 #: apx_gui/gtk/tab-subsystem.ui:29
 msgid "Package Manager"
-msgstr "软件包管理器"
+msgstr "軟體包管理器"
 
 #: apx_gui/gtk/create-stack.ui:80
 msgid "Add Package"
-msgstr "添加软件包"
+msgstr "加入軟體包"
 
 #: apx_gui/gtk/create-stack.ui:92
 msgid "New Package"
-msgstr "新建软件包"
+msgstr "新增軟體包"
 
 #: apx_gui/gtk/create-stack.ui:119
 msgid "Please wait while the stack is being created."
-msgstr "正在创建包捆，请稍候。"
+msgstr "正在建立包捆，請稍候。"
 
 #: apx_gui/gtk/create-stack.ui:144
 msgid "An error occurred while creating the stack."
-msgstr "创建包捆时发生错误。"
+msgstr "建立包捆時發生錯誤。"
 
 #: apx_gui/gtk/create-subsystem.ui:6 apx_gui/gtk/window-main.ui:62
 msgid "New Subsystem"
-msgstr "新建子系统"
+msgstr "新增子系統"
 
 #: apx_gui/gtk/create-subsystem.ui:49 apx_gui/gtk/tab-subsystem.ui:19
 msgid "Stack"
@@ -159,102 +158,102 @@ msgstr "包捆"
 
 #: apx_gui/gtk/create-subsystem.ui:78
 msgid "Creating Subsystem…"
-msgstr "正在创建子系统…"
+msgstr "正在建立子系統…"
 
 #: apx_gui/gtk/create-subsystem.ui:79
 msgid "Please wait while the subsystem is being created."
-msgstr "正在创建子系统，请稍候。"
+msgstr "正在建立子系統，請稍候。"
 
 #: apx_gui/gtk/create-subsystem.ui:104
 msgid "An error occurred while creating the subsystem."
-msgstr "创建子系统时发生错误。"
+msgstr "建立子系統時發生錯誤。"
 
 #: apx_gui/gtk/editor.ui:12
 msgid "Start or Open a Subsystem"
-msgstr "启动或打开子系统"
+msgstr "啟動或開啟子系統"
 
 #: apx_gui/gtk/editor.ui:13
 msgid "Start by opening a subsystem, stack or package manager on the left."
-msgstr "要开始，请打开左侧的子系统、包捆或软件包管理器。"
+msgstr "要開始，請開啟左側的子系統、包捆或是軟體包管理器。"
 
 #: apx_gui/gtk/help-overlay.ui:11
 msgctxt "shortcut window"
 msgid "General"
-msgstr "通用"
+msgstr "一般"
 
 #: apx_gui/gtk/help-overlay.ui:14
 msgctxt "shortcut window"
 msgid "Show Shortcuts"
-msgstr "显示快捷键"
+msgstr "顯示快速鍵"
 
 #: apx_gui/gtk/help-overlay.ui:20
 msgctxt "shortcut window"
 msgid "Quit"
-msgstr "退出"
+msgstr "離開"
 
 #: apx_gui/gtk/tab-pkgmanager.ui:13
 msgid "This package manager is built-in and cannot be edited or deleted."
-msgstr "此软件包管理器是内置的，无法编辑或删除。"
+msgstr "此軟體包管理器為內建，無法編輯或是刪除。"
 
 #: apx_gui/gtk/tab-pkgmanager.ui:42 apx_gui/gtk/tab-stack.ui:49
 msgid "Built-In"
-msgstr "内置"
+msgstr "內建"
 
 #: apx_gui/gtk/tab-pkgmanager.ui:119 apx_gui/gtk/tab-stack.ui:71
 msgid "Destructive Actions"
-msgstr "破坏性操作"
+msgstr "破壞性操作"
 
 #: apx_gui/gtk/tab-pkgmanager.ui:122
 msgid "Delete Package Manager"
-msgstr "删除软件包管理器"
+msgstr "刪除軟體包管理器"
 
 #: apx_gui/gtk/tab-stack.ui:13
 msgid "This stack is built-in and cannot be edited or deleted."
-msgstr "此包捆是内置的，无法编辑或删除。"
+msgstr "此包捆為內建，無法編輯或是刪除。"
 
 #: apx_gui/gtk/tab-stack.ui:59
 msgid "Packages"
-msgstr "软件包"
+msgstr "軟體包"
 
 #: apx_gui/gtk/tab-stack.ui:74
 msgid "Delete Stack"
-msgstr "删除包捆"
+msgstr "刪除包捆"
 
 #: apx_gui/gtk/tab-subsystem.ui:9
 msgid "Status"
-msgstr "状态"
+msgstr "狀態"
 
 #: apx_gui/gtk/tab-subsystem.ui:53
 msgid "Open Console"
-msgstr "打开控制台"
+msgstr "開啟主控台"
 
 #: apx_gui/gtk/tab-subsystem.ui:54
 msgid "Enter a console in this subsystem's environment."
-msgstr "进入该子系统环境的控制台。"
+msgstr "進入此子系統環境的主控台。"
 
 #: apx_gui/gtk/tab-subsystem.ui:74
 msgid "Reset Subsystem"
-msgstr "重置子系统"
+msgstr "重設子系統"
 
 #: apx_gui/gtk/tab-subsystem.ui:89
 msgid "Delete Subsystem"
-msgstr "删除子系统"
+msgstr "刪除子系統"
 
 #: apx_gui/gtk/window-main.ui:62
 msgid "New Sub System"
-msgstr "新建子系统"
+msgstr ""
 
 #: apx_gui/gtk/window-main.ui:78
 msgid "_Keyboard Shortcuts"
-msgstr "键盘快捷键(_K)"
+msgstr "鍵盤快速鍵(_K)"
 
 #: apx_gui/gtk/window-main.ui:82
 msgid "_Quit"
-msgstr "退出(_Q)"
+msgstr ""
 
-#: apx_gui/gtk/window-main.ui:86 apx_gui/gtk/window-main.ui:82
+#: apx_gui/gtk/window-main.ui:82
 msgid "_About Apx GUI"
-msgstr "关于 Apx GUI (_A)"
+msgstr "關於 Apx GUI (_A)"
 
 #: apx_gui/main.py:102
 msgid "translator_credits"
@@ -262,7 +261,7 @@ msgstr "lakejason0 <lakesarchive@outlook.com>"
 
 #: apx_gui/main.py:107
 msgid "Contributors"
-msgstr "贡献者"
+msgstr "貢獻者"
 
 #: apx_gui/main.py:113
 msgid "Tools"
@@ -271,30 +270,19 @@ msgstr "工具"
 #: apx_gui/gtk/help-overlay.ui:26
 msgctxt "shortcut window"
 msgid "Create"
-msgstr "创建"
+msgstr "建立"
 
 #: apx_gui/gtk/help-overlay.ui:29
 msgctxt "shortcut window"
 msgid "New Subsystem"
-msgstr "新建子系统"
+msgstr "新增子系統"
 
 #: apx_gui/gtk/help-overlay.ui:35
 msgctxt "shortcut window"
 msgid "New Stack"
-msgstr "新建包捆"
+msgstr "新增包捆"
 
 #: apx_gui/gtk/help-overlay.ui:41
 msgctxt "shortcut window"
 msgid "New Package Manager"
-msgstr "新建软件包管理器"
-
-#~ msgid "No description"
-#~ msgstr "没有说明"
-
-#, python-brace-format
-#~ msgid "Package manager {pkgmanager.name} created successfully"
-#~ msgstr "已成功创建软件包管理器 {pkgmanager.name}"
-
-#, python-brace-format
-#~ msgid "Subsystem {subsystem.name} created successfully"
-#~ msgstr "已成功创建子系统 {subsystem.name}"
+msgstr "新增軟體包管理器"
