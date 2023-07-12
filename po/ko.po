@@ -1,0 +1,268 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the apx_gui package.
+# MJKim <kmj10727@gmail.com>, 2023.
+msgid ""
+msgstr ""
+"Project-Id-Version: apx_gui\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-07-05 20:14+0530\n"
+"PO-Revision-Date: 2023-07-08 14:34+0000\n"
+"Last-Translator: MJKim <kmj10727@gmail.com>\n"
+"Language-Team: Korean <https://hosted.weblate.org/projects/vanilla-os/"
+"apx-gui/ko/>\n"
+"Language: ko\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Generator: Weblate 5.0-dev\n"
+
+#: data/org.vanillaos.ApxGUI.desktop.in:3
+msgid "Apx"
+msgstr "Apx"
+
+#: data/org.vanillaos.ApxGUI.appdata.xml.in:7
+msgid "A frontend in GTK 4 and Libadwaita for Apx."
+msgstr "APX 패키지 관리자를 위한 GTK 4, Libadwaita 프론트엔드입니다."
+
+#: apx_gui/gtk/create-pkgmanager.ui:6 apx_gui/gtk/window-main.ui:70
+msgid "New Package Manager"
+msgstr "새 패키지 관리자"
+
+#: apx_gui/gtk/create-pkgmanager.ui:23 apx_gui/gtk/create-stack.ui:23
+#: apx_gui/gtk/create-subsystem.ui:23
+msgid "Cancel"
+msgstr "취소"
+
+#: apx_gui/gtk/create-pkgmanager.ui:28 apx_gui/gtk/create-stack.ui:28
+#: apx_gui/gtk/create-subsystem.ui:28
+msgid "Create"
+msgstr "만들기"
+
+#: apx_gui/gtk/create-pkgmanager.ui:41 apx_gui/gtk/tab-pkgmanager.ui:24
+#: apx_gui/gtk/tab-stack.ui:24
+msgid "Details"
+msgstr "자세히 보기"
+
+#: apx_gui/gtk/create-pkgmanager.ui:44 apx_gui/gtk/create-stack.ui:44
+#: apx_gui/gtk/create-subsystem.ui:44
+msgid "Name"
+msgstr "이름"
+
+#: apx_gui/gtk/create-pkgmanager.ui:49 apx_gui/gtk/tab-pkgmanager.ui:27
+msgid "Need Sudo"
+msgstr "Sudo 필요"
+
+#: apx_gui/gtk/create-pkgmanager.ui:70
+msgid "Commands"
+msgstr "명령어"
+
+#: apx_gui/gtk/create-pkgmanager.ui:73 apx_gui/gtk/tab-pkgmanager.ui:57
+msgid "Autoremove"
+msgstr "자동 삭제"
+
+#: apx_gui/gtk/create-pkgmanager.ui:78 apx_gui/gtk/tab-pkgmanager.ui:63
+msgid "Clean"
+msgstr "청소하기"
+
+#: apx_gui/gtk/create-pkgmanager.ui:83 apx_gui/gtk/tab-pkgmanager.ui:69
+msgid "Install"
+msgstr "설치"
+
+#: apx_gui/gtk/create-pkgmanager.ui:88 apx_gui/gtk/tab-pkgmanager.ui:75
+msgid "List"
+msgstr "목록"
+
+#: apx_gui/gtk/create-pkgmanager.ui:93 apx_gui/gtk/tab-pkgmanager.ui:81
+msgid "Purge"
+msgstr "완전히 삭제"
+
+#: apx_gui/gtk/create-pkgmanager.ui:98 apx_gui/gtk/tab-pkgmanager.ui:87
+msgid "Remove"
+msgstr "삭제"
+
+#: apx_gui/gtk/create-pkgmanager.ui:103 apx_gui/gtk/tab-pkgmanager.ui:93
+msgid "Search"
+msgstr "검색"
+
+#: apx_gui/gtk/create-pkgmanager.ui:108 apx_gui/gtk/tab-pkgmanager.ui:99
+msgid "Show"
+msgstr "표시"
+
+#: apx_gui/gtk/create-pkgmanager.ui:113 apx_gui/gtk/tab-pkgmanager.ui:105
+msgid "Update"
+msgstr "업데이트"
+
+#: apx_gui/gtk/create-pkgmanager.ui:118 apx_gui/gtk/tab-pkgmanager.ui:111
+msgid "Upgrade"
+msgstr "업그레이드"
+
+#: apx_gui/gtk/create-pkgmanager.ui:144
+msgid "Creating Package Manager…"
+msgstr "패키지 관리자를 만드는 중…"
+
+#: apx_gui/gtk/create-pkgmanager.ui:145
+msgid "Please wait while the package manager is being created."
+msgstr "패키지 관리자가 만들어질 때까지 기다리십시오."
+
+#: apx_gui/gtk/create-pkgmanager.ui:169
+msgid "An Error Occurred"
+msgstr "오류 발생"
+
+#: apx_gui/gtk/create-pkgmanager.ui:170
+msgid "An error occurred while creating the package manager."
+msgstr "패키지 관리자를 만드는 중 오류가 발생했습니다."
+
+#: apx_gui/gtk/create-pkgmanager.ui:174 apx_gui/gtk/create-stack.ui:148
+#: apx_gui/gtk/create-subsystem.ui:108
+msgid "Close"
+msgstr "닫기"
+
+#: apx_gui/gtk/create-stack.ui:6 apx_gui/gtk/window-main.ui:66
+msgid "New Stack"
+msgstr "새 스택"
+
+#: apx_gui/gtk/create-stack.ui:49 apx_gui/gtk/tab-stack.ui:27
+msgid "Base"
+msgstr "기반"
+
+#: apx_gui/gtk/create-stack.ui:54 apx_gui/gtk/tab-stack.ui:38
+#: apx_gui/gtk/tab-subsystem.ui:29
+msgid "Package Manager"
+msgstr "패키지 관리자"
+
+#: apx_gui/gtk/create-stack.ui:80
+msgid "Add Package"
+msgstr "패키지 추가"
+
+#: apx_gui/gtk/create-stack.ui:92
+msgid "New Package"
+msgstr "새 패키지"
+
+#: apx_gui/gtk/create-stack.ui:119
+msgid "Please wait while the stack is being created."
+msgstr "스택이 만들어질 때까지 기다리십시오."
+
+#: apx_gui/gtk/create-stack.ui:144
+msgid "An error occurred while creating the stack."
+msgstr "스택을 만드는 중 오류가 발생했습니다."
+
+#: apx_gui/gtk/create-subsystem.ui:6
+msgid "New Subsystem"
+msgstr "새 하위 시스템"
+
+#: apx_gui/gtk/create-subsystem.ui:49 apx_gui/gtk/tab-subsystem.ui:19
+msgid "Stack"
+msgstr "스택"
+
+#: apx_gui/gtk/create-subsystem.ui:78
+msgid "Creating Subsystem…"
+msgstr "하위 시스템을 생성하고 있습니다…"
+
+#: apx_gui/gtk/create-subsystem.ui:79
+msgid "Please wait while the subsystem is being created."
+msgstr "하위 시스템이 만들어질 때까지 기다리십시오."
+
+#: apx_gui/gtk/create-subsystem.ui:104
+msgid "An error occurred while creating the subsystem."
+msgstr "하위 시스템을 만드는 중 오류가 발생했습니다."
+
+#: apx_gui/gtk/editor.ui:12
+msgid "Start or Open a Subsystem"
+msgstr "하위 시스템을 시작하거나 열기"
+
+#: apx_gui/gtk/editor.ui:13
+msgid "Start by opening a subsystem, stack or package manager on the left."
+msgstr "하위 시스템을 열려면 왼쪽에 있는 스택 및 패키지 관리자를 시작하십시오."
+
+#: apx_gui/gtk/help-overlay.ui:11
+msgctxt "shortcut window"
+msgid "General"
+msgstr "일반"
+
+#: apx_gui/gtk/help-overlay.ui:14
+msgctxt "shortcut window"
+msgid "Show Shortcuts"
+msgstr "바로가기 표시하기"
+
+#: apx_gui/gtk/help-overlay.ui:20
+msgctxt "shortcut window"
+msgid "Quit"
+msgstr "끝내기"
+
+#: apx_gui/gtk/tab-pkgmanager.ui:13
+msgid "This package manager is built-in and cannot be edited or deleted."
+msgstr "이 패키지 관리자는 내장되어 있으므로 편집하거나 삭제할 수 없습니다."
+
+#: apx_gui/gtk/tab-pkgmanager.ui:42 apx_gui/gtk/tab-stack.ui:49
+msgid "Built-In"
+msgstr "내장됨"
+
+#: apx_gui/gtk/tab-pkgmanager.ui:119 apx_gui/gtk/tab-stack.ui:71
+msgid "Destructive Actions"
+msgstr "주의 동작"
+
+#: apx_gui/gtk/tab-pkgmanager.ui:122
+msgid "Delete Package Manager"
+msgstr "패키지 관리자 삭제"
+
+#: apx_gui/gtk/tab-stack.ui:13
+msgid "This stack is built-in and cannot be edited or deleted."
+msgstr "이 스택은 내장되어 있어 편집하거나 삭제할 수 없습니다."
+
+#: apx_gui/gtk/tab-stack.ui:59
+msgid "Packages"
+msgstr "패키지"
+
+#: apx_gui/gtk/tab-stack.ui:74
+msgid "Delete Stack"
+msgstr "스택 삭제"
+
+#: apx_gui/gtk/tab-subsystem.ui:9
+msgid "Status"
+msgstr "상태"
+
+#: apx_gui/gtk/tab-subsystem.ui:53
+msgid "Open Console"
+msgstr "콘솔 열기"
+
+#: apx_gui/gtk/tab-subsystem.ui:54
+msgid "Enter a console in this subsystem's environment."
+msgstr "하위 시스템 환경의 콘솔에 진입합니다."
+
+#: apx_gui/gtk/tab-subsystem.ui:74
+msgid "Reset Subsystem"
+msgstr "하위 시스템 초기화"
+
+#: apx_gui/gtk/tab-subsystem.ui:89
+msgid "Delete Subsystem"
+msgstr "하위 시스템 삭제"
+
+#: apx_gui/gtk/window-main.ui:62
+msgid "New Sub System"
+msgstr "하위 시스템 추가"
+
+#: apx_gui/gtk/window-main.ui:78
+msgid "_Keyboard Shortcuts"
+msgstr "키보드 바로 가기(_K)"
+
+#: apx_gui/gtk/window-main.ui:82
+msgid "_Quit"
+msgstr "끝내기(_Q)"
+
+#: apx_gui/gtk/window-main.ui:86
+msgid "_About Apx GUI"
+msgstr "APX GUI에 대하여(_A)"
+
+#: apx_gui/main.py:102
+msgid "translator_credits"
+msgstr "MJ Kim <kmj10727@gmail.com>"
+
+#: apx_gui/main.py:107
+msgid "Contributors"
+msgstr "기여자"
+
+#: apx_gui/main.py:113
+msgid "Tools"
+msgstr "도구"
