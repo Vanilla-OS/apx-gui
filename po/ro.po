@@ -4,13 +4,14 @@
 # Gabriel C <me@gabs.eu.org>, 2023.
 # "K.B.Dharun Krishna" <kbdharunkrishna@gmail.com>, 2023.
 # Gabriel Cozma <me@gabs.eu.org>, 2023.
+# Matt C <matei.gurzu@gmail.com>, 2023.
 msgid ""
 msgstr ""
 "Project-Id-Version: apx_gui\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2023-07-05 20:14+0530\n"
-"PO-Revision-Date: 2023-07-08 14:34+0000\n"
-"Last-Translator: Gabriel Cozma <me@gabs.eu.org>\n"
+"PO-Revision-Date: 2023-07-10 13:16+0000\n"
+"Last-Translator: Matt C <matei.gurzu@gmail.com>\n"
 "Language-Team: Romanian <https://hosted.weblate.org/projects/vanilla-os/"
 "apx-gui/ro/>\n"
 "Language: ro\n"
@@ -270,7 +271,7 @@ msgstr ""
 "Florentina Mușat <florentina [dot] musat [dot] 28 [at] gmail [dot] com>, "
 "2020-2021\n"
 "Matt <github.com/mattcc23>, 2023\n"
-"Gabriel Cozma https://gabs.eu.org , 2023"
+"Gabriel Cozma <https://gabs.eu.org>, 2023"
 
 #: apx_gui/main.py:107
 msgid "Contributors"
