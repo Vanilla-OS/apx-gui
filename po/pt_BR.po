@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: apx_gui\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-07-05 20:14+0530\n"
+"POT-Creation-Date: 2023-07-10 18:39+0530\n"
 "PO-Revision-Date: 2023-07-05 18:34+0000\n"
 "Last-Translator: Fernando Lopes <118869201+plasmus777@users.noreply.github."
 "com>\n"
@@ -149,7 +149,7 @@ msgstr "Por favor aguarde enquanto a pilha é criada."
 msgid "An error occurred while creating the stack."
 msgstr "Um erro ocorreu ao criar a pilha."
 
-#: apx_gui/gtk/create-subsystem.ui:6
+#: apx_gui/gtk/create-subsystem.ui:6 apx_gui/gtk/window-main.ui:62
 msgid "New Subsystem"
 msgstr "Novo Subsistema"
 
@@ -192,6 +192,34 @@ msgstr "Exibir Atalhos"
 msgctxt "shortcut window"
 msgid "Quit"
 msgstr "Sair"
+
+#: apx_gui/gtk/help-overlay.ui:26
+#, fuzzy
+#| msgid "Create"
+msgctxt "shortcut window"
+msgid "Create"
+msgstr "Criar"
+
+#: apx_gui/gtk/help-overlay.ui:29
+#, fuzzy
+#| msgid "New Subsystem"
+msgctxt "shortcut window"
+msgid "New Subsystem"
+msgstr "Novo Subsistema"
+
+#: apx_gui/gtk/help-overlay.ui:35
+#, fuzzy
+#| msgid "New Stack"
+msgctxt "shortcut window"
+msgid "New Stack"
+msgstr "Nova Pilha"
+
+#: apx_gui/gtk/help-overlay.ui:41
+#, fuzzy
+#| msgid "New Package Manager"
+msgctxt "shortcut window"
+msgid "New Package Manager"
+msgstr "Novo Gerenciador de Pacotes"
 
 #: apx_gui/gtk/tab-pkgmanager.ui:13
 msgid "This package manager is built-in and cannot be edited or deleted."
@@ -242,19 +270,11 @@ msgstr "Reiniciar Subsistema"
 msgid "Delete Subsystem"
 msgstr "Apagar Subsistema"
 
-#: apx_gui/gtk/window-main.ui:62
-msgid "New Sub System"
-msgstr "Novo Subsistema"
-
 #: apx_gui/gtk/window-main.ui:78
 msgid "_Keyboard Shortcuts"
 msgstr "_Teclas de Atalho"
 
 #: apx_gui/gtk/window-main.ui:82
-msgid "_Quit"
-msgstr "_Sair"
-
-#: apx_gui/gtk/window-main.ui:86
 msgid "_About Apx GUI"
 msgstr "_Sobre a GUI do Apx"
 
@@ -269,3 +289,9 @@ msgstr "Colaboradores"
 #: apx_gui/main.py:113
 msgid "Tools"
 msgstr "Ferramentas"
+
+#~ msgid "New Sub System"
+#~ msgstr "Novo Subsistema"
+
+#~ msgid "_Quit"
+#~ msgstr "_Sair"

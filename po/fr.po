@@ -8,11 +8,11 @@ msgid ""
 msgstr ""
 "Project-Id-Version: apx_gui\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-07-05 20:14+0530\n"
+"POT-Creation-Date: 2023-07-10 18:39+0530\n"
 "PO-Revision-Date: 2023-07-08 14:34+0000\n"
 "Last-Translator: tachyglossues <tachyglossues@gmail.com>\n"
-"Language-Team: French <https://hosted.weblate.org/projects/vanilla-os/"
-"apx-gui/fr/>\n"
+"Language-Team: French <https://hosted.weblate.org/projects/vanilla-os/apx-"
+"gui/fr/>\n"
 "Language: fr\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -151,7 +151,7 @@ msgstr "Veuillez patienter pendant la création de la pile."
 msgid "An error occurred while creating the stack."
 msgstr "Une erreur s'est produite lors de la création de la pile."
 
-#: apx_gui/gtk/create-subsystem.ui:6
+#: apx_gui/gtk/create-subsystem.ui:6 apx_gui/gtk/window-main.ui:62
 msgid "New Subsystem"
 msgstr "Nouveau sous-système"
 
@@ -195,6 +195,34 @@ msgstr "Montrer les raccourcis"
 msgctxt "shortcut window"
 msgid "Quit"
 msgstr "Quitter"
+
+#: apx_gui/gtk/help-overlay.ui:26
+#, fuzzy
+#| msgid "Create"
+msgctxt "shortcut window"
+msgid "Create"
+msgstr "Créer"
+
+#: apx_gui/gtk/help-overlay.ui:29
+#, fuzzy
+#| msgid "New Subsystem"
+msgctxt "shortcut window"
+msgid "New Subsystem"
+msgstr "Nouveau sous-système"
+
+#: apx_gui/gtk/help-overlay.ui:35
+#, fuzzy
+#| msgid "New Stack"
+msgctxt "shortcut window"
+msgid "New Stack"
+msgstr "Nouvelle pile"
+
+#: apx_gui/gtk/help-overlay.ui:41
+#, fuzzy
+#| msgid "New Package Manager"
+msgctxt "shortcut window"
+msgid "New Package Manager"
+msgstr "Nouveau gestionnaire de paquets"
 
 #: apx_gui/gtk/tab-pkgmanager.ui:13
 msgid "This package manager is built-in and cannot be edited or deleted."
@@ -247,29 +275,21 @@ msgstr "Réinitialiser le sous-système"
 msgid "Delete Subsystem"
 msgstr "Supprimer le sous-système"
 
-#: apx_gui/gtk/window-main.ui:62
-msgid "New Sub System"
-msgstr "Nouveau sous-système"
-
 #: apx_gui/gtk/window-main.ui:78
 msgid "_Keyboard Shortcuts"
 msgstr "_Raccourcis clavier"
 
 #: apx_gui/gtk/window-main.ui:82
-msgid "_Quit"
-msgstr "_Quitter"
-
-#: apx_gui/gtk/window-main.ui:86
 msgid "_About Apx GUI"
 msgstr "_A propos de l'interface graphique d'Apx"
 
 #: apx_gui/main.py:102
 msgid "translator_credits"
 msgstr ""
-"Alain Lojewski <allomervan@gmail.com> ; Guillaume Bernard <associations"
-"@guillaume-bernard.fr> ; Adrien Plazas <kekun.plazas@laposte.net> ; Julien "
-"Humbert <julroy67@gmail.com> ; Charles Monzat <charles.monzat@free.fr> ; "
-"Thual Labart--Barnagaud <tlabartbarnagaud@protonmail.com>"
+"Alain Lojewski <allomervan@gmail.com> ; Guillaume Bernard "
+"<associations@guillaume-bernard.fr> ; Adrien Plazas <kekun.plazas@laposte."
+"net> ; Julien Humbert <julroy67@gmail.com> ; Charles Monzat <charles."
+"monzat@free.fr> ; Thual Labart--Barnagaud <tlabartbarnagaud@protonmail.com>"
 
 #: apx_gui/main.py:107
 msgid "Contributors"
@@ -278,3 +298,9 @@ msgstr "Contributeurs"
 #: apx_gui/main.py:113
 msgid "Tools"
 msgstr "Outils"
+
+#~ msgid "New Sub System"
+#~ msgstr "Nouveau sous-système"
+
+#~ msgid "_Quit"
+#~ msgstr "_Quitter"

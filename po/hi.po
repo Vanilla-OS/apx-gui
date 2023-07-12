@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: apx_gui\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-07-05 20:14+0530\n"
+"POT-Creation-Date: 2023-07-10 18:39+0530\n"
 "PO-Revision-Date: 2023-07-05 18:32+0000\n"
 "Last-Translator: \"K.B.Dharun Krishna\" <kbdharunkrishna@gmail.com>\n"
 "Language-Team: Hindi <https://hosted.weblate.org/projects/vanilla-os/apx-gui/"
@@ -149,7 +149,7 @@ msgstr "कृपया संग्रह बनने तक प्रती�
 msgid "An error occurred while creating the stack."
 msgstr "संग्रह बनाते समय एक त्रुटि उत्पन्न हुई।"
 
-#: apx_gui/gtk/create-subsystem.ui:6
+#: apx_gui/gtk/create-subsystem.ui:6 apx_gui/gtk/window-main.ui:62
 msgid "New Subsystem"
 msgstr "नया सबसिस्टम"
 
@@ -191,6 +191,34 @@ msgstr "शॉर्टकट दिखाएं"
 msgctxt "shortcut window"
 msgid "Quit"
 msgstr "छोड़ दें"
+
+#: apx_gui/gtk/help-overlay.ui:26
+#, fuzzy
+#| msgid "Create"
+msgctxt "shortcut window"
+msgid "Create"
+msgstr "बनाएं"
+
+#: apx_gui/gtk/help-overlay.ui:29
+#, fuzzy
+#| msgid "New Subsystem"
+msgctxt "shortcut window"
+msgid "New Subsystem"
+msgstr "नया सबसिस्टम"
+
+#: apx_gui/gtk/help-overlay.ui:35
+#, fuzzy
+#| msgid "New Stack"
+msgctxt "shortcut window"
+msgid "New Stack"
+msgstr "नया संग्रह"
+
+#: apx_gui/gtk/help-overlay.ui:41
+#, fuzzy
+#| msgid "New Package Manager"
+msgctxt "shortcut window"
+msgid "New Package Manager"
+msgstr "नया पैकेज मैनेजर"
 
 #: apx_gui/gtk/tab-pkgmanager.ui:13
 msgid "This package manager is built-in and cannot be edited or deleted."
@@ -240,19 +268,11 @@ msgstr "सबसिस्टम रीसेट करें"
 msgid "Delete Subsystem"
 msgstr "सबसिस्टम हटाएँ"
 
-#: apx_gui/gtk/window-main.ui:62
-msgid "New Sub System"
-msgstr "नई उप प्रणाली"
-
 #: apx_gui/gtk/window-main.ui:78
 msgid "_Keyboard Shortcuts"
 msgstr "_कुंजीपटल अल्प मार्ग"
 
 #: apx_gui/gtk/window-main.ui:82
-msgid "_Quit"
-msgstr "_छोड़ना"
-
-#: apx_gui/gtk/window-main.ui:86
 #, fuzzy
 msgid "_About Apx GUI"
 msgstr "_एपीएक्स आईडीई के बारे में"
@@ -268,6 +288,12 @@ msgstr "योगदानकर्ताओं"
 #: apx_gui/main.py:113
 msgid "Tools"
 msgstr "औजार"
+
+#~ msgid "New Sub System"
+#~ msgstr "नई उप प्रणाली"
+
+#~ msgid "_Quit"
+#~ msgstr "_छोड़ना"
 
 #~ msgid "No description"
 #~ msgstr "कोई विवरण नहीं"

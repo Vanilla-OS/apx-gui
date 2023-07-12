@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: apx_gui\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-07-05 20:14+0530\n"
+"POT-Creation-Date: 2023-07-10 18:39+0530\n"
 "PO-Revision-Date: 2023-07-08 14:34+0000\n"
 "Last-Translator: Philip Goto <philip.goto@gmail.com>\n"
 "Language-Team: Dutch <https://hosted.weblate.org/projects/vanilla-os/apx-gui/"
@@ -148,7 +148,7 @@ msgstr "Wacht even terwijl de stack wordt aangemaakt."
 msgid "An error occurred while creating the stack."
 msgstr "Er is iets misgegaan bij het aanmaken van de stack."
 
-#: apx_gui/gtk/create-subsystem.ui:6
+#: apx_gui/gtk/create-subsystem.ui:6 apx_gui/gtk/window-main.ui:62
 msgid "New Subsystem"
 msgstr "Nieuw subsysteem"
 
@@ -193,9 +193,38 @@ msgctxt "shortcut window"
 msgid "Quit"
 msgstr "Afsluiten"
 
+#: apx_gui/gtk/help-overlay.ui:26
+#, fuzzy
+#| msgid "Create"
+msgctxt "shortcut window"
+msgid "Create"
+msgstr "Aanmaken"
+
+#: apx_gui/gtk/help-overlay.ui:29
+#, fuzzy
+#| msgid "New Subsystem"
+msgctxt "shortcut window"
+msgid "New Subsystem"
+msgstr "Nieuw subsysteem"
+
+#: apx_gui/gtk/help-overlay.ui:35
+#, fuzzy
+#| msgid "New Stack"
+msgctxt "shortcut window"
+msgid "New Stack"
+msgstr "Nieuwe stack"
+
+#: apx_gui/gtk/help-overlay.ui:41
+#, fuzzy
+#| msgid "New Package Manager"
+msgctxt "shortcut window"
+msgid "New Package Manager"
+msgstr "Nieuw pakketbeheer"
+
 #: apx_gui/gtk/tab-pkgmanager.ui:13
 msgid "This package manager is built-in and cannot be edited or deleted."
-msgstr "Dit pakketbeheer is ingebouwd en kan niet worden bewerkt of verwijderd."
+msgstr ""
+"Dit pakketbeheer is ingebouwd en kan niet worden bewerkt of verwijderd."
 
 #: apx_gui/gtk/tab-pkgmanager.ui:42 apx_gui/gtk/tab-stack.ui:49
 msgid "Built-In"
@@ -241,19 +270,11 @@ msgstr "Subsysteem resetten"
 msgid "Delete Subsystem"
 msgstr "Subsysteem verwijderen"
 
-#: apx_gui/gtk/window-main.ui:62
-msgid "New Sub System"
-msgstr "Nieuw subsysteem"
-
 #: apx_gui/gtk/window-main.ui:78
 msgid "_Keyboard Shortcuts"
 msgstr "_Sneltoetsen"
 
 #: apx_gui/gtk/window-main.ui:82
-msgid "_Quit"
-msgstr "_Afsluiten"
-
-#: apx_gui/gtk/window-main.ui:86
 msgid "_About Apx GUI"
 msgstr "_Over Apx GUI"
 
@@ -268,3 +289,9 @@ msgstr "Met bijdragen van"
 #: apx_gui/main.py:113
 msgid "Tools"
 msgstr "Gereedschap"
+
+#~ msgid "New Sub System"
+#~ msgstr "Nieuw subsysteem"
+
+#~ msgid "_Quit"
+#~ msgstr "_Afsluiten"

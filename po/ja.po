@@ -6,11 +6,11 @@ msgid ""
 msgstr ""
 "Project-Id-Version: apx_gui\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-07-05 20:14+0530\n"
+"POT-Creation-Date: 2023-07-10 18:39+0530\n"
 "PO-Revision-Date: 2023-07-10 13:16+0000\n"
 "Last-Translator: azuki <ipadgoogcloud@gmail.com>\n"
-"Language-Team: Japanese <https://hosted.weblate.org/projects/vanilla-os/"
-"apx-gui/ja/>\n"
+"Language-Team: Japanese <https://hosted.weblate.org/projects/vanilla-os/apx-"
+"gui/ja/>\n"
 "Language: ja\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -148,7 +148,7 @@ msgstr "スタックが作成されるまでお待ちください。"
 msgid "An error occurred while creating the stack."
 msgstr "スタックの作成中にエラーが発生しました。"
 
-#: apx_gui/gtk/create-subsystem.ui:6
+#: apx_gui/gtk/create-subsystem.ui:6 apx_gui/gtk/window-main.ui:62
 msgid "New Subsystem"
 msgstr "新しいサブシステム"
 
@@ -191,6 +191,32 @@ msgctxt "shortcut window"
 msgid "Quit"
 msgstr ""
 
+#: apx_gui/gtk/help-overlay.ui:26
+msgctxt "shortcut window"
+msgid "Create"
+msgstr ""
+
+#: apx_gui/gtk/help-overlay.ui:29
+#, fuzzy
+#| msgid "New Subsystem"
+msgctxt "shortcut window"
+msgid "New Subsystem"
+msgstr "新しいサブシステム"
+
+#: apx_gui/gtk/help-overlay.ui:35
+#, fuzzy
+#| msgid "Stack"
+msgctxt "shortcut window"
+msgid "New Stack"
+msgstr "スタック"
+
+#: apx_gui/gtk/help-overlay.ui:41
+#, fuzzy
+#| msgid "Package Manager"
+msgctxt "shortcut window"
+msgid "New Package Manager"
+msgstr "パッケージマネージャー"
+
 #: apx_gui/gtk/tab-pkgmanager.ui:13
 msgid "This package manager is built-in and cannot be edited or deleted."
 msgstr ""
@@ -209,7 +235,8 @@ msgstr ""
 
 #: apx_gui/gtk/tab-stack.ui:13
 msgid "This stack is built-in and cannot be edited or deleted."
-msgstr "このスタックは組み込まれているため、編集または削除することはできません。"
+msgstr ""
+"このスタックは組み込まれているため、編集または削除することはできません。"
 
 #: apx_gui/gtk/tab-stack.ui:59
 msgid "Packages"
@@ -239,19 +266,11 @@ msgstr "サブシステムを初期化"
 msgid "Delete Subsystem"
 msgstr "サブシステムを削除"
 
-#: apx_gui/gtk/window-main.ui:62
-msgid "New Sub System"
-msgstr ""
-
 #: apx_gui/gtk/window-main.ui:78
 msgid "_Keyboard Shortcuts"
 msgstr ""
 
 #: apx_gui/gtk/window-main.ui:82
-msgid "_Quit"
-msgstr ""
-
-#: apx_gui/gtk/window-main.ui:86
 msgid "_About Apx GUI"
 msgstr ""
 
