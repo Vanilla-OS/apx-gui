@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: apx_gui\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-07-05 20:14+0530\n"
-"PO-Revision-Date: 2023-07-05 18:32+0000\n"
+"POT-Creation-Date: 2023-07-10 18:39+0530\n"
+"PO-Revision-Date: 2023-07-12 17:10+0000\n"
 "Last-Translator: \"K.B.Dharun Krishna\" <kbdharunkrishna@gmail.com>\n"
 "Language-Team: Polish <https://hosted.weblate.org/projects/vanilla-os/"
 "apx-gui/pl/>\n"
@@ -150,7 +150,7 @@ msgstr "Prosimy czekać dopóki stos nie zostanie utworzony."
 msgid "An error occurred while creating the stack."
 msgstr "Wystąpił błąd podczas tworzenia stosu."
 
-#: apx_gui/gtk/create-subsystem.ui:6
+#: apx_gui/gtk/create-subsystem.ui:6 apx_gui/gtk/window-main.ui:62
 msgid "New Subsystem"
 msgstr "Nowy podsystem"
 
@@ -194,6 +194,34 @@ msgstr "Pokaż skróty"
 msgctxt "shortcut window"
 msgid "Quit"
 msgstr "Wyjdź"
+
+#: apx_gui/gtk/help-overlay.ui:26
+#, fuzzy
+#| msgid "Create"
+msgctxt "shortcut window"
+msgid "Create"
+msgstr "Utwórz"
+
+#: apx_gui/gtk/help-overlay.ui:29
+#, fuzzy
+#| msgid "New Subsystem"
+msgctxt "shortcut window"
+msgid "New Subsystem"
+msgstr "Nowy podsystem"
+
+#: apx_gui/gtk/help-overlay.ui:35
+#, fuzzy
+#| msgid "New Stack"
+msgctxt "shortcut window"
+msgid "New Stack"
+msgstr "Nowy stos"
+
+#: apx_gui/gtk/help-overlay.ui:41
+#, fuzzy
+#| msgid "New Package Manager"
+msgctxt "shortcut window"
+msgid "New Package Manager"
+msgstr "Nowy menedżer pakietów"
 
 #: apx_gui/gtk/tab-pkgmanager.ui:13
 msgid "This package manager is built-in and cannot be edited or deleted."
@@ -245,26 +273,18 @@ msgstr "Resetuj podsystem"
 msgid "Delete Subsystem"
 msgstr "Usuń podsystem"
 
-#: apx_gui/gtk/window-main.ui:62
-msgid "New Sub System"
-msgstr "Nowy podsystem"
-
 #: apx_gui/gtk/window-main.ui:78
 msgid "_Keyboard Shortcuts"
 msgstr "Skróty klawiszowe (_K)"
 
 #: apx_gui/gtk/window-main.ui:82
-msgid "_Quit"
-msgstr "Wyjdź (_Q)"
-
-#: apx_gui/gtk/window-main.ui:86
 #, fuzzy
 msgid "_About Apx GUI"
 msgstr "O Apx GUI (_A)"
 
 #: apx_gui/main.py:102
 msgid "translator_credits"
-msgstr "ewm gnu.ewm@protonmail.com"
+msgstr "ewm <gnu.ewm@protonmail.com>"
 
 #: apx_gui/main.py:107
 msgid "Contributors"
@@ -273,6 +293,12 @@ msgstr "Współtwórcy"
 #: apx_gui/main.py:113
 msgid "Tools"
 msgstr "Narzędzia"
+
+#~ msgid "New Sub System"
+#~ msgstr "Nowy podsystem"
+
+#~ msgid "_Quit"
+#~ msgstr "Wyjdź (_Q)"
 
 #~ msgid "No description"
 #~ msgstr "Brak opisu"

@@ -1,22 +1,21 @@
 # SOME DESCRIPTIVE TITLE.
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the apx_gui package.
-# Philip Goto <philip.goto@gmail.com>, 2023.
-# "K.B.Dharun Krishna" <kbdharunkrishna@gmail.com>, 2023.
+# lakejason0 <sunliyuan200402@outlook.com>, 2023.
 msgid ""
 msgstr ""
 "Project-Id-Version: apx_gui\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-07-10 18:39+0530\n"
-"PO-Revision-Date: 2023-07-12 17:10+0000\n"
-"Last-Translator: \"K.B.Dharun Krishna\" <kbdharunkrishna@gmail.com>\n"
-"Language-Team: Dutch <https://hosted.weblate.org/projects/vanilla-os/apx-gui/"
-"nl/>\n"
-"Language: nl\n"
+"POT-Creation-Date: 2023-07-05 20:14+0530\n"
+"PO-Revision-Date: 2023-07-08 14:34+0000\n"
+"Last-Translator: lakejason0 <sunliyuan200402@outlook.com>\n"
+"Language-Team: Chinese (Traditional) <https://hosted.weblate.org/projects/"
+"vanilla-os/apx-gui/zh_Hant/>\n"
+"Language: zh_Hant\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
 "X-Generator: Weblate 5.0-dev\n"
 
 #: data/org.vanillaos.ApxGUI.desktop.in:3
@@ -25,274 +24,265 @@ msgstr "Apx"
 
 #: data/org.vanillaos.ApxGUI.appdata.xml.in:7
 msgid "A frontend in GTK 4 and Libadwaita for Apx."
-msgstr "Een front-end voor Apx ontwikkeld met GTK 4 en libAdwaita."
+msgstr "Apx 的 GTK 4 及 libadwaita 前端。"
 
 #: apx_gui/gtk/create-pkgmanager.ui:6 apx_gui/gtk/window-main.ui:70
 msgid "New Package Manager"
-msgstr "Nieuw pakketbeheer"
+msgstr "新增軟體包管理器"
 
 #: apx_gui/gtk/create-pkgmanager.ui:23 apx_gui/gtk/create-stack.ui:23
 #: apx_gui/gtk/create-subsystem.ui:23
 msgid "Cancel"
-msgstr "Annuleren"
+msgstr "取消"
 
 #: apx_gui/gtk/create-pkgmanager.ui:28 apx_gui/gtk/create-stack.ui:28
 #: apx_gui/gtk/create-subsystem.ui:28
 msgid "Create"
-msgstr "Aanmaken"
+msgstr "建立"
 
 #: apx_gui/gtk/create-pkgmanager.ui:41 apx_gui/gtk/tab-pkgmanager.ui:24
 #: apx_gui/gtk/tab-stack.ui:24
 msgid "Details"
-msgstr "Details"
+msgstr "詳細資訊"
 
 #: apx_gui/gtk/create-pkgmanager.ui:44 apx_gui/gtk/create-stack.ui:44
 #: apx_gui/gtk/create-subsystem.ui:44
 msgid "Name"
-msgstr "Naam"
+msgstr "名稱"
 
 #: apx_gui/gtk/create-pkgmanager.ui:49 apx_gui/gtk/tab-pkgmanager.ui:27
 msgid "Need Sudo"
-msgstr "Root-rechten vereist"
+msgstr "需要 sudo"
 
 #: apx_gui/gtk/create-pkgmanager.ui:70
 msgid "Commands"
-msgstr "Opdrachten"
+msgstr "命令"
 
 #: apx_gui/gtk/create-pkgmanager.ui:73 apx_gui/gtk/tab-pkgmanager.ui:57
 msgid "Autoremove"
-msgstr "Niet-gebruikte afhankelijkheden verwijderen (autoremove)"
+msgstr "自動移除"
 
 #: apx_gui/gtk/create-pkgmanager.ui:78 apx_gui/gtk/tab-pkgmanager.ui:63
 msgid "Clean"
-msgstr "Opschonen (clean)"
+msgstr "清理"
 
 #: apx_gui/gtk/create-pkgmanager.ui:83 apx_gui/gtk/tab-pkgmanager.ui:69
 msgid "Install"
-msgstr "Installeren (install)"
+msgstr "安裝"
 
 #: apx_gui/gtk/create-pkgmanager.ui:88 apx_gui/gtk/tab-pkgmanager.ui:75
 msgid "List"
-msgstr "Opsommen (list)"
+msgstr "列出"
 
 #: apx_gui/gtk/create-pkgmanager.ui:93 apx_gui/gtk/tab-pkgmanager.ui:81
 msgid "Purge"
-msgstr "Verwijderen inclusief configuratiebestanden (purge)"
+msgstr "清除（Purge）"
 
 #: apx_gui/gtk/create-pkgmanager.ui:98 apx_gui/gtk/tab-pkgmanager.ui:87
 msgid "Remove"
-msgstr "Verwijderen (remove)"
+msgstr "移除"
 
 #: apx_gui/gtk/create-pkgmanager.ui:103 apx_gui/gtk/tab-pkgmanager.ui:93
 msgid "Search"
-msgstr "Zoeken (search)"
+msgstr "搜尋"
 
 #: apx_gui/gtk/create-pkgmanager.ui:108 apx_gui/gtk/tab-pkgmanager.ui:99
 msgid "Show"
-msgstr "Details (show)"
+msgstr "顯示"
 
 #: apx_gui/gtk/create-pkgmanager.ui:113 apx_gui/gtk/tab-pkgmanager.ui:105
 msgid "Update"
-msgstr "Verversen (update)"
+msgstr "更新"
 
 #: apx_gui/gtk/create-pkgmanager.ui:118 apx_gui/gtk/tab-pkgmanager.ui:111
 msgid "Upgrade"
-msgstr "Bijwerken (upgrade)"
+msgstr "升級"
 
 #: apx_gui/gtk/create-pkgmanager.ui:144
 msgid "Creating Package Manager…"
-msgstr "Pakketbeheer aanmaken…"
+msgstr "正在建立軟體包管理器…"
 
 #: apx_gui/gtk/create-pkgmanager.ui:145
 msgid "Please wait while the package manager is being created."
-msgstr "Wacht even terwijl het pakketbeheer wordt aangemaakt."
+msgstr "正在建立軟體包管理器，請稍候。"
 
 #: apx_gui/gtk/create-pkgmanager.ui:169
 msgid "An Error Occurred"
-msgstr "Er is een fout opgetreden"
+msgstr "發生錯誤"
 
 #: apx_gui/gtk/create-pkgmanager.ui:170
 msgid "An error occurred while creating the package manager."
-msgstr "Er is een fout opgetreden bij het aanmaken van het pakketbeheer."
+msgstr "建立軟體包管理器時出錯。"
 
 #: apx_gui/gtk/create-pkgmanager.ui:174 apx_gui/gtk/create-stack.ui:148
 #: apx_gui/gtk/create-subsystem.ui:108
 msgid "Close"
-msgstr "Sluiten"
+msgstr "關閉"
 
 #: apx_gui/gtk/create-stack.ui:6 apx_gui/gtk/window-main.ui:66
 msgid "New Stack"
-msgstr "Nieuwe stack"
+msgstr "新增包捆"
 
 #: apx_gui/gtk/create-stack.ui:49 apx_gui/gtk/tab-stack.ui:27
 msgid "Base"
-msgstr "Basis"
+msgstr "基礎映像"
 
 #: apx_gui/gtk/create-stack.ui:54 apx_gui/gtk/tab-stack.ui:38
 #: apx_gui/gtk/tab-subsystem.ui:29
 msgid "Package Manager"
-msgstr "Pakketbeheer"
+msgstr "軟體包管理器"
 
 #: apx_gui/gtk/create-stack.ui:80
 msgid "Add Package"
-msgstr "Pakket toevoegen"
+msgstr "加入軟體包"
 
 #: apx_gui/gtk/create-stack.ui:92
 msgid "New Package"
-msgstr "Nieuw pakket"
+msgstr "新增軟體包"
 
 #: apx_gui/gtk/create-stack.ui:119
 msgid "Please wait while the stack is being created."
-msgstr "Wacht even terwijl de stack wordt aangemaakt."
+msgstr "正在建立包捆，請稍候。"
 
 #: apx_gui/gtk/create-stack.ui:144
 msgid "An error occurred while creating the stack."
-msgstr "Er is iets misgegaan bij het aanmaken van de stack."
+msgstr "建立包捆時發生錯誤。"
 
 #: apx_gui/gtk/create-subsystem.ui:6 apx_gui/gtk/window-main.ui:62
 msgid "New Subsystem"
-msgstr "Nieuw subsysteem"
+msgstr "新增子系統"
 
 #: apx_gui/gtk/create-subsystem.ui:49 apx_gui/gtk/tab-subsystem.ui:19
 msgid "Stack"
-msgstr "Stack"
+msgstr "包捆"
 
 #: apx_gui/gtk/create-subsystem.ui:78
 msgid "Creating Subsystem…"
-msgstr "Subsysteem aanmaken…"
+msgstr "正在建立子系統…"
 
 #: apx_gui/gtk/create-subsystem.ui:79
 msgid "Please wait while the subsystem is being created."
-msgstr "Wacht even terwijl het subsysteem wordt aangemaakt."
+msgstr "正在建立子系統，請稍候。"
 
 #: apx_gui/gtk/create-subsystem.ui:104
 msgid "An error occurred while creating the subsystem."
-msgstr "Er is een fout opgetreden bij het aanmaken van het subsysteem."
+msgstr "建立子系統時發生錯誤。"
 
 #: apx_gui/gtk/editor.ui:12
 msgid "Start or Open a Subsystem"
-msgstr "Subsysteem starten of openen"
+msgstr "啟動或開啟子系統"
 
 #: apx_gui/gtk/editor.ui:13
 msgid "Start by opening a subsystem, stack or package manager on the left."
-msgstr ""
-"Begin met het openen van een subsysteem, stack of pakketbeheer aan de "
-"linkerzijde."
+msgstr "要開始，請開啟左側的子系統、包捆或是軟體包管理器。"
 
 #: apx_gui/gtk/help-overlay.ui:11
 msgctxt "shortcut window"
 msgid "General"
-msgstr "Algemeen"
+msgstr "一般"
 
 #: apx_gui/gtk/help-overlay.ui:14
 msgctxt "shortcut window"
 msgid "Show Shortcuts"
-msgstr "Sneltoetsen tonen"
+msgstr "顯示快速鍵"
 
 #: apx_gui/gtk/help-overlay.ui:20
 msgctxt "shortcut window"
 msgid "Quit"
-msgstr "Afsluiten"
-
-#: apx_gui/gtk/help-overlay.ui:26
-#, fuzzy
-#| msgid "Create"
-msgctxt "shortcut window"
-msgid "Create"
-msgstr "Aanmaken"
-
-#: apx_gui/gtk/help-overlay.ui:29
-#, fuzzy
-#| msgid "New Subsystem"
-msgctxt "shortcut window"
-msgid "New Subsystem"
-msgstr "Nieuw subsysteem"
-
-#: apx_gui/gtk/help-overlay.ui:35
-#, fuzzy
-#| msgid "New Stack"
-msgctxt "shortcut window"
-msgid "New Stack"
-msgstr "Nieuwe stack"
-
-#: apx_gui/gtk/help-overlay.ui:41
-#, fuzzy
-#| msgid "New Package Manager"
-msgctxt "shortcut window"
-msgid "New Package Manager"
-msgstr "Nieuw pakketbeheer"
+msgstr "離開"
 
 #: apx_gui/gtk/tab-pkgmanager.ui:13
 msgid "This package manager is built-in and cannot be edited or deleted."
-msgstr ""
-"Dit pakketbeheer is ingebouwd en kan niet worden bewerkt of verwijderd."
+msgstr "此軟體包管理器為內建，無法編輯或是刪除。"
 
 #: apx_gui/gtk/tab-pkgmanager.ui:42 apx_gui/gtk/tab-stack.ui:49
 msgid "Built-In"
-msgstr "Ingebouwd"
+msgstr "內建"
 
 #: apx_gui/gtk/tab-pkgmanager.ui:119 apx_gui/gtk/tab-stack.ui:71
 msgid "Destructive Actions"
-msgstr "Destructieve acties"
+msgstr "破壞性操作"
 
 #: apx_gui/gtk/tab-pkgmanager.ui:122
 msgid "Delete Package Manager"
-msgstr "Pakketbeheer verwijderen"
+msgstr "刪除軟體包管理器"
 
 #: apx_gui/gtk/tab-stack.ui:13
 msgid "This stack is built-in and cannot be edited or deleted."
-msgstr "Deze stack is ingebouwd en kan niet worden bewerkt of verwijderd."
+msgstr "此包捆為內建，無法編輯或是刪除。"
 
 #: apx_gui/gtk/tab-stack.ui:59
 msgid "Packages"
-msgstr "Pakketten"
+msgstr "軟體包"
 
 #: apx_gui/gtk/tab-stack.ui:74
 msgid "Delete Stack"
-msgstr "Stack verwijderen"
+msgstr "刪除包捆"
 
 #: apx_gui/gtk/tab-subsystem.ui:9
 msgid "Status"
-msgstr "Status"
+msgstr "狀態"
 
 #: apx_gui/gtk/tab-subsystem.ui:53
 msgid "Open Console"
-msgstr "Console openen"
+msgstr "開啟主控台"
 
 #: apx_gui/gtk/tab-subsystem.ui:54
 msgid "Enter a console in this subsystem's environment."
-msgstr "Treed een console binnen in de omgeving van dit subsysteem."
+msgstr "進入此子系統環境的主控台。"
 
 #: apx_gui/gtk/tab-subsystem.ui:74
 msgid "Reset Subsystem"
-msgstr "Subsysteem resetten"
+msgstr "重設子系統"
 
 #: apx_gui/gtk/tab-subsystem.ui:89
 msgid "Delete Subsystem"
-msgstr "Subsysteem verwijderen"
+msgstr "刪除子系統"
+
+#: apx_gui/gtk/window-main.ui:62
+msgid "New Sub System"
+msgstr ""
 
 #: apx_gui/gtk/window-main.ui:78
 msgid "_Keyboard Shortcuts"
-msgstr "Sneltoetsen (_K)"
+msgstr "鍵盤快速鍵(_K)"
+
+#: apx_gui/gtk/window-main.ui:82
+msgid "_Quit"
+msgstr ""
 
 #: apx_gui/gtk/window-main.ui:82
 msgid "_About Apx GUI"
-msgstr "Over Apx GUI (_A)"
+msgstr "關於 Apx GUI (_A)"
 
 #: apx_gui/main.py:102
 msgid "translator_credits"
-msgstr "Philip Goto https://philipgoto.nl"
+msgstr "lakejason0 <lakesarchive@outlook.com>"
 
 #: apx_gui/main.py:107
 msgid "Contributors"
-msgstr "Met bijdragen van"
+msgstr "貢獻者"
 
 #: apx_gui/main.py:113
 msgid "Tools"
-msgstr "Gereedschap"
+msgstr "工具"
 
-#~ msgid "New Sub System"
-#~ msgstr "Nieuw subsysteem"
+#: apx_gui/gtk/help-overlay.ui:26
+msgctxt "shortcut window"
+msgid "Create"
+msgstr "建立"
 
-#~ msgid "_Quit"
-#~ msgstr "_Afsluiten"
+#: apx_gui/gtk/help-overlay.ui:29
+msgctxt "shortcut window"
+msgid "New Subsystem"
+msgstr "新增子系統"
+
+#: apx_gui/gtk/help-overlay.ui:35
+msgctxt "shortcut window"
+msgid "New Stack"
+msgstr "新增包捆"
+
+#: apx_gui/gtk/help-overlay.ui:41
+msgctxt "shortcut window"
+msgid "New Package Manager"
+msgstr "新增軟體包管理器"

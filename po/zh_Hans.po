@@ -149,7 +149,7 @@ msgstr "正在创建包捆，请稍候。"
 msgid "An error occurred while creating the stack."
 msgstr "创建包捆时发生错误。"
 
-#: apx_gui/gtk/create-subsystem.ui:6
+#: apx_gui/gtk/create-subsystem.ui:6 apx_gui/gtk/window-main.ui:62
 msgid "New Subsystem"
 msgstr "新建子系统"
 
@@ -252,7 +252,7 @@ msgstr "键盘快捷键(_K)"
 msgid "_Quit"
 msgstr "退出(_Q)"
 
-#: apx_gui/gtk/window-main.ui:86
+#: apx_gui/gtk/window-main.ui:86 apx_gui/gtk/window-main.ui:82
 msgid "_About Apx GUI"
 msgstr "关于 Apx GUI (_A)"
 
@@ -267,6 +267,26 @@ msgstr "贡献者"
 #: apx_gui/main.py:113
 msgid "Tools"
 msgstr "工具"
+
+#: apx_gui/gtk/help-overlay.ui:26
+msgctxt "shortcut window"
+msgid "Create"
+msgstr "创建"
+
+#: apx_gui/gtk/help-overlay.ui:29
+msgctxt "shortcut window"
+msgid "New Subsystem"
+msgstr "新建子系统"
+
+#: apx_gui/gtk/help-overlay.ui:35
+msgctxt "shortcut window"
+msgid "New Stack"
+msgstr "新建包捆"
+
+#: apx_gui/gtk/help-overlay.ui:41
+msgctxt "shortcut window"
+msgid "New Package Manager"
+msgstr "新建软件包管理器"
 
 #~ msgid "No description"
 #~ msgstr "没有说明"

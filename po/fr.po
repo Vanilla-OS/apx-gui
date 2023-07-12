@@ -3,13 +3,15 @@
 # This file is distributed under the same license as the apx_gui package.
 # Sami <mappygpsfree@gmail.com>, 2023.
 # Thual LABART--BARNAGAUD <tlabartbarnagaud@protonmail.com>, 2023.
+# tachyglossues <tachyglossues@gmail.com>, 2023.
+# "K.B.Dharun Krishna" <kbdharunkrishna@gmail.com>, 2023.
 msgid ""
 msgstr ""
 "Project-Id-Version: apx_gui\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-07-05 20:14+0530\n"
-"PO-Revision-Date: 2023-07-05 18:34+0000\n"
-"Last-Translator: Thual LABART--BARNAGAUD <tlabartbarnagaud@protonmail.com>\n"
+"POT-Creation-Date: 2023-07-10 18:39+0530\n"
+"PO-Revision-Date: 2023-07-12 17:10+0000\n"
+"Last-Translator: \"K.B.Dharun Krishna\" <kbdharunkrishna@gmail.com>\n"
 "Language-Team: French <https://hosted.weblate.org/projects/vanilla-os/"
 "apx-gui/fr/>\n"
 "Language: fr\n"
@@ -76,7 +78,6 @@ msgid "List"
 msgstr "Lister"
 
 #: apx_gui/gtk/create-pkgmanager.ui:93 apx_gui/gtk/tab-pkgmanager.ui:81
-#, fuzzy
 msgid "Purge"
 msgstr "Effacer"
 
@@ -151,7 +152,7 @@ msgstr "Veuillez patienter pendant la création de la pile."
 msgid "An error occurred while creating the stack."
 msgstr "Une erreur s'est produite lors de la création de la pile."
 
-#: apx_gui/gtk/create-subsystem.ui:6
+#: apx_gui/gtk/create-subsystem.ui:6 apx_gui/gtk/window-main.ui:62
 msgid "New Subsystem"
 msgstr "Nouveau sous-système"
 
@@ -196,6 +197,34 @@ msgctxt "shortcut window"
 msgid "Quit"
 msgstr "Quitter"
 
+#: apx_gui/gtk/help-overlay.ui:26
+#, fuzzy
+#| msgid "Create"
+msgctxt "shortcut window"
+msgid "Create"
+msgstr "Créer"
+
+#: apx_gui/gtk/help-overlay.ui:29
+#, fuzzy
+#| msgid "New Subsystem"
+msgctxt "shortcut window"
+msgid "New Subsystem"
+msgstr "Nouveau sous-système"
+
+#: apx_gui/gtk/help-overlay.ui:35
+#, fuzzy
+#| msgid "New Stack"
+msgctxt "shortcut window"
+msgid "New Stack"
+msgstr "Nouvelle pile"
+
+#: apx_gui/gtk/help-overlay.ui:41
+#, fuzzy
+#| msgid "New Package Manager"
+msgctxt "shortcut window"
+msgid "New Package Manager"
+msgstr "Nouveau gestionnaire de paquets"
+
 #: apx_gui/gtk/tab-pkgmanager.ui:13
 msgid "This package manager is built-in and cannot be edited or deleted."
 msgstr ""
@@ -203,7 +232,6 @@ msgstr ""
 "ni supprimé."
 
 #: apx_gui/gtk/tab-pkgmanager.ui:42 apx_gui/gtk/tab-stack.ui:49
-#, fuzzy
 msgid "Built-In"
 msgstr "Intégré au système"
 
@@ -248,29 +276,17 @@ msgstr "Réinitialiser le sous-système"
 msgid "Delete Subsystem"
 msgstr "Supprimer le sous-système"
 
-#: apx_gui/gtk/window-main.ui:62
-msgid "New Sub System"
-msgstr "Nouveau sous-système"
-
 #: apx_gui/gtk/window-main.ui:78
 msgid "_Keyboard Shortcuts"
-msgstr "_Raccourcis clavier"
+msgstr "Raccourcis clavier (_K)"
 
 #: apx_gui/gtk/window-main.ui:82
-msgid "_Quit"
-msgstr "_Quitter"
-
-#: apx_gui/gtk/window-main.ui:86
 msgid "_About Apx GUI"
 msgstr "_A propos de l'interface graphique d'Apx"
 
 #: apx_gui/main.py:102
 msgid "translator_credits"
-msgstr ""
-"Alain Lojewski <allomervan@gmail.com> ; Guillaume Bernard <associations"
-"@guillaume-bernard.fr> ; Adrien Plazas <kekun.plazas@laposte.net> ; Julien "
-"Humbert <julroy67@gmail.com> ; Charles Monzat <charles.monzat@free.fr> ; "
-"Thual Labart--Barnagaud <tlabartbarnagaud@protonmail.com>"
+msgstr "Thual Labart--Barnagaud <tlabartbarnagaud@protonmail.com>"
 
 #: apx_gui/main.py:107
 msgid "Contributors"
@@ -279,3 +295,9 @@ msgstr "Contributeurs"
 #: apx_gui/main.py:113
 msgid "Tools"
 msgstr "Outils"
+
+#~ msgid "New Sub System"
+#~ msgstr "Nouveau sous-système"
+
+#~ msgid "_Quit"
+#~ msgstr "_Quitter"
