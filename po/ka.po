@@ -8,10 +8,10 @@ msgstr ""
 "Project-Id-Version: apx_gui\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2023-07-10 18:39+0530\n"
-"PO-Revision-Date: 2023-07-05 18:32+0000\n"
-"Last-Translator: \"K.B.Dharun Krishna\" <kbdharunkrishna@gmail.com>\n"
-"Language-Team: Georgian <https://hosted.weblate.org/projects/vanilla-os/apx-"
-"gui/ka/>\n"
+"PO-Revision-Date: 2023-07-16 04:32+0000\n"
+"Last-Translator: Temuri Doghonadze <temuri.doghonadze@gmail.com>\n"
+"Language-Team: Georgian <https://hosted.weblate.org/projects/vanilla-os/"
+"apx-gui/ka/>\n"
 "Language: ka\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -25,7 +25,7 @@ msgstr "Apx"
 
 #: data/org.vanillaos.ApxGUI.appdata.xml.in:7
 msgid "A frontend in GTK 4 and Libadwaita for Apx."
-msgstr ""
+msgstr "Apx-ის GTK4-ით და Libadwaita-ით დაწერილი წინაბოლო."
 
 #: apx_gui/gtk/create-pkgmanager.ui:6 apx_gui/gtk/window-main.ui:70
 msgid "New Package Manager"
@@ -34,7 +34,7 @@ msgstr "ახალი პაკეტების მმართველი"
 #: apx_gui/gtk/create-pkgmanager.ui:23 apx_gui/gtk/create-stack.ui:23
 #: apx_gui/gtk/create-subsystem.ui:23
 msgid "Cancel"
-msgstr "გაუქმენა"
+msgstr "გაუქმება"
 
 #: apx_gui/gtk/create-pkgmanager.ui:28 apx_gui/gtk/create-stack.ui:28
 #: apx_gui/gtk/create-subsystem.ui:28
@@ -57,7 +57,7 @@ msgstr "სჭირდება sudo"
 
 #: apx_gui/gtk/create-pkgmanager.ui:70
 msgid "Commands"
-msgstr ""
+msgstr "ბრძანებები"
 
 #: apx_gui/gtk/create-pkgmanager.ui:73 apx_gui/gtk/tab-pkgmanager.ui:57
 msgid "Autoremove"
@@ -101,11 +101,11 @@ msgstr "განახლება"
 
 #: apx_gui/gtk/create-pkgmanager.ui:144
 msgid "Creating Package Manager…"
-msgstr ""
+msgstr "მიმდინარეობს პაკეტების მმართველის შექმნა…"
 
 #: apx_gui/gtk/create-pkgmanager.ui:145
 msgid "Please wait while the package manager is being created."
-msgstr ""
+msgstr "მოითმინეთ, მიმდინარეობს პაკეტების მმართველის შექმნა."
 
 #: apx_gui/gtk/create-pkgmanager.ui:169
 msgid "An Error Occurred"
@@ -113,7 +113,7 @@ msgstr "შეცდომა"
 
 #: apx_gui/gtk/create-pkgmanager.ui:170
 msgid "An error occurred while creating the package manager."
-msgstr ""
+msgstr "შეცდომა პაკეტების მმართველის შექმნისას."
 
 #: apx_gui/gtk/create-pkgmanager.ui:174 apx_gui/gtk/create-stack.ui:148
 #: apx_gui/gtk/create-subsystem.ui:108
@@ -143,11 +143,11 @@ msgstr "ახალი პაკეტი"
 
 #: apx_gui/gtk/create-stack.ui:119
 msgid "Please wait while the stack is being created."
-msgstr ""
+msgstr "მოითმინეთ, მიმდინარეობს სტეკის შექმნა."
 
 #: apx_gui/gtk/create-stack.ui:144
 msgid "An error occurred while creating the stack."
-msgstr ""
+msgstr "შეცდომა სტეკის შექმნისას."
 
 #: apx_gui/gtk/create-subsystem.ui:6 apx_gui/gtk/window-main.ui:62
 msgid "New Subsystem"
@@ -163,19 +163,20 @@ msgstr "ქვესისტემის შექმნა…"
 
 #: apx_gui/gtk/create-subsystem.ui:79
 msgid "Please wait while the subsystem is being created."
-msgstr ""
+msgstr "მოითმინეთ, მიმდინარეობს ქვესისტემის შექმნა."
 
 #: apx_gui/gtk/create-subsystem.ui:104
 msgid "An error occurred while creating the subsystem."
-msgstr ""
+msgstr "შეცდომა ქვესისტემის შექმნისას."
 
 #: apx_gui/gtk/editor.ui:12
 msgid "Start or Open a Subsystem"
-msgstr ""
+msgstr "ქვესისტემის გახსნა ან გაშვება"
 
 #: apx_gui/gtk/editor.ui:13
 msgid "Start by opening a subsystem, stack or package manager on the left."
 msgstr ""
+"დაიწყეთ მარცხენა მხარეს ქვესისტემის, სტეკის ან პაკეტების მმართველის გახსნით."
 
 #: apx_gui/gtk/help-overlay.ui:11
 msgctxt "shortcut window"
@@ -190,32 +191,24 @@ msgstr "მალსახმობების ჩვენება"
 #: apx_gui/gtk/help-overlay.ui:20
 msgctxt "shortcut window"
 msgid "Quit"
-msgstr "დატოვება"
+msgstr "გასვლა"
 
 #: apx_gui/gtk/help-overlay.ui:26
-#, fuzzy
-#| msgid "Create"
 msgctxt "shortcut window"
 msgid "Create"
 msgstr "შექმნა"
 
 #: apx_gui/gtk/help-overlay.ui:29
-#, fuzzy
-#| msgid "New Subsystem"
 msgctxt "shortcut window"
 msgid "New Subsystem"
 msgstr "ახალი ქვესისტემა"
 
 #: apx_gui/gtk/help-overlay.ui:35
-#, fuzzy
-#| msgid "New Stack"
 msgctxt "shortcut window"
 msgid "New Stack"
 msgstr "ახალი დასტა"
 
 #: apx_gui/gtk/help-overlay.ui:41
-#, fuzzy
-#| msgid "New Package Manager"
 msgctxt "shortcut window"
 msgid "New Package Manager"
 msgstr "ახალი პაკეტების მმართველი"
@@ -223,6 +216,7 @@ msgstr "ახალი პაკეტების მმართველი"
 #: apx_gui/gtk/tab-pkgmanager.ui:13
 msgid "This package manager is built-in and cannot be edited or deleted."
 msgstr ""
+"ეს პაკეტების მმართველი ჩაშენებულია და მისი ჩასწორება და წაშლა შეუძლებელია."
 
 #: apx_gui/gtk/tab-pkgmanager.ui:42 apx_gui/gtk/tab-stack.ui:49
 msgid "Built-In"
@@ -230,15 +224,15 @@ msgstr "ჩაშენებული"
 
 #: apx_gui/gtk/tab-pkgmanager.ui:119 apx_gui/gtk/tab-stack.ui:71
 msgid "Destructive Actions"
-msgstr ""
+msgstr "დესტრუქციული ქმედებები"
 
 #: apx_gui/gtk/tab-pkgmanager.ui:122
 msgid "Delete Package Manager"
-msgstr ""
+msgstr "პაკეტების მმართველის წაშლა"
 
 #: apx_gui/gtk/tab-stack.ui:13
 msgid "This stack is built-in and cannot be edited or deleted."
-msgstr ""
+msgstr "ეს სტეკი ჩაშენებულია და მისი ჩასწორება ან წაშლა შეუძლებელია."
 
 #: apx_gui/gtk/tab-stack.ui:59
 msgid "Packages"
@@ -246,7 +240,7 @@ msgstr "პაკეტები"
 
 #: apx_gui/gtk/tab-stack.ui:74
 msgid "Delete Stack"
-msgstr "დასტის წაშლა"
+msgstr "სტეკის წაშლა"
 
 #: apx_gui/gtk/tab-subsystem.ui:9
 msgid "Status"
@@ -258,23 +252,23 @@ msgstr "კონსოლის გახსნა"
 
 #: apx_gui/gtk/tab-subsystem.ui:54
 msgid "Enter a console in this subsystem's environment."
-msgstr ""
+msgstr "ამ ქვესისტემის გარემოში კონსოლში შესვლა."
 
 #: apx_gui/gtk/tab-subsystem.ui:74
 msgid "Reset Subsystem"
-msgstr ""
+msgstr "ქვესისტემის გადატვირთვა"
 
 #: apx_gui/gtk/tab-subsystem.ui:89
 msgid "Delete Subsystem"
-msgstr ""
+msgstr "ქვესისტემის წაშლა"
 
 #: apx_gui/gtk/window-main.ui:78
 msgid "_Keyboard Shortcuts"
-msgstr ""
+msgstr "_კლავიატურის მალსახმობები"
 
 #: apx_gui/gtk/window-main.ui:82
 msgid "_About Apx GUI"
-msgstr ""
+msgstr "_Apx GUI-ის შესახებ"
 
 #: apx_gui/main.py:102
 msgid "translator_credits"
