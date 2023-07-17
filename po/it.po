@@ -3,14 +3,14 @@
 # This file is distributed under the same license as the apx_gui package.
 # EncryptedEasty <c.zullo08@gmail.com>, 2023.
 # EncryptedEasty <95353984+EncryptedEasty@users.noreply.github.com>, 2023.
+# Fedorov Alexei <aleksejfedorov963@gmail.com>, 2023.
 msgid ""
 msgstr ""
 "Project-Id-Version: apx_gui\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2023-07-10 18:39+0530\n"
-"PO-Revision-Date: 2023-07-17 19:43+0000\n"
-"Last-Translator: EncryptedEasty <95353984+EncryptedEasty@users.noreply.github"
-".com>\n"
+"PO-Revision-Date: 2023-07-18 20:04+0000\n"
+"Last-Translator: Fedorov Alexei <aleksejfedorov963@gmail.com>\n"
 "Language-Team: Italian <https://hosted.weblate.org/projects/vanilla-os/"
 "apx-gui/it/>\n"
 "Language: it\n"
@@ -268,11 +268,11 @@ msgstr "Elimina il Sottosistema"
 
 #: apx_gui/gtk/window-main.ui:78
 msgid "_Keyboard Shortcuts"
-msgstr "_Scorciatoie da Tastiera"
+msgstr "Scorciatoie da Tastiera (_K)"
 
 #: apx_gui/gtk/window-main.ui:82
 msgid "_About Apx GUI"
-msgstr "_Informazione su Apx GUI"
+msgstr "Informazione su Apx GUI (_A)"
 
 #: apx_gui/main.py:102
 msgid "translator_credits"
