@@ -8,8 +8,9 @@ msgstr ""
 "Project-Id-Version: apx_gui\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2023-07-10 18:39+0530\n"
-"PO-Revision-Date: 2023-07-12 17:10+0000\n"
-"Last-Translator: \"K.B.Dharun Krishna\" <kbdharunkrishna@gmail.com>\n"
+"PO-Revision-Date: 2023-07-17 19:43+0000\n"
+"Last-Translator: Fernando Lopes <118869201+plasmus777@users.noreply.github."
+"com>\n"
 "Language-Team: Portuguese (Brazil) <https://hosted.weblate.org/projects/"
 "vanilla-os/apx-gui/pt_BR/>\n"
 "Language: pt_BR\n"
@@ -194,29 +195,21 @@ msgid "Quit"
 msgstr "Sair"
 
 #: apx_gui/gtk/help-overlay.ui:26
-#, fuzzy
-#| msgid "Create"
 msgctxt "shortcut window"
 msgid "Create"
 msgstr "Criar"
 
 #: apx_gui/gtk/help-overlay.ui:29
-#, fuzzy
-#| msgid "New Subsystem"
 msgctxt "shortcut window"
 msgid "New Subsystem"
 msgstr "Novo Subsistema"
 
 #: apx_gui/gtk/help-overlay.ui:35
-#, fuzzy
-#| msgid "New Stack"
 msgctxt "shortcut window"
 msgid "New Stack"
 msgstr "Nova Pilha"
 
 #: apx_gui/gtk/help-overlay.ui:41
-#, fuzzy
-#| msgid "New Package Manager"
 msgctxt "shortcut window"
 msgid "New Package Manager"
 msgstr "Novo Gerenciador de Pacotes"
@@ -272,11 +265,11 @@ msgstr "Apagar Subsistema"
 
 #: apx_gui/gtk/window-main.ui:78
 msgid "_Keyboard Shortcuts"
-msgstr "Teclas de Atalho (_K)"
+msgstr "_Teclas de Atalho"
 
 #: apx_gui/gtk/window-main.ui:82
 msgid "_About Apx GUI"
-msgstr "Sobre a GUI do Apx (_A)"
+msgstr "_Sobre a GUI do Apx"
 
 #: apx_gui/main.py:102
 msgid "translator_credits"
