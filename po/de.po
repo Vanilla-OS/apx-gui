@@ -3,13 +3,14 @@
 # This file is distributed under the same license as the apx_gui package.
 # Ettore Atalan <atalanttore@googlemail.com>, 2023.
 # "K.B.Dharun Krishna" <kbdharunkrishna@gmail.com>, 2023.
+# nautilusx <translate@disroot.org>, 2023.
 msgid ""
 msgstr ""
 "Project-Id-Version: apx_gui\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2023-07-10 18:39+0530\n"
-"PO-Revision-Date: 2023-07-12 17:10+0000\n"
-"Last-Translator: \"K.B.Dharun Krishna\" <kbdharunkrishna@gmail.com>\n"
+"PO-Revision-Date: 2023-07-20 09:07+0000\n"
+"Last-Translator: nautilusx <translate@disroot.org>\n"
 "Language-Team: German <https://hosted.weblate.org/projects/vanilla-os/"
 "apx-gui/de/>\n"
 "Language: de\n"
@@ -25,7 +26,7 @@ msgstr "Apx"
 
 #: data/org.vanillaos.ApxGUI.appdata.xml.in:7
 msgid "A frontend in GTK 4 and Libadwaita for Apx."
-msgstr ""
+msgstr "Ein Frontend in GTK 4 und Libadwaita für Apx."
 
 #: apx_gui/gtk/create-pkgmanager.ui:6 apx_gui/gtk/window-main.ui:70
 msgid "New Package Manager"
@@ -187,7 +188,7 @@ msgstr "Allgemein"
 #: apx_gui/gtk/help-overlay.ui:14
 msgctxt "shortcut window"
 msgid "Show Shortcuts"
-msgstr ""
+msgstr "Tastenkombinationen anzeigen"
 
 #: apx_gui/gtk/help-overlay.ui:20
 msgctxt "shortcut window"
@@ -195,29 +196,21 @@ msgid "Quit"
 msgstr "Beenden"
 
 #: apx_gui/gtk/help-overlay.ui:26
-#, fuzzy
-#| msgid "Create"
 msgctxt "shortcut window"
 msgid "Create"
 msgstr "Erstellen"
 
 #: apx_gui/gtk/help-overlay.ui:29
-#, fuzzy
-#| msgid "New Subsystem"
 msgctxt "shortcut window"
 msgid "New Subsystem"
 msgstr "Neues Subsystem"
 
 #: apx_gui/gtk/help-overlay.ui:35
-#, fuzzy
-#| msgid "New Stack"
 msgctxt "shortcut window"
 msgid "New Stack"
 msgstr "Neuer Stapel"
 
 #: apx_gui/gtk/help-overlay.ui:41
-#, fuzzy
-#| msgid "New Package Manager"
 msgctxt "shortcut window"
 msgid "New Package Manager"
 msgstr "Neuer Paketmanager"
