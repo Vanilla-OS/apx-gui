@@ -3,13 +3,14 @@
 # This file is distributed under the same license as the apx_gui package.
 # Eryk Michalak <gnu.ewm@protonmail.com>, 2023.
 # "K.B.Dharun Krishna" <kbdharunkrishna@gmail.com>, 2023.
+# JaMajkel <kozlowski.michal87@gmail.com>, 2023.
 msgid ""
 msgstr ""
 "Project-Id-Version: apx_gui\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2023-07-10 18:39+0530\n"
-"PO-Revision-Date: 2023-07-12 17:10+0000\n"
-"Last-Translator: \"K.B.Dharun Krishna\" <kbdharunkrishna@gmail.com>\n"
+"PO-Revision-Date: 2023-07-21 00:30+0000\n"
+"Last-Translator: JaMajkel <kozlowski.michal87@gmail.com>\n"
 "Language-Team: Polish <https://hosted.weblate.org/projects/vanilla-os/"
 "apx-gui/pl/>\n"
 "Language: pl\n"
@@ -196,29 +197,21 @@ msgid "Quit"
 msgstr "Wyjdź"
 
 #: apx_gui/gtk/help-overlay.ui:26
-#, fuzzy
-#| msgid "Create"
 msgctxt "shortcut window"
 msgid "Create"
-msgstr "Utwórz"
+msgstr "Twórz"
 
 #: apx_gui/gtk/help-overlay.ui:29
-#, fuzzy
-#| msgid "New Subsystem"
 msgctxt "shortcut window"
 msgid "New Subsystem"
 msgstr "Nowy podsystem"
 
 #: apx_gui/gtk/help-overlay.ui:35
-#, fuzzy
-#| msgid "New Stack"
 msgctxt "shortcut window"
 msgid "New Stack"
 msgstr "Nowy stos"
 
 #: apx_gui/gtk/help-overlay.ui:41
-#, fuzzy
-#| msgid "New Package Manager"
 msgctxt "shortcut window"
 msgid "New Package Manager"
 msgstr "Nowy menedżer pakietów"
