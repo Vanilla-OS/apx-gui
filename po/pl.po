@@ -4,13 +4,14 @@
 # Eryk Michalak <gnu.ewm@protonmail.com>, 2023.
 # "K.B.Dharun Krishna" <kbdharunkrishna@gmail.com>, 2023.
 # JaMajkel <kozlowski.michal87@gmail.com>, 2023.
+# Triss03 <pr0trik520@gmail.com>, 2023.
 msgid ""
 msgstr ""
 "Project-Id-Version: apx_gui\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2023-07-10 18:39+0530\n"
-"PO-Revision-Date: 2023-07-21 00:30+0000\n"
-"Last-Translator: JaMajkel <kozlowski.michal87@gmail.com>\n"
+"PO-Revision-Date: 2023-07-22 13:31+0000\n"
+"Last-Translator: Triss03 <pr0trik520@gmail.com>\n"
 "Language-Team: Polish <https://hosted.weblate.org/projects/vanilla-os/"
 "apx-gui/pl/>\n"
 "Language: pl\n"
@@ -27,7 +28,7 @@ msgstr "Apx"
 
 #: data/org.vanillaos.ApxGUI.appdata.xml.in:7
 msgid "A frontend in GTK 4 and Libadwaita for Apx."
-msgstr ""
+msgstr "Interfejs w GTK 4 i Libadwaita dla Apx."
 
 #: apx_gui/gtk/create-pkgmanager.ui:6 apx_gui/gtk/window-main.ui:70
 msgid "New Package Manager"
