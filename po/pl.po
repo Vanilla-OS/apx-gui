@@ -10,8 +10,8 @@ msgstr ""
 "Project-Id-Version: apx_gui\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2023-07-10 18:39+0530\n"
-"PO-Revision-Date: 2023-07-22 13:31+0000\n"
-"Last-Translator: Triss03 <pr0trik520@gmail.com>\n"
+"PO-Revision-Date: 2023-07-23 14:06+0000\n"
+"Last-Translator: Eryk Michalak <gnu.ewm@protonmail.com>\n"
 "Language-Team: Polish <https://hosted.weblate.org/projects/vanilla-os/"
 "apx-gui/pl/>\n"
 "Language: pl\n"
@@ -28,7 +28,7 @@ msgstr "Apx"
 
 #: data/org.vanillaos.ApxGUI.appdata.xml.in:7
 msgid "A frontend in GTK 4 and Libadwaita for Apx."
-msgstr "Interfejs w GTK 4 i Libadwaita dla Apx."
+msgstr "Interfejs dla Apx wykorzystujący GTK 4 i Libadwaita."
 
 #: apx_gui/gtk/create-pkgmanager.ui:6 apx_gui/gtk/window-main.ui:70
 msgid "New Package Manager"
@@ -60,7 +60,7 @@ msgstr "Wygamaga uprawnień roota"
 
 #: apx_gui/gtk/create-pkgmanager.ui:70
 msgid "Commands"
-msgstr ""
+msgstr "Polecenia"
 
 #: apx_gui/gtk/create-pkgmanager.ui:73 apx_gui/gtk/tab-pkgmanager.ui:57
 msgid "Autoremove"
@@ -269,12 +269,11 @@ msgstr "Usuń podsystem"
 
 #: apx_gui/gtk/window-main.ui:78
 msgid "_Keyboard Shortcuts"
-msgstr "Skróty klawiszowe (_K)"
+msgstr "Skróty _klawiszowe"
 
 #: apx_gui/gtk/window-main.ui:82
-#, fuzzy
 msgid "_About Apx GUI"
-msgstr "O Apx GUI (_A)"
+msgstr "O _Apx GUI"
 
 #: apx_gui/main.py:102
 msgid "translator_credits"
