@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: apx_gui\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2023-07-05 20:14+0530\n"
-"PO-Revision-Date: 2023-07-08 14:34+0000\n"
+"PO-Revision-Date: 2023-07-22 13:31+0000\n"
 "Last-Translator: lakejason0 <sunliyuan200402@outlook.com>\n"
 "Language-Team: Chinese (Traditional) <https://hosted.weblate.org/projects/"
 "vanilla-os/apx-gui/zh_Hant/>\n"
@@ -241,7 +241,7 @@ msgstr "刪除子系統"
 
 #: apx_gui/gtk/window-main.ui:62
 msgid "New Sub System"
-msgstr ""
+msgstr "新增子系統"
 
 #: apx_gui/gtk/window-main.ui:78
 msgid "_Keyboard Shortcuts"
@@ -249,7 +249,7 @@ msgstr "鍵盤快速鍵(_K)"
 
 #: apx_gui/gtk/window-main.ui:82
 msgid "_Quit"
-msgstr ""
+msgstr "離開(_Q)"
 
 #: apx_gui/gtk/window-main.ui:82
 msgid "_About Apx GUI"
