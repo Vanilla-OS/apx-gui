@@ -70,7 +70,7 @@ class TabSubsystem(Adw.PreferencesPage):
         return self.__subsystem
 
     def __on_console_clicked(self, button: Gtk.Button) -> None:
-        GLib.spawn_command_line_async(f"kgx -e apx2 {self.__subsystem.name} enter")
+        GLib.spawn_command_line_async(f"kgx -e apx {self.__subsystem.name} enter")
 
     def __on_reset_clicked(self, button: Gtk.Button) -> None:
         def on_callback(result, *args) -> None:
