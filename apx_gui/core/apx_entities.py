@@ -75,14 +75,14 @@ class Stack(ApxEntityBase):
     def create(self) -> [bool, "Stack"]:
         packages: str = " ".join(self.packages) if isinstance(self.packages, list) else self.packages
         command: str = (
-            f"apx2 stacks new --name {self.name} --base {self.base} --packages \"{packages}\" "
+            f"apx stacks new --name {self.name} --base {self.base} --packages \"{packages}\" "
             f"--pkg-manager {self.pkg_manager} -y"
         )
         res: [bool, str] = self._run_command(command)
         if not res[0]:
             return res[0], self
 
-        command: str = f"apx2 stacks list --json"
+        command: str = f"apx stacks list --json"
         res: [bool, str] = self._run_command(command)
         if not res[0]:
             return res[0], self
@@ -100,13 +100,13 @@ class Stack(ApxEntityBase):
 
     def update(self, base: str, packages: str, pkg_manager: str) -> [bool, str]:
         command: str = (
-            f"apx2 stacks update --name {self.name} --base {base} --packages \"{packages}\" --pkg-manager {pkg_manager} -y"
+            f"apx stacks update --name {self.name} --base {base} --packages \"{packages}\" --pkg-manager {pkg_manager} -y"
         )
         return self._run_command(command)
 
     def remove(self, force: bool = False) -> [bool, str]:
         force_flag: str = "--force" if force else ""
-        command: str = f"apx2 stacks rm {force_flag} --name {self.name}"
+        command: str = f"apx stacks rm {force_flag} --name {self.name}"
         return self._run_command(command)
 
 
@@ -127,12 +127,12 @@ class Subsystem(ApxEntityBase):
         self.exported_programs: Optional[dict] = exported_programs
 
     def create(self) -> [bool, "Subsystem"]:
-        command: str = f"apx2 subsystems new --name {self.name} --stack {self.stack.name}"
+        command: str = f"apx subsystems new --name {self.name} --stack {self.stack.name}"
         res: [bool, str] = self._run_command(command)
         if not res[0]:
             return re[0], self
 
-        command: str = f"apx2 subsystems list --json"
+        command: str = f"apx subsystems list --json"
         res: [bool, str] = self._run_command(command)
         if not res[0]:
             return res[0], self
@@ -148,17 +148,17 @@ class Subsystem(ApxEntityBase):
         return False, self
 
     def update(self, stack: str) -> [bool, str]:
-        command: str = f"apx2 subsystems update --name {self.name} --stack {stack} -y"
+        command: str = f"apx subsystems update --name {self.name} --stack {stack} -y"
         return self._run_command(command)
 
     def remove(self, force: bool = False) -> [bool, str]:
         force_flag: str = "--force" if force else ""
-        command: str = f"apx2 subsystems rm {force_flag} --name {self.name}"
+        command: str = f"apx subsystems rm {force_flag} --name {self.name}"
         return self._run_command(command)
 
     def reset(self, force: bool = False) -> [bool, str]:
         force_flag: str = "--force" if force else ""
-        command: str = f"apx2 subsystems reset {force_flag} --name {self.name}"
+        command: str = f"apx subsystems reset {force_flag} --name {self.name}"
         return self._run_command(command)
 
 
@@ -196,7 +196,7 @@ class PkgManager(ApxEntityBase):
 
     def create(self) -> [bool, "PkgManager"]:
         command: str = (
-            f"apx2 pkgmanagers new --name {self.name} --need-sudo {self.need_sudo} "
+            f"apx pkgmanagers new --name {self.name} --need-sudo {self.need_sudo} "
             f"--autoremove {self.cmd_auto_remove} --clean {self.cmd_clean} "
             f"--install {self.cmd_install} --list {self.cmd_list} "
             f"--purge {self.cmd_purge} --remove {self.cmd_remove} "
@@ -207,7 +207,7 @@ class PkgManager(ApxEntityBase):
         if not res[0]:
             return res[0], self
 
-        command: str = f"apx2 pkgmanagers list --json"
+        command: str = f"apx pkgmanagers list --json"
         res: [bool, str] = self._run_command(command)
         if not res[0]:
             return res[0], self
@@ -233,5 +233,5 @@ class PkgManager(ApxEntityBase):
 
     def remove(self, force: bool = False) -> [bool, str]:
         force_flag: str = "--force" if force else ""
-        command: str = f"apx2 pkgmanagers rm {force_flag} --name {self.name}"
+        command: str = f"apx pkgmanagers rm {force_flag} --name {self.name}"
         return self._run_command(command)
