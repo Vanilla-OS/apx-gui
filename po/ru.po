@@ -10,7 +10,7 @@ msgstr ""
 "Project-Id-Version: apx_gui\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2023-07-05 20:14+0530\n"
-"PO-Revision-Date: 2023-07-17 14:03+0000\n"
+"PO-Revision-Date: 2023-07-28 09:04+0000\n"
 "Last-Translator: Fedorov Alexei <aleksejfedorov963@gmail.com>\n"
 "Language-Team: Russian <https://hosted.weblate.org/projects/vanilla-os/"
 "apx-gui/ru/>\n"
@@ -64,43 +64,43 @@ msgstr "Команды"
 
 #: apx_gui/gtk/create-pkgmanager.ui:73 apx_gui/gtk/tab-pkgmanager.ui:57
 msgid "Autoremove"
-msgstr "Убирать автоматически"
+msgstr "Автоубирание (Autoremove)"
 
 #: apx_gui/gtk/create-pkgmanager.ui:78 apx_gui/gtk/tab-pkgmanager.ui:63
 msgid "Clean"
-msgstr "Очистить данные"
+msgstr "Очистить данные (Clean)"
 
 #: apx_gui/gtk/create-pkgmanager.ui:83 apx_gui/gtk/tab-pkgmanager.ui:69
 msgid "Install"
-msgstr "Установить"
+msgstr "Установить (Install)"
 
 #: apx_gui/gtk/create-pkgmanager.ui:88 apx_gui/gtk/tab-pkgmanager.ui:75
 msgid "List"
-msgstr "Список"
+msgstr "Список (List)"
 
 #: apx_gui/gtk/create-pkgmanager.ui:93 apx_gui/gtk/tab-pkgmanager.ui:81
 msgid "Purge"
-msgstr "Удалить полностью"
+msgstr "Удалить полностью (Purge)"
 
 #: apx_gui/gtk/create-pkgmanager.ui:98 apx_gui/gtk/tab-pkgmanager.ui:87
 msgid "Remove"
-msgstr "Убрать"
+msgstr "Убрать (Remove)"
 
 #: apx_gui/gtk/create-pkgmanager.ui:103 apx_gui/gtk/tab-pkgmanager.ui:93
 msgid "Search"
-msgstr "Поиск"
+msgstr "Поиск (Search)"
 
 #: apx_gui/gtk/create-pkgmanager.ui:108 apx_gui/gtk/tab-pkgmanager.ui:99
 msgid "Show"
-msgstr "Показать"
+msgstr "Показать (Show)"
 
 #: apx_gui/gtk/create-pkgmanager.ui:113 apx_gui/gtk/tab-pkgmanager.ui:105
 msgid "Update"
-msgstr "Обновить список пакетов"
+msgstr "Обновить список пакетов (Update)"
 
 #: apx_gui/gtk/create-pkgmanager.ui:118 apx_gui/gtk/tab-pkgmanager.ui:111
 msgid "Upgrade"
-msgstr "Обновить пакеты"
+msgstr "Обновить пакеты (Upgrade)"
 
 #: apx_gui/gtk/create-pkgmanager.ui:144
 msgid "Creating Package Manager…"
