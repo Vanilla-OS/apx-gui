@@ -3,13 +3,14 @@
 # This file is distributed under the same license as the apx_gui package.
 # Dan <jonweblin2205@protonmail.com>, 2023.
 # "K.B.Dharun Krishna" <kbdharunkrishna@gmail.com>, 2023.
+# Pindos <dfgfgg977@gmail.com>, 2023.
 msgid ""
 msgstr ""
 "Project-Id-Version: apx_gui\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2023-07-05 20:14+0530\n"
-"PO-Revision-Date: 2023-07-12 17:10+0000\n"
-"Last-Translator: \"K.B.Dharun Krishna\" <kbdharunkrishna@gmail.com>\n"
+"PO-Revision-Date: 2023-07-24 18:06+0000\n"
+"Last-Translator: Pindos <dfgfgg977@gmail.com>\n"
 "Language-Team: Ukrainian <https://hosted.weblate.org/projects/vanilla-os/"
 "apx-gui/uk/>\n"
 "Language: uk\n"
@@ -181,12 +182,12 @@ msgstr "Почніть з відкриття підсистеми, стеку а
 #: apx_gui/gtk/help-overlay.ui:11
 msgctxt "shortcut window"
 msgid "General"
-msgstr "Загальний"
+msgstr "Загальні"
 
 #: apx_gui/gtk/help-overlay.ui:14
 msgctxt "shortcut window"
 msgid "Show Shortcuts"
-msgstr "Показати ярлики"
+msgstr "Показати скорочення"
 
 #: apx_gui/gtk/help-overlay.ui:20
 msgctxt "shortcut window"
