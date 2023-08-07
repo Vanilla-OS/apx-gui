@@ -3,13 +3,14 @@
 # This file is distributed under the same license as the apx_gui package.
 # Philip Goto <philip.goto@gmail.com>, 2023.
 # "K.B.Dharun Krishna" <kbdharunkrishna@gmail.com>, 2023.
+# "Mike A." <git@mikealmel.ooo>, 2023.
 msgid ""
 msgstr ""
 "Project-Id-Version: apx_gui\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2023-07-10 18:39+0530\n"
-"PO-Revision-Date: 2023-07-12 17:10+0000\n"
-"Last-Translator: \"K.B.Dharun Krishna\" <kbdharunkrishna@gmail.com>\n"
+"PO-Revision-Date: 2023-07-28 09:04+0000\n"
+"Last-Translator: \"Mike A.\" <git@mikealmel.ooo>\n"
 "Language-Team: Dutch <https://hosted.weblate.org/projects/vanilla-os/apx-gui/"
 "nl/>\n"
 "Language: nl\n"
@@ -202,11 +203,9 @@ msgid "Create"
 msgstr "Aanmaken"
 
 #: apx_gui/gtk/help-overlay.ui:29
-#, fuzzy
-#| msgid "New Subsystem"
 msgctxt "shortcut window"
 msgid "New Subsystem"
-msgstr "Nieuw subsysteem"
+msgstr "Nieuw Subsysteem"
 
 #: apx_gui/gtk/help-overlay.ui:35
 #, fuzzy
@@ -216,11 +215,9 @@ msgid "New Stack"
 msgstr "Nieuwe stack"
 
 #: apx_gui/gtk/help-overlay.ui:41
-#, fuzzy
-#| msgid "New Package Manager"
 msgctxt "shortcut window"
 msgid "New Package Manager"
-msgstr "Nieuw pakketbeheer"
+msgstr "Nieuwe Pakketbeheerder"
 
 #: apx_gui/gtk/tab-pkgmanager.ui:13
 msgid "This package manager is built-in and cannot be edited or deleted."
