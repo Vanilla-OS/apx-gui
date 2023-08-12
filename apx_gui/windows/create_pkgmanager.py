@@ -25,9 +25,9 @@ from apx_gui.utils.gtk import GtkUtils
 from apx_gui.core.run_async import RunAsync
 
 
-@Gtk.Template(resource_path='/org/vanillaos/apx-gui/gtk/create-pkgmanager.ui')
+@Gtk.Template(resource_path="/org/vanillaos/apx-gui/gtk/create-pkgmanager.ui")
 class CreatePkgManagerWindow(Adw.Window):
-    __gtype_name__ = 'CreatePkgManagerWindow'
+    __gtype_name__ = "CreatePkgManagerWindow"
 
     __valid: Iterable[str] = set([])
 
@@ -40,41 +40,38 @@ class CreatePkgManagerWindow(Adw.Window):
     row_list: Adw.EntryRow = Gtk.Template.Child()
     row_purge: Adw.EntryRow = Gtk.Template.Child()
     row_remove: Adw.EntryRow = Gtk.Template.Child()
-    row_search: Adw.EntryRow = Gtk.Template.Child() 
+    row_search: Adw.EntryRow = Gtk.Template.Child()
     row_show: Adw.EntryRow = Gtk.Template.Child()
-    row_update: Adw.EntryRow = Gtk.Template.Child() 
+    row_update: Adw.EntryRow = Gtk.Template.Child()
     row_upgrade: Adw.EntryRow = Gtk.Template.Child()
     stack_main: Adw.ViewStack = Gtk.Template.Child()
     sw_sudo: Gtk.Switch = Gtk.Template.Child()
 
     def __init__(
-        self, 
-        window: Adw.ApplicationWindow, 
-        pkgmanagers: list[PkgManager], 
-        **kwargs
+        self, window: Adw.ApplicationWindow, pkgmanagers: list[PkgManager], **kwargs
     ) -> None:
         super().__init__(**kwargs)
         self.__window: Adw.ApplicationWindow = window
         self.__pkgmanagers: list[PkgManager] = pkgmanagers
-        
+
         self.__build_ui()
 
     def __build_ui(self) -> None:
         self.set_transient_for(self.__window)
 
-        self.btn_cancel.connect('clicked', self.__on_cancel_clicked)
-        self.btn_create.connect('clicked', self.__on_create_clicked)
-        self.row_name.connect('changed', self.__on_name_changed)
-        self.row_autoremove.connect('changed', self.__on_command_changed)
-        self.row_clean.connect('changed', self.__on_command_changed)
-        self.row_install.connect('changed', self.__on_command_changed)
-        self.row_list.connect('changed', self.__on_command_changed)
-        self.row_purge.connect('changed', self.__on_command_changed)
-        self.row_remove.connect('changed', self.__on_command_changed)
-        self.row_search.connect('changed', self.__on_command_changed)
-        self.row_show.connect('changed', self.__on_command_changed)
-        self.row_update.connect('changed', self.__on_command_changed)
-        self.row_upgrade.connect('changed', self.__on_command_changed)
+        self.btn_cancel.connect("clicked", self.__on_cancel_clicked)
+        self.btn_create.connect("clicked", self.__on_create_clicked)
+        self.row_name.connect("changed", self.__on_name_changed)
+        self.row_autoremove.connect("changed", self.__on_command_changed)
+        self.row_clean.connect("changed", self.__on_command_changed)
+        self.row_install.connect("changed", self.__on_command_changed)
+        self.row_list.connect("changed", self.__on_command_changed)
+        self.row_purge.connect("changed", self.__on_command_changed)
+        self.row_remove.connect("changed", self.__on_command_changed)
+        self.row_search.connect("changed", self.__on_command_changed)
+        self.row_show.connect("changed", self.__on_command_changed)
+        self.row_update.connect("changed", self.__on_command_changed)
+        self.row_upgrade.connect("changed", self.__on_command_changed)
 
     def __on_cancel_clicked(self, button: Gtk.Button) -> None:
         self.close()
@@ -83,15 +80,17 @@ class CreatePkgManagerWindow(Adw.Window):
         def on_callback(result: [bool, PkgManager], *args):
             status: bool = result[0]
             pkgmanager: PkgManager = result[1]
-            
+
             if status:
                 self.__window.append_pkgmanager(pkgmanager)
                 self.close()
-                self.__window.toast(f"Package manager {pkgmanager.name} created successfully")
+                self.__window.toast(
+                    f"Package manager {pkgmanager.name} created successfully"
+                )
                 return
 
             self.stack_main.set_visible_child_name("error")
-        
+
         def create_pkgmanager() -> [bool, PkgManager]:
             pkgmanager: PkgManager = PkgManager(
                 self.row_name.get_text(),
@@ -106,7 +105,7 @@ class CreatePkgManagerWindow(Adw.Window):
                 self.row_show.get_text(),
                 self.row_update.get_text(),
                 self.row_upgrade.get_text(),
-                False
+                False,
             )
             return pkgmanager.create()
 

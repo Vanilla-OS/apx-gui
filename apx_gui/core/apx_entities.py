@@ -46,7 +46,7 @@ class ApxEntityBase:
             return True, output.decode("utf-8")
         except Exception as e:
             return False, str(e)
-    
+
     def to_dict(self) -> dict:
         return self.__dict__
 
@@ -58,12 +58,7 @@ class ApxEntityBase:
 
 class Stack(ApxEntityBase):
     def __init__(
-        self, 
-        name: str, 
-        base: str, 
-        packages: str, 
-        pkg_manager: str, 
-        built_in: str
+        self, name: str, base: str, packages: str, pkg_manager: str, built_in: str
     ) -> None:
         super().__init__()
         self.name: str = name
@@ -73,9 +68,13 @@ class Stack(ApxEntityBase):
         self.built_in: str = built_in
 
     def create(self) -> [bool, "Stack"]:
-        packages: str = " ".join(self.packages) if isinstance(self.packages, list) else self.packages
+        packages: str = (
+            " ".join(self.packages)
+            if isinstance(self.packages, list)
+            else self.packages
+        )
         command: str = (
-            f"apx stacks new --name {self.name} --base {self.base} --packages \"{packages}\" "
+            f'apx stacks new --name {self.name} --base {self.base} --packages "{packages}" '
             f"--pkg-manager {self.pkg_manager} -y"
         )
         res: [bool, str] = self._run_command(command)
@@ -99,9 +98,7 @@ class Stack(ApxEntityBase):
         return False, self
 
     def update(self, base: str, packages: str, pkg_manager: str) -> [bool, str]:
-        command: str = (
-            f"apx stacks update --name {self.name} --base {base} --packages \"{packages}\" --pkg-manager {pkg_manager} -y"
-        )
+        command: str = f'apx stacks update --name {self.name} --base {base} --packages "{packages}" --pkg-manager {pkg_manager} -y'
         return self._run_command(command)
 
     def remove(self, force: bool = False) -> [bool, str]:
@@ -112,12 +109,12 @@ class Stack(ApxEntityBase):
 
 class Subsystem(ApxEntityBase):
     def __init__(
-        self, 
-        internal_name: str, 
-        name: str, 
-        stack: Stack, 
-        status: str, 
-        exported_programs: Optional[dict] = None
+        self,
+        internal_name: str,
+        name: str,
+        stack: Stack,
+        status: str,
+        exported_programs: Optional[dict] = None,
     ) -> None:
         super().__init__()
         self.internal_name: str = internal_name
@@ -127,7 +124,9 @@ class Subsystem(ApxEntityBase):
         self.exported_programs: Optional[dict] = exported_programs
 
     def create(self) -> [bool, "Subsystem"]:
-        command: str = f"apx subsystems new --name {self.name} --stack {self.stack.name}"
+        command: str = (
+            f"apx subsystems new --name {self.name} --stack {self.stack.name}"
+        )
         res: [bool, str] = self._run_command(command)
         if not res[0]:
             return re[0], self

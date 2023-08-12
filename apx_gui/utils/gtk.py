@@ -27,11 +27,14 @@ from gi.repository import GLib
 
 
 class GtkUtils:
-
     @staticmethod
     def validate_entry(entry: Adw.EntryRow, extend=None) -> bool:
         text: str = entry.get_text()
-        if re.search("[@!#$%^&*()<>?/|}{~:.;,'\"]", text) or len(text) == 0 or text.isspace():
+        if (
+            re.search("[@!#$%^&*()<>?/|}{~:.;,'\"]", text)
+            or len(text) == 0
+            or text.isspace()
+        ):
             entry.add_css_class("error")
             return False
 

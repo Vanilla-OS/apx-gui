@@ -22,9 +22,9 @@ from gi.repository import Gtk, Gio, GObject, Adw
 from apx_gui.core.apx_entities import Subsystem
 
 
-@Gtk.Template(resource_path='/org/vanillaos/apx-gui/gtk/entry-subsystem.ui')
+@Gtk.Template(resource_path="/org/vanillaos/apx-gui/gtk/entry-subsystem.ui")
 class EntrySubsystem(Adw.ActionRow):
-    __gtype_name__: str = 'EntrySubsystem'
+    __gtype_name__: str = "EntrySubsystem"
 
     def __init__(self, subsystem: Subsystem, **kwargs) -> None:
         super().__init__(**kwargs)

@@ -25,9 +25,9 @@ from apx_gui.core.run_async import RunAsync
 from apx_gui.utils.gtk import GtkUtils
 
 
-@Gtk.Template(resource_path='/org/vanillaos/apx-gui/gtk/tab-stack.ui')
+@Gtk.Template(resource_path="/org/vanillaos/apx-gui/gtk/tab-stack.ui")
 class TabStack(Gtk.Box):
-    __gtype_name__: str = 'TabStack'
+    __gtype_name__: str = "TabStack"
 
     row_base: Adw.EntryRow = Gtk.Template.Child()
     row_pkgmanager: Adw.EntryRow = Gtk.Template.Child()
@@ -59,11 +59,11 @@ class TabStack(Gtk.Box):
             ]:
                 row.set_sensitive(False)
 
-        self.btn_delete.connect('clicked', self.__on_delete_clicked)
-        self.row_base.connect('changed', self.__on_entry_changed)
-        self.row_pkgmanager.connect('changed', self.__on_entry_changed)
-        self.row_base.connect('apply', self.__on_base_apply)
-        self.row_pkgmanager.connect('apply', self.__on_pkgmanager_apply)
+        self.btn_delete.connect("clicked", self.__on_delete_clicked)
+        self.row_base.connect("changed", self.__on_entry_changed)
+        self.row_pkgmanager.connect("changed", self.__on_entry_changed)
+        self.row_base.connect("apply", self.__on_base_apply)
+        self.row_pkgmanager.connect("apply", self.__on_pkgmanager_apply)
 
         for pkg in self.__stack.packages:
             row: Adw.ActionRow = Adw.ActionRow()
@@ -77,7 +77,7 @@ class TabStack(Gtk.Box):
         return self.__aid
 
     def __on_delete_clicked(self, button: Gtk.Button) -> None:
-        def on_callback(result, *args) -> None: 
+        def on_callback(result, *args) -> None:
             status: bool = result[0]
             if status:
                 self.__window.toast(f"{self.__stack.name} stack deleted")
@@ -124,8 +124,10 @@ class TabStack(Gtk.Box):
                 self.__window.toast(f"Error updating {self.__stack.name} stack")
 
         RunAsync(self.__update, on_callback, pkg_manager=row.get_text())
-    
-    def __update(self, base: str = None, packages: list = None, pkg_manager: str = None) -> bool:
+
+    def __update(
+        self, base: str = None, packages: list = None, pkg_manager: str = None
+    ) -> bool:
         if base is None:
             base = self.__stack.base
         if packages is None:
@@ -134,4 +136,3 @@ class TabStack(Gtk.Box):
             pkg_manager = self.__stack.pkg_manager
 
         return self.__stack.update(base, packages, pkg_manager)
-

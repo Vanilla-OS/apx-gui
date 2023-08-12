@@ -23,9 +23,9 @@ from apx_gui.core.apx_entities import PkgManager
 import gettext as _
 
 
-@Gtk.Template(resource_path='/org/vanillaos/apx-gui/gtk/entry-pkgmanager.ui')
+@Gtk.Template(resource_path="/org/vanillaos/apx-gui/gtk/entry-pkgmanager.ui")
 class EntryPkgManager(Adw.ActionRow):
-    __gtype_name__: str = 'EntryPkgManager'
+    __gtype_name__: str = "EntryPkgManager"
 
     def __init__(self, pkgmanager: PkgManager, **kwargs) -> None:
         super().__init__(**kwargs)

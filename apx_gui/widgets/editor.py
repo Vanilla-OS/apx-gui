@@ -26,9 +26,9 @@ from apx_gui.widgets.tab_pkgmanager import TabPkgManager
 from apx_gui.core.apx_entities import Subsystem, Stack, PkgManager
 
 
-@Gtk.Template(resource_path='/org/vanillaos/apx-gui/gtk/editor.ui')
+@Gtk.Template(resource_path="/org/vanillaos/apx-gui/gtk/editor.ui")
 class Editor(Adw.Bin):
-    __gtype_name__: str = 'Editor'
+    __gtype_name__: str = "Editor"
     __registry__: dict = {
         "open": [],
         "tabs": {},
@@ -45,15 +45,15 @@ class Editor(Adw.Bin):
         self.__build_ui()
 
     def __build_ui(self) -> None:
-        self.tabs_editor.connect('page-detached', self.__on_page_detached)
-        self.tabs_editor.connect('page-attached', self.__on_page_attached)
+        self.tabs_editor.connect("page-detached", self.__on_page_detached)
+        self.tabs_editor.connect("page-attached", self.__on_page_attached)
 
     def __on_page_detached(self, tabs: Adw.TabView, page: Adw.TabPage, *args) -> None:
         self.__registry__["open"].remove(page.get_child().aid)
         self.__registry__["tabs"].pop(page.get_child().aid)
 
         if tabs.get_n_pages() == 0:
-            self.stack_editor.set_visible_child_name('no_tabs')
+            self.stack_editor.set_visible_child_name("no_tabs")
 
     def __on_page_attached(self, tabs: Adw.TabView, page: Adw.TabPage, *args) -> None:
         self.page_no_tabs.set_visible(False)
@@ -62,7 +62,7 @@ class Editor(Adw.Bin):
         self.__registry__["tabs"][page.get_child().aid] = page
 
         if tabs.get_n_pages() > 0:
-            self.stack_editor.set_visible_child_name('editor')
+            self.stack_editor.set_visible_child_name("editor")
 
     def open(self, aid: UUID) -> bool:
         if aid in self.__registry__["open"]:
@@ -74,8 +74,12 @@ class Editor(Adw.Bin):
         return aid in self.__registry__["open"]
 
     def new_subsystem_tab(self, subsystem: Subsystem) -> None:
-        page: Adw.TabPage = self.tabs_editor.append(TabSubsystem(self.__window, subsystem))
-        icon: Gio.Icon = Gio.ThemedIcon.new_with_default_fallbacks('utilities-terminal-symbolic')
+        page: Adw.TabPage = self.tabs_editor.append(
+            TabSubsystem(self.__window, subsystem)
+        )
+        icon: Gio.Icon = Gio.ThemedIcon.new_with_default_fallbacks(
+            "utilities-terminal-symbolic"
+        )
 
         page.set_title(subsystem.name)
         page.set_icon(icon)
@@ -84,20 +88,26 @@ class Editor(Adw.Bin):
 
     def new_stack_tab(self, stack: Stack) -> None:
         page: Adw.TabPage = self.tabs_editor.append(TabStack(self.__window, stack))
-        icon: Gio.Icon = Gio.ThemedIcon.new_with_default_fallbacks('vanilla-puzzle-piece-symbolic')
+        icon: Gio.Icon = Gio.ThemedIcon.new_with_default_fallbacks(
+            "vanilla-puzzle-piece-symbolic"
+        )
 
         page.set_title(stack.name)
         page.set_icon(icon)
-        
+
         self.open(stack.aid)
 
     def new_pkgmanager_tab(self, pkgmanager: PkgManager) -> None:
-        page: Adw.TabPage = self.tabs_editor.append(TabPkgManager(self.__window, pkgmanager))
-        icon: Gio.Icon = Gio.ThemedIcon.new_with_default_fallbacks('insert-object-symbolic')
+        page: Adw.TabPage = self.tabs_editor.append(
+            TabPkgManager(self.__window, pkgmanager)
+        )
+        icon: Gio.Icon = Gio.ThemedIcon.new_with_default_fallbacks(
+            "insert-object-symbolic"
+        )
 
         page.set_title(pkgmanager.name)
         page.set_icon(icon)
-        
+
         self.open(pkgmanager.aid)
 
     def close(self, aid: UUID) -> None:

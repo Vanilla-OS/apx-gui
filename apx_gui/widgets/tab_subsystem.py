@@ -24,9 +24,9 @@ from apx_gui.core.apx_entities import Subsystem
 from apx_gui.core.run_async import RunAsync
 
 
-@Gtk.Template(resource_path='/org/vanillaos/apx-gui/gtk/tab-subsystem.ui')
+@Gtk.Template(resource_path="/org/vanillaos/apx-gui/gtk/tab-subsystem.ui")
 class TabSubsystem(Adw.PreferencesPage):
-    __gtype_name__: str = 'TabSubsystem'
+    __gtype_name__: str = "TabSubsystem"
 
     row_status: Adw.ActionRow = Gtk.Template.Child()
     row_stack: Adw.ActionRow = Gtk.Template.Child()
@@ -39,7 +39,9 @@ class TabSubsystem(Adw.PreferencesPage):
     btn_reset: Gtk.Button = Gtk.Template.Child()
     btn_delete: Gtk.Button = Gtk.Template.Child()
 
-    def __init__(self, window: Adw.ApplicationWindow, subsystem: Subsystem, **kwargs) -> None:
+    def __init__(
+        self, window: Adw.ApplicationWindow, subsystem: Subsystem, **kwargs
+    ) -> None:
         super().__init__(**kwargs)
         self.__window: Adw.ApplicationWindow = window
         self.__aid: UUID = subsystem.aid
@@ -50,15 +52,19 @@ class TabSubsystem(Adw.PreferencesPage):
         self.row_status.set_subtitle(self.__subsystem.status)
         self.row_stack.set_subtitle(self.__subsystem.stack.name)
         self.row_pkgmanager.set_subtitle(self.__subsystem.stack.pkg_manager)
-        self.row_programs.set_title(f"({len(self.__subsystem.exported_programs)}) Exported Programs")
+        self.row_programs.set_title(
+            f"({len(self.__subsystem.exported_programs)}) Exported Programs"
+        )
 
-        self.btn_console.connect('clicked', self.__on_console_clicked)
-        self.btn_reset.connect('clicked', self.__on_reset_clicked)
-        self.btn_delete.connect('clicked', self.__on_delete_clicked)
-        
+        self.btn_console.connect("clicked", self.__on_console_clicked)
+        self.btn_reset.connect("clicked", self.__on_reset_clicked)
+        self.btn_delete.connect("clicked", self.__on_delete_clicked)
+
         for name, program in self.__subsystem.exported_programs.items():
-            row: Adw.ActionRow = Adw.ActionRow(title=name, subtitle=program.get('GenericName', ''))
-            row.set_icon_name(program.get('Icon', 'application-x-executable-symbolic'))
+            row: Adw.ActionRow = Adw.ActionRow(
+                title=name, subtitle=program.get("GenericName", "")
+            )
+            row.set_icon_name(program.get("Icon", "application-x-executable-symbolic"))
             self.row_programs.add_row(row)
 
     @property
