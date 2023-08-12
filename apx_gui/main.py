@@ -22,8 +22,8 @@ import gi
 import logging
 from gettext import gettext as _
 
-gi.require_version('Gtk', '4.0')
-gi.require_version('Adw', '1')
+gi.require_version("Gtk", "4.0")
+gi.require_version("Adw", "1")
 
 from gi.repository import Gtk, GLib, Gio, Adw
 from apx_gui.windows.main_window import ApxGUIWindow
@@ -36,16 +36,22 @@ class ApxGUIApplication(Adw.Application):
     """The main application singleton class."""
 
     def __init__(self):
-        super().__init__(application_id='org.vanillaos.ApxGUI',
-                         flags=Gio.ApplicationFlags.DEFAULT_FLAGS)
-        
+        super().__init__(
+            application_id="org.vanillaos.ApxGUI",
+            flags=Gio.ApplicationFlags.DEFAULT_FLAGS,
+        )
+
         self.__window: ApxGUIWindow = None
 
-        self.create_action('quit', lambda *_: self.quit(), ['<primary>q'])
-        self.create_action('new_subsystem', self.on_new_subsystem_action, ['<primary>n'])
-        self.create_action('new_stack', self.on_new_stack_action, ['<primary>s'])
-        self.create_action('new_pkgmanager', self.on_new_pkgmanager_action, ['<primary>p'])
-        self.create_action('about', self.on_about_action)
+        self.create_action("quit", lambda *_: self.quit(), ["<primary>q"])
+        self.create_action(
+            "new_subsystem", self.on_new_subsystem_action, ["<primary>n"]
+        )
+        self.create_action("new_stack", self.on_new_stack_action, ["<primary>s"])
+        self.create_action(
+            "new_pkgmanager", self.on_new_pkgmanager_action, ["<primary>p"]
+        )
+        self.create_action("about", self.on_about_action)
 
     def do_activate(self) -> None:
         """Called when the application is activated.
@@ -64,28 +70,28 @@ class ApxGUIApplication(Adw.Application):
         """Callback for the app.about action."""
         about: Adw.AboutWindow = Adw.AboutWindow(
             transient_for=self.props.active_window,
-            application_name='Apx GUI',
-            application_icon='org.vanillaos.ApxGUI',
-            developer_name='Mirko Brombin',
-            website='https://github.com/Vanilla-OS/apx-gui',
-            issue_url='https://github.com/Vanilla-OS/apx-gui/issues',
-            version='1.0.2',
-            developers=['Mirko Brombin https://github.com/mirkobrombin'],
-            translator_credits= _("translator_credits"),
-            copyright='© 2023 Mirko Brombin and Contributors',
-            license_type=('gpl-3-0-only')
+            application_name="Apx GUI",
+            application_icon="org.vanillaos.ApxGUI",
+            developer_name="Mirko Brombin",
+            website="https://github.com/Vanilla-OS/apx-gui",
+            issue_url="https://github.com/Vanilla-OS/apx-gui/issues",
+            version="1.0.2",
+            developers=["Mirko Brombin https://github.com/mirkobrombin"],
+            translator_credits=_("translator_credits"),
+            copyright="© 2023 Mirko Brombin and Contributors",
+            license_type=("gpl-3-0-only"),
         )
         about.add_credit_section(
             _("Contributors"),
             [
                 "K.B.Dharun Krishna https://github.com/kbdharun",
-            ]
+            ],
         )
         about.add_acknowledgement_section(
             _("Tools"),
             [
                 "Apx https://github.com/Vanilla-OS/apx",
-            ]
+            ],
         )
         about.present()
 
@@ -94,11 +100,13 @@ class ApxGUIApplication(Adw.Application):
 
     def on_new_stack_action(self, *args) -> None:
         self.__window.new_stack()
-    
+
     def on_new_pkgmanager_action(self, *args) -> None:
         self.__window.new_pkgmanager()
 
-    def create_action(self, name: str, callback: callable, shortcuts: list[str] = None) -> None:
+    def create_action(
+        self, name: str, callback: callable, shortcuts: list[str] = None
+    ) -> None:
         """Add an application action.
 
         Args:
@@ -116,6 +124,7 @@ class ApxGUIApplication(Adw.Application):
     def close(self, *args) -> None:
         """Close the application."""
         self.quit()
+
 
 def main(version: str) -> int:
     """The application's entry point."""

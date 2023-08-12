@@ -24,9 +24,9 @@ from apx_gui.core.apx_entities import PkgManager
 from apx_gui.core.run_async import RunAsync
 
 
-@Gtk.Template(resource_path='/org/vanillaos/apx-gui/gtk/tab-pkgmanager.ui')
+@Gtk.Template(resource_path="/org/vanillaos/apx-gui/gtk/tab-pkgmanager.ui")
 class TabPkgManager(Gtk.Box):
-    __gtype_name__: str = 'TabPkgManager'
+    __gtype_name__: str = "TabPkgManager"
     row_sudo: Adw.ActionRow = Gtk.Template.Child()
     row_builtin: Adw.ActionRow = Gtk.Template.Child()
     row_autoremove: Adw.EntryRow = Gtk.Template.Child()
@@ -44,7 +44,9 @@ class TabPkgManager(Gtk.Box):
     infobar: Gtk.InfoBar = Gtk.Template.Child()
     group_actions: Adw.PreferencesGroup = Gtk.Template.Child()
 
-    def __init__(self, window: Adw.ApplicationWindow, stack: PkgManager, **kwargs) -> None:
+    def __init__(
+        self, window: Adw.ApplicationWindow, stack: PkgManager, **kwargs
+    ) -> None:
         super().__init__(**kwargs)
         self.__window: Adw.ApplicationWindow = window
         self.__aid: UUID = stack.aid
@@ -84,7 +86,7 @@ class TabPkgManager(Gtk.Box):
             ]:
                 row.set_sensitive(False)
 
-        self.btn_delete.connect('clicked', self.__on_delete_clicked)
+        self.btn_delete.connect("clicked", self.__on_delete_clicked)
 
     @property
     def aid(self) -> UUID:
@@ -99,7 +101,9 @@ class TabPkgManager(Gtk.Box):
 
         def on_response(dialog: Adw.MessageDialog, response: str) -> None:
             if response == "ok":
-                self.__window.toast(f"Deleting {self.__pkgmanager.name} package manager...")
+                self.__window.toast(
+                    f"Deleting {self.__pkgmanager.name} package manager..."
+                )
                 RunAsync(self.__pkgmanager.remove, on_callback, force=True)
             dialog.destroy()
 

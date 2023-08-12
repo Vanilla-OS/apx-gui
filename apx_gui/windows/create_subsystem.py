@@ -24,29 +24,29 @@ from apx_gui.utils.gtk import GtkUtils
 from apx_gui.core.run_async import RunAsync
 
 
-@Gtk.Template(resource_path='/org/vanillaos/apx-gui/gtk/create-subsystem.ui')
+@Gtk.Template(resource_path="/org/vanillaos/apx-gui/gtk/create-subsystem.ui")
 class CreateSubsystemWindow(Adw.Window):
-    __gtype_name__ = 'CreateSubsystemWindow'
+    __gtype_name__ = "CreateSubsystemWindow"
 
     btn_cancel: Gtk.Button = Gtk.Template.Child()
     btn_create: Gtk.Button = Gtk.Template.Child()
     row_name: Adw.EntryRow = Gtk.Template.Child()
     row_stack: Adw.ComboRow = Gtk.Template.Child()
-    str_stack: Gtk.StringList = Gtk.Template.Child() 
+    str_stack: Gtk.StringList = Gtk.Template.Child()
     stack_main: Adw.ViewStack = Gtk.Template.Child()
 
     def __init__(
-        self, 
-        window: Adw.ApplicationWindow, 
-        subsystems: list[Subsystem], 
-        stacks: list[Stack], 
-        **kwargs
+        self,
+        window: Adw.ApplicationWindow,
+        subsystems: list[Subsystem],
+        stacks: list[Stack],
+        **kwargs,
     ) -> None:
         super().__init__(**kwargs)
         self.__window: Adw.ApplicationWindow = window
         self.__subsystems: list[Subsystem] = subsystems
         self.__stacks: list[Stack] = stacks
-        
+
         self.__build_ui()
 
     def __build_ui(self) -> None:
@@ -56,9 +56,9 @@ class CreateSubsystemWindow(Adw.Window):
             self.str_stack.append(stack.name)
         self.row_stack.set_selected(0)
 
-        self.btn_cancel.connect('clicked', self.__on_cancel_clicked)
-        self.btn_create.connect('clicked', self.__on_create_clicked)
-        self.row_name.connect('changed', self.__on_name_changed)
+        self.btn_cancel.connect("clicked", self.__on_cancel_clicked)
+        self.btn_create.connect("clicked", self.__on_create_clicked)
+        self.row_name.connect("changed", self.__on_name_changed)
 
     def __on_cancel_clicked(self, button: Gtk.Button) -> None:
         self.close()
@@ -67,7 +67,7 @@ class CreateSubsystemWindow(Adw.Window):
         def on_callback(result: [bool, Subsystem], *args):
             status: bool = result[0]
             subsystem: Subsystem = result[1]
-            
+
             if status:
                 self.__window.append_subsystem(subsystem)
                 self.close()
@@ -75,13 +75,13 @@ class CreateSubsystemWindow(Adw.Window):
                 return
 
             self.stack_main.set_visible_child_name("error")
-        
+
         def create_subsystem() -> [bool, Subsystem]:
             subsystem: Subsystem = Subsystem(
                 None,
                 self.row_name.get_text(),
                 self.__stacks[self.row_stack.get_selected()],
-                None
+                None,
             )
             return subsystem.create()
 

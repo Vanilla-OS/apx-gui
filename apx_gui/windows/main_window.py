@@ -31,9 +31,9 @@ from apx_gui.windows.create_stack import CreateStackWindow
 from apx_gui.windows.create_pkgmanager import CreatePkgManagerWindow
 
 
-@Gtk.Template(resource_path='/org/vanillaos/apx-gui/gtk/window-main.ui')
+@Gtk.Template(resource_path="/org/vanillaos/apx-gui/gtk/window-main.ui")
 class ApxGUIWindow(Adw.ApplicationWindow):
-    __gtype_name__: str = 'ApxGUIWindow'
+    __gtype_name__: str = "ApxGUIWindow"
 
     toasts: Adw.ToastOverlay = Gtk.Template.Child()
     paned_main: Gtk.Paned = Gtk.Template.Child()
@@ -53,19 +53,16 @@ class ApxGUIWindow(Adw.ApplicationWindow):
         self.paned_main.set_end_child(self.editor)
 
         self.sidebar: Sidebar = Sidebar(
-            self,
-            self.__subsystems,
-            self.__stacks,
-            self.__pkgmanagers  
+            self, self.__subsystems, self.__stacks, self.__pkgmanagers
         )
         self.paned_main.set_start_child(self.sidebar)
 
-    def toast(self, message: str, timeout: int=2) -> Adw.Toast:
+    def toast(self, message: str, timeout: int = 2) -> Adw.Toast:
         toast: Adw.Toast = Adw.Toast.new(message)
         toast.props.timeout = timeout
         self.toasts.add_toast(toast)
         return toast
-    
+
     def append_subsystem(self, subsystem: Subsystem) -> None:
         self.__subsystems.append(subsystem)
         self.sidebar.new_subsystem(subsystem)
@@ -92,23 +89,18 @@ class ApxGUIWindow(Adw.ApplicationWindow):
 
     def new_subsystem(self) -> None:
         window: CreateSubsystemWindow = CreateSubsystemWindow(
-            self, 
-            self.__subsystems,
-            self.__stacks 
+            self, self.__subsystems, self.__stacks
         )
         window.show()
 
     def new_stack(self) -> None:
         window: CreateStackWindow = CreateStackWindow(
-            self, 
-            self.__stacks,
-            self.__pkgmanagers
+            self, self.__stacks, self.__pkgmanagers
         )
         window.show()
 
     def new_pkgmanager(self) -> None:
         window: CreatePkgManagerWindow = CreatePkgManagerWindow(
-            self, 
-            self.__pkgmanagers
+            self, self.__pkgmanagers
         )
         window.show()

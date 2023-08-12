@@ -25,7 +25,6 @@ from apx_gui.core.apx_entities import ApxEntityBase, Subsystem, Stack, PkgManage
 
 
 class Apx(ApxEntityBase):
-
     def subsystems_list(self) -> list[Subsystem]:
         command = "apx subsystems list --json"
         status, output = self._run_command(command)
@@ -44,8 +43,8 @@ class Apx(ApxEntityBase):
             )
             subsystem = Subsystem(
                 data["InternalName"],
-                data["Name"], 
-                stack, 
+                data["Name"],
+                stack,
                 data["Status"],
                 data["ExportedPrograms"],
             )
@@ -64,11 +63,11 @@ class Apx(ApxEntityBase):
 
         for data in stacks_data:
             stack = Stack(
-                data["Name"], 
-                data["Base"], 
-                data["Packages"], 
-                data["PkgManager"], 
-                data["BuiltIn"]
+                data["Name"],
+                data["Base"],
+                data["Packages"],
+                data["PkgManager"],
+                data["BuiltIn"],
             )
             stacks.append(stack)
 
@@ -79,14 +78,14 @@ class Apx(ApxEntityBase):
         status, output = self._run_command(command)
         if not status:
             return []
-            
+
         pkgmanagers_data = json.loads(output)
         pkgmanagers = []
         for data in pkgmanagers_data:
             pkgmanager = PkgManager(
-                data["Name"], 
-                data["NeedSudo"], 
-                data["CmdAutoRemove"], 
+                data["Name"],
+                data["NeedSudo"],
+                data["CmdAutoRemove"],
                 data["CmdClean"],
                 data["CmdInstall"],
                 data["CmdList"],
@@ -96,8 +95,8 @@ class Apx(ApxEntityBase):
                 data["CmdShow"],
                 data["CmdUpdate"],
                 data["CmdUpgrade"],
-                data["BuiltIn"]
-            ) 
+                data["BuiltIn"],
+            )
             pkgmanagers.append(pkgmanager)
 
         return pkgmanagers
