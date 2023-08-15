@@ -12,7 +12,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2023-07-10 18:39+0530\n"
 "PO-Revision-Date: 2023-08-15 16:51+0000\n"
-"Last-Translator: Jorge Ivan Carmona Cortez <dh_plasma@hotmail.com>\n"
+"Last-Translator: Íñigo Aréjula Aísa <arejula27@gmail.com>\n"
 "Language-Team: Spanish <https://hosted.weblate.org/projects/vanilla-os/"
 "apx-gui/es/>\n"
 "Language: es\n"
@@ -158,7 +158,7 @@ msgstr "Nuevo subsistema"
 
 #: apx_gui/gtk/create-subsystem.ui:49 apx_gui/gtk/tab-subsystem.ui:19
 msgid "Stack"
-msgstr ""
+msgstr "Colección de paquetes"
 
 #: apx_gui/gtk/create-subsystem.ui:78
 msgid "Creating Subsystem…"
@@ -179,6 +179,8 @@ msgstr "Iniciar o abrir un subsistema"
 #: apx_gui/gtk/editor.ui:13
 msgid "Start by opening a subsystem, stack or package manager on the left."
 msgstr ""
+"Empezar abriendo un subsistema, colección de paquetes o gestor de paquetes a "
+"la izquierda."
 
 #: apx_gui/gtk/help-overlay.ui:11
 msgctxt "shortcut window"
