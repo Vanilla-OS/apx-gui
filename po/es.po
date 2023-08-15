@@ -4,13 +4,14 @@
 # Alberto Mimbrero Sánchez <mimbrero.alberto@gmail.com>, 2023.
 # Íñigo Aréjula Aísa <arejula27@gmail.com>, 2023.
 # "K.B.Dharun Krishna" <kbdharunkrishna@gmail.com>, 2023.
+# "Samuel P. Aguilar F." <huntermirror@yahoo.com.ve>, 2023.
 msgid ""
 msgstr ""
 "Project-Id-Version: apx_gui\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2023-07-10 18:39+0530\n"
-"PO-Revision-Date: 2023-07-12 17:10+0000\n"
-"Last-Translator: \"K.B.Dharun Krishna\" <kbdharunkrishna@gmail.com>\n"
+"PO-Revision-Date: 2023-08-12 14:48+0000\n"
+"Last-Translator: \"Samuel P. Aguilar F.\" <huntermirror@yahoo.com.ve>\n"
 "Language-Team: Spanish <https://hosted.weblate.org/projects/vanilla-os/"
 "apx-gui/es/>\n"
 "Language: es\n"
@@ -58,11 +59,11 @@ msgstr "Necesita sudo"
 
 #: apx_gui/gtk/create-pkgmanager.ui:70
 msgid "Commands"
-msgstr ""
+msgstr "Comandos"
 
 #: apx_gui/gtk/create-pkgmanager.ui:73 apx_gui/gtk/tab-pkgmanager.ui:57
 msgid "Autoremove"
-msgstr ""
+msgstr "Autoremover"
 
 #: apx_gui/gtk/create-pkgmanager.ui:78 apx_gui/gtk/tab-pkgmanager.ui:63
 msgid "Clean"
@@ -74,11 +75,11 @@ msgstr "Instalar"
 
 #: apx_gui/gtk/create-pkgmanager.ui:88 apx_gui/gtk/tab-pkgmanager.ui:75
 msgid "List"
-msgstr ""
+msgstr "Lista"
 
 #: apx_gui/gtk/create-pkgmanager.ui:93 apx_gui/gtk/tab-pkgmanager.ui:81
 msgid "Purge"
-msgstr ""
+msgstr "Purgar"
 
 #: apx_gui/gtk/create-pkgmanager.ui:98 apx_gui/gtk/tab-pkgmanager.ui:87
 msgid "Remove"
@@ -160,11 +161,11 @@ msgstr ""
 
 #: apx_gui/gtk/create-subsystem.ui:78
 msgid "Creating Subsystem…"
-msgstr ""
+msgstr "Creando subsistema…"
 
 #: apx_gui/gtk/create-subsystem.ui:79
 msgid "Please wait while the subsystem is being created."
-msgstr ""
+msgstr "Por favor espere mientras el subsistema está siendo creado."
 
 #: apx_gui/gtk/create-subsystem.ui:104
 msgid "An error occurred while creating the subsystem."
@@ -194,15 +195,11 @@ msgid "Quit"
 msgstr "Salir"
 
 #: apx_gui/gtk/help-overlay.ui:26
-#, fuzzy
-#| msgid "Create"
 msgctxt "shortcut window"
 msgid "Create"
 msgstr "Crear"
 
 #: apx_gui/gtk/help-overlay.ui:29
-#, fuzzy
-#| msgid "New Subsystem"
 msgctxt "shortcut window"
 msgid "New Subsystem"
 msgstr "Nuevo subsistema"
