@@ -12,7 +12,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2023-07-10 18:39+0530\n"
 "PO-Revision-Date: 2023-08-15 17:19+0000\n"
-"Last-Translator: Jorge Ivan Carmona Cortez <dh_plasma@hotmail.com>\n"
+"Last-Translator: Íñigo Aréjula Aísa <arejula27@gmail.com>\n"
 "Language-Team: Spanish <https://hosted.weblate.org/projects/vanilla-os/"
 "apx-gui/es/>\n"
 "Language: es\n"
@@ -76,7 +76,7 @@ msgstr "Instalar"
 
 #: apx_gui/gtk/create-pkgmanager.ui:88 apx_gui/gtk/tab-pkgmanager.ui:75
 msgid "List"
-msgstr "Lista"
+msgstr "Listar"
 
 #: apx_gui/gtk/create-pkgmanager.ui:93 apx_gui/gtk/tab-pkgmanager.ui:81
 msgid "Purge"
@@ -125,7 +125,7 @@ msgstr "Cerrar"
 
 #: apx_gui/gtk/create-stack.ui:6 apx_gui/gtk/window-main.ui:66
 msgid "New Stack"
-msgstr "Nueva pila"
+msgstr "Nueva  conjunto de paquetes"
 
 #: apx_gui/gtk/create-stack.ui:49 apx_gui/gtk/tab-stack.ui:27
 msgid "Base"
@@ -253,19 +253,19 @@ msgstr "Estado"
 
 #: apx_gui/gtk/tab-subsystem.ui:53
 msgid "Open Console"
-msgstr ""
+msgstr "Abrir consola"
 
 #: apx_gui/gtk/tab-subsystem.ui:54
 msgid "Enter a console in this subsystem's environment."
-msgstr ""
+msgstr "Entrar en una consola en este entorno del subsistema."
 
 #: apx_gui/gtk/tab-subsystem.ui:74
 msgid "Reset Subsystem"
-msgstr ""
+msgstr "Restablecer el sistema"
 
 #: apx_gui/gtk/tab-subsystem.ui:89
 msgid "Delete Subsystem"
-msgstr ""
+msgstr "Eliminar subsistema"
 
 #: apx_gui/gtk/window-main.ui:78
 msgid "_Keyboard Shortcuts"
