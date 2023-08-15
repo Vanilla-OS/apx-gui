@@ -12,7 +12,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2023-07-10 18:39+0530\n"
 "PO-Revision-Date: 2023-08-15 17:10+0000\n"
-"Last-Translator: Íñigo Aréjula Aísa <arejula27@gmail.com>\n"
+"Last-Translator: Jorge Ivan Carmona Cortez <dh_plasma@hotmail.com>\n"
 "Language-Team: Spanish <https://hosted.weblate.org/projects/vanilla-os/"
 "apx-gui/es/>\n"
 "Language: es\n"
@@ -208,15 +208,11 @@ msgid "New Subsystem"
 msgstr "Nuevo subsistema"
 
 #: apx_gui/gtk/help-overlay.ui:35
-#, fuzzy
-#| msgid "New Stack"
 msgctxt "shortcut window"
 msgid "New Stack"
-msgstr "Nueva pila"
+msgstr "Nueva colección de paquetes"
 
 #: apx_gui/gtk/help-overlay.ui:41
-#, fuzzy
-#| msgid "New Package Manager"
 msgctxt "shortcut window"
 msgid "New Package Manager"
 msgstr "Nuevo gestor de paquetes"
@@ -224,10 +220,11 @@ msgstr "Nuevo gestor de paquetes"
 #: apx_gui/gtk/tab-pkgmanager.ui:13
 msgid "This package manager is built-in and cannot be edited or deleted."
 msgstr ""
+"Este gestor de paquetes está incorporado y no puede editarse ni eliminarse."
 
 #: apx_gui/gtk/tab-pkgmanager.ui:42 apx_gui/gtk/tab-stack.ui:49
 msgid "Built-In"
-msgstr ""
+msgstr "Incorporado"
 
 #: apx_gui/gtk/tab-pkgmanager.ui:119 apx_gui/gtk/tab-stack.ui:71
 msgid "Destructive Actions"
