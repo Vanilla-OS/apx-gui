@@ -11,7 +11,7 @@ msgstr ""
 "Project-Id-Version: apx_gui\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2023-07-10 18:39+0530\n"
-"PO-Revision-Date: 2023-08-15 16:49+0000\n"
+"PO-Revision-Date: 2023-08-15 16:51+0000\n"
 "Last-Translator: Jorge Ivan Carmona Cortez <dh_plasma@hotmail.com>\n"
 "Language-Team: Spanish <https://hosted.weblate.org/projects/vanilla-os/"
 "apx-gui/es/>\n"
@@ -146,7 +146,7 @@ msgstr "Paquete nuevo"
 
 #: apx_gui/gtk/create-stack.ui:119
 msgid "Please wait while the stack is being created."
-msgstr "Por favor espere mientres la colección de paquetes es creada"
+msgstr "Por favor espere mientres la colección de paquetes es creada."
 
 #: apx_gui/gtk/create-stack.ui:144
 msgid "An error occurred while creating the stack."
