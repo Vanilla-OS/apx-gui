@@ -129,7 +129,7 @@ class Subsystem(ApxEntityBase):
         )
         res: [bool, str] = self._run_command(command)
         if not res[0]:
-            return re[0], self
+            return res[0], self
 
         command: str = f"apx subsystems list --json"
         res: [bool, str] = self._run_command(command)
