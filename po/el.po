@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: apx_gui\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2023-07-10 18:39+0530\n"
-"PO-Revision-Date: 2023-08-03 04:53+0000\n"
+"PO-Revision-Date: 2023-08-21 18:50+0000\n"
 "Last-Translator: Andrew Geo <andrewgeo@outlook.com>\n"
 "Language-Team: Greek <https://hosted.weblate.org/projects/vanilla-os/apx-gui/"
 "el/>\n"
@@ -20,7 +20,7 @@ msgstr ""
 
 #: data/org.vanillaos.ApxGUI.desktop.in:3
 msgid "Apx"
-msgstr ""
+msgstr "Apx"
 
 #: data/org.vanillaos.ApxGUI.appdata.xml.in:7
 msgid "A frontend in GTK 4 and Libadwaita for Apx."
@@ -100,19 +100,19 @@ msgstr ""
 
 #: apx_gui/gtk/create-pkgmanager.ui:144
 msgid "Creating Package Manager…"
-msgstr ""
+msgstr "Δημιουργία Διαχειριστή πακέτων…"
 
 #: apx_gui/gtk/create-pkgmanager.ui:145
 msgid "Please wait while the package manager is being created."
-msgstr ""
+msgstr "Παρακαλώ περιμένετε όσο δημιουργείται ο διαχειριστής πακέτων."
 
 #: apx_gui/gtk/create-pkgmanager.ui:169
 msgid "An Error Occurred"
-msgstr ""
+msgstr "Εμφανίστηκε σφάλμα"
 
 #: apx_gui/gtk/create-pkgmanager.ui:170
 msgid "An error occurred while creating the package manager."
-msgstr ""
+msgstr "Προέκυψε σφάλμα κατά τη δημιουργία του διαχειριστή πακέτων."
 
 #: apx_gui/gtk/create-pkgmanager.ui:174 apx_gui/gtk/create-stack.ui:148
 #: apx_gui/gtk/create-subsystem.ui:108
@@ -121,75 +121,77 @@ msgstr "Κλείσιμο"
 
 #: apx_gui/gtk/create-stack.ui:6 apx_gui/gtk/window-main.ui:66
 msgid "New Stack"
-msgstr ""
+msgstr "Νέα στοίβα"
 
 #: apx_gui/gtk/create-stack.ui:49 apx_gui/gtk/tab-stack.ui:27
 msgid "Base"
-msgstr ""
+msgstr "Βάση"
 
 #: apx_gui/gtk/create-stack.ui:54 apx_gui/gtk/tab-stack.ui:38
 #: apx_gui/gtk/tab-subsystem.ui:29
 msgid "Package Manager"
-msgstr ""
+msgstr "Διαχειριστής πακέτων"
 
 #: apx_gui/gtk/create-stack.ui:80
 msgid "Add Package"
-msgstr ""
+msgstr "Προσθήκη πακέτου"
 
 #: apx_gui/gtk/create-stack.ui:92
 msgid "New Package"
-msgstr ""
+msgstr "Νέο πακέτο"
 
 #: apx_gui/gtk/create-stack.ui:119
 msgid "Please wait while the stack is being created."
-msgstr ""
+msgstr "Παρακαλώ περιμένετε όσο δημιουργείται η στοίβα."
 
 #: apx_gui/gtk/create-stack.ui:144
 msgid "An error occurred while creating the stack."
-msgstr ""
+msgstr "Προέκυψε σφάλμα κατά τη δημιουργία της στοίβας."
 
 #: apx_gui/gtk/create-subsystem.ui:6 apx_gui/gtk/window-main.ui:62
 msgid "New Subsystem"
-msgstr ""
+msgstr "Νέο υποσύστημα"
 
 #: apx_gui/gtk/create-subsystem.ui:49 apx_gui/gtk/tab-subsystem.ui:19
 msgid "Stack"
-msgstr ""
+msgstr "Στοίβα"
 
 #: apx_gui/gtk/create-subsystem.ui:78
 msgid "Creating Subsystem…"
-msgstr ""
+msgstr "Δημιουργία υποσυστήματος…"
 
 #: apx_gui/gtk/create-subsystem.ui:79
 msgid "Please wait while the subsystem is being created."
-msgstr ""
+msgstr "Παρακαλώ περιμένετε όσο το υποσύστημα δημιουργείται."
 
 #: apx_gui/gtk/create-subsystem.ui:104
 msgid "An error occurred while creating the subsystem."
-msgstr ""
+msgstr "Προέκυψε σφάλμα κατά τη δημιουργία του υποσυστήματος."
 
 #: apx_gui/gtk/editor.ui:12
 msgid "Start or Open a Subsystem"
-msgstr ""
+msgstr "Έναρξη ή άνοιγμα υποσυστήματος"
 
 #: apx_gui/gtk/editor.ui:13
 msgid "Start by opening a subsystem, stack or package manager on the left."
 msgstr ""
+"Ξεκινήστε ανοίγοντας ένα υποσύστημα, μια στοίβα ή έναν διαχειριστή πακέτων "
+"στα αριστερά."
 
 #: apx_gui/gtk/help-overlay.ui:11
 msgctxt "shortcut window"
 msgid "General"
-msgstr ""
+msgstr "Γενικά"
 
 #: apx_gui/gtk/help-overlay.ui:14
 msgctxt "shortcut window"
 msgid "Show Shortcuts"
-msgstr ""
+msgstr "Προβολή Συντομεύσεων"
 
 #: apx_gui/gtk/help-overlay.ui:20
 msgctxt "shortcut window"
 msgid "Quit"
-msgstr ""
+msgstr "Έξοδος"
 
 #: apx_gui/gtk/help-overlay.ui:26
 #, fuzzy
@@ -201,12 +203,12 @@ msgstr "Δημιουργία"
 #: apx_gui/gtk/help-overlay.ui:29
 msgctxt "shortcut window"
 msgid "New Subsystem"
-msgstr ""
+msgstr "Νέο υποσύστημα"
 
 #: apx_gui/gtk/help-overlay.ui:35
 msgctxt "shortcut window"
 msgid "New Stack"
-msgstr ""
+msgstr "Νέα στοίβα"
 
 #: apx_gui/gtk/help-overlay.ui:41
 #, fuzzy
@@ -218,50 +220,54 @@ msgstr "Νέος Διαχειριστής Πακέτων"
 #: apx_gui/gtk/tab-pkgmanager.ui:13
 msgid "This package manager is built-in and cannot be edited or deleted."
 msgstr ""
+"Αυτός ο διαχειριστής πακέτων είναι ενσωματωμένος και δεν μπορεί να "
+"επεξεργαστεί ή να διαγραφεί."
 
 #: apx_gui/gtk/tab-pkgmanager.ui:42 apx_gui/gtk/tab-stack.ui:49
 msgid "Built-In"
-msgstr ""
+msgstr "Ενσωματωμένο"
 
 #: apx_gui/gtk/tab-pkgmanager.ui:119 apx_gui/gtk/tab-stack.ui:71
 msgid "Destructive Actions"
-msgstr ""
+msgstr "Καταστροφικές ενέργειες"
 
 #: apx_gui/gtk/tab-pkgmanager.ui:122
 msgid "Delete Package Manager"
-msgstr ""
+msgstr "Διαγραφή Διαχειριστή πακέτων"
 
 #: apx_gui/gtk/tab-stack.ui:13
 msgid "This stack is built-in and cannot be edited or deleted."
 msgstr ""
+"Αυτή η στοίβα είναι ενσωματωμένη και δεν μπορεί να επεξεργαστεί ή να "
+"διαγραφεί."
 
 #: apx_gui/gtk/tab-stack.ui:59
 msgid "Packages"
-msgstr ""
+msgstr "Πακέτα"
 
 #: apx_gui/gtk/tab-stack.ui:74
 msgid "Delete Stack"
-msgstr ""
+msgstr "Διαγραφή στοίβας"
 
 #: apx_gui/gtk/tab-subsystem.ui:9
 msgid "Status"
-msgstr ""
+msgstr "Κατάσταση"
 
 #: apx_gui/gtk/tab-subsystem.ui:53
 msgid "Open Console"
-msgstr ""
+msgstr "Άνοιγμα κονσόλας"
 
 #: apx_gui/gtk/tab-subsystem.ui:54
 msgid "Enter a console in this subsystem's environment."
-msgstr ""
+msgstr "Εισαγωγή κονσόλας στο περιβάλλον αυτού του υποσυστήματος."
 
 #: apx_gui/gtk/tab-subsystem.ui:74
 msgid "Reset Subsystem"
-msgstr ""
+msgstr "Επαναφορά υποσυστήματος"
 
 #: apx_gui/gtk/tab-subsystem.ui:89
 msgid "Delete Subsystem"
-msgstr ""
+msgstr "Διαγραφή υποσυστήματος"
 
 #: apx_gui/gtk/window-main.ui:78
 msgid "_Keyboard Shortcuts"
@@ -269,16 +275,17 @@ msgstr "_Συντομεύσεις πληκτρολογίου"
 
 #: apx_gui/gtk/window-main.ui:82
 msgid "_About Apx GUI"
-msgstr ""
+msgstr "_Σχετικά με το Apx GUI"
 
 #: apx_gui/main.py:102
+#, fuzzy
 msgid "translator_credits"
-msgstr ""
+msgstr "Ανδρέας Γεωργόπουλος <andrewgeo@outlook.com>"
 
 #: apx_gui/main.py:107
 msgid "Contributors"
-msgstr ""
+msgstr "Συντελεστές"
 
 #: apx_gui/main.py:113
 msgid "Tools"
-msgstr ""
+msgstr "Εργαλεία"
