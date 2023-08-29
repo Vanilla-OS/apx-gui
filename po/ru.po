@@ -10,7 +10,7 @@ msgstr ""
 "Project-Id-Version: apx_gui\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2023-07-05 20:14+0530\n"
-"PO-Revision-Date: 2023-07-28 09:04+0000\n"
+"PO-Revision-Date: 2023-08-31 05:49+0000\n"
 "Last-Translator: Fedorov Alexei <aleksejfedorov963@gmail.com>\n"
 "Language-Team: Russian <https://hosted.weblate.org/projects/vanilla-os/"
 "apx-gui/ru/>\n"
@@ -20,7 +20,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=n%10==1 && n%100!=11 ? 0 : n%10>=2 && "
 "n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
-"X-Generator: Weblate 5.0-dev\n"
+"X-Generator: Weblate 5.0.1-dev\n"
 
 #: data/org.vanillaos.ApxGUI.desktop.in:3
 msgid "Apx"
@@ -72,7 +72,7 @@ msgstr "Очистить данные (Clean)"
 
 #: apx_gui/gtk/create-pkgmanager.ui:83 apx_gui/gtk/tab-pkgmanager.ui:69
 msgid "Install"
-msgstr "Установить (Install)"
+msgstr "Установить"
 
 #: apx_gui/gtk/create-pkgmanager.ui:88 apx_gui/gtk/tab-pkgmanager.ui:75
 msgid "List"
