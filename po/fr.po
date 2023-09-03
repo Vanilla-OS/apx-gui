@@ -10,7 +10,7 @@ msgstr ""
 "Project-Id-Version: apx_gui\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2023-07-10 18:39+0530\n"
-"PO-Revision-Date: 2023-07-13 17:49+0000\n"
+"PO-Revision-Date: 2023-09-01 12:53+0000\n"
 "Last-Translator: tachyglossues <tachyglossues@gmail.com>\n"
 "Language-Team: French <https://hosted.weblate.org/projects/vanilla-os/"
 "apx-gui/fr/>\n"
@@ -19,7 +19,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n > 1;\n"
-"X-Generator: Weblate 5.0-dev\n"
+"X-Generator: Weblate 5.0.1-dev\n"
 
 #: data/org.vanillaos.ApxGUI.desktop.in:3
 msgid "Apx"
@@ -75,7 +75,7 @@ msgstr "Installer"
 
 #: apx_gui/gtk/create-pkgmanager.ui:88 apx_gui/gtk/tab-pkgmanager.ui:75
 msgid "List"
-msgstr "Lister"
+msgstr "Liste"
 
 #: apx_gui/gtk/create-pkgmanager.ui:93 apx_gui/gtk/tab-pkgmanager.ui:81
 msgid "Purge"
@@ -270,7 +270,7 @@ msgstr "Supprimer le sous-système"
 
 #: apx_gui/gtk/window-main.ui:78
 msgid "_Keyboard Shortcuts"
-msgstr "Raccourcis clavier (_K)"
+msgstr "_Raccourcis clavier"
 
 #: apx_gui/gtk/window-main.ui:82
 msgid "_About Apx GUI"
@@ -278,7 +278,9 @@ msgstr "_A propos de l'interface graphique d'Apx"
 
 #: apx_gui/main.py:102
 msgid "translator_credits"
-msgstr "Thual Labart--Barnagaud <tlabartbarnagaud@protonmail.com>"
+msgstr ""
+"Thual Labart--Barnagaud <tlabartbarnagaud@protonmail.com>\n"
+"tachyglossues <tachyglossues@gmail.com>"
 
 #: apx_gui/main.py:107
 msgid "Contributors"

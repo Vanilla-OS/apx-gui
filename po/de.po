@@ -4,13 +4,14 @@
 # Ettore Atalan <atalanttore@googlemail.com>, 2023.
 # "K.B.Dharun Krishna" <kbdharunkrishna@gmail.com>, 2023.
 # nautilusx <translate@disroot.org>, 2023.
+# Experiencing A Significant Gravitas Shortfall <bedeb1@pm.me>, 2023.
 msgid ""
 msgstr ""
 "Project-Id-Version: apx_gui\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2023-07-10 18:39+0530\n"
-"PO-Revision-Date: 2023-07-20 09:07+0000\n"
-"Last-Translator: nautilusx <translate@disroot.org>\n"
+"PO-Revision-Date: 2023-09-03 11:44+0000\n"
+"Last-Translator: \"K.B.Dharun Krishna\" <kbdharunkrishna@gmail.com>\n"
 "Language-Team: German <https://hosted.weblate.org/projects/vanilla-os/"
 "apx-gui/de/>\n"
 "Language: de\n"
@@ -18,7 +19,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 5.0-dev\n"
+"X-Generator: Weblate 5.0.1-dev\n"
 
 #: data/org.vanillaos.ApxGUI.desktop.in:3
 msgid "Apx"
@@ -256,7 +257,7 @@ msgstr "Konsole öffnen"
 
 #: apx_gui/gtk/tab-subsystem.ui:54
 msgid "Enter a console in this subsystem's environment."
-msgstr ""
+msgstr "Öffnen Sie eine Konsole innerhalb des Subsystems."
 
 #: apx_gui/gtk/tab-subsystem.ui:74
 msgid "Reset Subsystem"
@@ -268,7 +269,7 @@ msgstr "Subsystem löschen"
 
 #: apx_gui/gtk/window-main.ui:78
 msgid "_Keyboard Shortcuts"
-msgstr "Tastenkombinationen (_K)"
+msgstr "_Tastenkombinationen"
 
 #: apx_gui/gtk/window-main.ui:82
 msgid "_About Apx GUI"
@@ -277,6 +278,9 @@ msgstr "Über Apx GUI (_A)"
 #: apx_gui/main.py:102
 msgid "translator_credits"
 msgstr ""
+"Ettore Atalan <atalanttore@googlemail.com>\n"
+"nautilusx <translate@disroot.org>\n"
+"Laurenz Bleckmann"
 
 #: apx_gui/main.py:107
 msgid "Contributors"
