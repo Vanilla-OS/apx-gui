@@ -2,21 +2,22 @@
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the apx_gui package.
 # azuki <ipadgoogcloud@gmail.com>, 2023.
+# "Shuuji TAKAHASHI (shuuji3)" <shuuji3@gmail.com>, 2023.
 msgid ""
 msgstr ""
 "Project-Id-Version: apx_gui\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2023-07-10 18:39+0530\n"
-"PO-Revision-Date: 2023-07-10 13:16+0000\n"
-"Last-Translator: azuki <ipadgoogcloud@gmail.com>\n"
-"Language-Team: Japanese <https://hosted.weblate.org/projects/vanilla-os/apx-"
-"gui/ja/>\n"
+"PO-Revision-Date: 2023-09-19 16:59+0000\n"
+"Last-Translator: \"Shuuji TAKAHASHI (shuuji3)\" <shuuji3@gmail.com>\n"
+"Language-Team: Japanese <https://hosted.weblate.org/projects/vanilla-os/"
+"apx-gui/ja/>\n"
 "Language: ja\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Weblate 5.0-dev\n"
+"X-Generator: Weblate 5.1-dev\n"
 
 #: data/org.vanillaos.ApxGUI.desktop.in:3
 msgid "Apx"
@@ -48,7 +49,7 @@ msgstr ""
 #: apx_gui/gtk/create-pkgmanager.ui:44 apx_gui/gtk/create-stack.ui:44
 #: apx_gui/gtk/create-subsystem.ui:44
 msgid "Name"
-msgstr ""
+msgstr "名前"
 
 #: apx_gui/gtk/create-pkgmanager.ui:49 apx_gui/gtk/tab-pkgmanager.ui:27
 msgid "Need Sudo"
