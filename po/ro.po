@@ -10,7 +10,7 @@ msgstr ""
 "Project-Id-Version: apx_gui\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2023-07-10 18:39+0530\n"
-"PO-Revision-Date: 2023-07-29 14:06+0000\n"
+"PO-Revision-Date: 2023-09-04 20:39+0000\n"
 "Last-Translator: Matt C <matei.gurzu@gmail.com>\n"
 "Language-Team: Romanian <https://hosted.weblate.org/projects/vanilla-os/"
 "apx-gui/ro/>\n"
@@ -20,7 +20,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=n==1 ? 0 : (n==0 || (n%100 > 0 && n%100 < "
 "20)) ? 1 : 2;\n"
-"X-Generator: Weblate 5.0-dev\n"
+"X-Generator: Weblate 5.0.1-dev\n"
 
 #: data/org.vanillaos.ApxGUI.desktop.in:3
 msgid "Apx"
@@ -32,7 +32,7 @@ msgstr "Un frontend în GTK 4 și Libadwaita pentru Apx."
 
 #: apx_gui/gtk/create-pkgmanager.ui:6 apx_gui/gtk/window-main.ui:70
 msgid "New Package Manager"
-msgstr "Noul manager de pachete"
+msgstr "Manager de pachete nou"
 
 #: apx_gui/gtk/create-pkgmanager.ui:23 apx_gui/gtk/create-stack.ui:23
 #: apx_gui/gtk/create-subsystem.ui:23
@@ -276,7 +276,9 @@ msgstr "Despre Apx GUI (_A)"
 
 #: apx_gui/main.py:102
 msgid "translator_credits"
-msgstr "Gabriel Cozma https://gabs.eu.org"
+msgstr ""
+"Gabriel Cozma https://gabs.eu.org\n"
+"Ame https://driedpampas.ro.eu.org"
 
 #: apx_gui/main.py:107
 msgid "Contributors"
