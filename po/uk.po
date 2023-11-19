@@ -5,13 +5,14 @@
 # "K.B.Dharun Krishna" <kbdharunkrishna@gmail.com>, 2023.
 # Pindos <dfgfgg977@gmail.com>, 2023.
 # Fedorov Alexei <aleksejfedorov963@gmail.com>, 2023.
+# DartDeaDia <dartdeadia@protonmail.com>, 2023.
 msgid ""
 msgstr ""
 "Project-Id-Version: apx_gui\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2023-07-05 20:14+0530\n"
-"PO-Revision-Date: 2023-09-17 18:01+0000\n"
-"Last-Translator: Dan <jonweblin2205@protonmail.com>\n"
+"PO-Revision-Date: 2023-11-19 06:53+0000\n"
+"Last-Translator: DartDeaDia <dartdeadia@protonmail.com>\n"
 "Language-Team: Ukrainian <https://hosted.weblate.org/projects/vanilla-os/"
 "apx-gui/uk/>\n"
 "Language: uk\n"
@@ -20,7 +21,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=n%10==1 && n%100!=11 ? 0 : n%10>=2 && "
 "n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
-"X-Generator: Weblate 5.0.2\n"
+"X-Generator: Weblate 5.2\n"
 
 #: data/org.vanillaos.ApxGUI.desktop.in:3
 msgid "Apx"
@@ -188,7 +189,7 @@ msgstr "Загальні"
 #: apx_gui/gtk/help-overlay.ui:14
 msgctxt "shortcut window"
 msgid "Show Shortcuts"
-msgstr "Показати скорочення"
+msgstr "Показати комбінації клавіш"
 
 #: apx_gui/gtk/help-overlay.ui:20
 msgctxt "shortcut window"
