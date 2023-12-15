@@ -1,105 +1,134 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <interface>
-  <template class="TabSubsystem" parent="AdwPreferencesPage">
-    <child>
-      <object class="AdwPreferencesGroup">
-        <property name="title">Details</property>
-        <child>
-          <object class="AdwActionRow" id="row_status">
-            <property name="title" translatable="yes">Status</property>
-            <child type="prefix">
-              <object class="GtkImage">
-                <property name="icon-name">org.gnome.SystemMonitor-symbolic</property>
-              </object>
-            </child>
-          </object>
-        </child>
-        <child>
-          <object class="AdwActionRow" id="row_stack">
-            <property name="title" translatable="yes">Stack</property>
-            <child type="prefix">
-              <object class="GtkImage">
-                <property name="icon-name">vanilla-puzzle-piece-symbolic</property>
-              </object>
-            </child>
-          </object>
-        </child>
-        <child>
-          <object class="AdwActionRow" id="row_pkgmanager">
-            <property name="title" translatable="yes">Package Manager</property>
-            <child type="prefix">
-              <object class="GtkImage">
-                <property name="icon-name">insert-object-symbolic-symbolic</property>
-              </object>
-            </child>
-          </object>
-        </child>
-        <child>
-          <object class="AdwExpanderRow" id="row_programs">
-            <child type="prefix">
-              <object class="GtkImage">
-                <property name="icon-name">preferences-desktop-apps-symbolic</property>
-              </object>
-            </child>
-          </object>
-        </child>
-      </object>
-    </child>
-    <child>
-      <object class="AdwPreferencesGroup">
-        <property name="title">Actions</property>
-        <child>
-          <object class="AdwActionRow" id="row_console">
-            <property name="title" translatable="yes">Open Console</property>
-            <property name="subtitle" translatable="yes">Enter a console in this subsystem's environment.</property>
-            <property name="activatable-widget">btn_console</property>
-            <child type="suffix">
-              <object class="GtkButton" id="btn_console">
-                <property name="icon-name">utilities-terminal-symbolic</property>
-                <property name="valign">center</property>
-                <style>
-                  <class name="flat"/>
-                </style>
-              </object>
-            </child>
-          </object>
-        </child>
-      </object>
-    </child>
-    <child>
-      <object class="AdwPreferencesGroup">
-        <property name="title">Destructive Actions</property>
-        <child>
-          <object class="AdwActionRow" id="row_reset">
-            <property name="title" translatable="yes">Reset Subsystem</property>
-            <property name="activatable-widget">btn_reset</property>
-            <child type="suffix">
-              <object class="GtkButton" id="btn_reset">
-                <property name="icon-name">view-refresh-symbolic</property>
-                <property name="valign">center</property>
-                <style>
-                  <class name="flat"/>
-                </style>
-              </object>
-            </child>
-          </object>
-        </child>
-        <child>
-          <object class="AdwActionRow" id="row_delete">
-            <property name="title" translatable="yes">Delete Subsystem</property>
-            <property name="activatable-widget">btn_delete</property>
-            <child type="suffix">
-              <object class="GtkButton" id="btn_delete">
-                <property name="icon-name">user-trash-symbolic</property>
-                <property name="valign">center</property>
-                <style>
-                  <class name="flat"/>
-                </style>
-              </object>
-            </child>
-          </object>
-        </child>
-      </object>
-    </child>
-  </template>
+	<template class="TabSubsystem" parent="GtkBox">
+		<property name="orientation">vertical</property>
+		<child>
+			<object class="GtkPaned">
+				<property name="orientation">vertical</property>
+				<property name="vexpand">true</property>
+				<property name="position">460</property>
+				<child>
+					<object class="AdwPreferencesPage">
+						<child>
+							<object class="AdwPreferencesGroup">
+								<property name="title">Details</property>
+								<child>
+									<object class="AdwActionRow" id="row_status">
+										<property name="title" translatable="yes">Status</property>
+										<child type="prefix">
+											<object class="GtkImage">
+												<property name="icon-name">org.gnome.SystemMonitor-symbolic</property>
+											</object>
+										</child>
+									</object>
+								</child>
+								<child>
+									<object class="AdwActionRow" id="row_stack">
+										<property name="title" translatable="yes">Stack</property>
+										<child type="prefix">
+											<object class="GtkImage">
+												<property name="icon-name">vanilla-puzzle-piece-symbolic</property>
+											</object>
+										</child>
+									</object>
+								</child>
+								<child>
+									<object class="AdwActionRow" id="row_pkgmanager">
+										<property name="title" translatable="yes">Package Manager</property>
+										<child type="prefix">
+											<object class="GtkImage">
+												<property name="icon-name">insert-object-symbolic-symbolic</property>
+											</object>
+										</child>
+									</object>
+								</child>
+								<child>
+									<object class="AdwExpanderRow" id="row_programs">
+										<child type="prefix">
+											<object class="GtkImage">
+												<property name="icon-name">preferences-desktop-apps-symbolic</property>
+											</object>
+										</child>
+									</object>
+								</child>
+							</object>
+						</child>
+						<child>
+							<object class="AdwPreferencesGroup">
+								<property name="title">Destructive Actions</property>
+								<child>
+									<object class="AdwActionRow" id="row_reset">
+										<property name="title" translatable="yes">Reset Subsystem</property>
+										<property name="activatable-widget">btn_reset</property>
+										<child type="suffix">
+											<object class="GtkButton" id="btn_reset">
+												<property name="icon-name">view-refresh-symbolic</property>
+												<property name="valign">center</property>
+												<style>
+													<class name="flat"/>
+												</style>
+											</object>
+										</child>
+									</object>
+								</child>
+								<child>
+									<object class="AdwActionRow" id="row_delete">
+										<property name="title" translatable="yes">Delete Subsystem</property>
+										<property name="activatable-widget">btn_delete</property>
+										<child type="suffix">
+											<object class="GtkButton" id="btn_delete">
+												<property name="icon-name">user-trash-symbolic</property>
+												<property name="valign">center</property>
+												<style>
+													<class name="flat"/>
+												</style>
+											</object>
+										</child>
+									</object>
+								</child>
+							</object>
+						</child>
+					</object>
+				</child>
+				<child>
+					<object class="GtkBox" id="box_console">
+						<property name="visible">false</property>
+					</object>
+				</child>
+			</object>
+		</child>
+		<child>
+			<object class="GtkSeparator"></object>
+		</child>
+		<child>
+			<object class="GtkBox">
+				<property name="hexpand">true</property>
+				<property name="halign">end</property>
+				<property name="spacing">5</property>
+				<child>
+					<object class="GtkButton" id="btn_restart_console">
+						<property name="icon-name">view-refresh-symbolic</property>
+						<property name="halign">end</property>
+						<property name="valign">center</property>
+						<property name="visible">false</property>
+						<property name="tooltip-text" translatable="yes">Restart Console</property>
+						<style>
+							<class name="flat"/>
+						</style>
+					</object>
+				</child>
+				<child>
+					<object class="GtkButton" id="btn_toggle_console">
+						<property name="icon-name">utilities-terminal-symbolic</property>
+						<property name="halign">end</property>
+						<property name="valign">center</property>
+						<property name="tooltip-text" translatable="yes">Toggle Console</property>
+						<style>
+							<class name="flat"/>
+						</style>
+					</object>
+				</child>
+			</object>
+		</child>
+	</template>
 </interface>
