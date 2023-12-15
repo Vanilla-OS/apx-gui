@@ -18,16 +18,55 @@
 # SPDX-License-Identifier: GPL-3.0-or-later
 
 import subprocess
+import shutil
 import shlex
 import json
+import os
 
 from apx_gui.core.apx_entities import ApxEntityBase, Subsystem, Stack, PkgManager
 
 
 class Apx(ApxEntityBase):
+    def _is_running_in_container(self) -> bool:
+        """
+        Check if the program is running inside a container.
+        """
+        return os.path.exists("/run/.containerenv")
+
+    def _get_apx_command(self) -> str:
+        """
+        Get the appropriate command for running 'apx' based on the
+        environment.
+        """
+        if self._is_running_in_container():
+            return f"{self.__host_spawn_bin} apx"
+        else:
+            return self.__apx_bin
+
+    @property
+    def __apx_bin(self) -> str:
+        """
+        Get the path to the 'apx' binary.
+        """
+        return shutil.which("apx")
+
+    @property
+    def __host_spawn_bin(self) -> str:
+        """
+        Get the path to the 'host_spawn' binary.
+        """
+        return shutil.which("host-spawn")
+
+    def _run_apx_command(self, args: str) -> tuple[bool, str]:
+        """
+        Run the 'apx' command with the specified arguments.
+        """
+        command = f"{self._get_apx_command()} {args}"
+        return self._run_command(command)
+
     def subsystems_list(self) -> list[Subsystem]:
-        command = "apx subsystems list --json"
-        status, output = self._run_command(command)
+        command = "subsystems list --json"
+        status, output = self._run_apx_command(command)
         if not status:
             return []
         subsystems_data = json.loads(output)
@@ -46,6 +85,7 @@ class Apx(ApxEntityBase):
                 data["Name"],
                 stack,
                 data["Status"],
+                shlex.split(f"{self._get_apx_command()} {data['Name']} enter"),
                 data["ExportedPrograms"],
             )
             subsystems.append(subsystem)
@@ -53,8 +93,8 @@ class Apx(ApxEntityBase):
         return subsystems
 
     def stacks_list(self) -> list[Stack]:
-        command = "apx stacks list --json"
-        status, output = self._run_command(command)
+        command = "stacks list --json"
+        status, output = self._run_apx_command(command)
         if not status:
             return []
 
@@ -74,8 +114,8 @@ class Apx(ApxEntityBase):
         return stacks
 
     def pkgmanagers_list(self) -> list[PkgManager]:
-        command = "apx pkgmanagers list --json"
-        status, output = self._run_command(command)
+        command = "pkgmanagers list --json"
+        status, output = self._run_apx_command(command)
         if not status:
             return []
 

@@ -23,7 +23,7 @@ import shlex
 import json
 import uuid
 from uuid import UUID
-from typing import Optional
+from typing import Optional, List
 
 
 class ApxEntityBase:
@@ -114,6 +114,7 @@ class Subsystem(ApxEntityBase):
         name: str,
         stack: Stack,
         status: str,
+        enter_command: List[str],
         exported_programs: Optional[dict] = None,
     ) -> None:
         super().__init__()
@@ -121,6 +122,7 @@ class Subsystem(ApxEntityBase):
         self.name: str = name
         self.stack: Stack = stack
         self.status: str = status
+        self.enter_command: list = enter_command
         self.exported_programs: Optional[dict] = exported_programs
 
     def create(self) -> [bool, "Subsystem"]:
