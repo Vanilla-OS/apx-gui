@@ -18,7 +18,8 @@
 # SPDX-License-Identifier: GPL-3.0-or-later
 
 from gi.repository import Gtk, Gio, GObject, Adw
-import gettext as _
+from uuid import UUID
+from typing import List, Dict, Union, Text
 
 from apx_gui.widgets.entry_subsystem import EntrySubsystem
 from apx_gui.widgets.entry_stack import EntryStack
@@ -29,8 +30,8 @@ from apx_gui.core.apx_entities import Subsystem, Stack, PkgManager
 
 @Gtk.Template(resource_path="/org/vanillaos/apx-gui/gtk/sidebar.ui")
 class Sidebar(Gtk.Box):
-    __gtype_name__: str = "Sidebar"
-    __registry__: dict = {}
+    __gtype_name__: Text = "Sidebar"
+    __registry__: Dict[str, Union[EntrySubsystem, EntryStack, EntryPkgManager]] = {}
 
     list_subsystems: Gtk.ListBox = Gtk.Template.Child()
     list_stacks: Gtk.ListBox = Gtk.Template.Child()
@@ -43,16 +44,16 @@ class Sidebar(Gtk.Box):
     def __init__(
         self,
         window: Adw.ApplicationWindow,
-        subsystems: list[Subsystem],
-        stacks: list[Stack],
-        pkgmanagers: list[PkgManager],
+        subsystems: List[Subsystem],
+        stacks: List[Stack],
+        pkgmanagers: List[PkgManager],
         **kwargs
     ) -> None:
         super().__init__(**kwargs)
         self.__window: Adw.ApplicationWindow = window
-        self.__subsystems: list[Subsystem] = subsystems
-        self.__stacks: list[Stack] = stacks
-        self.__pkgmanagers: list[PkgManager] = pkgmanagers
+        self.__subsystems: List[Subsystem] = subsystems
+        self.__stacks: List[Stack] = stacks
+        self.__pkgmanagers: List[PkgManager] = pkgmanagers
         self.__build_ui()
 
     def __build_ui(self) -> None:
@@ -78,7 +79,7 @@ class Sidebar(Gtk.Box):
             self.list_pkgmanagers.append(entry)
             self.__registry__[pkgmanager.aid] = entry
 
-    def __switch_stack(self, button: Gtk.Button, name: str) -> None:
+    def __switch_stack(self, button: Gtk.Button, name: Text) -> None:
         for btn in [
             self.btn_show_subsystems,
             self.btn_show_stacks,
@@ -124,15 +125,15 @@ class Sidebar(Gtk.Box):
 
         self.__window.editor.new_pkgmanager_tab(row.pkgmanager)
 
-    def remove_subsystem(self, aid: str) -> None:
+    def remove_subsystem(self, aid: UUID) -> None:
         self.list_subsystems.remove(self.__registry__[aid])
         self.__registry__.pop(aid)
 
-    def remove_stack(self, aid: str) -> None:
+    def remove_stack(self, aid: UUID) -> None:
         self.list_stacks.remove(self.__registry__[aid])
         self.__registry__.pop(aid)
 
-    def remove_pkgmanager(self, aid: str) -> None:
+    def remove_pkgmanager(self, aid: UUID) -> None:
         self.list_pkgmanagers.remove(self.__registry__[aid])
         self.__registry__.pop(aid)
 

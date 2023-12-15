@@ -18,9 +18,9 @@
 # SPDX-License-Identifier: GPL-3.0-only
 
 from gi.repository import Gtk, GObject, Gio, Gdk, GLib, Adw
-from typing import Iterable
+from typing import List, Iterable, Text
 
-from apx_gui.core.apx_entities import PkgManager, Stack
+from apx_gui.core.apx_entities import PkgManager
 from apx_gui.utils.gtk import GtkUtils
 from apx_gui.core.run_async import RunAsync
 
@@ -48,11 +48,11 @@ class CreatePkgManagerWindow(Adw.Window):
     sw_sudo: Gtk.Switch = Gtk.Template.Child()
 
     def __init__(
-        self, window: Adw.ApplicationWindow, pkgmanagers: list[PkgManager], **kwargs
+        self, window: Adw.ApplicationWindow, pkgmanagers: List[PkgManager], **kwargs
     ) -> None:
         super().__init__(**kwargs)
         self.__window: Adw.ApplicationWindow = window
-        self.__pkgmanagers: list[PkgManager] = pkgmanagers
+        self.__pkgmanagers: List[PkgManager] = pkgmanagers
 
         self.__build_ui()
 
@@ -77,7 +77,7 @@ class CreatePkgManagerWindow(Adw.Window):
         self.close()
 
     def __on_create_clicked(self, button: Gtk.Button) -> None:
-        def on_callback(result: [bool, PkgManager], *args):
+        def on_callback(result: List[bool, PkgManager], *args):
             status: bool = result[0]
             pkgmanager: PkgManager = result[1]
 
@@ -91,7 +91,7 @@ class CreatePkgManagerWindow(Adw.Window):
 
             self.stack_main.set_visible_child_name("error")
 
-        def create_pkgmanager() -> [bool, PkgManager]:
+        def create_pkgmanager() -> List[bool, PkgManager]:
             pkgmanager: PkgManager = PkgManager(
                 self.row_name.get_text(),
                 self.sw_sudo.get_active(),
@@ -114,7 +114,7 @@ class CreatePkgManagerWindow(Adw.Window):
         RunAsync(create_pkgmanager, on_callback)
 
     def __on_name_changed(self, entry: Adw.EntryRow) -> None:
-        name: str = entry.get_text()
+        name: Text = entry.get_text()
         if name in [pkgmanager.name for pkgmanager in self.__pkgmanagers]:
             entry.add_css_class("error")
             self.btn_create.set_sensitive(False)

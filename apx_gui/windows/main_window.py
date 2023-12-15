@@ -19,6 +19,8 @@
 
 import os
 import subprocess
+from uuid import UUID
+from typing import List, Text
 from gi.repository import Gtk, GLib, Gdk, Gio, Adw
 
 from apx_gui.core.run_async import RunAsync
@@ -33,7 +35,7 @@ from apx_gui.windows.create_pkgmanager import CreatePkgManagerWindow
 
 @Gtk.Template(resource_path="/org/vanillaos/apx-gui/gtk/window-main.ui")
 class ApxGUIWindow(Adw.ApplicationWindow):
-    __gtype_name__: str = "ApxGUIWindow"
+    __gtype_name__: Text = "ApxGUIWindow"
 
     toasts: Adw.ToastOverlay = Gtk.Template.Child()
     paned_main: Gtk.Paned = Gtk.Template.Child()
@@ -42,9 +44,9 @@ class ApxGUIWindow(Adw.ApplicationWindow):
         super().__init__(**kwargs)
 
         self.__apx: Apx = Apx()
-        self.__subsystems: list[Subsystem] = self.__apx.subsystems_list()
-        self.__stacks: list[Stack] = self.__apx.stacks_list()
-        self.__pkgmanagers: list[PkgManager] = self.__apx.pkgmanagers_list()
+        self.__subsystems: List[Subsystem] = self.__apx.subsystems_list()
+        self.__stacks: List[Stack] = self.__apx.stacks_list()
+        self.__pkgmanagers: List[PkgManager] = self.__apx.pkgmanagers_list()
 
         self.__build_ui()
 
@@ -57,7 +59,7 @@ class ApxGUIWindow(Adw.ApplicationWindow):
         )
         self.paned_main.set_start_child(self.sidebar)
 
-    def toast(self, message: str, timeout: int = 2) -> Adw.Toast:
+    def toast(self, message: Text, timeout: int = 2) -> Adw.Toast:
         toast: Adw.Toast = Adw.Toast.new(message)
         toast.props.timeout = timeout
         self.toasts.add_toast(toast)
@@ -75,15 +77,15 @@ class ApxGUIWindow(Adw.ApplicationWindow):
         self.__pkgmanagers.append(pkgmanager)
         self.sidebar.new_pkgmanager(pkgmanager)
 
-    def remove_subsystem(self, aid: str) -> None:
+    def remove_subsystem(self, aid: UUID) -> None:
         self.editor.close(aid)
         self.sidebar.remove_subsystem(aid)
 
-    def remove_stack(self, aid: str) -> None:
+    def remove_stack(self, aid: UUID) -> None:
         self.editor.close(aid)
         self.sidebar.remove_stack(aid)
 
-    def remove_pkgmanager(self, aid: str) -> None:
+    def remove_pkgmanager(self, aid: UUID) -> None:
         self.editor.close(aid)
         self.sidebar.remove_pkgmanager(aid)
 

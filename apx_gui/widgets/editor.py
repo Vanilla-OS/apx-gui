@@ -17,19 +17,19 @@
 #
 # SPDX-License-Identifier: GPL-3.0-or-later
 
-from gi.repository import Gtk, Gio, GObject, Adw
+from gi.repository import Gtk, Adw, Gio
+from typing import Dict, List, Optional, Union, Text
 from uuid import UUID
-
+from apx_gui.core.apx_entities import Subsystem, Stack, PkgManager
 from apx_gui.widgets.tab_subsystem import TabSubsystem
 from apx_gui.widgets.tab_stack import TabStack
 from apx_gui.widgets.tab_pkgmanager import TabPkgManager
-from apx_gui.core.apx_entities import Subsystem, Stack, PkgManager
 
 
 @Gtk.Template(resource_path="/org/vanillaos/apx-gui/gtk/editor.ui")
 class Editor(Adw.Bin):
-    __gtype_name__: str = "Editor"
-    __registry__: dict = {
+    __gtype_name__: Text = "Editor"
+    __registry__: Dict[str, Union[List[UUID], Dict[UUID, Adw.TabPage]]] = {
         "open": [],
         "tabs": {},
     }

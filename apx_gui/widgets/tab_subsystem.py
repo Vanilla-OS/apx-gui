@@ -19,6 +19,7 @@
 
 from gi.repository import Gtk, Gdk, Gio, GLib, GObject, Adw, Vte, Pango
 from uuid import UUID
+from typing import List, Dict, Optional, Tuple, Text
 
 from apx_gui.core.apx_entities import Subsystem
 from apx_gui.core.run_async import RunAsync
@@ -26,7 +27,7 @@ from apx_gui.core.run_async import RunAsync
 
 @Gtk.Template(resource_path="/org/vanillaos/apx-gui/gtk/tab-subsystem.ui")
 class TabSubsystem(Gtk.Box):
-    __gtype_name__: str = "TabSubsystem"
+    __gtype_name__: Text = "TabSubsystem"
 
     row_status: Adw.ActionRow = Gtk.Template.Child()
     row_stack: Adw.ActionRow = Gtk.Template.Child()
@@ -42,7 +43,7 @@ class TabSubsystem(Gtk.Box):
 
     console: Vte.Terminal = Vte.Terminal()
     console_initialized: bool = False
-    gesture_controller = Gtk.GestureClick(button=Gdk.BUTTON_SECONDARY)
+    gesture_controller: Gtk.GestureClick = Gtk.GestureClick(button=Gdk.BUTTON_SECONDARY)
 
     def __init__(
         self, window: Adw.ApplicationWindow, subsystem: Subsystem, **kwargs
@@ -84,6 +85,7 @@ class TabSubsystem(Gtk.Box):
         self.console.set_cursor_blink_mode(Vte.CursorBlinkMode.ON)
         self.console.set_mouse_autohide(True)
         self.console.add_controller(self.gesture_controller)
+        return self.console
 
     @property
     def aid(self) -> UUID:
@@ -93,7 +95,7 @@ class TabSubsystem(Gtk.Box):
     def subsystem(self) -> Subsystem:
         return self.__subsystem
 
-    def run_command(self, command: list) -> None:
+    def run_command(self, command: List[str]) -> None:
         self.console.spawn_sync(
             Vte.PtyFlags.DEFAULT,
             None,
@@ -121,12 +123,12 @@ class TabSubsystem(Gtk.Box):
         self.run_command(self.__subsystem.enter_command)
 
     def __on_reset_clicked(self, button: Gtk.Button) -> None:
-        def on_callback(result, *args) -> None:
+        def on_callback(result: Tuple[bool, str], *args) -> None:
             status: bool = result[0]
             if status:
                 self.__window.toast(f"{self.__subsystem.name} subsystem reset")
 
-        def on_response(dialog: Adw.MessageDialog, response: str) -> None:
+        def on_response(dialog: Adw.MessageDialog, response: Text) -> None:
             if response == "ok":
                 self.__window.toast(f"Resetting {self.__subsystem.name} subsystem...")
                 RunAsync(self.__subsystem.reset, on_callback, force=True)
@@ -144,13 +146,13 @@ class TabSubsystem(Gtk.Box):
         dialog.present()
 
     def __on_delete_clicked(self, button: Gtk.Button) -> None:
-        def on_callback(result, *args) -> None:
+        def on_callback(result: Tuple[bool, str], *args) -> None:
             status: bool = result[0]
             if status:
                 self.__window.toast(f"{self.__subsystem.name} subsystem deleted")
                 self.__window.remove_subsystem(self.__aid)
 
-        def on_response(dialog: Adw.MessageDialog, response: str) -> None:
+        def on_response(dialog: Adw.MessageDialog, response: Text) -> None:
             if response == "ok":
                 self.__window.toast(f"Deleting {self.__subsystem.name} subsystem...")
                 RunAsync(self.__subsystem.remove, on_callback, force=True)

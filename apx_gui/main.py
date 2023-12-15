@@ -21,12 +21,13 @@ import sys
 import gi
 import logging
 from gettext import gettext as _
+from typing import Text
 
 gi.require_version("Gtk", "4.0")
 gi.require_version("Adw", "1")
 gi.require_version("Vte", "3.91")
 
-from gi.repository import Gtk, GLib, Gio, Adw
+from gi.repository import Gtk, Gio, Adw
 from apx_gui.windows.main_window import ApxGUIWindow
 
 
@@ -106,7 +107,7 @@ class ApxGUIApplication(Adw.Application):
         self.__window.new_pkgmanager()
 
     def create_action(
-        self, name: str, callback: callable, shortcuts: list[str] = None
+        self, name: Text, callback: callable, shortcuts: list[str] = None
     ) -> None:
         """Add an application action.
 
@@ -127,7 +128,7 @@ class ApxGUIApplication(Adw.Application):
         self.quit()
 
 
-def main(version: str) -> int:
+def main(version: Text) -> int:
     """The application's entry point."""
     app: ApxGUIApplication = ApxGUIApplication()
     return app.run(sys.argv)

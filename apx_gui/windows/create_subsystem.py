@@ -18,6 +18,7 @@
 # SPDX-License-Identifier: GPL-3.0-only
 
 from gi.repository import Gtk, GObject, Gio, Gdk, GLib, Adw
+from typing import List, Text
 
 from apx_gui.core.apx_entities import Subsystem, Stack
 from apx_gui.utils.gtk import GtkUtils
@@ -38,14 +39,14 @@ class CreateSubsystemWindow(Adw.Window):
     def __init__(
         self,
         window: Adw.ApplicationWindow,
-        subsystems: list[Subsystem],
-        stacks: list[Stack],
+        subsystems: List[Subsystem],
+        stacks: List[Stack],
         **kwargs,
     ) -> None:
         super().__init__(**kwargs)
         self.__window: Adw.ApplicationWindow = window
-        self.__subsystems: list[Subsystem] = subsystems
-        self.__stacks: list[Stack] = stacks
+        self.__subsystems: List[Subsystem] = subsystems
+        self.__stacks: List[Stack] = stacks
 
         self.__build_ui()
 
@@ -64,7 +65,7 @@ class CreateSubsystemWindow(Adw.Window):
         self.close()
 
     def __on_create_clicked(self, button: Gtk.Button) -> None:
-        def on_callback(result: [bool, Subsystem], *args):
+        def on_callback(result: List[bool, Subsystem], *args):
             status: bool = result[0]
             subsystem: Subsystem = result[1]
 
@@ -76,7 +77,7 @@ class CreateSubsystemWindow(Adw.Window):
 
             self.stack_main.set_visible_child_name("error")
 
-        def create_subsystem() -> [bool, Subsystem]:
+        def create_subsystem() -> List[bool, Subsystem]:
             subsystem: Subsystem = Subsystem(
                 None,
                 self.row_name.get_text(),
@@ -90,7 +91,7 @@ class CreateSubsystemWindow(Adw.Window):
         RunAsync(create_subsystem, on_callback)
 
     def __on_name_changed(self, entry: Adw.EntryRow) -> None:
-        name: str = entry.get_text()
+        name: Text = entry.get_text()
         if name in [subsystem.name for subsystem in self.__subsystems]:
             entry.add_css_class("error")
             self.btn_create.set_sensitive(False)

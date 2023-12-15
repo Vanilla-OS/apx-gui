@@ -19,6 +19,7 @@
 
 from gi.repository import Gtk, Gio, GLib, GObject, Adw
 from uuid import UUID
+from typing import Optional, Text
 
 from apx_gui.core.apx_entities import PkgManager
 from apx_gui.core.run_async import RunAsync
@@ -26,7 +27,7 @@ from apx_gui.core.run_async import RunAsync
 
 @Gtk.Template(resource_path="/org/vanillaos/apx-gui/gtk/tab-pkgmanager.ui")
 class TabPkgManager(Gtk.Box):
-    __gtype_name__: str = "TabPkgManager"
+    __gtype_name__: Text = "TabPkgManager"
     row_sudo: Adw.ActionRow = Gtk.Template.Child()
     row_builtin: Adw.ActionRow = Gtk.Template.Child()
     row_autoremove: Adw.EntryRow = Gtk.Template.Child()
@@ -45,12 +46,12 @@ class TabPkgManager(Gtk.Box):
     group_actions: Adw.PreferencesGroup = Gtk.Template.Child()
 
     def __init__(
-        self, window: Adw.ApplicationWindow, stack: PkgManager, **kwargs
+        self, window: Adw.ApplicationWindow, pkg_manager: PkgManager, **kwargs
     ) -> None:
         super().__init__(**kwargs)
         self.__window: Adw.ApplicationWindow = window
-        self.__aid: UUID = stack.aid
-        self.__pkgmanager: PkgManager = stack
+        self.__aid: UUID = pkg_manager.aid
+        self.__pkgmanager: PkgManager = pkg_manager
         self.__build_ui()
 
     def __build_ui(self) -> None:
@@ -93,13 +94,13 @@ class TabPkgManager(Gtk.Box):
         return self.__aid
 
     def __on_delete_clicked(self, button: Gtk.Button) -> None:
-        def on_callback(result, *args) -> None:
-            status: bool = result[0]
+        def on_callback(result: bool, *args) -> None:
+            status: bool = result
             if status:
                 self.__window.toast(f"{self.__pkgmanager.name} package manager deleted")
                 self.__window.remove_pkgmanager(self.__aid)
 
-        def on_response(dialog: Adw.MessageDialog, response: str) -> None:
+        def on_response(dialog: Adw.MessageDialog, response: Text) -> None:
             if response == "ok":
                 self.__window.toast(
                     f"Deleting {self.__pkgmanager.name} package manager..."

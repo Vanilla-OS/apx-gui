@@ -22,6 +22,7 @@ import shutil
 import shlex
 import json
 import os
+from typing import List, Tuple, Text
 
 from apx_gui.core.apx_entities import ApxEntityBase, Subsystem, Stack, PkgManager
 
@@ -57,20 +58,20 @@ class Apx(ApxEntityBase):
         """
         return shutil.which("host-spawn")
 
-    def _run_apx_command(self, args: str) -> tuple[bool, str]:
+    def _run_apx_command(self, args: Text) -> Tuple[bool, str]:
         """
         Run the 'apx' command with the specified arguments.
         """
         command = f"{self._get_apx_command()} {args}"
         return self._run_command(command)
 
-    def subsystems_list(self) -> list[Subsystem]:
+    def subsystems_list(self) -> List[Subsystem]:
         command = "subsystems list --json"
         status, output = self._run_apx_command(command)
         if not status:
             return []
         subsystems_data = json.loads(output)
-        subsystems = []
+        subsystems: List[Subsystem] = []
 
         for data in subsystems_data:
             stack = Stack(
@@ -92,14 +93,14 @@ class Apx(ApxEntityBase):
 
         return subsystems
 
-    def stacks_list(self) -> list[Stack]:
+    def stacks_list(self) -> List[Stack]:
         command = "stacks list --json"
         status, output = self._run_apx_command(command)
         if not status:
             return []
 
         stacks_data = json.loads(output)
-        stacks = []
+        stacks: List[Stack] = []
 
         for data in stacks_data:
             stack = Stack(
@@ -113,14 +114,14 @@ class Apx(ApxEntityBase):
 
         return stacks
 
-    def pkgmanagers_list(self) -> list[PkgManager]:
+    def pkgmanagers_list(self) -> List[PkgManager]:
         command = "pkgmanagers list --json"
         status, output = self._run_apx_command(command)
         if not status:
             return []
 
         pkgmanagers_data = json.loads(output)
-        pkgmanagers = []
+        pkgmanagers: List[PkgManager] = []
         for data in pkgmanagers_data:
             pkgmanager = PkgManager(
                 data["Name"],

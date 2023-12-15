@@ -17,14 +17,16 @@
 #
 # SPDX-License-Identifier: GPL-3.0-or-later
 
-from gi.repository import Gtk, Gio, GObject, Adw
+from gi.repository import Gtk, Adw
+from typing import Text
+from uuid import UUID
 
 from apx_gui.core.apx_entities import Subsystem
 
 
 @Gtk.Template(resource_path="/org/vanillaos/apx-gui/gtk/entry-subsystem.ui")
 class EntrySubsystem(Adw.ActionRow):
-    __gtype_name__: str = "EntrySubsystem"
+    __gtype_name__: Text = "EntrySubsystem"
 
     def __init__(self, subsystem: Subsystem, **kwargs) -> None:
         super().__init__(**kwargs)

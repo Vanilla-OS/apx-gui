@@ -22,7 +22,7 @@ import sys
 import threading
 import traceback
 import logging
-from typing import Callable, Any
+from typing import Callable, Any, Optional
 
 from gi.repository import GLib
 
@@ -32,15 +32,15 @@ logger = logging.getLogger("Vanilla::Async")
 class RunAsync(threading.Thread):
     """
     This class is used to execute a function asynchronously.
-    It takes a function, a callback and a list of arguments as input.
+    It takes a function, a callback, and a list of arguments as input.
     """
 
     def __init__(
         self,
         task_func: Callable[..., Any],
-        callback: Callable[[Any, Exception], None] = None,
-        *args,
-        **kwargs,
+        callback: Optional[Callable[[Any, Exception], None]] = None,
+        *args: Any,
+        **kwargs: Any,
     ):
         if "DEBUG_MODE" in os.environ:
             import faulthandler
@@ -54,16 +54,16 @@ class RunAsync(threading.Thread):
 
         self.task_func: Callable[..., Any] = task_func
 
-        self.callback: Callable[[Any, Exception], None] = (
+        self.callback: Callable[[Any, Optional[Exception]], None] = (
             callback if callback else lambda r, e: None
         )
         self.daemon: bool = kwargs.pop("daemon", True)
 
         self.start()
 
-    def __target(self, *args, **kwargs) -> Any:
+    def __target(self, *args: Any, **kwargs: Any) -> Any:
         result: Any = None
-        error: Exception = None
+        error: Optional[Exception] = None
 
         logger.debug(f"Running async job [{self.task_func}].")
 

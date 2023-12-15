@@ -18,6 +18,7 @@
 # SPDX-License-Identifier: GPL-3.0-only
 
 from gi.repository import Gtk, GObject, Gio, Gdk, GLib, Adw
+from typing import List, Text
 
 from apx_gui.core.apx_entities import PkgManager, Stack
 from apx_gui.utils.gtk import GtkUtils
@@ -27,7 +28,7 @@ from apx_gui.core.run_async import RunAsync
 @Gtk.Template(resource_path="/org/vanillaos/apx-gui/gtk/create-stack.ui")
 class CreateStackWindow(Adw.Window):
     __gtype_name__ = "CreateStackWindow"
-    __registry__: list[str] = []
+    __registry__: List[str] = []
 
     __valid_name: bool = False
     __valid_base: bool = False
@@ -46,14 +47,14 @@ class CreateStackWindow(Adw.Window):
     def __init__(
         self,
         window: Adw.ApplicationWindow,
-        stacks: list[Stack],
-        pkgmanagers: list[PkgManager],
+        stacks: List[Stack],
+        pkgmanagers: List[PkgManager],
         **kwargs,
     ) -> None:
         super().__init__(**kwargs)
         self.__window: Adw.ApplicationWindow = window
-        self.__stacks: list[Stack] = stacks
-        self.__pkgmanagers: list[PkgManager] = pkgmanagers
+        self.__stacks: List[Stack] = stacks
+        self.__pkgmanagers: List[PkgManager] = pkgmanagers
 
         self.__build_ui()
 
@@ -75,7 +76,7 @@ class CreateStackWindow(Adw.Window):
         self.close()
 
     def __on_create_clicked(self, button: Gtk.Button) -> None:
-        def on_callback(result: [bool, Stack], *args):
+        def on_callback(result: List[bool, Stack], *args):
             status: bool = result[0]
             stack: Stack = result[1]
 
@@ -87,7 +88,7 @@ class CreateStackWindow(Adw.Window):
 
             self.stack_main.set_visible_child_name("error")
 
-        def create_stack() -> [bool, Stack]:
+        def create_stack() -> List[bool, Stack]:
             stack: Stack = Stack(
                 self.row_name.get_text(),
                 self.row_base.get_text(),
@@ -102,7 +103,7 @@ class CreateStackWindow(Adw.Window):
         RunAsync(create_stack, on_callback)
 
     def __on_name_changed(self, entry: Adw.EntryRow) -> None:
-        name: str = entry.get_text()
+        name: Text = entry.get_text()
         if name in [stack.name for stack in self.__stacks]:
             entry.add_css_class("error")
             self.btn_create.set_sensitive(False)
@@ -122,7 +123,7 @@ class CreateStackWindow(Adw.Window):
         self.btn_add_package.set_sensitive(GtkUtils.validate_entry(entry))
 
     def __on_add_package_clicked(self, button: Gtk.Button) -> None:
-        row: AdwActionRow = Adw.ActionRow(
+        row: Adw.ActionRow = Adw.ActionRow(
             title=self.row_package.get_text(),
         )
         btn_remove: Gtk.Button = Gtk.Button.new_from_icon_name("edit-delete-symbolic")
@@ -142,5 +143,5 @@ class CreateStackWindow(Adw.Window):
         self.group_packages.remove(row)
         self.__registry__.remove(row.get_title())
 
-    def __get_packages(self) -> list[str]:
+    def __get_packages(self) -> List[str]:
         return " ".join(self.__registry__)

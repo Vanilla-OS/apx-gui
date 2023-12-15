@@ -17,14 +17,16 @@
 #
 # SPDX-License-Identifier: GPL-3.0-or-later
 
-from gi.repository import Gtk, Gio, GObject, Adw
+from gi.repository import Gtk, Adw
+from typing import Text
+from uuid import UUID
 
 from apx_gui.core.apx_entities import Stack
 
 
 @Gtk.Template(resource_path="/org/vanillaos/apx-gui/gtk/entry-stack.ui")
 class EntryStack(Adw.ActionRow):
-    __gtype_name__: str = "EntryStack"
+    __gtype_name__: Text = "EntryStack"
 
     def __init__(self, stack: Stack, **kwargs) -> None:
         super().__init__(**kwargs)

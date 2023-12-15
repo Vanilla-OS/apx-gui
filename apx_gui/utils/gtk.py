@@ -22,14 +22,13 @@ from gi.repository import Adw
 import re
 from functools import wraps
 from inspect import signature
-
-from gi.repository import GLib
+from typing import Optional, Callable, Text
 
 
 class GtkUtils:
     @staticmethod
-    def validate_entry(entry: Adw.EntryRow, extend=None) -> bool:
-        text: str = entry.get_text()
+    def validate_entry(entry: Adw.EntryRow, extend: Optional[Callable] = None) -> bool:
+        text: Text = entry.get_text()
         if (
             re.search("[@!#$%^&*()<>?/|}{~:.;,'\"]", text)
             or len(text) == 0

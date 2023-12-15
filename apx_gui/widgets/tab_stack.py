@@ -19,6 +19,7 @@
 
 from gi.repository import Gtk, Gio, GLib, GObject, Adw
 from uuid import UUID
+from typing import List, Text
 
 from apx_gui.core.apx_entities import Stack
 from apx_gui.core.run_async import RunAsync
@@ -27,7 +28,7 @@ from apx_gui.utils.gtk import GtkUtils
 
 @Gtk.Template(resource_path="/org/vanillaos/apx-gui/gtk/tab-stack.ui")
 class TabStack(Gtk.Box):
-    __gtype_name__: str = "TabStack"
+    __gtype_name__: Text = "TabStack"
 
     row_base: Adw.EntryRow = Gtk.Template.Child()
     row_pkgmanager: Adw.EntryRow = Gtk.Template.Child()
@@ -77,13 +78,13 @@ class TabStack(Gtk.Box):
         return self.__aid
 
     def __on_delete_clicked(self, button: Gtk.Button) -> None:
-        def on_callback(result, *args) -> None:
-            status: bool = result[0]
+        def on_callback(result: bool, *args) -> None:
+            status: bool = result
             if status:
                 self.__window.toast(f"{self.__stack.name} stack deleted")
                 self.__window.remove_stack(self.__aid)
 
-        def on_response(dialog: Adw.MessageDialog, response: str) -> None:
+        def on_response(dialog: Adw.MessageDialog, response: Text) -> None:
             if response == "ok":
                 self.__window.toast(f"Deleting {self.__stack.name} stack...")
                 RunAsync(self.__stack.remove, on_callback, force=True)
@@ -104,8 +105,8 @@ class TabStack(Gtk.Box):
         GtkUtils.validate_entry(row)
 
     def __on_base_apply(self, row: Adw.EntryRow) -> None:
-        def on_callback(result, *args):
-            status: bool = result[0]
+        def on_callback(result: bool, *args) -> None:
+            status: bool = result
             if status:
                 self.__stack.base = row.get_text()
                 self.__window.toast(f"{self.__stack.name} stack updated")
@@ -115,8 +116,8 @@ class TabStack(Gtk.Box):
         RunAsync(self.__update, on_callback, base=row.get_text())
 
     def __on_pkgmanager_apply(self, row: Adw.EntryRow) -> None:
-        def on_callback(result, *args):
-            status: bool = result[0]
+        def on_callback(result: bool, *args) -> None:
+            status: bool = result
             if status:
                 self.__stack.pkg_manager = row.get_text()
                 self.__window.toast(f"{self.__stack.name} stack updated")
@@ -126,12 +127,12 @@ class TabStack(Gtk.Box):
         RunAsync(self.__update, on_callback, pkg_manager=row.get_text())
 
     def __update(
-        self, base: str = None, packages: list = None, pkg_manager: str = None
+        self, base: Text = None, packages: List[str] = None, pkg_manager: Text = None
     ) -> bool:
         if base is None:
             base = self.__stack.base
         if packages is None:
-            packages = " ".join(self.__stack.packages)
+            packages = self.__stack.packages
         if pkg_manager is None:
             pkg_manager = self.__stack.pkg_manager
 
