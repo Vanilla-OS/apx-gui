@@ -17,8 +17,8 @@
 #
 # SPDX-License-Identifier: GPL-3.0-only
 
-from gi.repository import Gtk, GObject, Gio, Gdk, GLib, Adw
-from typing import List, Text
+from gi.repository import Gtk, Adw
+from typing import List, Text, Union
 
 from apx_gui.core.apx_entities import PkgManager, Stack
 from apx_gui.utils.gtk import GtkUtils
@@ -76,7 +76,7 @@ class CreateStackWindow(Adw.Window):
         self.close()
 
     def __on_create_clicked(self, button: Gtk.Button) -> None:
-        def on_callback(result: List[bool, Stack], *args):
+        def on_callback(result: List[Union[bool, Stack]], *args):
             status: bool = result[0]
             stack: Stack = result[1]
 
@@ -88,7 +88,7 @@ class CreateStackWindow(Adw.Window):
 
             self.stack_main.set_visible_child_name("error")
 
-        def create_stack() -> List[bool, Stack]:
+        def create_stack() -> List[Union[bool, Stack]]:
             stack: Stack = Stack(
                 self.row_name.get_text(),
                 self.row_base.get_text(),

@@ -17,8 +17,8 @@
 #
 # SPDX-License-Identifier: GPL-3.0-only
 
-from gi.repository import Gtk, GObject, Gio, Gdk, GLib, Adw
-from typing import List, Iterable, Text
+from gi.repository import Gtk, Adw
+from typing import List, Iterable, Text, Union
 
 from apx_gui.core.apx_entities import PkgManager
 from apx_gui.utils.gtk import GtkUtils
@@ -77,7 +77,7 @@ class CreatePkgManagerWindow(Adw.Window):
         self.close()
 
     def __on_create_clicked(self, button: Gtk.Button) -> None:
-        def on_callback(result: List[bool, PkgManager], *args):
+        def on_callback(result: List[Union[bool, PkgManager]], *args):
             status: bool = result[0]
             pkgmanager: PkgManager = result[1]
 
@@ -91,7 +91,7 @@ class CreatePkgManagerWindow(Adw.Window):
 
             self.stack_main.set_visible_child_name("error")
 
-        def create_pkgmanager() -> List[bool, PkgManager]:
+        def create_pkgmanager() -> List[Union[bool, PkgManager]]:
             pkgmanager: PkgManager = PkgManager(
                 self.row_name.get_text(),
                 self.sw_sudo.get_active(),
