@@ -241,3 +241,27 @@ class PkgManager(ApxEntityBase):
         force_flag: Text = "--force" if force else ""
         command: Text = f"apx pkgmanagers rm {force_flag} --name {self.name}"
         return self._run_command(command)
+
+    def update(
+        self,
+        need_sudo: bool,
+        cmd_auto_remove: Text,
+        cmd_clean: Text,
+        cmd_install: Text,
+        cmd_list: Text,
+        cmd_purge: Text,
+        cmd_remove: Text,
+        cmd_search: Text,
+        cmd_show: Text,
+        cmd_update: Text,
+        cmd_upgrade: Text,
+    ) -> Tuple[bool, str]:
+        command: Text = (
+            f"apx pkgmanagers update --name {self.name} --need-sudo {need_sudo} "
+            f"--autoremove {cmd_auto_remove} --clean {cmd_clean} "
+            f"--install {cmd_install} --list {cmd_list} "
+            f"--purge {cmd_purge} --remove {cmd_remove} "
+            f"--search {cmd_search} --show {cmd_show} "
+            f"--update {cmd_update} --upgrade {cmd_upgrade}"
+        )
+        return self._run_command(command)

@@ -19,7 +19,7 @@
 
 from gi.repository import Gtk, Gio, GLib, GObject, Adw
 from uuid import UUID
-from typing import Optional, Text
+from typing import List, Optional, Text
 
 from apx_gui.core.apx_entities import PkgManager
 from apx_gui.core.run_async import RunAsync
@@ -88,6 +88,17 @@ class TabPkgManager(Gtk.Box):
                 row.set_sensitive(False)
 
         self.btn_delete.connect("clicked", self.__on_delete_clicked)
+        self.sw_sudo.connect("activate", self.__on_sudo_changed)
+        self.row_autoremove.connect("apply", self.__on_autoremove_apply)
+        self.row_install.connect("apply", self.__on_install_apply)
+        self.row_clean.connect("apply", self.__on_clean_apply)
+        self.row_list.connect("apply", self.__on_list_apply)
+        self.row_purge.connect("apply", self.__on_purge_apply)
+        self.row_remove.connect("apply", self.__on_remove_apply)
+        self.row_search.connect("apply", self.__on_search_apply)
+        self.row_show.connect("apply", self.__on_show_apply)
+        self.row_update.connect("apply", self.__on_update_apply)
+        self.row_upgrade.connect("apply", self.__on_upgrade_apply)
 
     @property
     def aid(self) -> UUID:
@@ -118,3 +129,161 @@ class TabPkgManager(Gtk.Box):
         dialog.set_response_appearance("ok", Adw.ResponseAppearance.DESTRUCTIVE)
         dialog.connect("response", on_response)
         dialog.present()
+
+    def __update(self) -> bool:
+        return self.__pkgmanager.update(
+            self.sw_sudo.get_active(),
+            self.row_autoremove.get_text(),
+            self.row_install.get_text(),
+            self.row_clean.get_text(),
+            self.row_list.get_text(),
+            self.row_purge.get_text(),
+            self.row_remove.get_text(),
+            self.row_search.get_text(),
+            self.row_show.get_text(),
+            self.row_update.get_text(),
+            self.row_upgrade.get_text(),
+        )
+
+    def __on_sudo_changed(self, switch: Gtk.Switch, state: bool) -> None:
+        def on_callback(result: bool, *args) -> None:
+            status: bool = result
+            if status:
+                self.__pkgmanager.need_sudo = state
+                self.__window.toast(f"{self.__pkgmanager.name} package manager updated")
+            else:
+                self.__window.toast(
+                    f"Error updating {self.__pkgmanager.name} package manager"
+                )
+
+        RunAsync(self.__update, on_callback)
+
+    def __on_autoremove_apply(self, row: Adw.EntryRow) -> None:
+        def on_callback(result: bool, *args) -> None:
+            status: bool = result
+            if status:
+                self.__pkgmanager.cmd_auto_remove = row.get_text()
+                self.__window.toast(f"{self.__pkgmanager.name} package manager updated")
+            else:
+                self.__window.toast(
+                    f"Error updating {self.__pkgmanager.name} package manager"
+                )
+
+        RunAsync(self.__update, on_callback)
+
+    def __on_install_apply(self, row: Adw.EntryRow) -> None:
+        def on_callback(result: bool, *args) -> None:
+            status: bool = result
+            if status:
+                self.__pkgmanager.cmd_install = row.get_text()
+                self.__window.toast(f"{self.__pkgmanager.name} package manager updated")
+            else:
+                self.__window.toast(
+                    f"Error updating {self.__pkgmanager.name} package manager"
+                )
+
+        RunAsync(self.__update, on_callback)
+
+    def __on_clean_apply(self, row: Adw.EntryRow) -> None:
+        def on_callback(result: bool, *args) -> None:
+            status: bool = result
+            if status:
+                self.__pkgmanager.cmd_clean = row.get_text()
+                self.__window.toast(f"{self.__pkgmanager.name} package manager updated")
+            else:
+                self.__window.toast(
+                    f"Error updating {self.__pkgmanager.name} package manager"
+                )
+
+        RunAsync(self.__update, on_callback)
+
+    def __on_list_apply(self, row: Adw.EntryRow) -> None:
+        def on_callback(result: bool, *args) -> None:
+            status: bool = result
+            if status:
+                self.__pkgmanager.cmd_list = row.get_text()
+                self.__window.toast(f"{self.__pkgmanager.name} package manager updated")
+            else:
+                self.__window.toast(
+                    f"Error updating {self.__pkgmanager.name} package manager"
+                )
+
+        RunAsync(self.__update, on_callback)
+
+    def __on_purge_apply(self, row: Adw.EntryRow) -> None:
+        def on_callback(result: bool, *args) -> None:
+            status: bool = result
+            if status:
+                self.__pkgmanager.cmd_purge = row.get_text()
+                self.__window.toast(f"{self.__pkgmanager.name} package manager updated")
+            else:
+                self.__window.toast(
+                    f"Error updating {self.__pkgmanager.name} package manager"
+                )
+
+        RunAsync(self.__update, on_callback)
+
+    def __on_remove_apply(self, row: Adw.EntryRow) -> None:
+        def on_callback(result: bool, *args) -> None:
+            status: bool = result
+            if status:
+                self.__pkgmanager.cmd_remove = row.get_text()
+                self.__window.toast(f"{self.__pkgmanager.name} package manager updated")
+            else:
+                self.__window.toast(
+                    f"Error updating {self.__pkgmanager.name} package manager"
+                )
+
+        RunAsync(self.__update, on_callback)
+
+    def __on_search_apply(self, row: Adw.EntryRow) -> None:
+        def on_callback(result: bool, *args) -> None:
+            status: bool = result
+            if status:
+                self.__pkgmanager.cmd_search = row.get_text()
+                self.__window.toast(f"{self.__pkgmanager.name} package manager updated")
+            else:
+                self.__window.toast(
+                    f"Error updating {self.__pkgmanager.name} package manager"
+                )
+
+        RunAsync(self.__update, on_callback)
+
+    def __on_show_apply(self, row: Adw.EntryRow) -> None:
+        def on_callback(result: bool, *args) -> None:
+            status: bool = result
+            if status:
+                self.__pkgmanager.cmd_show = row.get_text()
+                self.__window.toast(f"{self.__pkgmanager.name} package manager updated")
+            else:
+                self.__window.toast(
+                    f"Error updating {self.__pkgmanager.name} package manager"
+                )
+
+        RunAsync(self.__update, on_callback)
+
+    def __on_update_apply(self, row: Adw.EntryRow) -> None:
+        def on_callback(result: bool, *args) -> None:
+            status: bool = result
+            if status:
+                self.__pkgmanager.cmd_update = row.get_text()
+                self.__window.toast(f"{self.__pkgmanager.name} package manager updated")
+            else:
+                self.__window.toast(
+                    f"Error updating {self.__pkgmanager.name} package manager"
+                )
+
+        RunAsync(self.__update, on_callback)
+
+    def __on_upgrade_apply(self, row: Adw.EntryRow) -> None:
+        def on_callback(result: bool, *args) -> None:
+            status: bool = result
+            if status:
+                self.__pkgmanager.cmd_upgrade = row.get_text()
+                self.__window.toast(f"{self.__pkgmanager.name} package manager updated")
+            else:
+                self.__window.toast(
+                    f"Error updating {self.__pkgmanager.name} package manager"
+                )
+
+        RunAsync(self.__update, on_callback)
