@@ -83,6 +83,8 @@ class CreateSubsystemWindow(Adw.Window):
                 self.row_name.get_text(),
                 self.__stacks[self.row_stack.get_selected()],
                 None,
+                [],
+                {}
             )
             return subsystem.create()
 
