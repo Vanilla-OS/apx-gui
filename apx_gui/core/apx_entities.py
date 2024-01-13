@@ -18,6 +18,7 @@
 # SPDX-License-Identifier: GPL-3.0-or-later
 
 import os
+import shutil
 import subprocess
 import shlex
 import json
@@ -29,6 +30,37 @@ from typing import Optional, List, Dict, Union, Tuple, Text
 class ApxEntityBase:
     def __init__(self) -> None:
         self.aid: UUID = uuid.uuid4()
+
+    def _is_running_in_container(self) -> bool:
+        """
+        Check if the program is running inside a container.
+        """
+        print(os.path.exists("/run/.containerenv"))
+        return os.path.exists("/run/.containerenv")
+
+    def _get_apx_command(self) -> str:
+        """
+        Get the appropriate command for running 'apx' based on the
+        environment.
+        """
+        if self._is_running_in_container():
+            return f"{self.__host_spawn_bin} apx"
+        else:
+            return self.__apx_bin
+
+    @property
+    def __apx_bin(self) -> str:
+        """
+        Get the path to the 'apx' binary.
+        """
+        return shutil.which("apx")
+
+    @property
+    def __host_spawn_bin(self) -> str:
+        """
+        Get the path to the 'host_spawn' binary.
+        """
+        return shutil.which("host-spawn")
 
     def _run_command(self, command: Text) -> Tuple[bool, str]:
         try:
@@ -46,6 +78,13 @@ class ApxEntityBase:
             return True, output.decode("utf-8")
         except Exception as e:
             return False, str(e)
+
+    def _run_apx_command(self, args: Text) -> Tuple[bool, str]:
+        """
+        Run the 'apx' command with the specified arguments.
+        """
+        command = f"{self._get_apx_command()} {args}"
+        return self._run_command(command)
 
     def to_dict(self) -> Dict[str, Union[str, UUID]]:
         return self.__dict__
@@ -131,15 +170,13 @@ class Subsystem(ApxEntityBase):
         self.exported_programs: Optional[Dict[str, str]] = exported_programs
 
     def create(self) -> Tuple[bool, "Subsystem"]:
-        command: Text = (
-            f"apx subsystems new --name {self.name} --stack {self.stack.name}"
-        )
-        res: Tuple[bool, str] = self._run_command(command)
+        command: Text = f"subsystems new --name {self.name} --stack {self.stack.name}"
+        res: Tuple[bool, str] = self._run_apx_command(command)
         if not res[0]:
             return res[0], self
 
-        command: Text = f"apx subsystems list --json"
-        res: Tuple[bool, str] = self._run_command(command)
+        command: Text = f"subsystems list --json"
+        res: Tuple[bool, str] = self._run_apx_command(command)
         if not res[0]:
             return res[0], self
 
@@ -154,18 +191,18 @@ class Subsystem(ApxEntityBase):
         return False, self
 
     def update(self, stack: Text) -> Tuple[bool, str]:
-        command: Text = f"apx subsystems update --name {self.name} --stack {stack} -y"
-        return self._run_command(command)
+        command: Text = f"subsystems update --name {self.name} --stack {stack} -y"
+        return self._run_apx_command(command)
 
     def remove(self, force: bool = False) -> Tuple[bool, str]:
         force_flag: Text = "--force" if force else ""
-        command: Text = f"apx subsystems rm {force_flag} --name {self.name}"
-        return self._run_command(command)
+        command: Text = f"subsystems rm {force_flag} --name {self.name}"
+        return self._run_apx_command(command)
 
     def reset(self, force: bool = False) -> Tuple[bool, str]:
         force_flag: Text = "--force" if force else ""
-        command: Text = f"apx subsystems reset {force_flag} --name {self.name}"
-        return self._run_command(command)
+        command: Text = f"subsystems reset {force_flag} --name {self.name}"
+        return self._run_apx_command(command)
 
 
 class PkgManager(ApxEntityBase):
@@ -202,19 +239,19 @@ class PkgManager(ApxEntityBase):
 
     def create(self) -> Tuple[bool, "PkgManager"]:
         command: Text = (
-            f"apx pkgmanagers new --name {self.name} --need-sudo {self.need_sudo} "
+            f"pkgmanagers new --name {self.name} --need-sudo {self.need_sudo} "
             f"--autoremove {self.cmd_auto_remove} --clean {self.cmd_clean} "
             f"--install {self.cmd_install} --list {self.cmd_list} "
             f"--purge {self.cmd_purge} --remove {self.cmd_remove} "
             f"--search {self.cmd_search} --show {self.cmd_show} "
             f"--update {self.cmd_update} --upgrade {self.cmd_upgrade}"
         )
-        res: Tuple[bool, str] = self._run_command(command)
+        res: Tuple[bool, str] = self._run_apx_command(command)
         if not res[0]:
             return res[0], self
 
-        command: Text = f"apx pkgmanagers list --json"
-        res: Tuple[bool, str] = self._run_command(command)
+        command: Text = f"pkgmanagers list --json"
+        res: Tuple[bool, str] = self._run_apx_command(command)
         if not res[0]:
             return res[0], self
 
@@ -239,8 +276,8 @@ class PkgManager(ApxEntityBase):
 
     def remove(self, force: bool = False) -> Tuple[bool, str]:
         force_flag: Text = "--force" if force else ""
-        command: Text = f"apx pkgmanagers rm {force_flag} --name {self.name}"
-        return self._run_command(command)
+        command: Text = f"pkgmanagers rm {force_flag} --name {self.name}"
+        return self._run_apx_command(command)
 
     def update(
         self,
@@ -257,11 +294,11 @@ class PkgManager(ApxEntityBase):
         cmd_upgrade: Text,
     ) -> Tuple[bool, str]:
         command: Text = (
-            f"apx pkgmanagers update --name {self.name} --need-sudo {need_sudo} "
+            f"pkgmanagers update --name {self.name} --need-sudo {need_sudo} "
             f"--autoremove {cmd_auto_remove} --clean {cmd_clean} "
             f"--install {cmd_install} --list {cmd_list} "
             f"--purge {cmd_purge} --remove {cmd_remove} "
             f"--search {cmd_search} --show {cmd_show} "
             f"--update {cmd_update} --upgrade {cmd_upgrade}"
         )
-        return self._run_command(command)
+        return self._run_apx_command(command)

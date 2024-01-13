@@ -28,43 +28,6 @@ from apx_gui.core.apx_entities import ApxEntityBase, Subsystem, Stack, PkgManage
 
 
 class Apx(ApxEntityBase):
-    def _is_running_in_container(self) -> bool:
-        """
-        Check if the program is running inside a container.
-        """
-        return os.path.exists("/run/.containerenv")
-
-    def _get_apx_command(self) -> str:
-        """
-        Get the appropriate command for running 'apx' based on the
-        environment.
-        """
-        if self._is_running_in_container():
-            return f"{self.__host_spawn_bin} apx"
-        else:
-            return self.__apx_bin
-
-    @property
-    def __apx_bin(self) -> str:
-        """
-        Get the path to the 'apx' binary.
-        """
-        return shutil.which("apx")
-
-    @property
-    def __host_spawn_bin(self) -> str:
-        """
-        Get the path to the 'host_spawn' binary.
-        """
-        return shutil.which("host-spawn")
-
-    def _run_apx_command(self, args: Text) -> Tuple[bool, str]:
-        """
-        Run the 'apx' command with the specified arguments.
-        """
-        command = f"{self._get_apx_command()} {args}"
-        return self._run_command(command)
-
     def subsystems_list(self) -> List[Subsystem]:
         command = "subsystems list --json"
         status, output = self._run_apx_command(command)
