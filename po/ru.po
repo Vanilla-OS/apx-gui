@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: apx_gui\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-07-05 20:14+0530\n"
+"POT-Creation-Date: 2024-01-17 09:36+0530\n"
 "PO-Revision-Date: 2024-01-09 00:21+0000\n"
 "Last-Translator: Vin <k3kelm4vw@mozmail.com>\n"
 "Language-Team: Russian <https://hosted.weblate.org/projects/vanilla-os/apx-"
@@ -31,7 +31,7 @@ msgstr "Apx"
 msgid "A frontend in GTK 4 and Libadwaita for Apx."
 msgstr "Интерфейс на GTK 4 и Libadwaita для Apx."
 
-#: apx_gui/gtk/create-pkgmanager.ui:6 apx_gui/gtk/window-main.ui:70
+#: apx_gui/gtk/create-pkgmanager.ui:6 apx_gui/gtk/window-main.ui:71
 msgid "New Package Manager"
 msgstr "Новый менеджер пакетов"
 
@@ -124,7 +124,7 @@ msgstr "В процессе создания менеджера пакетов �
 msgid "Close"
 msgstr "Закрыть"
 
-#: apx_gui/gtk/create-stack.ui:6 apx_gui/gtk/window-main.ui:66
+#: apx_gui/gtk/create-stack.ui:6 apx_gui/gtk/window-main.ui:67
 msgid "New Stack"
 msgstr "Новый стек"
 
@@ -133,7 +133,7 @@ msgid "Base"
 msgstr "Основа"
 
 #: apx_gui/gtk/create-stack.ui:54 apx_gui/gtk/tab-stack.ui:38
-#: apx_gui/gtk/tab-subsystem.ui:29
+#: apx_gui/gtk/tab-subsystem.ui:37
 msgid "Package Manager"
 msgstr "Менеджер пакетов"
 
@@ -153,11 +153,11 @@ msgstr "Пожалуйста, дождитесь создания стека."
 msgid "An error occurred while creating the stack."
 msgstr "В процессе создания стека произошла ошибка."
 
-#: apx_gui/gtk/create-subsystem.ui:6 apx_gui/gtk/window-main.ui:62
+#: apx_gui/gtk/create-subsystem.ui:6 apx_gui/gtk/window-main.ui:63
 msgid "New Subsystem"
 msgstr "Новая подсистема"
 
-#: apx_gui/gtk/create-subsystem.ui:49 apx_gui/gtk/tab-subsystem.ui:19
+#: apx_gui/gtk/create-subsystem.ui:49 apx_gui/gtk/tab-subsystem.ui:27
 msgid "Stack"
 msgstr "Стек"
 
@@ -196,6 +196,26 @@ msgctxt "shortcut window"
 msgid "Quit"
 msgstr "Выйти"
 
+#: apx_gui/gtk/help-overlay.ui:26
+msgctxt "shortcut window"
+msgid "Create"
+msgstr "Создать"
+
+#: apx_gui/gtk/help-overlay.ui:29
+msgctxt "shortcut window"
+msgid "New Subsystem"
+msgstr "Новая подсистема"
+
+#: apx_gui/gtk/help-overlay.ui:35
+msgctxt "shortcut window"
+msgid "New Stack"
+msgstr "Новый стек"
+
+#: apx_gui/gtk/help-overlay.ui:41
+msgctxt "shortcut window"
+msgid "New Package Manager"
+msgstr "Новый менеджер пакетов"
+
 #: apx_gui/gtk/tab-pkgmanager.ui:13
 msgid "This package manager is built-in and cannot be edited or deleted."
 msgstr "Этот менеджер пакетов встроен и не может быть изменён или удалён."
@@ -224,70 +244,55 @@ msgstr "Пакеты"
 msgid "Delete Stack"
 msgstr "Удалить стек"
 
-#: apx_gui/gtk/tab-subsystem.ui:9
+#: apx_gui/gtk/tab-subsystem.ui:17
 msgid "Status"
 msgstr "Состояние"
 
-#: apx_gui/gtk/tab-subsystem.ui:53
-msgid "Open Console"
-msgstr "Открыть Терминал"
-
-#: apx_gui/gtk/tab-subsystem.ui:54
-msgid "Enter a console in this subsystem's environment."
-msgstr "Войти в Терминал в среде этой подсистемы."
-
-#: apx_gui/gtk/tab-subsystem.ui:74
+#: apx_gui/gtk/tab-subsystem.ui:61
 msgid "Reset Subsystem"
 msgstr "Сбросить подсистему"
 
-#: apx_gui/gtk/tab-subsystem.ui:89
+#: apx_gui/gtk/tab-subsystem.ui:76
 msgid "Delete Subsystem"
 msgstr "Удалить подсистему"
 
-#: apx_gui/gtk/window-main.ui:62
-msgid "New Sub System"
-msgstr "Новая подсистема"
+#: apx_gui/gtk/tab-subsystem.ui:114
+#, fuzzy
+#| msgid "Open Console"
+msgid "Restart Console"
+msgstr "Открыть Терминал"
 
-#: apx_gui/gtk/window-main.ui:78
+#: apx_gui/gtk/tab-subsystem.ui:125
+#, fuzzy
+#| msgid "Open Console"
+msgid "Toggle Console"
+msgstr "Открыть Терминал"
+
+#: apx_gui/gtk/window-main.ui:79
 msgid "_Keyboard Shortcuts"
 msgstr "Сочетания клавиш (_K)"
 
-#: apx_gui/gtk/window-main.ui:82
-msgid "_Quit"
-msgstr "_Выйти"
-
-#: apx_gui/gtk/window-main.ui:86 apx_gui/gtk/window-main.ui:82
+#: apx_gui/gtk/window-main.ui:83
 msgid "_About Apx GUI"
 msgstr "Об Apx GUI (_A)"
 
-#: apx_gui/main.py:102
+#: apx_gui/main.py:82
 msgid "translator_credits"
 msgstr "Алексей Фёдоров <myalexei@icloud.com>, Victor <k3kelm4vw@mozmail.com >"
 
-#: apx_gui/main.py:107
+#: apx_gui/main.py:87
 msgid "Contributors"
 msgstr "Участники"
 
-#: apx_gui/main.py:113
+#: apx_gui/main.py:93
 msgid "Tools"
 msgstr "Инструменты"
 
-#: apx_gui/gtk/help-overlay.ui:26
-msgctxt "shortcut window"
-msgid "Create"
-msgstr "Создать"
+#~ msgid "Enter a console in this subsystem's environment."
+#~ msgstr "Войти в Терминал в среде этой подсистемы."
 
-#: apx_gui/gtk/help-overlay.ui:29
-msgctxt "shortcut window"
-msgid "New Subsystem"
-msgstr "Новая подсистема"
+#~ msgid "New Sub System"
+#~ msgstr "Новая подсистема"
 
-#: apx_gui/gtk/help-overlay.ui:35
-msgctxt "shortcut window"
-msgid "New Stack"
-msgstr "Новый стек"
-
-#: apx_gui/gtk/help-overlay.ui:41
-msgctxt "shortcut window"
-msgid "New Package Manager"
-msgstr "Новый менеджер пакетов"
+#~ msgid "_Quit"
+#~ msgstr "_Выйти"

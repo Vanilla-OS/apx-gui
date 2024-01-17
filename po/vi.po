@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: apx_gui\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-07-10 18:39+0530\n"
+"POT-Creation-Date: 2024-01-17 09:36+0530\n"
 "PO-Revision-Date: 2023-08-02 06:02+0000\n"
 "Last-Translator: Nguyen Minh Thai <thaimeo200389@gmail.com>\n"
 "Language-Team: Vietnamese <https://hosted.weblate.org/projects/vanilla-os/"
@@ -26,7 +26,7 @@ msgstr "Apx"
 msgid "A frontend in GTK 4 and Libadwaita for Apx."
 msgstr ""
 
-#: apx_gui/gtk/create-pkgmanager.ui:6 apx_gui/gtk/window-main.ui:70
+#: apx_gui/gtk/create-pkgmanager.ui:6 apx_gui/gtk/window-main.ui:71
 msgid "New Package Manager"
 msgstr "Trình quản lí gói mới"
 
@@ -119,7 +119,7 @@ msgstr "Có một lỗi đã xảy ra khi tạo Trình quản lí gói."
 msgid "Close"
 msgstr "Đóng"
 
-#: apx_gui/gtk/create-stack.ui:6 apx_gui/gtk/window-main.ui:66
+#: apx_gui/gtk/create-stack.ui:6 apx_gui/gtk/window-main.ui:67
 msgid "New Stack"
 msgstr ""
 
@@ -128,7 +128,7 @@ msgid "Base"
 msgstr ""
 
 #: apx_gui/gtk/create-stack.ui:54 apx_gui/gtk/tab-stack.ui:38
-#: apx_gui/gtk/tab-subsystem.ui:29
+#: apx_gui/gtk/tab-subsystem.ui:37
 msgid "Package Manager"
 msgstr ""
 
@@ -148,11 +148,11 @@ msgstr ""
 msgid "An error occurred while creating the stack."
 msgstr ""
 
-#: apx_gui/gtk/create-subsystem.ui:6 apx_gui/gtk/window-main.ui:62
+#: apx_gui/gtk/create-subsystem.ui:6 apx_gui/gtk/window-main.ui:63
 msgid "New Subsystem"
 msgstr ""
 
-#: apx_gui/gtk/create-subsystem.ui:49 apx_gui/gtk/tab-subsystem.ui:19
+#: apx_gui/gtk/create-subsystem.ui:49 apx_gui/gtk/tab-subsystem.ui:27
 msgid "Stack"
 msgstr ""
 
@@ -239,42 +239,42 @@ msgstr ""
 msgid "Delete Stack"
 msgstr ""
 
-#: apx_gui/gtk/tab-subsystem.ui:9
+#: apx_gui/gtk/tab-subsystem.ui:17
 msgid "Status"
 msgstr ""
 
-#: apx_gui/gtk/tab-subsystem.ui:53
-msgid "Open Console"
-msgstr ""
-
-#: apx_gui/gtk/tab-subsystem.ui:54
-msgid "Enter a console in this subsystem's environment."
-msgstr ""
-
-#: apx_gui/gtk/tab-subsystem.ui:74
+#: apx_gui/gtk/tab-subsystem.ui:61
 msgid "Reset Subsystem"
 msgstr ""
 
-#: apx_gui/gtk/tab-subsystem.ui:89
+#: apx_gui/gtk/tab-subsystem.ui:76
 msgid "Delete Subsystem"
 msgstr ""
 
-#: apx_gui/gtk/window-main.ui:78
+#: apx_gui/gtk/tab-subsystem.ui:114
+msgid "Restart Console"
+msgstr ""
+
+#: apx_gui/gtk/tab-subsystem.ui:125
+msgid "Toggle Console"
+msgstr ""
+
+#: apx_gui/gtk/window-main.ui:79
 msgid "_Keyboard Shortcuts"
 msgstr ""
 
-#: apx_gui/gtk/window-main.ui:82
+#: apx_gui/gtk/window-main.ui:83
 msgid "_About Apx GUI"
 msgstr ""
 
-#: apx_gui/main.py:102
+#: apx_gui/main.py:82
 msgid "translator_credits"
 msgstr ""
 
-#: apx_gui/main.py:107
+#: apx_gui/main.py:87
 msgid "Contributors"
 msgstr ""
 
-#: apx_gui/main.py:113
+#: apx_gui/main.py:93
 msgid "Tools"
 msgstr ""

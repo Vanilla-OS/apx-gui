@@ -7,11 +7,11 @@ msgid ""
 msgstr ""
 "Project-Id-Version: apx_gui\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-07-05 20:14+0530\n"
+"POT-Creation-Date: 2024-01-17 09:36+0530\n"
 "PO-Revision-Date: 2023-07-12 17:10+0000\n"
 "Last-Translator: \"K.B.Dharun Krishna\" <kbdharunkrishna@gmail.com>\n"
-"Language-Team: Swedish <https://hosted.weblate.org/projects/vanilla-os/"
-"apx-gui/sv/>\n"
+"Language-Team: Swedish <https://hosted.weblate.org/projects/vanilla-os/apx-"
+"gui/sv/>\n"
 "Language: sv\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -27,7 +27,7 @@ msgstr "Apx"
 msgid "A frontend in GTK 4 and Libadwaita for Apx."
 msgstr "Ett gränssnitt i GTK 4 och Libadwaita för Apx."
 
-#: apx_gui/gtk/create-pkgmanager.ui:6 apx_gui/gtk/window-main.ui:70
+#: apx_gui/gtk/create-pkgmanager.ui:6 apx_gui/gtk/window-main.ui:71
 msgid "New Package Manager"
 msgstr "Ny pakethanterare"
 
@@ -120,7 +120,7 @@ msgstr "Ett fel uppstod när pakethanteraren skapades."
 msgid "Close"
 msgstr "Stäng"
 
-#: apx_gui/gtk/create-stack.ui:6 apx_gui/gtk/window-main.ui:66
+#: apx_gui/gtk/create-stack.ui:6 apx_gui/gtk/window-main.ui:67
 msgid "New Stack"
 msgstr "Ny stack"
 
@@ -129,7 +129,7 @@ msgid "Base"
 msgstr "Bas"
 
 #: apx_gui/gtk/create-stack.ui:54 apx_gui/gtk/tab-stack.ui:38
-#: apx_gui/gtk/tab-subsystem.ui:29
+#: apx_gui/gtk/tab-subsystem.ui:37
 msgid "Package Manager"
 msgstr "Pakethanterare"
 
@@ -149,11 +149,11 @@ msgstr "Vänta medan stacken skapas."
 msgid "An error occurred while creating the stack."
 msgstr "Ett fel uppstod när stacken skapades."
 
-#: apx_gui/gtk/create-subsystem.ui:6 apx_gui/gtk/window-main.ui:62
+#: apx_gui/gtk/create-subsystem.ui:6 apx_gui/gtk/window-main.ui:63
 msgid "New Subsystem"
 msgstr "Nytt undersystem"
 
-#: apx_gui/gtk/create-subsystem.ui:49 apx_gui/gtk/tab-subsystem.ui:19
+#: apx_gui/gtk/create-subsystem.ui:49 apx_gui/gtk/tab-subsystem.ui:27
 msgid "Stack"
 msgstr "Stack"
 
@@ -194,6 +194,26 @@ msgctxt "shortcut window"
 msgid "Quit"
 msgstr "Avsluta"
 
+#: apx_gui/gtk/help-overlay.ui:26
+msgctxt "shortcut window"
+msgid "Create"
+msgstr "Skapa"
+
+#: apx_gui/gtk/help-overlay.ui:29
+msgctxt "shortcut window"
+msgid "New Subsystem"
+msgstr "Nytt undersystem"
+
+#: apx_gui/gtk/help-overlay.ui:35
+msgctxt "shortcut window"
+msgid "New Stack"
+msgstr "Ny stack"
+
+#: apx_gui/gtk/help-overlay.ui:41
+msgctxt "shortcut window"
+msgid "New Package Manager"
+msgstr "Ny pakethanterare"
+
 #: apx_gui/gtk/tab-pkgmanager.ui:13
 msgid "This package manager is built-in and cannot be edited or deleted."
 msgstr "Denna pakethanterare är inbyggd och kan inte redigeras eller raderas."
@@ -222,70 +242,55 @@ msgstr "Paket"
 msgid "Delete Stack"
 msgstr "Ta bort stack"
 
-#: apx_gui/gtk/tab-subsystem.ui:9
+#: apx_gui/gtk/tab-subsystem.ui:17
 msgid "Status"
 msgstr "Status"
 
-#: apx_gui/gtk/tab-subsystem.ui:53
-msgid "Open Console"
-msgstr "Öppna konsol"
-
-#: apx_gui/gtk/tab-subsystem.ui:54
-msgid "Enter a console in this subsystem's environment."
-msgstr "Gå in i en konsol i detta undersystems miljö."
-
-#: apx_gui/gtk/tab-subsystem.ui:74
+#: apx_gui/gtk/tab-subsystem.ui:61
 msgid "Reset Subsystem"
 msgstr "Återställ undersystem"
 
-#: apx_gui/gtk/tab-subsystem.ui:89
+#: apx_gui/gtk/tab-subsystem.ui:76
 msgid "Delete Subsystem"
 msgstr "Ta bort undersystem"
 
-#: apx_gui/gtk/window-main.ui:62
-msgid "New Sub System"
-msgstr "Nytt undersystem"
+#: apx_gui/gtk/tab-subsystem.ui:114
+#, fuzzy
+#| msgid "Open Console"
+msgid "Restart Console"
+msgstr "Öppna konsol"
 
-#: apx_gui/gtk/window-main.ui:78
+#: apx_gui/gtk/tab-subsystem.ui:125
+#, fuzzy
+#| msgid "Open Console"
+msgid "Toggle Console"
+msgstr "Öppna konsol"
+
+#: apx_gui/gtk/window-main.ui:79
 msgid "_Keyboard Shortcuts"
 msgstr "Tangentbordsgenvägar (_K)"
 
-#: apx_gui/gtk/window-main.ui:82
-msgid "_Quit"
-msgstr "_Avsluta"
-
-#: apx_gui/gtk/window-main.ui:86 apx_gui/gtk/window-main.ui:82
+#: apx_gui/gtk/window-main.ui:83
 msgid "_About Apx GUI"
 msgstr "Om Apx GUI (_A)"
 
-#: apx_gui/main.py:102
+#: apx_gui/main.py:82
 msgid "translator_credits"
 msgstr "Luna Jernberg <lunajernberg@gnome.org>"
 
-#: apx_gui/main.py:107
+#: apx_gui/main.py:87
 msgid "Contributors"
 msgstr "Bidragsgivare"
 
-#: apx_gui/main.py:113
+#: apx_gui/main.py:93
 msgid "Tools"
 msgstr "Verktyg"
 
-#: apx_gui/gtk/help-overlay.ui:26
-msgctxt "shortcut window"
-msgid "Create"
-msgstr "Skapa"
+#~ msgid "Enter a console in this subsystem's environment."
+#~ msgstr "Gå in i en konsol i detta undersystems miljö."
 
-#: apx_gui/gtk/help-overlay.ui:29
-msgctxt "shortcut window"
-msgid "New Subsystem"
-msgstr "Nytt undersystem"
+#~ msgid "New Sub System"
+#~ msgstr "Nytt undersystem"
 
-#: apx_gui/gtk/help-overlay.ui:35
-msgctxt "shortcut window"
-msgid "New Stack"
-msgstr "Ny stack"
-
-#: apx_gui/gtk/help-overlay.ui:41
-msgctxt "shortcut window"
-msgid "New Package Manager"
-msgstr "Ny pakethanterare"
+#~ msgid "_Quit"
+#~ msgstr "_Avsluta"

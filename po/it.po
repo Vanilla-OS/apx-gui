@@ -8,12 +8,12 @@ msgid ""
 msgstr ""
 "Project-Id-Version: apx_gui\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-07-10 18:39+0530\n"
+"POT-Creation-Date: 2024-01-17 09:36+0530\n"
 "PO-Revision-Date: 2023-08-07 14:36+0000\n"
-"Last-Translator: EncryptedEasty <95353984+EncryptedEasty@users.noreply.github"
-".com>\n"
-"Language-Team: Italian <https://hosted.weblate.org/projects/vanilla-os/"
-"apx-gui/it/>\n"
+"Last-Translator: EncryptedEasty <95353984+EncryptedEasty@users.noreply."
+"github.com>\n"
+"Language-Team: Italian <https://hosted.weblate.org/projects/vanilla-os/apx-"
+"gui/it/>\n"
 "Language: it\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -29,7 +29,7 @@ msgstr "Apx"
 msgid "A frontend in GTK 4 and Libadwaita for Apx."
 msgstr "Un frontend in GTK 4 e Libadwaita per Apx."
 
-#: apx_gui/gtk/create-pkgmanager.ui:6 apx_gui/gtk/window-main.ui:70
+#: apx_gui/gtk/create-pkgmanager.ui:6 apx_gui/gtk/window-main.ui:71
 msgid "New Package Manager"
 msgstr "Nuovo gestore di pacchetti"
 
@@ -123,7 +123,7 @@ msgstr ""
 msgid "Close"
 msgstr "Chiudi"
 
-#: apx_gui/gtk/create-stack.ui:6 apx_gui/gtk/window-main.ui:66
+#: apx_gui/gtk/create-stack.ui:6 apx_gui/gtk/window-main.ui:67
 msgid "New Stack"
 msgstr "Nuovo Stack"
 
@@ -132,7 +132,7 @@ msgid "Base"
 msgstr "Base"
 
 #: apx_gui/gtk/create-stack.ui:54 apx_gui/gtk/tab-stack.ui:38
-#: apx_gui/gtk/tab-subsystem.ui:29
+#: apx_gui/gtk/tab-subsystem.ui:37
 msgid "Package Manager"
 msgstr "Gestore dei Pacchetti"
 
@@ -152,11 +152,11 @@ msgstr "Attendi mentre viene creato lo stack."
 msgid "An error occurred while creating the stack."
 msgstr "Si è verificato un errore durante la creazione dello stack."
 
-#: apx_gui/gtk/create-subsystem.ui:6 apx_gui/gtk/window-main.ui:62
+#: apx_gui/gtk/create-subsystem.ui:6 apx_gui/gtk/window-main.ui:63
 msgid "New Subsystem"
 msgstr "Nuovo Sottosistema"
 
-#: apx_gui/gtk/create-subsystem.ui:49 apx_gui/gtk/tab-subsystem.ui:19
+#: apx_gui/gtk/create-subsystem.ui:49 apx_gui/gtk/tab-subsystem.ui:27
 msgid "Stack"
 msgstr "Stack"
 
@@ -247,42 +247,49 @@ msgstr "Pacchetti"
 msgid "Delete Stack"
 msgstr "Elimina Stack"
 
-#: apx_gui/gtk/tab-subsystem.ui:9
+#: apx_gui/gtk/tab-subsystem.ui:17
 msgid "Status"
 msgstr "Stato"
 
-#: apx_gui/gtk/tab-subsystem.ui:53
-msgid "Open Console"
-msgstr "Apri Console"
-
-#: apx_gui/gtk/tab-subsystem.ui:54
-msgid "Enter a console in this subsystem's environment."
-msgstr "Entra in una console nell'ambiente di questo sottosistema."
-
-#: apx_gui/gtk/tab-subsystem.ui:74
+#: apx_gui/gtk/tab-subsystem.ui:61
 msgid "Reset Subsystem"
 msgstr "Resetta il Sottosistema"
 
-#: apx_gui/gtk/tab-subsystem.ui:89
+#: apx_gui/gtk/tab-subsystem.ui:76
 msgid "Delete Subsystem"
 msgstr "Elimina il Sottosistema"
 
-#: apx_gui/gtk/window-main.ui:78
+#: apx_gui/gtk/tab-subsystem.ui:114
+#, fuzzy
+#| msgid "Open Console"
+msgid "Restart Console"
+msgstr "Apri Console"
+
+#: apx_gui/gtk/tab-subsystem.ui:125
+#, fuzzy
+#| msgid "Open Console"
+msgid "Toggle Console"
+msgstr "Apri Console"
+
+#: apx_gui/gtk/window-main.ui:79
 msgid "_Keyboard Shortcuts"
 msgstr "_Scorciatoie da Tastiera"
 
-#: apx_gui/gtk/window-main.ui:82
+#: apx_gui/gtk/window-main.ui:83
 msgid "_About Apx GUI"
 msgstr "Informazione su Apx GUI (_A)"
 
-#: apx_gui/main.py:102
+#: apx_gui/main.py:82
 msgid "translator_credits"
 msgstr "EncryptedEasty https://github.com/EncryptedEasty"
 
-#: apx_gui/main.py:107
+#: apx_gui/main.py:87
 msgid "Contributors"
 msgstr "Contributori"
 
-#: apx_gui/main.py:113
+#: apx_gui/main.py:93
 msgid "Tools"
 msgstr "Strumenti"
+
+#~ msgid "Enter a console in this subsystem's environment."
+#~ msgstr "Entra in una console nell'ambiente di questo sottosistema."
