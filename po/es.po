@@ -7,13 +7,14 @@
 # "Samuel P. Aguilar F." <huntermirror@yahoo.com.ve>, 2023.
 # Jorge Ivan Carmona Cortez <dh_plasma@hotmail.com>, 2023.
 # gallegonovato <fran-carro@hotmail.es>, 2023.
+# Aghaeles <sebas.hfa@pm.me>, 2024.
 msgid ""
 msgstr ""
 "Project-Id-Version: apx_gui\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2023-07-10 18:39+0530\n"
-"PO-Revision-Date: 2023-08-18 02:53+0000\n"
-"Last-Translator: gallegonovato <fran-carro@hotmail.es>\n"
+"PO-Revision-Date: 2024-01-16 01:29+0000\n"
+"Last-Translator: Aghaeles <sebas.hfa@pm.me>\n"
 "Language-Team: Spanish <https://hosted.weblate.org/projects/vanilla-os/"
 "apx-gui/es/>\n"
 "Language: es\n"
@@ -21,7 +22,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 5.0-dev\n"
+"X-Generator: Weblate 5.4-dev\n"
 
 #: data/org.vanillaos.ApxGUI.desktop.in:3
 msgid "Apx"
@@ -278,7 +279,7 @@ msgstr "_Acerca de Apx GUI"
 
 #: apx_gui/main.py:102
 msgid "translator_credits"
-msgstr ""
+msgstr "Sebastian Dávila <sebas.hfa@pm.me>"
 
 #: apx_gui/main.py:107
 msgid "Contributors"

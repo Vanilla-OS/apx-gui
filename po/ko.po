@@ -2,21 +2,22 @@
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the apx_gui package.
 # MJKim <kmj10727@gmail.com>, 2023.
+# lmj0927 <lmjj0927@naver.com>, 2023.
 msgid ""
 msgstr ""
 "Project-Id-Version: apx_gui\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2023-07-10 18:39+0530\n"
-"PO-Revision-Date: 2023-07-08 14:34+0000\n"
-"Last-Translator: MJKim <kmj10727@gmail.com>\n"
-"Language-Team: Korean <https://hosted.weblate.org/projects/vanilla-os/apx-"
-"gui/ko/>\n"
+"PO-Revision-Date: 2023-12-22 13:50+0000\n"
+"Last-Translator: lmj0927 <lmjj0927@naver.com>\n"
+"Language-Team: Korean <https://hosted.weblate.org/projects/vanilla-os/"
+"apx-gui/ko/>\n"
 "Language: ko\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Weblate 5.0-dev\n"
+"X-Generator: Weblate 5.4-dev\n"
 
 #: data/org.vanillaos.ApxGUI.desktop.in:3
 msgid "Apx"
@@ -76,7 +77,7 @@ msgstr "목록"
 
 #: apx_gui/gtk/create-pkgmanager.ui:93 apx_gui/gtk/tab-pkgmanager.ui:81
 msgid "Purge"
-msgstr "완전히 삭제"
+msgstr "퍼지"
 
 #: apx_gui/gtk/create-pkgmanager.ui:98 apx_gui/gtk/tab-pkgmanager.ui:87
 msgid "Remove"
@@ -269,7 +270,7 @@ msgstr "하위 시스템 삭제"
 
 #: apx_gui/gtk/window-main.ui:78
 msgid "_Keyboard Shortcuts"
-msgstr "키보드 바로 가기(_K)"
+msgstr "키보드 바로 가기(K키)"
 
 #: apx_gui/gtk/window-main.ui:82
 msgid "_About Apx GUI"
