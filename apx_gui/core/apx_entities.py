@@ -35,7 +35,6 @@ class ApxEntityBase:
         """
         Check if the program is running inside a container.
         """
-        print(os.path.exists("/run/.containerenv"))
         return os.path.exists("/run/.containerenv")
 
     def _get_apx_command(self) -> str:
@@ -62,7 +61,9 @@ class ApxEntityBase:
         """
         return shutil.which("host-spawn")
 
-    def _run_command(self, command: Text) -> Tuple[bool, str]:
+    def _run_command(
+        self, command: Text, ignore_errors: bool = False
+    ) -> Tuple[bool, str]:
         try:
             if "APX_DEBUG" in os.environ:
                 print(f"Running command: {command}")
@@ -73,18 +74,28 @@ class ApxEntityBase:
             output: bytes
             error: bytes
             output, error = process.communicate()
-            if error:
-                return False, error.decode("utf-8")
-            return True, output.decode("utf-8")
+            output: str = output.decode("utf-8")
+            error: str = error.decode("utf-8")
+            if error and not ignore_errors:
+                if "APX_DEBUG" in os.environ:
+                    print(f"Error: {error}")
+                return False, error
+            if "APX_DEBUG" in os.environ:
+                print(f"Output: {output}")
+            return True, output
         except Exception as e:
+            if "APX_DEBUG" in os.environ:
+                print(f"Exception: {e}")
             return False, str(e)
 
-    def _run_apx_command(self, args: Text) -> Tuple[bool, str]:
+    def _run_apx_command(
+        self, args: Text, ignore_errors: bool = False
+    ) -> Tuple[bool, str]:
         """
         Run the 'apx' command with the specified arguments.
         """
         command = f"{self._get_apx_command()} {args}"
-        return self._run_command(command)
+        return self._run_command(command, ignore_errors)
 
     def to_dict(self) -> Dict[str, Union[str, UUID]]:
         return self.__dict__
@@ -171,7 +182,9 @@ class Subsystem(ApxEntityBase):
 
     def create(self) -> Tuple[bool, "Subsystem"]:
         command: Text = f"subsystems new --name {self.name} --stack {self.stack.name}"
-        res: Tuple[bool, str] = self._run_apx_command(command)
+        # the following apx command is safe to ignore errors, we´ll check the
+        # subsystem status by getting the list of subsystems
+        res: Tuple[bool, str] = self._run_apx_command(command, True)
         if not res[0]:
             return res[0], self
 
@@ -180,7 +193,10 @@ class Subsystem(ApxEntityBase):
         if not res[0]:
             return res[0], self
 
-        subsystems: List[Dict[str, str]] = json.loads(res[1])
+        try:
+            subsystems: List[Dict[str, str]] = json.loads(res[1])
+        except json.decoder.JSONDecodeError:
+            return False, self
         for subsystem in subsystems:
             if subsystem["Name"] == self.name:
                 self.internal_name = subsystem["InternalName"]
