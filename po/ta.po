@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: apx_gui\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-07-10 18:39+0530\n"
+"POT-Creation-Date: 2024-01-17 09:36+0530\n"
 "PO-Revision-Date: 2023-07-12 17:10+0000\n"
 "Last-Translator: \"K.B.Dharun Krishna\" <kbdharunkrishna@gmail.com>\n"
 "Language-Team: Tamil <https://hosted.weblate.org/projects/vanilla-os/apx-gui/"
@@ -26,7 +26,7 @@ msgstr "Apx"
 msgid "A frontend in GTK 4 and Libadwaita for Apx."
 msgstr "Apx க்கான GTK 4 மற்றும் Libadwaita இல் ஒரு முன்பக்கம்."
 
-#: apx_gui/gtk/create-pkgmanager.ui:6 apx_gui/gtk/window-main.ui:70
+#: apx_gui/gtk/create-pkgmanager.ui:6 apx_gui/gtk/window-main.ui:71
 msgid "New Package Manager"
 msgstr "புதிய தொகுப்பு மேலாளர்"
 
@@ -119,7 +119,7 @@ msgstr "தொகுப்பு நிர்வாகியை உருவா�
 msgid "Close"
 msgstr "மூடு"
 
-#: apx_gui/gtk/create-stack.ui:6 apx_gui/gtk/window-main.ui:66
+#: apx_gui/gtk/create-stack.ui:6 apx_gui/gtk/window-main.ui:67
 msgid "New Stack"
 msgstr "புதிய அடுக்கு"
 
@@ -128,7 +128,7 @@ msgid "Base"
 msgstr "அடித்தளம்"
 
 #: apx_gui/gtk/create-stack.ui:54 apx_gui/gtk/tab-stack.ui:38
-#: apx_gui/gtk/tab-subsystem.ui:29
+#: apx_gui/gtk/tab-subsystem.ui:37
 msgid "Package Manager"
 msgstr "தொகுப்பு மேலாளர்"
 
@@ -148,11 +148,11 @@ msgstr "அடுக்கு உருவாக்கப்படும் வ�
 msgid "An error occurred while creating the stack."
 msgstr "அடுக்கை உருவாக்கும் போது பிழை ஏற்பட்டது."
 
-#: apx_gui/gtk/create-subsystem.ui:6 apx_gui/gtk/window-main.ui:62
+#: apx_gui/gtk/create-subsystem.ui:6 apx_gui/gtk/window-main.ui:63
 msgid "New Subsystem"
 msgstr "புதிய துணை அமைப்பு"
 
-#: apx_gui/gtk/create-subsystem.ui:49 apx_gui/gtk/tab-subsystem.ui:19
+#: apx_gui/gtk/create-subsystem.ui:49 apx_gui/gtk/tab-subsystem.ui:27
 msgid "Stack"
 msgstr "அடுக்கு"
 
@@ -175,8 +175,7 @@ msgstr "ஒரு துணை அமைப்பைத் தொடங்கவ
 #: apx_gui/gtk/editor.ui:13
 msgid "Start by opening a subsystem, stack or package manager on the left."
 msgstr ""
-"இடதுபுறத்தில் துணை அமைப்பு, அடுக்கு அல்லது தொகுப்பு மேலாளரைத் திறப்பதன் மூலம்"
-" தொடங்கவும்."
+"இடதுபுறத்தில் துணை அமைப்பு, அடுக்கு அல்லது தொகுப்பு மேலாளரைத் திறப்பதன் மூலம் தொடங்கவும்."
 
 #: apx_gui/gtk/help-overlay.ui:11
 msgctxt "shortcut window"
@@ -241,42 +240,49 @@ msgstr "தொகுப்புகள்"
 msgid "Delete Stack"
 msgstr "அடுக்கை நீக்கு"
 
-#: apx_gui/gtk/tab-subsystem.ui:9
+#: apx_gui/gtk/tab-subsystem.ui:17
 msgid "Status"
 msgstr "நிலை"
 
-#: apx_gui/gtk/tab-subsystem.ui:53
-msgid "Open Console"
-msgstr "கன்சோலைத் திற"
-
-#: apx_gui/gtk/tab-subsystem.ui:54
-msgid "Enter a console in this subsystem's environment."
-msgstr "இந்த துணை அமைப்பின் சூழலில் கன்சோலை உள்ளிடவும்."
-
-#: apx_gui/gtk/tab-subsystem.ui:74
+#: apx_gui/gtk/tab-subsystem.ui:61
 msgid "Reset Subsystem"
 msgstr "துணை அமைப்பை மீட்டமைக்கவும்"
 
-#: apx_gui/gtk/tab-subsystem.ui:89
+#: apx_gui/gtk/tab-subsystem.ui:76
 msgid "Delete Subsystem"
 msgstr "துணை அமைப்பை நீக்கு"
 
-#: apx_gui/gtk/window-main.ui:78
+#: apx_gui/gtk/tab-subsystem.ui:114
+#, fuzzy
+#| msgid "Open Console"
+msgid "Restart Console"
+msgstr "கன்சோலைத் திற"
+
+#: apx_gui/gtk/tab-subsystem.ui:125
+#, fuzzy
+#| msgid "Open Console"
+msgid "Toggle Console"
+msgstr "கன்சோலைத் திற"
+
+#: apx_gui/gtk/window-main.ui:79
 msgid "_Keyboard Shortcuts"
 msgstr "விசைப்பலகை குறுக்குவழிகள் (_K)"
 
-#: apx_gui/gtk/window-main.ui:82
+#: apx_gui/gtk/window-main.ui:83
 msgid "_About Apx GUI"
 msgstr "Apx GUI பற்றி (_A)"
 
-#: apx_gui/main.py:102
+#: apx_gui/main.py:82
 msgid "translator_credits"
 msgstr "K.B.Dharun Krishna <kbdharunkrishna@gmail.com>"
 
-#: apx_gui/main.py:107
+#: apx_gui/main.py:87
 msgid "Contributors"
 msgstr "பங்களிப்பாளர்கள்"
 
-#: apx_gui/main.py:113
+#: apx_gui/main.py:93
 msgid "Tools"
 msgstr "கருவிகள்"
+
+#~ msgid "Enter a console in this subsystem's environment."
+#~ msgstr "இந்த துணை அமைப்பின் சூழலில் கன்சோலை உள்ளிடவும்."

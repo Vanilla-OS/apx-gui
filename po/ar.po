@@ -9,11 +9,11 @@ msgid ""
 msgstr ""
 "Project-Id-Version: apx_gui\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-07-10 18:39+0530\n"
+"POT-Creation-Date: 2024-01-17 09:36+0530\n"
 "PO-Revision-Date: 2023-11-03 20:12+0000\n"
 "Last-Translator: Majed Alghoul <jedgh9@gmail.com>\n"
-"Language-Team: Arabic <https://hosted.weblate.org/projects/vanilla-os/"
-"apx-gui/ar/>\n"
+"Language-Team: Arabic <https://hosted.weblate.org/projects/vanilla-os/apx-"
+"gui/ar/>\n"
 "Language: ar\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -30,7 +30,7 @@ msgstr "Apx"
 msgid "A frontend in GTK 4 and Libadwaita for Apx."
 msgstr "واجهة رسومية لـ Apx مبنية باستخدام GTK4 و Libadwaita."
 
-#: apx_gui/gtk/create-pkgmanager.ui:6 apx_gui/gtk/window-main.ui:70
+#: apx_gui/gtk/create-pkgmanager.ui:6 apx_gui/gtk/window-main.ui:71
 msgid "New Package Manager"
 msgstr "مدير حزم جديد"
 
@@ -123,7 +123,7 @@ msgstr "حدث خطأ أثناء إنشاء مدير الحزم."
 msgid "Close"
 msgstr "إغلاق"
 
-#: apx_gui/gtk/create-stack.ui:6 apx_gui/gtk/window-main.ui:66
+#: apx_gui/gtk/create-stack.ui:6 apx_gui/gtk/window-main.ui:67
 msgid "New Stack"
 msgstr "تشكيلة جديدة"
 
@@ -132,7 +132,7 @@ msgid "Base"
 msgstr "النظام الأساس"
 
 #: apx_gui/gtk/create-stack.ui:54 apx_gui/gtk/tab-stack.ui:38
-#: apx_gui/gtk/tab-subsystem.ui:29
+#: apx_gui/gtk/tab-subsystem.ui:37
 msgid "Package Manager"
 msgstr "مدير الحزم"
 
@@ -152,11 +152,11 @@ msgstr "يرجى الانتظار ريثما يتم إنشاء تشكيلة جد
 msgid "An error occurred while creating the stack."
 msgstr "حدث خطأ أثناء إنشاء التشكيلة."
 
-#: apx_gui/gtk/create-subsystem.ui:6 apx_gui/gtk/window-main.ui:62
+#: apx_gui/gtk/create-subsystem.ui:6 apx_gui/gtk/window-main.ui:63
 msgid "New Subsystem"
 msgstr "نظام فرعي جديد"
 
-#: apx_gui/gtk/create-subsystem.ui:49 apx_gui/gtk/tab-subsystem.ui:19
+#: apx_gui/gtk/create-subsystem.ui:49 apx_gui/gtk/tab-subsystem.ui:27
 msgid "Stack"
 msgstr "تشكيلة"
 
@@ -243,45 +243,52 @@ msgstr "الحزم"
 msgid "Delete Stack"
 msgstr "حذف التشكيلة"
 
-#: apx_gui/gtk/tab-subsystem.ui:9
+#: apx_gui/gtk/tab-subsystem.ui:17
 msgid "Status"
 msgstr "الحالة"
 
-#: apx_gui/gtk/tab-subsystem.ui:53
-msgid "Open Console"
-msgstr "فتح الطرفية"
-
-#: apx_gui/gtk/tab-subsystem.ui:54
-msgid "Enter a console in this subsystem's environment."
-msgstr "دخول الطرفية في بيئة هذا النظام الفرعي."
-
-#: apx_gui/gtk/tab-subsystem.ui:74
+#: apx_gui/gtk/tab-subsystem.ui:61
 msgid "Reset Subsystem"
 msgstr "إعادة إنشاء النظام الفرعي"
 
-#: apx_gui/gtk/tab-subsystem.ui:89
+#: apx_gui/gtk/tab-subsystem.ui:76
 msgid "Delete Subsystem"
 msgstr "حذف النظام الفرعي"
 
-#: apx_gui/gtk/window-main.ui:78
+#: apx_gui/gtk/tab-subsystem.ui:114
+#, fuzzy
+#| msgid "Open Console"
+msgid "Restart Console"
+msgstr "فتح الطرفية"
+
+#: apx_gui/gtk/tab-subsystem.ui:125
+#, fuzzy
+#| msgid "Open Console"
+msgid "Toggle Console"
+msgstr "فتح الطرفية"
+
+#: apx_gui/gtk/window-main.ui:79
 msgid "_Keyboard Shortcuts"
 msgstr "_اختصارات لوحة المفاتيح"
 
-#: apx_gui/gtk/window-main.ui:82
+#: apx_gui/gtk/window-main.ui:83
 msgid "_About Apx GUI"
 msgstr "حول Apx GUI (_A)"
 
-#: apx_gui/main.py:102
+#: apx_gui/main.py:82
 msgid "translator_credits"
 msgstr "مؤمن المناوي moumnalmunawy2006@gmail.com"
 
-#: apx_gui/main.py:107
+#: apx_gui/main.py:87
 msgid "Contributors"
 msgstr "المساهمون"
 
-#: apx_gui/main.py:113
+#: apx_gui/main.py:93
 msgid "Tools"
 msgstr "الأدوات"
+
+#~ msgid "Enter a console in this subsystem's environment."
+#~ msgstr "دخول الطرفية في بيئة هذا النظام الفرعي."
 
 #~ msgid "New Sub System"
 #~ msgstr "نظام فرعي جديد"

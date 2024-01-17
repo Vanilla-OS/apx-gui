@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: apx_gui\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-07-10 18:39+0530\n"
+"POT-Creation-Date: 2024-01-17 09:36+0530\n"
 "PO-Revision-Date: 2023-08-21 18:50+0000\n"
 "Last-Translator: Andrew Geo <andrewgeo@outlook.com>\n"
 "Language-Team: Greek <https://hosted.weblate.org/projects/vanilla-os/apx-gui/"
@@ -26,7 +26,7 @@ msgstr "Apx"
 msgid "A frontend in GTK 4 and Libadwaita for Apx."
 msgstr "Μια μετωπιαία διεπαφή του Apx, βασισμένη στο GTK 4 και το LIbadwaita."
 
-#: apx_gui/gtk/create-pkgmanager.ui:6 apx_gui/gtk/window-main.ui:70
+#: apx_gui/gtk/create-pkgmanager.ui:6 apx_gui/gtk/window-main.ui:71
 msgid "New Package Manager"
 msgstr "Νέος Διαχειριστής Πακέτων"
 
@@ -119,7 +119,7 @@ msgstr "Προέκυψε σφάλμα κατά τη δημιουργία του 
 msgid "Close"
 msgstr "Κλείσιμο"
 
-#: apx_gui/gtk/create-stack.ui:6 apx_gui/gtk/window-main.ui:66
+#: apx_gui/gtk/create-stack.ui:6 apx_gui/gtk/window-main.ui:67
 msgid "New Stack"
 msgstr "Νέα στοίβα"
 
@@ -128,7 +128,7 @@ msgid "Base"
 msgstr "Βάση"
 
 #: apx_gui/gtk/create-stack.ui:54 apx_gui/gtk/tab-stack.ui:38
-#: apx_gui/gtk/tab-subsystem.ui:29
+#: apx_gui/gtk/tab-subsystem.ui:37
 msgid "Package Manager"
 msgstr "Διαχειριστής πακέτων"
 
@@ -148,11 +148,11 @@ msgstr "Παρακαλώ περιμένετε όσο δημιουργείται 
 msgid "An error occurred while creating the stack."
 msgstr "Προέκυψε σφάλμα κατά τη δημιουργία της στοίβας."
 
-#: apx_gui/gtk/create-subsystem.ui:6 apx_gui/gtk/window-main.ui:62
+#: apx_gui/gtk/create-subsystem.ui:6 apx_gui/gtk/window-main.ui:63
 msgid "New Subsystem"
 msgstr "Νέο υποσύστημα"
 
-#: apx_gui/gtk/create-subsystem.ui:49 apx_gui/gtk/tab-subsystem.ui:19
+#: apx_gui/gtk/create-subsystem.ui:49 apx_gui/gtk/tab-subsystem.ui:27
 msgid "Stack"
 msgstr "Στοίβα"
 
@@ -249,43 +249,50 @@ msgstr "Πακέτα"
 msgid "Delete Stack"
 msgstr "Διαγραφή στοίβας"
 
-#: apx_gui/gtk/tab-subsystem.ui:9
+#: apx_gui/gtk/tab-subsystem.ui:17
 msgid "Status"
 msgstr "Κατάσταση"
 
-#: apx_gui/gtk/tab-subsystem.ui:53
-msgid "Open Console"
-msgstr "Άνοιγμα κονσόλας"
-
-#: apx_gui/gtk/tab-subsystem.ui:54
-msgid "Enter a console in this subsystem's environment."
-msgstr "Εισαγωγή κονσόλας στο περιβάλλον αυτού του υποσυστήματος."
-
-#: apx_gui/gtk/tab-subsystem.ui:74
+#: apx_gui/gtk/tab-subsystem.ui:61
 msgid "Reset Subsystem"
 msgstr "Επαναφορά υποσυστήματος"
 
-#: apx_gui/gtk/tab-subsystem.ui:89
+#: apx_gui/gtk/tab-subsystem.ui:76
 msgid "Delete Subsystem"
 msgstr "Διαγραφή υποσυστήματος"
 
-#: apx_gui/gtk/window-main.ui:78
+#: apx_gui/gtk/tab-subsystem.ui:114
+#, fuzzy
+#| msgid "Open Console"
+msgid "Restart Console"
+msgstr "Άνοιγμα κονσόλας"
+
+#: apx_gui/gtk/tab-subsystem.ui:125
+#, fuzzy
+#| msgid "Open Console"
+msgid "Toggle Console"
+msgstr "Άνοιγμα κονσόλας"
+
+#: apx_gui/gtk/window-main.ui:79
 msgid "_Keyboard Shortcuts"
 msgstr "_Συντομεύσεις πληκτρολογίου"
 
-#: apx_gui/gtk/window-main.ui:82
+#: apx_gui/gtk/window-main.ui:83
 msgid "_About Apx GUI"
 msgstr "_Σχετικά με το Apx GUI"
 
-#: apx_gui/main.py:102
+#: apx_gui/main.py:82
 #, fuzzy
 msgid "translator_credits"
 msgstr "Ανδρέας Γεωργόπουλος <andrewgeo@outlook.com>"
 
-#: apx_gui/main.py:107
+#: apx_gui/main.py:87
 msgid "Contributors"
 msgstr "Συντελεστές"
 
-#: apx_gui/main.py:113
+#: apx_gui/main.py:93
 msgid "Tools"
 msgstr "Εργαλεία"
+
+#~ msgid "Enter a console in this subsystem's environment."
+#~ msgstr "Εισαγωγή κονσόλας στο περιβάλλον αυτού του υποσυστήματος."
