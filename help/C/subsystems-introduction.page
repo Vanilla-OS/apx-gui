@@ -12,7 +12,7 @@
     </credit>
     <credit type="editor copyright">
       <name>Bart Gravendeel</name>
-      <email its:translate="no">monstertux@proton.me</email>
+      <email its:translate="no">bgravendeel@proton.me</email>
       <years>2024</years>
     </credit>
 
@@ -25,9 +25,9 @@
 
   <title>Introduction to Subsystems</title>
 
-  <p>A Subsystem is a container created on top of a <gui>Stack</gui> and <gui>Package manager</gui> configuration.</p>
+  <p>A Subsystem is a container created on top of a <gui>Stack</gui> and <gui>Package Manager</gui> configuration.</p>
 
-  <p>In <gui>Apx GUI</gui> you can create multiple Subsystems based on a Stack and Package manager seamlessly
-for an isolated developement environment.</p>
+  <p>In <gui>Apx GUI</gui> you can create Subsystems based on a Stack and Package Manager
+for an isolated development container.</p>
 
 </page>

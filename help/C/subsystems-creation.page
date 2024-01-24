@@ -12,7 +12,7 @@
     </credit>
     <credit type="editor copyright">
       <name>Bart Gravendeel</name>
-      <email its:translate="no">monstertux@proton.me</email>
+      <email its:translate="no">bgravendeel@proton.me</email>
       <years>2024</years>
     </credit>
 
@@ -27,22 +27,22 @@
 
   <p>The below steps demonstrates on how to create a subsystem using <gui>Apx GUI</gui>:</p>
   <list>
-    <item><p>Click on the <gui>+</gui> (Plus) button in the top left corner.</p></item>
-    <item><p>Click on <gui>New Subsystem</gui> button.</p></item>
+    <item><p>Click on the <gui>+</gui>button in the top left corner.</p></item>
+    <item><p>Click on the <gui>New Subsystem</gui> button.</p></item>
     <item><p>Choose the <gui>Stack</gui> to be used for the Subsystem from the available list.</p></item>
     <item><p>Click on the <gui>Create</gui> button to pull the image and create a Subsystem container.</p></item>
-    <item><p>After creation of the Subsystem, click on the Console icon in bottom right corner and start working.</p></item>
+    <item><p>After creating the Subsystem, click on the Console icon in bottom right corner to start working.</p></item>
   </list>
 
   <figure>
-        <title>Screenshot of Apx GUI Subsystem Creation Panel</title>
+        <title>Apx GUI Subsystem Creation Panel</title>
         <media type="image" its:translate="no" src="media/apx-gui-create-subsystems.png"/>
   </figure>
 
-    <p>The created Subsystem can be reset/removed by navigating to it and then pressing on the <gui>Delete Package Manager</gui> button.</p>
+    <p>The created Subsystem can be reset and removed by navigating to it and then pressing on the <gui>Delete Package Manager</gui> button.</p>
 
   <figure>
-        <title>Screenshot of an Subsystem (with Console open)</title>
+        <title>A Subsystem with Console open</title>
         <media type="image" its:translate="no" src="media/apx-gui-subsystems.png"/>
   </figure>
 

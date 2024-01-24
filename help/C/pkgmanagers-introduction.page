@@ -12,7 +12,7 @@
     </credit>
     <credit type="editor copyright">
       <name>Bart Gravendeel</name>
-      <email its:translate="no">monstertux@proton.me</email>
+      <email its:translate="no">bgravendeel@proton.me</email>
       <years>2024</years>
     </credit>
 
@@ -29,11 +29,11 @@
   the process of installing, upgrading, configuring, and removing computer programs for a computer
   in a consistent manner.</p>
 
-  <p>The package manager option in <gui> Apx GUI</gui> allows you to create/modify new configurations for package 
-  managers or wrappers commands that are used for creating a Subsystem.</p>
+  <p>The package manager option in <gui> Apx GUI</gui> allows you to create and modify new configurations for package 
+  managers and wrapper commands that are used for creating a Subsystem.</p>
 
   <figure>
-        <title>Screenshot of Package managers in Apx GUI</title>
+        <title>Package Managers in Apx GUI</title>
         <media type="image" its:translate="no" src="media/apx-gui-builtin-pkgmanagers.png"/>
   </figure>
 

@@ -12,7 +12,7 @@
     </credit>
     <credit type="editor copyright">
       <name>Bart Gravendeel</name>
-      <email its:translate="no">monstertux@proton.me</email>
+      <email its:translate="no">bgravendeel@proton.me</email>
       <years>2024</years>
     </credit>
 
@@ -23,21 +23,21 @@
     <desc>Learn how to create a Package Manager configuration in Apx GUI.</desc>
   </info>
 
-  <title>Create a Package manager</title>
+  <title>Create a Package Manager</title>
 
-  <p>The below steps demonstrates on how to create a package manager using <gui>Apx GUI</gui>:</p>
+  <p>The following steps explain how to create a package manager using <gui>Apx GUI</gui>:</p>
   <list>
-    <item><p>Click on the <gui>+</gui> (Plus) button in the top left corner.</p></item>
-    <item><p>Click on <gui>New Package Manager</gui> button.</p></item>
-    <item><p>Enter the name and commands (Optionally, toggle the need sudo option).</p></item>
-    <item><p>Click on <gui>Create</gui> button, to add the Package manager to <gui>Apx</gui>.</p></item>
+    <item><p>Click on the <gui>+</gui> button in the top left corner.</p></item>
+    <item><p>Click on the <gui>New Package Manager</gui> button.</p></item>
+    <item><p>Enter the name and commands (optionally, toggle the <gui>Need Sudo</gui> option).</p></item>
+    <item><p>Click on the <gui>Create</gui> button to add the package manager to <gui>Apx</gui>.</p></item>
   </list>
 
   <figure>
-        <title>Screenshot of Apx GUI Package Manager Creation Panel</title>
+        <title>Apx GUI Package Manager Creation Panel</title>
         <media type="image" its:translate="no" src="media/apx-gui-create-pkgmanagers.png"/>
   </figure>
 
-    <p>The created Package Manager can be removed by navigating to it and then pressing on the <gui>Delete Package Manager</gui> button.</p>
+    <p>The created Package Manager can be removed by navigating to it and pressing on the <gui>Delete Package Manager</gui> button.</p>
 
 </page>

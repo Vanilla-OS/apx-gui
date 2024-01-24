@@ -12,7 +12,7 @@
     </credit>
     <credit type="editor copyright">
       <name>Bart Gravendeel</name>
-      <email its:translate="no">monstertux@proton.me</email>
+      <email its:translate="no">bgravendeel@proton.me</email>
       <years>2024</years>
     </credit>
 
@@ -25,19 +25,19 @@
 
   <title>Introduction to Stacks</title>
 
-  <p>A stack is a set of instructions that can configure an environment based on any Linux distribution,
-   adding packages and settings at the user's discretion. At any time, the user can create a new stack 
+  <p>A stack is a set of instructions that can configure a container based on any Linux distribution,
+   allowing you to add packages and modify settings. You can create a new stack 
    by defining a base Linux distribution, such as Arch Linux, and an optional list of packages. 
-   With this stack, the user can start one or more new subsystems based on it.</p>
+   With this stack, you can create one or more new subsystems based on it.</p>
 
   <p>Stacks are shareable and restoreable, so you can easily share them with your team. Vanilla OS 
   already has a set of preconfigured stacks to access all the major Linux distributions.</p>
 
-  <p>can create stacks for each use case, for example, one with all the tools and libraries
-   useful for development in various domains like 3D applications, music production, programming, etc.</p>
+  <p>You can create stacks for each use case, for example, one with all the tools and libraries
+   useful for development in various domains like 3D applications, music production, and programming.</p>
 
   <figure>
-        <title>Screenshot of Stacks in Apx GUI</title>
+        <title>Stacks in Apx GUI</title>
         <media type="image" its:translate="no" src="media/apx-gui-builtin-stacks.png"/>
   </figure>
 

@@ -12,7 +12,7 @@
     </credit>
     <credit type="editor copyright">
       <name>Bart Gravendeel</name>
-      <email its:translate="no">monstertux@proton.me</email>
+      <email its:translate="no">bgravendeel@proton.me</email>
       <years>2024</years>
     </credit>
 
@@ -25,18 +25,18 @@
 
   <title>Create a Stack</title>
 
-  <p>The below steps demonstrates on how to create a stack using <gui>Apx GUI</gui>:</p>
+  <p>The following steps explain how to create a stack using <gui>Apx GUI</gui>:</p>
   <list>
-    <item><p>Click on the <gui>+</gui> (Plus) button in the top left corner.</p></item>
-    <item><p>Click on <gui>New Stack</gui> button.</p></item>
+    <item><p>Click on the <gui>+</gui> button in the top left corner.</p></item>
+    <item><p>Click on the <gui>New Stack</gui> button.</p></item>
     <item><p>Enter a name (with no spaces) and specify the base image URL and tag.</p></item>
     <item><p>Select a Package Manager from the available list.</p></item>
     <item><p>Optionally, add packages to be preinstalled in Apx GUI.</p></item>
-    <item><p>Click on <gui>Create</gui> button, to create the Stack.</p></item>
+    <item><p>Click on the <gui>Create</gui> button to create the Stack.</p></item>
   </list>
 
   <figure>
-        <title>Screenshot of Apx GUI Stack Creation</title>
+        <title>Apx GUI Stack Creation</title>
         <media type="image" its:translate="no" src="media/apx-gui-create-stacks.png"/>
   </figure>
 

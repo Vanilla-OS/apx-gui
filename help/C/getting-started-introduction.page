@@ -12,7 +12,7 @@
     </credit>
     <credit type="editor copyright">
       <name>Bart Gravendeel</name>
-      <email its:translate="no">monstertux@proton.me</email>
+      <email its:translate="no">bgravendeel@proton.me</email>
       <years>2024</years>
     </credit>
 
@@ -27,13 +27,13 @@
 
   <title>Introduction</title>
 
-  <p>Apx GUI is frontend in GTK4 and Libadwaita for <gui>apx</gui> package.</p>
+  <p>Apx GUI is the front-end for the <gui>Apx</gui> command line tool.</p>
 
-  <p>It is designed and created for developers who require working with multiple subsystems
-   simultaneously without relying on the command line or remembering various flags it supports.</p>
+  <p>It is designed and created for developers who require working with isolated subsystems,
+   without relying on the command line or remembering the flags it supports.</p>
 
   <figure>
-        <title>Screenshot of Apx GUI</title>
+        <title>Apx GUI</title>
         <media type="image" its:translate="no" src="media/apx-gui.png"/>
   </figure>
 
@@ -44,13 +44,13 @@
   <list>
     <item><p><gui>Effortless Subsystem Management</gui>: Developers can easily create and manage subsystems.
     This feature simplifies the process of organizing and managing multiple containers.</p></item>
-    <item><p><gui>Define and modify stacks easily</gui>: Stacks are a collection of software components and dependencies.
+    <item><p><gui>Easily Define and Modify Stacks</gui>: Stacks are a collection of software components and dependencies.
     Apx GUI introduces a streamlined approach for defining and modifying stacks with ease.</p></item>
-    <item><p><gui>Add package managers intuitively</gui>: Adding and managing package managers with your preferred 
-    commands becomes intuitive with Apx GUI.</p></item>
+    <item><p><gui>Intuitively Add Package Managers</gui>: Adding and managing package managers
+    becomes intuitive with Apx GUI.</p></item>
   </list>
 
-<p>Apx GUI eliminates the complexities of command line interaction, making development
+<p>Apx GUI eliminates the complexities of the command line, making development
  with <gui>Apx</gui> more accessible and efficient.</p>
 
 </page>
