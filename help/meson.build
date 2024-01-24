@@ -12,6 +12,7 @@ pages = [
 
 media = [
   'media/apx-gui.png',
+  'media/apx-gui-subsystems.png',
   'media/apx-gui-builtin-pkgmanagers.png',
   'media/apx-gui-builtin-stacks.png',
   'media/apx-gui-create-pkgmanagers.png',
