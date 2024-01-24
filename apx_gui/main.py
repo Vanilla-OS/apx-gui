@@ -1,6 +1,6 @@
 # main.py
 #
-# Copyright 2023 Mirko Brombin
+# Copyright 2024 Mirko Brombin
 #
 # This program is free software: you can redistribute it and/or modify
 # it under the terms of the GNU General Public License as published by
@@ -18,6 +18,7 @@
 # SPDX-License-Identifier: GPL-3.0-or-later
 
 import sys
+import subprocess
 import gi
 import logging
 from gettext import gettext as _
@@ -40,19 +41,16 @@ class ApxGUIApplication(Adw.Application):
     def __init__(self):
         super().__init__(
             application_id="org.vanillaos.ApxGUI",
-            flags=Gio.ApplicationFlags.DEFAULT_FLAGS,
+            flags=Gio.ApplicationFlags.FLAGS_NONE,
         )
 
         self.__window: ApxGUIWindow = None
 
         self.create_action("quit", lambda *_: self.quit(), ["<primary>q"])
-        self.create_action(
-            "new_subsystem", self.on_new_subsystem_action, ["<primary>n"]
-        )
+        self.create_action("new_subsystem", self.on_new_subsystem_action, ["<primary>n"])
         self.create_action("new_stack", self.on_new_stack_action, ["<primary>s"])
-        self.create_action(
-            "new_pkgmanager", self.on_new_pkgmanager_action, ["<primary>p"]
-        )
+        self.create_action("new_pkgmanager", self.on_new_pkgmanager_action, ["<primary>p"])
+        self.create_action('help', self.help, ['F1'])
         self.create_action("about", self.on_about_action)
 
     def do_activate(self) -> None:
@@ -80,7 +78,7 @@ class ApxGUIApplication(Adw.Application):
             version="1.0.2",
             developers=["Mirko Brombin https://github.com/mirkobrombin"],
             translator_credits=_("translator_credits"),
-            copyright="© 2023 Mirko Brombin and Contributors",
+            copyright="© 2024 Mirko Brombin and Contributors",
             license_type=("gpl-3-0-only"),
         )
         about.add_credit_section(
@@ -105,6 +103,9 @@ class ApxGUIApplication(Adw.Application):
 
     def on_new_pkgmanager_action(self, *args) -> None:
         self.__window.new_pkgmanager()
+    
+    def help(self, widget, callback=None):
+        subprocess.Popen(["yelp", "help:apx_gui"], start_new_session=True)
 
     def create_action(
         self, name: Text, callback: callable, shortcuts: list[str] = None

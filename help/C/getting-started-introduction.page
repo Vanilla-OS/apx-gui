@@ -1,0 +1,56 @@
+<page xmlns="http://projectmallard.org/1.0/"
+      xmlns:its="http://www.w3.org/2005/11/its"
+      type="topic" style="task" version="1.1"
+      id="getting-started-introduction">
+  <info>
+    <revision version="1.0" date="2024-01-24" status="done"/>
+
+    <credit type="author copyright">
+      <name>K.B.Dharun Krishna</name>
+      <email its:translate="no">mail@kbdharun.dev</email>
+      <years>2024</years>
+    </credit>
+    <credit type="editor copyright">
+      <name>Bart Gravendeel</name>
+      <email its:translate="no">monstertux@proton.me</email>
+      <years>2024</years>
+    </credit>
+
+    <link type="guide" xref="index#getting-started"/>
+    <link type="seealso" xref="pkgmanagers-introduction"/>
+    <link type="seealso" xref="stacks-introduction"/>
+    <link type="seealso" xref="subsystems-introduction"/>
+
+    <keywords>apx, containers, vanilla, vanillaos</keywords>
+    <desc>Get to know about Apx GUI.</desc>
+  </info>
+
+  <title>Introduction</title>
+
+  <p>Apx GUI is frontend in GTK4 and Libadwaita for <gui>apx</gui> package.</p>
+
+  <p>It is designed and created for developers who require working with multiple subsystems
+   simultaneously without relying on the command line or remembering various flags it supports.</p>
+
+  <figure>
+        <title>Screenshot of Apx GUI</title>
+        <media type="image" its:translate="no" src="media/apx-gui.png"/>
+  </figure>
+
+
+
+<p>Features:</p>
+
+  <list>
+    <item><p><gui>Effortless Subsystem Management</gui>: Developers can easily create and manage subsystems.
+    This feature simplifies the process of organizing and managing multiple containers.</p></item>
+    <item><p><gui>Define and modify stacks easily</gui>: Stacks are a collection of software components and dependencies.
+    Apx GUI introduces a streamlined approach for defining and modifying stacks with ease.</p></item>
+    <item><p><gui>Add package managers intuitively</gui>: Adding and managing package managers with your preferred 
+    commands becomes intuitive with Apx GUI.</p></item>
+  </list>
+
+<p>Apx GUI eliminates the complexities of command line interaction, making development
+ with <gui>Apx</gui> more accessible and efficient.</p>
+
+</page>

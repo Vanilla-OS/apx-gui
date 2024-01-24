@@ -1,0 +1,44 @@
+<page xmlns="http://projectmallard.org/1.0/"
+      xmlns:its="http://www.w3.org/2005/11/its"
+      type="topic" style="task" version="1.1"
+      id="stacks-introduction">
+  <info>
+    <revision version="1.0" date="2024-01-24" status="done"/>
+
+    <credit type="author copyright">
+      <name>K.B.Dharun Krishna</name>
+      <email its:translate="no">mail@kbdharun.dev</email>
+      <years>2024</years>
+    </credit>
+    <credit type="editor copyright">
+      <name>Bart Gravendeel</name>
+      <email its:translate="no">monstertux@proton.me</email>
+      <years>2024</years>
+    </credit>
+
+    <link type="guide" xref="index#getting-started"/>
+    <link type="seealso" xref="stacks-creation"/>
+
+    <keywords>apx, containers, vanilla, vanillaos</keywords>
+    <desc>Learn about Stacks in Apx GUI.</desc>
+  </info>
+
+  <title>Introduction to Stacks</title>
+
+  <p>A stack is a set of instructions that can configure an environment based on any Linux distribution,
+   adding packages and settings at the user's discretion. At any time, the user can create a new stack 
+   by defining a base Linux distribution, such as Arch Linux, and an optional list of packages. 
+   With this stack, the user can start one or more new subsystems based on it.</p>
+
+  <p>Stacks are shareable and restoreable, so you can easily share them with your team. Vanilla OS 
+  already has a set of preconfigured stacks to access all the major Linux distributions.</p>
+
+  <p>can create stacks for each use case, for example, one with all the tools and libraries
+   useful for development in various domains like 3D applications, music production, programming, etc.</p>
+
+  <figure>
+        <title>Screenshot of Stacks in Apx GUI</title>
+        <media type="image" its:translate="no" src="media/apx-gui-builtin-stacks.png"/>
+  </figure>
+
+</page>

@@ -1,0 +1,43 @@
+<page xmlns="http://projectmallard.org/1.0/"
+      xmlns:its="http://www.w3.org/2005/11/its"
+      type="topic" style="task" version="1.1"
+      id="pkgmanagers-creation">
+  <info>
+    <revision version="1.0" date="2024-01-24" status="done"/>
+
+    <credit type="author copyright">
+      <name>K.B.Dharun Krishna</name>
+      <email its:translate="no">mail@kbdharun.dev</email>
+      <years>2024</years>
+    </credit>
+    <credit type="editor copyright">
+      <name>Bart Gravendeel</name>
+      <email its:translate="no">monstertux@proton.me</email>
+      <years>2024</years>
+    </credit>
+
+    <link type="guide" xref="index#pkgmanagers"/>
+    <link type="seealso" xref="pkgmanagers-introduction"/>
+
+    <keywords>apx, containers, vanilla, vanillaos</keywords>
+    <desc>Learn how to create a Package Manager configuration in Apx GUI.</desc>
+  </info>
+
+  <title>Create a Package manager</title>
+
+  <p>The below steps demonstrates on how to create a package manager using <gui>Apx GUI</gui>:</p>
+  <list>
+    <item><p>Click on the <gui>+</gui> (Plus) button in the top left corner.</p></item>
+    <item><p>Click on <gui>New Package Manager</gui> button.</p></item>
+    <item><p>Enter the name and commands (Optionally, toggle the need sudo option).</p></item>
+    <item><p>Click on <gui>Create</gui> button, to add the Package manager to <gui>Apx</gui>.</p></item>
+  </list>
+
+  <figure>
+        <title>Screenshot of Apx GUI Package Manager Creation Panel</title>
+        <media type="image" its:translate="no" src="media/apx-gui-create-pkgmanagers.png"/>
+  </figure>
+
+    <p>The created Package Manager can be removed by navigating to it and then pressing on the <gui>Delete Package Manager</gui> button.</p>
+
+</page>

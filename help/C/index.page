@@ -1,0 +1,54 @@
+<page xmlns="http://projectmallard.org/1.0/"
+      xmlns:its="http://www.w3.org/2005/11/its"
+      type="guide" style="2column"
+      id="index">
+
+  <info>
+    <title type='link' role="trail">Apx GUI</title>
+    <title type="link">Apx GUI</title>
+    <title type="text">Apx GUI</title>
+    <revision version="1.0" date="2024-01-24" status="draft"/>
+    <revision pkgversion="1.0.2" date="2024-01-24" status="review"/>
+
+    <credit type="author copyright">
+      <name>K.B.Dharun Krishna</name>
+      <email its:translate="no">mail@kbdharun.dev</email>
+      <years>2024</years>
+    </credit>
+    <credit type="editor copyright">
+      <name>Bart Gravendeel</name>
+      <email its:translate="no">monstertux@proton.me</email>
+      <years>2024</years>
+    </credit>
+
+    <include href="legal.xml" xmlns="http://www.w3.org/2001/XInclude"/>
+
+    <desc>Guide on how to use <app>Apx GUI</app>.</desc>
+  </info>
+
+  <title>
+    <media type="image" its:translate="no" mime="image/svg+xml" height="48px" width="48px" src="media/org.vanillaos.ApxGUI.svg" />
+    Apx GUI
+  </title>
+
+  <section id="getting-started">
+    <title>Getting Started</title>
+    <links type="topic" style="2column"/>
+  </section>
+
+  <section id="subsystems">
+    <title>Working with Subsystems</title>
+    <links type="topic" style="2column"/>
+  </section>
+
+  <section id="stacks">
+    <title>Working with Stacks</title>
+    <links type="topic" style="2column"/>
+  </section>
+
+  <section id="pkgmanagers">
+    <title>Working with Package Managers</title>
+    <links type="topic" style="2column"/>
+  </section>  
+
+</page>
