@@ -141,8 +141,8 @@
                                 </child>
                                 <child>
                                     <object class="AdwStatusPage" id="status_creating">
-                                        <property name="title" translatable="yes">Creating Package Manager…</property>
-                                        <property name="description" translatable="yes">Please wait while the package manager is being created.</property>
+                                        <property name="title" translatable="yes">Creating Package Manager</property>
+                                        <property name="description" translatable="yes">Please wait while the package manager is being created</property>
                                         <property name="valign">center</property>
                                     </object>
                                 </child>
@@ -167,7 +167,7 @@
                                     <object class="AdwStatusPage" id="status_error">
                                         <property name="icon-name">dialog-error-symbolic</property>
                                         <property name="title" translatable="yes">An Error Occurred</property>
-                                        <property name="description" translatable="yes">An error occurred while creating the package manager.</property>
+                                        <property name="description" translatable="yes">An error occurred while creating the package manager</property>
                                         <property name="valign">center</property>
                                         <child>
                                             <object class="GtkButton" id="btn_close">
