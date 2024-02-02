@@ -10,7 +10,7 @@
         <child>
           <object class="GtkLabel">
             <property name="visible">True</property>
-            <property name="label" translatable="yes">This package manager is built-in and cannot be edited or deleted.</property>
+            <property name="label" translatable="yes">This package manager is built-in and cannot be edited or deleted</property>
             <property name="wrap">True</property>
             <property name="wrap-mode">word</property>
           </object>

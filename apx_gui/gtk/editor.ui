@@ -10,7 +10,7 @@
                 <object class="AdwStatusPage">
                 <property name="icon-name">org.vanillaos.ApxGUI</property>
                 <property name="title" translatable="yes">Start or Open a Subsystem</property>
-                <property name="description" translatable="yes">Start by opening a subsystem, stack or package manager on the left.</property>
+                <property name="description" translatable="yes">Start by opening a subsystem, stack or package manager on the left</property>
                 </object>
             </property>
             </object>
