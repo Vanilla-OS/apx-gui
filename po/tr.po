@@ -2,13 +2,14 @@
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the apx_gui package.
 # Mustafa <mustafa.cgdm1@gmail.com>, 2024.
+# Hindu Papanreu <hintlijapon@gmail.com>, 2024.
 msgid ""
 msgstr ""
 "Project-Id-Version: apx_gui\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2024-01-17 09:36+0530\n"
-"PO-Revision-Date: 2024-01-25 16:01+0000\n"
-"Last-Translator: Mustafa <mustafa.cgdm1@gmail.com>\n"
+"PO-Revision-Date: 2024-01-31 06:01+0000\n"
+"Last-Translator: Hindu Papanreu <hintlijapon@gmail.com>\n"
 "Language-Team: Turkish <https://hosted.weblate.org/projects/vanilla-os/"
 "apx-gui/tr/>\n"
 "Language: tr\n"
@@ -20,11 +21,11 @@ msgstr ""
 
 #: data/org.vanillaos.ApxGUI.desktop.in:3
 msgid "Apx"
-msgstr ""
+msgstr "Apx"
 
 #: data/org.vanillaos.ApxGUI.appdata.xml.in:7
 msgid "A frontend in GTK 4 and Libadwaita for Apx."
-msgstr ""
+msgstr "Apx için GTK 4 ve Libadwaita'da bir önyüz."
 
 #: apx_gui/gtk/create-pkgmanager.ui:6 apx_gui/gtk/window-main.ui:71
 msgid "New Package Manager"
@@ -60,11 +61,11 @@ msgstr "Komutlar"
 
 #: apx_gui/gtk/create-pkgmanager.ui:73 apx_gui/gtk/tab-pkgmanager.ui:57
 msgid "Autoremove"
-msgstr ""
+msgstr "Otomatiksil"
 
 #: apx_gui/gtk/create-pkgmanager.ui:78 apx_gui/gtk/tab-pkgmanager.ui:63
 msgid "Clean"
-msgstr ""
+msgstr "Temizle"
 
 #: apx_gui/gtk/create-pkgmanager.ui:83 apx_gui/gtk/tab-pkgmanager.ui:69
 msgid "Install"
@@ -72,11 +73,11 @@ msgstr "Kur"
 
 #: apx_gui/gtk/create-pkgmanager.ui:88 apx_gui/gtk/tab-pkgmanager.ui:75
 msgid "List"
-msgstr ""
+msgstr "Liste"
 
 #: apx_gui/gtk/create-pkgmanager.ui:93 apx_gui/gtk/tab-pkgmanager.ui:81
 msgid "Purge"
-msgstr ""
+msgstr "Arındır"
 
 #: apx_gui/gtk/create-pkgmanager.ui:98 apx_gui/gtk/tab-pkgmanager.ui:87
 msgid "Remove"
@@ -92,27 +93,27 @@ msgstr "Göster"
 
 #: apx_gui/gtk/create-pkgmanager.ui:113 apx_gui/gtk/tab-pkgmanager.ui:105
 msgid "Update"
-msgstr ""
+msgstr "Güncelle"
 
 #: apx_gui/gtk/create-pkgmanager.ui:118 apx_gui/gtk/tab-pkgmanager.ui:111
 msgid "Upgrade"
-msgstr ""
+msgstr "Yükselt"
 
 #: apx_gui/gtk/create-pkgmanager.ui:144
 msgid "Creating Package Manager…"
-msgstr "Paket Yöneticisi oluşturuluyor…"
+msgstr "Paket Yöneticisi Oluşturuluyor…"
 
 #: apx_gui/gtk/create-pkgmanager.ui:145
 msgid "Please wait while the package manager is being created."
-msgstr ""
+msgstr "Paket yöneticisi oluşturulurken lütfen bekleyin."
 
 #: apx_gui/gtk/create-pkgmanager.ui:169
 msgid "An Error Occurred"
-msgstr "Bir hata meydana geldi"
+msgstr "Bir Hata Oluştu"
 
 #: apx_gui/gtk/create-pkgmanager.ui:170
 msgid "An error occurred while creating the package manager."
-msgstr "Paket Yönecisi oluşturulurken bir hata meydana geldi."
+msgstr "Paket yöneticisi oluşturulurken bir hata oluştu."
 
 #: apx_gui/gtk/create-pkgmanager.ui:174 apx_gui/gtk/create-stack.ui:148
 #: apx_gui/gtk/create-subsystem.ui:108
@@ -121,11 +122,11 @@ msgstr "Kapat"
 
 #: apx_gui/gtk/create-stack.ui:6 apx_gui/gtk/window-main.ui:67
 msgid "New Stack"
-msgstr ""
+msgstr "Yeni Yığın"
 
 #: apx_gui/gtk/create-stack.ui:49 apx_gui/gtk/tab-stack.ui:27
 msgid "Base"
-msgstr ""
+msgstr "Taban"
 
 #: apx_gui/gtk/create-stack.ui:54 apx_gui/gtk/tab-stack.ui:38
 #: apx_gui/gtk/tab-subsystem.ui:37
@@ -134,7 +135,7 @@ msgstr "Paket Yöneticisi"
 
 #: apx_gui/gtk/create-stack.ui:80
 msgid "Add Package"
-msgstr "Paket ekle"
+msgstr "Paket Ekle"
 
 #: apx_gui/gtk/create-stack.ui:92
 msgid "New Package"
@@ -142,11 +143,11 @@ msgstr "Yeni Paket"
 
 #: apx_gui/gtk/create-stack.ui:119
 msgid "Please wait while the stack is being created."
-msgstr ""
+msgstr "Yığın oluşturulurken lütfen bekleyin."
 
 #: apx_gui/gtk/create-stack.ui:144
 msgid "An error occurred while creating the stack."
-msgstr ""
+msgstr "Yığın oluşturulurken bir hata oluştu."
 
 #: apx_gui/gtk/create-subsystem.ui:6 apx_gui/gtk/window-main.ui:63
 msgid "New Subsystem"
@@ -154,32 +155,33 @@ msgstr "Yeni Altsistem"
 
 #: apx_gui/gtk/create-subsystem.ui:49 apx_gui/gtk/tab-subsystem.ui:27
 msgid "Stack"
-msgstr ""
+msgstr "Yığın"
 
 #: apx_gui/gtk/create-subsystem.ui:78
 msgid "Creating Subsystem…"
-msgstr "Altsistem oluşturuluyor…"
+msgstr "Alt Sistem Oluşturuluyor…"
 
 #: apx_gui/gtk/create-subsystem.ui:79
 msgid "Please wait while the subsystem is being created."
-msgstr ""
+msgstr "Alt sistem oluşturulurken lütfen bekleyin."
 
 #: apx_gui/gtk/create-subsystem.ui:104
 msgid "An error occurred while creating the subsystem."
-msgstr ""
+msgstr "Alt sistem oluşturulurken bir hata oluştu."
 
 #: apx_gui/gtk/editor.ui:12
 msgid "Start or Open a Subsystem"
-msgstr ""
+msgstr "Bir Alt Sistemi Başlatın veya Açın"
 
 #: apx_gui/gtk/editor.ui:13
 msgid "Start by opening a subsystem, stack or package manager on the left."
 msgstr ""
+"Sol tarafta bir alt sistem, yığın veya paket yöneticisi açarak başlayın."
 
 #: apx_gui/gtk/help-overlay.ui:11
 msgctxt "shortcut window"
 msgid "General"
-msgstr ""
+msgstr "Genel"
 
 #: apx_gui/gtk/help-overlay.ui:14
 msgctxt "shortcut window"
@@ -194,17 +196,17 @@ msgstr "Çık"
 #: apx_gui/gtk/help-overlay.ui:26
 msgctxt "shortcut window"
 msgid "Create"
-msgstr "Yarat"
+msgstr "Oluştur"
 
 #: apx_gui/gtk/help-overlay.ui:29
 msgctxt "shortcut window"
 msgid "New Subsystem"
-msgstr "Yeni Altsistem"
+msgstr "Yeni Alt Sistem"
 
 #: apx_gui/gtk/help-overlay.ui:35
 msgctxt "shortcut window"
 msgid "New Stack"
-msgstr ""
+msgstr "Yeni Yığın"
 
 #: apx_gui/gtk/help-overlay.ui:41
 msgctxt "shortcut window"
@@ -213,68 +215,71 @@ msgstr "Yeni Paket Yöneticisi"
 
 #: apx_gui/gtk/tab-pkgmanager.ui:13
 msgid "This package manager is built-in and cannot be edited or deleted."
-msgstr ""
+msgstr "Bu paket yöneticisi yerleşiktir ve düzenlenemez veya silinemez."
 
 #: apx_gui/gtk/tab-pkgmanager.ui:42 apx_gui/gtk/tab-stack.ui:49
 msgid "Built-In"
-msgstr ""
+msgstr "Ön Tanımlı"
 
 #: apx_gui/gtk/tab-pkgmanager.ui:119 apx_gui/gtk/tab-stack.ui:71
 msgid "Destructive Actions"
-msgstr ""
+msgstr "Yıkıcı Eylemler"
 
 #: apx_gui/gtk/tab-pkgmanager.ui:122
 msgid "Delete Package Manager"
-msgstr ""
+msgstr "Paket Yöneticisini Sil"
 
 #: apx_gui/gtk/tab-stack.ui:13
 msgid "This stack is built-in and cannot be edited or deleted."
-msgstr ""
+msgstr "Bu yığın yerleşiktir ve düzenlenemez veya silinemez."
 
 #: apx_gui/gtk/tab-stack.ui:59
 msgid "Packages"
-msgstr ""
+msgstr "Paketler"
 
 #: apx_gui/gtk/tab-stack.ui:74
 msgid "Delete Stack"
-msgstr ""
+msgstr "Yığını Sil"
 
 #: apx_gui/gtk/tab-subsystem.ui:17
 msgid "Status"
-msgstr ""
+msgstr "Durum"
 
 #: apx_gui/gtk/tab-subsystem.ui:61
 msgid "Reset Subsystem"
-msgstr ""
+msgstr "Alt Sistemi Sıfırla"
 
 #: apx_gui/gtk/tab-subsystem.ui:76
 msgid "Delete Subsystem"
-msgstr ""
+msgstr "Alt Sistemi Sil"
 
 #: apx_gui/gtk/tab-subsystem.ui:114
 msgid "Restart Console"
-msgstr ""
+msgstr "Konsolu Tekrar Başlat"
 
 #: apx_gui/gtk/tab-subsystem.ui:125
 msgid "Toggle Console"
-msgstr ""
+msgstr "Konsolu Değiştir"
 
 #: apx_gui/gtk/window-main.ui:79
 msgid "_Keyboard Shortcuts"
-msgstr ""
+msgstr "_Klavye Kısayolları"
 
 #: apx_gui/gtk/window-main.ui:83
 msgid "_About Apx GUI"
-msgstr ""
+msgstr "_Apx Arayüzü Hakkında"
 
 #: apx_gui/main.py:82
 msgid "translator_credits"
 msgstr ""
+"Çevirmenler: Çeviri için Hakkında bölümünde Katkıda Bulunanlarda yer almak "
+"için bilgilerinizi şu formatta girin İsim <e-posta> veya İsim Web Adresi ("
+"örneğin Abc https://siteismi.com)­"
 
 #: apx_gui/main.py:87
 msgid "Contributors"
-msgstr ""
+msgstr "Katkıda Bulunanlar"
 
 #: apx_gui/main.py:93
 msgid "Tools"
-msgstr ""
+msgstr "Araçlar"
