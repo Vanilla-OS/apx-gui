@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: apx_gui\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2024-01-17 09:36+0530\n"
-"PO-Revision-Date: 2024-01-31 16:42+0000\n"
+"PO-Revision-Date: 2024-02-25 09:41+0000\n"
 "Last-Translator: Philip Goto <philip.goto@gmail.com>\n"
 "Language-Team: Dutch <https://hosted.weblate.org/projects/vanilla-os/apx-gui/"
 "nl/>\n"
@@ -18,7 +18,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 5.4-dev\n"
+"X-Generator: Weblate 5.5-dev\n"
 
 #: data/org.vanillaos.ApxGUI.desktop.in:3
 msgid "Apx"
@@ -30,7 +30,7 @@ msgstr "Een front-end voor Apx ontwikkeld met GTK 4 en libAdwaita."
 
 #: apx_gui/gtk/create-pkgmanager.ui:6 apx_gui/gtk/window-main.ui:71
 msgid "New Package Manager"
-msgstr "Nieuw pakketbeheer"
+msgstr "Nieuwe pakket­beheerder"
 
 #: apx_gui/gtk/create-pkgmanager.ui:23 apx_gui/gtk/create-stack.ui:23
 #: apx_gui/gtk/create-subsystem.ui:23
@@ -40,7 +40,7 @@ msgstr "Annuleren"
 #: apx_gui/gtk/create-pkgmanager.ui:28 apx_gui/gtk/create-stack.ui:28
 #: apx_gui/gtk/create-subsystem.ui:28
 msgid "Create"
-msgstr "Aanmaken"
+msgstr "Aan­maken"
 
 #: apx_gui/gtk/create-pkgmanager.ui:41 apx_gui/gtk/tab-pkgmanager.ui:24
 #: apx_gui/gtk/tab-stack.ui:24
@@ -54,7 +54,7 @@ msgstr "Naam"
 
 #: apx_gui/gtk/create-pkgmanager.ui:49 apx_gui/gtk/tab-pkgmanager.ui:27
 msgid "Need Sudo"
-msgstr "Root-rechten vereist"
+msgstr "Root­rechten vereist"
 
 #: apx_gui/gtk/create-pkgmanager.ui:70
 msgid "Commands"
@@ -70,7 +70,7 @@ msgstr "Opschonen (clean)"
 
 #: apx_gui/gtk/create-pkgmanager.ui:83 apx_gui/gtk/tab-pkgmanager.ui:69
 msgid "Install"
-msgstr "Installeren"
+msgstr "Installeren (install)"
 
 #: apx_gui/gtk/create-pkgmanager.ui:88 apx_gui/gtk/tab-pkgmanager.ui:75
 msgid "List"
@@ -78,7 +78,7 @@ msgstr "Opsommen (list)"
 
 #: apx_gui/gtk/create-pkgmanager.ui:93 apx_gui/gtk/tab-pkgmanager.ui:81
 msgid "Purge"
-msgstr "Verwijderen inclusief configuratiebestanden (purge)"
+msgstr "Verwijderen inclusief configuratie­bestanden (purge)"
 
 #: apx_gui/gtk/create-pkgmanager.ui:98 apx_gui/gtk/tab-pkgmanager.ui:87
 msgid "Remove"
@@ -98,15 +98,15 @@ msgstr "Verversen (update)"
 
 #: apx_gui/gtk/create-pkgmanager.ui:118 apx_gui/gtk/tab-pkgmanager.ui:111
 msgid "Upgrade"
-msgstr "Bijwerken (upgrade)"
+msgstr "Bij­werken (upgrade)"
 
 #: apx_gui/gtk/create-pkgmanager.ui:144
 msgid "Creating Package Manager…"
-msgstr "Pakketbeheer aanmaken…"
+msgstr "Pakket­beheerder aan­maken…"
 
 #: apx_gui/gtk/create-pkgmanager.ui:145
 msgid "Please wait while the package manager is being created."
-msgstr "Wacht even terwijl het pakketbeheer wordt aangemaakt."
+msgstr "Wacht even terwijl de pakket­beheerder wordt aan­gemaakt."
 
 #: apx_gui/gtk/create-pkgmanager.ui:169
 msgid "An Error Occurred"
@@ -114,7 +114,7 @@ msgstr "Er is een fout opgetreden"
 
 #: apx_gui/gtk/create-pkgmanager.ui:170
 msgid "An error occurred while creating the package manager."
-msgstr "Er is een fout opgetreden bij het aanmaken van het pakketbeheer."
+msgstr "Er is een fout opgetreden bij het aan­maken van de pakket­beheerder."
 
 #: apx_gui/gtk/create-pkgmanager.ui:174 apx_gui/gtk/create-stack.ui:148
 #: apx_gui/gtk/create-subsystem.ui:108
@@ -132,11 +132,11 @@ msgstr "Basis"
 #: apx_gui/gtk/create-stack.ui:54 apx_gui/gtk/tab-stack.ui:38
 #: apx_gui/gtk/tab-subsystem.ui:37
 msgid "Package Manager"
-msgstr "Pakketbeheer"
+msgstr "Pakket­beheerder"
 
 #: apx_gui/gtk/create-stack.ui:80
 msgid "Add Package"
-msgstr "Pakket toevoegen"
+msgstr "Pakket toe­voegen"
 
 #: apx_gui/gtk/create-stack.ui:92
 msgid "New Package"
@@ -144,15 +144,15 @@ msgstr "Nieuw pakket"
 
 #: apx_gui/gtk/create-stack.ui:119
 msgid "Please wait while the stack is being created."
-msgstr "Wacht even terwijl de stack wordt aangemaakt."
+msgstr "Wacht even terwijl de stack wordt aan­gemaakt."
 
 #: apx_gui/gtk/create-stack.ui:144
 msgid "An error occurred while creating the stack."
-msgstr "Er is iets misgegaan bij het aanmaken van de stack."
+msgstr "Er is iets mis­gegaan bij het aan­maken van de stack."
 
 #: apx_gui/gtk/create-subsystem.ui:6 apx_gui/gtk/window-main.ui:63
 msgid "New Subsystem"
-msgstr "Nieuw subsysteem"
+msgstr "Nieuw sub­systeem"
 
 #: apx_gui/gtk/create-subsystem.ui:49 apx_gui/gtk/tab-subsystem.ui:27
 msgid "Stack"
@@ -160,25 +160,25 @@ msgstr "Stack"
 
 #: apx_gui/gtk/create-subsystem.ui:78
 msgid "Creating Subsystem…"
-msgstr "Subsysteem aanmaken…"
+msgstr "Sub­systeem aan­maken…"
 
 #: apx_gui/gtk/create-subsystem.ui:79
 msgid "Please wait while the subsystem is being created."
-msgstr "Wacht even terwijl het subsysteem wordt aangemaakt."
+msgstr "Wacht even terwijl het sub­systeem wordt aan­gemaakt."
 
 #: apx_gui/gtk/create-subsystem.ui:104
 msgid "An error occurred while creating the subsystem."
-msgstr "Er is een fout opgetreden bij het aanmaken van het subsysteem."
+msgstr "Er is een fout opgetreden bij het aan­maken van het sub­systeem."
 
 #: apx_gui/gtk/editor.ui:12
 msgid "Start or Open a Subsystem"
-msgstr "Subsysteem starten of openen"
+msgstr "Sub­systeem starten of openen"
 
 #: apx_gui/gtk/editor.ui:13
 msgid "Start by opening a subsystem, stack or package manager on the left."
 msgstr ""
-"Begin met het openen van een subsysteem, stack of pakketbeheer aan de "
-"linkerzijde."
+"Begin met het openen van een sub­systeem, stack of pakket­beheerder aan de "
+"linker­zijde."
 
 #: apx_gui/gtk/help-overlay.ui:11
 msgctxt "shortcut window"
@@ -198,12 +198,12 @@ msgstr "Afsluiten"
 #: apx_gui/gtk/help-overlay.ui:26
 msgctxt "shortcut window"
 msgid "Create"
-msgstr "Aanmaken"
+msgstr "Aan­maken"
 
 #: apx_gui/gtk/help-overlay.ui:29
 msgctxt "shortcut window"
 msgid "New Subsystem"
-msgstr "Nieuw Subsysteem"
+msgstr "Nieuw Sub­systeem"
 
 #: apx_gui/gtk/help-overlay.ui:35
 msgctxt "shortcut window"
@@ -213,12 +213,12 @@ msgstr "Nieuwe stack"
 #: apx_gui/gtk/help-overlay.ui:41
 msgctxt "shortcut window"
 msgid "New Package Manager"
-msgstr "Nieuwe Pakketbeheerder"
+msgstr "Nieuwe pakket­beheerder"
 
 #: apx_gui/gtk/tab-pkgmanager.ui:13
 msgid "This package manager is built-in and cannot be edited or deleted."
 msgstr ""
-"Dit pakketbeheer is ingebouwd en kan niet worden bewerkt of verwijderd."
+"Deze pakket­beheerder is ingebouwd en kan niet worden bewerkt of verwijderd."
 
 #: apx_gui/gtk/tab-pkgmanager.ui:42 apx_gui/gtk/tab-stack.ui:49
 msgid "Built-In"
@@ -230,7 +230,7 @@ msgstr "Destructieve acties"
 
 #: apx_gui/gtk/tab-pkgmanager.ui:122
 msgid "Delete Package Manager"
-msgstr "Pakketbeheer verwijderen"
+msgstr "Pakket­beheerder verwijderen"
 
 #: apx_gui/gtk/tab-stack.ui:13
 msgid "This stack is built-in and cannot be edited or deleted."
@@ -250,11 +250,11 @@ msgstr "Status"
 
 #: apx_gui/gtk/tab-subsystem.ui:61
 msgid "Reset Subsystem"
-msgstr "Subsysteem resetten"
+msgstr "Sub­systeem resetten"
 
 #: apx_gui/gtk/tab-subsystem.ui:76
 msgid "Delete Subsystem"
-msgstr "Subsysteem verwijderen"
+msgstr "Sub­systeem verwijderen"
 
 #: apx_gui/gtk/tab-subsystem.ui:114
 msgid "Restart Console"
@@ -266,15 +266,15 @@ msgstr "Console omschakelen"
 
 #: apx_gui/gtk/window-main.ui:79
 msgid "_Keyboard Shortcuts"
-msgstr "Sneltoetsen (_K)"
+msgstr "_Snel­toetsen"
 
 #: apx_gui/gtk/window-main.ui:83
 msgid "_About Apx GUI"
-msgstr "Over Apx GUI (_A)"
+msgstr "_Over Apx GUI"
 
 #: apx_gui/main.py:82
 msgid "translator_credits"
-msgstr "Philip Goto https://philipgoto.nl"
+msgstr "Philip Goto https://philipgoto.nl/"
 
 #: apx_gui/main.py:87
 msgid "Contributors"
@@ -282,7 +282,7 @@ msgstr "Met bijdragen van"
 
 #: apx_gui/main.py:93
 msgid "Tools"
-msgstr "Gereedschap"
+msgstr "Gereed­schap"
 
 #~ msgid "Enter a console in this subsystem's environment."
 #~ msgstr "Treed een console binnen in de omgeving van dit subsysteem."
