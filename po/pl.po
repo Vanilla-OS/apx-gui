@@ -2,26 +2,27 @@
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the apx_gui package.
 # Eryk Michalak <gnu.ewm@protonmail.com>, 2023.
-# "K.B.Dharun Krishna" <kbdharunkrishna@gmail.com>, 2023.
+# "K.B.Dharun Krishna" <kbdharunkrishna@gmail.com>, 2023, 2024.
 # JaMajkel <kozlowski.michal87@gmail.com>, 2023.
 # Triss03 <pr0trik520@gmail.com>, 2023.
 # Tomasz Dyńka <gramyteraz12@gmail.com>, 2023.
+# Marek <uroda.mar@gmail.com>, 2024.
 msgid ""
 msgstr ""
 "Project-Id-Version: apx_gui\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2024-01-17 09:36+0530\n"
-"PO-Revision-Date: 2023-11-30 23:02+0000\n"
-"Last-Translator: Tomasz Dyńka <gramyteraz12@gmail.com>\n"
-"Language-Team: Polish <https://hosted.weblate.org/projects/vanilla-os/apx-"
-"gui/pl/>\n"
+"PO-Revision-Date: 2024-02-25 12:44+0000\n"
+"Last-Translator: \"K.B.Dharun Krishna\" <kbdharunkrishna@gmail.com>\n"
+"Language-Team: Polish <https://hosted.weblate.org/projects/vanilla-os/"
+"apx-gui/pl/>\n"
 "Language: pl\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=3; plural=n==1 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 "
-"|| n%100>=20) ? 1 : 2;\n"
-"X-Generator: Weblate 5.3-dev\n"
+"Plural-Forms: nplurals=3; plural=(n==1 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 "
+"|| n%100>=20) ? 1 : 2);\n"
+"X-Generator: Weblate 5.5-dev\n"
 
 #: data/org.vanillaos.ApxGUI.desktop.in:3
 msgid "Apx"
@@ -65,56 +66,55 @@ msgstr "Polecenia"
 
 #: apx_gui/gtk/create-pkgmanager.ui:73 apx_gui/gtk/tab-pkgmanager.ui:57
 msgid "Autoremove"
-msgstr "Automatyczne usuwanie"
+msgstr "Automatyczne usunięcie"
 
 #: apx_gui/gtk/create-pkgmanager.ui:78 apx_gui/gtk/tab-pkgmanager.ui:63
 msgid "Clean"
-msgstr "Czyszczenie"
+msgstr "Wyczyść"
 
 #: apx_gui/gtk/create-pkgmanager.ui:83 apx_gui/gtk/tab-pkgmanager.ui:69
-#, fuzzy
 msgid "Install"
-msgstr "Instalowanie..."
+msgstr "Zainstaluj"
 
 #: apx_gui/gtk/create-pkgmanager.ui:88 apx_gui/gtk/tab-pkgmanager.ui:75
 msgid "List"
-msgstr "Lista"
+msgstr "Wypisz"
 
 #: apx_gui/gtk/create-pkgmanager.ui:93 apx_gui/gtk/tab-pkgmanager.ui:81
 msgid "Purge"
-msgstr "Oczyszczenie"
+msgstr "Zniszcz"
 
 #: apx_gui/gtk/create-pkgmanager.ui:98 apx_gui/gtk/tab-pkgmanager.ui:87
 msgid "Remove"
-msgstr "Usuwanie"
+msgstr "Usuń"
 
 #: apx_gui/gtk/create-pkgmanager.ui:103 apx_gui/gtk/tab-pkgmanager.ui:93
 msgid "Search"
-msgstr "Wyszukiwanie"
+msgstr "Wyszukaj"
 
 #: apx_gui/gtk/create-pkgmanager.ui:108 apx_gui/gtk/tab-pkgmanager.ui:99
 msgid "Show"
-msgstr "Pokazywanie"
+msgstr "Pokaż"
 
 #: apx_gui/gtk/create-pkgmanager.ui:113 apx_gui/gtk/tab-pkgmanager.ui:105
 msgid "Update"
-msgstr "Odświeżanie listy"
+msgstr "Aktualizuj"
 
 #: apx_gui/gtk/create-pkgmanager.ui:118 apx_gui/gtk/tab-pkgmanager.ui:111
 msgid "Upgrade"
-msgstr "Aktualizacja"
+msgstr "Zaktualizuj"
 
 #: apx_gui/gtk/create-pkgmanager.ui:144
 msgid "Creating Package Manager…"
-msgstr "Tworzenie menedżera pakietów…"
+msgstr "Tworzenie Menedżera Pakietów…"
 
 #: apx_gui/gtk/create-pkgmanager.ui:145
 msgid "Please wait while the package manager is being created."
-msgstr "Prosimy czekać dopóki menedżer pakietów nie zostanie utworzony."
+msgstr "Proszę poczekaj aż menedżer pakietów nie zostanie utworzony."
 
 #: apx_gui/gtk/create-pkgmanager.ui:169
 msgid "An Error Occurred"
-msgstr "Wystąpił błąd"
+msgstr "Wystąpił Błąd"
 
 #: apx_gui/gtk/create-pkgmanager.ui:170
 msgid "An error occurred while creating the package manager."
@@ -127,7 +127,7 @@ msgstr "Zamknij"
 
 #: apx_gui/gtk/create-stack.ui:6 apx_gui/gtk/window-main.ui:67
 msgid "New Stack"
-msgstr "Nowy stos"
+msgstr "Nowy Stos"
 
 #: apx_gui/gtk/create-stack.ui:49 apx_gui/gtk/tab-stack.ui:27
 msgid "Base"
@@ -136,19 +136,19 @@ msgstr "Baza"
 #: apx_gui/gtk/create-stack.ui:54 apx_gui/gtk/tab-stack.ui:38
 #: apx_gui/gtk/tab-subsystem.ui:37
 msgid "Package Manager"
-msgstr "Menedżer pakietów"
+msgstr "Menedżer Pakietów"
 
 #: apx_gui/gtk/create-stack.ui:80
 msgid "Add Package"
-msgstr "Dodaj pakiet"
+msgstr "Dodaj Pakiet"
 
 #: apx_gui/gtk/create-stack.ui:92
 msgid "New Package"
-msgstr "Nowy pakiet"
+msgstr "Nowy Pakiet"
 
 #: apx_gui/gtk/create-stack.ui:119
 msgid "Please wait while the stack is being created."
-msgstr "Prosimy czekać dopóki stos nie zostanie utworzony."
+msgstr "Proszę poczekaj aż stos nie zostanie utworzony."
 
 #: apx_gui/gtk/create-stack.ui:144
 msgid "An error occurred while creating the stack."
@@ -156,7 +156,7 @@ msgstr "Wystąpił błąd podczas tworzenia stosu."
 
 #: apx_gui/gtk/create-subsystem.ui:6 apx_gui/gtk/window-main.ui:63
 msgid "New Subsystem"
-msgstr "Nowy podsystem"
+msgstr "Nowy Podsystem"
 
 #: apx_gui/gtk/create-subsystem.ui:49 apx_gui/gtk/tab-subsystem.ui:27
 msgid "Stack"
@@ -164,11 +164,11 @@ msgstr "Stos"
 
 #: apx_gui/gtk/create-subsystem.ui:78
 msgid "Creating Subsystem…"
-msgstr "Tworzenie podsystemu…"
+msgstr "Tworzenie Podsystemu…"
 
 #: apx_gui/gtk/create-subsystem.ui:79
 msgid "Please wait while the subsystem is being created."
-msgstr "Prosimy czekać dopóki podsystem nie zostanie utworzony."
+msgstr "Proszę poczekaj aż podsystem nie zostanie utworzony."
 
 #: apx_gui/gtk/create-subsystem.ui:104
 msgid "An error occurred while creating the subsystem."
@@ -176,7 +176,7 @@ msgstr "Wystąpił błąd podczas tworzenia podsystemu."
 
 #: apx_gui/gtk/editor.ui:12
 msgid "Start or Open a Subsystem"
-msgstr "Uruchom lub otwórz podsystem"
+msgstr "Uruchom lub Otwórz Podsystem"
 
 #: apx_gui/gtk/editor.ui:13
 msgid "Start by opening a subsystem, stack or package manager on the left."
@@ -192,7 +192,7 @@ msgstr "Ogólne"
 #: apx_gui/gtk/help-overlay.ui:14
 msgctxt "shortcut window"
 msgid "Show Shortcuts"
-msgstr "Pokaż skróty"
+msgstr "Pokaż Skróty"
 
 #: apx_gui/gtk/help-overlay.ui:20
 msgctxt "shortcut window"
@@ -202,22 +202,22 @@ msgstr "Wyjdź"
 #: apx_gui/gtk/help-overlay.ui:26
 msgctxt "shortcut window"
 msgid "Create"
-msgstr "Twórz"
+msgstr "Utwórz"
 
 #: apx_gui/gtk/help-overlay.ui:29
 msgctxt "shortcut window"
 msgid "New Subsystem"
-msgstr "Nowy podsystem"
+msgstr "Nowy Podsystem"
 
 #: apx_gui/gtk/help-overlay.ui:35
 msgctxt "shortcut window"
 msgid "New Stack"
-msgstr "Nowy stos"
+msgstr "Nowy Stos"
 
 #: apx_gui/gtk/help-overlay.ui:41
 msgctxt "shortcut window"
 msgid "New Package Manager"
-msgstr "Nowy menedżer pakietów"
+msgstr "Nowy Menedżer Pakietów"
 
 #: apx_gui/gtk/tab-pkgmanager.ui:13
 msgid "This package manager is built-in and cannot be edited or deleted."
@@ -227,15 +227,15 @@ msgstr ""
 
 #: apx_gui/gtk/tab-pkgmanager.ui:42 apx_gui/gtk/tab-stack.ui:49
 msgid "Built-In"
-msgstr "Wbudowane"
+msgstr "Wbudowany"
 
 #: apx_gui/gtk/tab-pkgmanager.ui:119 apx_gui/gtk/tab-stack.ui:71
 msgid "Destructive Actions"
-msgstr "Działania destrukcyjne"
+msgstr "Działania Destrukcyjne"
 
 #: apx_gui/gtk/tab-pkgmanager.ui:122
 msgid "Delete Package Manager"
-msgstr "Usuń menedżer pakietów"
+msgstr "Usuń Menedżer Pakietów"
 
 #: apx_gui/gtk/tab-stack.ui:13
 msgid "This stack is built-in and cannot be edited or deleted."
@@ -247,7 +247,7 @@ msgstr "Pakiety"
 
 #: apx_gui/gtk/tab-stack.ui:74
 msgid "Delete Stack"
-msgstr "Usuń stos"
+msgstr "Usuń Stos"
 
 #: apx_gui/gtk/tab-subsystem.ui:17
 msgid "Status"
@@ -255,35 +255,33 @@ msgstr "Status"
 
 #: apx_gui/gtk/tab-subsystem.ui:61
 msgid "Reset Subsystem"
-msgstr "Resetuj podsystem"
+msgstr "Zresetuj Podsystem"
 
 #: apx_gui/gtk/tab-subsystem.ui:76
 msgid "Delete Subsystem"
-msgstr "Usuń podsystem"
+msgstr "Usuń Podsystem"
 
 #: apx_gui/gtk/tab-subsystem.ui:114
-#, fuzzy
-#| msgid "Open Console"
 msgid "Restart Console"
-msgstr "Otwórz konsolę"
+msgstr "Zrestartuj Konsolę"
 
 #: apx_gui/gtk/tab-subsystem.ui:125
-#, fuzzy
-#| msgid "Open Console"
 msgid "Toggle Console"
-msgstr "Otwórz konsolę"
+msgstr "Przełącz Konsolę"
 
 #: apx_gui/gtk/window-main.ui:79
 msgid "_Keyboard Shortcuts"
-msgstr "Skróty _klawiszowe"
+msgstr "_Skróty Klawiszowe"
 
 #: apx_gui/gtk/window-main.ui:83
 msgid "_About Apx GUI"
-msgstr "O _Apx GUI"
+msgstr "_O Apx GUI"
 
 #: apx_gui/main.py:82
 msgid "translator_credits"
-msgstr "ewm <gnu.ewm@protonmail.com>"
+msgstr ""
+"ewm <gnu.ewm@protonmail.com>\n"
+"Marek Uroda <uroda.mar@gmail.com>"
 
 #: apx_gui/main.py:87
 msgid "Contributors"

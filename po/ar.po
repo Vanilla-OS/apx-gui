@@ -5,22 +5,23 @@
 # "K.B.Dharun Krishna" <kbdharunkrishna@gmail.com>, 2023.
 # bob lock <sidkia447@gmail.com>, 2023.
 # Majed Alghoul <jedgh9@gmail.com>, 2023.
+# Muhammad Bahaa <muhammad.bahaa1@gmail.com>, 2024.
 msgid ""
 msgstr ""
 "Project-Id-Version: apx_gui\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2024-01-17 09:36+0530\n"
-"PO-Revision-Date: 2023-11-03 20:12+0000\n"
-"Last-Translator: Majed Alghoul <jedgh9@gmail.com>\n"
-"Language-Team: Arabic <https://hosted.weblate.org/projects/vanilla-os/apx-"
-"gui/ar/>\n"
+"PO-Revision-Date: 2024-02-22 06:42+0000\n"
+"Last-Translator: Muhammad Bahaa <muhammad.bahaa1@gmail.com>\n"
+"Language-Team: Arabic <https://hosted.weblate.org/projects/vanilla-os/"
+"apx-gui/ar/>\n"
 "Language: ar\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=6; plural=n==0 ? 0 : n==1 ? 1 : n==2 ? 2 : n%100>=3 "
 "&& n%100<=10 ? 3 : n%100>=11 ? 4 : 5;\n"
-"X-Generator: Weblate 5.2-dev\n"
+"X-Generator: Weblate 5.5-dev\n"
 
 #: data/org.vanillaos.ApxGUI.desktop.in:3
 msgid "Apx"
@@ -56,7 +57,7 @@ msgstr "اسم"
 
 #: apx_gui/gtk/create-pkgmanager.ui:49 apx_gui/gtk/tab-pkgmanager.ui:27
 msgid "Need Sudo"
-msgstr "تحتاج sudo"
+msgstr "تحتاج Sudo"
 
 #: apx_gui/gtk/create-pkgmanager.ui:70
 msgid "Commands"
@@ -72,35 +73,35 @@ msgstr "التنظيف"
 
 #: apx_gui/gtk/create-pkgmanager.ui:83 apx_gui/gtk/tab-pkgmanager.ui:69
 msgid "Install"
-msgstr "التثبيت"
+msgstr "تثبيت"
 
 #: apx_gui/gtk/create-pkgmanager.ui:88 apx_gui/gtk/tab-pkgmanager.ui:75
 msgid "List"
-msgstr "عرض الحزم"
+msgstr "قائمة"
 
 #: apx_gui/gtk/create-pkgmanager.ui:93 apx_gui/gtk/tab-pkgmanager.ui:81
 msgid "Purge"
-msgstr "التطهير (purge)"
+msgstr "تطهير"
 
 #: apx_gui/gtk/create-pkgmanager.ui:98 apx_gui/gtk/tab-pkgmanager.ui:87
 msgid "Remove"
-msgstr "الإزالة"
+msgstr "إزالة"
 
 #: apx_gui/gtk/create-pkgmanager.ui:103 apx_gui/gtk/tab-pkgmanager.ui:93
 msgid "Search"
-msgstr "البحث"
+msgstr "بحث"
 
 #: apx_gui/gtk/create-pkgmanager.ui:108 apx_gui/gtk/tab-pkgmanager.ui:99
 msgid "Show"
-msgstr "إظهار تفاصيل حزمة"
+msgstr "إظهار"
 
 #: apx_gui/gtk/create-pkgmanager.ui:113 apx_gui/gtk/tab-pkgmanager.ui:105
 msgid "Update"
-msgstr "التحديث"
+msgstr "تحديث"
 
 #: apx_gui/gtk/create-pkgmanager.ui:118 apx_gui/gtk/tab-pkgmanager.ui:111
 msgid "Upgrade"
-msgstr "التطوير"
+msgstr "ترقية"
 
 #: apx_gui/gtk/create-pkgmanager.ui:144
 msgid "Creating Package Manager…"
@@ -112,11 +113,11 @@ msgstr "يرجى الانتظار ريثما يتم إنشاء مدير الحز
 
 #: apx_gui/gtk/create-pkgmanager.ui:169
 msgid "An Error Occurred"
-msgstr "حدث خطأ"
+msgstr "حدث خطأ ما"
 
 #: apx_gui/gtk/create-pkgmanager.ui:170
 msgid "An error occurred while creating the package manager."
-msgstr "حدث خطأ أثناء إنشاء مدير الحزم."
+msgstr "حدث خطأ ما أثناء إنشاء مدير الحزم."
 
 #: apx_gui/gtk/create-pkgmanager.ui:174 apx_gui/gtk/create-stack.ui:148
 #: apx_gui/gtk/create-subsystem.ui:108
@@ -125,11 +126,11 @@ msgstr "إغلاق"
 
 #: apx_gui/gtk/create-stack.ui:6 apx_gui/gtk/window-main.ui:67
 msgid "New Stack"
-msgstr "تشكيلة جديدة"
+msgstr "طبقة جديدة"
 
 #: apx_gui/gtk/create-stack.ui:49 apx_gui/gtk/tab-stack.ui:27
 msgid "Base"
-msgstr "النظام الأساس"
+msgstr "قاعدة"
 
 #: apx_gui/gtk/create-stack.ui:54 apx_gui/gtk/tab-stack.ui:38
 #: apx_gui/gtk/tab-subsystem.ui:37
@@ -146,11 +147,11 @@ msgstr "حزمة جديدة"
 
 #: apx_gui/gtk/create-stack.ui:119
 msgid "Please wait while the stack is being created."
-msgstr "يرجى الانتظار ريثما يتم إنشاء تشكيلة جديدة."
+msgstr "يرجى الانتظار ريثما يتم إنشاء طبقة جديدة."
 
 #: apx_gui/gtk/create-stack.ui:144
 msgid "An error occurred while creating the stack."
-msgstr "حدث خطأ أثناء إنشاء التشكيلة."
+msgstr "حدث خطأ ما أثناء إنشاء الطبقة."
 
 #: apx_gui/gtk/create-subsystem.ui:6 apx_gui/gtk/window-main.ui:63
 msgid "New Subsystem"
@@ -158,7 +159,7 @@ msgstr "نظام فرعي جديد"
 
 #: apx_gui/gtk/create-subsystem.ui:49 apx_gui/gtk/tab-subsystem.ui:27
 msgid "Stack"
-msgstr "تشكيلة"
+msgstr "طبقة"
 
 #: apx_gui/gtk/create-subsystem.ui:78
 msgid "Creating Subsystem…"
@@ -178,7 +179,7 @@ msgstr "بِدء أو فتح نظام فرعي"
 
 #: apx_gui/gtk/editor.ui:13
 msgid "Start by opening a subsystem, stack or package manager on the left."
-msgstr "ابدأ بفتح نظام فرعي، تشكيلة أو مدير حزم على اليسار."
+msgstr "ابدأ بفتح نظام فرعي، طبقة أو مدير حزم على اليسار."
 
 #: apx_gui/gtk/help-overlay.ui:11
 msgctxt "shortcut window"
@@ -208,7 +209,7 @@ msgstr "نظام فرعي جديد"
 #: apx_gui/gtk/help-overlay.ui:35
 msgctxt "shortcut window"
 msgid "New Stack"
-msgstr "تشكيلة جديدة"
+msgstr "طبقة جديدة"
 
 #: apx_gui/gtk/help-overlay.ui:41
 msgctxt "shortcut window"
@@ -225,7 +226,7 @@ msgstr "مدمج"
 
 #: apx_gui/gtk/tab-pkgmanager.ui:119 apx_gui/gtk/tab-stack.ui:71
 msgid "Destructive Actions"
-msgstr "خيارات تدميرية"
+msgstr "إجراءات تدميرية"
 
 #: apx_gui/gtk/tab-pkgmanager.ui:122
 msgid "Delete Package Manager"
@@ -233,7 +234,7 @@ msgstr "حذف مدير الحزم"
 
 #: apx_gui/gtk/tab-stack.ui:13
 msgid "This stack is built-in and cannot be edited or deleted."
-msgstr "هذه التشكيلة مدمجة في النظام و لا يمكن تعديلها أو حذفها."
+msgstr "هذه الطبقة مدمجة في النظام و لا يمكن تعديلها أو حذفها."
 
 #: apx_gui/gtk/tab-stack.ui:59
 msgid "Packages"
@@ -241,7 +242,7 @@ msgstr "الحزم"
 
 #: apx_gui/gtk/tab-stack.ui:74
 msgid "Delete Stack"
-msgstr "حذف التشكيلة"
+msgstr "حذف الطبقة"
 
 #: apx_gui/gtk/tab-subsystem.ui:17
 msgid "Status"
@@ -249,23 +250,19 @@ msgstr "الحالة"
 
 #: apx_gui/gtk/tab-subsystem.ui:61
 msgid "Reset Subsystem"
-msgstr "إعادة إنشاء النظام الفرعي"
+msgstr "إعادة ضبط النظام الفرعي"
 
 #: apx_gui/gtk/tab-subsystem.ui:76
 msgid "Delete Subsystem"
 msgstr "حذف النظام الفرعي"
 
 #: apx_gui/gtk/tab-subsystem.ui:114
-#, fuzzy
-#| msgid "Open Console"
 msgid "Restart Console"
-msgstr "فتح الطرفية"
+msgstr "إعادة تشغيل وحدة التحكم"
 
 #: apx_gui/gtk/tab-subsystem.ui:125
-#, fuzzy
-#| msgid "Open Console"
 msgid "Toggle Console"
-msgstr "فتح الطرفية"
+msgstr "تبديل وحدة التحكم"
 
 #: apx_gui/gtk/window-main.ui:79
 msgid "_Keyboard Shortcuts"
@@ -277,7 +274,9 @@ msgstr "حول Apx GUI (_A)"
 
 #: apx_gui/main.py:82
 msgid "translator_credits"
-msgstr "مؤمن المناوي moumnalmunawy2006@gmail.com"
+msgstr ""
+"مؤمن المناوي moumnalmunawy2006@gmail.com\n"
+"Muhammad Bahaa"
 
 #: apx_gui/main.py:87
 msgid "Contributors"
