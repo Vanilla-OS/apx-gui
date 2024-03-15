@@ -34,6 +34,7 @@ class CreateStackWindow(Adw.Window):
     __valid_base: bool = False
 
     btn_cancel: Gtk.Button = Gtk.Template.Child()
+    btn_close: Gtk.Button = Gtk.Template.Child()
     btn_create: Gtk.Button = Gtk.Template.Child()
     btn_add_package: Gtk.Button = Gtk.Template.Child()
     row_name: Adw.EntryRow = Gtk.Template.Child()
@@ -66,6 +67,7 @@ class CreateStackWindow(Adw.Window):
         self.row_pkgmanager.set_selected(0)
 
         self.btn_cancel.connect("clicked", self.__on_cancel_clicked)
+        self.btn_close.connect("clicked", self.__on_cancel_clicked)
         self.btn_create.connect("clicked", self.__on_create_clicked)
         self.btn_add_package.connect("clicked", self.__on_add_package_clicked)
         self.row_name.connect("changed", self.__on_name_changed)
