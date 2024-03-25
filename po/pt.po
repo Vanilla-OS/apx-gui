@@ -1,27 +1,21 @@
 # SOME DESCRIPTIVE TITLE.
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the apx_gui package.
-# Gabriel C <me@gabs.eu.org>, 2023.
-# "K.B.Dharun Krishna" <kbdharunkrishna@gmail.com>, 2023, 2024.
-# Gabriel Cozma <me@gabs.eu.org>, 2023, 2024.
-# Matt C <matei.gurzu@gmail.com>, 2023.
-# Alex Pascu <salutcristi@gmail.com>, 2024.
-# Cristi Rus <salutcristi@gmail.com>, 2024.
+# ssantos <ssantos@web.de>, 2024.
 msgid ""
 msgstr ""
 "Project-Id-Version: apx_gui\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2024-01-17 09:36+0530\n"
-"PO-Revision-Date: 2024-03-18 17:01+0000\n"
-"Last-Translator: Gabriel Cozma <me@gabs.eu.org>\n"
-"Language-Team: Romanian <https://hosted.weblate.org/projects/vanilla-os/"
-"apx-gui/ro/>\n"
-"Language: ro\n"
+"PO-Revision-Date: 2024-03-23 18:27+0000\n"
+"Last-Translator: ssantos <ssantos@web.de>\n"
+"Language-Team: Portuguese <https://hosted.weblate.org/projects/vanilla-os/"
+"apx-gui/pt/>\n"
+"Language: pt\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=3; plural=n==1 ? 0 : (n==0 || (n%100 > 0 && n%100 < "
-"20)) ? 1 : 2;\n"
+"Plural-Forms: nplurals=2; plural=n > 1;\n"
 "X-Generator: Weblate 5.5-dev\n"
 
 #: data/org.vanillaos.ApxGUI.desktop.in:3
@@ -30,283 +24,257 @@ msgstr "Apx"
 
 #: data/org.vanillaos.ApxGUI.appdata.xml.in:7
 msgid "A frontend in GTK 4 and Libadwaita for Apx."
-msgstr "Un frontend în GTK 4 și Libadwaita pentru Apx."
+msgstr "Um frontend em GTK 4 e Libadwaita para o Apx."
 
 #: apx_gui/gtk/create-pkgmanager.ui:6 apx_gui/gtk/window-main.ui:71
 msgid "New Package Manager"
-msgstr "Manager nou de pachete"
+msgstr "Novo Gestor de Pacotes"
 
 #: apx_gui/gtk/create-pkgmanager.ui:23 apx_gui/gtk/create-stack.ui:23
 #: apx_gui/gtk/create-subsystem.ui:23
 msgid "Cancel"
-msgstr "Anulează"
+msgstr "Cancelar"
 
 #: apx_gui/gtk/create-pkgmanager.ui:28 apx_gui/gtk/create-stack.ui:28
 #: apx_gui/gtk/create-subsystem.ui:28
 msgid "Create"
-msgstr "Crează"
+msgstr "Criar"
 
 #: apx_gui/gtk/create-pkgmanager.ui:41 apx_gui/gtk/tab-pkgmanager.ui:24
 #: apx_gui/gtk/tab-stack.ui:24
 msgid "Details"
-msgstr "Detalii"
+msgstr "Pormenores"
 
 #: apx_gui/gtk/create-pkgmanager.ui:44 apx_gui/gtk/create-stack.ui:44
 #: apx_gui/gtk/create-subsystem.ui:44
 msgid "Name"
-msgstr "Nume"
+msgstr "Nome"
 
 #: apx_gui/gtk/create-pkgmanager.ui:49 apx_gui/gtk/tab-pkgmanager.ui:27
 msgid "Need Sudo"
-msgstr "Sudo necesar"
+msgstr "Requer Privilégios de Administrador"
 
 #: apx_gui/gtk/create-pkgmanager.ui:70
 msgid "Commands"
-msgstr "Comenzi"
+msgstr "Comandos"
 
 #: apx_gui/gtk/create-pkgmanager.ui:73 apx_gui/gtk/tab-pkgmanager.ui:57
 msgid "Autoremove"
-msgstr "Îndepărtare automată"
+msgstr "Autoremover"
 
 #: apx_gui/gtk/create-pkgmanager.ui:78 apx_gui/gtk/tab-pkgmanager.ui:63
 msgid "Clean"
-msgstr "Curăță"
+msgstr "Limpar"
 
 #: apx_gui/gtk/create-pkgmanager.ui:83 apx_gui/gtk/tab-pkgmanager.ui:69
 msgid "Install"
-msgstr "Instalează"
+msgstr "Instalar"
 
 #: apx_gui/gtk/create-pkgmanager.ui:88 apx_gui/gtk/tab-pkgmanager.ui:75
 msgid "List"
-msgstr "Listează"
+msgstr "Listar"
 
 #: apx_gui/gtk/create-pkgmanager.ui:93 apx_gui/gtk/tab-pkgmanager.ui:81
 msgid "Purge"
-msgstr "Eliminare completă"
+msgstr "Purgar"
 
 #: apx_gui/gtk/create-pkgmanager.ui:98 apx_gui/gtk/tab-pkgmanager.ui:87
 msgid "Remove"
-msgstr "Eliminare"
+msgstr "Remover"
 
 #: apx_gui/gtk/create-pkgmanager.ui:103 apx_gui/gtk/tab-pkgmanager.ui:93
 msgid "Search"
-msgstr "Caută"
+msgstr "Pesquisar"
 
 #: apx_gui/gtk/create-pkgmanager.ui:108 apx_gui/gtk/tab-pkgmanager.ui:99
 msgid "Show"
-msgstr "Arată"
+msgstr "Exibir"
 
 #: apx_gui/gtk/create-pkgmanager.ui:113 apx_gui/gtk/tab-pkgmanager.ui:105
 msgid "Update"
-msgstr "Actualizează"
+msgstr "Atualizar (Banco de Dados)"
 
 #: apx_gui/gtk/create-pkgmanager.ui:118 apx_gui/gtk/tab-pkgmanager.ui:111
 msgid "Upgrade"
-msgstr "Upgrade"
+msgstr "Atualizar (Pacotes)"
 
 #: apx_gui/gtk/create-pkgmanager.ui:144
 msgid "Creating Package Manager…"
-msgstr "Crearea managerului de pachete…"
+msgstr "A criar Gestor de Pacotes…"
 
 #: apx_gui/gtk/create-pkgmanager.ui:145
 msgid "Please wait while the package manager is being created."
-msgstr "Te rog așteaptă până când managerul de pachete este creat."
+msgstr "Por favor aguarde enquanto o gestor de pacotes é criado."
 
 #: apx_gui/gtk/create-pkgmanager.ui:169
 msgid "An Error Occurred"
-msgstr "A apărut o eroare"
+msgstr "Um Erro Ocorreu"
 
 #: apx_gui/gtk/create-pkgmanager.ui:170
 msgid "An error occurred while creating the package manager."
-msgstr "S-a produs o eroare în timpul creării managerului de pachete."
+msgstr "Um erro ocorreu ao criar o gestor de pacotes."
 
 #: apx_gui/gtk/create-pkgmanager.ui:174 apx_gui/gtk/create-stack.ui:148
 #: apx_gui/gtk/create-subsystem.ui:108
 msgid "Close"
-msgstr "Închide"
+msgstr "Fechar"
 
 #: apx_gui/gtk/create-stack.ui:6 apx_gui/gtk/window-main.ui:67
 msgid "New Stack"
-msgstr "Stivă nouă"
+msgstr "Nova Pilha"
 
 #: apx_gui/gtk/create-stack.ui:49 apx_gui/gtk/tab-stack.ui:27
 msgid "Base"
-msgstr "Baza"
+msgstr "Base"
 
 #: apx_gui/gtk/create-stack.ui:54 apx_gui/gtk/tab-stack.ui:38
 #: apx_gui/gtk/tab-subsystem.ui:37
 msgid "Package Manager"
-msgstr "Manager de pachete"
+msgstr "Gestor de Pacotes"
 
 #: apx_gui/gtk/create-stack.ui:80
 msgid "Add Package"
-msgstr "Adaugă pachet"
+msgstr "Adicionar Pacote"
 
 #: apx_gui/gtk/create-stack.ui:92
 msgid "New Package"
-msgstr "Pachet nou"
+msgstr "Novo Pacote"
 
 #: apx_gui/gtk/create-stack.ui:119
 msgid "Please wait while the stack is being created."
-msgstr "Te rog așteaptă cât timp stiva este creată."
+msgstr "Por favor aguarde enquanto a pilha é criada."
 
 #: apx_gui/gtk/create-stack.ui:144
 msgid "An error occurred while creating the stack."
-msgstr "S-a produs o eroare la crearea stivei."
+msgstr "Um erro ocorreu ao criar a pilha."
 
 #: apx_gui/gtk/create-subsystem.ui:6 apx_gui/gtk/window-main.ui:63
 msgid "New Subsystem"
-msgstr "Subsistem nou"
+msgstr "Novo Subsistema"
 
 #: apx_gui/gtk/create-subsystem.ui:49 apx_gui/gtk/tab-subsystem.ui:27
 msgid "Stack"
-msgstr "Stiva"
+msgstr "Pilha"
 
 #: apx_gui/gtk/create-subsystem.ui:78
 msgid "Creating Subsystem…"
-msgstr "Crearea subsistemului…"
+msgstr "A Criar Subsistema…"
 
 #: apx_gui/gtk/create-subsystem.ui:79
 msgid "Please wait while the subsystem is being created."
-msgstr "Te rog așteaptă în timp ce subsistemul este creat."
+msgstr "Por favor aguarde enquanto o subsistema é criado."
 
 #: apx_gui/gtk/create-subsystem.ui:104
 msgid "An error occurred while creating the subsystem."
-msgstr "S-a produs o eroare în timpul creării subsistemului."
+msgstr "Um erro ocorreu ao criar o subsistema."
 
 #: apx_gui/gtk/editor.ui:12
 msgid "Start or Open a Subsystem"
-msgstr "Pornește sau deschide un subsistem"
+msgstr "Iniciar ou Abrir um Subsistema"
 
 #: apx_gui/gtk/editor.ui:13
 msgid "Start by opening a subsystem, stack or package manager on the left."
-msgstr ""
-"Începe prin a deschide un subsistem, o stivă sau un manager de pachete în "
-"partea stângă."
+msgstr "Comece abrindo um subsistema, pilha ou gestor de pacotes à esquerda."
 
 #: apx_gui/gtk/help-overlay.ui:11
 msgctxt "shortcut window"
 msgid "General"
-msgstr "General"
+msgstr "Geral"
 
 #: apx_gui/gtk/help-overlay.ui:14
 msgctxt "shortcut window"
 msgid "Show Shortcuts"
-msgstr "Afișează comenzi rapide"
+msgstr "Exibir Atalhos"
 
 #: apx_gui/gtk/help-overlay.ui:20
 msgctxt "shortcut window"
 msgid "Quit"
-msgstr "Ieși"
+msgstr "Sair"
 
 #: apx_gui/gtk/help-overlay.ui:26
 msgctxt "shortcut window"
 msgid "Create"
-msgstr "Crează"
+msgstr "Criar"
 
 #: apx_gui/gtk/help-overlay.ui:29
 msgctxt "shortcut window"
 msgid "New Subsystem"
-msgstr "Subsistem nou"
+msgstr "Novo Subsistema"
 
 #: apx_gui/gtk/help-overlay.ui:35
 msgctxt "shortcut window"
 msgid "New Stack"
-msgstr "Stivă nouă"
+msgstr "Nova Pilha"
 
 #: apx_gui/gtk/help-overlay.ui:41
 msgctxt "shortcut window"
 msgid "New Package Manager"
-msgstr "Manager de pachete nou"
+msgstr "Novo Gestor de Pacotes"
 
 #: apx_gui/gtk/tab-pkgmanager.ui:13
 msgid "This package manager is built-in and cannot be edited or deleted."
-msgstr ""
-"Acest manager de pachete este încorporat și nu poate fi editat sau șters."
+msgstr "Este gestor de pacotes é embutido e não pode ser editado ou removido."
 
 #: apx_gui/gtk/tab-pkgmanager.ui:42 apx_gui/gtk/tab-stack.ui:49
 msgid "Built-In"
-msgstr "încorporat"
+msgstr "Embutido"
 
 #: apx_gui/gtk/tab-pkgmanager.ui:119 apx_gui/gtk/tab-stack.ui:71
 msgid "Destructive Actions"
-msgstr "Acțiuni distructive"
+msgstr "Ações Destrutivas"
 
 #: apx_gui/gtk/tab-pkgmanager.ui:122
 msgid "Delete Package Manager"
-msgstr "Ștergeți Managerul de pachete"
+msgstr "Apagar Gestor de Pacotes"
 
 #: apx_gui/gtk/tab-stack.ui:13
 msgid "This stack is built-in and cannot be edited or deleted."
-msgstr "Această stivă este încorporată și nu poate fi modificată sau ștearsă."
+msgstr "Esta pilha é embutida e não pode ser editada ou removida."
 
 #: apx_gui/gtk/tab-stack.ui:59
 msgid "Packages"
-msgstr "Pachete"
+msgstr "Pacotes"
 
 #: apx_gui/gtk/tab-stack.ui:74
 msgid "Delete Stack"
-msgstr "Ștergeți stiva"
+msgstr "Apagar Pilha"
 
 #: apx_gui/gtk/tab-subsystem.ui:17
 msgid "Status"
-msgstr "Stare"
+msgstr "Estado"
 
 #: apx_gui/gtk/tab-subsystem.ui:61
 msgid "Reset Subsystem"
-msgstr "Resetează subsistem"
+msgstr "Reiniciar Subsistema"
 
 #: apx_gui/gtk/tab-subsystem.ui:76
 msgid "Delete Subsystem"
-msgstr "Șterge subsistem"
+msgstr "Apagar Subsistema"
 
 #: apx_gui/gtk/tab-subsystem.ui:114
 msgid "Restart Console"
-msgstr "Resetează consola"
+msgstr "Reiniciar Console"
 
 #: apx_gui/gtk/tab-subsystem.ui:125
 msgid "Toggle Console"
-msgstr "Comută consola"
+msgstr "Alternar Console"
 
 #: apx_gui/gtk/window-main.ui:79
 msgid "_Keyboard Shortcuts"
-msgstr "_Comenzi rapide de la tastatură"
+msgstr "_Teclas de Atalho"
 
 #: apx_gui/gtk/window-main.ui:83
 msgid "_About Apx GUI"
-msgstr "Despre Apx GUI (_A)"
+msgstr "Sobre a GUI do Apx (_A)"
 
 #: apx_gui/main.py:82
 msgid "translator_credits"
-msgstr ""
-"Gabriel Cozma https://gabs.eu.org\n"
-"Ame https://driedpampas.ro.eu.org\n"
-"Cristian Rus https://twitter.com/cristirus"
+msgstr "Silvério Santos"
 
 #: apx_gui/main.py:87
 msgid "Contributors"
-msgstr "Contribuitori"
+msgstr "Colaboradores"
 
 #: apx_gui/main.py:93
 msgid "Tools"
-msgstr "Unelte"
-
-#~ msgid "Enter a console in this subsystem's environment."
-#~ msgstr "Introduceți o consolă în mediul acestui subsistem."
-
-#~ msgid "New Sub System"
-#~ msgstr "Noul subsistem"
-
-#~ msgid "_Quit"
-#~ msgstr "Termină"
-
-#~ msgid "No description"
-#~ msgstr "Fără descriere"
-
-#, python-brace-format
-#~ msgid "Package manager {pkgmanager.name} created successfully"
-#~ msgstr "Manager de pachete {pkgmanager.name} creat cu succes"
-
-#, python-brace-format
-#~ msgid "Subsystem {subsystem.name} created successfully"
-#~ msgstr "Subsistemul {subsystem.name} a fost creat cu succes"
+msgstr "Ferramentas"
