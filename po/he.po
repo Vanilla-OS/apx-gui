@@ -1,0 +1,339 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the apx_gui package.
+# guylamar2006 <guychronister@outlook.com>, 2024.
+msgid ""
+msgstr ""
+"Project-Id-Version: apx_gui\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2024-01-17 09:36+0530\n"
+"PO-Revision-Date: 2024-05-09 15:07+0000\n"
+"Last-Translator: guylamar2006 <guychronister@outlook.com>\n"
+"Language-Team: Hebrew <https://hosted.weblate.org/projects/vanilla-os/"
+"apx-gui/he/>\n"
+"Language: he\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=4; plural=(n == 1) ? 0 : ((n == 2) ? 1 : ((n > 10 && "
+"n % 10 == 0) ? 2 : 3));\n"
+"X-Generator: Weblate 5.5.4-rc\n"
+
+#: data/org.vanillaos.ApxGUI.desktop.in:3
+#, fuzzy
+msgid "Apx"
+msgstr "Apx"
+
+#: data/org.vanillaos.ApxGUI.appdata.xml.in:7
+#, fuzzy
+msgid "A frontend in GTK 4 and Libadwaita for Apx."
+msgstr "חזית ב GTK 4 ו Libadwaita עבור Apx."
+
+#: apx_gui/gtk/create-pkgmanager.ui:6 apx_gui/gtk/window-main.ui:71
+#, fuzzy
+msgid "New Package Manager"
+msgstr "מנהל החבילה החדש"
+
+#: apx_gui/gtk/create-pkgmanager.ui:23 apx_gui/gtk/create-stack.ui:23
+#: apx_gui/gtk/create-subsystem.ui:23
+msgid "Cancel"
+msgstr "בטל"
+
+#: apx_gui/gtk/create-pkgmanager.ui:28 apx_gui/gtk/create-stack.ui:28
+#: apx_gui/gtk/create-subsystem.ui:28
+msgid "Create"
+msgstr "יצירה"
+
+#: apx_gui/gtk/create-pkgmanager.ui:41 apx_gui/gtk/tab-pkgmanager.ui:24
+#: apx_gui/gtk/tab-stack.ui:24
+#, fuzzy
+msgid "Details"
+msgstr "פרטים"
+
+#: apx_gui/gtk/create-pkgmanager.ui:44 apx_gui/gtk/create-stack.ui:44
+#: apx_gui/gtk/create-subsystem.ui:44
+#, fuzzy
+msgid "Name"
+msgstr "שם השם"
+
+#: apx_gui/gtk/create-pkgmanager.ui:49 apx_gui/gtk/tab-pkgmanager.ui:27
+#, fuzzy
+msgid "Need Sudo"
+msgstr "דרושים Sudo"
+
+#: apx_gui/gtk/create-pkgmanager.ui:70
+#, fuzzy
+msgid "Commands"
+msgstr "פקודות"
+
+#: apx_gui/gtk/create-pkgmanager.ui:73 apx_gui/gtk/tab-pkgmanager.ui:57
+#, fuzzy
+msgid "Autoremove"
+msgstr "הסרה אוטומטית"
+
+#: apx_gui/gtk/create-pkgmanager.ui:78 apx_gui/gtk/tab-pkgmanager.ui:63
+#, fuzzy
+msgid "Clean"
+msgstr "נקי"
+
+#: apx_gui/gtk/create-pkgmanager.ui:83 apx_gui/gtk/tab-pkgmanager.ui:69
+msgid "Install"
+msgstr "התקן"
+
+#: apx_gui/gtk/create-pkgmanager.ui:88 apx_gui/gtk/tab-pkgmanager.ui:75
+#, fuzzy
+msgid "List"
+msgstr "רשימה"
+
+#: apx_gui/gtk/create-pkgmanager.ui:93 apx_gui/gtk/tab-pkgmanager.ui:81
+#, fuzzy
+msgid "Purge"
+msgstr "לְטַהֵר"
+
+#: apx_gui/gtk/create-pkgmanager.ui:98 apx_gui/gtk/tab-pkgmanager.ui:87
+#, fuzzy
+msgid "Remove"
+msgstr "להסיר"
+
+#: apx_gui/gtk/create-pkgmanager.ui:103 apx_gui/gtk/tab-pkgmanager.ui:93
+#, fuzzy
+msgid "Search"
+msgstr "חיפוש"
+
+#: apx_gui/gtk/create-pkgmanager.ui:108 apx_gui/gtk/tab-pkgmanager.ui:99
+#, fuzzy
+msgid "Show"
+msgstr "הצג Show"
+
+#: apx_gui/gtk/create-pkgmanager.ui:113 apx_gui/gtk/tab-pkgmanager.ui:105
+#, fuzzy
+msgid "Update"
+msgstr "עדכון"
+
+#: apx_gui/gtk/create-pkgmanager.ui:118 apx_gui/gtk/tab-pkgmanager.ui:111
+#, fuzzy
+msgid "Upgrade"
+msgstr "שדרוג"
+
+#: apx_gui/gtk/create-pkgmanager.ui:144
+#, fuzzy
+msgid "Creating Package Manager…"
+msgstr "יצירת מנהל החבילה…"
+
+#: apx_gui/gtk/create-pkgmanager.ui:145
+#, fuzzy
+msgid "Please wait while the package manager is being created."
+msgstr "אנא חכה, בעוד מנהל החבילה נוצר."
+
+#: apx_gui/gtk/create-pkgmanager.ui:169
+#, fuzzy
+msgid "An Error Occurred"
+msgstr "טעות"
+
+#: apx_gui/gtk/create-pkgmanager.ui:170
+#, fuzzy
+msgid "An error occurred while creating the package manager."
+msgstr "טעות התרחשה בעת יצירת מנהל החבילה."
+
+#: apx_gui/gtk/create-pkgmanager.ui:174 apx_gui/gtk/create-stack.ui:148
+#: apx_gui/gtk/create-subsystem.ui:108
+#, fuzzy
+msgid "Close"
+msgstr "סגור"
+
+#: apx_gui/gtk/create-stack.ui:6 apx_gui/gtk/window-main.ui:67
+#, fuzzy
+msgid "New Stack"
+msgstr "מחסנית חדשה"
+
+#: apx_gui/gtk/create-stack.ui:49 apx_gui/gtk/tab-stack.ui:27
+#, fuzzy
+msgid "Base"
+msgstr "בסיס"
+
+#: apx_gui/gtk/create-stack.ui:54 apx_gui/gtk/tab-stack.ui:38
+#: apx_gui/gtk/tab-subsystem.ui:37
+#, fuzzy
+msgid "Package Manager"
+msgstr "מנהל חבילה"
+
+#: apx_gui/gtk/create-stack.ui:80
+#, fuzzy
+msgid "Add Package"
+msgstr "הוסף חבילה"
+
+#: apx_gui/gtk/create-stack.ui:92
+#, fuzzy
+msgid "New Package"
+msgstr "חבילה חדשה"
+
+#: apx_gui/gtk/create-stack.ui:119
+#, fuzzy
+msgid "Please wait while the stack is being created."
+msgstr "חכה שהערימה תיווצר."
+
+#: apx_gui/gtk/create-stack.ui:144
+#, fuzzy
+msgid "An error occurred while creating the stack."
+msgstr "טעות התרחשה בעת יצירת הערימה."
+
+#: apx_gui/gtk/create-subsystem.ui:6 apx_gui/gtk/window-main.ui:63
+#, fuzzy
+msgid "New Subsystem"
+msgstr "מערכת משנה חדשה"
+
+#: apx_gui/gtk/create-subsystem.ui:49 apx_gui/gtk/tab-subsystem.ui:27
+#, fuzzy
+msgid "Stack"
+msgstr "לַעֲרוֹם"
+
+#: apx_gui/gtk/create-subsystem.ui:78
+#, fuzzy
+msgid "Creating Subsystem…"
+msgstr "יצירת מערכת משנה…"
+
+#: apx_gui/gtk/create-subsystem.ui:79
+#, fuzzy
+msgid "Please wait while the subsystem is being created."
+msgstr "חכה שהמערכת תיווצר."
+
+#: apx_gui/gtk/create-subsystem.ui:104
+#, fuzzy
+msgid "An error occurred while creating the subsystem."
+msgstr "טעות התרחשה בעת יצירת תת-מערכת."
+
+#: apx_gui/gtk/editor.ui:12
+#, fuzzy
+msgid "Start or Open a Subsystem"
+msgstr "התחל או פתח מערכת"
+
+#: apx_gui/gtk/editor.ui:13
+#, fuzzy
+msgid "Start by opening a subsystem, stack or package manager on the left."
+msgstr "התחל על ידי פתיחת תת-מערכת, ערימה או מנהל החבילה משמאל."
+
+#: apx_gui/gtk/help-overlay.ui:11
+#, fuzzy
+msgctxt "shortcut window"
+msgid "General"
+msgstr "כללי"
+
+#: apx_gui/gtk/help-overlay.ui:14
+#, fuzzy
+msgctxt "shortcut window"
+msgid "Show Shortcuts"
+msgstr "הצג קיצורי דרך"
+
+#: apx_gui/gtk/help-overlay.ui:20
+#, fuzzy
+msgctxt "shortcut window"
+msgid "Quit"
+msgstr "צא"
+
+#: apx_gui/gtk/help-overlay.ui:26
+#, fuzzy
+msgctxt "shortcut window"
+msgid "Create"
+msgstr "יצירה"
+
+#: apx_gui/gtk/help-overlay.ui:29
+#, fuzzy
+msgctxt "shortcut window"
+msgid "New Subsystem"
+msgstr "מערכת משנה חדשה"
+
+#: apx_gui/gtk/help-overlay.ui:35
+#, fuzzy
+msgctxt "shortcut window"
+msgid "New Stack"
+msgstr "מחסנית חדשה"
+
+#: apx_gui/gtk/help-overlay.ui:41
+#, fuzzy
+msgctxt "shortcut window"
+msgid "New Package Manager"
+msgstr "מנהל החבילה החדש"
+
+#: apx_gui/gtk/tab-pkgmanager.ui:13
+#, fuzzy
+msgid "This package manager is built-in and cannot be edited or deleted."
+msgstr "מנהל החבילה הזה בנוי ולא ניתן לערוך או למחוק."
+
+#: apx_gui/gtk/tab-pkgmanager.ui:42 apx_gui/gtk/tab-stack.ui:49
+#, fuzzy
+msgid "Built-In"
+msgstr "נבנה-In"
+
+#: apx_gui/gtk/tab-pkgmanager.ui:119 apx_gui/gtk/tab-stack.ui:71
+#, fuzzy
+msgid "Destructive Actions"
+msgstr "פעולות הרסניות"
+
+#: apx_gui/gtk/tab-pkgmanager.ui:122
+#, fuzzy
+msgid "Delete Package Manager"
+msgstr "יצרן החבילה"
+
+#: apx_gui/gtk/tab-stack.ui:13
+#, fuzzy
+msgid "This stack is built-in and cannot be edited or deleted."
+msgstr "ערימה זו בנויה ולא ניתן לערוך או למחוק."
+
+#: apx_gui/gtk/tab-stack.ui:59
+#, fuzzy
+msgid "Packages"
+msgstr "חבילות"
+
+#: apx_gui/gtk/tab-stack.ui:74
+#, fuzzy
+msgid "Delete Stack"
+msgstr "Delete Stack"
+
+#: apx_gui/gtk/tab-subsystem.ui:17
+#, fuzzy
+msgid "Status"
+msgstr "סטטוס"
+
+#: apx_gui/gtk/tab-subsystem.ui:61
+#, fuzzy
+msgid "Reset Subsystem"
+msgstr "איפוס Subsystem"
+
+#: apx_gui/gtk/tab-subsystem.ui:76
+#, fuzzy
+msgid "Delete Subsystem"
+msgstr "המונחים Subsystem"
+
+#: apx_gui/gtk/tab-subsystem.ui:114
+#, fuzzy
+msgid "Restart Console"
+msgstr "קונסולת Restart Console"
+
+#: apx_gui/gtk/tab-subsystem.ui:125
+#, fuzzy
+msgid "Toggle Console"
+msgstr "עקבו אחרי Console"
+
+#: apx_gui/gtk/window-main.ui:79
+#, fuzzy
+msgid "_Keyboard Shortcuts"
+msgstr "_קיצורי מקלדת"
+
+#: apx_gui/gtk/window-main.ui:83
+#, fuzzy
+msgid "_About Apx GUI"
+msgstr "אודות Apx GUI"
+
+#: apx_gui/main.py:82
+msgid "translator_credits"
+msgstr ""
+
+#: apx_gui/main.py:87
+#, fuzzy
+msgid "Contributors"
+msgstr "תורמים"
+
+#: apx_gui/main.py:93
+#, fuzzy
+msgid "Tools"
+msgstr "כלים"
