@@ -52,14 +52,14 @@ class ApxEntityBase:
         """
         Get the path to the 'apx' binary.
         """
-        return shutil.which("apx")
+        return shutil.which("apx") or "/usr/bin/apx"
 
     @property
     def __host_spawn_bin(self) -> str:
         """
         Get the path to the 'host_spawn' binary.
         """
-        return shutil.which("host-spawn")
+        return shutil.which("host-spawn") or "/usr/bin/host-spawn"
 
     def _run_command(
         self, command: Text, ignore_errors: bool = False
@@ -71,11 +71,9 @@ class ApxEntityBase:
             process: subprocess.Popen = subprocess.Popen(
                 shlex.split(command), stdout=subprocess.PIPE, stderr=subprocess.PIPE
             )
-            output: bytes
-            error: bytes
-            output, error = process.communicate()
-            output: str = output.decode("utf-8")
-            error: str = error.decode("utf-8")
+            out, e = process.communicate()
+            output: str = out.decode("utf-8")
+            error: str = e.decode("utf-8")
             if error and not ignore_errors:
                 if "APX_DEBUG" in os.environ:
                     print(f"Error: {error}")
@@ -128,20 +126,20 @@ class Stack(ApxEntityBase):
             if isinstance(self.packages, list)
             else self.packages
         )
-        command: Text = (
-            f'apx stacks new --name {self.name} --base {self.base} --packages "{packages}" '
+        new_command: Text = (
+            f"apx stacks new --name '{self.name}' --base '{self.base}' --packages '{packages}' "
             f"--pkg-manager {self.pkg_manager} -y"
         )
-        res: Tuple[bool, str] = self._run_command(command)
-        if not res[0]:
-            return res[0], self
+        new_res: Tuple[bool, str] = self._run_command(new_command)
+        if not new_res[0]:
+            return new_res[0], self
 
-        command: Text = f"apx stacks list --json"
-        res: Tuple[bool, str] = self._run_command(command)
-        if not res[0]:
-            return res[0], self
+        list_command: Text = f"apx stacks list --json"
+        list_res: Tuple[bool, str] = self._run_command(list_command)
+        if not list_res[0]:
+            return list_res[0], self
 
-        stacks: List[Dict[str, str]] = json.loads(res[1])
+        stacks: List[Dict[str, str]] = json.loads(list_res[1])
         for stack in stacks:
             if stack["Name"] == self.name:
                 self.base = stack["Base"]
@@ -153,12 +151,14 @@ class Stack(ApxEntityBase):
         return False, self
 
     def update(self, base: Text, packages: Text, pkg_manager: Text) -> Tuple[bool, str]:
-        command: Text = f'apx stacks update --name {self.name} --base {base} --packages "{packages}" --pkg-manager {pkg_manager} -y'
+        command: Text = (
+            f"apx stacks update --name '{self.name}' --base '{base}' --packages '{packages}' --pkg-manager '{pkg_manager}' -y"
+        )
         return self._run_command(command)
 
     def remove(self, force: bool = False) -> Tuple[bool, str]:
         force_flag: Text = "--force" if force else ""
-        command: Text = f"apx stacks rm {force_flag} --name {self.name}"
+        command: Text = f"apx stacks rm {force_flag} --name '{self.name}'"
         return self._run_command(command)
 
 
@@ -181,20 +181,22 @@ class Subsystem(ApxEntityBase):
         self.exported_programs: Optional[Dict[str, str]] = exported_programs
 
     def create(self) -> Tuple[bool, "Subsystem"]:
-        command: Text = f"subsystems new --name {self.name} --stack {self.stack.name}"
+        new_command: Text = (
+            f"subsystems new --name '{self.name}' --stack '{self.stack.name}'"
+        )
         # the following apx command is safe to ignore errors, we´ll check the
         # subsystem status by getting the list of subsystems
-        res: Tuple[bool, str] = self._run_apx_command(command, True)
-        if not res[0]:
-            return res[0], self
+        new_res: Tuple[bool, str] = self._run_apx_command(new_command, True)
+        if not new_res[0]:
+            return new_res[0], self
 
-        command: Text = f"subsystems list --json"
-        res: Tuple[bool, str] = self._run_apx_command(command)
-        if not res[0]:
-            return res[0], self
+        list_command: Text = f"subsystems list --json"
+        list_res: Tuple[bool, str] = self._run_apx_command(list_command)
+        if not list_res[0]:
+            return list_res[0], self
 
         try:
-            subsystems: List[Dict[str, str]] = json.loads(res[1])
+            subsystems = json.loads(list_res[1])
         except json.decoder.JSONDecodeError:
             return False, self
         for subsystem in subsystems:
@@ -207,17 +209,17 @@ class Subsystem(ApxEntityBase):
         return False, self
 
     def update(self, stack: Text) -> Tuple[bool, str]:
-        command: Text = f"subsystems update --name {self.name} --stack {stack} -y"
+        command: Text = f"subsystems update --name '{self.name}' --stack '{stack}' -y"
         return self._run_apx_command(command)
 
     def remove(self, force: bool = False) -> Tuple[bool, str]:
         force_flag: Text = "--force" if force else ""
-        command: Text = f"subsystems rm {force_flag} --name {self.name}"
+        command: Text = f"subsystems rm {force_flag} --name '{self.name}'"
         return self._run_apx_command(command)
 
     def reset(self, force: bool = False) -> Tuple[bool, str]:
         force_flag: Text = "--force" if force else ""
-        command: Text = f"subsystems reset {force_flag} --name {self.name}"
+        command: Text = f"subsystems reset {force_flag} --name '{self.name}'"
         return self._run_apx_command(command)
 
 
@@ -254,24 +256,24 @@ class PkgManager(ApxEntityBase):
         self.built_in: Text = built_in
 
     def create(self) -> Tuple[bool, "PkgManager"]:
-        command: Text = (
-            f"pkgmanagers new --name {self.name} --need-sudo {self.need_sudo} "
-            f"--autoremove {self.cmd_auto_remove} --clean {self.cmd_clean} "
-            f"--install {self.cmd_install} --list {self.cmd_list} "
-            f"--purge {self.cmd_purge} --remove {self.cmd_remove} "
-            f"--search {self.cmd_search} --show {self.cmd_show} "
-            f"--update {self.cmd_update} --upgrade {self.cmd_upgrade}"
+        new_command: Text = (
+            f"pkgmanagers new --name '{self.name}' --need-sudo '{self.need_sudo}' "
+            f"--autoremove '{self.cmd_auto_remove}' --clean '{self.cmd_clean}' "
+            f"--install '{self.cmd_install}' --list '{self.cmd_list}' "
+            f"--purge '{self.cmd_purge}' --remove '{self.cmd_remove}' "
+            f"--search '{self.cmd_search}' --show '{self.cmd_show}' "
+            f"--update '{self.cmd_update}' --upgrade '{self.cmd_upgrade}'"
         )
-        res: Tuple[bool, str] = self._run_apx_command(command)
-        if not res[0]:
-            return res[0], self
+        new_res: Tuple[bool, str] = self._run_apx_command(new_command)
+        if not new_res[0]:
+            return new_res[0], self
 
-        command: Text = f"pkgmanagers list --json"
-        res: Tuple[bool, str] = self._run_apx_command(command)
-        if not res[0]:
-            return res[0], self
+        list_command: Text = f"pkgmanagers list --json"
+        list_res: Tuple[bool, str] = self._run_apx_command(list_command)
+        if not list_res[0]:
+            return list_res[0], self
 
-        pkgmanagers: List[Dict[str, Union[str, bool]]] = json.loads(res[1])
+        pkgmanagers = json.loads(list_res[1])
         for pkgmanager in pkgmanagers:
             if pkgmanager["Name"] == self.name:
                 self.need_sudo = pkgmanager["NeedSudo"]
@@ -292,7 +294,7 @@ class PkgManager(ApxEntityBase):
 
     def remove(self, force: bool = False) -> Tuple[bool, str]:
         force_flag: Text = "--force" if force else ""
-        command: Text = f"pkgmanagers rm {force_flag} --name {self.name}"
+        command: Text = f"pkgmanagers rm {force_flag} --name '{self.name}'"
         return self._run_apx_command(command)
 
     def update(
@@ -310,11 +312,11 @@ class PkgManager(ApxEntityBase):
         cmd_upgrade: Text,
     ) -> Tuple[bool, str]:
         command: Text = (
-            f"pkgmanagers update --name {self.name} --need-sudo {need_sudo} "
-            f"--autoremove {cmd_auto_remove} --clean {cmd_clean} "
-            f"--install {cmd_install} --list {cmd_list} "
-            f"--purge {cmd_purge} --remove {cmd_remove} "
-            f"--search {cmd_search} --show {cmd_show} "
-            f"--update {cmd_update} --upgrade {cmd_upgrade}"
+            f"pkgmanagers update --name '{self.name}' --need-sudo '{need_sudo}' "
+            f"--autoremove '{cmd_auto_remove}' --clean '{cmd_clean}' "
+            f"--install '{cmd_install}' --list '{cmd_list}' "
+            f"--purge '{cmd_purge}' --remove '{cmd_remove}' "
+            f"--search '{cmd_search}' --show '{cmd_show}' "
+            f"--update '{cmd_update}' --upgrade '{cmd_upgrade}'"
         )
         return self._run_apx_command(command)
