@@ -18,20 +18,29 @@
 # SPDX-License-Identifier: GPL-3.0-or-later
 
 from gi.repository import Gtk, Adw
-from typing import Text
 from uuid import UUID
+
+from gettext import gettext as _
 
 from apx_gui.core.apx_entities import Subsystem
 
 
 @Gtk.Template(resource_path="/org/vanillaos/apx-gui/gtk/entry-subsystem.ui")
 class EntrySubsystem(Adw.ActionRow):
-    __gtype_name__: Text = "EntrySubsystem"
+    __gtype_name__: str = "EntrySubsystem"
+
+    status: Gtk.Image = Gtk.Template.Child()  # pyright: ignore
 
     def __init__(self, subsystem: Subsystem, **kwargs) -> None:
         super().__init__(**kwargs)
         self.set_title(subsystem.name)
-        self.set_subtitle(f"Based on the {subsystem.stack.name} stack.")
+        self.set_subtitle(_("Based on the {} stack.").format(subsystem.stack.name))
+
+        if subsystem.running:
+            icon_name = "media-playback-start-symbolic"
+        else:
+            icon_name = "media-playback-stop-symbolic"
+        self.status.set_from_icon_name(icon_name)
 
         self.subsystem: Subsystem = subsystem
         self.aid: UUID = subsystem.aid

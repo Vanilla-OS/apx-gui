@@ -17,61 +17,68 @@
 #
 # SPDX-License-Identifier: GPL-3.0-or-later
 
-from gi.repository import Gtk, Adw, Gio
-from typing import Dict, List, Optional, Union, Text
 from uuid import UUID
+
+from gi.repository import Gtk, Adw, Gio
+
 from apx_gui.core.apx_entities import Subsystem, Stack, PkgManager
 from apx_gui.widgets.tab_subsystem import TabSubsystem
 from apx_gui.widgets.tab_stack import TabStack
 from apx_gui.widgets.tab_pkgmanager import TabPkgManager
 
+from typing import TYPE_CHECKING
+
+if TYPE_CHECKING:
+    from apx_gui.windows.main_window import ApxGUIWindow
+
 
 @Gtk.Template(resource_path="/org/vanillaos/apx-gui/gtk/editor.ui")
 class Editor(Adw.Bin):
-    __gtype_name__: Text = "Editor"
-    __registry__: Dict[str, Union[List[UUID], Dict[UUID, Adw.TabPage]]] = {
-        "open": [],
-        "tabs": {},
-    }
+    __gtype_name__: str = "Editor"
+    __registry__: dict[UUID, Adw.TabPage] = {}
 
-    tabs_editor: Adw.TabView = Gtk.Template.Child()
-    stack_editor: Adw.ViewStack = Gtk.Template.Child()
-    page_no_tabs: Adw.ViewStackPage = Gtk.Template.Child()
-    page_editor: Adw.ViewStackPage = Gtk.Template.Child()
+    tabs_editor: Adw.TabView = Gtk.Template.Child()  # pyright: ignore
+    stack_editor: Adw.ViewStack = Gtk.Template.Child()  # pyright: ignore
+    page_no_tabs: Adw.ViewStackPage = Gtk.Template.Child()  # pyright: ignore
+    page_editor: Adw.ViewStackPage = Gtk.Template.Child()  # pyright: ignore
 
     def __init__(self, window: Adw.ApplicationWindow, **kwargs) -> None:
         super().__init__(**kwargs)
-        self.__window: Adw.ApplicationWindow = window
+        self.__window: ApxGUIWindow = window  # pyright: ignore
         self.__build_ui()
 
     def __build_ui(self) -> None:
         self.tabs_editor.connect("page-detached", self.__on_page_detached)
         self.tabs_editor.connect("page-attached", self.__on_page_attached)
+        self.tabs_editor.connect("notify::selected-page", self.__on_page_changed)
+
+    def __on_page_changed(self, tabs: Adw.TabView, *args):
+        if tabs.get_selected_page():
+            self.__window.title.set_title(
+                tabs.get_selected_page().get_child().name  # pyright: ignore
+            )
 
     def __on_page_detached(self, tabs: Adw.TabView, page: Adw.TabPage, *args) -> None:
-        self.__registry__["open"].remove(page.get_child().aid)
-        self.__registry__["tabs"].pop(page.get_child().aid)
+        self.__registry__.pop(page.get_child().aid)  # pyright: ignore
 
         if tabs.get_n_pages() == 0:
             self.stack_editor.set_visible_child_name("no_tabs")
+            self.__window.title.set_title("")
 
     def __on_page_attached(self, tabs: Adw.TabView, page: Adw.TabPage, *args) -> None:
         self.page_no_tabs.set_visible(False)
         self.page_editor.set_visible(True)
-        self.__registry__["open"].append(page.get_child().aid)
-        self.__registry__["tabs"][page.get_child().aid] = page
+        self.__registry__[page.get_child().aid] = page  # pyright: ignore
 
         if tabs.get_n_pages() > 0:
             self.stack_editor.set_visible_child_name("editor")
 
-    def open(self, aid: UUID) -> bool:
-        if aid in self.__registry__["open"]:
-            self.tabs_editor.set_selected_page(self.__registry__["tabs"][aid])
-            return True
-        return False
+    def open(self, aid: UUID):
+        if self.is_open(aid):
+            self.tabs_editor.set_selected_page(self.__registry__[aid])
 
     def is_open(self, aid: UUID) -> bool:
-        return aid in self.__registry__["open"]
+        return aid in self.__registry__.keys()
 
     def new_subsystem_tab(self, subsystem: Subsystem) -> None:
         page: Adw.TabPage = self.tabs_editor.append(
@@ -110,6 +117,17 @@ class Editor(Adw.Bin):
 
         self.open(pkgmanager.aid)
 
+    def update_subsystem_tab(self, subsystem: Subsystem) -> None:
+        if not self.is_open(subsystem.aid):
+            return
+
+        self.__registry__[subsystem.aid].get_child().update_page(  # pyright: ignore
+            subsystem
+        )
+
+        # self.close(subsystem.aid)
+        # self.new_subsystem_tab(subsystem)
+
     def close(self, aid: UUID) -> None:
         if self.is_open(aid):
-            self.tabs_editor.close_page(self.__registry__["tabs"][aid])
+            self.tabs_editor.close_page(self.__registry__[aid])

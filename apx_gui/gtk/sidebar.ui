@@ -1,73 +1,98 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <interface>
-  <template class="Sidebar" parent="GtkBox">
-    <property name="orientation">vertical</property>
+  <requires lib="gtk" version="4.0"/>
+  <template class="Sidebar" parent="AdwBin">
     <child>
-      <object class="GtkBox">
-        <property name="margin-top">5</property>
-        <property name="margin-end">5</property>
-        <property name="margin-bottom">5</property>
-        <property name="margin-start">5</property>
-        <property name="spacing">5</property>
-        <property name="homogeneous">true</property>
-        <child>
-          <object class="GtkButton" id="btn_show_subsystems">
-            <property name="icon-name">utilities-terminal-symbolic</property>
-          </object>
-        </child>
-        <child>
-          <object class="GtkButton" id="btn_show_stacks">
-            <property name="icon-name">vanilla-puzzle-piece-symbolic</property>
-            <style>
-              <class name="flat"/>
-            </style>
-          </object>
-        </child>
-        <child>
-          <object class="GtkButton" id="btn_show_pkgmanagers">
-            <property name="icon-name">insert-object-symbolic</property>
-            <style>
-              <class name="flat"/>
-            </style>
-          </object>
-        </child>
-      </object>
-    </child>
-    <child>
-      <object class="GtkSeparator"></object>
-    </child>
-    <child>
-      <object class="GtkScrolledWindow">
-        <child>
-          <object class="AdwViewStack" id="stack_sidebar">
-            <property name="vexpand">true</property>
-            <child>
-              <object class="AdwViewStackPage" id="page_subsystems">
-                <property name="name">subsystems</property>
-                <property name="child">
-                  <object class="GtkListBox" id="list_subsystems"></object>
-                </property>
-              </object>
-            </child>
-            <child>
-              <object class="AdwViewStackPage" id="page_stacks">
-                <property name="name">stacks</property>
-                <property name="child">
-                  <object class="GtkListBox" id="list_stacks"></object>
-                </property>
-              </object>
-            </child>
-            <child>
-              <object class="AdwViewStackPage" id="page_pkgmanagers">
-                <property name="name">pkgmanagers</property>
-                <property name="child">
-                  <object class="GtkListBox" id="list_pkgmanagers"></object>
-                </property>
+      <object class="AdwToolbarView">
+        <child type="top">
+          <object class="AdwHeaderBar">
+            <property name="decoration-layout"></property>
+            <child type="start">
+              <object class="AdwSplitButton" id="btn_new">
+                <property name="menu-model">menu_add</property>
+                <property name="icon-name">list-add-symbolic</property>
               </object>
             </child>
           </object>
         </child>
+        <child type="top">
+          <object class="AdwHeaderBar">
+            <property name="margin-top">5</property>
+            <property name="show-end-title-buttons">false</property>
+            <property name="show-start-title-buttons">false</property>
+            <property name="title-widget">
+              <object class="AdwViewSwitcher">
+                <property name="stack">stack_sidebar</property>
+                <property name="policy">1</property>
+              </object>
+            </property>
+          </object>
+        </child>
+        <property name="content">
+          <object class="GtkScrolledWindow">
+            <child>
+              <object class="AdwViewStack" id="stack_sidebar">
+                <property name="vexpand">true</property>
+                <child>
+                  <object class="AdwViewStackPage" id="page_subsystems">
+                    <property name="name">subsystems</property>
+                    <property name="icon-name">utilities-terminal-symbolic</property>
+                    <property name="child">
+                      <object class="GtkListBox" id="list_subsystems">
+                        <style>
+                          <class name="navigation-sidebar"/>
+                        </style>
+                      </object>
+                    </property>
+                  </object>
+                </child>
+                <child>
+                  <object class="AdwViewStackPage" id="page_stacks">
+                    <property name="name">stacks</property>
+                    <property name="icon-name">vanilla-puzzle-piece-symbolic</property>
+                    <property name="child">
+                      <object class="GtkListBox" id="list_stacks">
+                        <style>
+                          <class name="navigation-sidebar"/>
+                        </style>
+                      </object>
+                    </property>
+                  </object>
+                </child>
+                <child>
+                  <object class="AdwViewStackPage" id="page_pkgmanagers">
+                    <property name="name">pkgmanagers</property>
+                    <property name="icon-name">insert-object-symbolic</property>
+                    <property name="child">
+                      <object class="GtkListBox" id="list_pkgmanagers">
+                        <style>
+                          <class name="navigation-sidebar"/>
+                        </style>
+                      </object>
+                    </property>
+                  </object>
+                </child>
+              </object>
+            </child>
+          </object>
+        </property>
       </object>
     </child>
   </template>
+  <menu id="menu_add">
+    <section>
+      <item>
+        <attribute name="label" translatable="true">New Subsystem</attribute>
+        <attribute name="action">app.new_subsystem</attribute>
+      </item>
+      <item>
+        <attribute name="label" translatable="true">New Stack</attribute>
+        <attribute name="action">app.new_stack</attribute>
+      </item>
+      <item>
+        <attribute name="label" translatable="true">New Package Manager</attribute>
+        <attribute name="action">app.new_pkgmanager</attribute>
+      </item>
+    </section>
+  </menu>
 </interface>

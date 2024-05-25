@@ -1,55 +1,45 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <interface>
   <requires lib="gtk" version="4.0"/>
-  <requires lib="Adw" version="1.0"/>
   <template class="ApxGUIWindow" parent="AdwApplicationWindow">
     <property name="default-width">1100</property>
     <property name="default-height">800</property>
     <property name="title">Apx</property>
     <child>
-      <object class="GtkBox">
-        <property name="orientation">vertical</property>
-        <child>
-          <object class="GtkHeaderBar">
-            <child type="start">
-              <object class="GtkMenuButton" id="btn_new">
-                <property name="menu-model">menu_add</property>
-                <style>
-                  <class name="flat"/>
-                </style>
-                <child>
-                  <object class="GtkBox">
-                    <property name="spacing">5</property>
-                    <child>
-                      <object class="GtkImage">
-                        <property name="icon-name">list-add-symbolic</property>
-                      </object>
-                    </child>
-                    <child>
-                      <object class="GtkImage">
-                        <property name="icon-name">pan-down-symbolic</property>
-                      </object>
-                    </child>
-                  </object>
-                </child>
-              </object>
-            </child>
-            <child type="end">
-              <object class="GtkMenuButton" id="btn_menu">
-                <property name="menu-model">menu_primary</property>
-                <property name="icon-name">open-menu-symbolic</property>
-              </object>
-            </child>
-          </object>
-        </child>
+      <object class="AdwBreakpointBin">
+        <property name="width-request">600</property>
+        <property name="height-request">450</property>
         <child>
           <object class="AdwToastOverlay" id="toasts">
             <child>
-              <object class="GtkPaned" id="paned_main">
-                <property name="hexpand">True</property>
-                <property name="vexpand">True</property>
-                <property name="position">300</property>
-                <property name="position_set">True</property>
+              <object class="AdwOverlaySplitView" id="paned_main">
+                <property name="hexpand">true</property>
+                <property name="vexpand">true</property>
+                <property name="content">
+                  <object class="AdwToolbarView">
+                    <child type="top">
+                      <object class="AdwHeaderBar">
+                        <property name="title-widget">
+                          <object class="AdwWindowTitle" id="title"></object>
+                        </property>
+                        <child type="end">
+                          <object class="GtkMenuButton" id="btn_menu">
+                            <property name="menu-model">menu_primary</property>
+                            <property name="icon-name">open-menu-symbolic</property>
+                          </object>
+                        </child>
+                      </object>
+                    </child>
+                    <child type="top">
+                      <object class="AdwTabBar" id="tab_bar">
+                        <property name="autohide">false</property>
+                      </object>
+                    </child>
+                    <property name="content">
+                      <object class="AdwBin" id="content"></object>
+                    </property>
+                  </object>
+                </property>
               </object>
             </child>
           </object>
@@ -57,30 +47,14 @@
       </object>
     </child>
   </template>
-  <menu id="menu_add">
-    <section>
-      <item>
-        <attribute name="label" translatable="yes">New Subsystem</attribute>
-        <attribute name="action">app.new_subsystem</attribute>
-      </item>
-      <item>
-        <attribute name="label" translatable="yes">New Stack</attribute>
-        <attribute name="action">app.new_stack</attribute>
-      </item>
-      <item>
-        <attribute name="label" translatable="yes">New Package Manager</attribute>
-        <attribute name="action">app.new_pkgmanager</attribute>
-      </item>
-    </section>
-  </menu>
   <menu id="menu_primary">
     <section>
       <item>
-        <attribute name="label" translatable="yes">_Keyboard Shortcuts</attribute>
+        <attribute name="label" translatable="true">_Keyboard Shortcuts</attribute>
         <attribute name="action">win.show-help-overlay</attribute>
       </item>
       <item>
-        <attribute name="label" translatable="yes">_About Apx GUI</attribute>
+        <attribute name="label" translatable="true">_About Apx GUI</attribute>
         <attribute name="action">app.about</attribute>
       </item>
     </section>

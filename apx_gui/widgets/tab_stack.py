@@ -17,30 +17,36 @@
 #
 # SPDX-License-Identifier: GPL-3.0-or-later
 
-from gi.repository import Gtk, Gio, GLib, GObject, Adw
+from gi.repository import Gtk, Adw
 from uuid import UUID
-from typing import List, Text
+
+from gettext import gettext as _
 
 from apx_gui.core.apx_entities import Stack
 from apx_gui.core.run_async import RunAsync
 from apx_gui.utils.gtk import GtkUtils
 
+from typing import TYPE_CHECKING
+
+if TYPE_CHECKING:
+    from apx_gui.windows.main_window import ApxGUIWindow
+
 
 @Gtk.Template(resource_path="/org/vanillaos/apx-gui/gtk/tab-stack.ui")
 class TabStack(Gtk.Box):
-    __gtype_name__: Text = "TabStack"
+    __gtype_name__: str = "TabStack"
 
-    row_base: Adw.EntryRow = Gtk.Template.Child()
-    row_pkgmanager: Adw.EntryRow = Gtk.Template.Child()
-    row_packages: Adw.ExpanderRow = Gtk.Template.Child()
-    row_builtin: Adw.ActionRow = Gtk.Template.Child()
-    btn_delete: Adw.ActionRow = Gtk.Template.Child()
-    infobar: Gtk.InfoBar = Gtk.Template.Child()
-    group_actions: Adw.PreferencesGroup = Gtk.Template.Child()
+    row_base: Adw.EntryRow = Gtk.Template.Child()  # pyright: ignore
+    row_pkgmanager: Adw.EntryRow = Gtk.Template.Child()  # pyright: ignore
+    row_packages: Adw.ExpanderRow = Gtk.Template.Child()  # pyright: ignore
+    row_builtin: Adw.ActionRow = Gtk.Template.Child()  # pyright: ignore
+    btn_delete: Adw.ActionRow = Gtk.Template.Child()  # pyright: ignore
+    infobar: Gtk.InfoBar = Gtk.Template.Child()  # pyright: ignore
+    group_actions: Adw.PreferencesGroup = Gtk.Template.Child()  # pyright: ignore
 
     def __init__(self, window: Adw.ApplicationWindow, stack: Stack, **kwargs) -> None:
         super().__init__(**kwargs)
-        self.__window: Adw.ApplicationWindow = window
+        self.__window: ApxGUIWindow = window  # pyright: ignore
         self.__aid: UUID = stack.aid
         self.__stack: Stack = stack
         self.__build_ui()
@@ -48,8 +54,8 @@ class TabStack(Gtk.Box):
     def __build_ui(self) -> None:
         self.row_base.set_text(self.__stack.base)
         self.row_pkgmanager.set_text(self.__stack.pkg_manager)
-        self.row_packages.set_title(f"{len(self.__stack.packages)} Packages")
-        self.row_builtin.set_subtitle("Yes" if self.__stack.built_in else "No")
+        self.row_packages.set_title(_("{} Packages").format(len(self.__stack.packages)))
+        self.row_builtin.set_subtitle(_("Yes") if self.__stack.built_in else _("No"))
 
         if self.__stack.built_in:
             self.infobar.set_revealed(True)
@@ -67,36 +73,44 @@ class TabStack(Gtk.Box):
         self.row_pkgmanager.connect("apply", self.__on_pkgmanager_apply)
 
         for pkg in self.__stack.packages:
-            row: Adw.ActionRow = Adw.ActionRow()
-            row.set_title(pkg)
-            self.row_packages.add_row(row)
+            arow: Adw.ActionRow = Adw.ActionRow()
+            arow.set_title(pkg)
+            self.row_packages.add_row(arow)
             if self.__stack.built_in:
-                row.set_sensitive(False)
+                arow.set_sensitive(False)
 
     @property
     def aid(self) -> UUID:
         return self.__aid
 
+    @property
+    def name(self) -> str:
+        return self.__stack.name
+
     def __on_delete_clicked(self, button: Gtk.Button) -> None:
         def on_callback(result: bool, *args) -> None:
             status: bool = result
             if status:
-                self.__window.toast(f"{self.__stack.name} stack deleted")
+                self.__window.toast(_("{} stack deleted").format(self.__stack.name))
                 self.__window.remove_stack(self.__aid)
 
-        def on_response(dialog: Adw.MessageDialog, response: Text) -> None:
+        def on_response(dialog: Adw.MessageDialog, response: str) -> None:
             if response == "ok":
-                self.__window.toast(f"Deleting {self.__stack.name} stack...")
+                self.__window.toast(_("Deleting {} stack...").format(self.__stack.name))
                 RunAsync(self.__stack.remove, on_callback, force=True)
             dialog.destroy()
 
         dialog: Adw.MessageDialog = Adw.MessageDialog.new(
             self.__window,
-            f"Are you sure you want to delete the {self.__stack.name} stack?",
-            "This action will delete the stack and all its data. This action cannot be undone.",
+            _("Are you sure you want to delete the {} stack?").format(
+                self.__stack.name
+            ),
+            _(
+                "This action will delete the stack and all its data. This action cannot be undone."
+            ),
         )
-        dialog.add_response("cancel", "Cancel")
-        dialog.add_response("ok", "Delete")
+        dialog.add_response("cancel", _("Cancel"))
+        dialog.add_response("ok", _("Delete"))
         dialog.set_response_appearance("ok", Adw.ResponseAppearance.DESTRUCTIVE)
         dialog.connect("response", on_response)
         dialog.present()
@@ -109,9 +123,11 @@ class TabStack(Gtk.Box):
             status: bool = result
             if status:
                 self.__stack.base = row.get_text()
-                self.__window.toast(f"{self.__stack.name} stack updated")
+                self.__window.toast(_("{} stack updated").format(self.__stack.name))
             else:
-                self.__window.toast(f"Error updating {self.__stack.name} stack")
+                self.__window.toast(
+                    _("Error updating {} stack").format(self.__stack.name)
+                )
 
         RunAsync(self.__update, on_callback, base=row.get_text())
 
@@ -120,20 +136,33 @@ class TabStack(Gtk.Box):
             status: bool = result
             if status:
                 self.__stack.pkg_manager = row.get_text()
-                self.__window.toast(f"{self.__stack.name} stack updated")
+                self.__window.toast(_("{} stack updated").format(self.__stack.name))
             else:
-                self.__window.toast(f"Error updating {self.__stack.name} stack")
+                self.__window.toast(
+                    _("Error updating {} stack").format(self.__stack.name)
+                )
 
         RunAsync(self.__update, on_callback, pkg_manager=row.get_text())
 
     def __update(
-        self, base: Text = None, packages: List[str] = None, pkg_manager: Text = None
+        self,
+        base: str | None = None,
+        packages: list[str] | None = None,
+        pkg_manager: str | None = None,
     ) -> bool:
         if base is None:
             base = self.__stack.base
+
         if packages is None:
-            packages = self.__stack.packages
+            if type(self.__stack.packages) == list:
+                packages_str = " ".join(self.__stack.packages)
+            else:
+                packages_str = str(self.__stack.packages)
+        else:
+            packages_str = " ".join(packages)
+
         if pkg_manager is None:
             pkg_manager = self.__stack.pkg_manager
 
-        return self.__stack.update(base, packages, pkg_manager)
+        ok, _out = self.__stack.update(base, packages_str, pkg_manager)
+        return ok

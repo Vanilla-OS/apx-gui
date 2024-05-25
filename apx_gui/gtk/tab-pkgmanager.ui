@@ -127,6 +127,7 @@
                     <property name="valign">center</property>
                     <style>
                       <class name="flat"/>
+                      <class name="error"/>
                     </style>
                   </object>
                 </child>

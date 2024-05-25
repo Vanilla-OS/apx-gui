@@ -18,44 +18,50 @@
 # SPDX-License-Identifier: GPL-3.0-only
 
 from gi.repository import Gtk, Adw
-from typing import List, Text, Union
+
+from gettext import gettext as _
 
 from apx_gui.core.apx_entities import PkgManager, Stack
 from apx_gui.utils.gtk import GtkUtils
 from apx_gui.core.run_async import RunAsync
 
+from typing import TYPE_CHECKING
+
+if TYPE_CHECKING:
+    from apx_gui.windows.main_window import ApxGUIWindow
+
 
 @Gtk.Template(resource_path="/org/vanillaos/apx-gui/gtk/create-stack.ui")
 class CreateStackWindow(Adw.Window):
     __gtype_name__ = "CreateStackWindow"
-    __registry__: List[str] = []
+    __registry__: list[str] = []
 
     __valid_name: bool = False
     __valid_base: bool = False
 
-    btn_cancel: Gtk.Button = Gtk.Template.Child()
-    btn_close: Gtk.Button = Gtk.Template.Child()
-    btn_create: Gtk.Button = Gtk.Template.Child()
-    btn_add_package: Gtk.Button = Gtk.Template.Child()
-    row_name: Adw.EntryRow = Gtk.Template.Child()
-    row_base: Adw.EntryRow = Gtk.Template.Child()
-    row_package: Adw.EntryRow = Gtk.Template.Child()
-    row_pkgmanager: Adw.ComboRow = Gtk.Template.Child()
-    str_pkgmanager: Gtk.StringList = Gtk.Template.Child()
-    group_packages: Adw.PreferencesGroup = Gtk.Template.Child()
-    stack_main: Adw.ViewStack = Gtk.Template.Child()
+    btn_cancel: Gtk.Button = Gtk.Template.Child()  # pyright: ignore
+    btn_close: Gtk.Button = Gtk.Template.Child()  # pyright: ignore
+    btn_create: Gtk.Button = Gtk.Template.Child()  # pyright: ignore
+    btn_add_package: Gtk.Button = Gtk.Template.Child()  # pyright: ignore
+    row_name: Adw.EntryRow = Gtk.Template.Child()  # pyright: ignore
+    row_base: Adw.EntryRow = Gtk.Template.Child()  # pyright: ignore
+    row_package: Adw.EntryRow = Gtk.Template.Child()  # pyright: ignore
+    row_pkgmanager: Adw.ComboRow = Gtk.Template.Child()  # pyright: ignore
+    str_pkgmanager: Gtk.StringList = Gtk.Template.Child()  # pyright: ignore
+    group_packages: Adw.PreferencesGroup = Gtk.Template.Child()  # pyright: ignore
+    stack_main: Adw.ViewStack = Gtk.Template.Child()  # pyright: ignore
 
     def __init__(
         self,
         window: Adw.ApplicationWindow,
-        stacks: List[Stack],
-        pkgmanagers: List[PkgManager],
+        stacks: list[Stack],
+        pkgmanagers: list[PkgManager],
         **kwargs,
     ) -> None:
         super().__init__(**kwargs)
-        self.__window: Adw.ApplicationWindow = window
-        self.__stacks: List[Stack] = stacks
-        self.__pkgmanagers: List[PkgManager] = pkgmanagers
+        self.__window: ApxGUIWindow = window  # pyright: ignore
+        self.__stacks: list[Stack] = stacks
+        self.__pkgmanagers: list[PkgManager] = pkgmanagers
 
         self.__build_ui()
 
@@ -78,19 +84,21 @@ class CreateStackWindow(Adw.Window):
         self.close()
 
     def __on_create_clicked(self, button: Gtk.Button) -> None:
-        def on_callback(result: List[Union[bool, Stack]], *args):
+        def on_callback(result: tuple[bool, Stack], *args):
             status: bool = result[0]
             stack: Stack = result[1]
 
             if status:
                 self.__window.append_stack(stack)
                 self.close()
-                self.__window.toast(f"Stack {stack.name} created successfully")
+                self.__window.toast(
+                    _("Stack {} created successfully").format(stack.name)
+                )
                 return
 
             self.stack_main.set_visible_child_name("error")
 
-        def create_stack() -> List[Union[bool, Stack]]:
+        def create_stack() -> tuple[bool, Stack]:
             stack: Stack = Stack(
                 self.row_name.get_text(),
                 self.row_base.get_text(),
@@ -105,7 +113,7 @@ class CreateStackWindow(Adw.Window):
         RunAsync(create_stack, on_callback)
 
     def __on_name_changed(self, entry: Adw.EntryRow) -> None:
-        name: Text = entry.get_text()
+        name: str = entry.get_text()
         if name in [stack.name for stack in self.__stacks]:
             entry.add_css_class("error")
             self.btn_create.set_sensitive(False)
@@ -145,5 +153,5 @@ class CreateStackWindow(Adw.Window):
         self.group_packages.remove(row)
         self.__registry__.remove(row.get_title())
 
-    def __get_packages(self) -> List[str]:
+    def __get_packages(self) -> str:
         return " ".join(self.__registry__)

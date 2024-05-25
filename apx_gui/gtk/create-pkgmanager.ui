@@ -21,8 +21,8 @@
                                         <child type="start">
                                             <object class="GtkButton" id="btn_cancel">
                                                 <property name="label" translatable="yes">Cancel</property>
-                                            </object>   
-                                        </child>    
+                                            </object>
+                                        </child>
                                         <child type="end">
                                             <object class="GtkButton" id="btn_create">
                                                 <property name="label" translatable="yes">Create</property>
@@ -68,7 +68,7 @@
                                         <child>
                                             <object class="AdwPreferencesGroup">
                                                 <property name="title" translatable="yes">Commands</property>
-                                                <child> 
+                                                <child>
                                                     <object class="AdwEntryRow" id="row_autoremove">
                                                         <property name="title" translatable="yes">Autoremove</property>
                                                     </object>

@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <interface>
+	<requires lib="gtk" version="4.0"/>
 	<template class="TabSubsystem" parent="GtkBox">
 		<property name="orientation">vertical</property>
 		<child>
@@ -11,7 +12,7 @@
 					<object class="AdwPreferencesPage">
 						<child>
 							<object class="AdwPreferencesGroup">
-								<property name="title">Details</property>
+								<property name="title" translatable="yes">Details</property>
 								<child>
 									<object class="AdwActionRow" id="row_status">
 										<property name="title" translatable="yes">Status</property>
@@ -55,7 +56,55 @@
 						</child>
 						<child>
 							<object class="AdwPreferencesGroup">
-								<property name="title">Destructive Actions</property>
+								<property name="title" translatable="yes">Subsystem actions</property>
+								<child>
+									<object class="AdwActionRow" id="row_startstop">
+										<property name="activatable-widget">btn_startstop</property>
+										<child type="suffix">
+											<object class="GtkButton" id="btn_startstop">
+												<property name="valign">center</property>
+												<style>
+													<class name="flat"/>
+												</style>
+											</object>
+										</child>
+									</object>
+								</child>
+								<child>
+									<object class="AdwActionRow" id="row_autoremove">
+										<property name="title" translatable="yes">Autoremove Packages</property>
+										<property name="activatable-widget">btn_autoremove</property>
+										<child type="suffix">
+											<object class="GtkButton" id="btn_autoremove">
+												<property name="icon-name">recycling-bin-symbolic</property>
+												<property name="valign">center</property>
+												<style>
+													<class name="flat"/>
+												</style>
+											</object>
+										</child>
+									</object>
+								</child>
+								<child>
+									<object class="AdwActionRow" id="row_clean">
+										<property name="title" translatable="yes">Clean Package Manager Cache</property>
+										<property name="activatable-widget">btn_clean</property>
+										<child type="suffix">
+											<object class="GtkButton" id="btn_clean">
+												<property name="icon-name">brush-symbolic</property>
+												<property name="valign">center</property>
+												<style>
+													<class name="flat"/>
+												</style>
+											</object>
+										</child>
+									</object>
+								</child>
+							</object>
+						</child>
+						<child>
+							<object class="AdwPreferencesGroup">
+								<property name="title" translatable="yes">Destructive Actions</property>
 								<child>
 									<object class="AdwActionRow" id="row_reset">
 										<property name="title" translatable="yes">Reset Subsystem</property>
@@ -81,6 +130,7 @@
 												<property name="valign">center</property>
 												<style>
 													<class name="flat"/>
+													<class name="error"/>
 												</style>
 											</object>
 										</child>

@@ -13,6 +13,10 @@
     <file preprocess="xml-stripblanks">gtk/entry-pkgmanager.ui</file>
     <file preprocess="xml-stripblanks">gtk/create-subsystem.ui</file>
     <file preprocess="xml-stripblanks">gtk/create-stack.ui</file>
-    <file preprocess="xml-stripblanks">gtk/create-pkgmanager.ui</file>  
+    <file preprocess="xml-stripblanks">gtk/create-pkgmanager.ui</file>
+  </gresource>
+  <gresource prefix="/org/vanillaos/apx-gui/icons/scalable/actions/">
+    <file preprocess="xml-stripblanks">../data/icons/hicolor/symbolic/actions/recycling-bin-symbolic.svg</file>
+    <file preprocess="xml-stripblanks">../data/icons/hicolor/symbolic/actions/brush-symbolic.svg</file>
   </gresource>
 </gresources>
