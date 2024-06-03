@@ -14,8 +14,8 @@ msgstr ""
 "Project-Id-Version: apx_gui\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2024-01-17 09:36+0530\n"
-"PO-Revision-Date: 2024-01-29 00:02+0000\n"
-"Last-Translator: David González <iwisp360@hotmail.com>\n"
+"PO-Revision-Date: 2024-06-03 12:30+0000\n"
+"Last-Translator: gallegonovato <fran-carro@hotmail.es>\n"
 "Language-Team: Spanish <https://hosted.weblate.org/projects/vanilla-os/"
 "apx-gui/es/>\n"
 "Language: es\n"
@@ -23,7 +23,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 5.4-dev\n"
+"X-Generator: Weblate 5.6-dev\n"
 
 #: data/org.vanillaos.ApxGUI.desktop.in:3
 msgid "Apx"
@@ -193,12 +193,12 @@ msgstr "General"
 #: apx_gui/gtk/help-overlay.ui:14
 msgctxt "shortcut window"
 msgid "Show Shortcuts"
-msgstr "Mostrar Atajos"
+msgstr "Mostrar atajos"
 
 #: apx_gui/gtk/help-overlay.ui:20
 msgctxt "shortcut window"
 msgid "Quit"
-msgstr "Quitar"
+msgstr "Salir"
 
 #: apx_gui/gtk/help-overlay.ui:26
 msgctxt "shortcut window"
