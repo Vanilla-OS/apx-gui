@@ -17,82 +17,79 @@
 #
 # SPDX-License-Identifier: GPL-3.0-or-later
 
-from gi.repository import Gtk, Gio, GObject, Adw
+from gi.repository import Gtk, Adw
 from uuid import UUID
-from typing import List, Dict, Union, Text
 
 from apx_gui.widgets.entry_subsystem import EntrySubsystem
 from apx_gui.widgets.entry_stack import EntryStack
 from apx_gui.widgets.entry_pkgmanager import EntryPkgManager
-from apx_gui.widgets.editor import Editor
 from apx_gui.core.apx_entities import Subsystem, Stack, PkgManager
+
+from typing import TYPE_CHECKING
+
+if TYPE_CHECKING:
+    from apx_gui.windows.main_window import ApxGUIWindow
 
 
 @Gtk.Template(resource_path="/org/vanillaos/apx-gui/gtk/sidebar.ui")
-class Sidebar(Gtk.Box):
-    __gtype_name__: Text = "Sidebar"
-    __registry__: Dict[str, Union[EntrySubsystem, EntryStack, EntryPkgManager]] = {}
+class Sidebar(Adw.Bin):
+    __gtype_name__: str = "Sidebar"
+    __registry__: dict[str, EntrySubsystem | EntryStack | EntryPkgManager] = {}
 
-    list_subsystems: Gtk.ListBox = Gtk.Template.Child()
-    list_stacks: Gtk.ListBox = Gtk.Template.Child()
-    list_pkgmanagers: Gtk.ListBox = Gtk.Template.Child()
-    stack_sidebar: Adw.ViewStack = Gtk.Template.Child()
-    btn_show_subsystems: Gtk.Button = Gtk.Template.Child()
-    btn_show_stacks: Gtk.Button = Gtk.Template.Child()
-    btn_show_pkgmanagers: Gtk.Button = Gtk.Template.Child()
+    list_subsystems: Gtk.ListBox = Gtk.Template.Child()  # pyright: ignore
+    list_stacks: Gtk.ListBox = Gtk.Template.Child()  # pyright: ignore
+    list_pkgmanagers: Gtk.ListBox = Gtk.Template.Child()  # pyright: ignore
+    stack_sidebar: Adw.ViewStack = Gtk.Template.Child()  # pyright: ignore
+    btn_new: Adw.SplitButton = Gtk.Template.Child()  # pyright: ignore
 
     def __init__(
         self,
         window: Adw.ApplicationWindow,
-        subsystems: List[Subsystem],
-        stacks: List[Stack],
-        pkgmanagers: List[PkgManager],
-        **kwargs
+        subsystems: list[Subsystem],
+        stacks: list[Stack],
+        pkgmanagers: list[PkgManager],
+        **kwargs,
     ) -> None:
         super().__init__(**kwargs)
-        self.__window: Adw.ApplicationWindow = window
-        self.__subsystems: List[Subsystem] = subsystems
-        self.__stacks: List[Stack] = stacks
-        self.__pkgmanagers: List[PkgManager] = pkgmanagers
+        self.__window: ApxGUIWindow = window  # pyright: ignore
+        self.__subsystems: list[Subsystem] = subsystems
+        self.__stacks: list[Stack] = stacks
+        self.__pkgmanagers: list[PkgManager] = pkgmanagers
         self.__build_ui()
 
     def __build_ui(self) -> None:
-        self.btn_show_subsystems.connect("clicked", self.__switch_stack, "subsystems")
-        self.btn_show_stacks.connect("clicked", self.__switch_stack, "stacks")
-        self.btn_show_pkgmanagers.connect("clicked", self.__switch_stack, "pkgmanagers")
         self.list_subsystems.connect("row-selected", self.__on_subsystem_selected)
         self.list_stacks.connect("row-selected", self.__on_stack_selected)
         self.list_pkgmanagers.connect("row-selected", self.__on_pkgmanager_selected)
 
+        self.btn_new.connect("clicked", self.__on_btn_menu_clicked)
+
         for subsystem in self.__subsystems:
             entry = EntrySubsystem(subsystem)
             self.list_subsystems.append(entry)
-            self.__registry__[subsystem.aid] = entry
+            self.__registry__[str(subsystem.aid)] = entry
 
         for stack in self.__stacks:
             entry = EntryStack(stack)
             self.list_stacks.append(entry)
-            self.__registry__[stack.aid] = entry
+            self.__registry__[str(stack.aid)] = entry
 
         for pkgmanager in self.__pkgmanagers:
             entry = EntryPkgManager(pkgmanager)
             self.list_pkgmanagers.append(entry)
-            self.__registry__[pkgmanager.aid] = entry
+            self.__registry__[str(pkgmanager.aid)] = entry
 
-    def __switch_stack(self, button: Gtk.Button, name: Text) -> None:
-        for btn in [
-            self.btn_show_subsystems,
-            self.btn_show_stacks,
-            self.btn_show_pkgmanagers,
-        ]:
-            if btn != button:
-                btn.add_css_class("flat")
-        self.stack_sidebar.set_visible_child_name(name)
-
-        button.remove_css_class("flat")
+    def __on_btn_menu_clicked(self, *args):
+        current_list = self.stack_sidebar.get_visible_child()
+        if current_list == self.list_subsystems:
+            self.__window.new_subsystem()
+        elif current_list == self.list_stacks:
+            self.__window.new_stack()
+        elif current_list == self.list_pkgmanagers:
+            self.__window.new_pkgmanager()
 
     def __on_subsystem_selected(
-        self, listbox: Gtk.ListBox, row: Gtk.ListBoxRow
+        self, listbox: Gtk.ListBox, row: EntrySubsystem
     ) -> None:
         if row is None:
             return
@@ -103,7 +100,7 @@ class Sidebar(Gtk.Box):
 
         self.__window.editor.new_subsystem_tab(row.subsystem)
 
-    def __on_stack_selected(self, listbox: Gtk.ListBox, row: Gtk.ListBoxRow) -> None:
+    def __on_stack_selected(self, listbox: Gtk.ListBox, row: EntryStack) -> None:
         if row is None:
             return
 
@@ -114,7 +111,7 @@ class Sidebar(Gtk.Box):
         self.__window.editor.new_stack_tab(row.stack)
 
     def __on_pkgmanager_selected(
-        self, listbox: Gtk.ListBox, row: Gtk.ListBoxRow
+        self, listbox: Gtk.ListBox, row: EntryPkgManager
     ) -> None:
         if row is None:
             return
@@ -126,28 +123,41 @@ class Sidebar(Gtk.Box):
         self.__window.editor.new_pkgmanager_tab(row.pkgmanager)
 
     def remove_subsystem(self, aid: UUID) -> None:
-        self.list_subsystems.remove(self.__registry__[aid])
-        self.__registry__.pop(aid)
+        self.list_subsystems.remove(self.__registry__[str(aid)])
+        self.__registry__.pop(str(aid))
 
     def remove_stack(self, aid: UUID) -> None:
-        self.list_stacks.remove(self.__registry__[aid])
-        self.__registry__.pop(aid)
+        self.list_stacks.remove(self.__registry__[str(aid)])
+        self.__registry__.pop(str(aid))
 
     def remove_pkgmanager(self, aid: UUID) -> None:
-        self.list_pkgmanagers.remove(self.__registry__[aid])
-        self.__registry__.pop(aid)
+        self.list_pkgmanagers.remove(self.__registry__[str(aid)])
+        self.__registry__.pop(str(aid))
 
     def new_subsystem(self, subsystem: Subsystem) -> None:
         entry = EntrySubsystem(subsystem)
         self.list_subsystems.append(entry)
-        self.__registry__[subsystem.aid] = entry
+        self.__registry__[str(subsystem.aid)] = entry
 
     def new_stack(self, stack: Stack) -> None:
         entry = EntryStack(stack)
         self.list_stacks.append(entry)
-        self.__registry__[stack.aid] = entry
+        self.__registry__[str(stack.aid)] = entry
 
     def new_pkgmanager(self, pkgmanager: PkgManager) -> None:
         entry = EntryPkgManager(pkgmanager)
         self.list_pkgmanagers.append(entry)
-        self.__registry__[pkgmanager.aid] = entry
+        self.__registry__[str(pkgmanager.aid)] = entry
+
+    def update_subsystem(self, subsystem: Subsystem) -> None:
+        new_entry = EntrySubsystem(subsystem)
+
+        idx = 0
+        while (row := self.list_subsystems.get_row_at_index(idx)) is not None:
+            if row.aid == subsystem.aid:  # pyright: ignore
+                self.remove_subsystem(subsystem.aid)
+                self.list_subsystems.insert(new_entry, idx)
+                break
+            idx += 1
+
+        self.__registry__[str(subsystem.aid)] = new_entry

@@ -1,10 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <interface>
+  <requires lib="gtk" version="4.0"/>
   <template class="EntrySubsystem" parent="AdwActionRow">
+    <child type="prefix">
+      <object class="GtkImage" id="status">
+        <property name="margin-end">5</property>
+      </object>
+    </child>
     <child type="suffix">
-        <object class="GtkImage">
-          <property name="icon-name">go-next-symbolic</property>
-        </object>
+      <object class="GtkImage">
+        <property name="icon-name">go-next-symbolic</property>
+      </object>
     </child>
   </template>
 </interface>

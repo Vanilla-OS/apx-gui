@@ -22,7 +22,9 @@ import sys
 import threading
 import traceback
 import logging
-from typing import Callable, Any, Optional
+from typing import Any
+
+from collections.abc import Callable
 
 from gi.repository import GLib
 
@@ -38,7 +40,7 @@ class RunAsync(threading.Thread):
     def __init__(
         self,
         task_func: Callable[..., Any],
-        callback: Optional[Callable[[Any, Exception], None]] = None,
+        callback: Callable[[Any, Exception], None] | None = None,
         *args: Any,
         **kwargs: Any,
     ):
@@ -54,7 +56,7 @@ class RunAsync(threading.Thread):
 
         self.task_func: Callable[..., Any] = task_func
 
-        self.callback: Callable[[Any, Optional[Exception]], None] = (
+        self.callback: Callable[[Any, Exception], None] = (
             callback if callback else lambda r, e: None
         )
         self.daemon: bool = kwargs.pop("daemon", True)
@@ -63,7 +65,7 @@ class RunAsync(threading.Thread):
 
     def __target(self, *args: Any, **kwargs: Any) -> Any:
         result: Any = None
-        error: Optional[Exception] = None
+        error: Exception | None = None
 
         logger.debug(f"Running async job [{self.task_func}].")
 

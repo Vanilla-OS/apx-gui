@@ -22,12 +22,6 @@
                 <object class="GtkBox">
                 <property name="orientation">vertical</property>
                 <child>
-                    <object class="AdwTabBar">
-                    <property name="view">tabs_editor</property>
-                    <property name="autohide">false</property>
-                    </object>
-                </child>
-                <child>
                     <object class="AdwTabView" id="tabs_editor">
                     <property name="hexpand">true</property>
                     <property name="vexpand">true</property>

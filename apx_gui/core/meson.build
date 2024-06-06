@@ -3,6 +3,7 @@ coredir = join_paths(pkgdatadir, 'apx_gui/core')
 
 sources = [
   '__init__.py',
+  'monitor.py',
   'run_async.py',
   'apx.py',
   'apx_entities.py',

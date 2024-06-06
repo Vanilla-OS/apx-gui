@@ -18,36 +18,41 @@
 # SPDX-License-Identifier: GPL-3.0-only
 
 from gi.repository import Gtk, Adw
-from typing import List, Text, Union
+from gettext import gettext as _
 
 from apx_gui.core.apx_entities import Subsystem, Stack
 from apx_gui.utils.gtk import GtkUtils
 from apx_gui.core.run_async import RunAsync
+
+from typing import TYPE_CHECKING
+
+if TYPE_CHECKING:
+    from apx_gui.windows.main_window import ApxGUIWindow
 
 
 @Gtk.Template(resource_path="/org/vanillaos/apx-gui/gtk/create-subsystem.ui")
 class CreateSubsystemWindow(Adw.Window):
     __gtype_name__ = "CreateSubsystemWindow"
 
-    btn_cancel: Gtk.Button = Gtk.Template.Child()
-    btn_close: Gtk.Button = Gtk.Template.Child()
-    btn_create: Gtk.Button = Gtk.Template.Child()
-    row_name: Adw.EntryRow = Gtk.Template.Child()
-    row_stack: Adw.ComboRow = Gtk.Template.Child()
-    str_stack: Gtk.StringList = Gtk.Template.Child()
-    stack_main: Adw.ViewStack = Gtk.Template.Child()
+    btn_cancel: Gtk.Button = Gtk.Template.Child()  # pyright: ignore
+    btn_close: Gtk.Button = Gtk.Template.Child()  # pyright: ignore
+    btn_create: Gtk.Button = Gtk.Template.Child()  # pyright: ignore
+    row_name: Adw.EntryRow = Gtk.Template.Child()  # pyright: ignore
+    row_stack: Adw.ComboRow = Gtk.Template.Child()  # pyright: ignore
+    str_stack: Gtk.StringList = Gtk.Template.Child()  # pyright: ignore
+    stack_main: Adw.ViewStack = Gtk.Template.Child()  # pyright: ignore
 
     def __init__(
         self,
         window: Adw.ApplicationWindow,
-        subsystems: List[Subsystem],
-        stacks: List[Stack],
+        subsystems: list[Subsystem],
+        stacks: list[Stack],
         **kwargs,
     ) -> None:
         super().__init__(**kwargs)
-        self.__window: Adw.ApplicationWindow = window
-        self.__subsystems: List[Subsystem] = subsystems
-        self.__stacks: List[Stack] = stacks
+        self.__window: ApxGUIWindow = window  # pyright: ignore
+        self.__subsystems: list[Subsystem] = subsystems
+        self.__stacks: list[Stack] = stacks
 
         self.__build_ui()
 
@@ -67,26 +72,28 @@ class CreateSubsystemWindow(Adw.Window):
         self.close()
 
     def __on_create_clicked(self, button: Gtk.Button) -> None:
-        def on_callback(result: List[Union[bool, Subsystem]], *args) -> None:
+        def on_callback(result: tuple[bool, Subsystem], *args) -> None:
             status: bool = result[0]
             subsystem: Subsystem = result[1]
 
             if status:
                 self.__window.append_subsystem(subsystem)
                 self.close()
-                self.__window.toast(f"Subsystem {subsystem.name} created successfully")
+                self.__window.toast(
+                    _("Subsystem {} created successfully").format(subsystem.name)
+                )
                 return
 
             self.stack_main.set_visible_child_name("error")
 
-        def create_subsystem() -> List[Union[bool, Subsystem]]:
+        def create_subsystem() -> tuple[bool, Subsystem]:
             subsystem: Subsystem = Subsystem(
-                None,
+                "",
                 self.row_name.get_text(),
                 self.__stacks[self.row_stack.get_selected()],
-                None,
+                "",
                 [],
-                {}
+                {},
             )
             return subsystem.create()
 
@@ -95,7 +102,7 @@ class CreateSubsystemWindow(Adw.Window):
         RunAsync(create_subsystem, on_callback)
 
     def __on_name_changed(self, entry: Adw.EntryRow) -> None:
-        name: Text = entry.get_text()
+        name: str = entry.get_text()
         if name in [subsystem.name for subsystem in self.__subsystems]:
             entry.add_css_class("error")
             self.btn_create.set_sensitive(False)
