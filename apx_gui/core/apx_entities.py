@@ -25,6 +25,11 @@ import json
 import uuid
 from uuid import UUID
 
+from typing import Any
+from collections.abc import Callable
+from gi.repository import Vte, GLib
+from time import sleep
+
 
 class ApxEntityBase:
     def __init__(self) -> None:
@@ -130,8 +135,7 @@ class Stack(ApxEntityBase):
             f"--pkg-manager {self.pkg_manager} -y"
         )
         new_res: tuple[bool, str] = self._run_command(new_command)
-        if not new_res[0]:
-            return new_res[0], self
+
 
         list_command: str = f"apx stacks list --json"
         list_res: tuple[bool, str] = self._run_command(list_command)
@@ -179,16 +183,24 @@ class Subsystem(ApxEntityBase):
         self.enter_command: list[str] = enter_command
         self.exported_programs: dict[str, dict[str, str]] = exported_programs or {}
 
-    def create(self) -> tuple[bool, "Subsystem"]:
-        new_command: str = (
-            f"subsystems new --name '{self.name}' --stack '{self.stack.name}'"
+    def create(
+        self,
+        _terminal,
+    ) -> tuple[bool, "Subsystem"]:
+        new_command = (
+            f"{self._get_apx_command()}",
+            "subsystems",
+            "new",
+            "--name",
+            f"{self.name}",
+            "--stack",
+            f"{self.stack.name}",
         )
         # the following apx command is safe to ignore errors, we´ll check the
         # subsystem status by getting the list of subsystems
-        new_res: tuple[bool, str] = self._run_apx_command(new_command, True)
-        if not new_res[0]:
-            return new_res[0], self
+        self.run_vte_command(new_command, _terminal, self._Create_Callback)
 
+    def _create_callback(self,*args):
         list_command: str = f"subsystems list --json"
         list_res: tuple[bool, str] = self._run_apx_command(list_command)
         if not list_res[0]:
@@ -206,6 +218,27 @@ class Subsystem(ApxEntityBase):
                 return True, self
 
         return False, self
+
+    def run_vte_command(
+        self,
+        args,
+        __terminal,
+        __callbackfunc,
+    ) -> tuple[bool, str]:
+        """
+        Run the 'apx' command with the specified arguments.
+        """
+        __terminal.connect("child-exited", __callbackfunc)
+        Term = __terminal.spawn_sync(
+            Vte.PtyFlags.DEFAULT,
+            ".",
+            args,
+            [],
+            GLib.SpawnFlags.DO_NOT_REAP_CHILD,
+            None,
+            None,
+            None,
+        )
 
     @property
     def running(self) -> bool:
@@ -339,3 +372,4 @@ class PkgManager(ApxEntityBase):
             f"--update '{cmd_update}' --upgrade '{cmd_upgrade}'"
         )
         return self._run_apx_command(command)
+

@@ -92,7 +92,7 @@ class TabStack(Gtk.Box):
             status: bool = result
             if status:
                 self.__window.toast(_("{} stack deleted").format(self.__stack.name))
-                self.__window.remove_stack(self.__aid)
+                self.__window.remove_stack(self.__aid, self.__stack)
 
         def on_response(dialog: Adw.MessageDialog, response: str) -> None:
             if response == "ok":

@@ -186,7 +186,7 @@ class TabSubsystem(Gtk.Box):
                 self.__window.toast(
                     _("{} subsystem deleted").format(self.subsystem.name)
                 )
-                self.__window.remove_subsystem(self.__aid)
+                self.__window.remove_subsystem(self.__aid, self.subsystem)
 
         def on_response(dialog: Adw.MessageDialog, response: str) -> None:
             if response == "ok":
