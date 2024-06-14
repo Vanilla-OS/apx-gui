@@ -17,7 +17,7 @@
 #
 # SPDX-License-Identifier: GPL-3.0-only
 
-from gi.repository import Gtk, Adw
+from gi.repository import Gtk, Adw, Vte, GLib, Gdk
 from gettext import gettext as _
 
 from apx_gui.core.apx_entities import Subsystem, Stack
@@ -41,6 +41,9 @@ class CreateSubsystemWindow(Adw.Window):
     row_stack: Adw.ComboRow = Gtk.Template.Child()  # pyright: ignore
     str_stack: Gtk.StringList = Gtk.Template.Child()  # pyright: ignore
     stack_main: Adw.ViewStack = Gtk.Template.Child()  # pyright: ignore
+    console_button: Gtk.Box = Gtk.Template.Child()  # pyright: ignore
+    console_box: Gtk.Box = Gtk.Template.Child()  # pyright: ignore
+    console_output: Gtk.Box = Gtk.Template.Child()  # pyright: ignore
 
     def __init__(
         self,
@@ -53,8 +56,12 @@ class CreateSubsystemWindow(Adw.Window):
         self.__window: ApxGUIWindow = window  # pyright: ignore
         self.__subsystems: list[Subsystem] = subsystems
         self.__stacks: list[Stack] = stacks
+        self.__terminal = Vte.Terminal()
+
+        self.console_box_visible = False
 
         self.__build_ui()
+        self.__on_setup_terminal_colors()
 
     def __build_ui(self) -> None:
         self.set_transient_for(self.__window)
@@ -66,26 +73,60 @@ class CreateSubsystemWindow(Adw.Window):
         self.btn_cancel.connect("clicked", self.__on_cancel_clicked)
         self.btn_close.connect("clicked", self.__on_cancel_clicked)
         self.btn_create.connect("clicked", self.__on_create_clicked)
+        self.console_button.connect("clicked", self.__on_console_button)
         self.row_name.connect("changed", self.__on_name_changed)
+        self.console_output.append(self.__terminal)
+        self.__terminal.connect("child-exited", self.on_vte_child_exited)
+
+        self.__terminal.set_cursor_blink_mode(Vte.CursorBlinkMode.ON)
+        self.__terminal.set_mouse_autohide(True)
+        self.__terminal.set_input_enabled(False)
+
+    def __on_setup_terminal_colors(self, *args):
+        palette = [
+            "#363636",
+            "#c01c28",
+            "#26a269",
+            "#a2734c",
+            "#12488b",
+            "#a347ba",
+            "#2aa1b3",
+            "#cfcfcf",
+            "#5d5d5d",
+            "#f66151",
+            "#33d17a",
+            "#e9ad0c",
+            "#2a7bde",
+            "#c061cb",
+            "#33c7de",
+            "#ffffff",
+        ]
+
+        FOREGROUND = palette[0]
+        BACKGROUND = palette[15]
+        FOREGROUND_DARK = palette[15]
+        BACKGROUND_DARK = palette[0]
+
+        self.fg = Gdk.RGBA()
+        self.bg = Gdk.RGBA()
+
+        self.colors = [Gdk.RGBA() for c in palette]
+        [color.parse(s) for (color, s) in zip(self.colors, palette)]
+
+        self.fg.parse(FOREGROUND)
+        self.bg.parse(BACKGROUND)
+
+        self.__terminal.set_colors(self.fg, self.bg, self.colors)
 
     def __on_cancel_clicked(self, button: Gtk.Button) -> None:
         self.close()
 
+    def __on_console_button(self, *args):
+        self.console_box_visible = not self.console_box_visible
+        self.console_box.set_visible(self.console_box_visible)
+
+
     def __on_create_clicked(self, button: Gtk.Button) -> None:
-        def on_callback(result: tuple[bool, Subsystem], *args) -> None:
-            status: bool = result[0]
-            subsystem: Subsystem = result[1]
-
-            if status:
-                self.__window.append_subsystem(subsystem)
-                self.close()
-                self.__window.toast(
-                    _("Subsystem {} created successfully").format(subsystem.name)
-                )
-                return
-
-            self.stack_main.set_visible_child_name("error")
-
         def create_subsystem() -> tuple[bool, Subsystem]:
             subsystem: Subsystem = Subsystem(
                 "",
@@ -95,11 +136,26 @@ class CreateSubsystemWindow(Adw.Window):
                 [],
                 {},
             )
-            return subsystem.create()
+            self.NewSubsystem = subsystem
+            subsystem.create(self.__terminal)
 
         button.set_visible(False)
         self.stack_main.set_visible_child_name("creating")
-        RunAsync(create_subsystem, on_callback)
+        create_subsystem()
+
+    def on_vte_child_exited(self, terminal, status, *args):
+        terminal.get_parent().remove(terminal)
+        status = not bool(status)
+
+        if status:
+            self.__window.append_subsystem(self.NewSubsystem)
+            self.close()
+            self.__window.toast(
+                _("Subsystem {} created successfully").format(self.NewSubsystem.name)
+            )
+            return
+
+        self.stack_main.set_visible_child_name("error")
 
     def __on_name_changed(self, entry: Adw.EntryRow) -> None:
         name: str = entry.get_text()
