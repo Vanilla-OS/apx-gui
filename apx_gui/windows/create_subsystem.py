@@ -103,7 +103,11 @@ class CreateSubsystemWindow(Adw.Window):
 
     def __on_name_changed(self, entry: Adw.EntryRow) -> None:
         name: str = entry.get_text()
-        if name in [subsystem.name for subsystem in self.__subsystems]:
+        if " " in name:
+            cursor_position = entry.get_position()
+            entry.set_text(name.replace(" ", "_"))
+            entry.set_position(cursor_position)
+        elif name in [subsystem.name for subsystem in self.__subsystems]:
             entry.add_css_class("error")
             self.btn_create.set_sensitive(False)
             return
