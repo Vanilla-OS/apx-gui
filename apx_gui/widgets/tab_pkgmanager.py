@@ -124,7 +124,7 @@ class TabPkgManager(Gtk.Box):
                 self.__window.toast(
                     _("{} package manager deleted").format(self.__pkgmanager.name)
                 )
-                self.__window.remove_pkgmanager(self.__aid)
+                self.__window.remove_pkgmanager(self.__aid, self.__pkgmanager)
 
         def on_response(dialog: Adw.MessageDialog, response: str) -> None:
             if response == "ok":

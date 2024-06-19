@@ -99,17 +99,20 @@ class ApxGUIWindow(Adw.ApplicationWindow):
         self.__pkgmanagers.append(pkgmanager)
         self.sidebar.new_pkgmanager(pkgmanager)
 
-    def remove_subsystem(self, aid: UUID) -> None:
+    def remove_subsystem(self, aid: UUID, subsystem: Subsystem) -> None:
         self.editor.close(aid)
         self.sidebar.remove_subsystem(aid)
+        self.__subsystems.remove(subsystem)
 
-    def remove_stack(self, aid: UUID) -> None:
+    def remove_stack(self, aid: UUID, stack: Stack) -> None:
         self.editor.close(aid)
         self.sidebar.remove_stack(aid)
+        self.__stacks.remove(stack)
 
-    def remove_pkgmanager(self, aid: UUID) -> None:
+    def remove_pkgmanager(self, aid: UUID, pkgmanager: PkgManager) -> None:
         self.editor.close(aid)
         self.sidebar.remove_pkgmanager(aid)
+        self.__pkgmanagers.remove(pkgmanager)
 
     def new_subsystem(self) -> None:
         window: CreateSubsystemWindow = CreateSubsystemWindow(
