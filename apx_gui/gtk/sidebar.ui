@@ -82,15 +82,15 @@
   <menu id="menu_add">
     <section>
       <item>
-        <attribute name="label" translatable="true">New Subsystem</attribute>
+        <attribute name="label" translatable="yes">New Subsystem</attribute>
         <attribute name="action">app.new_subsystem</attribute>
       </item>
       <item>
-        <attribute name="label" translatable="true">New Stack</attribute>
+        <attribute name="label" translatable="yes">New Stack</attribute>
         <attribute name="action">app.new_stack</attribute>
       </item>
       <item>
-        <attribute name="label" translatable="true">New Package Manager</attribute>
+        <attribute name="label" translatable="yes">New Package Manager</attribute>
         <attribute name="action">app.new_pkgmanager</attribute>
       </item>
     </section>
