@@ -83,6 +83,9 @@ class CreateSubsystemWindow(Adw.Window):
         self.__terminal.set_input_enabled(False)
 
     def __on_setup_terminal_colors(self, *args):
+
+        is_dark: bool = self.__style_manager.get_dark()
+
         palette = [
             "#363636",
             "#c01c28",
@@ -113,8 +116,12 @@ class CreateSubsystemWindow(Adw.Window):
         self.colors = [Gdk.RGBA() for c in palette]
         [color.parse(s) for (color, s) in zip(self.colors, palette)]
 
-        self.fg.parse(FOREGROUND)
-        self.bg.parse(BACKGROUND)
+        if is_dark:
+            self.fg.parse(FOREGROUND_DARK)
+            self.bg.parse(BACKGROUND_DARK)
+        else:
+            self.fg.parse(FOREGROUND)
+            self.bg.parse(BACKGROUND)
 
         self.__terminal.set_colors(self.fg, self.bg, self.colors)
 

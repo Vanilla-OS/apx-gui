@@ -198,7 +198,7 @@ class Subsystem(ApxEntityBase):
         )
         # the following apx command is safe to ignore errors, we´ll check the
         # subsystem status by getting the list of subsystems
-        self.run_vte_command(new_command, _terminal, self._Create_Callback)
+        self.run_vte_command(new_command, _terminal, self._create_callback)
 
     def _create_callback(self,*args):
         list_command: str = f"subsystems list --json"
