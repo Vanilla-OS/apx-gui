@@ -29,6 +29,8 @@ class Apx(ApxEntityBase):
         status, output = self._run_apx_command(command)
         if not status:
             return []
+
+        output = output[output.index("[") : output.rindex("]") + 1]
         subsystems_data = json.loads(output)
         subsystems: list[Subsystem] = []
 
@@ -58,6 +60,7 @@ class Apx(ApxEntityBase):
         if not status:
             return []
 
+        output = output[output.index("[") : output.rindex("]") + 1]
         stacks_data = json.loads(output)
         stacks: list[Stack] = []
 
@@ -79,6 +82,7 @@ class Apx(ApxEntityBase):
         if not status:
             return []
 
+        output = output[output.index("[") : output.rindex("]") + 1]
         pkgmanagers_data = json.loads(output)
         pkgmanagers: list[PkgManager] = []
         for data in pkgmanagers_data:
