@@ -1,0 +1,33 @@
+<page xmlns="http://projectmallard.org/1.0/"
+      xmlns:its="http://www.w3.org/2005/11/its"
+      type="topic" style="task" version="1.1"
+      id="subsystems-introduction">
+  <info>
+    <revision version="1.0" date="2024-01-24" status="done"/>
+
+    <credit type="author copyright">
+      <name>K.B.Dharun Krishna</name>
+      <email its:translate="no">mail@kbdharun.dev</email>
+      <years>2024</years>
+    </credit>
+    <credit type="editor copyright">
+      <name>Bart Gravendeel</name>
+      <email its:translate="no">bgravendeel@proton.me</email>
+      <years>2024</years>
+    </credit>
+
+    <link type="guide" xref="index#getting-started"/>
+    <link type="seealso" xref="subsystems-creation"/>
+
+    <keywords>apx, containers, vanilla, vanillaos</keywords>
+    <desc>Learn about subsystems in Apx GUI.</desc>
+  </info>
+
+  <title>Introduction to Subsystems</title>
+
+  <p>A Subsystem is a container created on top of a <gui>Stack</gui> and <gui>Package Manager</gui> configuration.</p>
+
+  <p>In <gui>Apx GUI</gui> you can create Subsystems based on a Stack and Package Manager
+for an isolated development container.</p>
+
+</page>

@@ -11,6 +11,7 @@ gnome = import('gnome')
 subdir('data')
 subdir('apx_gui')
 subdir('po')
+subdir('help')
 
 gnome.post_install(
      glib_compile_schemas: true,
