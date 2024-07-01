@@ -17,7 +17,7 @@
 #
 # SPDX-License-Identifier: GPL-3.0-only
 
-from gi.repository import Gtk, Adw, Vte, GLib, Gdk
+from gi.repository import Gtk, Adw, Vte, Gdk  # pyright: ignore
 from gettext import gettext as _
 
 from apx_gui.core.apx_entities import Subsystem, Stack
@@ -125,33 +125,34 @@ class CreateSubsystemWindow(Adw.Window):
         self.console_box_visible = not self.console_box_visible
         self.console_box.set_visible(self.console_box_visible)
 
-
     def __on_create_clicked(self, button: Gtk.Button) -> None:
-        def create_subsystem() -> tuple[bool, Subsystem]:
-            subsystem: Subsystem = Subsystem(
-                "",
-                self.row_name.get_text(),
-                self.__stacks[self.row_stack.get_selected()],
-                "",
-                [],
-                {},
-            )
-            self.NewSubsystem = subsystem
-            subsystem.create(self.__terminal)
-
         button.set_visible(False)
         self.stack_main.set_visible_child_name("creating")
-        create_subsystem()
+
+        subsystem: Subsystem = Subsystem(
+            "",
+            self.row_name.get_text(),
+            self.__stacks[self.row_stack.get_selected()],
+            "",
+            [],
+            {},
+        )
+        res, subsystem = subsystem.create(self.__terminal)
+        if not res:
+            self.stack_main.set_visible_child_name("error")
+            return
+
+        self.new_subsystem = subsystem
 
     def on_vte_child_exited(self, terminal, status, *args):
         terminal.get_parent().remove(terminal)
         status = not bool(status)
 
         if status:
-            self.__window.append_subsystem(self.NewSubsystem)
+            self.__window.append_subsystem(self.new_subsystem)
             self.close()
             self.__window.toast(
-                _("Subsystem {} created successfully").format(self.NewSubsystem.name)
+                _("Subsystem {} created successfully").format(self.new_subsystem.name)
             )
             return
 
