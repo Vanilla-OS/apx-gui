@@ -58,10 +58,10 @@
 							<object class="AdwPreferencesGroup">
 								<property name="title" translatable="yes">Subsystem actions</property>
 								<child>
-									<object class="AdwActionRow" id="row_startstop">
-										<property name="activatable-widget">btn_startstop</property>
+									<object class="AdwActionRow" id="row_start_stop">
+										<property name="activatable-widget">btn_start_stop</property>
 										<child type="suffix">
-											<object class="GtkButton" id="btn_startstop">
+											<object class="GtkButton" id="btn_start_stop">
 												<property name="valign">center</property>
 												<style>
 													<class name="flat"/>

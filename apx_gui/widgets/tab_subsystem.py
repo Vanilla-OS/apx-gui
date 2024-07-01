@@ -17,7 +17,7 @@
 #
 # SPDX-License-Identifier: GPL-3.0-or-later
 
-from gi.repository import Gtk, Gdk, GLib, Adw, Vte
+from gi.repository import Gtk, Gdk, GLib, Adw, Vte  # pyright: ignore
 from uuid import UUID
 
 from gettext import gettext as _
@@ -39,10 +39,10 @@ class TabSubsystem(Gtk.Box):
     row_stack: Adw.ActionRow = Gtk.Template.Child()  # pyright: ignore
     row_pkgmanager: Adw.ActionRow = Gtk.Template.Child()  # pyright: ignore
     row_programs: Adw.ExpanderRow = Gtk.Template.Child()  # pyright: ignore
-    row_startstop: Adw.ActionRow = Gtk.Template.Child()  # pyright: ignore
+    row_start_stop: Adw.ActionRow = Gtk.Template.Child()  # pyright: ignore
     row_reset: Adw.ActionRow = Gtk.Template.Child()  # pyright: ignore
     row_delete: Adw.ActionRow = Gtk.Template.Child()  # pyright: ignore
-    btn_startstop: Gtk.Button = Gtk.Template.Child()  # pyright: ignore
+    btn_start_stop: Gtk.Button = Gtk.Template.Child()  # pyright: ignore
     btn_autoremove: Gtk.Button = Gtk.Template.Child()  # pyright: ignore
     btn_clean: Gtk.Button = Gtk.Template.Child()  # pyright: ignore
     btn_toggle_console: Gtk.Button = Gtk.Template.Child()  # pyright: ignore
@@ -62,7 +62,7 @@ class TabSubsystem(Gtk.Box):
         self.__aid: UUID = subsystem.aid
         self.__subsystem: Subsystem = subsystem
 
-        self.btn_startstop.connect("clicked", self.__on_startstop_clicked)
+        self.btn_start_stop.connect("clicked", self.__on_start_stop_clicked)
         self.btn_autoremove.connect("clicked", self.__on_autoremove_clicked)
         self.btn_clean.connect("clicked", self.__on_clean_clicked)
 
@@ -92,11 +92,11 @@ class TabSubsystem(Gtk.Box):
         )
 
         if self.subsystem.running:
-            self.row_startstop.set_title(_("Stop subsystem"))
-            self.btn_startstop.set_icon_name("media-playback-stop-symbolic")
+            self.row_start_stop.set_title(_("Stop subsystem"))
+            self.btn_start_stop.set_icon_name("media-playback-stop-symbolic")
         else:
-            self.row_startstop.set_title(_("Start subsystem"))
-            self.btn_startstop.set_icon_name("media-playback-start-symbolic")
+            self.row_start_stop.set_title(_("Start subsystem"))
+            self.btn_start_stop.set_icon_name("media-playback-start-symbolic")
 
     def __create_console(self) -> Vte.Terminal:
         console: Vte.Terminal = Vte.Terminal()
@@ -211,7 +211,7 @@ class TabSubsystem(Gtk.Box):
         dialog.connect("response", on_response)
         dialog.present()
 
-    def __on_startstop_clicked(self, button: Gtk.Button) -> None:
+    def __on_start_stop_clicked(self, button: Gtk.Button) -> None:
         def on_response(dialog: Adw.MessageDialog, response: str) -> None:
             if response == "ok":
                 self.__window.toast(

@@ -27,7 +27,7 @@ from uuid import UUID
 
 from typing import Any
 from collections.abc import Callable
-from gi.repository import Vte, GLib
+from gi.repository import Vte, GLib  # type: ignore
 from time import sleep
 
 
@@ -50,6 +50,13 @@ class ApxEntityBase:
             return f"{self.__host_spawn_bin} apx"
         else:
             return self.__apx_bin
+
+    def _get_apx_command_as_args(self) -> list[str]:
+        args: list[str] = []
+        if self._is_running_in_container():
+            args.append(self.__host_spawn_bin)
+        args.append("apx")
+        return args
 
     @property
     def __apx_bin(self) -> str:
@@ -136,7 +143,6 @@ class Stack(ApxEntityBase):
         )
         new_res: tuple[bool, str] = self._run_command(new_command)
 
-
         list_command: str = f"apx stacks list --json"
         list_res: tuple[bool, str] = self._run_command(list_command)
         if not list_res[0]:
@@ -181,26 +187,31 @@ class Subsystem(ApxEntityBase):
         self.stack: Stack = stack
         self.status: str = status
         self.enter_command: list[str] = enter_command
+        if enter_command == []:
+            self.enter_command = shlex.split(f"{self._get_apx_command()} {name} enter")
         self.exported_programs: dict[str, dict[str, str]] = exported_programs or {}
 
     def create(
         self,
-        _terminal,
+        terminal: Vte.Terminal,
     ) -> tuple[bool, "Subsystem"]:
-        new_command = (
-            f"{self._get_apx_command()}",
-            "subsystems",
-            "new",
-            "--name",
-            f"{self.name}",
-            "--stack",
-            f"{self.stack.name}",
+        new_command = self._get_apx_command_as_args()
+        new_command.extend(
+            [
+                "subsystems",
+                "new",
+                "--name",
+                f"{self.name}",
+                "--stack",
+                f"{self.stack.name}",
+            ]
         )
         # the following apx command is safe to ignore errors, we´ll check the
         # subsystem status by getting the list of subsystems
-        self.run_vte_command(new_command, _terminal, self._Create_Callback)
+        res: bool = self.run_vte_command(new_command, terminal, self._create_callback)
+        return res, self
 
-    def _create_callback(self,*args):
+    def _create_callback(self, *args):
         list_command: str = f"subsystems list --json"
         list_res: tuple[bool, str] = self._run_apx_command(list_command)
         if not list_res[0]:
@@ -222,23 +233,33 @@ class Subsystem(ApxEntityBase):
     def run_vte_command(
         self,
         args,
-        __terminal,
-        __callbackfunc,
-    ) -> tuple[bool, str]:
+        terminal,
+        callback_fn,
+    ) -> bool:
         """
         Run the 'apx' command with the specified arguments.
         """
-        __terminal.connect("child-exited", __callbackfunc)
-        Term = __terminal.spawn_sync(
-            Vte.PtyFlags.DEFAULT,
-            ".",
-            args,
-            [],
-            GLib.SpawnFlags.DO_NOT_REAP_CHILD,
-            None,
-            None,
-            None,
-        )
+        terminal.connect("child-exited", callback_fn)
+
+        res: bool = False
+        try:
+            print(f"Running command: {args}")
+            res = terminal.spawn_sync(
+                Vte.PtyFlags.DEFAULT,
+                ".",
+                args,
+                [],
+                GLib.SpawnFlags.DO_NOT_REAP_CHILD,
+                None,
+                None,
+                None,
+            )
+            print(f"Spawn result: {res}")
+        except Exception as e:
+            print(f"Exception: {e}")
+            return False
+
+        return res
 
     @property
     def running(self) -> bool:
@@ -372,4 +393,3 @@ class PkgManager(ApxEntityBase):
             f"--update '{cmd_update}' --upgrade '{cmd_upgrade}'"
         )
         return self._run_apx_command(command)
-
