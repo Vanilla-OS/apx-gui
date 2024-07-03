@@ -41,6 +41,7 @@ class ApxGUIWindow(Adw.ApplicationWindow):
     content: Adw.Bin = Gtk.Template.Child()  # pyright: ignore
     tab_bar: Adw.TabBar = Gtk.Template.Child()  # pyright: ignore
     title: Adw.WindowTitle = Gtk.Template.Child()  # pyright: ignore
+    style_manager = Adw.StyleManager().get_default() # pyright: ignore
 
     def __init__(self, **kwargs) -> None:
         super().__init__(**kwargs)
