@@ -57,6 +57,7 @@ class CreateSubsystemWindow(Adw.Window):
         self.__subsystems: list[Subsystem] = subsystems
         self.__stacks: list[Stack] = stacks
         self.__terminal = Vte.Terminal()
+        self.__style_manager = self.__window.style_manager
 
         self.console_box_visible = False
 

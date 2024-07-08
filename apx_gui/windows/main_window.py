@@ -19,7 +19,7 @@
 
 from typing import Any
 from uuid import UUID
-from gi.repository import Gtk, Adw, GLib
+from gi.repository import Gtk, Adw, GLib  # pyright: ignore
 
 from apx_gui.core.apx import Apx
 from apx_gui.core.apx_entities import Subsystem, Stack, PkgManager
@@ -41,7 +41,7 @@ class ApxGUIWindow(Adw.ApplicationWindow):
     content: Adw.Bin = Gtk.Template.Child()  # pyright: ignore
     tab_bar: Adw.TabBar = Gtk.Template.Child()  # pyright: ignore
     title: Adw.WindowTitle = Gtk.Template.Child()  # pyright: ignore
-    style_manager = Adw.StyleManager().get_default() # pyright: ignore
+    style_manager = Adw.StyleManager().get_default()  # pyright: ignore
 
     def __init__(self, **kwargs) -> None:
         super().__init__(**kwargs)
