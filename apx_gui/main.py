@@ -1,6 +1,6 @@
 # main.py
 #
-# Copyright 2023 Mirko Brombin
+# Copyright 2024 Mirko Brombin
 #
 # This program is free software: you can redistribute it and/or modify
 # it under the terms of the GNU General Public License as published by
@@ -77,10 +77,10 @@ class ApxGUIApplication(Adw.Application):
             developer_name="Mirko Brombin",
             website="https://github.com/Vanilla-OS/apx-gui",
             issue_url="https://github.com/Vanilla-OS/apx-gui/issues",
-            version="1.0.2",
+            version="1.0.3",
             developers=["Mirko Brombin https://github.com/mirkobrombin"],
             translator_credits=_("translator_credits"),
-            copyright="© 2023 Mirko Brombin and Contributors",
+            copyright="© 2024 Mirko Brombin and Contributors",
             license_type=("gpl-3-0-only"),
         )
         about.add_credit_section(
