@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: apx_gui\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-01-17 09:36+0530\n"
+"POT-Creation-Date: 2024-06-20 23:34+0530\n"
 "PO-Revision-Date: 2023-08-21 18:50+0000\n"
 "Last-Translator: Andrew Geo <andrewgeo@outlook.com>\n"
 "Language-Team: Greek <https://hosted.weblate.org/projects/vanilla-os/apx-gui/"
@@ -26,7 +26,7 @@ msgstr "Apx"
 msgid "A frontend in GTK 4 and Libadwaita for Apx."
 msgstr "Μια μετωπιαία διεπαφή του Apx, βασισμένη στο GTK 4 και το LIbadwaita."
 
-#: apx_gui/gtk/create-pkgmanager.ui:6 apx_gui/gtk/window-main.ui:71
+#: apx_gui/gtk/create-pkgmanager.ui:6 apx_gui/gtk/sidebar.ui:93
 msgid "New Package Manager"
 msgstr "Νέος Διαχειριστής Πακέτων"
 
@@ -41,7 +41,7 @@ msgid "Create"
 msgstr "Δημιουργία"
 
 #: apx_gui/gtk/create-pkgmanager.ui:41 apx_gui/gtk/tab-pkgmanager.ui:24
-#: apx_gui/gtk/tab-stack.ui:24
+#: apx_gui/gtk/tab-stack.ui:24 apx_gui/gtk/tab-subsystem.ui:15
 msgid "Details"
 msgstr "Λεπτομέρειες"
 
@@ -99,11 +99,15 @@ msgid "Upgrade"
 msgstr ""
 
 #: apx_gui/gtk/create-pkgmanager.ui:144
-msgid "Creating Package Manager…"
+#, fuzzy
+#| msgid "Creating Package Manager…"
+msgid "Creating Package Manager"
 msgstr "Δημιουργία Διαχειριστή πακέτων…"
 
 #: apx_gui/gtk/create-pkgmanager.ui:145
-msgid "Please wait while the package manager is being created."
+#, fuzzy
+#| msgid "Please wait while the package manager is being created."
+msgid "Please wait while the package manager is being created"
 msgstr "Παρακαλώ περιμένετε όσο δημιουργείται ο διαχειριστής πακέτων."
 
 #: apx_gui/gtk/create-pkgmanager.ui:169
@@ -111,15 +115,17 @@ msgid "An Error Occurred"
 msgstr "Εμφανίστηκε σφάλμα"
 
 #: apx_gui/gtk/create-pkgmanager.ui:170
-msgid "An error occurred while creating the package manager."
+#, fuzzy
+#| msgid "An error occurred while creating the package manager."
+msgid "An error occurred while creating the package manager"
 msgstr "Προέκυψε σφάλμα κατά τη δημιουργία του διαχειριστή πακέτων."
 
 #: apx_gui/gtk/create-pkgmanager.ui:174 apx_gui/gtk/create-stack.ui:148
-#: apx_gui/gtk/create-subsystem.ui:108
+#: apx_gui/gtk/create-subsystem.ui:144
 msgid "Close"
 msgstr "Κλείσιμο"
 
-#: apx_gui/gtk/create-stack.ui:6 apx_gui/gtk/window-main.ui:67
+#: apx_gui/gtk/create-stack.ui:6 apx_gui/gtk/sidebar.ui:89
 msgid "New Stack"
 msgstr "Νέα στοίβα"
 
@@ -128,7 +134,7 @@ msgid "Base"
 msgstr "Βάση"
 
 #: apx_gui/gtk/create-stack.ui:54 apx_gui/gtk/tab-stack.ui:38
-#: apx_gui/gtk/tab-subsystem.ui:37
+#: apx_gui/gtk/tab-subsystem.ui:38
 msgid "Package Manager"
 msgstr "Διαχειριστής πακέτων"
 
@@ -141,31 +147,45 @@ msgid "New Package"
 msgstr "Νέο πακέτο"
 
 #: apx_gui/gtk/create-stack.ui:119
-msgid "Please wait while the stack is being created."
+#, fuzzy
+#| msgid "Please wait while the stack is being created."
+msgid "Please wait while the stack is being created"
 msgstr "Παρακαλώ περιμένετε όσο δημιουργείται η στοίβα."
 
 #: apx_gui/gtk/create-stack.ui:144
-msgid "An error occurred while creating the stack."
+#, fuzzy
+#| msgid "An error occurred while creating the stack."
+msgid "An error occurred while creating the stack"
 msgstr "Προέκυψε σφάλμα κατά τη δημιουργία της στοίβας."
 
-#: apx_gui/gtk/create-subsystem.ui:6 apx_gui/gtk/window-main.ui:63
+#: apx_gui/gtk/create-subsystem.ui:6 apx_gui/gtk/sidebar.ui:85
 msgid "New Subsystem"
 msgstr "Νέο υποσύστημα"
 
-#: apx_gui/gtk/create-subsystem.ui:49 apx_gui/gtk/tab-subsystem.ui:27
+#: apx_gui/gtk/create-subsystem.ui:49 apx_gui/gtk/tab-subsystem.ui:28
 msgid "Stack"
 msgstr "Στοίβα"
 
 #: apx_gui/gtk/create-subsystem.ui:78
-msgid "Creating Subsystem…"
+#, fuzzy
+#| msgid "Creating Subsystem…"
+msgid "Creating Subsystem"
 msgstr "Δημιουργία υποσυστήματος…"
 
 #: apx_gui/gtk/create-subsystem.ui:79
-msgid "Please wait while the subsystem is being created."
+#, fuzzy
+#| msgid "Please wait while the subsystem is being created."
+msgid "Please wait while the subsystem is being created"
 msgstr "Παρακαλώ περιμένετε όσο το υποσύστημα δημιουργείται."
 
-#: apx_gui/gtk/create-subsystem.ui:104
-msgid "An error occurred while creating the subsystem."
+#: apx_gui/gtk/create-subsystem.ui:92
+msgid "Show Console Output"
+msgstr ""
+
+#: apx_gui/gtk/create-subsystem.ui:140
+#, fuzzy
+#| msgid "An error occurred while creating the subsystem."
+msgid "An error occurred while creating the subsystem"
 msgstr "Προέκυψε σφάλμα κατά τη δημιουργία του υποσυστήματος."
 
 #: apx_gui/gtk/editor.ui:12
@@ -173,7 +193,9 @@ msgid "Start or Open a Subsystem"
 msgstr "Έναρξη ή άνοιγμα υποσυστήματος"
 
 #: apx_gui/gtk/editor.ui:13
-msgid "Start by opening a subsystem, stack or package manager on the left."
+#, fuzzy
+#| msgid "Start by opening a subsystem, stack or package manager on the left."
+msgid "Start by opening a subsystem, stack or package manager on the left"
 msgstr ""
 "Ξεκινήστε ανοίγοντας ένα υποσύστημα, μια στοίβα ή έναν διαχειριστή πακέτων "
 "στα αριστερά."
@@ -218,7 +240,9 @@ msgid "New Package Manager"
 msgstr "Νέος Διαχειριστής Πακέτων"
 
 #: apx_gui/gtk/tab-pkgmanager.ui:13
-msgid "This package manager is built-in and cannot be edited or deleted."
+#, fuzzy
+#| msgid "This package manager is built-in and cannot be edited or deleted."
+msgid "This package manager is built-in and cannot be edited or deleted"
 msgstr ""
 "Αυτός ο διαχειριστής πακέτων είναι ενσωματωμένος και δεν μπορεί να "
 "επεξεργαστεί ή να διαγραφεί."
@@ -228,6 +252,7 @@ msgid "Built-In"
 msgstr "Ενσωματωμένο"
 
 #: apx_gui/gtk/tab-pkgmanager.ui:119 apx_gui/gtk/tab-stack.ui:71
+#: apx_gui/gtk/tab-subsystem.ui:107
 msgid "Destructive Actions"
 msgstr "Καταστροφικές ενέργειες"
 
@@ -236,7 +261,9 @@ msgid "Delete Package Manager"
 msgstr "Διαγραφή Διαχειριστή πακέτων"
 
 #: apx_gui/gtk/tab-stack.ui:13
-msgid "This stack is built-in and cannot be edited or deleted."
+#, fuzzy
+#| msgid "This stack is built-in and cannot be edited or deleted."
+msgid "This stack is built-in and cannot be edited or deleted"
 msgstr ""
 "Αυτή η στοίβα είναι ενσωματωμένη και δεν μπορεί να επεξεργαστεί ή να "
 "διαγραφεί."
@@ -249,35 +276,53 @@ msgstr "Πακέτα"
 msgid "Delete Stack"
 msgstr "Διαγραφή στοίβας"
 
-#: apx_gui/gtk/tab-subsystem.ui:17
+#: apx_gui/gtk/tab-subsystem.ui:18
 msgid "Status"
 msgstr "Κατάσταση"
 
-#: apx_gui/gtk/tab-subsystem.ui:61
+#: apx_gui/gtk/tab-subsystem.ui:59
+#, fuzzy
+#| msgid "New Subsystem"
+msgid "Subsystem actions"
+msgstr "Νέο υποσύστημα"
+
+#: apx_gui/gtk/tab-subsystem.ui:75
+#, fuzzy
+#| msgid "Add Package"
+msgid "Autoremove Packages"
+msgstr "Προσθήκη πακέτου"
+
+#: apx_gui/gtk/tab-subsystem.ui:90
+#, fuzzy
+#| msgid "Creating Package Manager…"
+msgid "Clean Package Manager Cache"
+msgstr "Δημιουργία Διαχειριστή πακέτων…"
+
+#: apx_gui/gtk/tab-subsystem.ui:110
 msgid "Reset Subsystem"
 msgstr "Επαναφορά υποσυστήματος"
 
-#: apx_gui/gtk/tab-subsystem.ui:76
+#: apx_gui/gtk/tab-subsystem.ui:125
 msgid "Delete Subsystem"
 msgstr "Διαγραφή υποσυστήματος"
 
-#: apx_gui/gtk/tab-subsystem.ui:114
+#: apx_gui/gtk/tab-subsystem.ui:164
 #, fuzzy
 #| msgid "Open Console"
 msgid "Restart Console"
 msgstr "Άνοιγμα κονσόλας"
 
-#: apx_gui/gtk/tab-subsystem.ui:125
+#: apx_gui/gtk/tab-subsystem.ui:175
 #, fuzzy
 #| msgid "Open Console"
 msgid "Toggle Console"
 msgstr "Άνοιγμα κονσόλας"
 
-#: apx_gui/gtk/window-main.ui:79
+#: apx_gui/gtk/window-main.ui:53
 msgid "_Keyboard Shortcuts"
 msgstr "_Συντομεύσεις πληκτρολογίου"
 
-#: apx_gui/gtk/window-main.ui:83
+#: apx_gui/gtk/window-main.ui:57
 msgid "_About Apx GUI"
 msgstr "_Σχετικά με το Apx GUI"
 
@@ -290,7 +335,7 @@ msgstr "Ανδρέας Γεωργόπουλος <andrewgeo@outlook.com>"
 msgid "Contributors"
 msgstr "Συντελεστές"
 
-#: apx_gui/main.py:93
+#: apx_gui/main.py:94
 msgid "Tools"
 msgstr "Εργαλεία"
 

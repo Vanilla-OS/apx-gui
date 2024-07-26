@@ -10,11 +10,11 @@ msgid ""
 msgstr ""
 "Project-Id-Version: apx_gui\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-01-17 09:36+0530\n"
+"POT-Creation-Date: 2024-06-20 23:34+0530\n"
 "PO-Revision-Date: 2024-02-22 06:42+0000\n"
 "Last-Translator: Muhammad Bahaa <muhammad.bahaa1@gmail.com>\n"
-"Language-Team: Arabic <https://hosted.weblate.org/projects/vanilla-os/"
-"apx-gui/ar/>\n"
+"Language-Team: Arabic <https://hosted.weblate.org/projects/vanilla-os/apx-"
+"gui/ar/>\n"
 "Language: ar\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -31,7 +31,7 @@ msgstr "Apx"
 msgid "A frontend in GTK 4 and Libadwaita for Apx."
 msgstr "واجهة رسومية لـ Apx مبنية باستخدام GTK4 و Libadwaita."
 
-#: apx_gui/gtk/create-pkgmanager.ui:6 apx_gui/gtk/window-main.ui:71
+#: apx_gui/gtk/create-pkgmanager.ui:6 apx_gui/gtk/sidebar.ui:93
 msgid "New Package Manager"
 msgstr "مدير حزم جديد"
 
@@ -46,7 +46,7 @@ msgid "Create"
 msgstr "أنشِئ"
 
 #: apx_gui/gtk/create-pkgmanager.ui:41 apx_gui/gtk/tab-pkgmanager.ui:24
-#: apx_gui/gtk/tab-stack.ui:24
+#: apx_gui/gtk/tab-stack.ui:24 apx_gui/gtk/tab-subsystem.ui:15
 msgid "Details"
 msgstr "التفاصيل"
 
@@ -104,11 +104,15 @@ msgid "Upgrade"
 msgstr "ترقية"
 
 #: apx_gui/gtk/create-pkgmanager.ui:144
-msgid "Creating Package Manager…"
+#, fuzzy
+#| msgid "Creating Package Manager…"
+msgid "Creating Package Manager"
 msgstr "يتم إنشاء مدير الحزم…"
 
 #: apx_gui/gtk/create-pkgmanager.ui:145
-msgid "Please wait while the package manager is being created."
+#, fuzzy
+#| msgid "Please wait while the package manager is being created."
+msgid "Please wait while the package manager is being created"
 msgstr "يرجى الانتظار ريثما يتم إنشاء مدير الحزم."
 
 #: apx_gui/gtk/create-pkgmanager.ui:169
@@ -116,15 +120,17 @@ msgid "An Error Occurred"
 msgstr "حدث خطأ ما"
 
 #: apx_gui/gtk/create-pkgmanager.ui:170
-msgid "An error occurred while creating the package manager."
+#, fuzzy
+#| msgid "An error occurred while creating the package manager."
+msgid "An error occurred while creating the package manager"
 msgstr "حدث خطأ ما أثناء إنشاء مدير الحزم."
 
 #: apx_gui/gtk/create-pkgmanager.ui:174 apx_gui/gtk/create-stack.ui:148
-#: apx_gui/gtk/create-subsystem.ui:108
+#: apx_gui/gtk/create-subsystem.ui:144
 msgid "Close"
 msgstr "إغلاق"
 
-#: apx_gui/gtk/create-stack.ui:6 apx_gui/gtk/window-main.ui:67
+#: apx_gui/gtk/create-stack.ui:6 apx_gui/gtk/sidebar.ui:89
 msgid "New Stack"
 msgstr "طبقة جديدة"
 
@@ -133,7 +139,7 @@ msgid "Base"
 msgstr "قاعدة"
 
 #: apx_gui/gtk/create-stack.ui:54 apx_gui/gtk/tab-stack.ui:38
-#: apx_gui/gtk/tab-subsystem.ui:37
+#: apx_gui/gtk/tab-subsystem.ui:38
 msgid "Package Manager"
 msgstr "مدير الحزم"
 
@@ -146,31 +152,45 @@ msgid "New Package"
 msgstr "حزمة جديدة"
 
 #: apx_gui/gtk/create-stack.ui:119
-msgid "Please wait while the stack is being created."
+#, fuzzy
+#| msgid "Please wait while the stack is being created."
+msgid "Please wait while the stack is being created"
 msgstr "يرجى الانتظار ريثما يتم إنشاء طبقة جديدة."
 
 #: apx_gui/gtk/create-stack.ui:144
-msgid "An error occurred while creating the stack."
+#, fuzzy
+#| msgid "An error occurred while creating the stack."
+msgid "An error occurred while creating the stack"
 msgstr "حدث خطأ ما أثناء إنشاء الطبقة."
 
-#: apx_gui/gtk/create-subsystem.ui:6 apx_gui/gtk/window-main.ui:63
+#: apx_gui/gtk/create-subsystem.ui:6 apx_gui/gtk/sidebar.ui:85
 msgid "New Subsystem"
 msgstr "نظام فرعي جديد"
 
-#: apx_gui/gtk/create-subsystem.ui:49 apx_gui/gtk/tab-subsystem.ui:27
+#: apx_gui/gtk/create-subsystem.ui:49 apx_gui/gtk/tab-subsystem.ui:28
 msgid "Stack"
 msgstr "طبقة"
 
 #: apx_gui/gtk/create-subsystem.ui:78
-msgid "Creating Subsystem…"
+#, fuzzy
+#| msgid "Creating Subsystem…"
+msgid "Creating Subsystem"
 msgstr "يتم إنشاء نظام فرعي…"
 
 #: apx_gui/gtk/create-subsystem.ui:79
-msgid "Please wait while the subsystem is being created."
+#, fuzzy
+#| msgid "Please wait while the subsystem is being created."
+msgid "Please wait while the subsystem is being created"
 msgstr "يرجى الانتظار ريثما يتم إنشاء نظام فرعي."
 
-#: apx_gui/gtk/create-subsystem.ui:104
-msgid "An error occurred while creating the subsystem."
+#: apx_gui/gtk/create-subsystem.ui:92
+msgid "Show Console Output"
+msgstr ""
+
+#: apx_gui/gtk/create-subsystem.ui:140
+#, fuzzy
+#| msgid "An error occurred while creating the subsystem."
+msgid "An error occurred while creating the subsystem"
 msgstr "حدث خطأ أثناء إنشاء النظام الفرعي."
 
 #: apx_gui/gtk/editor.ui:12
@@ -178,7 +198,9 @@ msgid "Start or Open a Subsystem"
 msgstr "بِدء أو فتح نظام فرعي"
 
 #: apx_gui/gtk/editor.ui:13
-msgid "Start by opening a subsystem, stack or package manager on the left."
+#, fuzzy
+#| msgid "Start by opening a subsystem, stack or package manager on the left."
+msgid "Start by opening a subsystem, stack or package manager on the left"
 msgstr "ابدأ بفتح نظام فرعي، طبقة أو مدير حزم على اليسار."
 
 #: apx_gui/gtk/help-overlay.ui:11
@@ -217,7 +239,9 @@ msgid "New Package Manager"
 msgstr "مدير حزم جديد"
 
 #: apx_gui/gtk/tab-pkgmanager.ui:13
-msgid "This package manager is built-in and cannot be edited or deleted."
+#, fuzzy
+#| msgid "This package manager is built-in and cannot be edited or deleted."
+msgid "This package manager is built-in and cannot be edited or deleted"
 msgstr "مدير الحزم هذا مدمج في النظام و لا يمكن تعديله أو حذفه."
 
 #: apx_gui/gtk/tab-pkgmanager.ui:42 apx_gui/gtk/tab-stack.ui:49
@@ -225,6 +249,7 @@ msgid "Built-In"
 msgstr "مدمج"
 
 #: apx_gui/gtk/tab-pkgmanager.ui:119 apx_gui/gtk/tab-stack.ui:71
+#: apx_gui/gtk/tab-subsystem.ui:107
 msgid "Destructive Actions"
 msgstr "إجراءات تدميرية"
 
@@ -233,7 +258,9 @@ msgid "Delete Package Manager"
 msgstr "حذف مدير الحزم"
 
 #: apx_gui/gtk/tab-stack.ui:13
-msgid "This stack is built-in and cannot be edited or deleted."
+#, fuzzy
+#| msgid "This stack is built-in and cannot be edited or deleted."
+msgid "This stack is built-in and cannot be edited or deleted"
 msgstr "هذه الطبقة مدمجة في النظام و لا يمكن تعديلها أو حذفها."
 
 #: apx_gui/gtk/tab-stack.ui:59
@@ -244,31 +271,49 @@ msgstr "الحزم"
 msgid "Delete Stack"
 msgstr "حذف الطبقة"
 
-#: apx_gui/gtk/tab-subsystem.ui:17
+#: apx_gui/gtk/tab-subsystem.ui:18
 msgid "Status"
 msgstr "الحالة"
 
-#: apx_gui/gtk/tab-subsystem.ui:61
+#: apx_gui/gtk/tab-subsystem.ui:59
+#, fuzzy
+#| msgid "New Subsystem"
+msgid "Subsystem actions"
+msgstr "نظام فرعي جديد"
+
+#: apx_gui/gtk/tab-subsystem.ui:75
+#, fuzzy
+#| msgid "Autoremove"
+msgid "Autoremove Packages"
+msgstr "الإزالة تلقائيا"
+
+#: apx_gui/gtk/tab-subsystem.ui:90
+#, fuzzy
+#| msgid "Creating Package Manager…"
+msgid "Clean Package Manager Cache"
+msgstr "يتم إنشاء مدير الحزم…"
+
+#: apx_gui/gtk/tab-subsystem.ui:110
 msgid "Reset Subsystem"
 msgstr "إعادة ضبط النظام الفرعي"
 
-#: apx_gui/gtk/tab-subsystem.ui:76
+#: apx_gui/gtk/tab-subsystem.ui:125
 msgid "Delete Subsystem"
 msgstr "حذف النظام الفرعي"
 
-#: apx_gui/gtk/tab-subsystem.ui:114
+#: apx_gui/gtk/tab-subsystem.ui:164
 msgid "Restart Console"
 msgstr "إعادة تشغيل وحدة التحكم"
 
-#: apx_gui/gtk/tab-subsystem.ui:125
+#: apx_gui/gtk/tab-subsystem.ui:175
 msgid "Toggle Console"
 msgstr "تبديل وحدة التحكم"
 
-#: apx_gui/gtk/window-main.ui:79
+#: apx_gui/gtk/window-main.ui:53
 msgid "_Keyboard Shortcuts"
 msgstr "_اختصارات لوحة المفاتيح"
 
-#: apx_gui/gtk/window-main.ui:83
+#: apx_gui/gtk/window-main.ui:57
 msgid "_About Apx GUI"
 msgstr "حول Apx GUI (_A)"
 
@@ -282,7 +327,7 @@ msgstr ""
 msgid "Contributors"
 msgstr "المساهمون"
 
-#: apx_gui/main.py:93
+#: apx_gui/main.py:94
 msgid "Tools"
 msgstr "الأدوات"
 
