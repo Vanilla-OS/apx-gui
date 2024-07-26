@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: apx_gui\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-01-17 09:36+0530\n"
+"POT-Creation-Date: 2024-06-20 23:34+0530\n"
 "PO-Revision-Date: 2023-09-19 16:59+0000\n"
 "Last-Translator: \"Shuuji TAKAHASHI (shuuji3)\" <shuuji3@gmail.com>\n"
 "Language-Team: Japanese <https://hosted.weblate.org/projects/vanilla-os/apx-"
@@ -27,7 +27,7 @@ msgstr ""
 msgid "A frontend in GTK 4 and Libadwaita for Apx."
 msgstr ""
 
-#: apx_gui/gtk/create-pkgmanager.ui:6 apx_gui/gtk/window-main.ui:71
+#: apx_gui/gtk/create-pkgmanager.ui:6 apx_gui/gtk/sidebar.ui:93
 msgid "New Package Manager"
 msgstr ""
 
@@ -42,7 +42,7 @@ msgid "Create"
 msgstr ""
 
 #: apx_gui/gtk/create-pkgmanager.ui:41 apx_gui/gtk/tab-pkgmanager.ui:24
-#: apx_gui/gtk/tab-stack.ui:24
+#: apx_gui/gtk/tab-stack.ui:24 apx_gui/gtk/tab-subsystem.ui:15
 msgid "Details"
 msgstr ""
 
@@ -100,11 +100,15 @@ msgid "Upgrade"
 msgstr ""
 
 #: apx_gui/gtk/create-pkgmanager.ui:144
-msgid "Creating Package Manager…"
+#, fuzzy
+#| msgid "Creating Package Manager…"
+msgid "Creating Package Manager"
 msgstr "パッケージマネージャーを作成しています…"
 
 #: apx_gui/gtk/create-pkgmanager.ui:145
-msgid "Please wait while the package manager is being created."
+#, fuzzy
+#| msgid "Please wait while the package manager is being created."
+msgid "Please wait while the package manager is being created"
 msgstr "パッケージマネージャーが作成されるまでお待ちください。"
 
 #: apx_gui/gtk/create-pkgmanager.ui:169
@@ -112,15 +116,17 @@ msgid "An Error Occurred"
 msgstr "エラーが発生しました"
 
 #: apx_gui/gtk/create-pkgmanager.ui:170
-msgid "An error occurred while creating the package manager."
+#, fuzzy
+#| msgid "An error occurred while creating the package manager."
+msgid "An error occurred while creating the package manager"
 msgstr "パッケージマネージャーの作成中にエラーが発生しました。"
 
 #: apx_gui/gtk/create-pkgmanager.ui:174 apx_gui/gtk/create-stack.ui:148
-#: apx_gui/gtk/create-subsystem.ui:108
+#: apx_gui/gtk/create-subsystem.ui:144
 msgid "Close"
 msgstr ""
 
-#: apx_gui/gtk/create-stack.ui:6 apx_gui/gtk/window-main.ui:67
+#: apx_gui/gtk/create-stack.ui:6 apx_gui/gtk/sidebar.ui:89
 msgid "New Stack"
 msgstr ""
 
@@ -129,7 +135,7 @@ msgid "Base"
 msgstr "ベース"
 
 #: apx_gui/gtk/create-stack.ui:54 apx_gui/gtk/tab-stack.ui:38
-#: apx_gui/gtk/tab-subsystem.ui:37
+#: apx_gui/gtk/tab-subsystem.ui:38
 msgid "Package Manager"
 msgstr "パッケージマネージャー"
 
@@ -142,31 +148,45 @@ msgid "New Package"
 msgstr ""
 
 #: apx_gui/gtk/create-stack.ui:119
-msgid "Please wait while the stack is being created."
+#, fuzzy
+#| msgid "Please wait while the stack is being created."
+msgid "Please wait while the stack is being created"
 msgstr "スタックが作成されるまでお待ちください。"
 
 #: apx_gui/gtk/create-stack.ui:144
-msgid "An error occurred while creating the stack."
+#, fuzzy
+#| msgid "An error occurred while creating the stack."
+msgid "An error occurred while creating the stack"
 msgstr "スタックの作成中にエラーが発生しました。"
 
-#: apx_gui/gtk/create-subsystem.ui:6 apx_gui/gtk/window-main.ui:63
+#: apx_gui/gtk/create-subsystem.ui:6 apx_gui/gtk/sidebar.ui:85
 msgid "New Subsystem"
 msgstr "新しいサブシステム"
 
-#: apx_gui/gtk/create-subsystem.ui:49 apx_gui/gtk/tab-subsystem.ui:27
+#: apx_gui/gtk/create-subsystem.ui:49 apx_gui/gtk/tab-subsystem.ui:28
 msgid "Stack"
 msgstr "スタック"
 
 #: apx_gui/gtk/create-subsystem.ui:78
-msgid "Creating Subsystem…"
+#, fuzzy
+#| msgid "Creating Subsystem…"
+msgid "Creating Subsystem"
 msgstr "サブシステムを作成しています…"
 
 #: apx_gui/gtk/create-subsystem.ui:79
-msgid "Please wait while the subsystem is being created."
+#, fuzzy
+#| msgid "Please wait while the subsystem is being created."
+msgid "Please wait while the subsystem is being created"
 msgstr "サブシステムが作成されるまでお待ちください。"
 
-#: apx_gui/gtk/create-subsystem.ui:104
-msgid "An error occurred while creating the subsystem."
+#: apx_gui/gtk/create-subsystem.ui:92
+msgid "Show Console Output"
+msgstr ""
+
+#: apx_gui/gtk/create-subsystem.ui:140
+#, fuzzy
+#| msgid "An error occurred while creating the subsystem."
+msgid "An error occurred while creating the subsystem"
 msgstr "サブシステムの作成中にエラーが発生しました。"
 
 #: apx_gui/gtk/editor.ui:12
@@ -174,7 +194,7 @@ msgid "Start or Open a Subsystem"
 msgstr ""
 
 #: apx_gui/gtk/editor.ui:13
-msgid "Start by opening a subsystem, stack or package manager on the left."
+msgid "Start by opening a subsystem, stack or package manager on the left"
 msgstr ""
 
 #: apx_gui/gtk/help-overlay.ui:11
@@ -219,14 +239,18 @@ msgid "New Package Manager"
 msgstr "パッケージマネージャー"
 
 #: apx_gui/gtk/tab-pkgmanager.ui:13
-msgid "This package manager is built-in and cannot be edited or deleted."
+#, fuzzy
+#| msgid "This stack is built-in and cannot be edited or deleted."
+msgid "This package manager is built-in and cannot be edited or deleted"
 msgstr ""
+"このスタックは組み込まれているため、編集または削除することはできません。"
 
 #: apx_gui/gtk/tab-pkgmanager.ui:42 apx_gui/gtk/tab-stack.ui:49
 msgid "Built-In"
 msgstr ""
 
 #: apx_gui/gtk/tab-pkgmanager.ui:119 apx_gui/gtk/tab-stack.ui:71
+#: apx_gui/gtk/tab-subsystem.ui:107
 msgid "Destructive Actions"
 msgstr ""
 
@@ -235,7 +259,9 @@ msgid "Delete Package Manager"
 msgstr ""
 
 #: apx_gui/gtk/tab-stack.ui:13
-msgid "This stack is built-in and cannot be edited or deleted."
+#, fuzzy
+#| msgid "This stack is built-in and cannot be edited or deleted."
+msgid "This stack is built-in and cannot be edited or deleted"
 msgstr ""
 "このスタックは組み込まれているため、編集または削除することはできません。"
 
@@ -247,35 +273,53 @@ msgstr "パッケージ"
 msgid "Delete Stack"
 msgstr "スタックを削除"
 
-#: apx_gui/gtk/tab-subsystem.ui:17
+#: apx_gui/gtk/tab-subsystem.ui:18
 msgid "Status"
 msgstr "ステータス"
 
-#: apx_gui/gtk/tab-subsystem.ui:61
+#: apx_gui/gtk/tab-subsystem.ui:59
+#, fuzzy
+#| msgid "New Subsystem"
+msgid "Subsystem actions"
+msgstr "新しいサブシステム"
+
+#: apx_gui/gtk/tab-subsystem.ui:75
+#, fuzzy
+#| msgid "Add Package"
+msgid "Autoremove Packages"
+msgstr "パッケージを追加"
+
+#: apx_gui/gtk/tab-subsystem.ui:90
+#, fuzzy
+#| msgid "Creating Package Manager…"
+msgid "Clean Package Manager Cache"
+msgstr "パッケージマネージャーを作成しています…"
+
+#: apx_gui/gtk/tab-subsystem.ui:110
 msgid "Reset Subsystem"
 msgstr "サブシステムを初期化"
 
-#: apx_gui/gtk/tab-subsystem.ui:76
+#: apx_gui/gtk/tab-subsystem.ui:125
 msgid "Delete Subsystem"
 msgstr "サブシステムを削除"
 
-#: apx_gui/gtk/tab-subsystem.ui:114
+#: apx_gui/gtk/tab-subsystem.ui:164
 #, fuzzy
 #| msgid "Open Console"
 msgid "Restart Console"
 msgstr "コンソールを開く"
 
-#: apx_gui/gtk/tab-subsystem.ui:125
+#: apx_gui/gtk/tab-subsystem.ui:175
 #, fuzzy
 #| msgid "Open Console"
 msgid "Toggle Console"
 msgstr "コンソールを開く"
 
-#: apx_gui/gtk/window-main.ui:79
+#: apx_gui/gtk/window-main.ui:53
 msgid "_Keyboard Shortcuts"
 msgstr ""
 
-#: apx_gui/gtk/window-main.ui:83
+#: apx_gui/gtk/window-main.ui:57
 msgid "_About Apx GUI"
 msgstr ""
 
@@ -287,7 +331,7 @@ msgstr ""
 msgid "Contributors"
 msgstr ""
 
-#: apx_gui/main.py:93
+#: apx_gui/main.py:94
 msgid "Tools"
 msgstr ""
 

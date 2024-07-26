@@ -11,11 +11,11 @@ msgid ""
 msgstr ""
 "Project-Id-Version: apx_gui\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-01-17 09:36+0530\n"
+"POT-Creation-Date: 2024-06-20 23:34+0530\n"
 "PO-Revision-Date: 2024-01-31 16:42+0000\n"
 "Last-Translator: andrij <Kalenskuja@gmail.com>\n"
-"Language-Team: Ukrainian <https://hosted.weblate.org/projects/vanilla-os/"
-"apx-gui/uk/>\n"
+"Language-Team: Ukrainian <https://hosted.weblate.org/projects/vanilla-os/apx-"
+"gui/uk/>\n"
 "Language: uk\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -32,7 +32,7 @@ msgstr "Apx"
 msgid "A frontend in GTK 4 and Libadwaita for Apx."
 msgstr "Фронтенд на GTK 4 та Libadwaita для Apx."
 
-#: apx_gui/gtk/create-pkgmanager.ui:6 apx_gui/gtk/window-main.ui:71
+#: apx_gui/gtk/create-pkgmanager.ui:6 apx_gui/gtk/sidebar.ui:93
 msgid "New Package Manager"
 msgstr "Новий менеджер пакунків"
 
@@ -47,7 +47,7 @@ msgid "Create"
 msgstr "Створити"
 
 #: apx_gui/gtk/create-pkgmanager.ui:41 apx_gui/gtk/tab-pkgmanager.ui:24
-#: apx_gui/gtk/tab-stack.ui:24
+#: apx_gui/gtk/tab-stack.ui:24 apx_gui/gtk/tab-subsystem.ui:15
 msgid "Details"
 msgstr "Подробиці"
 
@@ -105,11 +105,15 @@ msgid "Upgrade"
 msgstr "Оновлення (Upgrade)"
 
 #: apx_gui/gtk/create-pkgmanager.ui:144
-msgid "Creating Package Manager…"
+#, fuzzy
+#| msgid "Creating Package Manager…"
+msgid "Creating Package Manager"
 msgstr "Створення менеджера пакунків…"
 
 #: apx_gui/gtk/create-pkgmanager.ui:145
-msgid "Please wait while the package manager is being created."
+#, fuzzy
+#| msgid "Please wait while the package manager is being created."
+msgid "Please wait while the package manager is being created"
 msgstr "Зачекайте, будь ласка, поки створюється менеджер пакунків."
 
 #: apx_gui/gtk/create-pkgmanager.ui:169
@@ -117,15 +121,17 @@ msgid "An Error Occurred"
 msgstr "Сталася помилка"
 
 #: apx_gui/gtk/create-pkgmanager.ui:170
-msgid "An error occurred while creating the package manager."
+#, fuzzy
+#| msgid "An error occurred while creating the package manager."
+msgid "An error occurred while creating the package manager"
 msgstr "Виникла помилка під час створення менеджера пакунків."
 
 #: apx_gui/gtk/create-pkgmanager.ui:174 apx_gui/gtk/create-stack.ui:148
-#: apx_gui/gtk/create-subsystem.ui:108
+#: apx_gui/gtk/create-subsystem.ui:144
 msgid "Close"
 msgstr "Закрити"
 
-#: apx_gui/gtk/create-stack.ui:6 apx_gui/gtk/window-main.ui:67
+#: apx_gui/gtk/create-stack.ui:6 apx_gui/gtk/sidebar.ui:89
 msgid "New Stack"
 msgstr "Новий стек"
 
@@ -134,7 +140,7 @@ msgid "Base"
 msgstr "База"
 
 #: apx_gui/gtk/create-stack.ui:54 apx_gui/gtk/tab-stack.ui:38
-#: apx_gui/gtk/tab-subsystem.ui:37
+#: apx_gui/gtk/tab-subsystem.ui:38
 msgid "Package Manager"
 msgstr "Менеджер пакунків"
 
@@ -147,31 +153,45 @@ msgid "New Package"
 msgstr "Новий пакунок"
 
 #: apx_gui/gtk/create-stack.ui:119
-msgid "Please wait while the stack is being created."
+#, fuzzy
+#| msgid "Please wait while the stack is being created."
+msgid "Please wait while the stack is being created"
 msgstr "Зачекайте, будь ласка, поки стек створюється."
 
 #: apx_gui/gtk/create-stack.ui:144
-msgid "An error occurred while creating the stack."
+#, fuzzy
+#| msgid "An error occurred while creating the stack."
+msgid "An error occurred while creating the stack"
 msgstr "Виникла помилка при створенні стека."
 
-#: apx_gui/gtk/create-subsystem.ui:6 apx_gui/gtk/window-main.ui:63
+#: apx_gui/gtk/create-subsystem.ui:6 apx_gui/gtk/sidebar.ui:85
 msgid "New Subsystem"
 msgstr "Нова підсистема"
 
-#: apx_gui/gtk/create-subsystem.ui:49 apx_gui/gtk/tab-subsystem.ui:27
+#: apx_gui/gtk/create-subsystem.ui:49 apx_gui/gtk/tab-subsystem.ui:28
 msgid "Stack"
 msgstr "Стек"
 
 #: apx_gui/gtk/create-subsystem.ui:78
-msgid "Creating Subsystem…"
+#, fuzzy
+#| msgid "Creating Subsystem…"
+msgid "Creating Subsystem"
 msgstr "Створення підсистеми…"
 
 #: apx_gui/gtk/create-subsystem.ui:79
-msgid "Please wait while the subsystem is being created."
+#, fuzzy
+#| msgid "Please wait while the subsystem is being created."
+msgid "Please wait while the subsystem is being created"
 msgstr "Будь ласка, зачекайте, поки підсистема створюється."
 
-#: apx_gui/gtk/create-subsystem.ui:104
-msgid "An error occurred while creating the subsystem."
+#: apx_gui/gtk/create-subsystem.ui:92
+msgid "Show Console Output"
+msgstr ""
+
+#: apx_gui/gtk/create-subsystem.ui:140
+#, fuzzy
+#| msgid "An error occurred while creating the subsystem."
+msgid "An error occurred while creating the subsystem"
 msgstr "При створенні підсистеми виникла помилка."
 
 #: apx_gui/gtk/editor.ui:12
@@ -179,7 +199,9 @@ msgid "Start or Open a Subsystem"
 msgstr "Запустити або відкрити підсистему"
 
 #: apx_gui/gtk/editor.ui:13
-msgid "Start by opening a subsystem, stack or package manager on the left."
+#, fuzzy
+#| msgid "Start by opening a subsystem, stack or package manager on the left."
+msgid "Start by opening a subsystem, stack or package manager on the left"
 msgstr "Почніть з відкриття підсистеми, стеку або менеджера пакунків зліва."
 
 #: apx_gui/gtk/help-overlay.ui:11
@@ -218,7 +240,9 @@ msgid "New Package Manager"
 msgstr "Новий менеджер пакунків"
 
 #: apx_gui/gtk/tab-pkgmanager.ui:13
-msgid "This package manager is built-in and cannot be edited or deleted."
+#, fuzzy
+#| msgid "This package manager is built-in and cannot be edited or deleted."
+msgid "This package manager is built-in and cannot be edited or deleted"
 msgstr ""
 "Цей менеджер пакунків є вбудованим і не може бути відредагований або "
 "видалений."
@@ -228,6 +252,7 @@ msgid "Built-In"
 msgstr "Вбудований"
 
 #: apx_gui/gtk/tab-pkgmanager.ui:119 apx_gui/gtk/tab-stack.ui:71
+#: apx_gui/gtk/tab-subsystem.ui:107
 msgid "Destructive Actions"
 msgstr "Деструктивні дії"
 
@@ -236,7 +261,9 @@ msgid "Delete Package Manager"
 msgstr "Видалити менеджер пакунків"
 
 #: apx_gui/gtk/tab-stack.ui:13
-msgid "This stack is built-in and cannot be edited or deleted."
+#, fuzzy
+#| msgid "This stack is built-in and cannot be edited or deleted."
+msgid "This stack is built-in and cannot be edited or deleted"
 msgstr "Цей стек є вбудованим і не може бути відредагований або видалений."
 
 #: apx_gui/gtk/tab-stack.ui:59
@@ -247,31 +274,49 @@ msgstr "Пакунки"
 msgid "Delete Stack"
 msgstr "Видалити стек"
 
-#: apx_gui/gtk/tab-subsystem.ui:17
+#: apx_gui/gtk/tab-subsystem.ui:18
 msgid "Status"
 msgstr "Статус"
 
-#: apx_gui/gtk/tab-subsystem.ui:61
+#: apx_gui/gtk/tab-subsystem.ui:59
+#, fuzzy
+#| msgid "New Subsystem"
+msgid "Subsystem actions"
+msgstr "Нова підсистема"
+
+#: apx_gui/gtk/tab-subsystem.ui:75
+#, fuzzy
+#| msgid "Autoremove"
+msgid "Autoremove Packages"
+msgstr "Автовидалення (Autoremove)"
+
+#: apx_gui/gtk/tab-subsystem.ui:90
+#, fuzzy
+#| msgid "Creating Package Manager…"
+msgid "Clean Package Manager Cache"
+msgstr "Створення менеджера пакунків…"
+
+#: apx_gui/gtk/tab-subsystem.ui:110
 msgid "Reset Subsystem"
 msgstr "Скинути підсистему"
 
-#: apx_gui/gtk/tab-subsystem.ui:76
+#: apx_gui/gtk/tab-subsystem.ui:125
 msgid "Delete Subsystem"
 msgstr "Видалити підсистему"
 
-#: apx_gui/gtk/tab-subsystem.ui:114
+#: apx_gui/gtk/tab-subsystem.ui:164
 msgid "Restart Console"
 msgstr "Перезапустити консоль"
 
-#: apx_gui/gtk/tab-subsystem.ui:125
+#: apx_gui/gtk/tab-subsystem.ui:175
 msgid "Toggle Console"
 msgstr "Перемкнути консоль"
 
-#: apx_gui/gtk/window-main.ui:79
+#: apx_gui/gtk/window-main.ui:53
 msgid "_Keyboard Shortcuts"
 msgstr "_Комбінації клавіш"
 
-#: apx_gui/gtk/window-main.ui:83
+#: apx_gui/gtk/window-main.ui:57
 msgid "_About Apx GUI"
 msgstr "Про Apx GUI (_A)"
 
@@ -283,7 +328,7 @@ msgstr "kefir2105 <jonweblin2205@protonmail.com>"
 msgid "Contributors"
 msgstr "Учасники"
 
-#: apx_gui/main.py:93
+#: apx_gui/main.py:94
 msgid "Tools"
 msgstr "Інструменти"
 
