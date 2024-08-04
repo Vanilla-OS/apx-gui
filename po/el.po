@@ -2,13 +2,14 @@
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the apx_gui package.
 # Andrew Geo <andrewgeo@outlook.com>, 2023.
+# ugaugag <ugaugag@users.noreply.hosted.weblate.org>, 2024.
 msgid ""
 msgstr ""
 "Project-Id-Version: apx_gui\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2024-06-20 23:34+0530\n"
-"PO-Revision-Date: 2023-08-21 18:50+0000\n"
-"Last-Translator: Andrew Geo <andrewgeo@outlook.com>\n"
+"PO-Revision-Date: 2024-07-29 14:09+0000\n"
+"Last-Translator: ugaugag <ugaugag@users.noreply.hosted.weblate.org>\n"
 "Language-Team: Greek <https://hosted.weblate.org/projects/vanilla-os/apx-gui/"
 "el/>\n"
 "Language: el\n"
@@ -16,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 5.0-dev\n"
+"X-Generator: Weblate 5.7-dev\n"
 
 #: data/org.vanillaos.ApxGUI.desktop.in:3
 msgid "Apx"
@@ -47,8 +48,9 @@ msgstr "Λεπτομέρειες"
 
 #: apx_gui/gtk/create-pkgmanager.ui:44 apx_gui/gtk/create-stack.ui:44
 #: apx_gui/gtk/create-subsystem.ui:44
+#, fuzzy
 msgid "Name"
-msgstr "Τίτλος"
+msgstr "Όνομα"
 
 #: apx_gui/gtk/create-pkgmanager.ui:49 apx_gui/gtk/tab-pkgmanager.ui:27
 msgid "Need Sudo"
@@ -179,8 +181,9 @@ msgid "Please wait while the subsystem is being created"
 msgstr "Παρακαλώ περιμένετε όσο το υποσύστημα δημιουργείται."
 
 #: apx_gui/gtk/create-subsystem.ui:92
+#, fuzzy
 msgid "Show Console Output"
-msgstr ""
+msgstr "Προβολή εξόδου κονσόλας"
 
 #: apx_gui/gtk/create-subsystem.ui:140
 #, fuzzy
