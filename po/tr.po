@@ -4,21 +4,22 @@
 # Mustafa <mustafa.cgdm1@gmail.com>, 2024.
 # Hindu Papanreu <hintlijapon@gmail.com>, 2024.
 # "K.B.Dharun Krishna" <kbdharunkrishna@gmail.com>, 2024.
+# Emin Tufan Çetin <etcetin@gmail.com>, 2024.
 msgid ""
 msgstr ""
 "Project-Id-Version: apx_gui\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2024-06-20 23:34+0530\n"
-"PO-Revision-Date: 2024-02-17 13:52+0000\n"
-"Last-Translator: \"K.B.Dharun Krishna\" <kbdharunkrishna@gmail.com>\n"
-"Language-Team: Turkish <https://hosted.weblate.org/projects/vanilla-os/apx-"
-"gui/tr/>\n"
+"PO-Revision-Date: 2024-07-31 01:09+0000\n"
+"Last-Translator: Emin Tufan Çetin <etcetin@gmail.com>\n"
+"Language-Team: Turkish <https://hosted.weblate.org/projects/vanilla-os/"
+"apx-gui/tr/>\n"
 "Language: tr\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 5.4\n"
+"X-Generator: Weblate 5.7-dev\n"
 
 #: data/org.vanillaos.ApxGUI.desktop.in:3
 msgid "Apx"
@@ -101,26 +102,20 @@ msgid "Upgrade"
 msgstr "Yükselt"
 
 #: apx_gui/gtk/create-pkgmanager.ui:144
-#, fuzzy
-#| msgid "Creating Package Manager…"
 msgid "Creating Package Manager"
-msgstr "Paket Yöneticisi Oluşturuluyor…"
+msgstr "Paket Yöneticisi Oluşturuluyor"
 
 #: apx_gui/gtk/create-pkgmanager.ui:145
-#, fuzzy
-#| msgid "Please wait while the package manager is being created."
 msgid "Please wait while the package manager is being created"
-msgstr "Paket yöneticisi oluşturulurken lütfen bekleyin."
+msgstr "Paket yöneticisi oluşturulurken lütfen bekleyin"
 
 #: apx_gui/gtk/create-pkgmanager.ui:169
 msgid "An Error Occurred"
 msgstr "Bir Hata Oluştu"
 
 #: apx_gui/gtk/create-pkgmanager.ui:170
-#, fuzzy
-#| msgid "An error occurred while creating the package manager."
 msgid "An error occurred while creating the package manager"
-msgstr "Paket yöneticisi oluşturulurken bir hata oluştu."
+msgstr "Paket yöneticisi oluşturulurken hata oluştu"
 
 #: apx_gui/gtk/create-pkgmanager.ui:174 apx_gui/gtk/create-stack.ui:148
 #: apx_gui/gtk/create-subsystem.ui:144
@@ -149,16 +144,12 @@ msgid "New Package"
 msgstr "Yeni Paket"
 
 #: apx_gui/gtk/create-stack.ui:119
-#, fuzzy
-#| msgid "Please wait while the stack is being created."
 msgid "Please wait while the stack is being created"
-msgstr "Yığın oluşturulurken lütfen bekleyin."
+msgstr "Yığın oluşturulurken lütfen bekleyin"
 
 #: apx_gui/gtk/create-stack.ui:144
-#, fuzzy
-#| msgid "An error occurred while creating the stack."
 msgid "An error occurred while creating the stack"
-msgstr "Yığın oluşturulurken bir hata oluştu."
+msgstr "Yığın oluşturulurken hata oluştu"
 
 #: apx_gui/gtk/create-subsystem.ui:6 apx_gui/gtk/sidebar.ui:85
 msgid "New Subsystem"
@@ -169,37 +160,29 @@ msgid "Stack"
 msgstr "Yığın"
 
 #: apx_gui/gtk/create-subsystem.ui:78
-#, fuzzy
-#| msgid "Creating Subsystem…"
 msgid "Creating Subsystem"
-msgstr "Alt Sistem Oluşturuluyor…"
+msgstr "Alt Sistem Oluşturuluyor"
 
 #: apx_gui/gtk/create-subsystem.ui:79
-#, fuzzy
-#| msgid "Please wait while the subsystem is being created."
 msgid "Please wait while the subsystem is being created"
-msgstr "Alt sistem oluşturulurken lütfen bekleyin."
+msgstr "Alt sistem oluşturulurken lütfen bekleyin"
 
 #: apx_gui/gtk/create-subsystem.ui:92
 msgid "Show Console Output"
-msgstr ""
+msgstr "Konsol Çıktısını Göster"
 
 #: apx_gui/gtk/create-subsystem.ui:140
-#, fuzzy
-#| msgid "An error occurred while creating the subsystem."
 msgid "An error occurred while creating the subsystem"
-msgstr "Alt sistem oluşturulurken bir hata oluştu."
+msgstr "Alt sistem oluşturulurken hata oluştu"
 
 #: apx_gui/gtk/editor.ui:12
 msgid "Start or Open a Subsystem"
 msgstr "Bir Alt Sistemi Başlatın veya Açın"
 
 #: apx_gui/gtk/editor.ui:13
-#, fuzzy
-#| msgid "Start by opening a subsystem, stack or package manager on the left."
 msgid "Start by opening a subsystem, stack or package manager on the left"
 msgstr ""
-"Sol tarafta bir alt sistem, yığın veya paket yöneticisi açarak başlayın."
+"Sol tarafta bir alt sistem, yığın ya da paket yöneticisi açarak başlayın"
 
 #: apx_gui/gtk/help-overlay.ui:11
 msgctxt "shortcut window"
@@ -237,10 +220,8 @@ msgid "New Package Manager"
 msgstr "Yeni Paket Yöneticisi"
 
 #: apx_gui/gtk/tab-pkgmanager.ui:13
-#, fuzzy
-#| msgid "This package manager is built-in and cannot be edited or deleted."
 msgid "This package manager is built-in and cannot be edited or deleted"
-msgstr "Bu paket yöneticisi yerleşiktir ve düzenlenemez veya silinemez."
+msgstr "Bu paket yöneticisi yerleşiktir ve düzenlenemez veya silinemez"
 
 #: apx_gui/gtk/tab-pkgmanager.ui:42 apx_gui/gtk/tab-stack.ui:49
 msgid "Built-In"
@@ -256,10 +237,8 @@ msgid "Delete Package Manager"
 msgstr "Paket Yöneticisini Sil"
 
 #: apx_gui/gtk/tab-stack.ui:13
-#, fuzzy
-#| msgid "This stack is built-in and cannot be edited or deleted."
 msgid "This stack is built-in and cannot be edited or deleted"
-msgstr "Bu yığın yerleşiktir ve düzenlenemez veya silinemez."
+msgstr "Bu yığın yerleşiktir ve düzenlenemez veya silinemez"
 
 #: apx_gui/gtk/tab-stack.ui:59
 msgid "Packages"
@@ -274,22 +253,16 @@ msgid "Status"
 msgstr "Durum"
 
 #: apx_gui/gtk/tab-subsystem.ui:59
-#, fuzzy
-#| msgid "New Subsystem"
 msgid "Subsystem actions"
-msgstr "Yeni Altsistem"
+msgstr "Alt sistem eylemleri"
 
 #: apx_gui/gtk/tab-subsystem.ui:75
-#, fuzzy
-#| msgid "Autoremove"
 msgid "Autoremove Packages"
-msgstr "Otomatiksil"
+msgstr "Paketleri Kendiliğinden Kaldır"
 
 #: apx_gui/gtk/tab-subsystem.ui:90
-#, fuzzy
-#| msgid "Creating Package Manager…"
 msgid "Clean Package Manager Cache"
-msgstr "Paket Yöneticisi Oluşturuluyor…"
+msgstr "Paket Yöneticisi Önbelleğini Temizle"
 
 #: apx_gui/gtk/tab-subsystem.ui:110
 msgid "Reset Subsystem"
