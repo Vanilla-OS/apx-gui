@@ -6,14 +6,14 @@
 # Fedorov Alexei <aleksejfedorov963@gmail.com>, 2023.
 # Império Linux <kevendoria86@gmail.com>, 2023.
 # Vitor Sabino Cardoso da SIlva <vitorcsilva180396@gmail.com>, 2024.
+# Jose Delvani <jsdelvani@users.noreply.hosted.weblate.org>, 2024.
 msgid ""
 msgstr ""
 "Project-Id-Version: apx_gui\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2024-06-20 23:34+0530\n"
-"PO-Revision-Date: 2024-02-09 13:02+0000\n"
-"Last-Translator: Fernando Lopes <118869201+plasmus777@users.noreply.github."
-"com>\n"
+"PO-Revision-Date: 2024-07-29 14:09+0000\n"
+"Last-Translator: Jose Delvani <jsdelvani@users.noreply.hosted.weblate.org>\n"
 "Language-Team: Portuguese (Brazil) <https://hosted.weblate.org/projects/"
 "vanilla-os/apx-gui/pt_BR/>\n"
 "Language: pt_BR\n"
@@ -21,7 +21,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n > 1;\n"
-"X-Generator: Weblate 5.4-dev\n"
+"X-Generator: Weblate 5.7-dev\n"
 
 #: data/org.vanillaos.ApxGUI.desktop.in:3
 msgid "Apx"
@@ -104,26 +104,20 @@ msgid "Upgrade"
 msgstr "Atualizar (Pacotes)"
 
 #: apx_gui/gtk/create-pkgmanager.ui:144
-#, fuzzy
-#| msgid "Creating Package Manager…"
 msgid "Creating Package Manager"
-msgstr "Criando Gerenciador de Pacotes…"
+msgstr "Criando Gerenciador de Pacotes"
 
 #: apx_gui/gtk/create-pkgmanager.ui:145
-#, fuzzy
-#| msgid "Please wait while the package manager is being created."
 msgid "Please wait while the package manager is being created"
-msgstr "Por favor aguarde enquanto o gerenciador de pacotes é criado."
+msgstr "Aguarde enquanto o gerenciador de pacotes está sendo criado"
 
 #: apx_gui/gtk/create-pkgmanager.ui:169
 msgid "An Error Occurred"
 msgstr "Um Erro Ocorreu"
 
 #: apx_gui/gtk/create-pkgmanager.ui:170
-#, fuzzy
-#| msgid "An error occurred while creating the package manager."
 msgid "An error occurred while creating the package manager"
-msgstr "Um erro ocorreu ao criar o gerenciador de pacotes."
+msgstr "Ocorreu um erro ao criar o gerenciador de pacotes"
 
 #: apx_gui/gtk/create-pkgmanager.ui:174 apx_gui/gtk/create-stack.ui:148
 #: apx_gui/gtk/create-subsystem.ui:144
@@ -152,16 +146,12 @@ msgid "New Package"
 msgstr "Novo Pacote"
 
 #: apx_gui/gtk/create-stack.ui:119
-#, fuzzy
-#| msgid "Please wait while the stack is being created."
 msgid "Please wait while the stack is being created"
-msgstr "Por favor aguarde enquanto a pilha é criada."
+msgstr "Aguarde enquanto a pilha está sendo criada"
 
 #: apx_gui/gtk/create-stack.ui:144
-#, fuzzy
-#| msgid "An error occurred while creating the stack."
 msgid "An error occurred while creating the stack"
-msgstr "Um erro ocorreu ao criar a pilha."
+msgstr "Ocorreu um erro ao criar a pilha"
 
 #: apx_gui/gtk/create-subsystem.ui:6 apx_gui/gtk/sidebar.ui:85
 msgid "New Subsystem"
@@ -172,37 +162,29 @@ msgid "Stack"
 msgstr "Pilha"
 
 #: apx_gui/gtk/create-subsystem.ui:78
-#, fuzzy
-#| msgid "Creating Subsystem…"
 msgid "Creating Subsystem"
-msgstr "Criando Subsistema…"
+msgstr "Criando Subsistema"
 
 #: apx_gui/gtk/create-subsystem.ui:79
-#, fuzzy
-#| msgid "Please wait while the subsystem is being created."
 msgid "Please wait while the subsystem is being created"
-msgstr "Por favor aguarde enquanto o subsistema é criado."
+msgstr "Aguarde enquanto o subsistema está sendo criado"
 
 #: apx_gui/gtk/create-subsystem.ui:92
 msgid "Show Console Output"
-msgstr ""
+msgstr "Mostrar mensagens do console"
 
 #: apx_gui/gtk/create-subsystem.ui:140
-#, fuzzy
-#| msgid "An error occurred while creating the subsystem."
 msgid "An error occurred while creating the subsystem"
-msgstr "Um erro ocorreu ao criar o subsistema."
+msgstr "Ocorreu um erro ao criar o subsistema"
 
 #: apx_gui/gtk/editor.ui:12
 msgid "Start or Open a Subsystem"
 msgstr "Iniciar ou Abrir um Subsistema"
 
 #: apx_gui/gtk/editor.ui:13
-#, fuzzy
-#| msgid "Start by opening a subsystem, stack or package manager on the left."
 msgid "Start by opening a subsystem, stack or package manager on the left"
 msgstr ""
-"Comece abrindo um subsistema, pilha ou gerenciador de pacotes à esquerda."
+"Comece abrindo um subsistema, pilha ou gerenciador de pacotes à esquerda"
 
 #: apx_gui/gtk/help-overlay.ui:11
 msgctxt "shortcut window"
@@ -240,11 +222,9 @@ msgid "New Package Manager"
 msgstr "Novo Gerenciador de Pacotes"
 
 #: apx_gui/gtk/tab-pkgmanager.ui:13
-#, fuzzy
-#| msgid "This package manager is built-in and cannot be edited or deleted."
 msgid "This package manager is built-in and cannot be edited or deleted"
 msgstr ""
-"Este gerenciador de pacotes é embutido e não pode ser editado ou removido."
+"Esse gerenciador de pacotes é incorporado e não pode ser editado ou excluído"
 
 #: apx_gui/gtk/tab-pkgmanager.ui:42 apx_gui/gtk/tab-stack.ui:49
 msgid "Built-In"
@@ -260,10 +240,8 @@ msgid "Delete Package Manager"
 msgstr "Apagar Gerenciador de Pacotes"
 
 #: apx_gui/gtk/tab-stack.ui:13
-#, fuzzy
-#| msgid "This stack is built-in and cannot be edited or deleted."
 msgid "This stack is built-in and cannot be edited or deleted"
-msgstr "Esta pilha é embutida e não pode ser editada ou removida."
+msgstr "Essa pilha é incorporada e não pode ser editada ou excluída"
 
 #: apx_gui/gtk/tab-stack.ui:59
 msgid "Packages"
@@ -278,22 +256,16 @@ msgid "Status"
 msgstr "Status"
 
 #: apx_gui/gtk/tab-subsystem.ui:59
-#, fuzzy
-#| msgid "New Subsystem"
 msgid "Subsystem actions"
-msgstr "Novo Subsistema"
+msgstr "Ações do subsistema"
 
 #: apx_gui/gtk/tab-subsystem.ui:75
-#, fuzzy
-#| msgid "Autoremove"
 msgid "Autoremove Packages"
-msgstr "Autoremover"
+msgstr "Remoção automática de pacotes"
 
 #: apx_gui/gtk/tab-subsystem.ui:90
-#, fuzzy
-#| msgid "Creating Package Manager…"
 msgid "Clean Package Manager Cache"
-msgstr "Criando Gerenciador de Pacotes…"
+msgstr "Limpando o cache do gerenciador de pacotes"
 
 #: apx_gui/gtk/tab-subsystem.ui:110
 msgid "Reset Subsystem"
