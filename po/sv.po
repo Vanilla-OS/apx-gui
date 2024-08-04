@@ -9,16 +9,16 @@ msgstr ""
 "Project-Id-Version: apx_gui\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2024-06-20 23:34+0530\n"
-"PO-Revision-Date: 2024-01-17 21:23+0000\n"
+"PO-Revision-Date: 2024-07-27 17:09+0000\n"
 "Last-Translator: bittin1ddc447d824349b2 <bittin@reimu.nl>\n"
-"Language-Team: Swedish <https://hosted.weblate.org/projects/vanilla-os/apx-"
-"gui/sv/>\n"
+"Language-Team: Swedish <https://hosted.weblate.org/projects/vanilla-os/"
+"apx-gui/sv/>\n"
 "Language: sv\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 5.4-dev\n"
+"X-Generator: Weblate 5.7-dev\n"
 
 #: data/org.vanillaos.ApxGUI.desktop.in:3
 msgid "Apx"
@@ -101,26 +101,20 @@ msgid "Upgrade"
 msgstr "Uppgradera"
 
 #: apx_gui/gtk/create-pkgmanager.ui:144
-#, fuzzy
-#| msgid "Creating Package Manager…"
 msgid "Creating Package Manager"
-msgstr "Skapar pakethanterare…"
+msgstr "Skapar pakethanterare"
 
 #: apx_gui/gtk/create-pkgmanager.ui:145
-#, fuzzy
-#| msgid "Please wait while the package manager is being created."
 msgid "Please wait while the package manager is being created"
-msgstr "Vänta medan pakethanteraren skapas."
+msgstr "Vänta medan pakethanteraren skapas"
 
 #: apx_gui/gtk/create-pkgmanager.ui:169
 msgid "An Error Occurred"
 msgstr "Ett fel uppstod"
 
 #: apx_gui/gtk/create-pkgmanager.ui:170
-#, fuzzy
-#| msgid "An error occurred while creating the package manager."
 msgid "An error occurred while creating the package manager"
-msgstr "Ett fel uppstod när pakethanteraren skapades."
+msgstr "Ett fel uppstod när pakethanteraren skapades"
 
 #: apx_gui/gtk/create-pkgmanager.ui:174 apx_gui/gtk/create-stack.ui:148
 #: apx_gui/gtk/create-subsystem.ui:144
@@ -149,16 +143,12 @@ msgid "New Package"
 msgstr "Nytt paket"
 
 #: apx_gui/gtk/create-stack.ui:119
-#, fuzzy
-#| msgid "Please wait while the stack is being created."
 msgid "Please wait while the stack is being created"
-msgstr "Vänta medan stacken skapas."
+msgstr "Vänta medan stacken skapas"
 
 #: apx_gui/gtk/create-stack.ui:144
-#, fuzzy
-#| msgid "An error occurred while creating the stack."
 msgid "An error occurred while creating the stack"
-msgstr "Ett fel uppstod när stacken skapades."
+msgstr "Ett fel uppstod när stacken skapades"
 
 #: apx_gui/gtk/create-subsystem.ui:6 apx_gui/gtk/sidebar.ui:85
 msgid "New Subsystem"
@@ -169,38 +159,30 @@ msgid "Stack"
 msgstr "Stack"
 
 #: apx_gui/gtk/create-subsystem.ui:78
-#, fuzzy
-#| msgid "Creating Subsystem…"
 msgid "Creating Subsystem"
-msgstr "Skapar undersystem…"
+msgstr "Skapar undersystem"
 
 #: apx_gui/gtk/create-subsystem.ui:79
-#, fuzzy
-#| msgid "Please wait while the subsystem is being created."
 msgid "Please wait while the subsystem is being created"
-msgstr "Vänta medan undersystemet skapas."
+msgstr "Vänta medan undersystemet skapas"
 
 #: apx_gui/gtk/create-subsystem.ui:92
 msgid "Show Console Output"
-msgstr ""
+msgstr "Visa konsol utdata"
 
 #: apx_gui/gtk/create-subsystem.ui:140
-#, fuzzy
-#| msgid "An error occurred while creating the subsystem."
 msgid "An error occurred while creating the subsystem"
-msgstr "Ett fel uppstod när undersystemet skapades."
+msgstr "Ett fel uppstod när undersystemet skapades"
 
 #: apx_gui/gtk/editor.ui:12
 msgid "Start or Open a Subsystem"
 msgstr "Starta eller öppna ett undersystem"
 
 #: apx_gui/gtk/editor.ui:13
-#, fuzzy
-#| msgid "Start by opening a subsystem, stack or package manager on the left."
 msgid "Start by opening a subsystem, stack or package manager on the left"
 msgstr ""
 "Börja genom att öppna ett undersystem, stack eller pakethanterare till "
-"vänster."
+"vänster"
 
 #: apx_gui/gtk/help-overlay.ui:11
 msgctxt "shortcut window"
@@ -238,10 +220,8 @@ msgid "New Package Manager"
 msgstr "Ny pakethanterare"
 
 #: apx_gui/gtk/tab-pkgmanager.ui:13
-#, fuzzy
-#| msgid "This package manager is built-in and cannot be edited or deleted."
 msgid "This package manager is built-in and cannot be edited or deleted"
-msgstr "Denna pakethanterare är inbyggd och kan inte redigeras eller raderas."
+msgstr "Denna pakethanterare är inbyggd och kan inte redigeras eller raderas"
 
 #: apx_gui/gtk/tab-pkgmanager.ui:42 apx_gui/gtk/tab-stack.ui:49
 msgid "Built-In"
@@ -257,10 +237,8 @@ msgid "Delete Package Manager"
 msgstr "Ta bort pakethanterare"
 
 #: apx_gui/gtk/tab-stack.ui:13
-#, fuzzy
-#| msgid "This stack is built-in and cannot be edited or deleted."
 msgid "This stack is built-in and cannot be edited or deleted"
-msgstr "Denna stack är inbyggd och kan inte redigeras eller raderas."
+msgstr "Denna stack är inbyggd och kan inte redigeras eller raderas"
 
 #: apx_gui/gtk/tab-stack.ui:59
 msgid "Packages"
@@ -275,22 +253,16 @@ msgid "Status"
 msgstr "Status"
 
 #: apx_gui/gtk/tab-subsystem.ui:59
-#, fuzzy
-#| msgid "New Subsystem"
 msgid "Subsystem actions"
-msgstr "Nytt undersystem"
+msgstr "Undersystem åtgärder"
 
 #: apx_gui/gtk/tab-subsystem.ui:75
-#, fuzzy
-#| msgid "Autoremove"
 msgid "Autoremove Packages"
-msgstr "Ta bort automatiskt"
+msgstr "Ta bort paket automatiskt"
 
 #: apx_gui/gtk/tab-subsystem.ui:90
-#, fuzzy
-#| msgid "Creating Package Manager…"
 msgid "Clean Package Manager Cache"
-msgstr "Skapar pakethanterare…"
+msgstr "Skapar pakethanterarens cache"
 
 #: apx_gui/gtk/tab-subsystem.ui:110
 msgid "Reset Subsystem"
