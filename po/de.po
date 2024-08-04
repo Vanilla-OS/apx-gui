@@ -1,7 +1,7 @@
 # SOME DESCRIPTIVE TITLE.
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the apx_gui package.
-# Ettore Atalan <atalanttore@googlemail.com>, 2023.
+# Ettore Atalan <atalanttore@googlemail.com>, 2023, 2024.
 # "K.B.Dharun Krishna" <kbdharunkrishna@gmail.com>, 2023.
 # nautilusx <translate@disroot.org>, 2023.
 # Experiencing A Significant Gravitas Shortfall <bedeb1@pm.me>, 2023, 2024.
@@ -11,17 +11,16 @@ msgstr ""
 "Project-Id-Version: apx_gui\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2024-06-20 23:34+0530\n"
-"PO-Revision-Date: 2024-06-02 21:55+0000\n"
-"Last-Translator: Experiencing A Significant Gravitas Shortfall <bedeb1@pm."
-"me>\n"
-"Language-Team: German <https://hosted.weblate.org/projects/vanilla-os/apx-"
-"gui/de/>\n"
+"PO-Revision-Date: 2024-08-04 08:09+0000\n"
+"Last-Translator: Ettore Atalan <atalanttore@googlemail.com>\n"
+"Language-Team: German <https://hosted.weblate.org/projects/vanilla-os/"
+"apx-gui/de/>\n"
 "Language: de\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 5.6-dev\n"
+"X-Generator: Weblate 5.7-dev\n"
 
 #: data/org.vanillaos.ApxGUI.desktop.in:3
 msgid "Apx"
@@ -104,26 +103,20 @@ msgid "Upgrade"
 msgstr "Hochstufen"
 
 #: apx_gui/gtk/create-pkgmanager.ui:144
-#, fuzzy
-#| msgid "Creating Package Manager…"
 msgid "Creating Package Manager"
-msgstr "Paketmanager wird erstellt…"
+msgstr "Paketmanager wird erstellt"
 
 #: apx_gui/gtk/create-pkgmanager.ui:145
-#, fuzzy
-#| msgid "Please wait while the package manager is being created."
 msgid "Please wait while the package manager is being created"
-msgstr "Bitte warten, während der Paketmanager erstellt wird."
+msgstr "Bitte warten Sie, während der Paketmanager erstellt wird"
 
 #: apx_gui/gtk/create-pkgmanager.ui:169
 msgid "An Error Occurred"
 msgstr "Ein Fehler ist aufgetreten"
 
 #: apx_gui/gtk/create-pkgmanager.ui:170
-#, fuzzy
-#| msgid "An error occurred while creating the package manager."
 msgid "An error occurred while creating the package manager"
-msgstr "Beim Erstellen des Paketmanagers ist ein Fehler aufgetreten."
+msgstr "Beim Erstellen des Paketmanagers ist ein Fehler aufgetreten"
 
 #: apx_gui/gtk/create-pkgmanager.ui:174 apx_gui/gtk/create-stack.ui:148
 #: apx_gui/gtk/create-subsystem.ui:144
@@ -152,16 +145,12 @@ msgid "New Package"
 msgstr "Neues Paket"
 
 #: apx_gui/gtk/create-stack.ui:119
-#, fuzzy
-#| msgid "Please wait while the stack is being created."
 msgid "Please wait while the stack is being created"
-msgstr "Bitte warten, während der Stapel erstellt wird."
+msgstr "Bitte warten Sie, während der Stapel erstellt wird"
 
 #: apx_gui/gtk/create-stack.ui:144
-#, fuzzy
-#| msgid "An error occurred while creating the stack."
 msgid "An error occurred while creating the stack"
-msgstr "Beim Erstellen des Stapels ist ein Fehler aufgetreten."
+msgstr "Beim Erstellen des Stapels ist ein Fehler aufgetreten"
 
 #: apx_gui/gtk/create-subsystem.ui:6 apx_gui/gtk/sidebar.ui:85
 msgid "New Subsystem"
@@ -172,38 +161,30 @@ msgid "Stack"
 msgstr "Stapel"
 
 #: apx_gui/gtk/create-subsystem.ui:78
-#, fuzzy
-#| msgid "Creating Subsystem…"
 msgid "Creating Subsystem"
-msgstr "Subsystem wird erstellt…"
+msgstr "Subsystem wird erstellt"
 
 #: apx_gui/gtk/create-subsystem.ui:79
-#, fuzzy
-#| msgid "Please wait while the subsystem is being created."
 msgid "Please wait while the subsystem is being created"
-msgstr "Bitte warten, während das Subsystem erstellt wird."
+msgstr "Bitte warten Sie, während das Subsystem erstellt wird"
 
 #: apx_gui/gtk/create-subsystem.ui:92
 msgid "Show Console Output"
-msgstr ""
+msgstr "Konsolenausgabe anzeigen"
 
 #: apx_gui/gtk/create-subsystem.ui:140
-#, fuzzy
-#| msgid "An error occurred while creating the subsystem."
 msgid "An error occurred while creating the subsystem"
-msgstr "Beim Erstellen des Subsystems ist ein Fehler aufgetreten."
+msgstr "Beim Erstellen des Subsystems ist ein Fehler aufgetreten"
 
 #: apx_gui/gtk/editor.ui:12
 msgid "Start or Open a Subsystem"
 msgstr "Subsystem starten oder öffnen"
 
 #: apx_gui/gtk/editor.ui:13
-#, fuzzy
-#| msgid "Start by opening a subsystem, stack or package manager on the left."
 msgid "Start by opening a subsystem, stack or package manager on the left"
 msgstr ""
 "Mit dem Öffnen eines Subsystems, Stapels oder Paketmanagers auf der linken "
-"Seite beginnen."
+"Seite beginnen"
 
 #: apx_gui/gtk/help-overlay.ui:11
 msgctxt "shortcut window"
@@ -241,12 +222,10 @@ msgid "New Package Manager"
 msgstr "Neuer Paketmanager"
 
 #: apx_gui/gtk/tab-pkgmanager.ui:13
-#, fuzzy
-#| msgid "This package manager is built-in and cannot be edited or deleted."
 msgid "This package manager is built-in and cannot be edited or deleted"
 msgstr ""
 "Dieser Paketmanager ist eingebaut und kann nicht bearbeitet oder gelöscht "
-"werden."
+"werden"
 
 #: apx_gui/gtk/tab-pkgmanager.ui:42 apx_gui/gtk/tab-stack.ui:49
 msgid "Built-In"
@@ -262,11 +241,9 @@ msgid "Delete Package Manager"
 msgstr "Paketmanager löschen"
 
 #: apx_gui/gtk/tab-stack.ui:13
-#, fuzzy
-#| msgid "This stack is built-in and cannot be edited or deleted."
 msgid "This stack is built-in and cannot be edited or deleted"
 msgstr ""
-"Dieser Stapel ist eingebaut und kann nicht bearbeitet oder gelöscht werden."
+"Dieser Stapel ist eingebaut und kann nicht bearbeitet oder gelöscht werden"
 
 #: apx_gui/gtk/tab-stack.ui:59
 msgid "Packages"
@@ -281,22 +258,16 @@ msgid "Status"
 msgstr "Status"
 
 #: apx_gui/gtk/tab-subsystem.ui:59
-#, fuzzy
-#| msgid "New Subsystem"
 msgid "Subsystem actions"
-msgstr "Neues Subsystem"
+msgstr "Subsystem-Aktionen"
 
 #: apx_gui/gtk/tab-subsystem.ui:75
-#, fuzzy
-#| msgid "Autoremove"
 msgid "Autoremove Packages"
-msgstr "Automatisch entfernen"
+msgstr "Pakete automatisch entfernen"
 
 #: apx_gui/gtk/tab-subsystem.ui:90
-#, fuzzy
-#| msgid "Creating Package Manager…"
 msgid "Clean Package Manager Cache"
-msgstr "Paketmanager wird erstellt…"
+msgstr "Paketmanager-Zwischenspeicher bereinigen"
 
 #: apx_gui/gtk/tab-subsystem.ui:110
 msgid "Reset Subsystem"
