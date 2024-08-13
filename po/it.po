@@ -4,22 +4,22 @@
 # EncryptedEasty <c.zullo08@gmail.com>, 2023.
 # EncryptedEasty <95353984+EncryptedEasty@users.noreply.github.com>, 2023.
 # Fedorov Alexei <aleksejfedorov963@gmail.com>, 2023.
+# Edoardo Piccolotto <edoardo.piccolotto.services@proton.me>, 2024.
 msgid ""
 msgstr ""
 "Project-Id-Version: apx_gui\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2024-06-20 23:34+0530\n"
-"PO-Revision-Date: 2023-08-07 14:36+0000\n"
-"Last-Translator: EncryptedEasty <95353984+EncryptedEasty@users.noreply."
-"github.com>\n"
-"Language-Team: Italian <https://hosted.weblate.org/projects/vanilla-os/apx-"
-"gui/it/>\n"
+"PO-Revision-Date: 2024-08-07 18:04+0000\n"
+"Last-Translator: Edoardo Piccolotto <edoardo.piccolotto.services@proton.me>\n"
+"Language-Team: Italian <https://hosted.weblate.org/projects/vanilla-os/"
+"apx-gui/it/>\n"
 "Language: it\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 5.0-dev\n"
+"X-Generator: Weblate 5.7-dev\n"
 
 #: data/org.vanillaos.ApxGUI.desktop.in:3
 msgid "Apx"
@@ -183,8 +183,9 @@ msgid "Please wait while the subsystem is being created"
 msgstr "Attendi mentre viene creato il sottosistema."
 
 #: apx_gui/gtk/create-subsystem.ui:92
+#, fuzzy
 msgid "Show Console Output"
-msgstr ""
+msgstr "Mostra l'output della console"
 
 #: apx_gui/gtk/create-subsystem.ui:140
 #, fuzzy
