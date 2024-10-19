@@ -46,6 +46,7 @@ class Apx(ApxEntityBase):
                 data["InternalName"],
                 data["Name"],
                 stack,
+                data["Home"],
                 data["Status"],
                 shlex.split(f"{self._get_apx_command()} {data['Name']} enter"),
                 data["ExportedPrograms"],
