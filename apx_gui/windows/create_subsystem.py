@@ -39,6 +39,7 @@ class CreateSubsystemWindow(Adw.Window):
     btn_create: Gtk.Button = Gtk.Template.Child()  # pyright: ignore
     row_name: Adw.EntryRow = Gtk.Template.Child()  # pyright: ignore
     row_stack: Adw.ComboRow = Gtk.Template.Child()  # pyright: ignore
+    row_home: Adw.EntryRow = Gtk.Template.Child()  # pyright: ignore
     str_stack: Gtk.StringList = Gtk.Template.Child()  # pyright: ignore
     stack_main: Adw.ViewStack = Gtk.Template.Child()  # pyright: ignore
     console_button: Gtk.Box = Gtk.Template.Child()  # pyright: ignore
@@ -76,6 +77,7 @@ class CreateSubsystemWindow(Adw.Window):
         self.btn_create.connect("clicked", self.__on_create_clicked)
         self.console_button.connect("clicked", self.__on_console_button)
         self.row_name.connect("changed", self.__on_name_changed)
+        self.row_home.connect("changed", self.__on_home_changed)
         self.console_output.append(self.__terminal)
         self.__terminal.connect("child-exited", self.on_vte_child_exited)
 
@@ -141,6 +143,7 @@ class CreateSubsystemWindow(Adw.Window):
             "",
             self.row_name.get_text(),
             self.__stacks[self.row_stack.get_selected()],
+            self.row_home.get_text(),
             "",
             [],
             {},
@@ -179,3 +182,9 @@ class CreateSubsystemWindow(Adw.Window):
 
         entry.remove_css_class("error")
         self.btn_create.set_sensitive(GtkUtils.validate_entry(entry))
+
+    def __on_home_changed(self, entry: Adw.EntryRow) -> None:
+        if GtkUtils.validate_path_entry(entry):
+            self.btn_create.set_sensitive(GtkUtils.validate_entry(self.row_name))
+        else:
+            self.btn_create.set_sensitive(False)

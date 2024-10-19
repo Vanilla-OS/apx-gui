@@ -177,6 +177,7 @@ class Subsystem(ApxEntityBase):
         internal_name: str,
         name: str,
         stack: Stack,
+        home: str,
         status: str,
         enter_command: list[str],
         exported_programs: dict[str, dict[str, str]] | None = None,
@@ -185,6 +186,7 @@ class Subsystem(ApxEntityBase):
         self.internal_name: str = internal_name
         self.name: str = name
         self.stack: Stack = stack
+        self.home = home
         self.status: str = status
         self.enter_command: list[str] = enter_command
         if enter_command == []:
@@ -206,6 +208,11 @@ class Subsystem(ApxEntityBase):
                 f"{self.stack.name}",
             ]
         )
+        if self.home != "" and self.home is not None:
+            new_command.extend([
+                "--home",
+                f"{self.home}"
+            ])
         # the following apx command is safe to ignore errors, we´ll check the
         # subsystem status by getting the list of subsystems
         res: bool = self.run_vte_command(new_command, terminal, self._create_callback)

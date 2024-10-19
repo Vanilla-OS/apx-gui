@@ -20,6 +20,7 @@
 from gi.repository import Adw
 
 import re
+import os
 from functools import wraps
 from inspect import signature
 from typing import Optional, Callable, Text
@@ -44,3 +45,13 @@ class GtkUtils:
 
         entry.remove_css_class("error")
         return True
+
+    @staticmethod
+    def validate_path_entry(entry: Adw.EntryRow, extend: Optional[Callable] = None) -> bool:
+        path: Text = entry.get_text()
+        if os.path.exists(path) or path == "":
+            entry.remove_css_class("error")
+            return True
+        else:
+            entry.add_css_class("error")
+            return False

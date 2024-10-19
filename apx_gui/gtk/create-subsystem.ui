@@ -52,6 +52,11 @@
                                                         </property>
                                                     </object>
                                                 </child>
+                                                <child>
+                                                    <object class="AdwEntryRow" id="row_home">
+                                                        <property name="title" translatable="yes">Home</property>
+                                                    </object>
+                                                </child>
                                             </object>
                                         </child>
                                     </object>
