@@ -67,17 +67,20 @@ class ApxGUIWindow(Adw.ApplicationWindow):
 
     def __read_changes(self) -> bool:
         def callback(events: list[dict[str, Any]], exception: Exception):
-            for event in events:
-                for subsystem in self.__subsystems:
-                    if event["Actor"]["Attributes"]["name"] == "apx-" + subsystem.name:
-                        if event["status"] == "start":
-                            subsystem.status = "Up"
-                        elif event["status"] == "die":
-                            subsystem.status = "Exited"
+            try:
+                for event in events:
+                    for subsystem in self.__subsystems:
+                        if event["Actor"]["Attributes"]["name"] == "apx-" + subsystem.name:
+                            if event["status"] == "start":
+                                subsystem.status = "Up"
+                            elif event["status"] == "die":
+                                subsystem.status = "Exited"
 
-                        self.sidebar.update_subsystem(subsystem)
-                        self.editor.update_subsystem_tab(subsystem)
-                        break
+                            self.sidebar.update_subsystem(subsystem)
+                            self.editor.update_subsystem_tab(subsystem)
+                            break
+            except TypeError:
+                print("No new events queue.  Skipping UI refresh...")
 
         RunAsync(Monitor.read, callback)
         return True

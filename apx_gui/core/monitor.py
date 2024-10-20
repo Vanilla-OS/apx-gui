@@ -104,9 +104,13 @@ class Monitor:
 
         session = requests.Session()
         session.mount("http://localhost/", SocketAdapter(socket_path))
-        response = session.get(
-            f"http://localhost/events?since={Monitor.__last_read}&stream=false"
-        )
+        try:
+            response = session.get(
+                f"http://localhost/events?since={Monitor.__last_read}&stream=false"
+            )
+        except Exception as err:
+            print(err)
+            return
         response.raise_for_status()
 
         events = []
