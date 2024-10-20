@@ -148,7 +148,10 @@ class Stack(ApxEntityBase):
         if not list_res[0]:
             return list_res[0], self
 
-        stacks = json.loads(list_res[1])
+        try:
+            stacks = json.loads(list_res[1])
+        except json.decoder.JSONDecodeError:
+            return False, self
         for stack in stacks:
             if stack["Name"] == self.name:
                 self.base = stack["Base"]
