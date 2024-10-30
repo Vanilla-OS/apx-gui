@@ -42,6 +42,12 @@
                 <property name="action-name">app.new_pkgmanager</property>
               </object>
             </child>
+            <child>
+              <object class="GtkShortcutsShortcut">
+                <property name="title" context="shortcut window" translatable="yes">Import File</property>
+                <property name="action-name">app.import_file</property>
+              </object>
+            </child>
           </object>
         </child>
       </object>

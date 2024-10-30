@@ -53,6 +53,9 @@ class ApxGUIApplication(Adw.Application):
         self.create_action(
             "new_pkgmanager", self.on_new_pkgmanager_action, ["<primary>p"]
         )
+        self.create_action(
+            "import_file", self.on_import_file_action, ["<primary>i"]
+        )
         self.create_action("about", self.on_about_action)
 
     def do_activate(self) -> None:
@@ -106,6 +109,9 @@ class ApxGUIApplication(Adw.Application):
 
     def on_new_pkgmanager_action(self, *args) -> None:
         self.__window.new_pkgmanager()
+
+    def on_import_file_action(self, *args) -> None:
+        self.__window.import_file()
 
     def create_action(
         self, name: Text, callback: callable, shortcuts: list[str] = None

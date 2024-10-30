@@ -20,6 +20,7 @@
 - gettext
 - desktop-file-utils
 - apx (2.0+)
+- python3-yaml
 
 ### Build
 
