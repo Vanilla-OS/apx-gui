@@ -93,6 +93,10 @@
         <attribute name="label" translatable="yes">New Package Manager</attribute>
         <attribute name="action">app.new_pkgmanager</attribute>
       </item>
+      <item>
+        <attribute name="label" translatable="yes">Import File</attribute>
+        <attribute name="action">app.import_file</attribute>
+      </item>
     </section>
   </menu>
 </interface>

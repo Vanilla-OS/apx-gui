@@ -17,9 +17,11 @@
 #
 # SPDX-License-Identifier: GPL-3.0-or-later
 
+import yaml
 from typing import Any
 from uuid import UUID
-from gi.repository import Gtk, Adw, GLib  # pyright: ignore
+from gi.repository import Gtk, Adw, GLib, Gio  # pyright: ignore
+from gettext import gettext as _
 
 from apx_gui.core.apx import Apx
 from apx_gui.core.apx_entities import Subsystem, Stack, PkgManager
@@ -135,3 +137,75 @@ class ApxGUIWindow(Adw.ApplicationWindow):
             self, self.__pkgmanagers
         )
         window.show()
+
+    def import_file(self) -> None:
+        file_picker = Gtk.FileDialog()
+        file_filters = Gio.ListStore.new(Gtk.FileFilter)
+
+        yaml_filter = Gtk.FileFilter()
+        yaml_filter.add_pattern("*.yml")
+        yaml_filter.add_pattern("*.yaml")
+
+        yaml_filter.set_name(_("YAML Files"))
+        file_filters.append(yaml_filter)
+
+        file_picker.set_title("Import a YAML File")
+        file_picker.set_filters(file_filters)
+        file_picker.open(parent=self, cancellable=None, callback=self.open_file_callback)
+
+    def open_file_callback(self, filedialog, task):
+        try:
+            file = filedialog.open_finish(task)
+            with open(file.get_path()) as imported_file:
+                contents = yaml.load(imported_file, Loader=yaml.SafeLoader)
+
+                try:
+                    entity: PkgManager = PkgManager(
+                        contents["name"],
+                        contents["needsudo"],
+                        contents["cmdautoremove"],
+                        contents["cmdclean"],
+                        contents["cmdinstall"],
+                        contents["cmdlist"],
+                        contents["cmdpurge"],
+                        contents["cmdremove"],
+                        contents["cmdsearch"],
+                        contents["cmdshow"],
+                        contents["cmdupdate"],
+                        contents["cmdupgrade"],
+                        False,
+                    )
+                    result = entity.create()
+                    if result[0]:
+                        self.append_pkgmanager(result[1])
+                        self.toast(_("Package manager {} created successfully").format(entity.name))
+                        return
+                except KeyError:
+                    print("Package manager not detected in import.")
+                except Exception as e:
+                    print(e)
+
+                try:
+                    for pkgmanager in self.__pkgmanagers:
+                        if pkgmanager.name == contents["pkgmanager"]:
+                            entity: Stack = Stack(
+                                contents["name"],
+                                contents["base"],
+                                contents["packages"],
+                                contents["pkgmanager"],
+                                False,
+                            )
+                            result = entity.create()
+                            if result[0]:
+                                self.append_stack(result[1])
+                                self.toast(_("Stack {} created successfully").format(stack.name))
+                                return
+                except KeyError:
+                    print("Stack not detected in import.")
+                except Exception as e:
+                    print(e)
+
+        except GLib.GError:
+            return
+        
+        self.toast(_("File import failed."))
