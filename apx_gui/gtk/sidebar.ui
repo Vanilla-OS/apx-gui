@@ -29,7 +29,7 @@
           </object>
         </child>
         <property name="content">
-          <object class="GtkScrolledWindow">
+          <object class="GtkBox">
             <child>
               <object class="AdwViewStack" id="stack_sidebar">
                 <property name="vexpand">true</property>
@@ -38,10 +38,15 @@
                     <property name="name">subsystems</property>
                     <property name="icon-name">utilities-terminal-symbolic</property>
                     <property name="child">
-                      <object class="GtkListBox" id="list_subsystems">
-                        <style>
-                          <class name="navigation-sidebar"/>
-                        </style>
+                      <object class="GtkScrolledWindow">
+                        <property name="hexpand">true</property>
+                        <child>
+                          <object class="GtkListBox" id="list_subsystems">
+                            <style>
+                              <class name="navigation-sidebar"/>
+                            </style>
+                          </object>
+                        </child>
                       </object>
                     </property>
                   </object>
@@ -51,10 +56,15 @@
                     <property name="name">stacks</property>
                     <property name="icon-name">vanilla-puzzle-piece-symbolic</property>
                     <property name="child">
-                      <object class="GtkListBox" id="list_stacks">
-                        <style>
-                          <class name="navigation-sidebar"/>
-                        </style>
+                      <object class="GtkScrolledWindow">
+                        <property name="hexpand">true</property>
+                        <child>
+                          <object class="GtkListBox" id="list_stacks">
+                            <style>
+                              <class name="navigation-sidebar"/>
+                            </style>
+                          </object>
+                        </child>
                       </object>
                     </property>
                   </object>
@@ -64,10 +74,15 @@
                     <property name="name">pkgmanagers</property>
                     <property name="icon-name">insert-object-symbolic</property>
                     <property name="child">
-                      <object class="GtkListBox" id="list_pkgmanagers">
-                        <style>
-                          <class name="navigation-sidebar"/>
-                        </style>
+                      <object class="GtkScrolledWindow">
+                        <property name="hexpand">true</property>
+                        <child>
+                          <object class="GtkListBox" id="list_pkgmanagers">
+                            <style>
+                              <class name="navigation-sidebar"/>
+                            </style>
+                          </object>
+                        </child>
                       </object>
                     </property>
                   </object>
