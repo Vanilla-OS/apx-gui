@@ -14,13 +14,23 @@
 
 ### Dependencies
 
-- build-essential
-- meson
-- libadwaita-1-dev
-- gettext
-- desktop-file-utils
-- apx (2.0+)
-- python3-yaml
+#### Build Dependencies
+
+```bash
+apt install -y build-essential meson libadwaita-1-dev \
+               desktop-file-utils pkg-config libglib2.0-dev
+```
+
+#### Runtime Dependencies
+
+```bash
+apt install -y python3 python3-gi \
+               gir1.2-gtk-4.0 libadwaita-1-0 \
+               gir1.2-vte-3.91 python3-yaml \
+               python3-requests gettext
+```
+
+**APX version 2.0+ required.**
 
 ### Build
 
