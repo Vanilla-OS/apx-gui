@@ -19,7 +19,6 @@
           <object class="AdwHeaderBar">
             <property name="margin-top">5</property>
             <property name="show-end-title-buttons">false</property>
-            <property name="show-start-title-buttons">false</property>
             <property name="title-widget">
               <object class="AdwViewSwitcher">
                 <property name="stack">stack_sidebar</property>
