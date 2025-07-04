@@ -2,22 +2,23 @@
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the apx_gui package.
 # guylamar2006 <guychronister@outlook.com>, 2024.
+# aharon don <aronrefael@gmail.com>, 2025.
 msgid ""
 msgstr ""
 "Project-Id-Version: apx_gui\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2024-06-20 23:34+0530\n"
-"PO-Revision-Date: 2024-05-09 15:07+0000\n"
-"Last-Translator: guylamar2006 <guychronister@outlook.com>\n"
-"Language-Team: Hebrew <https://hosted.weblate.org/projects/vanilla-os/apx-"
-"gui/he/>\n"
+"PO-Revision-Date: 2025-03-05 21:37+0000\n"
+"Last-Translator: aharon don <aronrefael@gmail.com>\n"
+"Language-Team: Hebrew <https://hosted.weblate.org/projects/vanilla-os/"
+"apx-gui/he/>\n"
 "Language: he\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=4; plural=(n == 1) ? 0 : ((n == 2) ? 1 : ((n > 10 && "
 "n % 10 == 0) ? 2 : 3));\n"
-"X-Generator: Weblate 5.5.4-rc\n"
+"X-Generator: Weblate 5.10.3-dev\n"
 
 #: data/org.vanillaos.ApxGUI.desktop.in:3
 #, fuzzy
@@ -52,9 +53,8 @@ msgstr "פרטים"
 
 #: apx_gui/gtk/create-pkgmanager.ui:44 apx_gui/gtk/create-stack.ui:44
 #: apx_gui/gtk/create-subsystem.ui:44
-#, fuzzy
 msgid "Name"
-msgstr "שם השם"
+msgstr "שם"
 
 #: apx_gui/gtk/create-pkgmanager.ui:49 apx_gui/gtk/tab-pkgmanager.ui:27
 #, fuzzy
