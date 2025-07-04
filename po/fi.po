@@ -1,26 +1,22 @@
 # SOME DESCRIPTIVE TITLE.
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the apx_gui package.
-# Nguyen Minh Thai <thaimeo200389@gmail.com>, 2023.
-# Nguyễn Xuân Cảm <nguyenxuancamit@gmail.com>, 2024.
-# "K.B.Dharun Krishna" <kbdharunkrishna@gmail.com>, 2024.
-# Notch Apple <Gapple1703@gmail.com>, 2024.
-# akarihito <thiendat5506@gmail.com>, 2025.
+# Ricky Tigg <ricky.tigg@gmail.com>, 2025.
 msgid ""
 msgstr ""
 "Project-Id-Version: apx_gui\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2024-06-20 23:34+0530\n"
-"PO-Revision-Date: 2025-05-14 18:53+0000\n"
-"Last-Translator: akarihito <thiendat5506@gmail.com>\n"
-"Language-Team: Vietnamese <https://hosted.weblate.org/projects/vanilla-os/"
-"apx-gui/vi/>\n"
-"Language: vi\n"
+"PO-Revision-Date: 2025-03-11 12:18+0000\n"
+"Last-Translator: Ricky Tigg <ricky.tigg@gmail.com>\n"
+"Language-Team: Finnish <https://hosted.weblate.org/projects/vanilla-os/"
+"apx-gui/fi/>\n"
+"Language: fi\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Weblate 5.12-dev\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 5.10.3-dev\n"
 
 #: data/org.vanillaos.ApxGUI.desktop.in:3
 msgid "Apx"
@@ -28,278 +24,276 @@ msgstr "Apx"
 
 #: data/org.vanillaos.ApxGUI.appdata.xml.in:7
 msgid "A frontend in GTK 4 and Libadwaita for Apx."
-msgstr "Giao diện GTK 4 và Libadwaita cho Apx."
+msgstr "Käyttöliittymä GTK 4:ssä ja Libadwaitassa Apx:lle."
 
 #: apx_gui/gtk/create-pkgmanager.ui:6 apx_gui/gtk/sidebar.ui:93
 msgid "New Package Manager"
-msgstr "Trình quản lí gói mới"
+msgstr "Uusi pakettihallinta"
 
 #: apx_gui/gtk/create-pkgmanager.ui:23 apx_gui/gtk/create-stack.ui:23
 #: apx_gui/gtk/create-subsystem.ui:23
 msgid "Cancel"
-msgstr "Hủy bỏ"
+msgstr "Peruuta"
 
 #: apx_gui/gtk/create-pkgmanager.ui:28 apx_gui/gtk/create-stack.ui:28
 #: apx_gui/gtk/create-subsystem.ui:28
 msgid "Create"
-msgstr "Tạo"
+msgstr "Luo"
 
 #: apx_gui/gtk/create-pkgmanager.ui:41 apx_gui/gtk/tab-pkgmanager.ui:24
 #: apx_gui/gtk/tab-stack.ui:24 apx_gui/gtk/tab-subsystem.ui:15
 msgid "Details"
-msgstr "Chi tiết"
+msgstr "Yksityiskohdat"
 
 #: apx_gui/gtk/create-pkgmanager.ui:44 apx_gui/gtk/create-stack.ui:44
 #: apx_gui/gtk/create-subsystem.ui:44
 msgid "Name"
-msgstr "Tên"
+msgstr "Nimi"
 
 #: apx_gui/gtk/create-pkgmanager.ui:49 apx_gui/gtk/tab-pkgmanager.ui:27
 msgid "Need Sudo"
-msgstr "Cần quyền quản trị"
+msgstr "Sudoa tarvitaan"
 
 #: apx_gui/gtk/create-pkgmanager.ui:70
 msgid "Commands"
-msgstr "Lệnh"
+msgstr "Komennot"
 
 #: apx_gui/gtk/create-pkgmanager.ui:73 apx_gui/gtk/tab-pkgmanager.ui:57
 msgid "Autoremove"
-msgstr "Tự động gỡ bỏ"
+msgstr "Automaattinen poisto"
 
 #: apx_gui/gtk/create-pkgmanager.ui:78 apx_gui/gtk/tab-pkgmanager.ui:63
 msgid "Clean"
-msgstr "Dọn dẹp"
+msgstr "Tyhjennä"
 
 #: apx_gui/gtk/create-pkgmanager.ui:83 apx_gui/gtk/tab-pkgmanager.ui:69
 msgid "Install"
-msgstr "Cài đặt"
+msgstr "Asenna"
 
 #: apx_gui/gtk/create-pkgmanager.ui:88 apx_gui/gtk/tab-pkgmanager.ui:75
 msgid "List"
-msgstr "Danh sách"
+msgstr "Luetteloi"
 
 #: apx_gui/gtk/create-pkgmanager.ui:93 apx_gui/gtk/tab-pkgmanager.ui:81
 msgid "Purge"
-msgstr "Xóa sạch"
+msgstr "Puhdista"
 
 #: apx_gui/gtk/create-pkgmanager.ui:98 apx_gui/gtk/tab-pkgmanager.ui:87
 msgid "Remove"
-msgstr "Xóa"
+msgstr "Poista"
 
 #: apx_gui/gtk/create-pkgmanager.ui:103 apx_gui/gtk/tab-pkgmanager.ui:93
 msgid "Search"
-msgstr "Tìm kiếm"
+msgstr "Etsi"
 
 #: apx_gui/gtk/create-pkgmanager.ui:108 apx_gui/gtk/tab-pkgmanager.ui:99
 msgid "Show"
-msgstr "Hiển thị"
+msgstr "Näytä"
 
 #: apx_gui/gtk/create-pkgmanager.ui:113 apx_gui/gtk/tab-pkgmanager.ui:105
 msgid "Update"
-msgstr "Cập nhật"
+msgstr "Päivitä"
 
 #: apx_gui/gtk/create-pkgmanager.ui:118 apx_gui/gtk/tab-pkgmanager.ui:111
 msgid "Upgrade"
-msgstr "Nâng cấp"
+msgstr "Ylennä"
 
 #: apx_gui/gtk/create-pkgmanager.ui:144
 msgid "Creating Package Manager"
-msgstr "Đang tạo Trình quản lí gói"
+msgstr "Pakettihallinnan luominen"
 
 #: apx_gui/gtk/create-pkgmanager.ui:145
 msgid "Please wait while the package manager is being created"
-msgstr "Vui lòng chờ khi trình quản lí gói đang được tạo"
+msgstr "Odota, kunnes paketinhallintaa luodaan"
 
 #: apx_gui/gtk/create-pkgmanager.ui:169
 msgid "An Error Occurred"
-msgstr "Có một lỗi đã xảy ra"
+msgstr "Tapahtui virhe"
 
 #: apx_gui/gtk/create-pkgmanager.ui:170
 msgid "An error occurred while creating the package manager"
-msgstr "Có một lỗi đã xảy ra khi tạo trình quản lí gói"
+msgstr "Paketinhallintaa luotaessa tapahtui virhe"
 
 #: apx_gui/gtk/create-pkgmanager.ui:174 apx_gui/gtk/create-stack.ui:148
 #: apx_gui/gtk/create-subsystem.ui:144
 msgid "Close"
-msgstr "Đóng"
+msgstr "Sulje"
 
 #: apx_gui/gtk/create-stack.ui:6 apx_gui/gtk/sidebar.ui:89
 msgid "New Stack"
-msgstr "Ngăn xếp mới"
+msgstr "Uusi pino"
 
 #: apx_gui/gtk/create-stack.ui:49 apx_gui/gtk/tab-stack.ui:27
 msgid "Base"
-msgstr "Cơ sở"
+msgstr "Alusta"
 
 #: apx_gui/gtk/create-stack.ui:54 apx_gui/gtk/tab-stack.ui:38
 #: apx_gui/gtk/tab-subsystem.ui:38
 msgid "Package Manager"
-msgstr "Trình quản lí gói"
+msgstr "Paketinhallinta"
 
 #: apx_gui/gtk/create-stack.ui:80
 msgid "Add Package"
-msgstr "Thêm gói"
+msgstr "Lisää paketti"
 
 #: apx_gui/gtk/create-stack.ui:92
 msgid "New Package"
-msgstr "Gói mới"
+msgstr "Uusi paketti"
 
 #: apx_gui/gtk/create-stack.ui:119
 msgid "Please wait while the stack is being created"
-msgstr "Vui lòng chờ khi ngăn xếp đang được tạo"
+msgstr "Odota, kun pinoa luodaan"
 
 #: apx_gui/gtk/create-stack.ui:144
 msgid "An error occurred while creating the stack"
-msgstr "Có một lỗi đã xảy ra khi tạo ngăn xếp"
+msgstr "Pinoa luotaessa tapahtui virhe"
 
 #: apx_gui/gtk/create-subsystem.ui:6 apx_gui/gtk/sidebar.ui:85
 msgid "New Subsystem"
-msgstr "Hệ thống con mới"
+msgstr "Uusi alajärjestelmä"
 
 #: apx_gui/gtk/create-subsystem.ui:49 apx_gui/gtk/tab-subsystem.ui:28
 msgid "Stack"
-msgstr "Ngăn xếp"
+msgstr "Pino"
 
 #: apx_gui/gtk/create-subsystem.ui:78
 msgid "Creating Subsystem"
-msgstr "Đang tạo Hệ thống con"
+msgstr "Luodaan alajärjestelmää"
 
 #: apx_gui/gtk/create-subsystem.ui:79
 msgid "Please wait while the subsystem is being created"
-msgstr "Vui lòng chờ khi hệ thống con đang được tạo"
+msgstr "Odota, kun alijärjestelmää luodaan"
 
 #: apx_gui/gtk/create-subsystem.ui:92
 msgid "Show Console Output"
-msgstr "Hiển thị bảng điều khiển đầu ra"
+msgstr "Näytä konsolin lähtö"
 
 #: apx_gui/gtk/create-subsystem.ui:140
 msgid "An error occurred while creating the subsystem"
-msgstr "Có một lỗi đã xảy ra khi tạo hệ thống con"
+msgstr "Alijärjestelmää luotaessa tapahtui virhe"
 
 #: apx_gui/gtk/editor.ui:12
 msgid "Start or Open a Subsystem"
-msgstr "Khởi động hoặc Mở một Hệ thống con"
+msgstr "Käynnistä tai avaa alijärjestelmä"
 
 #: apx_gui/gtk/editor.ui:13
 msgid "Start by opening a subsystem, stack or package manager on the left"
 msgstr ""
-"Bắt đầu bằng cách mở một hệ thống con, ngăn xếp hoặc trình quản lí gói ở bên "
-"trái"
+"Aloita avaamalla vasemmalla oleva alijärjestelmä, pino tai paketinhallinta"
 
 #: apx_gui/gtk/help-overlay.ui:11
 msgctxt "shortcut window"
 msgid "General"
-msgstr "Tổng quan"
+msgstr "Yleinen"
 
 #: apx_gui/gtk/help-overlay.ui:14
 msgctxt "shortcut window"
 msgid "Show Shortcuts"
-msgstr "Hiện phím tắt"
+msgstr "Näytä pikanäppäimet"
 
 #: apx_gui/gtk/help-overlay.ui:20
 msgctxt "shortcut window"
 msgid "Quit"
-msgstr "Thoát"
+msgstr "Poistu"
 
 #: apx_gui/gtk/help-overlay.ui:26
 msgctxt "shortcut window"
 msgid "Create"
-msgstr "Tạo"
+msgstr "Luo"
 
 #: apx_gui/gtk/help-overlay.ui:29
 msgctxt "shortcut window"
 msgid "New Subsystem"
-msgstr "Hệ thống con mới"
+msgstr "Uusi alajärjestelmä"
 
 #: apx_gui/gtk/help-overlay.ui:35
 msgctxt "shortcut window"
 msgid "New Stack"
-msgstr "Ngăn xếp mới"
+msgstr "Uusi pino"
 
 #: apx_gui/gtk/help-overlay.ui:41
 msgctxt "shortcut window"
 msgid "New Package Manager"
-msgstr "Trình quản lý gói mới"
+msgstr "Uusi pakettihallinta"
 
 #: apx_gui/gtk/tab-pkgmanager.ui:13
 msgid "This package manager is built-in and cannot be edited or deleted"
-msgstr "Trình quản lý gói này được tích hợp sẵn và không thể chỉnh sửa hoặc xóa"
+msgstr ""
+"Tämä paketinhallinta on sisäänrakennettu, eikä sitä voi muokata tai poistaa"
 
 #: apx_gui/gtk/tab-pkgmanager.ui:42 apx_gui/gtk/tab-stack.ui:49
 msgid "Built-In"
-msgstr "Được tích hợp sẵn"
+msgstr "Sisäänrakennettu"
 
 #: apx_gui/gtk/tab-pkgmanager.ui:119 apx_gui/gtk/tab-stack.ui:71
 #: apx_gui/gtk/tab-subsystem.ui:107
 msgid "Destructive Actions"
-msgstr "Những hành động có tính phá hoại"
+msgstr "Tuhoavat toimet"
 
 #: apx_gui/gtk/tab-pkgmanager.ui:122
 msgid "Delete Package Manager"
-msgstr "Xóa Trình quản lí gói"
+msgstr "Poista paketinhallinta"
 
 #: apx_gui/gtk/tab-stack.ui:13
 msgid "This stack is built-in and cannot be edited or deleted"
-msgstr "Ngăn xếp này được tích hợp sẵn và không thể chỉnh sửa hoặc xóa"
+msgstr "Tämä pino on sisäänrakennettu, eikä sitä voi muokata tai poistaa"
 
 #: apx_gui/gtk/tab-stack.ui:59
 msgid "Packages"
-msgstr "Gói phần mềm"
+msgstr "Paketit"
 
 #: apx_gui/gtk/tab-stack.ui:74
 msgid "Delete Stack"
-msgstr "Xóa ngăn xếp"
+msgstr "Poista pino"
 
 #: apx_gui/gtk/tab-subsystem.ui:18
 msgid "Status"
-msgstr "Tình trạng"
+msgstr "Tila"
 
 #: apx_gui/gtk/tab-subsystem.ui:59
 msgid "Subsystem actions"
-msgstr "Hành động hệ thống con"
+msgstr "Alijärjestelmän toimet"
 
 #: apx_gui/gtk/tab-subsystem.ui:75
 msgid "Autoremove Packages"
-msgstr "Tự động gỡ bỏ"
+msgstr "Pakettien automaattinen poisto"
 
 #: apx_gui/gtk/tab-subsystem.ui:90
 msgid "Clean Package Manager Cache"
-msgstr "Dọn dẹp bộ nhớ đệm của Trình quản lý gói"
+msgstr "Tyhjennä paketinhallinnan välimuisti"
 
 #: apx_gui/gtk/tab-subsystem.ui:110
 msgid "Reset Subsystem"
-msgstr "Đặt lại hệ thống con"
+msgstr "Nollaa alijärjestelmä"
 
 #: apx_gui/gtk/tab-subsystem.ui:125
 msgid "Delete Subsystem"
-msgstr "Xóa hệ thống con"
+msgstr "Poista alijärjestelmä"
 
 #: apx_gui/gtk/tab-subsystem.ui:164
 msgid "Restart Console"
-msgstr "Khởi động lại Bảng điều khiển"
+msgstr "Käynnistä konsoli uudelleen"
 
 #: apx_gui/gtk/tab-subsystem.ui:175
 msgid "Toggle Console"
-msgstr "Bật/Tắt bảng điều khiển"
+msgstr "Konsoli päälle/pois"
 
 #: apx_gui/gtk/window-main.ui:53
 msgid "_Keyboard Shortcuts"
-msgstr "_Phím tắt bàn phím"
+msgstr "_Näppäimistön pikanäppäimet"
 
 #: apx_gui/gtk/window-main.ui:57
 msgid "_About Apx GUI"
-msgstr "_Về Apx GUI"
+msgstr "_Tietoja Apx GUI:sta"
 
 #: apx_gui/main.py:82
 msgid "translator_credits"
 msgstr ""
-"Nguyễn Xuân Cảm <nguyenxuancamit@gmail.com>\n"
-"Notch Apple <gapple1703@gmail.com>"
 
 #: apx_gui/main.py:87
 msgid "Contributors"
-msgstr "Người đóng góp"
+msgstr "Osallistujat"
 
 #: apx_gui/main.py:94
 msgid "Tools"
-msgstr "Công cụ"
+msgstr "Työkalut"
