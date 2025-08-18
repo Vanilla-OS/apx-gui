@@ -1,0 +1,299 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the apx_gui package.
+# Ricky Tigg <ricky.tigg@gmail.com>, 2025.
+msgid ""
+msgstr ""
+"Project-Id-Version: apx_gui\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2024-06-20 23:34+0530\n"
+"PO-Revision-Date: 2025-03-11 12:18+0000\n"
+"Last-Translator: Ricky Tigg <ricky.tigg@gmail.com>\n"
+"Language-Team: Finnish <https://hosted.weblate.org/projects/vanilla-os/"
+"apx-gui/fi/>\n"
+"Language: fi\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 5.10.3-dev\n"
+
+#: data/org.vanillaos.ApxGUI.desktop.in:3
+msgid "Apx"
+msgstr "Apx"
+
+#: data/org.vanillaos.ApxGUI.appdata.xml.in:7
+msgid "A frontend in GTK 4 and Libadwaita for Apx."
+msgstr "Käyttöliittymä GTK 4:ssä ja Libadwaitassa Apx:lle."
+
+#: apx_gui/gtk/create-pkgmanager.ui:6 apx_gui/gtk/sidebar.ui:93
+msgid "New Package Manager"
+msgstr "Uusi pakettihallinta"
+
+#: apx_gui/gtk/create-pkgmanager.ui:23 apx_gui/gtk/create-stack.ui:23
+#: apx_gui/gtk/create-subsystem.ui:23
+msgid "Cancel"
+msgstr "Peruuta"
+
+#: apx_gui/gtk/create-pkgmanager.ui:28 apx_gui/gtk/create-stack.ui:28
+#: apx_gui/gtk/create-subsystem.ui:28
+msgid "Create"
+msgstr "Luo"
+
+#: apx_gui/gtk/create-pkgmanager.ui:41 apx_gui/gtk/tab-pkgmanager.ui:24
+#: apx_gui/gtk/tab-stack.ui:24 apx_gui/gtk/tab-subsystem.ui:15
+msgid "Details"
+msgstr "Yksityiskohdat"
+
+#: apx_gui/gtk/create-pkgmanager.ui:44 apx_gui/gtk/create-stack.ui:44
+#: apx_gui/gtk/create-subsystem.ui:44
+msgid "Name"
+msgstr "Nimi"
+
+#: apx_gui/gtk/create-pkgmanager.ui:49 apx_gui/gtk/tab-pkgmanager.ui:27
+msgid "Need Sudo"
+msgstr "Sudoa tarvitaan"
+
+#: apx_gui/gtk/create-pkgmanager.ui:70
+msgid "Commands"
+msgstr "Komennot"
+
+#: apx_gui/gtk/create-pkgmanager.ui:73 apx_gui/gtk/tab-pkgmanager.ui:57
+msgid "Autoremove"
+msgstr "Automaattinen poisto"
+
+#: apx_gui/gtk/create-pkgmanager.ui:78 apx_gui/gtk/tab-pkgmanager.ui:63
+msgid "Clean"
+msgstr "Tyhjennä"
+
+#: apx_gui/gtk/create-pkgmanager.ui:83 apx_gui/gtk/tab-pkgmanager.ui:69
+msgid "Install"
+msgstr "Asenna"
+
+#: apx_gui/gtk/create-pkgmanager.ui:88 apx_gui/gtk/tab-pkgmanager.ui:75
+msgid "List"
+msgstr "Luetteloi"
+
+#: apx_gui/gtk/create-pkgmanager.ui:93 apx_gui/gtk/tab-pkgmanager.ui:81
+msgid "Purge"
+msgstr "Puhdista"
+
+#: apx_gui/gtk/create-pkgmanager.ui:98 apx_gui/gtk/tab-pkgmanager.ui:87
+msgid "Remove"
+msgstr "Poista"
+
+#: apx_gui/gtk/create-pkgmanager.ui:103 apx_gui/gtk/tab-pkgmanager.ui:93
+msgid "Search"
+msgstr "Etsi"
+
+#: apx_gui/gtk/create-pkgmanager.ui:108 apx_gui/gtk/tab-pkgmanager.ui:99
+msgid "Show"
+msgstr "Näytä"
+
+#: apx_gui/gtk/create-pkgmanager.ui:113 apx_gui/gtk/tab-pkgmanager.ui:105
+msgid "Update"
+msgstr "Päivitä"
+
+#: apx_gui/gtk/create-pkgmanager.ui:118 apx_gui/gtk/tab-pkgmanager.ui:111
+msgid "Upgrade"
+msgstr "Ylennä"
+
+#: apx_gui/gtk/create-pkgmanager.ui:144
+msgid "Creating Package Manager"
+msgstr "Pakettihallinnan luominen"
+
+#: apx_gui/gtk/create-pkgmanager.ui:145
+msgid "Please wait while the package manager is being created"
+msgstr "Odota, kunnes paketinhallintaa luodaan"
+
+#: apx_gui/gtk/create-pkgmanager.ui:169
+msgid "An Error Occurred"
+msgstr "Tapahtui virhe"
+
+#: apx_gui/gtk/create-pkgmanager.ui:170
+msgid "An error occurred while creating the package manager"
+msgstr "Paketinhallintaa luotaessa tapahtui virhe"
+
+#: apx_gui/gtk/create-pkgmanager.ui:174 apx_gui/gtk/create-stack.ui:148
+#: apx_gui/gtk/create-subsystem.ui:144
+msgid "Close"
+msgstr "Sulje"
+
+#: apx_gui/gtk/create-stack.ui:6 apx_gui/gtk/sidebar.ui:89
+msgid "New Stack"
+msgstr "Uusi pino"
+
+#: apx_gui/gtk/create-stack.ui:49 apx_gui/gtk/tab-stack.ui:27
+msgid "Base"
+msgstr "Alusta"
+
+#: apx_gui/gtk/create-stack.ui:54 apx_gui/gtk/tab-stack.ui:38
+#: apx_gui/gtk/tab-subsystem.ui:38
+msgid "Package Manager"
+msgstr "Paketinhallinta"
+
+#: apx_gui/gtk/create-stack.ui:80
+msgid "Add Package"
+msgstr "Lisää paketti"
+
+#: apx_gui/gtk/create-stack.ui:92
+msgid "New Package"
+msgstr "Uusi paketti"
+
+#: apx_gui/gtk/create-stack.ui:119
+msgid "Please wait while the stack is being created"
+msgstr "Odota, kun pinoa luodaan"
+
+#: apx_gui/gtk/create-stack.ui:144
+msgid "An error occurred while creating the stack"
+msgstr "Pinoa luotaessa tapahtui virhe"
+
+#: apx_gui/gtk/create-subsystem.ui:6 apx_gui/gtk/sidebar.ui:85
+msgid "New Subsystem"
+msgstr "Uusi alajärjestelmä"
+
+#: apx_gui/gtk/create-subsystem.ui:49 apx_gui/gtk/tab-subsystem.ui:28
+msgid "Stack"
+msgstr "Pino"
+
+#: apx_gui/gtk/create-subsystem.ui:78
+msgid "Creating Subsystem"
+msgstr "Luodaan alajärjestelmää"
+
+#: apx_gui/gtk/create-subsystem.ui:79
+msgid "Please wait while the subsystem is being created"
+msgstr "Odota, kun alijärjestelmää luodaan"
+
+#: apx_gui/gtk/create-subsystem.ui:92
+msgid "Show Console Output"
+msgstr "Näytä konsolin lähtö"
+
+#: apx_gui/gtk/create-subsystem.ui:140
+msgid "An error occurred while creating the subsystem"
+msgstr "Alijärjestelmää luotaessa tapahtui virhe"
+
+#: apx_gui/gtk/editor.ui:12
+msgid "Start or Open a Subsystem"
+msgstr "Käynnistä tai avaa alijärjestelmä"
+
+#: apx_gui/gtk/editor.ui:13
+msgid "Start by opening a subsystem, stack or package manager on the left"
+msgstr ""
+"Aloita avaamalla vasemmalla oleva alijärjestelmä, pino tai paketinhallinta"
+
+#: apx_gui/gtk/help-overlay.ui:11
+msgctxt "shortcut window"
+msgid "General"
+msgstr "Yleinen"
+
+#: apx_gui/gtk/help-overlay.ui:14
+msgctxt "shortcut window"
+msgid "Show Shortcuts"
+msgstr "Näytä pikanäppäimet"
+
+#: apx_gui/gtk/help-overlay.ui:20
+msgctxt "shortcut window"
+msgid "Quit"
+msgstr "Poistu"
+
+#: apx_gui/gtk/help-overlay.ui:26
+msgctxt "shortcut window"
+msgid "Create"
+msgstr "Luo"
+
+#: apx_gui/gtk/help-overlay.ui:29
+msgctxt "shortcut window"
+msgid "New Subsystem"
+msgstr "Uusi alajärjestelmä"
+
+#: apx_gui/gtk/help-overlay.ui:35
+msgctxt "shortcut window"
+msgid "New Stack"
+msgstr "Uusi pino"
+
+#: apx_gui/gtk/help-overlay.ui:41
+msgctxt "shortcut window"
+msgid "New Package Manager"
+msgstr "Uusi pakettihallinta"
+
+#: apx_gui/gtk/tab-pkgmanager.ui:13
+msgid "This package manager is built-in and cannot be edited or deleted"
+msgstr ""
+"Tämä paketinhallinta on sisäänrakennettu, eikä sitä voi muokata tai poistaa"
+
+#: apx_gui/gtk/tab-pkgmanager.ui:42 apx_gui/gtk/tab-stack.ui:49
+msgid "Built-In"
+msgstr "Sisäänrakennettu"
+
+#: apx_gui/gtk/tab-pkgmanager.ui:119 apx_gui/gtk/tab-stack.ui:71
+#: apx_gui/gtk/tab-subsystem.ui:107
+msgid "Destructive Actions"
+msgstr "Tuhoavat toimet"
+
+#: apx_gui/gtk/tab-pkgmanager.ui:122
+msgid "Delete Package Manager"
+msgstr "Poista paketinhallinta"
+
+#: apx_gui/gtk/tab-stack.ui:13
+msgid "This stack is built-in and cannot be edited or deleted"
+msgstr "Tämä pino on sisäänrakennettu, eikä sitä voi muokata tai poistaa"
+
+#: apx_gui/gtk/tab-stack.ui:59
+msgid "Packages"
+msgstr "Paketit"
+
+#: apx_gui/gtk/tab-stack.ui:74
+msgid "Delete Stack"
+msgstr "Poista pino"
+
+#: apx_gui/gtk/tab-subsystem.ui:18
+msgid "Status"
+msgstr "Tila"
+
+#: apx_gui/gtk/tab-subsystem.ui:59
+msgid "Subsystem actions"
+msgstr "Alijärjestelmän toimet"
+
+#: apx_gui/gtk/tab-subsystem.ui:75
+msgid "Autoremove Packages"
+msgstr "Pakettien automaattinen poisto"
+
+#: apx_gui/gtk/tab-subsystem.ui:90
+msgid "Clean Package Manager Cache"
+msgstr "Tyhjennä paketinhallinnan välimuisti"
+
+#: apx_gui/gtk/tab-subsystem.ui:110
+msgid "Reset Subsystem"
+msgstr "Nollaa alijärjestelmä"
+
+#: apx_gui/gtk/tab-subsystem.ui:125
+msgid "Delete Subsystem"
+msgstr "Poista alijärjestelmä"
+
+#: apx_gui/gtk/tab-subsystem.ui:164
+msgid "Restart Console"
+msgstr "Käynnistä konsoli uudelleen"
+
+#: apx_gui/gtk/tab-subsystem.ui:175
+msgid "Toggle Console"
+msgstr "Konsoli päälle/pois"
+
+#: apx_gui/gtk/window-main.ui:53
+msgid "_Keyboard Shortcuts"
+msgstr "_Näppäimistön pikanäppäimet"
+
+#: apx_gui/gtk/window-main.ui:57
+msgid "_About Apx GUI"
+msgstr "_Tietoja Apx GUI:sta"
+
+#: apx_gui/main.py:82
+msgid "translator_credits"
+msgstr ""
+
+#: apx_gui/main.py:87
+msgid "Contributors"
+msgstr "Osallistujat"
+
+#: apx_gui/main.py:94
+msgid "Tools"
+msgstr "Työkalut"
