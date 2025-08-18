@@ -4,13 +4,14 @@
 # azuki <ipadgoogcloud@gmail.com>, 2023.
 # "Shuuji TAKAHASHI (shuuji3)" <shuuji3@gmail.com>, 2023.
 # Gnuey56 <gnuey56@proton.me>, 2025.
+# アカウント3 <lpjo.9bzl@protonmail.com>, 2025.
 msgid ""
 msgstr ""
 "Project-Id-Version: apx_gui\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2024-06-20 23:34+0530\n"
-"PO-Revision-Date: 2025-03-07 10:17+0000\n"
-"Last-Translator: Gnuey56 <gnuey56@proton.me>\n"
+"PO-Revision-Date: 2025-08-18 07:02+0000\n"
+"Last-Translator: アカウント3 <lpjo.9bzl@protonmail.com>\n"
 "Language-Team: Japanese <https://hosted.weblate.org/projects/vanilla-os/"
 "apx-gui/ja/>\n"
 "Language: ja\n"
@@ -18,7 +19,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Weblate 5.10.3-dev\n"
+"X-Generator: Weblate 5.13\n"
 
 #: data/org.vanillaos.ApxGUI.desktop.in:3
 msgid "Apx"
@@ -30,12 +31,12 @@ msgstr ""
 
 #: apx_gui/gtk/create-pkgmanager.ui:6 apx_gui/gtk/sidebar.ui:93
 msgid "New Package Manager"
-msgstr ""
+msgstr "新しいパッケージマネージャー"
 
 #: apx_gui/gtk/create-pkgmanager.ui:23 apx_gui/gtk/create-stack.ui:23
 #: apx_gui/gtk/create-subsystem.ui:23
 msgid "Cancel"
-msgstr ""
+msgstr "キャンセル"
 
 #: apx_gui/gtk/create-pkgmanager.ui:28 apx_gui/gtk/create-stack.ui:28
 #: apx_gui/gtk/create-subsystem.ui:28
