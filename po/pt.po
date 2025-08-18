@@ -2,13 +2,14 @@
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the apx_gui package.
 # ssantos <ssantos@web.de>, 2024.
+# Vinícius <vinicius.cgobbi2004@gmail.com>, 2025.
 msgid ""
 msgstr ""
 "Project-Id-Version: apx_gui\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2024-06-20 23:34+0530\n"
-"PO-Revision-Date: 2024-03-23 18:27+0000\n"
-"Last-Translator: ssantos <ssantos@web.de>\n"
+"PO-Revision-Date: 2025-07-04 10:02+0000\n"
+"Last-Translator: Vinícius <vinicius.cgobbi2004@gmail.com>\n"
 "Language-Team: Portuguese <https://hosted.weblate.org/projects/vanilla-os/"
 "apx-gui/pt/>\n"
 "Language: pt\n"
@@ -16,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n > 1;\n"
-"X-Generator: Weblate 5.5-dev\n"
+"X-Generator: Weblate 5.13-dev\n"
 
 #: data/org.vanillaos.ApxGUI.desktop.in:3
 msgid "Apx"
@@ -28,7 +29,7 @@ msgstr "Um frontend em GTK 4 e Libadwaita para o Apx."
 
 #: apx_gui/gtk/create-pkgmanager.ui:6 apx_gui/gtk/sidebar.ui:93
 msgid "New Package Manager"
-msgstr "Novo Gestor de Pacotes"
+msgstr "Novo Gerenciador de Pacotes"
 
 #: apx_gui/gtk/create-pkgmanager.ui:23 apx_gui/gtk/create-stack.ui:23
 #: apx_gui/gtk/create-subsystem.ui:23
@@ -180,7 +181,7 @@ msgstr "Por favor aguarde enquanto o subsistema é criado."
 
 #: apx_gui/gtk/create-subsystem.ui:92
 msgid "Show Console Output"
-msgstr ""
+msgstr "Mostrar saída no terminal"
 
 #: apx_gui/gtk/create-subsystem.ui:140
 #, fuzzy
