@@ -8,13 +8,13 @@
 # Tomasz Dyńka <gramyteraz12@gmail.com>, 2023.
 # Marek <uroda.mar@gmail.com>, 2024.
 # Dawid Harwig <dawidharwig@gmail.com>, 2024.
-# Piotr Wieczorek <wieczorek.piotr.praga@protonmail.com>, 2024.
+# Piotr Wieczorek <wieczorek.piotr.praga@protonmail.com>, 2024, 2025.
 msgid ""
 msgstr ""
 "Project-Id-Version: apx_gui\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2024-06-20 23:34+0530\n"
-"PO-Revision-Date: 2024-11-13 07:06+0000\n"
+"PO-Revision-Date: 2025-03-02 16:12+0000\n"
 "Last-Translator: Piotr Wieczorek <wieczorek.piotr.praga@protonmail.com>\n"
 "Language-Team: Polish <https://hosted.weblate.org/projects/vanilla-os/"
 "apx-gui/pl/>\n"
@@ -24,7 +24,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=(n==1 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 "
 "|| n%100>=20) ? 1 : 2);\n"
-"X-Generator: Weblate 5.9-dev\n"
+"X-Generator: Weblate 5.10.3-dev\n"
 
 #: data/org.vanillaos.ApxGUI.desktop.in:3
 msgid "Apx"
@@ -57,12 +57,11 @@ msgstr "Szczegóły"
 #: apx_gui/gtk/create-subsystem.ui:44
 #, fuzzy
 msgid "Name"
-msgstr "Nazwa konta"
+msgstr "Nazwa Użytkownika"
 
 #: apx_gui/gtk/create-pkgmanager.ui:49 apx_gui/gtk/tab-pkgmanager.ui:27
-#, fuzzy
 msgid "Need Sudo"
-msgstr "Wymaga uprawnień roota"
+msgstr "Wymagaj Sudo"
 
 #: apx_gui/gtk/create-pkgmanager.ui:70
 msgid "Commands"
@@ -85,7 +84,6 @@ msgid "List"
 msgstr "Wypisz"
 
 #: apx_gui/gtk/create-pkgmanager.ui:93 apx_gui/gtk/tab-pkgmanager.ui:81
-#, fuzzy
 msgid "Purge"
 msgstr "Wyczyść"
 
@@ -111,26 +109,20 @@ msgid "Upgrade"
 msgstr "Zaktualizuj"
 
 #: apx_gui/gtk/create-pkgmanager.ui:144
-#, fuzzy
-#| msgid "Creating Package Manager…"
 msgid "Creating Package Manager"
-msgstr "Tworzenie menedżera pakietów…"
+msgstr "Tworzenie Menedżera Pakietów"
 
 #: apx_gui/gtk/create-pkgmanager.ui:145
-#, fuzzy
 msgid "Please wait while the package manager is being created"
-msgstr "Zaczekaj, aż menedżer pakietów zostanie utworzony."
+msgstr "Proszę czekać, zanim menedżer pakietów zostanie utworzony"
 
 #: apx_gui/gtk/create-pkgmanager.ui:169
-#, fuzzy
 msgid "An Error Occurred"
-msgstr "Wystąpił błąd"
+msgstr "Wystąpił Błąd"
 
 #: apx_gui/gtk/create-pkgmanager.ui:170
-#, fuzzy
-#| msgid "An error occurred while creating the package manager."
 msgid "An error occurred while creating the package manager"
-msgstr "Wystąpił błąd podczas tworzenia menedżera pakietów."
+msgstr "Wystąpił błąd podczas tworzenia menedżera pakietów"
 
 #: apx_gui/gtk/create-pkgmanager.ui:174 apx_gui/gtk/create-stack.ui:148
 #: apx_gui/gtk/create-subsystem.ui:144
@@ -178,10 +170,8 @@ msgid "Stack"
 msgstr "Stos"
 
 #: apx_gui/gtk/create-subsystem.ui:78
-#, fuzzy
-#| msgid "Creating Subsystem…"
 msgid "Creating Subsystem"
-msgstr "Tworzenie podsystemu…"
+msgstr "Tworzenie Podsystemu"
 
 #: apx_gui/gtk/create-subsystem.ui:79
 #, fuzzy
@@ -193,20 +183,18 @@ msgid "Show Console Output"
 msgstr "Pokaż Wyjście Konsoli"
 
 #: apx_gui/gtk/create-subsystem.ui:140
-#, fuzzy
-#| msgid "An error occurred while creating the subsystem."
 msgid "An error occurred while creating the subsystem"
-msgstr "Wystąpił błąd podczas tworzenia podsystemu."
+msgstr "Wystąpił błąd podczas tworzenia podsystemu"
 
 #: apx_gui/gtk/editor.ui:12
-#, fuzzy
 msgid "Start or Open a Subsystem"
-msgstr "Uruchom podsystem"
+msgstr "Uruchom albo Otwórz Podsystem"
 
 #: apx_gui/gtk/editor.ui:13
 #, fuzzy
 msgid "Start by opening a subsystem, stack or package manager on the left"
-msgstr "Uruchom przez wybranie podsystemu, stosu lub menedżera pakietów."
+msgstr ""
+"Zacznij przez wybranie podsystemu, stosu lub menedżera pakietów po lewej"
 
 #: apx_gui/gtk/help-overlay.ui:11
 msgctxt "shortcut window"
@@ -216,7 +204,7 @@ msgstr "Ogólny"
 #: apx_gui/gtk/help-overlay.ui:14
 msgctxt "shortcut window"
 msgid "Show Shortcuts"
-msgstr "Pokaż skróty"
+msgstr "Pokaż Skróty"
 
 #: apx_gui/gtk/help-overlay.ui:20
 msgctxt "shortcut window"
@@ -231,23 +219,23 @@ msgstr "Utwórz"
 #: apx_gui/gtk/help-overlay.ui:29
 msgctxt "shortcut window"
 msgid "New Subsystem"
-msgstr "Nowy podsystem"
+msgstr "Nowy Podsystem"
 
 #: apx_gui/gtk/help-overlay.ui:35
+#, fuzzy
 msgctxt "shortcut window"
 msgid "New Stack"
-msgstr "Nowy stos"
+msgstr "Nowy Stos"
 
 #: apx_gui/gtk/help-overlay.ui:41
 msgctxt "shortcut window"
 msgid "New Package Manager"
-msgstr "Nowy menedżer pakietów"
+msgstr "Nowy Menedżer Pakietów"
 
 #: apx_gui/gtk/tab-pkgmanager.ui:13
-#, fuzzy
 msgid "This package manager is built-in and cannot be edited or deleted"
 msgstr ""
-"Menedżer pakietów jest wbudowany i nie może zostać edytowany lub usunięty."
+"Ten menedżer pakietów jest wbudowany i nie może być edytowany lub usunięty"
 
 #: apx_gui/gtk/tab-pkgmanager.ui:42 apx_gui/gtk/tab-stack.ui:49
 msgid "Built-In"
@@ -256,70 +244,66 @@ msgstr "Wbudowany"
 #: apx_gui/gtk/tab-pkgmanager.ui:119 apx_gui/gtk/tab-stack.ui:71
 #: apx_gui/gtk/tab-subsystem.ui:107
 msgid "Destructive Actions"
-msgstr "Działania destrukcyjne"
+msgstr "Działania Destrukcyjne"
 
 #: apx_gui/gtk/tab-pkgmanager.ui:122
 msgid "Delete Package Manager"
-msgstr "Usuń menedżera pakietów"
+msgstr "Usuń Menedżera Pakietów"
 
 #: apx_gui/gtk/tab-stack.ui:13
 #, fuzzy
 #| msgid "This stack is built-in and cannot be edited or deleted."
 msgid "This stack is built-in and cannot be edited or deleted"
-msgstr "Stos jest wbudowany i nie może zostać edytowany lub usunięty."
+msgstr "Ten stos jest wbudowany i nie może być edytowany lub usunięty"
 
 #: apx_gui/gtk/tab-stack.ui:59
 msgid "Packages"
 msgstr "Pakiety"
 
 #: apx_gui/gtk/tab-stack.ui:74
+#, fuzzy
 msgid "Delete Stack"
-msgstr "Usuń stos"
+msgstr "Usuń Stos"
 
 #: apx_gui/gtk/tab-subsystem.ui:18
 msgid "Status"
 msgstr "Status"
 
 #: apx_gui/gtk/tab-subsystem.ui:59
-#, fuzzy
-#| msgid "New Subsystem"
 msgid "Subsystem actions"
-msgstr "Nowy podsystem"
+msgstr "Akcje podsystemu"
 
 #: apx_gui/gtk/tab-subsystem.ui:75
-#, fuzzy
-#| msgid "Autoremove"
 msgid "Autoremove Packages"
-msgstr "Automatyczne usunięcie"
+msgstr "Automatyczne Usuwanie Pakietów"
 
 #: apx_gui/gtk/tab-subsystem.ui:90
-#, fuzzy
-#| msgid "Creating Package Manager…"
 msgid "Clean Package Manager Cache"
-msgstr "Tworzenie menedżera pakietów…"
+msgstr "Wyczyść Pamięć Podręczną Menedżera Pakietów"
 
 #: apx_gui/gtk/tab-subsystem.ui:110
 msgid "Reset Subsystem"
-msgstr "Zresetuj podsystem"
+msgstr "Zresetuj Podsystem"
 
 #: apx_gui/gtk/tab-subsystem.ui:125
 msgid "Delete Subsystem"
-msgstr "Usuń podsystem"
+msgstr "Usuń Podsystem"
 
 #: apx_gui/gtk/tab-subsystem.ui:164
 msgid "Restart Console"
-msgstr "Zrestartuj konsolę"
+msgstr "Zrestartuj Konsolę"
 
 #: apx_gui/gtk/tab-subsystem.ui:175
 msgid "Toggle Console"
-msgstr "Przełącz konsolę"
+msgstr "Przełącz Konsolę"
 
 #: apx_gui/gtk/window-main.ui:53
 #, fuzzy
 msgid "_Keyboard Shortcuts"
-msgstr "Skróty klawiszowe"
+msgstr "Skróty Klawiszowe"
 
 #: apx_gui/gtk/window-main.ui:57
+#, fuzzy
 msgid "_About Apx GUI"
 msgstr "O Apx GUI"
 
