@@ -259,7 +259,7 @@ class Subsystem(ApxEntityBase):
                 ".",
                 args,
                 [],
-                GLib.SpawnFlags.DO_NOT_REAP_CHILD,
+                GLib.SpawnFlags.DO_NOT_REAP_CHILD | GLib.SpawnFlags.SEARCH_PATH,
                 None,
                 None,
                 None,
