@@ -1,9 +1,54 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<component type="desktop">
-	<id>org.vanillaos.ApxGUI.desktop</id>
-	<metadata_license>CC0-1.0</metadata_license>
-	<project_license>GPL-3.0-or-later</project_license>
-	<description>
-	  <p>A frontend in GTK 4 and Libadwaita for Apx.</p>
-	</description>
+<component type="desktop-application">
+  <id>org.vanillaos.ApxGUI</id>
+
+  <metadata_license>CC0-1.0</metadata_license>
+  <project_license>GPL-3.0-or-later</project_license>
+
+  <name>Apx GUI</name>
+  <summary>Portable, reproducible development environments</summary>
+
+  <developer id="org.vanillaos">
+    <name>Vanilla OS Contributors</name>
+  </developer>
+
+  <description>
+    <p>
+      Apx GUI provides a user-friendly interface for Apx, a platform powered by <a href="https://distrobox.it">Distrobox</a> that streamlines dev environments into portable, reproducible subsystems.
+      Originally created for <a href="https://vanillaos.org">Vanilla OS</a>, it can also be installed on any Linux distribution.
+    </p>
+  </description>
+
+  <launchable type="desktop-id">org.vanillaos.ApxGUI.desktop</launchable>
+
+  <content_rating type="oars-1.1" />
+
+  <url type="bugtracker">https://github.com/Vanilla-OS/apx-gui/issues</url>
+  <url type="homepage">https://apx.vanillaos.org</url>
+  <url type="donation">https://vanillaos.org/get-involved/funding</url>
+  <url type="vcs-browser">https://github.com/Vanilla-OS/apx-gui</url>
+
+  <screenshots>
+    <screenshot type="default">
+      <image>https://vanillaos.org/uploads/apx-v2-subsystem.webp</image>
+    </screenshot>
+    <screenshot>
+      <image>https://vanillaos.org/uploads/apx-v2-subsystem-shell.webp</image>
+    </screenshot>
+    <screenshot>
+      <image>https://vanillaos.org/uploads/apx-v2-stack.webp</image>
+    </screenshot>
+    <screenshot>
+      <image>https://vanillaos.org/uploads/apx-v2-pkgmanager.webp</image>
+    </screenshot>
+  </screenshots>
+
+  <releases>
+    <release version="1.0.5" date="2026-01-07">
+      <url type="details">https://github.com/Vanilla-OS/apx-gui/releases/tag/v1.0.5</url>
+    </release>
+    <release version="1.0.4" date="2024-11-06">
+      <url type="details">https://github.com/Vanilla-OS/apx-gui/releases/tag/v1.0.4</url>
+    </release>
+  </releases>
 </component>
