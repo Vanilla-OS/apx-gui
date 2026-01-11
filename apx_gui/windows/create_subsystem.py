@@ -135,9 +135,19 @@ class CreateSubsystemWindow(Adw.Window):
         self.console_box_visible = not self.console_box_visible
         self.console_box.set_visible(self.console_box_visible)
 
+        if not self.console_box_visible:
+            self.set_default_size(540, 250)
+        else:
+            self.set_default_size(540, 500)
+
+        # Prevents window jumping around
+        self.maximize()
+        self.unmaximize()
+
     def __on_create_clicked(self, button: Gtk.Button) -> None:
         button.set_visible(False)
         self.stack_main.set_visible_child_name("creating")
+        self.set_default_size(540, 250)
 
         subsystem: Subsystem = Subsystem(
             "",
