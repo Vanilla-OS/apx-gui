@@ -14,8 +14,8 @@
 
   <description>
     <p>
-      Apx GUI provides a user-friendly interface for Apx, a platform powered by <a href="https://distrobox.it">Distrobox</a> that streamlines dev environments into portable, reproducible subsystems.
-      Originally created for <a href="https://vanillaos.org">Vanilla OS</a>, it can also be installed on any Linux distribution.
+      Apx GUI provides a user-friendly interface for Apx, a platform powered by Distrobox that streamlines dev environments into portable, reproducible subsystems.
+      Originally created for Vanilla OS, it can also be installed on any Linux distribution.
     </p>
   </description>
 

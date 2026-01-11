@@ -4,6 +4,6 @@ Exec=apx-gui
 Icon=org.vanillaos.ApxGUI
 Terminal=false
 Type=Application
-Categories=GTK;
+Categories=Utility;Development;GTK;
 StartupNotify=true
 NoDisplay=false
