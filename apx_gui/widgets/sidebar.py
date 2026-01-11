@@ -65,8 +65,6 @@ class Sidebar(Adw.Bin):
 
         self.btn_new.connect("clicked", self.__on_btn_menu_clicked)
 
-        self.hide_labels(self.sidebar_switcher)
-
         for subsystem in self.__subsystems:
             entry = EntrySubsystem(subsystem)
             self.list_subsystems.append(entry)
@@ -164,12 +162,3 @@ class Sidebar(Adw.Bin):
             idx += 1
 
         self.__registry__[str(subsystem.aid)] = new_entry
-
-    def hide_labels(self, widget):
-        if isinstance(widget, Gtk.Label):
-            widget.set_visible(False)
-        elif isinstance(widget, Gtk.Widget):
-            child = widget.get_first_child()
-            while child:
-                self.hide_labels(child)
-                child = child.get_next_sibling()
