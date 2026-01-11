@@ -4,6 +4,7 @@
   <template class="Sidebar" parent="AdwBin">
     <child>
       <object class="AdwToolbarView">
+        <property name="width-request">350</property>
         <child type="top">
           <object class="AdwHeaderBar">
             <property name="decoration-layout"></property>
@@ -22,7 +23,8 @@
             <property name="title-widget">
               <object class="AdwViewSwitcher" id="sidebar_switcher">
                 <property name="stack">stack_sidebar</property>
-                <property name="policy">1</property>
+                <property name="policy">0</property>
+                <property name="height-request">40</property>
               </object>
             </property>
           </object>
@@ -36,6 +38,7 @@
                   <object class="AdwViewStackPage" id="page_subsystems">
                     <property name="name">subsystems</property>
                     <property name="icon-name">utilities-terminal-symbolic</property>
+                    <property name="title">Subsystems</property>
                     <property name="child">
                       <object class="GtkScrolledWindow">
                         <property name="hexpand">true</property>
@@ -54,6 +57,7 @@
                   <object class="AdwViewStackPage" id="page_stacks">
                     <property name="name">stacks</property>
                     <property name="icon-name">vanilla-puzzle-piece-symbolic</property>
+                    <property name="title">Stacks</property>
                     <property name="child">
                       <object class="GtkScrolledWindow">
                         <property name="hexpand">true</property>
@@ -72,6 +76,7 @@
                   <object class="AdwViewStackPage" id="page_pkgmanagers">
                     <property name="name">pkgmanagers</property>
                     <property name="icon-name">insert-object-symbolic</property>
+                    <property name="title">Package Managers</property>
                     <property name="child">
                       <object class="GtkScrolledWindow">
                         <property name="hexpand">true</property>
