@@ -18,63 +18,25 @@
 # SPDX-License-Identifier: GPL-3.0-or-later
 
 import json
-import requests
-import socket
+import os
+import podman
+import logging
 
 from typing import Any
 
 from datetime import datetime, UTC
-from requests.adapters import HTTPAdapter
+from podman import PodmanClient
 
-from urllib3.connection import HTTPConnection
-from urllib3.connectionpool import HTTPConnectionPool
-from urllib3.util import Retry
-
-
-class SocketConnection(HTTPConnection):
-    def __init__(self, sock_addr):
-        self.__sock_addr = sock_addr
-        super().__init__("localhost")
-
-    def connect(self):
-        self.sock = socket.socket(socket.AF_UNIX, socket.SOCK_STREAM)
-        self.sock.connect(self.__sock_addr)
-
-
-class SocketConnectionPool(HTTPConnectionPool):
-    def __init__(self, sock_addr: str):
-        self.__sock_addr = sock_addr
-        super().__init__("localhost")
-
-    def _new_conn(self):
-        return SocketConnection(self.__sock_addr)
-
-
-class SocketAdapter(HTTPAdapter):
-    def __init__(
-        self,
-        sock_addr: str,
-        pool_connections: int = 10,
-        pool_maxsize: int = 10,
-        max_retries: Retry | int | None = 0,
-        pool_block: bool = False,
-    ) -> None:
-        self.__sock_addr = sock_addr
-        super().__init__(pool_connections, pool_maxsize, max_retries, pool_block)
-
-    def get_connection(self, url, proxies=None):
-        return SocketConnectionPool(self.__sock_addr)
-
+logger = logging.getLogger(__name__)
 
 class Monitor:
-    __socket_path = "/run/user/1001/podman/podman.sock"
-    __last_read = ""
+    __last_read = datetime.now(UTC)
+    runtime_dir = os.environ.get('XDG_RUNTIME_DIR')
+    if not runtime_dir:
+        runtime_dir = f"/run/user/{os.getuid()}"
+    __socket_path = f"{runtime_dir}/podman/podman.sock"
 
-    watch_events = ["start", "die"]
-
-    @staticmethod
-    def __now_iso() -> str:
-        return datetime.now(UTC).replace(microsecond=0, tzinfo=None).isoformat()
+    watch_events = ["event=start", "event=died"]
 
     @staticmethod
     def read(custom_socket: str | None = None) -> list[dict[str, Any]]:
@@ -84,40 +46,39 @@ class Monitor:
         `Monitor.watch_events` filters from podman-events(1) to add new
         functionality.
 
-        Parameters
-        ----------
-        custom_socket: str, optional
-            Custom Podman socket path (default is "/run/user/1001/podman/podman.sock")
-
         Returns
         -------
         list[dict[str, Any]]
             filtered events received from Podman
         """
         if custom_socket:
-            socket_path = custom_socket
+            podman_uri = f"unix://{custom_socket}"
         else:
-            socket_path = Monitor.__socket_path
+            podman_uri = f"unix://{Monitor.__socket_path}"
 
-        if Monitor.__last_read == "":
-            Monitor.__last_read = Monitor.__now_iso()
+        now = datetime.now(UTC)
 
-        session = requests.Session()
-        session.mount("http://localhost/", SocketAdapter(socket_path))
         try:
-            response = session.get(
-                f"http://localhost/events?since={Monitor.__last_read}&stream=false"
-            )
+            with PodmanClient(base_url=podman_uri) as client:
+                events = client.events(
+                    since = Monitor.__last_read,
+                    until = now,
+                    filters = Monitor.watch_events,
+                    decode = True
+                )
+                client.close()
+
+                events_list = list(events)
+                if len(events_list) > 0:
+                    logger.debug(f"DEBUG: SUCCESS! Found {len(events_list)} events.")
+                    for e in events_list:
+                        logger.debug(f"  - Event: {e.get('Action')} | Type: {e.get('Type')} | Status: {e.get('status')}")
+                else:
+                    logger.debug("DEBUG: Window was empty. Try starting/stopping a container now.")
+
+                Monitor.__last_read = now
+                return events_list
+
         except Exception as err:
-            print(err)
+            logger.error(f"Unexpected error: {err}")
             return
-        response.raise_for_status()
-
-        events = []
-        for entry in response.content.decode("utf-8").split("\n"):
-            if len(entry) > 0:
-                events.append(json.loads(entry))
-
-        events = list(filter(lambda e: e["status"] in Monitor.watch_events, events))
-        Monitor.__last_read = Monitor.__now_iso()
-        return events

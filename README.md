@@ -27,7 +27,7 @@ apt install -y build-essential meson libadwaita-1-dev \
 apt install -y python3 python3-gi \
                gir1.2-gtk-4.0 libadwaita-1-0 \
                gir1.2-vte-3.91 python3-yaml \
-               python3-requests gettext
+               python3-podman gettext
 ```
 
 **APX version 2.0+ required.**
