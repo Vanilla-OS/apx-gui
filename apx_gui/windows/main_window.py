@@ -75,7 +75,7 @@ class ApxGUIWindow(Adw.ApplicationWindow):
                         if event["Actor"]["Attributes"]["name"] == "apx-" + subsystem.name:
                             if event["status"] == "start":
                                 subsystem.status = "Up"
-                            elif event["status"] == "die":
+                            elif event["status"] == "died":
                                 subsystem.status = "Exited"
 
                             self.sidebar.update_subsystem(subsystem)
