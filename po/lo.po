@@ -1,22 +1,21 @@
 # SOME DESCRIPTIVE TITLE.
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the apx_gui package.
-# ButterflyOfFire <boffire@users.noreply.hosted.weblate.org>, 2024, 2026.
-# Amadɣas <massiin@proton.me>, 2026.
+# BoneNI <bounkirdni@gmail.com>, 2026.
 msgid ""
 msgstr ""
 "Project-Id-Version: apx_gui\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2024-06-20 23:34+0530\n"
-"PO-Revision-Date: 2026-02-10 21:09+0000\n"
-"Last-Translator: Amadɣas <massiin@proton.me>\n"
-"Language-Team: Kabyle <https://hosted.weblate.org/projects/vanilla-os/apx-"
-"gui/kab/>\n"
-"Language: kab\n"
+"PO-Revision-Date: 2026-01-25 06:52+0000\n"
+"Last-Translator: BoneNI <bounkirdni@gmail.com>\n"
+"Language-Team: Lao <https://hosted.weblate.org/projects/vanilla-os/apx-gui/"
+"lo/>\n"
+"Language: lo\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=2; plural=n > 1;\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
 "X-Generator: Weblate 5.16-dev\n"
 
 #: data/org.vanillaos.ApxGUI.desktop.in:3
@@ -25,276 +24,275 @@ msgstr "Apx"
 
 #: data/org.vanillaos.ApxGUI.appdata.xml.in:7
 msgid "A frontend in GTK 4 and Libadwaita for Apx."
-msgstr "Agrudem n useqdac s GTK 4 akked Libadwaita i Apx."
+msgstr "ສ່ວນຕິດຕໍ່ຜູ້ໃຊ້ທີ່ຂຽນດ້ວຍ GTK 4 ແລະ Libadwaita ສຳລັບ Apx."
 
 #: apx_gui/gtk/create-pkgmanager.ui:6 apx_gui/gtk/sidebar.ui:93
 msgid "New Package Manager"
-msgstr "Amsefrak n ikemmusen amaynut"
+msgstr "ຕົວຈັດການແພັກເກັດໃໝ່"
 
 #: apx_gui/gtk/create-pkgmanager.ui:23 apx_gui/gtk/create-stack.ui:23
 #: apx_gui/gtk/create-subsystem.ui:23
 msgid "Cancel"
-msgstr "Semmet"
+msgstr "ຍົກເລີກ"
 
 #: apx_gui/gtk/create-pkgmanager.ui:28 apx_gui/gtk/create-stack.ui:28
 #: apx_gui/gtk/create-subsystem.ui:28
 msgid "Create"
-msgstr "Snulfu-d"
+msgstr "ສ້າງ"
 
 #: apx_gui/gtk/create-pkgmanager.ui:41 apx_gui/gtk/tab-pkgmanager.ui:24
 #: apx_gui/gtk/tab-stack.ui:24 apx_gui/gtk/tab-subsystem.ui:15
 msgid "Details"
-msgstr "Talqayt"
+msgstr "ລາຍລະອຽດ"
 
 #: apx_gui/gtk/create-pkgmanager.ui:44 apx_gui/gtk/create-stack.ui:44
 #: apx_gui/gtk/create-subsystem.ui:44
 msgid "Name"
-msgstr "Isem"
+msgstr "ຊື່"
 
 #: apx_gui/gtk/create-pkgmanager.ui:49 apx_gui/gtk/tab-pkgmanager.ui:27
 msgid "Need Sudo"
-msgstr "Yesra Sudo"
+msgstr "ຕ້ອງການ Sudo"
 
 #: apx_gui/gtk/create-pkgmanager.ui:70
 msgid "Commands"
-msgstr "Tiludna"
+msgstr "ຄຳສັ່ງ"
 
 #: apx_gui/gtk/create-pkgmanager.ui:73 apx_gui/gtk/tab-pkgmanager.ui:57
 msgid "Autoremove"
-msgstr "Tukksa s wudem awurman"
+msgstr "ລຶບອັດຕະໂນມັດ"
 
 #: apx_gui/gtk/create-pkgmanager.ui:78 apx_gui/gtk/tab-pkgmanager.ui:63
 msgid "Clean"
-msgstr "Sfeḍ"
+msgstr "ລ້າງ"
 
 #: apx_gui/gtk/create-pkgmanager.ui:83 apx_gui/gtk/tab-pkgmanager.ui:69
 msgid "Install"
-msgstr "Sbedd"
+msgstr "ຕິດຕັ້ງ"
 
 #: apx_gui/gtk/create-pkgmanager.ui:88 apx_gui/gtk/tab-pkgmanager.ui:75
 msgid "List"
-msgstr "Tabdart"
+msgstr "ລາຍການ"
 
 #: apx_gui/gtk/create-pkgmanager.ui:93 apx_gui/gtk/tab-pkgmanager.ui:81
 msgid "Purge"
-msgstr "Sfeḍ"
+msgstr "ລຶບລ້າງ"
 
 #: apx_gui/gtk/create-pkgmanager.ui:98 apx_gui/gtk/tab-pkgmanager.ui:87
 msgid "Remove"
-msgstr "Kkes"
+msgstr "ລຶບ"
 
 #: apx_gui/gtk/create-pkgmanager.ui:103 apx_gui/gtk/tab-pkgmanager.ui:93
 msgid "Search"
-msgstr "Nadi"
+msgstr "ຄົ້ນຫາ"
 
 #: apx_gui/gtk/create-pkgmanager.ui:108 apx_gui/gtk/tab-pkgmanager.ui:99
 msgid "Show"
-msgstr "Sken-d"
+msgstr "ສະແດງ"
 
 #: apx_gui/gtk/create-pkgmanager.ui:113 apx_gui/gtk/tab-pkgmanager.ui:105
 msgid "Update"
-msgstr "Leqqem"
+msgstr "ປັບປຸງ"
 
 #: apx_gui/gtk/create-pkgmanager.ui:118 apx_gui/gtk/tab-pkgmanager.ui:111
 msgid "Upgrade"
-msgstr "Mucceḍ"
+msgstr "ຍົກລະດັບ"
 
 #: apx_gui/gtk/create-pkgmanager.ui:144
 msgid "Creating Package Manager"
-msgstr "Asnulfu n umsefrak n ikemmusen"
+msgstr "ກຳລັງສ້າງຕົວຈັດການແພັກເກັດ"
 
 #: apx_gui/gtk/create-pkgmanager.ui:145
 msgid "Please wait while the package manager is being created"
-msgstr "Ttxil-k·m arǧu simal ara d-yenulfu umsefrak n yikemmusen"
+msgstr "ກະລຸນາລໍຖ້າ ໃນຂະນະທີ່ຕົວຈັດການແພັກເກັດກຳລັງຖືກສ້າງຂຶ້ນ"
 
 #: apx_gui/gtk/create-pkgmanager.ui:169
 msgid "An Error Occurred"
-msgstr "Teḍra-d tuccḍa"
+msgstr "ເກີດຂໍ້ຜິດພາດ"
 
 #: apx_gui/gtk/create-pkgmanager.ui:170
 msgid "An error occurred while creating the package manager"
-msgstr "Teḍra-d tuccḍa deg usnulfu n umsefrak n yikemmusen"
+msgstr "ເກີດຂໍ້ຜິດພາດໃນຂະນະທີ່ສ້າງຕົວຈັດການແພັກເກັດ"
 
 #: apx_gui/gtk/create-pkgmanager.ui:174 apx_gui/gtk/create-stack.ui:148
 #: apx_gui/gtk/create-subsystem.ui:144
 msgid "Close"
-msgstr "Mdel"
+msgstr "ປິດ"
 
 #: apx_gui/gtk/create-stack.ui:6 apx_gui/gtk/sidebar.ui:89
 msgid "New Stack"
-msgstr "Akufi Amaynut"
+msgstr "ສະແຕັກໃໝ່"
 
 #: apx_gui/gtk/create-stack.ui:49 apx_gui/gtk/tab-stack.ui:27
 msgid "Base"
-msgstr "Azadur"
+msgstr "ຖານ"
 
 #: apx_gui/gtk/create-stack.ui:54 apx_gui/gtk/tab-stack.ui:38
 #: apx_gui/gtk/tab-subsystem.ui:38
 msgid "Package Manager"
-msgstr "Amsefrak n ikemmusen"
+msgstr "ຕົວຈັດການແພັກເກັດ"
 
 #: apx_gui/gtk/create-stack.ui:80
 msgid "Add Package"
-msgstr "Rnu akemmus"
+msgstr "ເພີ່ມແພັກເກັດ"
 
 #: apx_gui/gtk/create-stack.ui:92
 msgid "New Package"
-msgstr "Akemmus amaynut"
+msgstr "ແພັກເກັດໃໝ່"
 
 #: apx_gui/gtk/create-stack.ui:119
 msgid "Please wait while the stack is being created"
-msgstr "Ttxil-k·m arǧu simal ara d-yenulfu ukufi"
+msgstr "ກະລຸນາລໍຖ້າ ໃນຂະນະທີ່ສະແຕັກກຳລັງຖືກສ້າງຂຶ້ນ"
 
 #: apx_gui/gtk/create-stack.ui:144
 msgid "An error occurred while creating the stack"
-msgstr "Teḍra-d tuccḍa deg usnulfu n ukufi"
+msgstr "ເກີດຂໍ້ຜິດພາດໃນຂະນະທີ່ສ້າງສະແຕັກ"
 
 #: apx_gui/gtk/create-subsystem.ui:6 apx_gui/gtk/sidebar.ui:85
 msgid "New Subsystem"
-msgstr "Anagraw anaddaw Amaynut"
+msgstr "ລະບົບຍ່ອຍໃໝ່"
 
 #: apx_gui/gtk/create-subsystem.ui:49 apx_gui/gtk/tab-subsystem.ui:28
 msgid "Stack"
-msgstr "Akufi"
+msgstr "ສະແຕັກ"
 
 #: apx_gui/gtk/create-subsystem.ui:78
 msgid "Creating Subsystem"
-msgstr "Asnulfu n unagraw anaddaw"
+msgstr "ກຳລັງສ້າງລະບົບຍ່ອຍ"
 
 #: apx_gui/gtk/create-subsystem.ui:79
 msgid "Please wait while the subsystem is being created"
-msgstr "Ttxil-k·m arǧu simal ara d-yenulfu unagraw anaddaw"
+msgstr "ກະລຸນາລໍຖ້າ ໃນຂະນະທີ່ລະບົບຍ່ອຍກຳລັງຖືກສ້າງຂຶ້ນ"
 
 #: apx_gui/gtk/create-subsystem.ui:92
 msgid "Show Console Output"
-msgstr "Sken tuffɣa n tdiwent"
+msgstr "ສະແດງຜົນຄອນໂຊນ"
 
 #: apx_gui/gtk/create-subsystem.ui:140
 msgid "An error occurred while creating the subsystem"
-msgstr "Teḍra-d tuccḍa deg usnulfu n unagraw anaddaw"
+msgstr "ເກີດຂໍ້ຜິດພາດໃນຂະນະທີ່ສ້າງລະບົບຍ່ອຍ"
 
 #: apx_gui/gtk/editor.ui:12
 msgid "Start or Open a Subsystem"
-msgstr "Senker neɣ Ldi Anagraw anaddaw"
+msgstr "ເລີ່ມ ຫຼື ເປີດລະບົບຍ່ອຍ"
 
 #: apx_gui/gtk/editor.ui:13
 msgid "Start by opening a subsystem, stack or package manager on the left"
-msgstr "Bdu s ulday n unagraw anadaw, akufi neɣ amsefrak n ikemmusen deg zelmeḍ"
+msgstr ""
+"ເລີ່ມຕົ້ນໂດຍການເປີດລະບົບຍ່ອຍ, ສະແຕັກ ຫຼື ຕົວຈັດການແພັກເກັດ ຢູ່ທາງດ້ານຊ້າຍ"
 
 #: apx_gui/gtk/help-overlay.ui:11
 msgctxt "shortcut window"
 msgid "General"
-msgstr "Amatu"
+msgstr "ທົ່ວໄປ"
 
 #: apx_gui/gtk/help-overlay.ui:14
 msgctxt "shortcut window"
 msgid "Show Shortcuts"
-msgstr "Sken-d negzumen"
+msgstr "ສະແດງປຸ່ມລັດ"
 
 #: apx_gui/gtk/help-overlay.ui:20
 msgctxt "shortcut window"
 msgid "Quit"
-msgstr "Ffeɣ"
+msgstr "ອອກ"
 
 #: apx_gui/gtk/help-overlay.ui:26
 msgctxt "shortcut window"
 msgid "Create"
-msgstr "Snulfu-d"
+msgstr "ສ້າງ"
 
 #: apx_gui/gtk/help-overlay.ui:29
 msgctxt "shortcut window"
 msgid "New Subsystem"
-msgstr "Anagraw annadaw Amaynut"
+msgstr "ລະບົບຍ່ອຍໃໝ່"
 
 #: apx_gui/gtk/help-overlay.ui:35
 msgctxt "shortcut window"
 msgid "New Stack"
-msgstr "Akufi Amaynut"
+msgstr "ສະແຕັກໃໝ່"
 
 #: apx_gui/gtk/help-overlay.ui:41
 msgctxt "shortcut window"
 msgid "New Package Manager"
-msgstr "Amsefrak n yikemmusen amaynut"
+msgstr "ຕົວຈັດການແພັກເກັດໃໝ່"
 
 #: apx_gui/gtk/tab-pkgmanager.ui:13
 msgid "This package manager is built-in and cannot be edited or deleted"
-msgstr ""
-"Amsefrak-agi n ikemmusen yettwaselɣen, ur yezmir ad ittusnifel neɣ ad "
-"ittwakkes"
+msgstr "ຕົວຈັດການແພັກເກັດນີ້ມາພ້ອມກັບລະບົບ ແລະ ບໍ່ສາມາດແກ້ໄຂ ຫຼື ລຶບໄດ້"
 
 #: apx_gui/gtk/tab-pkgmanager.ui:42 apx_gui/gtk/tab-stack.ui:49
 msgid "Built-In"
-msgstr "Yettwaselɣen"
+msgstr "ມາພ້ອມລະບົບ"
 
 #: apx_gui/gtk/tab-pkgmanager.ui:119 apx_gui/gtk/tab-stack.ui:71
 #: apx_gui/gtk/tab-subsystem.ui:107
 msgid "Destructive Actions"
-msgstr "Tigawin Tisedramin"
+msgstr "ການດຳເນີນການລຶບລ້າງ"
 
 #: apx_gui/gtk/tab-pkgmanager.ui:122
 msgid "Delete Package Manager"
-msgstr "Kkes amsefrak n yikemmusen"
+msgstr "ລຶບຕົວຈັດການແພັກເກັດ"
 
 #: apx_gui/gtk/tab-stack.ui:13
 msgid "This stack is built-in and cannot be edited or deleted"
-msgstr "Akufi-agi yettwasleɣ yerna ulamek ara yettwaẓreg neɣ ad yettwakkes"
+msgstr "ສະແຕັກນີ້ມາພ້ອມກັບລະບົບ ແລະ ບໍ່ສາມາດແກ້ໄຂ ຫຼື ລຶບໄດ້"
 
 #: apx_gui/gtk/tab-stack.ui:59
 msgid "Packages"
-msgstr "Ikemmusen"
+msgstr "ແພັກເກັດ"
 
 #: apx_gui/gtk/tab-stack.ui:74
 msgid "Delete Stack"
-msgstr "Kkes Akufi"
+msgstr "ລຶບສະແຕັກ"
 
 #: apx_gui/gtk/tab-subsystem.ui:18
 msgid "Status"
-msgstr "Addad"
+msgstr "ສະຖານະ"
 
 #: apx_gui/gtk/tab-subsystem.ui:59
 msgid "Subsystem actions"
-msgstr "Tigawin n unagraw anaddaw"
+msgstr "ການກະທຳກັບລະບົບຍ່ອຍ"
 
 #: apx_gui/gtk/tab-subsystem.ui:75
 msgid "Autoremove Packages"
-msgstr "Kkes ikemmusen s wudem awurman"
+msgstr "ລຶບແພັກເກັດອັດຕະໂນມັດ"
 
 #: apx_gui/gtk/tab-subsystem.ui:90
 msgid "Clean Package Manager Cache"
-msgstr "Sfeḍ amsefrak n tzarkatut n ukemmus"
+msgstr "ລ້າງແຄຊຂອງຕົວຈັດການແພັກເກັດ"
 
 #: apx_gui/gtk/tab-subsystem.ui:110
 msgid "Reset Subsystem"
-msgstr "Ales awennez n unagraw anaddaw"
+msgstr "ຣີເຊັດລະບົບຍ່ອຍ"
 
 #: apx_gui/gtk/tab-subsystem.ui:125
 msgid "Delete Subsystem"
-msgstr "Kkes Anagraw anaddaw"
+msgstr "ລຶບລະບົບຍ່ອຍ"
 
 #: apx_gui/gtk/tab-subsystem.ui:164
 msgid "Restart Console"
-msgstr "Senker tikelt nniḍen Tadiwent"
+msgstr "ເລີ່ມຄອນໂຊນຄືນໃໝ່"
 
 #: apx_gui/gtk/tab-subsystem.ui:175
 msgid "Toggle Console"
-msgstr "Qluqel tadiwent"
+msgstr "ເປີດ/ປິດ ຄອນໂຊນ"
 
 #: apx_gui/gtk/window-main.ui:53
 msgid "_Keyboard Shortcuts"
-msgstr "Inegzumen n unasiw (_K)"
+msgstr "_ຄີລັດຄີບອດ"
 
 #: apx_gui/gtk/window-main.ui:57
 msgid "_About Apx GUI"
-msgstr "_Ɣef ugrudem n useqdac Apx"
+msgstr "_ກ່ຽວກັບ Apx GUI"
 
 #: apx_gui/main.py:82
 msgid "translator_credits"
-msgstr "Athmane MOKRAOUI <butterflyoffire@protonmail.com>"
+msgstr "ຊື່ຜູ້ແປ <ອີເມວ>"
 
 #: apx_gui/main.py:87
 msgid "Contributors"
-msgstr "Imttekkiyen"
+msgstr "ຜູ້ປະກອບສ່ວນ"
 
 #: apx_gui/main.py:94
 msgid "Tools"
-msgstr "Ifecka"
+msgstr "ເຄື່ອງມື"
