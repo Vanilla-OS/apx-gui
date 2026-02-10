@@ -1,7 +1,7 @@
 # SOME DESCRIPTIVE TITLE.
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the apx_gui package.
-# ButterflyOfFire <boffire@users.noreply.hosted.weblate.org>, 2024.
+# ButterflyOfFire <boffire@users.noreply.hosted.weblate.org>, 2024, 2026.
 # Amadɣas <massiin@proton.me>, 2026.
 msgid ""
 msgstr ""
@@ -9,7 +9,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2024-06-20 23:34+0530\n"
 "PO-Revision-Date: 2026-02-09 20:09+0000\n"
-"Last-Translator: Amadɣas <massiin@proton.me>\n"
+"Last-Translator: ButterflyOfFire <boffire@users.noreply.hosted.weblate.org>\n"
 "Language-Team: Kabyle <https://hosted.weblate.org/projects/vanilla-os/apx-"
 "gui/kab/>\n"
 "Language: kab\n"
@@ -34,7 +34,7 @@ msgstr "Amsefrak n ikemmusen amaynut"
 #: apx_gui/gtk/create-pkgmanager.ui:23 apx_gui/gtk/create-stack.ui:23
 #: apx_gui/gtk/create-subsystem.ui:23
 msgid "Cancel"
-msgstr "Sefsex"
+msgstr "Semmet"
 
 #: apx_gui/gtk/create-pkgmanager.ui:28 apx_gui/gtk/create-stack.ui:28
 #: apx_gui/gtk/create-subsystem.ui:28
@@ -61,11 +61,11 @@ msgstr "Tiludna"
 
 #: apx_gui/gtk/create-pkgmanager.ui:73 apx_gui/gtk/tab-pkgmanager.ui:57
 msgid "Autoremove"
-msgstr ""
+msgstr "Tukksa s wudem awurman"
 
 #: apx_gui/gtk/create-pkgmanager.ui:78 apx_gui/gtk/tab-pkgmanager.ui:63
 msgid "Clean"
-msgstr ""
+msgstr "Sfeḍ"
 
 #: apx_gui/gtk/create-pkgmanager.ui:83 apx_gui/gtk/tab-pkgmanager.ui:69
 msgid "Install"
@@ -97,7 +97,7 @@ msgstr "Leqqem"
 
 #: apx_gui/gtk/create-pkgmanager.ui:118 apx_gui/gtk/tab-pkgmanager.ui:111
 msgid "Upgrade"
-msgstr ""
+msgstr "Mucceḍ"
 
 #: apx_gui/gtk/create-pkgmanager.ui:144
 msgid "Creating Package Manager"
@@ -247,7 +247,7 @@ msgstr ""
 
 #: apx_gui/gtk/tab-subsystem.ui:18
 msgid "Status"
-msgstr ""
+msgstr "Addad"
 
 #: apx_gui/gtk/tab-subsystem.ui:59
 msgid "Subsystem actions"
@@ -287,7 +287,7 @@ msgstr ""
 
 #: apx_gui/main.py:82
 msgid "translator_credits"
-msgstr ""
+msgstr "Athmane MOKRAOUI <butterflyoffire@protonmail.com>"
 
 #: apx_gui/main.py:87
 msgid "Contributors"
