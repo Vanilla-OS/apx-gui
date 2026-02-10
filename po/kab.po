@@ -8,8 +8,8 @@ msgstr ""
 "Project-Id-Version: apx_gui\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2024-06-20 23:34+0530\n"
-"PO-Revision-Date: 2026-02-09 20:09+0000\n"
-"Last-Translator: ButterflyOfFire <boffire@users.noreply.hosted.weblate.org>\n"
+"PO-Revision-Date: 2026-02-10 21:09+0000\n"
+"Last-Translator: Amadɣas <massiin@proton.me>\n"
 "Language-Team: Kabyle <https://hosted.weblate.org/projects/vanilla-os/apx-"
 "gui/kab/>\n"
 "Language: kab\n"
@@ -25,7 +25,7 @@ msgstr "Apx"
 
 #: data/org.vanillaos.ApxGUI.appdata.xml.in:7
 msgid "A frontend in GTK 4 and Libadwaita for Apx."
-msgstr ""
+msgstr "Agrudem n useqdac s GTK 4 akked Libadwaita i Apx."
 
 #: apx_gui/gtk/create-pkgmanager.ui:6 apx_gui/gtk/sidebar.ui:93
 msgid "New Package Manager"
@@ -179,7 +179,7 @@ msgstr "Senker neɣ Ldi Anagraw anaddaw"
 
 #: apx_gui/gtk/editor.ui:13
 msgid "Start by opening a subsystem, stack or package manager on the left"
-msgstr ""
+msgstr "Bdu s ulday n unagraw anadaw, akufi neɣ amsefrak n ikemmusen deg zelmeḍ"
 
 #: apx_gui/gtk/help-overlay.ui:11
 msgctxt "shortcut window"
@@ -204,38 +204,40 @@ msgstr "Snulfu-d"
 #: apx_gui/gtk/help-overlay.ui:29
 msgctxt "shortcut window"
 msgid "New Subsystem"
-msgstr ""
+msgstr "Anagraw annadaw Amaynut"
 
 #: apx_gui/gtk/help-overlay.ui:35
 msgctxt "shortcut window"
 msgid "New Stack"
-msgstr ""
+msgstr "Akufi Amaynut"
 
 #: apx_gui/gtk/help-overlay.ui:41
 msgctxt "shortcut window"
 msgid "New Package Manager"
-msgstr ""
+msgstr "Amsefrak n yikemmusen amaynut"
 
 #: apx_gui/gtk/tab-pkgmanager.ui:13
 msgid "This package manager is built-in and cannot be edited or deleted"
 msgstr ""
+"Amsefrak-agi n ikemmusen yettwaselɣen, ur yezmir ad ittusnifel neɣ ad "
+"ittwakkes"
 
 #: apx_gui/gtk/tab-pkgmanager.ui:42 apx_gui/gtk/tab-stack.ui:49
 msgid "Built-In"
-msgstr ""
+msgstr "Yettwaselɣen"
 
 #: apx_gui/gtk/tab-pkgmanager.ui:119 apx_gui/gtk/tab-stack.ui:71
 #: apx_gui/gtk/tab-subsystem.ui:107
 msgid "Destructive Actions"
-msgstr ""
+msgstr "Tigawin Tisedramin"
 
 #: apx_gui/gtk/tab-pkgmanager.ui:122
 msgid "Delete Package Manager"
-msgstr ""
+msgstr "Kkes amsefrak n yikemmusen"
 
 #: apx_gui/gtk/tab-stack.ui:13
 msgid "This stack is built-in and cannot be edited or deleted"
-msgstr ""
+msgstr "Akufi-agi yettwasleɣ yerna ulamek ara yettwaẓreg neɣ ad yettwakkes"
 
 #: apx_gui/gtk/tab-stack.ui:59
 msgid "Packages"
@@ -243,7 +245,7 @@ msgstr "Ikemmusen"
 
 #: apx_gui/gtk/tab-stack.ui:74
 msgid "Delete Stack"
-msgstr ""
+msgstr "Kkes Akufi"
 
 #: apx_gui/gtk/tab-subsystem.ui:18
 msgid "Status"
@@ -251,31 +253,31 @@ msgstr "Addad"
 
 #: apx_gui/gtk/tab-subsystem.ui:59
 msgid "Subsystem actions"
-msgstr ""
+msgstr "Tigawin n unagraw anaddaw"
 
 #: apx_gui/gtk/tab-subsystem.ui:75
 msgid "Autoremove Packages"
-msgstr ""
+msgstr "Kkes ikemmusen s wudem awurman"
 
 #: apx_gui/gtk/tab-subsystem.ui:90
 msgid "Clean Package Manager Cache"
-msgstr ""
+msgstr "Sfeḍ amsefrak n tzarkatut n ukemmus"
 
 #: apx_gui/gtk/tab-subsystem.ui:110
 msgid "Reset Subsystem"
-msgstr ""
+msgstr "Ales awennez n unagraw anaddaw"
 
 #: apx_gui/gtk/tab-subsystem.ui:125
 msgid "Delete Subsystem"
-msgstr ""
+msgstr "Kkes Anagraw anaddaw"
 
 #: apx_gui/gtk/tab-subsystem.ui:164
 msgid "Restart Console"
-msgstr ""
+msgstr "Senker tikelt nniḍen Tadiwent"
 
 #: apx_gui/gtk/tab-subsystem.ui:175
 msgid "Toggle Console"
-msgstr ""
+msgstr "Qluqel tadiwent"
 
 #: apx_gui/gtk/window-main.ui:53
 msgid "_Keyboard Shortcuts"
@@ -283,7 +285,7 @@ msgstr "Inegzumen n unasiw (_K)"
 
 #: apx_gui/gtk/window-main.ui:57
 msgid "_About Apx GUI"
-msgstr ""
+msgstr "_Ɣef ugrudem n useqdac Apx"
 
 #: apx_gui/main.py:82
 msgid "translator_credits"
