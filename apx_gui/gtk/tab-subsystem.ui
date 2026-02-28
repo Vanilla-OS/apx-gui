@@ -28,7 +28,7 @@
 										<property name="title" translatable="yes">Stack</property>
 										<child type="prefix">
 											<object class="GtkImage">
-												<property name="icon-name">vanilla-puzzle-piece-symbolic</property>
+												<property name="icon-name">application-x-addon-symbolic</property>
 											</object>
 										</child>
 									</object>

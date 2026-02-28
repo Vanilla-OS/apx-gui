@@ -56,7 +56,7 @@
                 <child>
                   <object class="AdwViewStackPage" id="page_stacks">
                     <property name="name">stacks</property>
-                    <property name="icon-name">vanilla-puzzle-piece-symbolic</property>
+                    <property name="icon-name">application-x-addon-symbolic</property>
                     <property name="title">Stacks</property>
                     <property name="child">
                       <object class="GtkScrolledWindow">
