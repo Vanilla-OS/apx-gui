@@ -96,7 +96,7 @@ class Editor(Adw.Bin):
     def new_stack_tab(self, stack: Stack) -> None:
         page: Adw.TabPage = self.tabs_editor.append(TabStack(self.__window, stack))
         icon: Gio.Icon = Gio.ThemedIcon.new_with_default_fallbacks(
-            "vanilla-puzzle-piece-symbolic"
+            "application-x-addon-symbolic"
         )
 
         page.set_title(stack.name)
