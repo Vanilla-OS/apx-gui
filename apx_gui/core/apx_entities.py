@@ -85,7 +85,9 @@ class ApxEntityBase:
             out, e = process.communicate()
             output: str = out.decode("utf-8")
             error: str = e.decode("utf-8")
-            if error and not ignore_errors:
+            # apx logs to stderr even on success (e.g. "subsystem removed"),
+            # so the exit code, not stderr, tells whether the command failed.
+            if process.returncode != 0 and not ignore_errors:
                 if "APX_DEBUG" in os.environ:
                     print(f"Error: {error}")
                 return False, error
